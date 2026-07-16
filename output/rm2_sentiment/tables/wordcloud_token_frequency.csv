@@ -1,0 +1,1301 @@
+group_type,group_name,token,count,rank
+overall,All,dok,6103,1
+overall,All,ada,2364,2
+overall,All,mau,2059,3
+overall,All,retinol,2028,4
+overall,All,gak,1669,5
+overall,All,sama,1594,6
+overall,All,apa,1424,7
+overall,All,cek,1336,8
+overall,All,cream,1311,9
+overall,All,boleh,1274,10
+overall,All,buat,1257,11
+overall,All,kalo,1240,12
+overall,All,beli,1211,13
+overall,All,serum,1202,14
+overall,All,baru,1093,15
+overall,All,aman,1074,16
+overall,All,kulit,1029,17
+overall,All,cocok,1019,18
+overall,All,glow,944,19
+overall,All,tapi,909,20
+overall,All,klo,857,21
+overall,All,pke,825,22
+overall,All,lagi,777,23
+overall,All,udh,766,24
+overall,All,bagus,746,25
+overall,All,masih,746,26
+overall,All,tolong,734,27
+overall,All,muka,724,28
+overall,All,jerawat,712,29
+overall,All,kalau,653,30
+overall,All,okypratamaa,568,31
+overall,All,minta,563,32
+overall,All,hari,551,33
+overall,All,soalnya,548,34
+overall,All,maaf,548,35
+overall,All,dokter,542,36
+overall,All,mana,513,37
+overall,All,kedua,508,38
+overall,All,malam,497,39
+overall,All,malah,488,40
+overall,All,berapa,481,41
+overall,All,dulu,472,42
+overall,All,kan,470,43
+overall,All,gimana,465,44
+overall,All,paket,448,45
+overall,All,bener,429,46
+overall,All,skin,423,47
+overall,All,harga,417,48
+overall,All,moist,408,49
+overall,All,krim,407,50
+overall,All,tau,406,51
+overall,All,beauty,402,52
+overall,All,owner,388,53
+overall,All,pakek,368,54
+overall,All,lebih,360,55
+overall,All,glowing,357,56
+overall,All,banyak,351,57
+overall,All,siang,349,58
+overall,All,toner,346,59
+overall,All,brp,345,60
+overall,All,pagi,343,61
+overall,All,pernah,341,62
+overall,All,acne,339,63
+overall,All,the,337,64
+overall,All,kaya,336,65
+overall,All,cara,335,66
+overall,All,takut,334,67
+overall,All,day,334,68
+overall,All,flek,329,69
+overall,All,emang,323,70
+overall,All,moisturizer,322,71
+overall,All,alhamdulillah,319,72
+overall,All,dia,318,73
+overall,All,pas,316,74
+overall,All,terus,313,75
+overall,All,umur,310,76
+overall,All,vit,309,77
+overall,All,bikin,307,78
+overall,All,langsung,306,79
+overall,All,gitu,305,80
+overall,All,dipake,303,81
+overall,All,jual,302,82
+overall,All,lain,295,83
+overall,All,tpi,294,84
+overall,All,seruni,292,85
+overall,All,make,289,86
+overall,All,ngga,286,87
+overall,All,yaa,285,88
+overall,All,gantiin,283,89
+overall,All,tiap,282,90
+overall,All,pengen,280,91
+overall,All,punya,279,92
+overall,All,night,275,93
+overall,All,doktif,275,94
+overall,All,semangat,273,95
+overall,All,abis,271,96
+overall,All,mlm,271,97
+overall,All,kali,271,98
+overall,All,cuma,261,99
+overall,All,habis,259,100
+sentiment,Positive,dok,726,1
+sentiment,Positive,bagus,558,2
+sentiment,Positive,aman,534,3
+sentiment,Positive,cocok,426,4
+sentiment,Positive,sama,366,5
+sentiment,Positive,buat,320,6
+sentiment,Positive,gak,319,7
+sentiment,Positive,kulit,318,8
+sentiment,Positive,ada,295,9
+sentiment,Positive,retinol,281,10
+sentiment,Positive,glow,255,11
+sentiment,Positive,bener,252,12
+sentiment,Positive,semangat,237,13
+sentiment,Positive,🥰🥰🥰,234,14
+sentiment,Positive,alhamdulillah,232,15
+sentiment,Positive,glowing,224,16
+sentiment,Positive,tapi,218,17
+sentiment,Positive,mau,187,18
+sentiment,Positive,emang,180,19
+sentiment,Positive,baru,175,20
+sentiment,Positive,lebih,170,21
+sentiment,Positive,cream,162,22
+sentiment,Positive,udh,161,23
+sentiment,Positive,semoga,160,24
+sentiment,Positive,muka,158,25
+sentiment,Positive,owner,155,26
+sentiment,Positive,lagi,147,27
+sentiment,Positive,beli,145,28
+sentiment,Positive,kalo,143,29
+sentiment,Positive,bikin,139,30
+sentiment,Positive,😂😂😂,131,31
+sentiment,Positive,serum,128,32
+sentiment,Positive,hasilnya,127,33
+sentiment,Positive,pke,124,34
+sentiment,Positive,murah,124,35
+sentiment,Positive,worth,123,36
+sentiment,Positive,😁😁😁,119,37
+sentiment,Positive,seruni,117,38
+sentiment,Positive,niacinamide,112,39
+sentiment,Positive,jerawat,107,40
+sentiment,Positive,setuju,106,41
+sentiment,Positive,😳😳😳,102,42
+sentiment,Positive,kaya,101,43
+sentiment,Positive,harga,101,44
+sentiment,Positive,hanasui,98,45
+sentiment,Positive,hari,97,46
+sentiment,Positive,skin,96,47
+sentiment,Positive,klo,96,48
+sentiment,Positive,beneran,92,49
+sentiment,Positive,makasih,91,50
+sentiment,Positive,kan,90,51
+sentiment,Positive,pernah,90,52
+sentiment,Positive,apa,89,53
+sentiment,Positive,skincaretips,89,54
+sentiment,Positive,selalu,88,55
+sentiment,Positive,banyak,86,56
+sentiment,Positive,enak,86,57
+sentiment,Positive,soalnya,85,58
+sentiment,Positive,penting,85,59
+sentiment,Positive,terus,83,60
+sentiment,Positive,pengen,83,61
+sentiment,Positive,cerah,81,62
+sentiment,Positive,kalau,81,63
+sentiment,Positive,dulu,79,64
+sentiment,Positive,suka,79,65
+sentiment,Positive,kulitku,78,66
+sentiment,Positive,bumil,78,67
+sentiment,Positive,cantik,76,68
+sentiment,Positive,the,74,69
+sentiment,Positive,untung,72,70
+sentiment,Positive,mana,71,71
+sentiment,Positive,dokter,71,72
+sentiment,Positive,wajib,69,73
+sentiment,Positive,semua,68,74
+sentiment,Positive,sehat,68,75
+sentiment,Positive,baik,64,76
+sentiment,Positive,jujur,64,77
+sentiment,Positive,pasti,64,78
+sentiment,Positive,busui,64,79
+sentiment,Positive,gloglowing,63,80
+sentiment,Positive,dia,62,81
+sentiment,Positive,wajah,62,82
+sentiment,Positive,sekali,61,83
+sentiment,Positive,sensitif,60,84
+sentiment,Positive,karna,60,85
+sentiment,Positive,paket,60,86
+sentiment,Positive,ngerasain,60,87
+sentiment,Positive,tpi,59,88
+sentiment,Positive,hasil,58,89
+sentiment,Positive,dah,57,90
+sentiment,Positive,tiap,57,91
+sentiment,Positive,doktif,57,92
+sentiment,Positive,malah,56,93
+sentiment,Positive,pas,56,94
+sentiment,Positive,orang,56,95
+sentiment,Positive,emg,55,96
+sentiment,Positive,sekarang,55,97
+sentiment,Positive,harganya,55,98
+sentiment,Positive,percaya,55,99
+sentiment,Positive,allah,55,100
+sentiment,Neutral,dok,5002,1
+sentiment,Neutral,retinol,1522,2
+sentiment,Neutral,ada,1414,3
+sentiment,Neutral,mau,1397,4
+sentiment,Neutral,cek,1254,5
+sentiment,Neutral,boleh,1169,6
+sentiment,Neutral,cream,1005,7
+sentiment,Neutral,serum,983,8
+sentiment,Neutral,apa,850,9
+sentiment,Neutral,sama,819,10
+sentiment,Neutral,kalo,817,11
+sentiment,Neutral,gak,749,12
+sentiment,Neutral,tolong,675,13
+sentiment,Neutral,beli,664,14
+sentiment,Neutral,buat,651,15
+sentiment,Neutral,glow,609,16
+sentiment,Neutral,baru,608,17
+sentiment,Neutral,pke,559,18
+sentiment,Neutral,klo,536,19
+sentiment,Neutral,okypratamaa,526,20
+sentiment,Neutral,masih,497,21
+sentiment,Neutral,kedua,462,22
+sentiment,Neutral,kulit,457,23
+sentiment,Neutral,aman,455,24
+sentiment,Neutral,berapa,423,25
+sentiment,Neutral,malam,410,26
+sentiment,Neutral,kalau,403,27
+sentiment,Neutral,hari,379,28
+sentiment,Neutral,beauty,354,29
+sentiment,Neutral,soalnya,349,30
+sentiment,Neutral,dokter,347,31
+sentiment,Neutral,udh,341,32
+sentiment,Neutral,lagi,332,33
+sentiment,Neutral,moist,331,34
+sentiment,Neutral,jerawat,324,35
+sentiment,Neutral,brp,322,36
+sentiment,Neutral,paket,318,37
+sentiment,Neutral,toner,297,38
+sentiment,Neutral,skin,296,39
+sentiment,Neutral,krim,293,40
+sentiment,Neutral,siang,288,41
+sentiment,Neutral,pagi,283,42
+sentiment,Neutral,tapi,281,43
+sentiment,Neutral,moisturizer,277,44
+sentiment,Neutral,cara,277,45
+sentiment,Neutral,mana,274,46
+sentiment,Neutral,gimana,274,47
+sentiment,Neutral,dulu,273,48
+sentiment,Neutral,umur,267,49
+sentiment,Neutral,cocok,261,50
+sentiment,Neutral,gantiin,252,51
+sentiment,Neutral,day,251,52
+sentiment,Neutral,acne,247,53
+sentiment,Neutral,dipake,245,54
+sentiment,Neutral,vit,238,55
+sentiment,Neutral,harga,237,56
+sentiment,Neutral,the,234,57
+sentiment,Neutral,minta,216,58
+sentiment,Neutral,pakek,215,59
+sentiment,Neutral,muka,209,60
+sentiment,Neutral,mlm,204,61
+sentiment,Neutral,night,203,62
+sentiment,Neutral,kan,201,63
+sentiment,Neutral,tau,201,64
+sentiment,Neutral,tiap,194,65
+sentiment,Neutral,donk,191,66
+sentiment,Neutral,jual,187,67
+sentiment,Neutral,mois,179,68
+sentiment,Neutral,yaa,175,69
+sentiment,Neutral,kali,175,70
+sentiment,Neutral,lain,171,71
+sentiment,Neutral,pink,170,72
+sentiment,Neutral,blm,170,73
+sentiment,Neutral,punya,169,74
+sentiment,Neutral,gmn,168,75
+sentiment,Neutral,langsung,168,76
+sentiment,Neutral,seruni,167,77
+sentiment,Neutral,abis,165,78
+sentiment,Neutral,ngga,164,79
+sentiment,Neutral,make,164,80
+sentiment,Neutral,seminggu,164,81
+sentiment,Neutral,pas,161,82
+sentiment,Neutral,segel,160,83
+sentiment,Neutral,sunscreen,159,84
+sentiment,Neutral,trs,158,85
+sentiment,Neutral,malem,152,86
+sentiment,Neutral,satu,152,87
+sentiment,Neutral,flek,151,88
+sentiment,Neutral,dlu,150,89
+sentiment,Neutral,terus,146,90
+sentiment,Neutral,trus,146,91
+sentiment,Neutral,nitip,146,92
+sentiment,Neutral,kuning,145,93
+sentiment,Neutral,pemula,143,94
+sentiment,Neutral,makasih,141,95
+sentiment,Neutral,official,141,96
+sentiment,Neutral,setiap,139,97
+sentiment,Neutral,kaka,137,98
+sentiment,Neutral,charismalux,137,99
+sentiment,Neutral,setelah,134,100
+sentiment,Negative,ada,655,1
+sentiment,Negative,gak,601,2
+sentiment,Negative,apa,485,3
+sentiment,Negative,mau,475,4
+sentiment,Negative,tapi,410,5
+sentiment,Negative,sama,409,6
+sentiment,Negative,beli,402,7
+sentiment,Negative,maaf,400,8
+sentiment,Negative,dok,375,9
+sentiment,Negative,malah,362,10
+sentiment,Negative,muka,357,11
+sentiment,Negative,cocok,332,12
+sentiment,Negative,minta,328,13
+sentiment,Negative,baru,310,14
+sentiment,Negative,lagi,298,15
+sentiment,Negative,buat,286,16
+sentiment,Negative,jerawat,281,17
+sentiment,Negative,kalo,280,18
+sentiment,Negative,udh,264,19
+sentiment,Negative,takut,264,20
+sentiment,Negative,kulit,254,21
+sentiment,Negative,klo,225,22
+sentiment,Negative,retinol,225,23
+sentiment,Negative,masih,200,24
+sentiment,Negative,dia,197,25
+sentiment,Negative,mahal,183,26
+sentiment,Negative,kan,179,27
+sentiment,Negative,kaya,178,28
+sentiment,Negative,gimana,170,29
+sentiment,Negative,kalau,169,30
+sentiment,Negative,mana,168,31
+sentiment,Negative,tau,158,32
+sentiment,Negative,panas,157,33
+sentiment,Negative,kusam,147,34
+sentiment,Negative,gitu,146,35
+sentiment,Negative,banyak,146,36
+sentiment,Negative,bukan,145,37
+sentiment,Negative,doktif,145,38
+sentiment,Negative,cream,144,39
+sentiment,Negative,pke,142,40
+sentiment,Negative,pernah,133,41
+sentiment,Negative,jerawatan,131,42
+sentiment,Negative,flek,130,43
+sentiment,Negative,lama,126,44
+sentiment,Negative,tpi,126,45
+sentiment,Negative,kenapa,125,46
+sentiment,Negative,dokter,124,47
+sentiment,Negative,awal,123,48
+sentiment,Negative,dulu,120,49
+sentiment,Negative,bikin,119,50
+sentiment,Negative,sekarang,117,51
+sentiment,Negative,orang,117,52
+sentiment,Negative,brutal,115,53
+sentiment,Negative,soalnya,114,54
+sentiment,Negative,owner,111,55
+sentiment,Negative,lebih,105,56
+sentiment,Negative,tidak,104,57
+sentiment,Negative,mungkin,104,58
+sentiment,Negative,knp,103,59
+sentiment,Negative,bagus,102,60
+sentiment,Negative,secara,101,61
+sentiment,Negative,bruntusan,100,62
+sentiment,Negative,pakek,100,63
+sentiment,Negative,sdh,100,64
+sentiment,Negative,pas,99,65
+sentiment,Negative,percaya,97,66
+sentiment,Negative,emang,96,67
+sentiment,Negative,skrg,96,68
+sentiment,Negative,jangan,95,69
+sentiment,Negative,bingung,95,70
+sentiment,Negative,cuma,94,71
+sentiment,Negative,wajah,93,72
+sentiment,Negative,serum,91,73
+sentiment,Negative,beda,91,74
+sentiment,Negative,berminyak,90,75
+sentiment,Negative,susah,89,76
+sentiment,Negative,jual,89,77
+sentiment,Negative,langsung,88,78
+sentiment,Negative,semua,88,79
+sentiment,Negative,gmna,87,80
+sentiment,Negative,masa,87,81
+sentiment,Negative,padahal,86,82
+sentiment,Negative,karna,86,83
+sentiment,Negative,salah,85,84
+sentiment,Negative,aman,85,85
+sentiment,Negative,pengen,85,86
+sentiment,Negative,terus,84,87
+sentiment,Negative,make,84,88
+sentiment,Negative,ang,83,89
+sentiment,Negative,kering,82,90
+sentiment,Negative,krn,81,91
+sentiment,Negative,glow,80,92
+sentiment,Negative,beruntusan,79,93
+sentiment,Negative,habis,79,94
+sentiment,Negative,harga,79,95
+sentiment,Negative,lain,79,96
+sentiment,Negative,kemarin,78,97
+sentiment,Negative,jdi,77,98
+sentiment,Negative,gini,77,99
+sentiment,Negative,org,77,100
+hcc_status,HCC,retinol,170,1
+hcc_status,HCC,sama,109,2
+hcc_status,HCC,niacinamide,104,3
+hcc_status,HCC,gak,100,4
+hcc_status,HCC,kulit,84,5
+hcc_status,HCC,buat,79,6
+hcc_status,HCC,cocok,72,7
+hcc_status,HCC,boleh,71,8
+hcc_status,HCC,mau,60,9
+hcc_status,HCC,serum,59,10
+hcc_status,HCC,ada,57,11
+hcc_status,HCC,tapi,53,12
+hcc_status,HCC,apa,52,13
+hcc_status,HCC,bagus,50,14
+hcc_status,HCC,beli,49,15
+hcc_status,HCC,baru,46,16
+hcc_status,HCC,hasilnya,45,17
+hcc_status,HCC,enak,43,18
+hcc_status,HCC,kalo,40,19
+hcc_status,HCC,bener,40,20
+hcc_status,HCC,jerawat,39,21
+hcc_status,HCC,worth,38,22
+hcc_status,HCC,emang,37,23
+hcc_status,HCC,hari,37,24
+hcc_status,HCC,muka,34,25
+hcc_status,HCC,dipakai,34,26
+hcc_status,HCC,bikin,34,27
+hcc_status,HCC,pemakaian,33,28
+hcc_status,HCC,lagi,33,29
+hcc_status,HCC,tiap,32,30
+hcc_status,HCC,cream,31,31
+hcc_status,HCC,harga,31,32
+hcc_status,HCC,klo,27,33
+hcc_status,HCC,sekali,27,34
+hcc_status,HCC,seneng,27,35
+hcc_status,HCC,moist,26,36
+hcc_status,HCC,pke,26,37
+hcc_status,HCC,wah,26,38
+hcc_status,HCC,kulitku,24,39
+hcc_status,HCC,nemu,24,40
+hcc_status,HCC,satu,23,41
+hcc_status,HCC,skin,22,42
+hcc_status,HCC,lumayan,22,43
+hcc_status,HCC,pengen,22,44
+hcc_status,HCC,makasih,22,45
+hcc_status,HCC,sensitif,21,46
+hcc_status,HCC,beneran,21,47
+hcc_status,HCC,isinya,21,48
+hcc_status,HCC,kalau,21,49
+hcc_status,HCC,segitu,21,50
+hcc_status,HCC,puas,21,51
+hcc_status,HCC,ngerasain,21,52
+hcc_status,HCC,vit,20,53
+hcc_status,HCC,pas,20,54
+hcc_status,HCC,pakek,20,55
+hcc_status,HCC,lebih,20,56
+hcc_status,HCC,salah,20,57
+hcc_status,HCC,semoga,19,58
+hcc_status,HCC,kombinasi,19,59
+hcc_status,HCC,tetep,19,60
+hcc_status,HCC,penting,19,61
+hcc_status,HCC,pagi,19,62
+hcc_status,HCC,wangi,19,63
+hcc_status,HCC,cara,19,64
+hcc_status,HCC,toner,18,65
+hcc_status,HCC,udh,18,66
+hcc_status,HCC,masih,18,67
+hcc_status,HCC,packaging,18,68
+hcc_status,HCC,teksturnya,18,69
+hcc_status,HCC,nyari,18,70
+hcc_status,HCC,rutin,18,71
+hcc_status,HCC,terus,17,72
+hcc_status,HCC,jujur,17,73
+hcc_status,HCC,mana,17,74
+hcc_status,HCC,moisturizer,16,75
+hcc_status,HCC,aman,16,76
+hcc_status,HCC,hyalu,16,77
+hcc_status,HCC,bau,16,78
+hcc_status,HCC,acne,16,79
+hcc_status,HCC,flek,16,80
+hcc_status,HCC,lucu,16,81
+hcc_status,HCC,minggu,16,82
+hcc_status,HCC,lembab,16,83
+hcc_status,HCC,mulai,16,84
+hcc_status,HCC,dikit,16,85
+hcc_status,HCC,umur,15,86
+hcc_status,HCC,kering,15,87
+hcc_status,HCC,trs,15,88
+hcc_status,HCC,pink,15,89
+hcc_status,HCC,gampang,15,90
+hcc_status,HCC,aneh,15,91
+hcc_status,HCC,tipe,15,92
+hcc_status,HCC,lengket,15,93
+hcc_status,HCC,alhamdulillah,15,94
+hcc_status,HCC,dok,15,95
+hcc_status,HCC,bruntusan,14,96
+hcc_status,HCC,nyerep,14,97
+hcc_status,HCC,sumpah,14,98
+hcc_status,HCC,nyaman,14,99
+hcc_status,HCC,lama,14,100
+hcc_status,Non-HCC,dok,6088,1
+hcc_status,Non-HCC,ada,2307,2
+hcc_status,Non-HCC,mau,1999,3
+hcc_status,Non-HCC,retinol,1858,4
+hcc_status,Non-HCC,gak,1569,5
+hcc_status,Non-HCC,sama,1485,6
+hcc_status,Non-HCC,apa,1372,7
+hcc_status,Non-HCC,cek,1327,8
+hcc_status,Non-HCC,cream,1280,9
+hcc_status,Non-HCC,boleh,1203,10
+hcc_status,Non-HCC,kalo,1200,11
+hcc_status,Non-HCC,buat,1178,12
+hcc_status,Non-HCC,beli,1162,13
+hcc_status,Non-HCC,serum,1143,14
+hcc_status,Non-HCC,aman,1058,15
+hcc_status,Non-HCC,baru,1047,16
+hcc_status,Non-HCC,cocok,947,17
+hcc_status,Non-HCC,kulit,945,18
+hcc_status,Non-HCC,glow,936,19
+hcc_status,Non-HCC,tapi,856,20
+hcc_status,Non-HCC,klo,830,21
+hcc_status,Non-HCC,pke,799,22
+hcc_status,Non-HCC,udh,748,23
+hcc_status,Non-HCC,lagi,744,24
+hcc_status,Non-HCC,masih,728,25
+hcc_status,Non-HCC,tolong,726,26
+hcc_status,Non-HCC,bagus,696,27
+hcc_status,Non-HCC,muka,690,28
+hcc_status,Non-HCC,jerawat,673,29
+hcc_status,Non-HCC,kalau,632,30
+hcc_status,Non-HCC,okypratamaa,561,31
+hcc_status,Non-HCC,minta,556,32
+hcc_status,Non-HCC,maaf,545,33
+hcc_status,Non-HCC,dokter,537,34
+hcc_status,Non-HCC,soalnya,536,35
+hcc_status,Non-HCC,hari,514,36
+hcc_status,Non-HCC,kedua,501,37
+hcc_status,Non-HCC,mana,496,38
+hcc_status,Non-HCC,malam,484,39
+hcc_status,Non-HCC,malah,478,40
+hcc_status,Non-HCC,berapa,470,41
+hcc_status,Non-HCC,dulu,462,42
+hcc_status,Non-HCC,kan,461,43
+hcc_status,Non-HCC,gimana,453,44
+hcc_status,Non-HCC,paket,437,45
+hcc_status,Non-HCC,krim,402,46
+hcc_status,Non-HCC,skin,401,47
+hcc_status,Non-HCC,beauty,400,48
+hcc_status,Non-HCC,tau,396,49
+hcc_status,Non-HCC,bener,389,50
+hcc_status,Non-HCC,harga,386,51
+hcc_status,Non-HCC,owner,386,52
+hcc_status,Non-HCC,moist,382,53
+hcc_status,Non-HCC,pakek,348,54
+hcc_status,Non-HCC,banyak,348,55
+hcc_status,Non-HCC,glowing,346,56
+hcc_status,Non-HCC,lebih,340,57
+hcc_status,Non-HCC,siang,337,58
+hcc_status,Non-HCC,pernah,337,59
+hcc_status,Non-HCC,brp,337,60
+hcc_status,Non-HCC,kaya,333,61
+hcc_status,Non-HCC,day,329,62
+hcc_status,Non-HCC,toner,328,63
+hcc_status,Non-HCC,takut,326,64
+hcc_status,Non-HCC,the,325,65
+hcc_status,Non-HCC,pagi,324,66
+hcc_status,Non-HCC,acne,323,67
+hcc_status,Non-HCC,dia,318,68
+hcc_status,Non-HCC,cara,316,69
+hcc_status,Non-HCC,flek,313,70
+hcc_status,Non-HCC,moisturizer,306,71
+hcc_status,Non-HCC,alhamdulillah,304,72
+hcc_status,Non-HCC,langsung,300,73
+hcc_status,Non-HCC,jual,300,74
+hcc_status,Non-HCC,gitu,298,75
+hcc_status,Non-HCC,pas,296,76
+hcc_status,Non-HCC,terus,296,77
+hcc_status,Non-HCC,umur,295,78
+hcc_status,Non-HCC,dipake,291,79
+hcc_status,Non-HCC,seruni,291,80
+hcc_status,Non-HCC,vit,289,81
+hcc_status,Non-HCC,emang,286,82
+hcc_status,Non-HCC,lain,285,83
+hcc_status,Non-HCC,tpi,283,84
+hcc_status,Non-HCC,make,281,85
+hcc_status,Non-HCC,yaa,281,86
+hcc_status,Non-HCC,gantiin,280,87
+hcc_status,Non-HCC,ngga,276,88
+hcc_status,Non-HCC,bikin,273,89
+hcc_status,Non-HCC,punya,273,90
+hcc_status,Non-HCC,doktif,271,91
+hcc_status,Non-HCC,night,270,92
+hcc_status,Non-HCC,kali,265,93
+hcc_status,Non-HCC,abis,264,94
+hcc_status,Non-HCC,semangat,264,95
+hcc_status,Non-HCC,mlm,263,96
+hcc_status,Non-HCC,pengen,258,97
+hcc_status,Non-HCC,cuma,255,98
+hcc_status,Non-HCC,habis,252,99
+hcc_status,Non-HCC,tiap,250,100
+brand_label_auto,Azarine,retinol,42,1
+brand_label_auto,Azarine,kulit,18,2
+brand_label_auto,Azarine,sama,15,3
+brand_label_auto,Azarine,gak,13,4
+brand_label_auto,Azarine,boleh,11,5
+brand_label_auto,Azarine,cocok,11,6
+brand_label_auto,Azarine,buat,10,7
+brand_label_auto,Azarine,mau,9,8
+brand_label_auto,Azarine,tapi,9,9
+brand_label_auto,Azarine,jerawat,8,10
+brand_label_auto,Azarine,emang,8,11
+brand_label_auto,Azarine,ada,7,12
+brand_label_auto,Azarine,kering,7,13
+brand_label_auto,Azarine,skin,7,14
+brand_label_auto,Azarine,muka,7,15
+brand_label_auto,Azarine,enak,7,16
+brand_label_auto,Azarine,nemu,7,17
+brand_label_auto,Azarine,dipakai,6,18
+brand_label_auto,Azarine,bagus,6,19
+brand_label_auto,Azarine,bikin,6,20
+brand_label_auto,Azarine,tiap,6,21
+brand_label_auto,Azarine,bener,6,22
+brand_label_auto,Azarine,kalo,5,23
+brand_label_auto,Azarine,baru,5,24
+brand_label_auto,Azarine,moist,5,25
+brand_label_auto,Azarine,klo,5,26
+brand_label_auto,Azarine,pke,5,27
+brand_label_auto,Azarine,cream,5,28
+brand_label_auto,Azarine,sumpah,5,29
+brand_label_auto,Azarine,seneng,5,30
+brand_label_auto,Azarine,semoga,5,31
+brand_label_auto,Azarine,bruntusan,5,32
+brand_label_auto,Azarine,lagi,5,33
+brand_label_auto,Azarine,satu,5,34
+brand_label_auto,Azarine,apa,4,35
+brand_label_auto,Azarine,biru,4,36
+brand_label_auto,Azarine,ngga,4,37
+brand_label_auto,Azarine,pink,4,38
+brand_label_auto,Azarine,centella,4,39
+brand_label_auto,Azarine,sunscreen,4,40
+brand_label_auto,Azarine,beneran,4,41
+brand_label_auto,Azarine,ngefek,4,42
+brand_label_auto,Azarine,masih,4,43
+brand_label_auto,Azarine,breakout,4,44
+brand_label_auto,Azarine,sekali,4,45
+brand_label_auto,Azarine,hasilnya,4,46
+brand_label_auto,Azarine,beli,4,47
+brand_label_auto,Azarine,wangi,4,48
+brand_label_auto,Azarine,teksturnya,4,49
+brand_label_auto,Azarine,hari,4,50
+brand_label_auto,Azarine,nyari,4,51
+brand_label_auto,Azarine,salah,4,52
+brand_label_auto,Azarine,worth,4,53
+brand_label_auto,Azarine,complex,3,54
+brand_label_auto,Azarine,soalnya,3,55
+brand_label_auto,Azarine,smooth,3,56
+brand_label_auto,Azarine,pemula,3,57
+brand_label_auto,Azarine,trs,3,58
+brand_label_auto,Azarine,aman,3,59
+brand_label_auto,Azarine,the,3,60
+brand_label_auto,Azarine,pemakaian,3,61
+brand_label_auto,Azarine,cii,3,62
+brand_label_auto,Azarine,pas,3,63
+brand_label_auto,Azarine,tolong,3,64
+brand_label_auto,Azarine,hadalabo,3,65
+brand_label_auto,Azarine,pakek,3,66
+brand_label_auto,Azarine,paginya,3,67
+brand_label_auto,Azarine,udh,3,68
+brand_label_auto,Azarine,akhirnya,3,69
+brand_label_auto,Azarine,minta,3,70
+brand_label_auto,Azarine,lama,3,71
+brand_label_auto,Azarine,serum,3,72
+brand_label_auto,Azarine,penting,3,73
+brand_label_auto,Azarine,beda,3,74
+brand_label_auto,Azarine,mana,3,75
+brand_label_auto,Azarine,pkek,3,76
+brand_label_auto,Azarine,rekomendasi,3,77
+brand_label_auto,Azarine,kemarin,3,78
+brand_label_auto,Azarine,ngerasain,3,79
+brand_label_auto,Azarine,setuju,3,80
+brand_label_auto,Azarine,makasih,3,81
+brand_label_auto,Azarine,infonya,3,82
+brand_label_auto,Azarine,pengen,3,83
+brand_label_auto,Azarine,aha,2,84
+brand_label_auto,Azarine,vit,2,85
+brand_label_auto,Azarine,perlu,2,86
+brand_label_auto,Azarine,umur,2,87
+brand_label_auto,Azarine,abis,2,88
+brand_label_auto,Azarine,moisturizer,2,89
+brand_label_auto,Azarine,toner,2,90
+brand_label_auto,Azarine,warna,2,91
+brand_label_auto,Azarine,emg,2,92
+brand_label_auto,Azarine,semua,2,93
+brand_label_auto,Azarine,makin,2,94
+brand_label_auto,Azarine,mois,2,95
+brand_label_auto,Azarine,ungu,2,96
+brand_label_auto,Azarine,dri,2,97
+brand_label_auto,Azarine,ampul,2,98
+brand_label_auto,Azarine,minimalist,2,99
+brand_label_auto,Azarine,malah,2,100
+brand_label_auto,Daviena,retinol,69,1
+brand_label_auto,Daviena,sama,29,2
+brand_label_auto,Daviena,kulit,25,3
+brand_label_auto,Daviena,gak,21,4
+brand_label_auto,Daviena,cocok,20,5
+brand_label_auto,Daviena,bener,14,6
+brand_label_auto,Daviena,mau,13,7
+brand_label_auto,Daviena,tapi,13,8
+brand_label_auto,Daviena,worth,13,9
+brand_label_auto,Daviena,bikin,12,10
+brand_label_auto,Daviena,baru,12,11
+brand_label_auto,Daviena,beli,12,12
+brand_label_auto,Daviena,emang,11,13
+brand_label_auto,Daviena,buat,11,14
+brand_label_auto,Daviena,boleh,11,15
+brand_label_auto,Daviena,pemakaian,11,16
+brand_label_auto,Daviena,bagus,10,17
+brand_label_auto,Daviena,apa,10,18
+brand_label_auto,Daviena,seneng,10,19
+brand_label_auto,Daviena,ada,9,20
+brand_label_auto,Daviena,moist,8,21
+brand_label_auto,Daviena,lembab,8,22
+brand_label_auto,Daviena,sekali,8,23
+brand_label_auto,Daviena,rutin,8,24
+brand_label_auto,Daviena,lebih,8,25
+brand_label_auto,Daviena,tetep,8,26
+brand_label_auto,Daviena,lagi,8,27
+brand_label_auto,Daviena,pakek,7,28
+brand_label_auto,Daviena,harga,7,29
+brand_label_auto,Daviena,nemu,7,30
+brand_label_auto,Daviena,isinya,7,31
+brand_label_auto,Daviena,hasilnya,7,32
+brand_label_auto,Daviena,kulitku,7,33
+brand_label_auto,Daviena,beneran,7,34
+brand_label_auto,Daviena,ngerasain,7,35
+brand_label_auto,Daviena,enak,6,36
+brand_label_auto,Daviena,sensitif,6,37
+brand_label_auto,Daviena,packaging,6,38
+brand_label_auto,Daviena,lucu,6,39
+brand_label_auto,Daviena,penting,6,40
+brand_label_auto,Daviena,terus,6,41
+brand_label_auto,Daviena,kombinasi,6,42
+brand_label_auto,Daviena,nyaman,6,43
+brand_label_auto,Daviena,lengket,6,44
+brand_label_auto,Daviena,cocok²,6,45
+brand_label_auto,Daviena,murah,6,46
+brand_label_auto,Daviena,cara,6,47
+brand_label_auto,Daviena,wah,6,48
+brand_label_auto,Daviena,hal,6,49
+brand_label_auto,Daviena,pas,6,50
+brand_label_auto,Daviena,pke,5,51
+brand_label_auto,Daviena,paket,5,52
+brand_label_auto,Daviena,muka,5,53
+brand_label_auto,Daviena,toner,5,54
+brand_label_auto,Daviena,club,5,55
+brand_label_auto,Daviena,alhamdulillah,5,56
+brand_label_auto,Daviena,iritasi,5,57
+brand_label_auto,Daviena,kemaren,5,58
+brand_label_auto,Daviena,semoga,5,59
+brand_label_auto,Daviena,segitu,5,60
+brand_label_auto,Daviena,lumayan,5,61
+brand_label_auto,Daviena,puas,5,62
+brand_label_auto,Daviena,jerawat,5,63
+brand_label_auto,Daviena,masih,5,64
+brand_label_auto,Daviena,mana,5,65
+brand_label_auto,Daviena,makasih,5,66
+brand_label_auto,Daviena,pengalamannya,5,67
+brand_label_auto,Daviena,try,5,68
+brand_label_auto,Daviena,hari,4,69
+brand_label_auto,Daviena,kalo,4,70
+brand_label_auto,Daviena,akhirnya,4,71
+brand_label_auto,Daviena,breakout,4,72
+brand_label_auto,Daviena,kalau,4,73
+brand_label_auto,Daviena,dok,4,74
+brand_label_auto,Daviena,pengen,4,75
+brand_label_auto,Daviena,gtu,4,76
+brand_label_auto,Daviena,serum,4,77
+brand_label_auto,Daviena,kebetulan,4,78
+brand_label_auto,Daviena,mois,3,79
+brand_label_auto,Daviena,bole,3,80
+brand_label_auto,Daviena,tipe,3,81
+brand_label_auto,Daviena,tiap,3,82
+brand_label_auto,Daviena,ngk,3,83
+brand_label_auto,Daviena,the,3,84
+brand_label_auto,Daviena,klo,3,85
+brand_label_auto,Daviena,kusam,3,86
+brand_label_auto,Daviena,sumpah,3,87
+brand_label_auto,Daviena,ngefek,3,88
+brand_label_auto,Daviena,okypratamaa,3,89
+brand_label_auto,Daviena,kedua,3,90
+brand_label_auto,Daviena,siang,3,91
+brand_label_auto,Daviena,dulu,3,92
+brand_label_auto,Daviena,asli,3,93
+brand_label_auto,Daviena,utk,3,94
+brand_label_auto,Daviena,ori,3,95
+brand_label_auto,Daviena,tipis,3,96
+brand_label_auto,Daviena,gimana,3,97
+brand_label_auto,Daviena,iyaa,3,98
+brand_label_auto,Daviena,disini,3,99
+brand_label_auto,Daviena,sama²,3,100
+brand_label_auto,Maryame,niacinamide,51,1
+brand_label_auto,Maryame,gak,23,2
+brand_label_auto,Maryame,enak,18,3
+brand_label_auto,Maryame,hasilnya,17,4
+brand_label_auto,Maryame,cocok,15,5
+brand_label_auto,Maryame,ada,15,6
+brand_label_auto,Maryame,dipakai,15,7
+brand_label_auto,Maryame,sama,14,8
+brand_label_auto,Maryame,buat,13,9
+brand_label_auto,Maryame,pemakaian,10,10
+brand_label_auto,Maryame,kulit,10,11
+brand_label_auto,Maryame,minggu,10,12
+brand_label_auto,Maryame,worth,10,13
+brand_label_auto,Maryame,beli,10,14
+brand_label_auto,Maryame,bagus,10,15
+brand_label_auto,Maryame,emang,10,16
+brand_label_auto,Maryame,tiap,9,17
+brand_label_auto,Maryame,hari,9,18
+brand_label_auto,Maryame,gampang,9,19
+brand_label_auto,Maryame,mulai,9,20
+brand_label_auto,Maryame,jujur,9,21
+brand_label_auto,Maryame,tapi,9,22
+brand_label_auto,Maryame,dikit,8,23
+brand_label_auto,Maryame,muka,8,24
+brand_label_auto,Maryame,nyerep,8,25
+brand_label_auto,Maryame,bau,8,26
+brand_label_auto,Maryame,aneh,8,27
+brand_label_auto,Maryame,baru,8,28
+brand_label_auto,Maryame,harga,8,29
+brand_label_auto,Maryame,lumayan,8,30
+brand_label_auto,Maryame,cerahan,8,31
+brand_label_auto,Maryame,mau,7,32
+brand_label_auto,Maryame,kulitku,7,33
+brand_label_auto,Maryame,wangi,7,34
+brand_label_auto,Maryame,teksturnya,7,35
+brand_label_auto,Maryame,segitu,7,36
+brand_label_auto,Maryame,puas,7,37
+brand_label_auto,Maryame,kelihatan,7,38
+brand_label_auto,Maryame,sekali,6,39
+brand_label_auto,Maryame,seneng,6,40
+brand_label_auto,Maryame,lagi,6,41
+brand_label_auto,Maryame,dok,6,42
+brand_label_auto,Maryame,bener,6,43
+brand_label_auto,Maryame,penting,5,44
+brand_label_auto,Maryame,cream,5,45
+brand_label_auto,Maryame,nyari,5,46
+brand_label_auto,Maryame,salah,5,47
+brand_label_auto,Maryame,satu,5,48
+brand_label_auto,Maryame,lama,5,49
+brand_label_auto,Maryame,apa,4,50
+brand_label_auto,Maryame,sensitif,4,51
+brand_label_auto,Maryame,tpi,4,52
+brand_label_auto,Maryame,flek,4,53
+brand_label_auto,Maryame,nemu,4,54
+brand_label_auto,Maryame,semoga,4,55
+brand_label_auto,Maryame,klo,4,56
+brand_label_auto,Maryame,packaging,4,57
+brand_label_auto,Maryame,lucu,4,58
+brand_label_auto,Maryame,isinya,4,59
+brand_label_auto,Maryame,bikin,4,60
+brand_label_auto,Maryame,ngerasain,4,61
+brand_label_auto,Maryame,betul,4,62
+brand_label_auto,Maryame,harian,4,63
+brand_label_auto,Maryame,recommended,4,64
+brand_label_auto,Maryame,suka,4,65
+brand_label_auto,Maryame,tipe,4,66
+brand_label_auto,Maryame,wah,4,67
+brand_label_auto,Maryame,retinol,3,68
+brand_label_auto,Maryame,jerawat,3,69
+brand_label_auto,Maryame,padahal,3,70
+brand_label_auto,Maryame,hitam,3,71
+brand_label_auto,Maryame,bru,3,72
+brand_label_auto,Maryame,sumpah,3,73
+brand_label_auto,Maryame,beneran,3,74
+brand_label_auto,Maryame,ngefek,3,75
+brand_label_auto,Maryame,aman,3,76
+brand_label_auto,Maryame,kemaren,3,77
+brand_label_auto,Maryame,🥰🥰🥰,3,78
+brand_label_auto,Maryame,kombinasi,3,79
+brand_label_auto,Maryame,tetep,3,80
+brand_label_auto,Maryame,nyaman,3,81
+brand_label_auto,Maryame,lengket,3,82
+brand_label_auto,Maryame,rekomendasi,3,83
+brand_label_auto,Maryame,rutin,3,84
+brand_label_auto,Maryame,lebih,3,85
+brand_label_auto,Maryame,lembab,3,86
+brand_label_auto,Maryame,siang,3,87
+brand_label_auto,Maryame,pke,3,88
+brand_label_auto,Maryame,alhamdulillah,3,89
+brand_label_auto,Maryame,gatal,3,90
+brand_label_auto,Maryame,hal,3,91
+brand_label_auto,Maryame,pas,3,92
+brand_label_auto,Maryame,bohong,3,93
+brand_label_auto,Maryame,pengalamannya,3,94
+brand_label_auto,Maryame,try,3,95
+brand_label_auto,Maryame,boleh,2,96
+brand_label_auto,Maryame,gmna,2,97
+brand_label_auto,Maryame,pakenya,2,98
+brand_label_auto,Maryame,kalo,2,99
+brand_label_auto,Maryame,serum,2,100
+brand_label_auto,The Originote,niacinamide,50,1
+brand_label_auto,The Originote,serum,30,2
+brand_label_auto,The Originote,sama,29,3
+brand_label_auto,The Originote,retinol,22,4
+brand_label_auto,The Originote,buat,21,5
+brand_label_auto,The Originote,gak,20,6
+brand_label_auto,The Originote,boleh,18,7
+brand_label_auto,The Originote,cocok,17,8
+brand_label_auto,The Originote,kalo,15,9
+brand_label_auto,The Originote,hasilnya,15,10
+brand_label_auto,The Originote,beli,15,11
+brand_label_auto,The Originote,kulit,14,12
+brand_label_auto,The Originote,hari,14,13
+brand_label_auto,The Originote,jerawat,13,14
+brand_label_auto,The Originote,tapi,13,15
+brand_label_auto,The Originote,bagus,13,16
+brand_label_auto,The Originote,mau,12,17
+brand_label_auto,The Originote,baru,12,18
+brand_label_auto,The Originote,pagi,12,19
+brand_label_auto,The Originote,enak,11,20
+brand_label_auto,The Originote,dipakai,11,21
+brand_label_auto,The Originote,vit,11,22
+brand_label_auto,The Originote,ada,10,23
+brand_label_auto,The Originote,apa,10,24
+brand_label_auto,The Originote,bikin,10,25
+brand_label_auto,The Originote,bener,9,26
+brand_label_auto,The Originote,harga,9,27
+brand_label_auto,The Originote,worth,9,28
+brand_label_auto,The Originote,pemakaian,8,29
+brand_label_auto,The Originote,segitu,8,30
+brand_label_auto,The Originote,lumayan,8,31
+brand_label_auto,The Originote,puas,8,32
+brand_label_auto,The Originote,tiap,8,33
+brand_label_auto,The Originote,pengen,7,34
+brand_label_auto,The Originote,salah,7,35
+brand_label_auto,The Originote,satu,7,36
+brand_label_auto,The Originote,bekas,7,37
+brand_label_auto,The Originote,lebih,7,38
+brand_label_auto,The Originote,packaging,7,39
+brand_label_auto,The Originote,kulitku,7,40
+brand_label_auto,The Originote,hyalu,7,41
+brand_label_auto,The Originote,nyari,7,42
+brand_label_auto,The Originote,sekali,7,43
+brand_label_auto,The Originote,wah,7,44
+brand_label_auto,The Originote,emang,7,45
+brand_label_auto,The Originote,lagi,6,46
+brand_label_auto,The Originote,isinya,6,47
+brand_label_auto,The Originote,masih,6,48
+brand_label_auto,The Originote,pas,6,49
+brand_label_auto,The Originote,pakek,6,50
+brand_label_auto,The Originote,cara,6,51
+brand_label_auto,The Originote,acne,6,52
+brand_label_auto,The Originote,seneng,6,53
+brand_label_auto,The Originote,malam,6,54
+brand_label_auto,The Originote,wangi,6,55
+brand_label_auto,The Originote,teksturnya,6,56
+brand_label_auto,The Originote,nemu,6,57
+brand_label_auto,The Originote,tipe,6,58
+brand_label_auto,The Originote,jujur,5,59
+brand_label_auto,The Originote,rutin,5,60
+brand_label_auto,The Originote,dipake,5,61
+brand_label_auto,The Originote,sensitif,5,62
+brand_label_auto,The Originote,umur,5,63
+brand_label_auto,The Originote,moist,5,64
+brand_label_auto,The Originote,lucu,5,65
+brand_label_auto,The Originote,penting,5,66
+brand_label_auto,The Originote,aneh,5,67
+brand_label_auto,The Originote,kombinasi,5,68
+brand_label_auto,The Originote,gini,5,69
+brand_label_auto,The Originote,dulu,4,70
+brand_label_auto,The Originote,muka,4,71
+brand_label_auto,The Originote,butuh,4,72
+brand_label_auto,The Originote,gimana,4,73
+brand_label_auto,The Originote,udh,4,74
+brand_label_auto,The Originote,setiap,4,75
+brand_label_auto,The Originote,soalnya,4,76
+brand_label_auto,The Originote,🥰🥰🥰,4,77
+brand_label_auto,The Originote,trs,4,78
+brand_label_auto,The Originote,lembab,4,79
+brand_label_auto,The Originote,tau,4,80
+brand_label_auto,The Originote,gampang,4,81
+brand_label_auto,The Originote,nyerep,4,82
+brand_label_auto,The Originote,bau,4,83
+brand_label_auto,The Originote,cocok²,4,84
+brand_label_auto,The Originote,bright,4,85
+brand_label_auto,The Originote,moisturizer,4,86
+brand_label_auto,The Originote,tetep,4,87
+brand_label_auto,The Originote,minggu,4,88
+brand_label_auto,The Originote,mulai,4,89
+brand_label_auto,The Originote,kelihatan,4,90
+brand_label_auto,The Originote,cerahan,4,91
+brand_label_auto,The Originote,dikit,4,92
+brand_label_auto,The Originote,kalau,4,93
+brand_label_auto,The Originote,pump,4,94
+brand_label_auto,The Originote,toner,4,95
+brand_label_auto,The Originote,akhirnya,4,96
+brand_label_auto,The Originote,breakout,4,97
+brand_label_auto,The Originote,beneran,4,98
+brand_label_auto,The Originote,setuju,4,99
+brand_label_auto,The Originote,makasih,4,100
+brand_label_auto,Mixed_2_Brands,sama,7,1
+brand_label_auto,Mixed_2_Brands,retinol,6,2
+brand_label_auto,Mixed_2_Brands,serum,6,3
+brand_label_auto,Mixed_2_Brands,ada,5,4
+brand_label_auto,Mixed_2_Brands,buat,4,5
+brand_label_auto,Mixed_2_Brands,apa,4,6
+brand_label_auto,Mixed_2_Brands,gak,4,7
+brand_label_auto,Mixed_2_Brands,boleh,4,8
+brand_label_auto,Mixed_2_Brands,aman,3,9
+brand_label_auto,Mixed_2_Brands,kalo,3,10
+brand_label_auto,Mixed_2_Brands,baru,3,11
+brand_label_auto,Mixed_2_Brands,semakin,3,12
+brand_label_auto,Mixed_2_Brands,semangat,3,13
+brand_label_auto,Mixed_2_Brands,tapi,3,14
+brand_label_auto,Mixed_2_Brands,pratista,2,15
+brand_label_auto,Mixed_2_Brands,kulit,2,16
+brand_label_auto,Mixed_2_Brands,jerawat,2,17
+brand_label_auto,Mixed_2_Brands,bagus,2,18
+brand_label_auto,Mixed_2_Brands,niacinamide,2,19
+brand_label_auto,Mixed_2_Brands,gmn,2,20
+brand_label_auto,Mixed_2_Brands,glowing,2,21
+brand_label_auto,Mixed_2_Brands,umur,2,22
+brand_label_auto,Mixed_2_Brands,pke,2,23
+brand_label_auto,Mixed_2_Brands,ibu,2,24
+brand_label_auto,Mixed_2_Brands,mau,2,25
+brand_label_auto,Mixed_2_Brands,lagi,2,26
+brand_label_auto,Mixed_2_Brands,pengen,2,27
+brand_label_auto,Mixed_2_Brands,tetep,2,28
+brand_label_auto,Mixed_2_Brands,satu,2,29
+brand_label_auto,Mixed_2_Brands,lain,2,30
+brand_label_auto,Mixed_2_Brands,kaka,2,31
+brand_label_auto,Mixed_2_Brands,dok,2,32
+brand_label_auto,Mixed_2_Brands,ttp,2,33
+brand_label_auto,Mixed_2_Brands,harga,2,34
+brand_label_auto,Mixed_2_Brands,cekit,2,35
+brand_label_auto,Mixed_2_Brands,kira,2,36
+brand_label_auto,Mixed_2_Brands,doang,2,37
+brand_label_auto,Mixed_2_Brands,wah,2,38
+brand_label_auto,Mixed_2_Brands,makasih,2,39
+brand_label_auto,Mixed_2_Brands,mending,1,40
+brand_label_auto,Mixed_2_Brands,elsheskin,1,41
+brand_label_auto,Mixed_2_Brands,glowingskin,1,42
+brand_label_auto,Mixed_2_Brands,nyata,1,43
+brand_label_auto,Mixed_2_Brands,skincaretips,1,44
+brand_label_auto,Mixed_2_Brands,wajib,1,45
+brand_label_auto,Mixed_2_Brands,dicoba,1,46
+brand_label_auto,Mixed_2_Brands,beruntusan,1,47
+brand_label_auto,Mixed_2_Brands,beberapa,1,48
+brand_label_auto,Mixed_2_Brands,usia,1,49
+brand_label_auto,Mixed_2_Brands,gunakan,1,50
+brand_label_auto,Mixed_2_Brands,bng,1,51
+brand_label_auto,Mixed_2_Brands,tim,1,52
+brand_label_auto,Mixed_2_Brands,implora,1,53
+brand_label_auto,Mixed_2_Brands,uda,1,54
+brand_label_auto,Mixed_2_Brands,apalagi,1,55
+brand_label_auto,Mixed_2_Brands,kombinasi,1,56
+brand_label_auto,Mixed_2_Brands,niacinemide,1,57
+brand_label_auto,Mixed_2_Brands,bakulicol,1,58
+brand_label_auto,Mixed_2_Brands,selang,1,59
+brand_label_auto,Mixed_2_Brands,seling,1,60
+brand_label_auto,Mixed_2_Brands,yaa,1,61
+brand_label_auto,Mixed_2_Brands,terus,1,62
+brand_label_auto,Mixed_2_Brands,layer,1,63
+brand_label_auto,Mixed_2_Brands,paginya,1,64
+brand_label_auto,Mixed_2_Brands,nampol,1,65
+brand_label_auto,Mixed_2_Brands,mukaku,1,66
+brand_label_auto,Mixed_2_Brands,buersih,1,67
+brand_label_auto,Mixed_2_Brands,😭😭belum,1,68
+brand_label_auto,Mixed_2_Brands,pernah,1,69
+brand_label_auto,Mixed_2_Brands,secocok,1,70
+brand_label_auto,Mixed_2_Brands,❤️❤️,1,71
+brand_label_auto,Mixed_2_Brands,bru,1,72
+brand_label_auto,Mixed_2_Brands,pertma,1,73
+brand_label_auto,Mixed_2_Brands,kali,1,74
+brand_label_auto,Mixed_2_Brands,mulai,1,75
+brand_label_auto,Mixed_2_Brands,dri,1,76
+brand_label_auto,Mixed_2_Brands,brp,1,77
+brand_label_auto,Mixed_2_Brands,overclaim,1,78
+brand_label_auto,Mixed_2_Brands,anjjjjj,1,79
+brand_label_auto,Mixed_2_Brands,menyusui,1,80
+brand_label_auto,Mixed_2_Brands,gimana,1,81
+brand_label_auto,Mixed_2_Brands,best,1,82
+brand_label_auto,Mixed_2_Brands,tiap,1,83
+brand_label_auto,Mixed_2_Brands,hari,1,84
+brand_label_auto,Mixed_2_Brands,cantik,1,85
+brand_label_auto,Mixed_2_Brands,glowseries,1,86
+brand_label_auto,Mixed_2_Brands,gaaaa,1,87
+brand_label_auto,Mixed_2_Brands,pakee,1,88
+brand_label_auto,Mixed_2_Brands,😂😂😂,1,89
+brand_label_auto,Mixed_2_Brands,rekomen,1,90
+brand_label_auto,Mixed_2_Brands,pemula,1,91
+brand_label_auto,Mixed_2_Brands,bingung,1,92
+brand_label_auto,Mixed_2_Brands,mana😭,1,93
+brand_label_auto,Mixed_2_Brands,kan,1,94
+brand_label_auto,Mixed_2_Brands,proses,1,95
+brand_label_auto,Mixed_2_Brands,kk🙄,1,96
+brand_label_auto,Mixed_2_Brands,pakek,1,97
+brand_label_auto,Mixed_2_Brands,jga,1,98
+brand_label_auto,Mixed_2_Brands,cocok🥰,1,99
+brand_label_auto,Mixed_2_Brands,pertama,1,100
+brand_label_auto,Mixed_3plus_Brands,retinol,28,1
+brand_label_auto,Mixed_3plus_Brands,boleh,25,2
+brand_label_auto,Mixed_3plus_Brands,gak,18,3
+brand_label_auto,Mixed_3plus_Brands,buat,18,4
+brand_label_auto,Mixed_3plus_Brands,cream,16,5
+brand_label_auto,Mixed_3plus_Brands,mau,16,6
+brand_label_auto,Mixed_3plus_Brands,sama,15,7
+brand_label_auto,Mixed_3plus_Brands,apa,14,8
+brand_label_auto,Mixed_3plus_Brands,serum,14,9
+brand_label_auto,Mixed_3plus_Brands,kulit,12,10
+brand_label_auto,Mixed_3plus_Brands,kalo,10,11
+brand_label_auto,Mixed_3plus_Brands,kalau,10,12
+brand_label_auto,Mixed_3plus_Brands,skin,9,13
+brand_label_auto,Mixed_3plus_Brands,klo,9,14
+brand_label_auto,Mixed_3plus_Brands,pke,9,15
+brand_label_auto,Mixed_3plus_Brands,pink,8,16
+brand_label_auto,Mixed_3plus_Brands,jerawat,8,17
+brand_label_auto,Mixed_3plus_Brands,moisturizer,8,18
+brand_label_auto,Mixed_3plus_Brands,ada,8,19
+brand_label_auto,Mixed_3plus_Brands,cocok,8,20
+brand_label_auto,Mixed_3plus_Brands,teh,8,21
+brand_label_auto,Mixed_3plus_Brands,terus,7,22
+brand_label_auto,Mixed_3plus_Brands,muka,7,23
+brand_label_auto,Mixed_3plus_Brands,makasih,7,24
+brand_label_auto,Mixed_3plus_Brands,bagus,6,25
+brand_label_auto,Mixed_3plus_Brands,toner,6,26
+brand_label_auto,Mixed_3plus_Brands,harus,6,27
+brand_label_auto,Mixed_3plus_Brands,baru,6,28
+brand_label_auto,Mixed_3plus_Brands,malam,6,29
+brand_label_auto,Mixed_3plus_Brands,flek,6,30
+brand_label_auto,Mixed_3plus_Brands,vit,6,31
+brand_label_auto,Mixed_3plus_Brands,hyalu,5,32
+brand_label_auto,Mixed_3plus_Brands,aman,5,33
+brand_label_auto,Mixed_3plus_Brands,moist,5,34
+brand_label_auto,Mixed_3plus_Brands,bener,5,35
+brand_label_auto,Mixed_3plus_Brands,sma,5,36
+brand_label_auto,Mixed_3plus_Brands,lagi,5,37
+brand_label_auto,Mixed_3plus_Brands,berapa,5,38
+brand_label_auto,Mixed_3plus_Brands,mana,5,39
+brand_label_auto,Mixed_3plus_Brands,pagi,5,40
+brand_label_auto,Mixed_3plus_Brands,trs,5,41
+brand_label_auto,Mixed_3plus_Brands,kan,5,42
+brand_label_auto,Mixed_3plus_Brands,beli,5,43
+brand_label_auto,Mixed_3plus_Brands,mlm,5,44
+brand_label_auto,Mixed_3plus_Brands,tapi,5,45
+brand_label_auto,Mixed_3plus_Brands,takut,5,46
+brand_label_auto,Mixed_3plus_Brands,wah,5,47
+brand_label_auto,Mixed_3plus_Brands,tanya,4,48
+brand_label_auto,Mixed_3plus_Brands,dipake,4,49
+brand_label_auto,Mixed_3plus_Brands,pemula,4,50
+brand_label_auto,Mixed_3plus_Brands,berjerawat,4,51
+brand_label_auto,Mixed_3plus_Brands,berminyak,4,52
+brand_label_auto,Mixed_3plus_Brands,udh,4,53
+brand_label_auto,Mixed_3plus_Brands,umur,4,54
+brand_label_auto,Mixed_3plus_Brands,soalnya,4,55
+brand_label_auto,Mixed_3plus_Brands,tiap,4,56
+brand_label_auto,Mixed_3plus_Brands,hari,4,57
+brand_label_auto,Mixed_3plus_Brands,cara,4,58
+brand_label_auto,Mixed_3plus_Brands,beda,4,59
+brand_label_auto,Mixed_3plus_Brands,acne,4,60
+brand_label_auto,Mixed_3plus_Brands,harga,4,61
+brand_label_auto,Mixed_3plus_Brands,tau,4,62
+brand_label_auto,Mixed_3plus_Brands,hitam,4,63
+brand_label_auto,Mixed_3plus_Brands,make,4,64
+brand_label_auto,Mixed_3plus_Brands,care,3,65
+brand_label_auto,Mixed_3plus_Brands,lain,3,66
+brand_label_auto,Mixed_3plus_Brands,habis,3,67
+brand_label_auto,Mixed_3plus_Brands,night,3,68
+brand_label_auto,Mixed_3plus_Brands,pori,3,69
+brand_label_auto,Mixed_3plus_Brands,besar,3,70
+brand_label_auto,Mixed_3plus_Brands,ampoule,3,71
+brand_label_auto,Mixed_3plus_Brands,mask,3,72
+brand_label_auto,Mixed_3plus_Brands,punya,3,73
+brand_label_auto,Mixed_3plus_Brands,gitu,3,74
+brand_label_auto,Mixed_3plus_Brands,minta,3,75
+brand_label_auto,Mixed_3plus_Brands,niacin,3,76
+brand_label_auto,Mixed_3plus_Brands,glow,3,77
+brand_label_auto,Mixed_3plus_Brands,the,3,78
+brand_label_auto,Mixed_3plus_Brands,busui,3,79
+brand_label_auto,Mixed_3plus_Brands,btw,3,80
+brand_label_auto,Mixed_3plus_Brands,ngga,3,81
+brand_label_auto,Mixed_3plus_Brands,paket,3,82
+brand_label_auto,Mixed_3plus_Brands,blm,3,83
+brand_label_auto,Mixed_3plus_Brands,dokter,3,84
+brand_label_auto,Mixed_3plus_Brands,gmn,3,85
+brand_label_auto,Mixed_3plus_Brands,wajib,3,86
+brand_label_auto,Mixed_3plus_Brands,mix,3,87
+brand_label_auto,Mixed_3plus_Brands,biasa,3,88
+brand_label_auto,Mixed_3plus_Brands,gimana,3,89
+brand_label_auto,Mixed_3plus_Brands,pakenya,3,90
+brand_label_auto,Mixed_3plus_Brands,lgi,3,91
+brand_label_auto,Mixed_3plus_Brands,pengen,3,92
+brand_label_auto,Mixed_3plus_Brands,isinya,3,93
+brand_label_auto,Mixed_3plus_Brands,ganti,3,94
+brand_label_auto,Mixed_3plus_Brands,😂😂😂,3,95
+brand_label_auto,Mixed_3plus_Brands,disini,3,96
+brand_label_auto,Mixed_3plus_Brands,keluar,3,97
+brand_label_auto,Mixed_3plus_Brands,beneran,3,98
+brand_label_auto,Mixed_3plus_Brands,infonyaa,3,99
+brand_label_auto,Mixed_3plus_Brands,ngerasain,3,100
+brand_label_auto,Not identified,apa,6,1
+brand_label_auto,Not identified,pkai,4,2
+brand_label_auto,Not identified,kulit,3,3
+brand_label_auto,Not identified,udh,3,4
+brand_label_auto,Not identified,moist,3,5
+brand_label_auto,Not identified,jrwat,3,6
+brand_label_auto,Not identified,klo,3,7
+brand_label_auto,Not identified,ada,3,8
+brand_label_auto,Not identified,muka,3,9
+brand_label_auto,Not identified,skin,3,10
+brand_label_auto,Not identified,bagus,3,11
+brand_label_auto,Not identified,langsung,3,12
+brand_label_auto,Not identified,kering,2,13
+brand_label_auto,Not identified,sensitif,2,14
+brand_label_auto,Not identified,ampoul,2,15
+brand_label_auto,Not identified,skrng,2,16
+brand_label_auto,Not identified,minimalis,2,17
+brand_label_auto,Not identified,kusam,2,18
+brand_label_auto,Not identified,bruntusan,2,19
+brand_label_auto,Not identified,buat,2,20
+brand_label_auto,Not identified,item,2,21
+brand_label_auto,Not identified,beli,2,22
+brand_label_auto,Not identified,cii,1,23
+brand_label_auto,Not identified,gimana,1,24
+brand_label_auto,Not identified,ngatasinnya,1,25
+brand_label_auto,Not identified,kadang,1,26
+brand_label_auto,Not identified,gatal,1,27
+brand_label_auto,Not identified,tolongg,1,28
+brand_label_auto,Not identified,cii😭,1,29
+brand_label_auto,Not identified,bln,1,30
+brand_label_auto,Not identified,lbih,1,31
+brand_label_auto,Not identified,kyanya,1,32
+brand_label_auto,Not identified,saran,1,33
+brand_label_auto,Not identified,cici,1,34
+brand_label_auto,Not identified,pink,1,35
+brand_label_auto,Not identified,hbis,1,36
+brand_label_auto,Not identified,tinggal,1,37
+brand_label_auto,Not identified,oat,1,38
+brand_label_auto,Not identified,jrng,1,39
+brand_label_auto,Not identified,muncul,1,40
+brand_label_auto,Not identified,trs,1,41
+brand_label_auto,Not identified,ttol,1,42
+brand_label_auto,Not identified,cpt,1,43
+brand_label_auto,Not identified,kempes,1,44
+brand_label_auto,Not identified,bekas,1,45
+brand_label_auto,Not identified,lumyn,1,46
+brand_label_auto,Not identified,pudar,1,47
+brand_label_auto,Not identified,cuma,1,48
+brand_label_auto,Not identified,siang,1,49
+brand_label_auto,Not identified,keliatan,1,50
+brand_label_auto,Not identified,krna,1,51
+brand_label_auto,Not identified,berminyak,1,52
+brand_label_auto,Not identified,area,1,53
+brand_label_auto,Not identified,zone,1,54
+brand_label_auto,Not identified,hrus,1,55
+brand_label_auto,Not identified,tmbh,1,56
+brand_label_auto,Not identified,kira,1,57
+brand_label_auto,Not identified,kalo,1,58
+brand_label_auto,Not identified,rekomen,1,59
+brand_label_auto,Not identified,krim,1,60
+brand_label_auto,Not identified,tolonggg,1,61
+brand_label_auto,Not identified,warna,1,62
+brand_label_auto,Not identified,merata,1,63
+brand_label_auto,Not identified,bagusnya,1,64
+brand_label_auto,Not identified,make,1,65
+brand_label_auto,Not identified,mke,1,66
+brand_label_auto,Not identified,innisfree,1,67
+brand_label_auto,Not identified,putih,1,68
+brand_label_auto,Not identified,sma,1,69
+brand_label_auto,Not identified,coklat,1,70
+brand_label_auto,Not identified,tone,1,71
+brand_label_auto,Not identified,brightening,1,72
+brand_label_auto,Not identified,caps,1,73
+brand_label_auto,Not identified,cream,1,74
+brand_label_auto,Not identified,tub,1,75
+brand_label_auto,Not identified,biru,1,76
+brand_label_auto,Not identified,tpi,1,77
+brand_label_auto,Not identified,gaada,1,78
+brand_label_auto,Not identified,perubahan,1,79
+brand_label_auto,Not identified,bingung,1,80
+brand_label_auto,Not identified,bagusan,1,81
+brand_label_auto,Not identified,mois,1,82
+brand_label_auto,Not identified,minimalist,1,83
+brand_label_auto,Not identified,illiyoon,1,84
+brand_label_auto,Not identified,rekomendasi,1,85
+brand_label_auto,Not identified,kondisi,1,86
+brand_label_auto,Not identified,trsrb,1,87
+brand_label_auto,Not identified,close,1,88
+brand_label_auto,Not identified,comedo,1,89
+brand_label_auto,Not identified,chikenskin,1,90
+brand_label_auto,Not identified,pncet,1,91
+brand_label_auto,Not identified,isi😭,1,92
+brand_label_auto,Not identified,ffy,1,93
+brand_label_auto,Not identified,labore,1,94
+brand_label_auto,Not identified,facetology,1,95
+brand_label_auto,Not identified,eksfoliasipad,1,96
+brand_label_auto,Not identified,masih,1,97
+brand_label_auto,Not identified,membaik,1,98
+brand_label_auto,Not identified,mmbaik😭,1,99
+brand_label_auto,Not identified,rekomedasi,1,100

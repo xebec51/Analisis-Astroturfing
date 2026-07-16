@@ -1,0 +1,43 @@
+hcc_id,community_size,n_accounts_with_comments,n_comments,n_valid_text_comments,positive_count,neutral_count,negative_count,positive_ratio,neutral_ratio,negative_ratio,dominant_sentiment,goal_orientation,goal_confidence,avg_sentiment_confidence,primary_brand,brand_label_auto,brand_combo,brand_confidence,narrative_similarity_level,mean_weighted_degree,mean_betweenness
+1,3,3,21,21,6,12,3,0.2857142857142857,0.5714285714285714,0.14285714285714285,Neutral,Mixed Goals,Low,0.9143156976926894,Daviena,Mixed_3plus_Brands,Daviena + Maryame + Azarine,Low,Low,3.5,0.0
+2,6,6,18,18,5,9,4,0.2777777777777778,0.5,0.2222222222222222,Neutral,Mixed Goals,Low,0.9184362639983495,Maryame,Maryame,Maryame,High,Low,3.9285714285714284,1.0171019745622336e-05
+3,5,5,15,15,2,10,3,0.13333333333333333,0.6666666666666666,0.2,Neutral,Neutral Engagement,Medium,0.917608912785848,Maryame,Mixed_2_Brands,Maryame + The Originote,Medium,Low,3.0,0.0
+5,8,8,64,64,14,41,9,0.21875,0.640625,0.140625,Neutral,Neutral Engagement,Medium,0.8903223872184753,The Originote,The Originote,The Originote,High,Low,19.046875,0.0005911905227142876
+14,3,3,15,15,6,7,2,0.4,0.4666666666666667,0.13333333333333333,Mixed,Mixed Goals,Low,0.9289426565170288,Daviena,Mixed_3plus_Brands,Daviena + Maryame + The Originote,Low,Low,2.5,0.0
+15,6,6,18,18,3,11,4,0.16666666666666666,0.6111111111111112,0.2222222222222222,Neutral,Neutral Engagement,Medium,0.9728925625483195,The Originote,The Originote,The Originote,High,Low,3.839285714285714,3.6985526347717584e-06
+16,5,5,15,15,4,8,3,0.26666666666666666,0.5333333333333333,0.2,Neutral,Mixed Goals,Low,0.8452686627705892,Daviena,Daviena,Daviena + The Originote,Medium,Low,3.0,0.0
+17,11,11,44,44,10,24,10,0.22727272727272727,0.5454545454545454,0.22727272727272727,Neutral,Mixed Goals,Low,0.918039699847048,Maryame,Mixed_3plus_Brands,Maryame + The Originote + Azarine,Low,Low,4.071428571428571,2.5721752414539995e-05
+18,6,6,18,18,8,7,3,0.4444444444444444,0.3888888888888889,0.16666666666666666,Mixed,Mixed Goals,Low,0.9088968502150642,The Originote,The Originote,The Originote,High,Low,3.839285714285714,3.2362335554252888e-06
+20,3,3,24,24,9,9,6,0.375,0.375,0.25,Mixed,Mixed Goals,Low,0.8829223761955897,Daviena,Daviena,Daviena + Maryame,Medium,Low,5.023809523809524,3.236233555425289e-05
+34,3,3,12,12,3,6,3,0.25,0.5,0.25,Neutral,Mixed Goals,Low,0.820879394809405,Daviena,Daviena,Daviena + Maryame + The Originote,Medium,Low,1.0714285714285714,1.8492763173858792e-06
+42,5,5,23,23,23,0,0,1.0,0.0,0.0,Positive,Promotional / Supportive,High,0.98179408778315,Daviena,Daviena,Daviena,High,Medium,3.457142857142857,0.0
+45,4,4,24,24,7,15,2,0.2916666666666667,0.625,0.08333333333333333,Neutral,Neutral Engagement,Medium,0.8945547913511595,Maryame,Mixed_3plus_Brands,Maryame + Azarine + The Originote,Medium,Low,4.5,0.0
+46,7,7,21,21,4,13,4,0.19047619047619047,0.6190476190476191,0.19047619047619047,Neutral,Neutral Engagement,Medium,0.8841879935491652,The Originote,The Originote,The Originote + Daviena,Medium,Low,4.5,0.0
+48,5,5,30,30,11,11,8,0.36666666666666664,0.36666666666666664,0.26666666666666666,Mixed,Mixed Goals,Low,0.8376579324404398,The Originote,Mixed_3plus_Brands,The Originote + Azarine + Maryame,Medium,Low,6.0,0.0
+49,6,6,20,20,5,12,3,0.25,0.6,0.15,Neutral,Neutral Engagement,Medium,0.8147277012467384,Daviena,Mixed_3plus_Brands,Daviena + Maryame + The Originote,Low,Low,2.946428571428571,7.859424348889986e-06
+50,6,6,18,18,6,9,3,0.3333333333333333,0.5,0.16666666666666666,Neutral,Mixed Goals,Low,0.8922423422336578,Maryame,Maryame,Maryame,High,Low,3.9285714285714284,8.784062507582925e-06
+52,5,5,40,40,14,18,8,0.35,0.45,0.2,Neutral,Mixed Goals,Low,0.8840492859482765,Daviena,Daviena,Daviena + Maryame + The Originote,Medium,Low,9.075,0.0
+54,11,11,74,74,17,41,16,0.22972972972972974,0.5540540540540541,0.21621621621621623,Neutral,Mixed Goals,Low,0.870596366154181,Azarine,Azarine,Azarine + Daviena,High,Low,9.012987012987013,3.9339150751659525e-05
+60,3,3,11,11,4,4,3,0.36363636363636365,0.36363636363636365,0.2727272727272727,Mixed,Mixed Goals,Low,0.8221548470583829,Daviena,Daviena,Daviena,High,Low,1.25,9.246381586929396e-07
+63,3,3,22,22,7,11,4,0.3181818181818182,0.5,0.18181818181818182,Neutral,Mixed Goals,Low,0.7949301275339994,Maryame,Mixed_3plus_Brands,Maryame + Daviena + The Originote,Medium,Low,3.1726190476190474,0.0021340648702633
+74,3,3,12,12,3,6,3,0.25,0.5,0.25,Neutral,Mixed Goals,Low,0.9648420413335165,Daviena,Daviena,Daviena + Maryame,Medium,Low,2.0,0.0
+75,4,4,16,16,6,8,2,0.375,0.5,0.125,Neutral,Mixed Goals,Low,0.8775884434580803,Daviena,Mixed_2_Brands,Daviena + Maryame,Medium,Low,3.0,0.0
+87,5,5,25,25,10,12,3,0.4,0.48,0.12,Mixed,Mixed Goals,Low,0.8075190961360932,Daviena,Mixed_2_Brands,Daviena + Maryame,Medium,Low,4.2857142857142865,0.0
+90,4,4,12,12,1,10,1,0.08333333333333333,0.8333333333333334,0.08333333333333333,Neutral,Neutral Engagement,High,0.9243249793847402,Azarine,Mixed_3plus_Brands,Azarine + Daviena + Maryame,Low,Low,2.383928571428571,4.160871714118228e-06
+99,6,6,28,28,23,3,2,0.8214285714285714,0.10714285714285714,0.07142857142857142,Positive,Promotional / Supportive,High,0.8957990322794233,The Originote,The Originote,The Originote,High,Medium,3.6011904761904763,0.0
+103,5,5,30,30,4,22,4,0.13333333333333333,0.7333333333333333,0.13333333333333333,Neutral,Neutral Engagement,Medium,0.8889480173587799,Daviena,Daviena,Daviena,High,Low,3.9285714285714284,8.321743428232374e-05
+113,6,6,28,28,28,0,0,1.0,0.0,0.0,Positive,Promotional / Supportive,High,0.9692144287484032,Maryame,Maryame,Maryame,High,Medium,4.226190476190475,0.0
+114,6,6,28,28,26,2,0,0.9285714285714286,0.07142857142857142,0.0,Positive,Promotional / Supportive,High,0.9039586314133236,Maryame,Maryame,Maryame,High,Medium,4.226190476190475,0.0
+117,6,6,18,18,2,15,1,0.1111111111111111,0.8333333333333334,0.05555555555555555,Neutral,Neutral Engagement,High,0.9159936838679843,The Originote,The Originote,The Originote,High,Low,3.839285714285714,1.8492763173858794e-06
+132,4,4,12,12,2,7,3,0.16666666666666666,0.5833333333333334,0.25,Neutral,Mixed Goals,Low,0.9339777678251266,Azarine,Mixed_3plus_Brands,Azarine + Maryame + The Originote,Medium,Low,2.25,0.0
+134,3,3,15,15,5,8,2,0.3333333333333333,0.5333333333333333,0.13333333333333333,Neutral,Mixed Goals,Low,0.8316844781239827,Daviena,Daviena,Daviena + The Originote,Medium,Low,1.6904761904761905,9.246381586929396e-07
+150,6,6,48,48,18,19,11,0.375,0.3958333333333333,0.22916666666666666,Mixed,Mixed Goals,Low,0.8781755982587734,Maryame,Maryame,Maryame + The Originote,Medium,Low,8.309523809523808,0.00017059574027881668
+168,5,5,23,23,23,0,0,1.0,0.0,0.0,Positive,Promotional / Supportive,High,0.9240593184595522,Daviena,Daviena,Daviena,High,Low,2.457142857142857,0.0
+180,4,4,18,18,18,0,0,1.0,0.0,0.0,Positive,Promotional / Supportive,High,0.9404744969473945,Azarine,Azarine,Azarine,High,Low,2.3035714285714284,0.0
+181,5,5,23,23,23,0,0,1.0,0.0,0.0,Positive,Promotional / Supportive,High,0.9075609549232151,Daviena,Daviena,Daviena,High,Medium,2.457142857142857,0.0
+182,6,6,18,18,2,9,7,0.1111111111111111,0.5,0.3888888888888889,Neutral,Mixed Goals,Low,0.9022372629907396,Not identified,Not identified,,,Low,3.839285714285714,4.623190793464698e-06
+183,7,7,21,21,5,11,5,0.23809523809523808,0.5238095238095238,0.23809523809523808,Neutral,Mixed Goals,Low,0.8870844670704433,The Originote,The Originote,The Originote,High,Low,2.9081632653061225,2.1795042312047865e-05
+191,5,5,23,23,21,0,2,0.9130434782608695,0.0,0.08695652173913043,Positive,Promotional / Supportive,High,0.9202151246692823,The Originote,The Originote,The Originote,High,Medium,3.457142857142857,0.0
+204,4,4,18,18,17,0,1,0.9444444444444444,0.0,0.05555555555555555,Positive,Promotional / Supportive,High,0.9679684771431817,Azarine,Azarine,Azarine,High,Low,2.3035714285714284,0.0
+205,5,5,23,23,23,0,0,1.0,0.0,0.0,Positive,Promotional / Supportive,High,0.9252126035482987,The Originote,The Originote,The Originote,High,Medium,3.457142857142857,0.0
+206,5,5,23,23,21,0,2,0.9130434782608695,0.0,0.08695652173913043,Positive,Promotional / Supportive,High,0.9380958080291748,Maryame,Maryame,Maryame,High,Medium,2.457142857142857,0.0
