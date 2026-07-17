@@ -334,6 +334,7 @@ di Section 2 jika model diganti.
 
 WordCloud digunakan sebagai visualisasi **eksploratif** untuk membaca kata dominan dalam komentar (Section
 14.8 pada notebook) — dibangun dari `comment_sentiment` yang sudah ada (tidak ada prediksi sentimen ulang).
+Token WordCloud telah dibersihkan dengan stopwords khusus percakapan TikTok dan penghapusan emoji/simbol agar visualisasi lebih fokus pada tema substantif seperti bahan aktif, kondisi kulit, pengalaman pemakaian, harga, keamanan, dan keluhan.
 
 - Output disimpan di: `output/rm2_sentiment/visualisasi/wordcloud/` (dan subfolder `by_brand/` untuk
   WordCloud per brand).
