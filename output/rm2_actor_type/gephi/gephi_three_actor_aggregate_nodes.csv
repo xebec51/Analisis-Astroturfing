@@ -1,0 +1,296 @@
+id,label,actor_type_primary,actor_subtype,associated_hcc,target_brand,goal_orientation,account_count,comment_count,exposure_level
+HCC_1,HCC 1,Community Actor,HCC final community,1,Daviena,Mixed Goals,3,21,
+HCC_103,HCC 103,Community Actor,HCC final community,103,Daviena,Neutral Engagement,5,30,
+HCC_113,HCC 113,Community Actor,HCC final community,113,Maryame,Promotional / Supportive,6,28,
+HCC_114,HCC 114,Community Actor,HCC final community,114,Maryame,Promotional / Supportive,6,28,
+HCC_117,HCC 117,Community Actor,HCC final community,117,The Originote,Neutral Engagement,6,18,
+HCC_132,HCC 132,Community Actor,HCC final community,132,Azarine,Mixed Goals,4,12,
+HCC_134,HCC 134,Community Actor,HCC final community,134,Daviena,Mixed Goals,3,15,
+HCC_14,HCC 14,Community Actor,HCC final community,14,Daviena,Mixed Goals,3,15,
+HCC_15,HCC 15,Community Actor,HCC final community,15,The Originote,Neutral Engagement,6,18,
+HCC_150,HCC 150,Community Actor,HCC final community,150,Maryame,Mixed Goals,6,48,
+HCC_16,HCC 16,Community Actor,HCC final community,16,Daviena,Mixed Goals,5,15,
+HCC_168,HCC 168,Community Actor,HCC final community,168,Daviena,Promotional / Supportive,5,23,
+HCC_17,HCC 17,Community Actor,HCC final community,17,Maryame,Mixed Goals,11,44,
+HCC_18,HCC 18,Community Actor,HCC final community,18,The Originote,Mixed Goals,6,18,
+HCC_180,HCC 180,Community Actor,HCC final community,180,Azarine,Promotional / Supportive,4,18,
+HCC_181,HCC 181,Community Actor,HCC final community,181,Daviena,Promotional / Supportive,5,23,
+HCC_182,HCC 182,Community Actor,HCC final community,182,Not identified,Mixed Goals,6,18,
+HCC_183,HCC 183,Community Actor,HCC final community,183,The Originote,Mixed Goals,7,21,
+HCC_191,HCC 191,Community Actor,HCC final community,191,The Originote,Promotional / Supportive,5,23,
+HCC_2,HCC 2,Community Actor,HCC final community,2,Maryame,Mixed Goals,6,18,
+HCC_20,HCC 20,Community Actor,HCC final community,20,Daviena,Mixed Goals,3,24,
+HCC_204,HCC 204,Community Actor,HCC final community,204,Azarine,Promotional / Supportive,4,18,
+HCC_205,HCC 205,Community Actor,HCC final community,205,The Originote,Promotional / Supportive,5,23,
+HCC_206,HCC 206,Community Actor,HCC final community,206,Maryame,Promotional / Supportive,5,23,
+HCC_3,HCC 3,Community Actor,HCC final community,3,Maryame,Neutral Engagement,5,15,
+HCC_34,HCC 34,Community Actor,HCC final community,34,Daviena,Mixed Goals,3,12,
+HCC_42,HCC 42,Community Actor,HCC final community,42,Daviena,Promotional / Supportive,5,23,
+HCC_45,HCC 45,Community Actor,HCC final community,45,Maryame,Neutral Engagement,4,24,
+HCC_46,HCC 46,Community Actor,HCC final community,46,The Originote,Neutral Engagement,7,21,
+HCC_48,HCC 48,Community Actor,HCC final community,48,The Originote,Mixed Goals,5,30,
+HCC_49,HCC 49,Community Actor,HCC final community,49,Daviena,Neutral Engagement,6,20,
+HCC_5,HCC 5,Community Actor,HCC final community,5,The Originote,Neutral Engagement,8,64,
+HCC_50,HCC 50,Community Actor,HCC final community,50,Maryame,Mixed Goals,6,18,
+HCC_52,HCC 52,Community Actor,HCC final community,52,Daviena,Mixed Goals,5,40,
+HCC_54,HCC 54,Community Actor,HCC final community,54,Azarine,Mixed Goals,11,74,
+HCC_60,HCC 60,Community Actor,HCC final community,60,Daviena,Mixed Goals,3,11,
+HCC_63,HCC 63,Community Actor,HCC final community,63,Maryame,Mixed Goals,3,22,
+HCC_74,HCC 74,Community Actor,HCC final community,74,Daviena,Mixed Goals,3,12,
+HCC_75,HCC 75,Community Actor,HCC final community,75,Daviena,Mixed Goals,4,16,
+HCC_87,HCC 87,Community Actor,HCC final community,87,Daviena,Mixed Goals,5,25,
+HCC_90,HCC 90,Community Actor,HCC final community,90,Azarine,Neutral Engagement,4,12,
+HCC_99,HCC 99,Community Actor,HCC final community,99,The Originote,Promotional / Supportive,6,28,
+MASS_HCC_1_Shared_Video_Exposure_Mixed,Mass | HCC 1 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,105,239,Shared-Video Exposure
+MASS_HCC_1_Shared_Video_Exposure_Negative,Mass | HCC 1 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,443,493,Shared-Video Exposure
+MASS_HCC_1_Shared_Video_Exposure_Neutral,Mass | HCC 1 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,987,1158,Shared-Video Exposure
+MASS_HCC_1_Shared_Video_Exposure_Positive,Mass | HCC 1 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,529,593,Shared-Video Exposure
+MASS_HCC_1_Temporal_Context_Exposure_Mixed,Mass | HCC 1 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,2,4,Temporal-Context Exposure
+MASS_HCC_1_Temporal_Context_Exposure_Negative,Mass | HCC 1 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,1,2,Temporal-Context Exposure
+MASS_HCC_1_Temporal_Context_Exposure_Neutral,Mass | HCC 1 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,6,217,Temporal-Context Exposure
+MASS_HCC_1_Temporal_Context_Exposure_Positive,Mass | HCC 1 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_103_Direct_Interaction_Mixed,Mass | HCC 103 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_103_Direct_Interaction_Neutral,Mass | HCC 103 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_103_Direct_Interaction_Positive,Mass | HCC 103 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,2,4,Direct Interaction
+MASS_HCC_103_Shared_Video_Exposure_Mixed,Mass | HCC 103 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,4,10,Shared-Video Exposure
+MASS_HCC_103_Shared_Video_Exposure_Negative,Mass | HCC 103 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,103,Daviena,Critical / Complaint,3,13,Shared-Video Exposure
+MASS_HCC_103_Shared_Video_Exposure_Neutral,Mass | HCC 103 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,11,33,Shared-Video Exposure
+MASS_HCC_103_Shared_Video_Exposure_Positive,Mass | HCC 103 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,103,Daviena,Promotional / Supportive,2,8,Shared-Video Exposure
+MASS_HCC_103_Temporal_Context_Exposure_Mixed,Mass | HCC 103 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,6,22,Temporal-Context Exposure
+MASS_HCC_103_Temporal_Context_Exposure_Negative,Mass | HCC 103 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,10,15,Temporal-Context Exposure
+MASS_HCC_103_Temporal_Context_Exposure_Neutral,Mass | HCC 103 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,36,51,Temporal-Context Exposure
+MASS_HCC_103_Temporal_Context_Exposure_Positive,Mass | HCC 103 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,14,20,Temporal-Context Exposure
+MASS_HCC_113_Shared_Video_Exposure_Mixed,Mass | HCC 113 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,113,Maryame,Polarized / Contested,1,4,Shared-Video Exposure
+MASS_HCC_113_Shared_Video_Exposure_Neutral,Mass | HCC 113 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,113,Maryame,Insufficient Text,2,4,Shared-Video Exposure
+MASS_HCC_113_Temporal_Context_Exposure_Neutral,Mass | HCC 113 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,113,Maryame,Insufficient Text,4,66,Temporal-Context Exposure
+MASS_HCC_113_Temporal_Context_Exposure_Positive,Mass | HCC 113 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,113,Maryame,Mixed Goals,1,6,Temporal-Context Exposure
+MASS_HCC_114_Shared_Video_Exposure_Negative,Mass | HCC 114 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,114,Maryame,Critical / Complaint,2,5,Shared-Video Exposure
+MASS_HCC_114_Shared_Video_Exposure_Neutral,Mass | HCC 114 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,114,Maryame,Insufficient Text,1,2,Shared-Video Exposure
+MASS_HCC_117_Direct_Interaction_Mixed,Mass | HCC 117 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,117,The Originote,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_117_Shared_Video_Exposure_Negative,Mass | HCC 117 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,117,The Originote,Critical / Complaint,1,4,Shared-Video Exposure
+MASS_HCC_117_Shared_Video_Exposure_Neutral,Mass | HCC 117 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,117,The Originote,Mixed Goals,1,4,Shared-Video Exposure
+MASS_HCC_117_Temporal_Context_Exposure_Mixed,Mass | HCC 117 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,117,The Originote,Mixed Goals,1,3,Temporal-Context Exposure
+MASS_HCC_117_Temporal_Context_Exposure_Neutral,Mass | HCC 117 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,117,The Originote,Insufficient Text,2,2,Temporal-Context Exposure
+MASS_HCC_132_Temporal_Context_Exposure_Negative,Mass | HCC 132 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,132,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_132_Temporal_Context_Exposure_Neutral,Mass | HCC 132 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,132,Azarine,Insufficient Text,3,13,Temporal-Context Exposure
+MASS_HCC_132_Temporal_Context_Exposure_Positive,Mass | HCC 132 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,132,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_134_Shared_Video_Exposure_Mixed,Mass | HCC 134 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,4,8,Shared-Video Exposure
+MASS_HCC_134_Shared_Video_Exposure_Neutral,Mass | HCC 134 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,7,18,Shared-Video Exposure
+MASS_HCC_134_Shared_Video_Exposure_Positive,Mass | HCC 134 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,2,4,Shared-Video Exposure
+MASS_HCC_134_Temporal_Context_Exposure_Mixed,Mass | HCC 134 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,134,Daviena,Mixed Goals,1,3,Temporal-Context Exposure
+MASS_HCC_134_Temporal_Context_Exposure_Negative,Mass | HCC 134 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,2,2,Temporal-Context Exposure
+MASS_HCC_134_Temporal_Context_Exposure_Neutral,Mass | HCC 134 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,14,16,Temporal-Context Exposure
+MASS_HCC_134_Temporal_Context_Exposure_Positive,Mass | HCC 134 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,2,2,Temporal-Context Exposure
+MASS_HCC_14_Shared_Video_Exposure_Mixed,Mass | HCC 14 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,236,504,Shared-Video Exposure
+MASS_HCC_14_Shared_Video_Exposure_Negative,Mass | HCC 14 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,2498,2657,Shared-Video Exposure
+MASS_HCC_14_Shared_Video_Exposure_Neutral,Mass | HCC 14 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,5473,5723,Shared-Video Exposure
+MASS_HCC_14_Shared_Video_Exposure_Positive,Mass | HCC 14 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,2344,2454,Shared-Video Exposure
+MASS_HCC_14_Temporal_Context_Exposure_Mixed,Mass | HCC 14 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,8,16,Temporal-Context Exposure
+MASS_HCC_14_Temporal_Context_Exposure_Negative,Mass | HCC 14 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,41,43,Temporal-Context Exposure
+MASS_HCC_14_Temporal_Context_Exposure_Neutral,Mass | HCC 14 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,288,295,Temporal-Context Exposure
+MASS_HCC_14_Temporal_Context_Exposure_Positive,Mass | HCC 14 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,88,93,Temporal-Context Exposure
+MASS_HCC_15_Direct_Interaction_Neutral,Mass | HCC 15 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_15_Shared_Video_Exposure_Mixed,Mass | HCC 15 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,30,76,Shared-Video Exposure
+MASS_HCC_15_Shared_Video_Exposure_Negative,Mass | HCC 15 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,148,173,Shared-Video Exposure
+MASS_HCC_15_Shared_Video_Exposure_Neutral,Mass | HCC 15 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,289,342,Shared-Video Exposure
+MASS_HCC_15_Shared_Video_Exposure_Positive,Mass | HCC 15 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,141,147,Shared-Video Exposure
+MASS_HCC_15_Temporal_Context_Exposure_Negative,Mass | HCC 15 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_15_Temporal_Context_Exposure_Neutral,Mass | HCC 15 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_15_Temporal_Context_Exposure_Positive,Mass | HCC 15 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_150_Direct_Interaction_Mixed,Mass | HCC 150 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_150_Direct_Interaction_Positive,Mass | HCC 150 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,2,4,Direct Interaction
+MASS_HCC_150_Shared_Video_Exposure_Mixed,Mass | HCC 150 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,10,26,Shared-Video Exposure
+MASS_HCC_150_Shared_Video_Exposure_Negative,Mass | HCC 150 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,150,Maryame,Critical / Complaint,9,25,Shared-Video Exposure
+MASS_HCC_150_Shared_Video_Exposure_Neutral,Mass | HCC 150 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,150,Maryame,Neutral Engagement,19,69,Shared-Video Exposure
+MASS_HCC_150_Shared_Video_Exposure_Positive,Mass | HCC 150 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,5,17,Shared-Video Exposure
+MASS_HCC_150_Temporal_Context_Exposure_Mixed,Mass | HCC 150 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,13,44,Temporal-Context Exposure
+MASS_HCC_150_Temporal_Context_Exposure_Negative,Mass | HCC 150 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,49,56,Temporal-Context Exposure
+MASS_HCC_150_Temporal_Context_Exposure_Neutral,Mass | HCC 150 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,537,596,Temporal-Context Exposure
+MASS_HCC_150_Temporal_Context_Exposure_Positive,Mass | HCC 150 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,145,173,Temporal-Context Exposure
+MASS_HCC_16_Shared_Video_Exposure_Mixed,Mass | HCC 16 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,40,83,Shared-Video Exposure
+MASS_HCC_16_Shared_Video_Exposure_Negative,Mass | HCC 16 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,154,159,Shared-Video Exposure
+MASS_HCC_16_Shared_Video_Exposure_Neutral,Mass | HCC 16 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,576,883,Shared-Video Exposure
+MASS_HCC_16_Shared_Video_Exposure_Positive,Mass | HCC 16 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,278,296,Shared-Video Exposure
+MASS_HCC_16_Temporal_Context_Exposure_Mixed,Mass | HCC 16 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,16,Daviena,Mixed Goals,2,6,Temporal-Context Exposure
+MASS_HCC_16_Temporal_Context_Exposure_Negative,Mass | HCC 16 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,10,12,Temporal-Context Exposure
+MASS_HCC_16_Temporal_Context_Exposure_Neutral,Mass | HCC 16 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,5,10,Temporal-Context Exposure
+MASS_HCC_16_Temporal_Context_Exposure_Positive,Mass | HCC 16 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,4,20,Temporal-Context Exposure
+MASS_HCC_17_Direct_Interaction_Mixed,Mass | HCC 17 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_17_Shared_Video_Exposure_Mixed,Mass | HCC 17 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,87,222,Shared-Video Exposure
+MASS_HCC_17_Shared_Video_Exposure_Negative,Mass | HCC 17 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,240,283,Shared-Video Exposure
+MASS_HCC_17_Shared_Video_Exposure_Neutral,Mass | HCC 17 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,900,1182,Shared-Video Exposure
+MASS_HCC_17_Shared_Video_Exposure_Positive,Mass | HCC 17 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,385,479,Shared-Video Exposure
+MASS_HCC_17_Temporal_Context_Exposure_Mixed,Mass | HCC 17 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,1,2,Temporal-Context Exposure
+MASS_HCC_17_Temporal_Context_Exposure_Negative,Mass | HCC 17 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_17_Temporal_Context_Exposure_Neutral,Mass | HCC 17 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,2,122,Temporal-Context Exposure
+MASS_HCC_17_Temporal_Context_Exposure_Positive,Mass | HCC 17 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,17,Maryame,Promotional / Supportive,4,12,Temporal-Context Exposure
+MASS_HCC_18_Direct_Interaction_Mixed,Mass | HCC 18 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_18_Shared_Video_Exposure_Mixed,Mass | HCC 18 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,15,35,Shared-Video Exposure
+MASS_HCC_18_Shared_Video_Exposure_Negative,Mass | HCC 18 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,67,97,Shared-Video Exposure
+MASS_HCC_18_Shared_Video_Exposure_Neutral,Mass | HCC 18 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,122,171,Shared-Video Exposure
+MASS_HCC_18_Shared_Video_Exposure_Positive,Mass | HCC 18 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,259,282,Shared-Video Exposure
+MASS_HCC_18_Temporal_Context_Exposure_Negative,Mass | HCC 18 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_18_Temporal_Context_Exposure_Positive,Mass | HCC 18 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_180_Temporal_Context_Exposure_Mixed,Mass | HCC 180 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,180,Azarine,Insufficient Text,1,2,Temporal-Context Exposure
+MASS_HCC_180_Temporal_Context_Exposure_Neutral,Mass | HCC 180 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,180,Azarine,Insufficient Text,3,6,Temporal-Context Exposure
+MASS_HCC_180_Temporal_Context_Exposure_Positive,Mass | HCC 180 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,180,Azarine,Promotional / Supportive,3,10,Temporal-Context Exposure
+MASS_HCC_181_Shared_Video_Exposure_Negative,Mass | HCC 181 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,181,Daviena,Critical / Complaint,1,4,Shared-Video Exposure
+MASS_HCC_181_Shared_Video_Exposure_Neutral,Mass | HCC 181 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,181,Daviena,Neutral Engagement,5,18,Shared-Video Exposure
+MASS_HCC_182_Direct_Interaction_Mixed,Mass | HCC 182 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,182,Not identified,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_182_Temporal_Context_Exposure_Negative,Mass | HCC 182 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,182,Not identified,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_182_Temporal_Context_Exposure_Neutral,Mass | HCC 182 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,182,Not identified,Neutral Engagement,1,33,Temporal-Context Exposure
+MASS_HCC_183_Direct_Interaction_Mixed,Mass | HCC 183 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,3,6,Direct Interaction
+MASS_HCC_183_Direct_Interaction_Positive,Mass | HCC 183 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_183_Shared_Video_Exposure_Mixed,Mass | HCC 183 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,2,4,Shared-Video Exposure
+MASS_HCC_183_Shared_Video_Exposure_Negative,Mass | HCC 183 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,27,30,Shared-Video Exposure
+MASS_HCC_183_Shared_Video_Exposure_Neutral,Mass | HCC 183 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,79,88,Shared-Video Exposure
+MASS_HCC_183_Shared_Video_Exposure_Positive,Mass | HCC 183 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,32,35,Shared-Video Exposure
+MASS_HCC_183_Temporal_Context_Exposure_Mixed,Mass | HCC 183 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,1,2,Temporal-Context Exposure
+MASS_HCC_183_Temporal_Context_Exposure_Neutral,Mass | HCC 183 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,4,10,Temporal-Context Exposure
+MASS_HCC_183_Temporal_Context_Exposure_Positive,Mass | HCC 183 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_191_Temporal_Context_Exposure_Negative,Mass | HCC 191 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,191,The Originote,Critical / Complaint,1,3,Temporal-Context Exposure
+MASS_HCC_2_Direct_Interaction_Neutral,Mass | HCC 2 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_2_Direct_Interaction_Positive,Mass | HCC 2 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_2_Shared_Video_Exposure_Mixed,Mass | HCC 2 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,31,73,Shared-Video Exposure
+MASS_HCC_2_Shared_Video_Exposure_Negative,Mass | HCC 2 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,118,156,Shared-Video Exposure
+MASS_HCC_2_Shared_Video_Exposure_Neutral,Mass | HCC 2 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,250,342,Shared-Video Exposure
+MASS_HCC_2_Shared_Video_Exposure_Positive,Mass | HCC 2 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,109,131,Shared-Video Exposure
+MASS_HCC_2_Temporal_Context_Exposure_Neutral,Mass | HCC 2 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,3,6,Temporal-Context Exposure
+MASS_HCC_20_Direct_Interaction_Neutral,Mass | HCC 20 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,20,Daviena,Mixed Goals,1,4,Direct Interaction
+MASS_HCC_20_Shared_Video_Exposure_Mixed,Mass | HCC 20 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,48,120,Shared-Video Exposure
+MASS_HCC_20_Shared_Video_Exposure_Negative,Mass | HCC 20 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,382,408,Shared-Video Exposure
+MASS_HCC_20_Shared_Video_Exposure_Neutral,Mass | HCC 20 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,812,889,Shared-Video Exposure
+MASS_HCC_20_Shared_Video_Exposure_Positive,Mass | HCC 20 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,682,804,Shared-Video Exposure
+MASS_HCC_20_Temporal_Context_Exposure_Negative,Mass | HCC 20 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,13,14,Temporal-Context Exposure
+MASS_HCC_20_Temporal_Context_Exposure_Neutral,Mass | HCC 20 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,6,9,Temporal-Context Exposure
+MASS_HCC_20_Temporal_Context_Exposure_Positive,Mass | HCC 20 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,8,15,Temporal-Context Exposure
+MASS_HCC_205_Shared_Video_Exposure_Neutral,Mass | HCC 205 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,205,The Originote,Neutral Engagement,2,6,Shared-Video Exposure
+MASS_HCC_205_Temporal_Context_Exposure_Neutral,Mass | HCC 205 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,205,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_206_Shared_Video_Exposure_Mixed,Mass | HCC 206 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,206,Maryame,Insufficient Text,1,2,Shared-Video Exposure
+MASS_HCC_206_Shared_Video_Exposure_Negative,Mass | HCC 206 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,206,Maryame,Critical / Complaint,1,3,Shared-Video Exposure
+MASS_HCC_206_Shared_Video_Exposure_Neutral,Mass | HCC 206 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,206,Maryame,Neutral Engagement,1,3,Shared-Video Exposure
+MASS_HCC_3_Shared_Video_Exposure_Mixed,Mass | HCC 3 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,9,20,Shared-Video Exposure
+MASS_HCC_3_Shared_Video_Exposure_Negative,Mass | HCC 3 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,15,17,Shared-Video Exposure
+MASS_HCC_3_Shared_Video_Exposure_Neutral,Mass | HCC 3 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,103,135,Shared-Video Exposure
+MASS_HCC_3_Shared_Video_Exposure_Positive,Mass | HCC 3 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,12,21,Shared-Video Exposure
+MASS_HCC_3_Temporal_Context_Exposure_Mixed,Mass | HCC 3 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,1,2,Temporal-Context Exposure
+MASS_HCC_3_Temporal_Context_Exposure_Negative,Mass | HCC 3 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,3,Maryame,Critical / Complaint,1,3,Temporal-Context Exposure
+MASS_HCC_3_Temporal_Context_Exposure_Neutral,Mass | HCC 3 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,3,Maryame,Neutral Engagement,1,8,Temporal-Context Exposure
+MASS_HCC_3_Temporal_Context_Exposure_Positive,Mass | HCC 3 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,2,4,Temporal-Context Exposure
+MASS_HCC_34_Shared_Video_Exposure_Mixed,Mass | HCC 34 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,11,23,Shared-Video Exposure
+MASS_HCC_34_Shared_Video_Exposure_Negative,Mass | HCC 34 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,31,38,Shared-Video Exposure
+MASS_HCC_34_Shared_Video_Exposure_Neutral,Mass | HCC 34 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,77,127,Shared-Video Exposure
+MASS_HCC_34_Shared_Video_Exposure_Positive,Mass | HCC 34 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,34,41,Shared-Video Exposure
+MASS_HCC_34_Temporal_Context_Exposure_Mixed,Mass | HCC 34 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,24,72,Temporal-Context Exposure
+MASS_HCC_34_Temporal_Context_Exposure_Negative,Mass | HCC 34 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,158,177,Temporal-Context Exposure
+MASS_HCC_34_Temporal_Context_Exposure_Neutral,Mass | HCC 34 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,233,243,Temporal-Context Exposure
+MASS_HCC_34_Temporal_Context_Exposure_Positive,Mass | HCC 34 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,107,125,Temporal-Context Exposure
+MASS_HCC_42_Shared_Video_Exposure_Mixed,Mass | HCC 42 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,9,23,Shared-Video Exposure
+MASS_HCC_42_Shared_Video_Exposure_Negative,Mass | HCC 42 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,27,29,Shared-Video Exposure
+MASS_HCC_42_Shared_Video_Exposure_Neutral,Mass | HCC 42 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,109,251,Shared-Video Exposure
+MASS_HCC_42_Shared_Video_Exposure_Positive,Mass | HCC 42 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,25,31,Shared-Video Exposure
+MASS_HCC_42_Temporal_Context_Exposure_Neutral,Mass | HCC 42 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_42_Temporal_Context_Exposure_Positive,Mass | HCC 42 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,3,3,Temporal-Context Exposure
+MASS_HCC_45_Shared_Video_Exposure_Mixed,Mass | HCC 45 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,41,98,Shared-Video Exposure
+MASS_HCC_45_Shared_Video_Exposure_Negative,Mass | HCC 45 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,246,282,Shared-Video Exposure
+MASS_HCC_45_Shared_Video_Exposure_Neutral,Mass | HCC 45 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,483,637,Shared-Video Exposure
+MASS_HCC_45_Shared_Video_Exposure_Positive,Mass | HCC 45 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,353,401,Shared-Video Exposure
+MASS_HCC_45_Temporal_Context_Exposure_Negative,Mass | HCC 45 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_45_Temporal_Context_Exposure_Neutral,Mass | HCC 45 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,45,Maryame,Neutral Engagement,5,83,Temporal-Context Exposure
+MASS_HCC_45_Temporal_Context_Exposure_Positive,Mass | HCC 45 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,45,Maryame,Mixed Goals,1,8,Temporal-Context Exposure
+MASS_HCC_46_Shared_Video_Exposure_Negative,Mass | HCC 46 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,46,The Originote,Critical / Complaint,2,4,Shared-Video Exposure
+MASS_HCC_46_Shared_Video_Exposure_Neutral,Mass | HCC 46 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,46,The Originote,Insufficient Text,24,43,Shared-Video Exposure
+MASS_HCC_46_Shared_Video_Exposure_Positive,Mass | HCC 46 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,46,The Originote,Insufficient Text,1,1,Shared-Video Exposure
+MASS_HCC_46_Temporal_Context_Exposure_Mixed,Mass | HCC 46 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,46,The Originote,Insufficient Text,2,15,Temporal-Context Exposure
+MASS_HCC_46_Temporal_Context_Exposure_Negative,Mass | HCC 46 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,46,The Originote,Critical / Complaint,2,4,Temporal-Context Exposure
+MASS_HCC_46_Temporal_Context_Exposure_Positive,Mass | HCC 46 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,46,The Originote,Mixed Goals,1,11,Temporal-Context Exposure
+MASS_HCC_48_Shared_Video_Exposure_Mixed,Mass | HCC 48 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,3,8,Shared-Video Exposure
+MASS_HCC_48_Shared_Video_Exposure_Negative,Mass | HCC 48 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,6,13,Shared-Video Exposure
+MASS_HCC_48_Shared_Video_Exposure_Neutral,Mass | HCC 48 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,17,29,Shared-Video Exposure
+MASS_HCC_48_Shared_Video_Exposure_Positive,Mass | HCC 48 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,5,9,Shared-Video Exposure
+MASS_HCC_48_Temporal_Context_Exposure_Mixed,Mass | HCC 48 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,48,The Originote,Mixed Goals,2,8,Temporal-Context Exposure
+MASS_HCC_48_Temporal_Context_Exposure_Neutral,Mass | HCC 48 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,2,2,Temporal-Context Exposure
+MASS_HCC_48_Temporal_Context_Exposure_Positive,Mass | HCC 48 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_49_Direct_Interaction_Mixed,Mass | HCC 49 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_49_Shared_Video_Exposure_Mixed,Mass | HCC 49 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,6,13,Shared-Video Exposure
+MASS_HCC_49_Shared_Video_Exposure_Negative,Mass | HCC 49 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,17,23,Shared-Video Exposure
+MASS_HCC_49_Shared_Video_Exposure_Neutral,Mass | HCC 49 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,39,50,Shared-Video Exposure
+MASS_HCC_49_Shared_Video_Exposure_Positive,Mass | HCC 49 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,13,18,Shared-Video Exposure
+MASS_HCC_49_Temporal_Context_Exposure_Neutral,Mass | HCC 49 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,2,53,Temporal-Context Exposure
+MASS_HCC_49_Temporal_Context_Exposure_Positive,Mass | HCC 49 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,3,7,Temporal-Context Exposure
+MASS_HCC_5_Shared_Video_Exposure_Mixed,Mass | HCC 5 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,103,287,Shared-Video Exposure
+MASS_HCC_5_Shared_Video_Exposure_Negative,Mass | HCC 5 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,194,239,Shared-Video Exposure
+MASS_HCC_5_Shared_Video_Exposure_Neutral,Mass | HCC 5 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,721,1031,Shared-Video Exposure
+MASS_HCC_5_Shared_Video_Exposure_Positive,Mass | HCC 5 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,263,342,Shared-Video Exposure
+MASS_HCC_5_Temporal_Context_Exposure_Mixed,Mass | HCC 5 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,4,10,Temporal-Context Exposure
+MASS_HCC_5_Temporal_Context_Exposure_Negative,Mass | HCC 5 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,5,11,Temporal-Context Exposure
+MASS_HCC_5_Temporal_Context_Exposure_Neutral,Mass | HCC 5 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,7,111,Temporal-Context Exposure
+MASS_HCC_5_Temporal_Context_Exposure_Positive,Mass | HCC 5 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,4,10,Temporal-Context Exposure
+MASS_HCC_50_Direct_Interaction_Mixed,Mass | HCC 50 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_50_Direct_Interaction_Positive,Mass | HCC 50 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_50_Shared_Video_Exposure_Mixed,Mass | HCC 50 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,22,44,Shared-Video Exposure
+MASS_HCC_50_Shared_Video_Exposure_Negative,Mass | HCC 50 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,145,150,Shared-Video Exposure
+MASS_HCC_50_Shared_Video_Exposure_Neutral,Mass | HCC 50 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,389,448,Shared-Video Exposure
+MASS_HCC_50_Shared_Video_Exposure_Positive,Mass | HCC 50 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,226,242,Shared-Video Exposure
+MASS_HCC_50_Temporal_Context_Exposure_Negative,Mass | HCC 50 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,3,3,Temporal-Context Exposure
+MASS_HCC_50_Temporal_Context_Exposure_Neutral,Mass | HCC 50 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,4,5,Temporal-Context Exposure
+MASS_HCC_50_Temporal_Context_Exposure_Positive,Mass | HCC 50 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,2,2,Temporal-Context Exposure
+MASS_HCC_52_Direct_Interaction_Mixed,Mass | HCC 52 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,52,Daviena,Mixed Goals,1,7,Direct Interaction
+MASS_HCC_52_Shared_Video_Exposure_Mixed,Mass | HCC 52 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,25,59,Shared-Video Exposure
+MASS_HCC_52_Shared_Video_Exposure_Negative,Mass | HCC 52 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,54,59,Shared-Video Exposure
+MASS_HCC_52_Shared_Video_Exposure_Neutral,Mass | HCC 52 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,114,141,Shared-Video Exposure
+MASS_HCC_52_Shared_Video_Exposure_Positive,Mass | HCC 52 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,62,66,Shared-Video Exposure
+MASS_HCC_52_Temporal_Context_Exposure_Mixed,Mass | HCC 52 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,52,Daviena,Mixed Goals,3,15,Temporal-Context Exposure
+MASS_HCC_52_Temporal_Context_Exposure_Negative,Mass | HCC 52 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,3,4,Temporal-Context Exposure
+MASS_HCC_52_Temporal_Context_Exposure_Neutral,Mass | HCC 52 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,2,2,Temporal-Context Exposure
+MASS_HCC_52_Temporal_Context_Exposure_Positive,Mass | HCC 52 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,3,3,Temporal-Context Exposure
+MASS_HCC_54_Direct_Interaction_Mixed,Mass | HCC 54 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_54_Direct_Interaction_Neutral,Mass | HCC 54 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_54_Direct_Interaction_Positive,Mass | HCC 54 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_54_Shared_Video_Exposure_Mixed,Mass | HCC 54 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,23,55,Shared-Video Exposure
+MASS_HCC_54_Shared_Video_Exposure_Negative,Mass | HCC 54 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,154,165,Shared-Video Exposure
+MASS_HCC_54_Shared_Video_Exposure_Neutral,Mass | HCC 54 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,143,251,Shared-Video Exposure
+MASS_HCC_54_Shared_Video_Exposure_Positive,Mass | HCC 54 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,213,230,Shared-Video Exposure
+MASS_HCC_54_Temporal_Context_Exposure_Mixed,Mass | HCC 54 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,17,47,Temporal-Context Exposure
+MASS_HCC_54_Temporal_Context_Exposure_Negative,Mass | HCC 54 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,17,25,Temporal-Context Exposure
+MASS_HCC_54_Temporal_Context_Exposure_Neutral,Mass | HCC 54 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,26,114,Temporal-Context Exposure
+MASS_HCC_54_Temporal_Context_Exposure_No_text,Mass | HCC 54 | Temporal-Context Exposure | No text,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_54_Temporal_Context_Exposure_Positive,Mass | HCC 54 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,29,46,Temporal-Context Exposure
+MASS_HCC_60_Shared_Video_Exposure_Mixed,Mass | HCC 60 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,4,8,Shared-Video Exposure
+MASS_HCC_60_Shared_Video_Exposure_Negative,Mass | HCC 60 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,7,9,Shared-Video Exposure
+MASS_HCC_60_Shared_Video_Exposure_Neutral,Mass | HCC 60 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,84,109,Shared-Video Exposure
+MASS_HCC_60_Shared_Video_Exposure_Positive,Mass | HCC 60 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,3,5,Shared-Video Exposure
+MASS_HCC_63_Direct_Interaction_Positive,Mass | HCC 63 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_63_Shared_Video_Exposure_Mixed,Mass | HCC 63 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,19,78,Shared-Video Exposure
+MASS_HCC_63_Shared_Video_Exposure_Negative,Mass | HCC 63 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,25,69,Shared-Video Exposure
+MASS_HCC_63_Shared_Video_Exposure_Neutral,Mass | HCC 63 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,115,325,Shared-Video Exposure
+MASS_HCC_63_Shared_Video_Exposure_Positive,Mass | HCC 63 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,35,88,Shared-Video Exposure
+MASS_HCC_63_Temporal_Context_Exposure_Mixed,Mass | HCC 63 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,2,4,Temporal-Context Exposure
+MASS_HCC_63_Temporal_Context_Exposure_Negative,Mass | HCC 63 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_63_Temporal_Context_Exposure_Neutral,Mass | HCC 63 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,9,66,Temporal-Context Exposure
+MASS_HCC_63_Temporal_Context_Exposure_Positive,Mass | HCC 63 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,3,7,Temporal-Context Exposure
+MASS_HCC_74_Shared_Video_Exposure_Mixed,Mass | HCC 74 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,74,Daviena,Insufficient Text,1,2,Shared-Video Exposure
+MASS_HCC_74_Temporal_Context_Exposure_Neutral,Mass | HCC 74 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,74,Daviena,Insufficient Text,2,5,Temporal-Context Exposure
+MASS_HCC_74_Temporal_Context_Exposure_Positive,Mass | HCC 74 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,74,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_75_Shared_Video_Exposure_Mixed,Mass | HCC 75 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,75,Daviena,Mixed Goals,1,3,Shared-Video Exposure
+MASS_HCC_75_Shared_Video_Exposure_Negative,Mass | HCC 75 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,75,Daviena,Critical / Complaint,1,3,Shared-Video Exposure
+MASS_HCC_75_Temporal_Context_Exposure_Negative,Mass | HCC 75 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,75,Daviena,Insufficient Text,4,5,Temporal-Context Exposure
+MASS_HCC_75_Temporal_Context_Exposure_Neutral,Mass | HCC 75 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,75,Daviena,Insufficient Text,37,49,Temporal-Context Exposure
+MASS_HCC_75_Temporal_Context_Exposure_Positive,Mass | HCC 75 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,75,Daviena,Insufficient Text,14,15,Temporal-Context Exposure
+MASS_HCC_87_Shared_Video_Exposure_Mixed,Mass | HCC 87 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,1,7,Shared-Video Exposure
+MASS_HCC_87_Shared_Video_Exposure_Negative,Mass | HCC 87 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,1,7,Shared-Video Exposure
+MASS_HCC_87_Shared_Video_Exposure_Neutral,Mass | HCC 87 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,2,7,Shared-Video Exposure
+MASS_HCC_87_Shared_Video_Exposure_Positive,Mass | HCC 87 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,1,4,Shared-Video Exposure
+MASS_HCC_87_Temporal_Context_Exposure_Mixed,Mass | HCC 87 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,21,46,Temporal-Context Exposure
+MASS_HCC_87_Temporal_Context_Exposure_Negative,Mass | HCC 87 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,29,50,Temporal-Context Exposure
+MASS_HCC_87_Temporal_Context_Exposure_Neutral,Mass | HCC 87 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,42,71,Temporal-Context Exposure
+MASS_HCC_87_Temporal_Context_Exposure_No_text,Mass | HCC 87 | Temporal-Context Exposure | No text,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_87_Temporal_Context_Exposure_Positive,Mass | HCC 87 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,76,104,Temporal-Context Exposure
+MASS_HCC_90_Direct_Interaction_Mixed,Mass | HCC 90 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,1,2,Direct Interaction
+MASS_HCC_90_Shared_Video_Exposure_Neutral,Mass | HCC 90 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,90,Azarine,Neutral Engagement,1,3,Shared-Video Exposure
+MASS_HCC_90_Temporal_Context_Exposure_Negative,Mass | HCC 90 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_90_Temporal_Context_Exposure_Neutral,Mass | HCC 90 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,5,5,Temporal-Context Exposure
+MASS_HCC_90_Temporal_Context_Exposure_Positive,Mass | HCC 90 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_99_Shared_Video_Exposure_Neutral,Mass | HCC 99 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,99,The Originote,Mixed Goals,1,7,Shared-Video Exposure
+MASS_HCC_99_Temporal_Context_Exposure_Negative,Mass | HCC 99 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,99,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
+MASS_HCC_99_Temporal_Context_Exposure_Neutral,Mass | HCC 99 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,99,The Originote,Insufficient Text,3,7,Temporal-Context Exposure

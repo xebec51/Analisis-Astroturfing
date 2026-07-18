@@ -354,6 +354,27 @@ sentimen/`goal_orientation`) dan `gephi_hcc_edges_sentiment.csv` (edge HCC RM1, 
 sentimen hanya atribut node, edge tidak diubah). Dipakai untuk mewarnai node di Gephi berdasarkan
 `dominant_sentiment` atau `goal_orientation`, disandingkan dengan `brand_label_auto` dari RM1.
 
+## RM2 — Three Actor Types and Three Dimensions Typology
+
+Notebook `03_rm2_actor_type_typology.ipynb` menambahkan tipologi tiga actor type dan mengintegrasikannya
+dengan dimensi target serta goals yang sudah dihitung pada notebook sentimen RM2. Tiga actor type utama
+yang dipakai hanya `Individual Actor`, `Community Actor`, dan `Mass Actor`.
+
+- `Individual Actor` hanya diberikan kepada akun yang tercatat `Verified` pada
+  `config/individual_actor_registry.csv`; kandidat dari metadata kreator disimpan untuk verifikasi manual,
+  tetapi tidak otomatis menjadi Individual Actor.
+- `Community Actor` adalah akun anggota HCC final dari RM1 (`output/gephi/gephi_hcc_nodes.csv`).
+- `Mass Actor` adalah komentator non-individual dan non-HCC. Keanggotaan LCN untuk Mass Actor hanya atribut
+  posisi sekunder (`LCN Non-HCC` atau `Outside LCN`), bukan actor type utama.
+- Community-Mass exposure dibaca sebagai observed exposure atau asosiasi yang teramati melalui reply,
+  kedekatan temporal, dan kesamaan video; bukan bukti influence, manipulasi, atau perubahan opini.
+- Dimensi `goals` dibaca dari `output/rm2_sentiment/tables/account_sentiment_summary.csv` dan
+  `output/rm2_sentiment/tables/hcc_sentiment_goals_summary.csv`; model sentimen tidak dijalankan ulang.
+- Dimensi `target` dipetakan sebagai konteks brand/video atau kategori produk, bukan korban atau sasaran
+  serangan.
+- Output tabel disimpan di `output/rm2_actor_type/tables/`, visualisasi PNG di
+  `output/rm2_actor_type/visualisasi/`, dan file Gephi baru di `output/rm2_actor_type/gephi/`.
+
 ### Interpretasi `goal_orientation`
 
 Dimensi *goals* dioperasionalisasikan melalui distribusi sentimen komentar pada akun dan HCC. Sentimen

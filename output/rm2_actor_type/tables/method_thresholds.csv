@@ -1,0 +1,12 @@
+parameter,value,note
+MASS_TEMPORAL_WINDOW_MINUTES,60,Same-video Mass comment after HCC comment within window.
+CENTRALITY_Q25,0.25,Low centrality percentile within each HCC.
+CENTRALITY_Q75,0.75,High centrality percentile within each HCC.
+ACCOUNT_GOAL_MIN_COMMENTS,3,Minimum valid account comments.
+GOAL_POSITIVE_THRESHOLD,0.6,Promotional / Supportive threshold.
+GOAL_NEGATIVE_THRESHOLD,0.6,Critical / Complaint threshold.
+GOAL_NEUTRAL_THRESHOLD,0.6,Neutral Engagement threshold.
+GOAL_POLARIZED_THRESHOLD,0.4,Polarized / Contested threshold.
+EXPOSURE_SCORE_WEIGHTS,"{'direct': 3, 'temporal': 2, 'shared': 1}","Descriptive score weights, not causal influence."
+PRIMARY_HCC_TIE_BREAK,direct desc > temporal desc > shared-video desc > smallest HCC ID,Deterministic primary association rule.
+REGISTRY_VERIFICATION_RULE,verification_status == Verified,Candidate rows are never Individual Actor.

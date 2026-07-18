@@ -1,0 +1,4 @@
+actor_type_primary,n_accounts,account_percentage,n_comments,comment_percentage,positive_ratio,neutral_ratio,negative_ratio,dominant_goal_orientation
+Individual Actor,0,0.0,0,0.0,0.0,0.0,0.0,
+Community Actor,218,0.008250075688767787,1009,0.029810618370904363,0.4449950445986125,0.40634291377601583,0.14866204162537167,Neutral Engagement
+Mass Actor,26206,0.9917499243112322,32838,0.9701893816290956,0.2629301149004907,0.5222638749199964,0.21480601017951298,Insufficient Text
