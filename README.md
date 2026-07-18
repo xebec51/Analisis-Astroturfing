@@ -360,18 +360,30 @@ Notebook `03_rm2_actor_type_typology.ipynb` menambahkan tipologi tiga actor type
 dengan dimensi target serta goals yang sudah dihitung pada notebook sentimen RM2. Tiga actor type utama
 yang dipakai hanya `Individual Actor`, `Community Actor`, dan `Mass Actor`.
 
-- `Individual Actor` hanya diberikan kepada akun yang tercatat `Verified` pada
-  `config/individual_actor_registry.csv`; kandidat dari metadata kreator disimpan untuk verifikasi manual,
-  tetapi tidak otomatis menjadi Individual Actor.
-- `Community Actor` adalah akun anggota HCC final dari RM1 (`output/gephi/gephi_hcc_nodes.csv`).
+- Actor universe merupakan gabungan akun komentator, seluruh creator pada `video_metadata_clean.csv`, dan
+  actor tambahan dari `config/individual_actor_registry.csv` yang berstatus `Verified`; creator tanpa komentar
+  tetap dimasukkan sebagai `Individual Actor`.
+- `Individual Actor` otomatis mencakup seluruh akun pembuat video pada metadata. Subtype seperti influencer,
+  akun resmi, owner/representative, atau expert tetap memerlukan registry `Verified`.
+- `Community Actor` adalah akun anggota HCC final dari RM1 (`output/gephi/gephi_hcc_nodes.csv`) selama akun
+  tersebut bukan `Individual Actor`.
 - `Mass Actor` adalah komentator non-individual dan non-HCC. Keanggotaan LCN untuk Mass Actor hanya atribut
   posisi sekunder (`LCN Non-HCC` atau `Outside LCN`), bukan actor type utama.
-- Community-Mass exposure dibaca sebagai observed exposure atau asosiasi yang teramati melalui reply,
-  kedekatan temporal, dan kesamaan video; bukan bukti influence, manipulasi, atau perubahan opini.
-- Dimensi `goals` dibaca dari `output/rm2_sentiment/tables/account_sentiment_summary.csv` dan
-  `output/rm2_sentiment/tables/hcc_sentiment_goals_summary.csv`; model sentimen tidak dijalankan ulang.
+- Community-Mass association dibaca melalui `Direct Interaction`, `Temporal Association`,
+  `Shared-Video Context Only`, atau `No Observed Community Association`. Shared-video hanya konteks bersama,
+  direct interaction harus lolos validasi parent comment, dan `temporal_mass_comment_count` dipisahkan dari
+  `temporal_hcc_comment_pair_count`.
+- Asosiasi HCC ambigu tidak dipaksa menjadi satu primary HCC; aktor ambigu dipertahankan sebagai many-to-many
+  dan dihitung dengan fractional context weight pada ringkasan HCC.
+- Dimensi `goals` memiliki account-level goals dan pooled actor-type goals; model sentimen tidak dijalankan
+  ulang karena memakai output RM2 sentiment yang sudah tersedia.
+- Sentiment alignment selalu dilaporkan bersama denominator dan coverage, serta hanya menunjukkan keselarasan
+  sentimen yang teramati.
+- Relasi Individual-Community berasal dari komentar HCC pada video yang dibuat Individual Actor.
 - Dimensi `target` dipetakan sebagai konteks brand/video atau kategori produk, bukan korban atau sasaran
   serangan.
+- Seluruh hubungan merupakan observed association, bukan bukti pengaruh kausal, perubahan opini, niat
+  manipulatif, ataupun astroturfing.
 - Output tabel disimpan di `output/rm2_actor_type/tables/`, visualisasi PNG di
   `output/rm2_actor_type/visualisasi/`, dan file Gephi baru di `output/rm2_actor_type/gephi/`.
 

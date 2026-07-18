@@ -1,296 +1,402 @@
-id,label,actor_type_primary,actor_subtype,associated_hcc,target_brand,goal_orientation,account_count,comment_count,exposure_level
-HCC_1,HCC 1,Community Actor,HCC final community,1,Daviena,Mixed Goals,3,21,
-HCC_103,HCC 103,Community Actor,HCC final community,103,Daviena,Neutral Engagement,5,30,
-HCC_113,HCC 113,Community Actor,HCC final community,113,Maryame,Promotional / Supportive,6,28,
-HCC_114,HCC 114,Community Actor,HCC final community,114,Maryame,Promotional / Supportive,6,28,
-HCC_117,HCC 117,Community Actor,HCC final community,117,The Originote,Neutral Engagement,6,18,
-HCC_132,HCC 132,Community Actor,HCC final community,132,Azarine,Mixed Goals,4,12,
-HCC_134,HCC 134,Community Actor,HCC final community,134,Daviena,Mixed Goals,3,15,
-HCC_14,HCC 14,Community Actor,HCC final community,14,Daviena,Mixed Goals,3,15,
-HCC_15,HCC 15,Community Actor,HCC final community,15,The Originote,Neutral Engagement,6,18,
-HCC_150,HCC 150,Community Actor,HCC final community,150,Maryame,Mixed Goals,6,48,
-HCC_16,HCC 16,Community Actor,HCC final community,16,Daviena,Mixed Goals,5,15,
-HCC_168,HCC 168,Community Actor,HCC final community,168,Daviena,Promotional / Supportive,5,23,
-HCC_17,HCC 17,Community Actor,HCC final community,17,Maryame,Mixed Goals,11,44,
-HCC_18,HCC 18,Community Actor,HCC final community,18,The Originote,Mixed Goals,6,18,
-HCC_180,HCC 180,Community Actor,HCC final community,180,Azarine,Promotional / Supportive,4,18,
-HCC_181,HCC 181,Community Actor,HCC final community,181,Daviena,Promotional / Supportive,5,23,
-HCC_182,HCC 182,Community Actor,HCC final community,182,Not identified,Mixed Goals,6,18,
-HCC_183,HCC 183,Community Actor,HCC final community,183,The Originote,Mixed Goals,7,21,
-HCC_191,HCC 191,Community Actor,HCC final community,191,The Originote,Promotional / Supportive,5,23,
-HCC_2,HCC 2,Community Actor,HCC final community,2,Maryame,Mixed Goals,6,18,
-HCC_20,HCC 20,Community Actor,HCC final community,20,Daviena,Mixed Goals,3,24,
-HCC_204,HCC 204,Community Actor,HCC final community,204,Azarine,Promotional / Supportive,4,18,
-HCC_205,HCC 205,Community Actor,HCC final community,205,The Originote,Promotional / Supportive,5,23,
-HCC_206,HCC 206,Community Actor,HCC final community,206,Maryame,Promotional / Supportive,5,23,
-HCC_3,HCC 3,Community Actor,HCC final community,3,Maryame,Neutral Engagement,5,15,
-HCC_34,HCC 34,Community Actor,HCC final community,34,Daviena,Mixed Goals,3,12,
-HCC_42,HCC 42,Community Actor,HCC final community,42,Daviena,Promotional / Supportive,5,23,
-HCC_45,HCC 45,Community Actor,HCC final community,45,Maryame,Neutral Engagement,4,24,
-HCC_46,HCC 46,Community Actor,HCC final community,46,The Originote,Neutral Engagement,7,21,
-HCC_48,HCC 48,Community Actor,HCC final community,48,The Originote,Mixed Goals,5,30,
-HCC_49,HCC 49,Community Actor,HCC final community,49,Daviena,Neutral Engagement,6,20,
-HCC_5,HCC 5,Community Actor,HCC final community,5,The Originote,Neutral Engagement,8,64,
-HCC_50,HCC 50,Community Actor,HCC final community,50,Maryame,Mixed Goals,6,18,
-HCC_52,HCC 52,Community Actor,HCC final community,52,Daviena,Mixed Goals,5,40,
-HCC_54,HCC 54,Community Actor,HCC final community,54,Azarine,Mixed Goals,11,74,
-HCC_60,HCC 60,Community Actor,HCC final community,60,Daviena,Mixed Goals,3,11,
-HCC_63,HCC 63,Community Actor,HCC final community,63,Maryame,Mixed Goals,3,22,
-HCC_74,HCC 74,Community Actor,HCC final community,74,Daviena,Mixed Goals,3,12,
-HCC_75,HCC 75,Community Actor,HCC final community,75,Daviena,Mixed Goals,4,16,
-HCC_87,HCC 87,Community Actor,HCC final community,87,Daviena,Mixed Goals,5,25,
-HCC_90,HCC 90,Community Actor,HCC final community,90,Azarine,Neutral Engagement,4,12,
-HCC_99,HCC 99,Community Actor,HCC final community,99,The Originote,Promotional / Supportive,6,28,
-MASS_HCC_1_Shared_Video_Exposure_Mixed,Mass | HCC 1 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,105,239,Shared-Video Exposure
-MASS_HCC_1_Shared_Video_Exposure_Negative,Mass | HCC 1 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,443,493,Shared-Video Exposure
-MASS_HCC_1_Shared_Video_Exposure_Neutral,Mass | HCC 1 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,987,1158,Shared-Video Exposure
-MASS_HCC_1_Shared_Video_Exposure_Positive,Mass | HCC 1 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,529,593,Shared-Video Exposure
-MASS_HCC_1_Temporal_Context_Exposure_Mixed,Mass | HCC 1 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,2,4,Temporal-Context Exposure
-MASS_HCC_1_Temporal_Context_Exposure_Negative,Mass | HCC 1 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,1,2,Temporal-Context Exposure
-MASS_HCC_1_Temporal_Context_Exposure_Neutral,Mass | HCC 1 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,6,217,Temporal-Context Exposure
-MASS_HCC_1_Temporal_Context_Exposure_Positive,Mass | HCC 1 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,1,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_103_Direct_Interaction_Mixed,Mass | HCC 103 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_103_Direct_Interaction_Neutral,Mass | HCC 103 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_103_Direct_Interaction_Positive,Mass | HCC 103 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,2,4,Direct Interaction
-MASS_HCC_103_Shared_Video_Exposure_Mixed,Mass | HCC 103 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,4,10,Shared-Video Exposure
-MASS_HCC_103_Shared_Video_Exposure_Negative,Mass | HCC 103 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,103,Daviena,Critical / Complaint,3,13,Shared-Video Exposure
-MASS_HCC_103_Shared_Video_Exposure_Neutral,Mass | HCC 103 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,11,33,Shared-Video Exposure
-MASS_HCC_103_Shared_Video_Exposure_Positive,Mass | HCC 103 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,103,Daviena,Promotional / Supportive,2,8,Shared-Video Exposure
-MASS_HCC_103_Temporal_Context_Exposure_Mixed,Mass | HCC 103 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,6,22,Temporal-Context Exposure
-MASS_HCC_103_Temporal_Context_Exposure_Negative,Mass | HCC 103 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,10,15,Temporal-Context Exposure
-MASS_HCC_103_Temporal_Context_Exposure_Neutral,Mass | HCC 103 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,36,51,Temporal-Context Exposure
-MASS_HCC_103_Temporal_Context_Exposure_Positive,Mass | HCC 103 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,103,Daviena,Insufficient Text,14,20,Temporal-Context Exposure
-MASS_HCC_113_Shared_Video_Exposure_Mixed,Mass | HCC 113 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,113,Maryame,Polarized / Contested,1,4,Shared-Video Exposure
-MASS_HCC_113_Shared_Video_Exposure_Neutral,Mass | HCC 113 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,113,Maryame,Insufficient Text,2,4,Shared-Video Exposure
-MASS_HCC_113_Temporal_Context_Exposure_Neutral,Mass | HCC 113 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,113,Maryame,Insufficient Text,4,66,Temporal-Context Exposure
-MASS_HCC_113_Temporal_Context_Exposure_Positive,Mass | HCC 113 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,113,Maryame,Mixed Goals,1,6,Temporal-Context Exposure
-MASS_HCC_114_Shared_Video_Exposure_Negative,Mass | HCC 114 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,114,Maryame,Critical / Complaint,2,5,Shared-Video Exposure
-MASS_HCC_114_Shared_Video_Exposure_Neutral,Mass | HCC 114 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,114,Maryame,Insufficient Text,1,2,Shared-Video Exposure
-MASS_HCC_117_Direct_Interaction_Mixed,Mass | HCC 117 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,117,The Originote,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_117_Shared_Video_Exposure_Negative,Mass | HCC 117 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,117,The Originote,Critical / Complaint,1,4,Shared-Video Exposure
-MASS_HCC_117_Shared_Video_Exposure_Neutral,Mass | HCC 117 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,117,The Originote,Mixed Goals,1,4,Shared-Video Exposure
-MASS_HCC_117_Temporal_Context_Exposure_Mixed,Mass | HCC 117 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,117,The Originote,Mixed Goals,1,3,Temporal-Context Exposure
-MASS_HCC_117_Temporal_Context_Exposure_Neutral,Mass | HCC 117 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,117,The Originote,Insufficient Text,2,2,Temporal-Context Exposure
-MASS_HCC_132_Temporal_Context_Exposure_Negative,Mass | HCC 132 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,132,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_132_Temporal_Context_Exposure_Neutral,Mass | HCC 132 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,132,Azarine,Insufficient Text,3,13,Temporal-Context Exposure
-MASS_HCC_132_Temporal_Context_Exposure_Positive,Mass | HCC 132 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,132,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_134_Shared_Video_Exposure_Mixed,Mass | HCC 134 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,4,8,Shared-Video Exposure
-MASS_HCC_134_Shared_Video_Exposure_Neutral,Mass | HCC 134 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,7,18,Shared-Video Exposure
-MASS_HCC_134_Shared_Video_Exposure_Positive,Mass | HCC 134 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,2,4,Shared-Video Exposure
-MASS_HCC_134_Temporal_Context_Exposure_Mixed,Mass | HCC 134 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,134,Daviena,Mixed Goals,1,3,Temporal-Context Exposure
-MASS_HCC_134_Temporal_Context_Exposure_Negative,Mass | HCC 134 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,2,2,Temporal-Context Exposure
-MASS_HCC_134_Temporal_Context_Exposure_Neutral,Mass | HCC 134 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,14,16,Temporal-Context Exposure
-MASS_HCC_134_Temporal_Context_Exposure_Positive,Mass | HCC 134 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,134,Daviena,Insufficient Text,2,2,Temporal-Context Exposure
-MASS_HCC_14_Shared_Video_Exposure_Mixed,Mass | HCC 14 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,236,504,Shared-Video Exposure
-MASS_HCC_14_Shared_Video_Exposure_Negative,Mass | HCC 14 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,2498,2657,Shared-Video Exposure
-MASS_HCC_14_Shared_Video_Exposure_Neutral,Mass | HCC 14 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,5473,5723,Shared-Video Exposure
-MASS_HCC_14_Shared_Video_Exposure_Positive,Mass | HCC 14 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,2344,2454,Shared-Video Exposure
-MASS_HCC_14_Temporal_Context_Exposure_Mixed,Mass | HCC 14 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,8,16,Temporal-Context Exposure
-MASS_HCC_14_Temporal_Context_Exposure_Negative,Mass | HCC 14 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,41,43,Temporal-Context Exposure
-MASS_HCC_14_Temporal_Context_Exposure_Neutral,Mass | HCC 14 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,288,295,Temporal-Context Exposure
-MASS_HCC_14_Temporal_Context_Exposure_Positive,Mass | HCC 14 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,14,Daviena,Insufficient Text,88,93,Temporal-Context Exposure
-MASS_HCC_15_Direct_Interaction_Neutral,Mass | HCC 15 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_15_Shared_Video_Exposure_Mixed,Mass | HCC 15 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,30,76,Shared-Video Exposure
-MASS_HCC_15_Shared_Video_Exposure_Negative,Mass | HCC 15 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,148,173,Shared-Video Exposure
-MASS_HCC_15_Shared_Video_Exposure_Neutral,Mass | HCC 15 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,289,342,Shared-Video Exposure
-MASS_HCC_15_Shared_Video_Exposure_Positive,Mass | HCC 15 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,141,147,Shared-Video Exposure
-MASS_HCC_15_Temporal_Context_Exposure_Negative,Mass | HCC 15 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_15_Temporal_Context_Exposure_Neutral,Mass | HCC 15 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_15_Temporal_Context_Exposure_Positive,Mass | HCC 15 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,15,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_150_Direct_Interaction_Mixed,Mass | HCC 150 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_150_Direct_Interaction_Positive,Mass | HCC 150 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,2,4,Direct Interaction
-MASS_HCC_150_Shared_Video_Exposure_Mixed,Mass | HCC 150 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,10,26,Shared-Video Exposure
-MASS_HCC_150_Shared_Video_Exposure_Negative,Mass | HCC 150 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,150,Maryame,Critical / Complaint,9,25,Shared-Video Exposure
-MASS_HCC_150_Shared_Video_Exposure_Neutral,Mass | HCC 150 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,150,Maryame,Neutral Engagement,19,69,Shared-Video Exposure
-MASS_HCC_150_Shared_Video_Exposure_Positive,Mass | HCC 150 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,5,17,Shared-Video Exposure
-MASS_HCC_150_Temporal_Context_Exposure_Mixed,Mass | HCC 150 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,13,44,Temporal-Context Exposure
-MASS_HCC_150_Temporal_Context_Exposure_Negative,Mass | HCC 150 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,49,56,Temporal-Context Exposure
-MASS_HCC_150_Temporal_Context_Exposure_Neutral,Mass | HCC 150 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,537,596,Temporal-Context Exposure
-MASS_HCC_150_Temporal_Context_Exposure_Positive,Mass | HCC 150 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,150,Maryame,Insufficient Text,145,173,Temporal-Context Exposure
-MASS_HCC_16_Shared_Video_Exposure_Mixed,Mass | HCC 16 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,40,83,Shared-Video Exposure
-MASS_HCC_16_Shared_Video_Exposure_Negative,Mass | HCC 16 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,154,159,Shared-Video Exposure
-MASS_HCC_16_Shared_Video_Exposure_Neutral,Mass | HCC 16 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,576,883,Shared-Video Exposure
-MASS_HCC_16_Shared_Video_Exposure_Positive,Mass | HCC 16 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,278,296,Shared-Video Exposure
-MASS_HCC_16_Temporal_Context_Exposure_Mixed,Mass | HCC 16 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,16,Daviena,Mixed Goals,2,6,Temporal-Context Exposure
-MASS_HCC_16_Temporal_Context_Exposure_Negative,Mass | HCC 16 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,10,12,Temporal-Context Exposure
-MASS_HCC_16_Temporal_Context_Exposure_Neutral,Mass | HCC 16 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,5,10,Temporal-Context Exposure
-MASS_HCC_16_Temporal_Context_Exposure_Positive,Mass | HCC 16 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,16,Daviena,Insufficient Text,4,20,Temporal-Context Exposure
-MASS_HCC_17_Direct_Interaction_Mixed,Mass | HCC 17 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_17_Shared_Video_Exposure_Mixed,Mass | HCC 17 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,87,222,Shared-Video Exposure
-MASS_HCC_17_Shared_Video_Exposure_Negative,Mass | HCC 17 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,240,283,Shared-Video Exposure
-MASS_HCC_17_Shared_Video_Exposure_Neutral,Mass | HCC 17 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,900,1182,Shared-Video Exposure
-MASS_HCC_17_Shared_Video_Exposure_Positive,Mass | HCC 17 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,385,479,Shared-Video Exposure
-MASS_HCC_17_Temporal_Context_Exposure_Mixed,Mass | HCC 17 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,1,2,Temporal-Context Exposure
-MASS_HCC_17_Temporal_Context_Exposure_Negative,Mass | HCC 17 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_17_Temporal_Context_Exposure_Neutral,Mass | HCC 17 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,17,Maryame,Insufficient Text,2,122,Temporal-Context Exposure
-MASS_HCC_17_Temporal_Context_Exposure_Positive,Mass | HCC 17 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,17,Maryame,Promotional / Supportive,4,12,Temporal-Context Exposure
-MASS_HCC_18_Direct_Interaction_Mixed,Mass | HCC 18 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_18_Shared_Video_Exposure_Mixed,Mass | HCC 18 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,15,35,Shared-Video Exposure
-MASS_HCC_18_Shared_Video_Exposure_Negative,Mass | HCC 18 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,67,97,Shared-Video Exposure
-MASS_HCC_18_Shared_Video_Exposure_Neutral,Mass | HCC 18 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,122,171,Shared-Video Exposure
-MASS_HCC_18_Shared_Video_Exposure_Positive,Mass | HCC 18 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,259,282,Shared-Video Exposure
-MASS_HCC_18_Temporal_Context_Exposure_Negative,Mass | HCC 18 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_18_Temporal_Context_Exposure_Positive,Mass | HCC 18 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,18,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_180_Temporal_Context_Exposure_Mixed,Mass | HCC 180 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,180,Azarine,Insufficient Text,1,2,Temporal-Context Exposure
-MASS_HCC_180_Temporal_Context_Exposure_Neutral,Mass | HCC 180 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,180,Azarine,Insufficient Text,3,6,Temporal-Context Exposure
-MASS_HCC_180_Temporal_Context_Exposure_Positive,Mass | HCC 180 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,180,Azarine,Promotional / Supportive,3,10,Temporal-Context Exposure
-MASS_HCC_181_Shared_Video_Exposure_Negative,Mass | HCC 181 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,181,Daviena,Critical / Complaint,1,4,Shared-Video Exposure
-MASS_HCC_181_Shared_Video_Exposure_Neutral,Mass | HCC 181 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,181,Daviena,Neutral Engagement,5,18,Shared-Video Exposure
-MASS_HCC_182_Direct_Interaction_Mixed,Mass | HCC 182 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,182,Not identified,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_182_Temporal_Context_Exposure_Negative,Mass | HCC 182 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,182,Not identified,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_182_Temporal_Context_Exposure_Neutral,Mass | HCC 182 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,182,Not identified,Neutral Engagement,1,33,Temporal-Context Exposure
-MASS_HCC_183_Direct_Interaction_Mixed,Mass | HCC 183 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,3,6,Direct Interaction
-MASS_HCC_183_Direct_Interaction_Positive,Mass | HCC 183 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_183_Shared_Video_Exposure_Mixed,Mass | HCC 183 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,2,4,Shared-Video Exposure
-MASS_HCC_183_Shared_Video_Exposure_Negative,Mass | HCC 183 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,27,30,Shared-Video Exposure
-MASS_HCC_183_Shared_Video_Exposure_Neutral,Mass | HCC 183 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,79,88,Shared-Video Exposure
-MASS_HCC_183_Shared_Video_Exposure_Positive,Mass | HCC 183 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,32,35,Shared-Video Exposure
-MASS_HCC_183_Temporal_Context_Exposure_Mixed,Mass | HCC 183 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,1,2,Temporal-Context Exposure
-MASS_HCC_183_Temporal_Context_Exposure_Neutral,Mass | HCC 183 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,4,10,Temporal-Context Exposure
-MASS_HCC_183_Temporal_Context_Exposure_Positive,Mass | HCC 183 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,183,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_191_Temporal_Context_Exposure_Negative,Mass | HCC 191 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,191,The Originote,Critical / Complaint,1,3,Temporal-Context Exposure
-MASS_HCC_2_Direct_Interaction_Neutral,Mass | HCC 2 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_2_Direct_Interaction_Positive,Mass | HCC 2 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_2_Shared_Video_Exposure_Mixed,Mass | HCC 2 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,31,73,Shared-Video Exposure
-MASS_HCC_2_Shared_Video_Exposure_Negative,Mass | HCC 2 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,118,156,Shared-Video Exposure
-MASS_HCC_2_Shared_Video_Exposure_Neutral,Mass | HCC 2 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,250,342,Shared-Video Exposure
-MASS_HCC_2_Shared_Video_Exposure_Positive,Mass | HCC 2 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,109,131,Shared-Video Exposure
-MASS_HCC_2_Temporal_Context_Exposure_Neutral,Mass | HCC 2 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,2,Maryame,Insufficient Text,3,6,Temporal-Context Exposure
-MASS_HCC_20_Direct_Interaction_Neutral,Mass | HCC 20 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,20,Daviena,Mixed Goals,1,4,Direct Interaction
-MASS_HCC_20_Shared_Video_Exposure_Mixed,Mass | HCC 20 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,48,120,Shared-Video Exposure
-MASS_HCC_20_Shared_Video_Exposure_Negative,Mass | HCC 20 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,382,408,Shared-Video Exposure
-MASS_HCC_20_Shared_Video_Exposure_Neutral,Mass | HCC 20 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,812,889,Shared-Video Exposure
-MASS_HCC_20_Shared_Video_Exposure_Positive,Mass | HCC 20 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,682,804,Shared-Video Exposure
-MASS_HCC_20_Temporal_Context_Exposure_Negative,Mass | HCC 20 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,13,14,Temporal-Context Exposure
-MASS_HCC_20_Temporal_Context_Exposure_Neutral,Mass | HCC 20 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,6,9,Temporal-Context Exposure
-MASS_HCC_20_Temporal_Context_Exposure_Positive,Mass | HCC 20 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,20,Daviena,Insufficient Text,8,15,Temporal-Context Exposure
-MASS_HCC_205_Shared_Video_Exposure_Neutral,Mass | HCC 205 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,205,The Originote,Neutral Engagement,2,6,Shared-Video Exposure
-MASS_HCC_205_Temporal_Context_Exposure_Neutral,Mass | HCC 205 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,205,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_206_Shared_Video_Exposure_Mixed,Mass | HCC 206 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,206,Maryame,Insufficient Text,1,2,Shared-Video Exposure
-MASS_HCC_206_Shared_Video_Exposure_Negative,Mass | HCC 206 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,206,Maryame,Critical / Complaint,1,3,Shared-Video Exposure
-MASS_HCC_206_Shared_Video_Exposure_Neutral,Mass | HCC 206 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,206,Maryame,Neutral Engagement,1,3,Shared-Video Exposure
-MASS_HCC_3_Shared_Video_Exposure_Mixed,Mass | HCC 3 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,9,20,Shared-Video Exposure
-MASS_HCC_3_Shared_Video_Exposure_Negative,Mass | HCC 3 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,15,17,Shared-Video Exposure
-MASS_HCC_3_Shared_Video_Exposure_Neutral,Mass | HCC 3 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,103,135,Shared-Video Exposure
-MASS_HCC_3_Shared_Video_Exposure_Positive,Mass | HCC 3 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,12,21,Shared-Video Exposure
-MASS_HCC_3_Temporal_Context_Exposure_Mixed,Mass | HCC 3 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,1,2,Temporal-Context Exposure
-MASS_HCC_3_Temporal_Context_Exposure_Negative,Mass | HCC 3 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,3,Maryame,Critical / Complaint,1,3,Temporal-Context Exposure
-MASS_HCC_3_Temporal_Context_Exposure_Neutral,Mass | HCC 3 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,3,Maryame,Neutral Engagement,1,8,Temporal-Context Exposure
-MASS_HCC_3_Temporal_Context_Exposure_Positive,Mass | HCC 3 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,3,Maryame,Insufficient Text,2,4,Temporal-Context Exposure
-MASS_HCC_34_Shared_Video_Exposure_Mixed,Mass | HCC 34 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,11,23,Shared-Video Exposure
-MASS_HCC_34_Shared_Video_Exposure_Negative,Mass | HCC 34 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,31,38,Shared-Video Exposure
-MASS_HCC_34_Shared_Video_Exposure_Neutral,Mass | HCC 34 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,77,127,Shared-Video Exposure
-MASS_HCC_34_Shared_Video_Exposure_Positive,Mass | HCC 34 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,34,41,Shared-Video Exposure
-MASS_HCC_34_Temporal_Context_Exposure_Mixed,Mass | HCC 34 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,24,72,Temporal-Context Exposure
-MASS_HCC_34_Temporal_Context_Exposure_Negative,Mass | HCC 34 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,158,177,Temporal-Context Exposure
-MASS_HCC_34_Temporal_Context_Exposure_Neutral,Mass | HCC 34 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,233,243,Temporal-Context Exposure
-MASS_HCC_34_Temporal_Context_Exposure_Positive,Mass | HCC 34 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,34,Daviena,Insufficient Text,107,125,Temporal-Context Exposure
-MASS_HCC_42_Shared_Video_Exposure_Mixed,Mass | HCC 42 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,9,23,Shared-Video Exposure
-MASS_HCC_42_Shared_Video_Exposure_Negative,Mass | HCC 42 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,27,29,Shared-Video Exposure
-MASS_HCC_42_Shared_Video_Exposure_Neutral,Mass | HCC 42 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,109,251,Shared-Video Exposure
-MASS_HCC_42_Shared_Video_Exposure_Positive,Mass | HCC 42 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,25,31,Shared-Video Exposure
-MASS_HCC_42_Temporal_Context_Exposure_Neutral,Mass | HCC 42 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_42_Temporal_Context_Exposure_Positive,Mass | HCC 42 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,42,Daviena,Insufficient Text,3,3,Temporal-Context Exposure
-MASS_HCC_45_Shared_Video_Exposure_Mixed,Mass | HCC 45 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,41,98,Shared-Video Exposure
-MASS_HCC_45_Shared_Video_Exposure_Negative,Mass | HCC 45 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,246,282,Shared-Video Exposure
-MASS_HCC_45_Shared_Video_Exposure_Neutral,Mass | HCC 45 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,483,637,Shared-Video Exposure
-MASS_HCC_45_Shared_Video_Exposure_Positive,Mass | HCC 45 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,353,401,Shared-Video Exposure
-MASS_HCC_45_Temporal_Context_Exposure_Negative,Mass | HCC 45 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,45,Maryame,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_45_Temporal_Context_Exposure_Neutral,Mass | HCC 45 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,45,Maryame,Neutral Engagement,5,83,Temporal-Context Exposure
-MASS_HCC_45_Temporal_Context_Exposure_Positive,Mass | HCC 45 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,45,Maryame,Mixed Goals,1,8,Temporal-Context Exposure
-MASS_HCC_46_Shared_Video_Exposure_Negative,Mass | HCC 46 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,46,The Originote,Critical / Complaint,2,4,Shared-Video Exposure
-MASS_HCC_46_Shared_Video_Exposure_Neutral,Mass | HCC 46 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,46,The Originote,Insufficient Text,24,43,Shared-Video Exposure
-MASS_HCC_46_Shared_Video_Exposure_Positive,Mass | HCC 46 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,46,The Originote,Insufficient Text,1,1,Shared-Video Exposure
-MASS_HCC_46_Temporal_Context_Exposure_Mixed,Mass | HCC 46 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,46,The Originote,Insufficient Text,2,15,Temporal-Context Exposure
-MASS_HCC_46_Temporal_Context_Exposure_Negative,Mass | HCC 46 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,46,The Originote,Critical / Complaint,2,4,Temporal-Context Exposure
-MASS_HCC_46_Temporal_Context_Exposure_Positive,Mass | HCC 46 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,46,The Originote,Mixed Goals,1,11,Temporal-Context Exposure
-MASS_HCC_48_Shared_Video_Exposure_Mixed,Mass | HCC 48 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,3,8,Shared-Video Exposure
-MASS_HCC_48_Shared_Video_Exposure_Negative,Mass | HCC 48 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,6,13,Shared-Video Exposure
-MASS_HCC_48_Shared_Video_Exposure_Neutral,Mass | HCC 48 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,17,29,Shared-Video Exposure
-MASS_HCC_48_Shared_Video_Exposure_Positive,Mass | HCC 48 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,5,9,Shared-Video Exposure
-MASS_HCC_48_Temporal_Context_Exposure_Mixed,Mass | HCC 48 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,48,The Originote,Mixed Goals,2,8,Temporal-Context Exposure
-MASS_HCC_48_Temporal_Context_Exposure_Neutral,Mass | HCC 48 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,2,2,Temporal-Context Exposure
-MASS_HCC_48_Temporal_Context_Exposure_Positive,Mass | HCC 48 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,48,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_49_Direct_Interaction_Mixed,Mass | HCC 49 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_49_Shared_Video_Exposure_Mixed,Mass | HCC 49 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,6,13,Shared-Video Exposure
-MASS_HCC_49_Shared_Video_Exposure_Negative,Mass | HCC 49 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,17,23,Shared-Video Exposure
-MASS_HCC_49_Shared_Video_Exposure_Neutral,Mass | HCC 49 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,39,50,Shared-Video Exposure
-MASS_HCC_49_Shared_Video_Exposure_Positive,Mass | HCC 49 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,13,18,Shared-Video Exposure
-MASS_HCC_49_Temporal_Context_Exposure_Neutral,Mass | HCC 49 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,2,53,Temporal-Context Exposure
-MASS_HCC_49_Temporal_Context_Exposure_Positive,Mass | HCC 49 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,49,Daviena,Insufficient Text,3,7,Temporal-Context Exposure
-MASS_HCC_5_Shared_Video_Exposure_Mixed,Mass | HCC 5 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,103,287,Shared-Video Exposure
-MASS_HCC_5_Shared_Video_Exposure_Negative,Mass | HCC 5 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,194,239,Shared-Video Exposure
-MASS_HCC_5_Shared_Video_Exposure_Neutral,Mass | HCC 5 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,721,1031,Shared-Video Exposure
-MASS_HCC_5_Shared_Video_Exposure_Positive,Mass | HCC 5 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,263,342,Shared-Video Exposure
-MASS_HCC_5_Temporal_Context_Exposure_Mixed,Mass | HCC 5 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,4,10,Temporal-Context Exposure
-MASS_HCC_5_Temporal_Context_Exposure_Negative,Mass | HCC 5 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,5,11,Temporal-Context Exposure
-MASS_HCC_5_Temporal_Context_Exposure_Neutral,Mass | HCC 5 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,7,111,Temporal-Context Exposure
-MASS_HCC_5_Temporal_Context_Exposure_Positive,Mass | HCC 5 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,5,The Originote,Insufficient Text,4,10,Temporal-Context Exposure
-MASS_HCC_50_Direct_Interaction_Mixed,Mass | HCC 50 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_50_Direct_Interaction_Positive,Mass | HCC 50 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_50_Shared_Video_Exposure_Mixed,Mass | HCC 50 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,22,44,Shared-Video Exposure
-MASS_HCC_50_Shared_Video_Exposure_Negative,Mass | HCC 50 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,145,150,Shared-Video Exposure
-MASS_HCC_50_Shared_Video_Exposure_Neutral,Mass | HCC 50 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,389,448,Shared-Video Exposure
-MASS_HCC_50_Shared_Video_Exposure_Positive,Mass | HCC 50 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,226,242,Shared-Video Exposure
-MASS_HCC_50_Temporal_Context_Exposure_Negative,Mass | HCC 50 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,3,3,Temporal-Context Exposure
-MASS_HCC_50_Temporal_Context_Exposure_Neutral,Mass | HCC 50 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,4,5,Temporal-Context Exposure
-MASS_HCC_50_Temporal_Context_Exposure_Positive,Mass | HCC 50 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,50,Maryame,Insufficient Text,2,2,Temporal-Context Exposure
-MASS_HCC_52_Direct_Interaction_Mixed,Mass | HCC 52 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,52,Daviena,Mixed Goals,1,7,Direct Interaction
-MASS_HCC_52_Shared_Video_Exposure_Mixed,Mass | HCC 52 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,25,59,Shared-Video Exposure
-MASS_HCC_52_Shared_Video_Exposure_Negative,Mass | HCC 52 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,54,59,Shared-Video Exposure
-MASS_HCC_52_Shared_Video_Exposure_Neutral,Mass | HCC 52 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,114,141,Shared-Video Exposure
-MASS_HCC_52_Shared_Video_Exposure_Positive,Mass | HCC 52 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,62,66,Shared-Video Exposure
-MASS_HCC_52_Temporal_Context_Exposure_Mixed,Mass | HCC 52 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,52,Daviena,Mixed Goals,3,15,Temporal-Context Exposure
-MASS_HCC_52_Temporal_Context_Exposure_Negative,Mass | HCC 52 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,3,4,Temporal-Context Exposure
-MASS_HCC_52_Temporal_Context_Exposure_Neutral,Mass | HCC 52 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,2,2,Temporal-Context Exposure
-MASS_HCC_52_Temporal_Context_Exposure_Positive,Mass | HCC 52 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,52,Daviena,Insufficient Text,3,3,Temporal-Context Exposure
-MASS_HCC_54_Direct_Interaction_Mixed,Mass | HCC 54 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_54_Direct_Interaction_Neutral,Mass | HCC 54 | Direct Interaction | Neutral,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_54_Direct_Interaction_Positive,Mass | HCC 54 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_54_Shared_Video_Exposure_Mixed,Mass | HCC 54 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,23,55,Shared-Video Exposure
-MASS_HCC_54_Shared_Video_Exposure_Negative,Mass | HCC 54 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,154,165,Shared-Video Exposure
-MASS_HCC_54_Shared_Video_Exposure_Neutral,Mass | HCC 54 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,143,251,Shared-Video Exposure
-MASS_HCC_54_Shared_Video_Exposure_Positive,Mass | HCC 54 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,213,230,Shared-Video Exposure
-MASS_HCC_54_Temporal_Context_Exposure_Mixed,Mass | HCC 54 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,17,47,Temporal-Context Exposure
-MASS_HCC_54_Temporal_Context_Exposure_Negative,Mass | HCC 54 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,17,25,Temporal-Context Exposure
-MASS_HCC_54_Temporal_Context_Exposure_Neutral,Mass | HCC 54 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,26,114,Temporal-Context Exposure
-MASS_HCC_54_Temporal_Context_Exposure_No_text,Mass | HCC 54 | Temporal-Context Exposure | No text,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_54_Temporal_Context_Exposure_Positive,Mass | HCC 54 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,54,Azarine,Insufficient Text,29,46,Temporal-Context Exposure
-MASS_HCC_60_Shared_Video_Exposure_Mixed,Mass | HCC 60 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,4,8,Shared-Video Exposure
-MASS_HCC_60_Shared_Video_Exposure_Negative,Mass | HCC 60 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,7,9,Shared-Video Exposure
-MASS_HCC_60_Shared_Video_Exposure_Neutral,Mass | HCC 60 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,84,109,Shared-Video Exposure
-MASS_HCC_60_Shared_Video_Exposure_Positive,Mass | HCC 60 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,60,Daviena,Insufficient Text,3,5,Shared-Video Exposure
-MASS_HCC_63_Direct_Interaction_Positive,Mass | HCC 63 | Direct Interaction | Positive,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_63_Shared_Video_Exposure_Mixed,Mass | HCC 63 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,19,78,Shared-Video Exposure
-MASS_HCC_63_Shared_Video_Exposure_Negative,Mass | HCC 63 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,25,69,Shared-Video Exposure
-MASS_HCC_63_Shared_Video_Exposure_Neutral,Mass | HCC 63 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,115,325,Shared-Video Exposure
-MASS_HCC_63_Shared_Video_Exposure_Positive,Mass | HCC 63 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,35,88,Shared-Video Exposure
-MASS_HCC_63_Temporal_Context_Exposure_Mixed,Mass | HCC 63 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,2,4,Temporal-Context Exposure
-MASS_HCC_63_Temporal_Context_Exposure_Negative,Mass | HCC 63 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_63_Temporal_Context_Exposure_Neutral,Mass | HCC 63 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,9,66,Temporal-Context Exposure
-MASS_HCC_63_Temporal_Context_Exposure_Positive,Mass | HCC 63 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,63,Maryame,Insufficient Text,3,7,Temporal-Context Exposure
-MASS_HCC_74_Shared_Video_Exposure_Mixed,Mass | HCC 74 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,74,Daviena,Insufficient Text,1,2,Shared-Video Exposure
-MASS_HCC_74_Temporal_Context_Exposure_Neutral,Mass | HCC 74 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,74,Daviena,Insufficient Text,2,5,Temporal-Context Exposure
-MASS_HCC_74_Temporal_Context_Exposure_Positive,Mass | HCC 74 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,74,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_75_Shared_Video_Exposure_Mixed,Mass | HCC 75 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,75,Daviena,Mixed Goals,1,3,Shared-Video Exposure
-MASS_HCC_75_Shared_Video_Exposure_Negative,Mass | HCC 75 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,75,Daviena,Critical / Complaint,1,3,Shared-Video Exposure
-MASS_HCC_75_Temporal_Context_Exposure_Negative,Mass | HCC 75 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,75,Daviena,Insufficient Text,4,5,Temporal-Context Exposure
-MASS_HCC_75_Temporal_Context_Exposure_Neutral,Mass | HCC 75 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,75,Daviena,Insufficient Text,37,49,Temporal-Context Exposure
-MASS_HCC_75_Temporal_Context_Exposure_Positive,Mass | HCC 75 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,75,Daviena,Insufficient Text,14,15,Temporal-Context Exposure
-MASS_HCC_87_Shared_Video_Exposure_Mixed,Mass | HCC 87 | Shared-Video Exposure | Mixed,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,1,7,Shared-Video Exposure
-MASS_HCC_87_Shared_Video_Exposure_Negative,Mass | HCC 87 | Shared-Video Exposure | Negative,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,1,7,Shared-Video Exposure
-MASS_HCC_87_Shared_Video_Exposure_Neutral,Mass | HCC 87 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,2,7,Shared-Video Exposure
-MASS_HCC_87_Shared_Video_Exposure_Positive,Mass | HCC 87 | Shared-Video Exposure | Positive,Mass Actor,Aggregated Mass segment,87,Daviena,Mixed Goals,1,4,Shared-Video Exposure
-MASS_HCC_87_Temporal_Context_Exposure_Mixed,Mass | HCC 87 | Temporal-Context Exposure | Mixed,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,21,46,Temporal-Context Exposure
-MASS_HCC_87_Temporal_Context_Exposure_Negative,Mass | HCC 87 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,29,50,Temporal-Context Exposure
-MASS_HCC_87_Temporal_Context_Exposure_Neutral,Mass | HCC 87 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,42,71,Temporal-Context Exposure
-MASS_HCC_87_Temporal_Context_Exposure_No_text,Mass | HCC 87 | Temporal-Context Exposure | No text,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_87_Temporal_Context_Exposure_Positive,Mass | HCC 87 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,87,Daviena,Insufficient Text,76,104,Temporal-Context Exposure
-MASS_HCC_90_Direct_Interaction_Mixed,Mass | HCC 90 | Direct Interaction | Mixed,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,1,2,Direct Interaction
-MASS_HCC_90_Shared_Video_Exposure_Neutral,Mass | HCC 90 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,90,Azarine,Neutral Engagement,1,3,Shared-Video Exposure
-MASS_HCC_90_Temporal_Context_Exposure_Negative,Mass | HCC 90 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_90_Temporal_Context_Exposure_Neutral,Mass | HCC 90 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,5,5,Temporal-Context Exposure
-MASS_HCC_90_Temporal_Context_Exposure_Positive,Mass | HCC 90 | Temporal-Context Exposure | Positive,Mass Actor,Aggregated Mass segment,90,Azarine,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_99_Shared_Video_Exposure_Neutral,Mass | HCC 99 | Shared-Video Exposure | Neutral,Mass Actor,Aggregated Mass segment,99,The Originote,Mixed Goals,1,7,Shared-Video Exposure
-MASS_HCC_99_Temporal_Context_Exposure_Negative,Mass | HCC 99 | Temporal-Context Exposure | Negative,Mass Actor,Aggregated Mass segment,99,The Originote,Insufficient Text,1,1,Temporal-Context Exposure
-MASS_HCC_99_Temporal_Context_Exposure_Neutral,Mass | HCC 99 | Temporal-Context Exposure | Neutral,Mass Actor,Aggregated Mass segment,99,The Originote,Insufficient Text,3,7,Temporal-Context Exposure
+id,label,node_type,actor_type_primary,n_accounts,n_comments,goal_orientation,target_brand,hcc_id,edge_type,dominant_sentiment
+IND_adilana.na,adilana.na,Individual Actor,Individual Actor,1,74.0,Neutral Engagement,Daviena/Davina,,,
+IND_adiliarizqa,adiliarizqa,Individual Actor,Individual Actor,1,3.0,Neutral Engagement,Daviena/Davina,,,
+IND_afikarrhnur,afikarrhnur,Individual Actor,Individual Actor,1,68.0,Neutral Engagement,Azarine,,,
+IND_ansyashine,ansyashine,Individual Actor,Individual Actor,1,11.0,Neutral Engagement,Azarine,,,
+IND_asabelavvv,asabelavvv,Individual Actor,Individual Actor,1,4.0,Promotional / Supportive,Azarine,,,
+IND_cellynstore_,cellynstore_,Individual Actor,Individual Actor,1,121.0,Neutral Engagement,The Originote,,,
+IND_daviena_dvn,daviena_dvn,Individual Actor,Individual Actor,1,0.0,Not Observed from Comments,Daviena/Davina,,,
+IND_deswitatata2,deswitatata2,Individual Actor,Individual Actor,1,24.0,Neutral Engagement,Maryame,,,
+IND_dewihanijayanti,dewihanijayanti,Individual Actor,Individual Actor,1,14.0,Mixed Goals,Maryame,,,
+IND_dicannnns,dicannnns,Individual Actor,Individual Actor,1,188.0,Neutral Engagement,The Originote,,,
+IND_dr.okypratamaa_kedua,dr.okypratamaa_kedua,Individual Actor,Individual Actor,1,0.0,Not Observed from Comments,Maryame,,,
+IND_dww.srtk,dww.srtk,Individual Actor,Individual Actor,1,83.0,Neutral Engagement,The Originote,,,
+IND_faniabsaa,faniabsaa,Individual Actor,Individual Actor,1,1.0,Insufficient Text,Daviena/Davina,,,
+IND_fvajar_,fvajar_,Individual Actor,Individual Actor,1,35.0,Promotional / Supportive,Azarine,,,
+IND_glowupyuk34,glowupyuk34,Individual Actor,Individual Actor,1,12.0,Neutral Engagement,The Originote,,,
+IND_iketiaaa,iketiaaa,Individual Actor,Individual Actor,1,11.0,Promotional / Supportive,Daviena/Davina,,,
+IND_irnaayu27,irnaayu27,Individual Actor,Individual Actor,1,9.0,Mixed Goals,Daviena/Davina,,,
+IND_janeabys,janeabys,Individual Actor,Individual Actor,1,3.0,Promotional / Supportive,The Originote,,,
+IND_jesyjeyn,jesyjeyn,Individual Actor,Individual Actor,1,17.0,Neutral Engagement,Daviena/Davina,,,
+IND_juliadoang08,juliadoang08,Individual Actor,Individual Actor,1,17.0,Promotional / Supportive,Daviena/Davina,,,
+IND_lookatmeeh__,lookatmeeh__,Individual Actor,Individual Actor,1,15.0,Neutral Engagement,The Originote,,,
+IND_maharajasp8,maharajasp8,Individual Actor,Individual Actor,1,10.0,Promotional / Supportive,Daviena/Davina,,,
+IND_maryame.official,maryame.official,Individual Actor,Individual Actor,1,52.0,Neutral Engagement,Maryame,,,
+IND_mayhapid2,mayhapid2,Individual Actor,Individual Actor,1,2.0,Insufficient Text,Maryame,,,
+IND_melvinahusyanti96,melvinahusyanti96,Individual Actor,Individual Actor,1,16.0,Promotional / Supportive,Daviena/Davina,,,
+IND_mimiaudmua,mimiaudmua,Individual Actor,Individual Actor,1,127.0,Neutral Engagement,Maryame,,,
+IND_mputrizahro,mputrizahro,Individual Actor,Individual Actor,1,16.0,Mixed Goals,Maryame,,,
+IND_nabellaolivia,nabellaolivia,Individual Actor,Individual Actor,1,24.0,Neutral Engagement,Daviena/Davina,,,
+IND_namicwn_,namicwn_,Individual Actor,Individual Actor,1,52.0,Neutral Engagement,The Originote,,,
+IND_nooraabeautycreator,nooraabeautycreator,Individual Actor,Individual Actor,1,52.0,Neutral Engagement,Maryame,,,
+IND_notforsheil,notforsheil,Individual Actor,Individual Actor,1,0.0,Not Observed from Comments,Maryame,,,
+IND_orinagista13,orinagista13,Individual Actor,Individual Actor,1,18.0,Neutral Engagement,Daviena/Davina,,,
+IND_racunwithdivani,racunwithdivani,Individual Actor,Individual Actor,1,4.0,Critical / Complaint,The Originote,,,
+IND_rikut02,rikut02,Individual Actor,Individual Actor,1,62.0,Neutral Engagement,Maryame,,,
+IND_skinby_sindy,skinby_sindy,Individual Actor,Individual Actor,1,67.0,Neutral Engagement,Azarine,,,
+IND_skincarebyw,skincarebyw,Individual Actor,Individual Actor,1,6.0,Promotional / Supportive,Azarine,,,
+IND_soufberry,soufberry,Individual Actor,Individual Actor,1,1.0,Insufficient Text,The Originote,,,
+IND_susiyuliani30,susiyuliani30,Individual Actor,Individual Actor,1,33.0,Neutral Engagement,Maryame,,,
+IND_theoriginote,theoriginote,Individual Actor,Individual Actor,1,19.0,Neutral Engagement,The Originote,,,
+IND_thisisalulaa,thisisalulaa,Individual Actor,Individual Actor,1,40.0,Promotional / Supportive,Daviena/Davina,,,
+IND_tiarach18,tiarach18,Individual Actor,Individual Actor,1,3.0,Promotional / Supportive,The Originote,,,
+IND_vivianmarguerre,vivianmarguerre,Individual Actor,Individual Actor,1,62.0,Neutral Engagement,Azarine,,,
+IND_yulyadew123,yulyadew123,Individual Actor,Individual Actor,1,8.0,Neutral Engagement,Daviena/Davina,,,
+HCC_1,HCC 1,Community Actor,Community Actor,3,21.0,Mixed Goals,Mixed_3plus_Brands,,,
+HCC_2,HCC 2,Community Actor,Community Actor,6,18.0,Mixed Goals,Maryame,,,
+HCC_3,HCC 3,Community Actor,Community Actor,5,15.0,Neutral Engagement,Mixed_2_Brands,,,
+HCC_5,HCC 5,Community Actor,Community Actor,8,64.0,Neutral Engagement,The Originote,,,
+HCC_14,HCC 14,Community Actor,Community Actor,3,15.0,Mixed Goals,Mixed_3plus_Brands,,,
+HCC_15,HCC 15,Community Actor,Community Actor,6,18.0,Neutral Engagement,The Originote,,,
+HCC_16,HCC 16,Community Actor,Community Actor,5,15.0,Mixed Goals,Daviena,,,
+HCC_17,HCC 17,Community Actor,Community Actor,11,44.0,Mixed Goals,Mixed_3plus_Brands,,,
+HCC_18,HCC 18,Community Actor,Community Actor,6,18.0,Mixed Goals,The Originote,,,
+HCC_20,HCC 20,Community Actor,Community Actor,3,24.0,Mixed Goals,Daviena,,,
+HCC_34,HCC 34,Community Actor,Community Actor,3,12.0,Mixed Goals,Daviena,,,
+HCC_42,HCC 42,Community Actor,Community Actor,5,23.0,Promotional / Supportive,Daviena,,,
+HCC_45,HCC 45,Community Actor,Community Actor,4,24.0,Neutral Engagement,Mixed_3plus_Brands,,,
+HCC_46,HCC 46,Community Actor,Community Actor,7,21.0,Neutral Engagement,The Originote,,,
+HCC_48,HCC 48,Community Actor,Community Actor,5,30.0,Mixed Goals,Mixed_3plus_Brands,,,
+HCC_49,HCC 49,Community Actor,Community Actor,6,20.0,Neutral Engagement,Mixed_3plus_Brands,,,
+HCC_50,HCC 50,Community Actor,Community Actor,6,18.0,Mixed Goals,Maryame,,,
+HCC_52,HCC 52,Community Actor,Community Actor,5,40.0,Mixed Goals,Daviena,,,
+HCC_54,HCC 54,Community Actor,Community Actor,11,74.0,Mixed Goals,Azarine,,,
+HCC_60,HCC 60,Community Actor,Community Actor,3,11.0,Mixed Goals,Daviena,,,
+HCC_63,HCC 63,Community Actor,Community Actor,3,22.0,Mixed Goals,Mixed_3plus_Brands,,,
+HCC_74,HCC 74,Community Actor,Community Actor,3,12.0,Mixed Goals,Daviena,,,
+HCC_75,HCC 75,Community Actor,Community Actor,4,16.0,Mixed Goals,Mixed_2_Brands,,,
+HCC_87,HCC 87,Community Actor,Community Actor,5,25.0,Mixed Goals,Mixed_2_Brands,,,
+HCC_90,HCC 90,Community Actor,Community Actor,4,12.0,Neutral Engagement,Mixed_3plus_Brands,,,
+HCC_99,HCC 99,Community Actor,Community Actor,6,28.0,Promotional / Supportive,The Originote,,,
+HCC_103,HCC 103,Community Actor,Community Actor,5,30.0,Neutral Engagement,Daviena,,,
+HCC_113,HCC 113,Community Actor,Community Actor,6,28.0,Promotional / Supportive,Maryame,,,
+HCC_114,HCC 114,Community Actor,Community Actor,6,28.0,Promotional / Supportive,Maryame,,,
+HCC_117,HCC 117,Community Actor,Community Actor,6,18.0,Neutral Engagement,The Originote,,,
+HCC_132,HCC 132,Community Actor,Community Actor,4,12.0,Mixed Goals,Mixed_3plus_Brands,,,
+HCC_134,HCC 134,Community Actor,Community Actor,3,15.0,Mixed Goals,Daviena,,,
+HCC_150,HCC 150,Community Actor,Community Actor,6,48.0,Mixed Goals,Maryame,,,
+HCC_168,HCC 168,Community Actor,Community Actor,5,23.0,Promotional / Supportive,Daviena,,,
+HCC_180,HCC 180,Community Actor,Community Actor,4,18.0,Promotional / Supportive,Azarine,,,
+HCC_181,HCC 181,Community Actor,Community Actor,5,23.0,Promotional / Supportive,Daviena,,,
+HCC_182,HCC 182,Community Actor,Community Actor,6,18.0,Mixed Goals,Not identified,,,
+HCC_183,HCC 183,Community Actor,Community Actor,7,21.0,Mixed Goals,The Originote,,,
+HCC_191,HCC 191,Community Actor,Community Actor,5,23.0,Promotional / Supportive,The Originote,,,
+HCC_204,HCC 204,Community Actor,Community Actor,4,18.0,Promotional / Supportive,Azarine,,,
+HCC_205,HCC 205,Community Actor,Community Actor,5,23.0,Promotional / Supportive,The Originote,,,
+HCC_206,HCC 206,Community Actor,Community Actor,5,23.0,Promotional / Supportive,Maryame,,,
+MASS_HCC_103_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 103 Mixed,Mass Actor Segment,Mass Actor,134,346.0,Insufficient Text,,103,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_103_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 103 Negative,Mass Actor Segment,Mass Actor,237,304.0,Insufficient Text,,103,Ambiguous Community-Mass Association,Negative
+MASS_HCC_103_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 103 Neutral,Mass Actor Segment,Mass Actor,953,1403.0,Insufficient Text,,103,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_103_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 103 Positive,Mass Actor Segment,Mass Actor,341,464.0,Insufficient Text,,103,Ambiguous Community-Mass Association,Positive
+MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 103 Mixed,Mass Actor Segment,Mass Actor,5,12.0,Insufficient Text,Daviena,103,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 103 Negative,Mass Actor Segment,Mass Actor,10,15.0,Insufficient Text,Daviena,103,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 103 Neutral,Mass Actor Segment,Mass Actor,36,51.0,Insufficient Text,Daviena,103,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 103 Positive,Mass Actor Segment,Mass Actor,14,20.0,Insufficient Text,Daviena,103,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_103_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 103 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Daviena,103,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_103_Verified_Community_Mass_Direct_Interaction_Neutral,Mass Verified Community-Mass Direct Interaction 103 Neutral,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Daviena,103,Verified Community-Mass Direct Interaction,Neutral
+MASS_HCC_103_Verified_Community_Mass_Direct_Interaction_Positive,Mass Verified Community-Mass Direct Interaction 103 Positive,Mass Actor Segment,Mass Actor,2,4.0,Insufficient Text,Daviena,103,Verified Community-Mass Direct Interaction,Positive
+MASS_HCC_113_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 113 Mixed,Mass Actor Segment,Mass Actor,75,215.0,Insufficient Text,,113,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_113_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 113 Negative,Mass Actor Segment,Mass Actor,202,278.0,Insufficient Text,,113,Ambiguous Community-Mass Association,Negative
+MASS_HCC_113_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 113 Neutral,Mass Actor Segment,Mass Actor,377,651.0,Insufficient Text,,113,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_113_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 113 Positive,Mass Actor Segment,Mass Actor,184,268.0,Insufficient Text,,113,Ambiguous Community-Mass Association,Positive
+MASS_HCC_113_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 113 Neutral,Mass Actor Segment,Mass Actor,3,4.0,Insufficient Text,Maryame,113,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_113_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 113 Positive,Mass Actor Segment,Mass Actor,1,6.0,Promotional / Supportive,Maryame,113,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_114_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 114 Mixed,Mass Actor Segment,Mass Actor,49,138.0,Insufficient Text,,114,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_114_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 114 Negative,Mass Actor Segment,Mass Actor,119,167.0,Insufficient Text,,114,Ambiguous Community-Mass Association,Negative
+MASS_HCC_114_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 114 Neutral,Mass Actor Segment,Mass Actor,284,565.0,Insufficient Text,,114,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_114_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 114 Positive,Mass Actor Segment,Mass Actor,156,240.0,Insufficient Text,,114,Ambiguous Community-Mass Association,Positive
+MASS_HCC_117_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 117 Mixed,Mass Actor Segment,Mass Actor,41,132.0,Insufficient Text,,117,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_117_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 117 Negative,Mass Actor Segment,Mass Actor,55,84.0,Insufficient Text,,117,Ambiguous Community-Mass Association,Negative
+MASS_HCC_117_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 117 Neutral,Mass Actor Segment,Mass Actor,260,481.0,Insufficient Text,,117,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_117_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 117 Positive,Mass Actor Segment,Mass Actor,83,161.0,Insufficient Text,,117,Ambiguous Community-Mass Association,Positive
+MASS_HCC_117_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 117 Mixed,Mass Actor Segment,Mass Actor,1,3.0,Mixed Goals,The Originote,117,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_117_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 117 Neutral,Mass Actor Segment,Mass Actor,2,2.0,Insufficient Text,The Originote,117,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_117_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 117 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,The Originote,117,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_132_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 132 Mixed,Mass Actor Segment,Mass Actor,67,187.0,Insufficient Text,,132,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_132_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 132 Negative,Mass Actor Segment,Mass Actor,82,114.0,Insufficient Text,,132,Ambiguous Community-Mass Association,Negative
+MASS_HCC_132_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 132 Neutral,Mass Actor Segment,Mass Actor,364,620.0,Insufficient Text,,132,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_132_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 132 Positive,Mass Actor Segment,Mass Actor,104,148.0,Insufficient Text,,132,Ambiguous Community-Mass Association,Positive
+MASS_HCC_132_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 132 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,132,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_132_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 132 Neutral,Mass Actor Segment,Mass Actor,3,13.0,Neutral Engagement,Mixed_3plus_Brands,132,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_132_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 132 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,132,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_134_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 134 Mixed,Mass Actor Segment,Mass Actor,202,494.0,Insufficient Text,,134,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_134_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 134 Negative,Mass Actor Segment,Mass Actor,743,865.0,Insufficient Text,,134,Ambiguous Community-Mass Association,Negative
+MASS_HCC_134_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 134 Neutral,Mass Actor Segment,Mass Actor,5696,6308.0,Insufficient Text,,134,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_134_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 134 Positive,Mass Actor Segment,Mass Actor,1732,1891.0,Insufficient Text,,134,Ambiguous Community-Mass Association,Positive
+MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 134 Mixed,Mass Actor Segment,Mass Actor,1,3.0,Mixed Goals,Daviena,134,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 134 Negative,Mass Actor Segment,Mass Actor,2,2.0,Insufficient Text,Daviena,134,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 134 Neutral,Mass Actor Segment,Mass Actor,14,16.0,Insufficient Text,Daviena,134,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 134 Positive,Mass Actor Segment,Mass Actor,2,2.0,Insufficient Text,Daviena,134,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_14_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 14 Mixed,Mass Actor Segment,Mass Actor,308,707.0,Insufficient Text,,14,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_14_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 14 Negative,Mass Actor Segment,Mass Actor,2589,2861.0,Insufficient Text,,14,Ambiguous Community-Mass Association,Negative
+MASS_HCC_14_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 14 Neutral,Mass Actor Segment,Mass Actor,5855,6379.0,Insufficient Text,,14,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_14_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 14 Positive,Mass Actor Segment,Mass Actor,2502,2703.0,Insufficient Text,,14,Ambiguous Community-Mass Association,Positive
+MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 14 Mixed,Mass Actor Segment,Mass Actor,2,4.0,Insufficient Text,Mixed_3plus_Brands,14,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 14 Negative,Mass Actor Segment,Mass Actor,21,23.0,Insufficient Text,Mixed_3plus_Brands,14,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 14 Neutral,Mass Actor Segment,Mass Actor,57,59.0,Insufficient Text,Mixed_3plus_Brands,14,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 14 Positive,Mass Actor Segment,Mass Actor,18,21.0,Insufficient Text,Mixed_3plus_Brands,14,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_150_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 150 Mixed,Mass Actor Segment,Mass Actor,274,727.0,Insufficient Text,,150,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_150_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 150 Negative,Mass Actor Segment,Mass Actor,1125,1324.0,Insufficient Text,,150,Ambiguous Community-Mass Association,Negative
+MASS_HCC_150_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 150 Neutral,Mass Actor Segment,Mass Actor,6480,7296.0,Insufficient Text,,150,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_150_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 150 Positive,Mass Actor Segment,Mass Actor,2257,2484.0,Insufficient Text,,150,Ambiguous Community-Mass Association,Positive
+MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 150 Mixed,Mass Actor Segment,Mass Actor,12,28.0,Insufficient Text,Maryame,150,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 150 Negative,Mass Actor Segment,Mass Actor,48,55.0,Insufficient Text,Maryame,150,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 150 Neutral,Mass Actor Segment,Mass Actor,524,567.0,Insufficient Text,Maryame,150,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 150 Positive,Mass Actor Segment,Mass Actor,137,161.0,Insufficient Text,Maryame,150,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_150_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 150 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Maryame,150,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_150_Verified_Community_Mass_Direct_Interaction_Positive,Mass Verified Community-Mass Direct Interaction 150 Positive,Mass Actor Segment,Mass Actor,2,4.0,Insufficient Text,Maryame,150,Verified Community-Mass Direct Interaction,Positive
+MASS_HCC_15_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 15 Mixed,Mass Actor Segment,Mass Actor,83,227.0,Insufficient Text,,15,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_15_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 15 Negative,Mass Actor Segment,Mass Actor,212,277.0,Insufficient Text,,15,Ambiguous Community-Mass Association,Negative
+MASS_HCC_15_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 15 Neutral,Mass Actor Segment,Mass Actor,519,756.0,Insufficient Text,,15,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_15_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 15 Positive,Mass Actor Segment,Mass Actor,213,292.0,Insufficient Text,,15,Ambiguous Community-Mass Association,Positive
+MASS_HCC_15_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 15 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,15,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_15_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 15 Neutral,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,15,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_15_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 15 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,15,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_15_Verified_Community_Mass_Direct_Interaction_Neutral,Mass Verified Community-Mass Direct Interaction 15 Neutral,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,The Originote,15,Verified Community-Mass Direct Interaction,Neutral
+MASS_HCC_168_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 168 Mixed,Mass Actor Segment,Mass Actor,56,159.0,Insufficient Text,,168,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_168_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 168 Negative,Mass Actor Segment,Mass Actor,29,63.0,Insufficient Text,,168,Ambiguous Community-Mass Association,Negative
+MASS_HCC_168_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 168 Neutral,Mass Actor Segment,Mass Actor,215,385.0,Insufficient Text,,168,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_168_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 168 Positive,Mass Actor Segment,Mass Actor,43,82.0,Insufficient Text,,168,Ambiguous Community-Mass Association,Positive
+MASS_HCC_16_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 16 Mixed,Mass Actor Segment,Mass Actor,101,261.0,Insufficient Text,,16,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_16_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 16 Negative,Mass Actor Segment,Mass Actor,315,378.0,Insufficient Text,,16,Ambiguous Community-Mass Association,Negative
+MASS_HCC_16_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 16 Neutral,Mass Actor Segment,Mass Actor,941,1340.0,Insufficient Text,,16,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_16_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 16 Positive,Mass Actor Segment,Mass Actor,441,536.0,Insufficient Text,,16,Ambiguous Community-Mass Association,Positive
+MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 16 Mixed,Mass Actor Segment,Mass Actor,2,6.0,Insufficient Text,Daviena,16,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 16 Negative,Mass Actor Segment,Mass Actor,10,12.0,Insufficient Text,Daviena,16,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 16 Neutral,Mass Actor Segment,Mass Actor,5,10.0,Insufficient Text,Daviena,16,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 16 Positive,Mass Actor Segment,Mass Actor,3,3.0,Insufficient Text,Daviena,16,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_17_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 17 Mixed,Mass Actor Segment,Mass Actor,202,559.0,Insufficient Text,,17,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_17_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 17 Negative,Mass Actor Segment,Mass Actor,422,548.0,Insufficient Text,,17,Ambiguous Community-Mass Association,Negative
+MASS_HCC_17_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 17 Neutral,Mass Actor Segment,Mass Actor,1489,2144.0,Insufficient Text,,17,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_17_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 17 Positive,Mass Actor Segment,Mass Actor,522,690.0,Insufficient Text,,17,Ambiguous Community-Mass Association,Positive
+MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 17 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Mixed_3plus_Brands,17,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 17 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,17,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 17 Neutral,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,17,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 17 Positive,Mass Actor Segment,Mass Actor,4,12.0,Insufficient Text,Mixed_3plus_Brands,17,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_17_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 17 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Mixed_3plus_Brands,17,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_180_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 180 Mixed,Mass Actor Segment,Mass Actor,76,194.0,Insufficient Text,,180,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_180_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 180 Negative,Mass Actor Segment,Mass Actor,141,207.0,Insufficient Text,,180,Ambiguous Community-Mass Association,Negative
+MASS_HCC_180_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 180 Neutral,Mass Actor Segment,Mass Actor,612,869.0,Insufficient Text,,180,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_180_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 180 Positive,Mass Actor Segment,Mass Actor,174,249.0,Insufficient Text,,180,Ambiguous Community-Mass Association,Positive
+MASS_HCC_180_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 180 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Azarine,180,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_180_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 180 Neutral,Mass Actor Segment,Mass Actor,3,6.0,Insufficient Text,Azarine,180,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_180_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 180 Positive,Mass Actor Segment,Mass Actor,2,7.0,Insufficient Text,Azarine,180,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_181_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 181 Mixed,Mass Actor Segment,Mass Actor,83,205.0,Insufficient Text,,181,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_181_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 181 Negative,Mass Actor Segment,Mass Actor,209,275.0,Insufficient Text,,181,Ambiguous Community-Mass Association,Negative
+MASS_HCC_181_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 181 Neutral,Mass Actor Segment,Mass Actor,609,900.0,Insufficient Text,,181,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_181_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 181 Positive,Mass Actor Segment,Mass Actor,227,327.0,Insufficient Text,,181,Ambiguous Community-Mass Association,Positive
+MASS_HCC_182_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 182 Mixed,Mass Actor Segment,Mass Actor,48,144.0,Insufficient Text,,182,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_182_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 182 Negative,Mass Actor Segment,Mass Actor,51,74.0,Insufficient Text,,182,Ambiguous Community-Mass Association,Negative
+MASS_HCC_182_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 182 Neutral,Mass Actor Segment,Mass Actor,138,218.0,Insufficient Text,,182,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_182_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 182 Positive,Mass Actor Segment,Mass Actor,75,142.0,Insufficient Text,,182,Ambiguous Community-Mass Association,Positive
+MASS_HCC_182_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 182 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Not identified,182,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_182_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 182 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Not identified,182,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_183_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 183 Mixed,Mass Actor Segment,Mass Actor,77,224.0,Insufficient Text,,183,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_183_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 183 Negative,Mass Actor Segment,Mass Actor,245,344.0,Insufficient Text,,183,Ambiguous Community-Mass Association,Negative
+MASS_HCC_183_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 183 Neutral,Mass Actor Segment,Mass Actor,551,877.0,Insufficient Text,,183,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_183_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 183 Positive,Mass Actor Segment,Mass Actor,391,511.0,Insufficient Text,,183,Ambiguous Community-Mass Association,Positive
+MASS_HCC_183_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 183 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,The Originote,183,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_183_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 183 Neutral,Mass Actor Segment,Mass Actor,4,10.0,Insufficient Text,The Originote,183,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_183_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 183 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,183,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_183_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 183 Mixed,Mass Actor Segment,Mass Actor,3,6.0,Insufficient Text,The Originote,183,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_183_Verified_Community_Mass_Direct_Interaction_Positive,Mass Verified Community-Mass Direct Interaction 183 Positive,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,The Originote,183,Verified Community-Mass Direct Interaction,Positive
+MASS_HCC_18_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 18 Mixed,Mass Actor Segment,Mass Actor,90,289.0,Insufficient Text,,18,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_18_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 18 Negative,Mass Actor Segment,Mass Actor,216,340.0,Insufficient Text,,18,Ambiguous Community-Mass Association,Negative
+MASS_HCC_18_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 18 Neutral,Mass Actor Segment,Mass Actor,788,1196.0,Insufficient Text,,18,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_18_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 18 Positive,Mass Actor Segment,Mass Actor,431,556.0,Insufficient Text,,18,Ambiguous Community-Mass Association,Positive
+MASS_HCC_18_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 18 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,18,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_18_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 18 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,18,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_18_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 18 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,The Originote,18,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_191_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 191 Mixed,Mass Actor Segment,Mass Actor,62,174.0,Insufficient Text,,191,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_191_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 191 Negative,Mass Actor Segment,Mass Actor,97,134.0,Insufficient Text,,191,Ambiguous Community-Mass Association,Negative
+MASS_HCC_191_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 191 Neutral,Mass Actor Segment,Mass Actor,459,750.0,Insufficient Text,,191,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_191_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 191 Positive,Mass Actor Segment,Mass Actor,128,197.0,Insufficient Text,,191,Ambiguous Community-Mass Association,Positive
+MASS_HCC_191_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 191 Negative,Mass Actor Segment,Mass Actor,1,3.0,Critical / Complaint,The Originote,191,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_1_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 1 Mixed,Mass Actor Segment,Mass Actor,141,387.0,Insufficient Text,,1,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_1_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 1 Negative,Mass Actor Segment,Mass Actor,471,618.0,Insufficient Text,,1,Ambiguous Community-Mass Association,Negative
+MASS_HCC_1_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 1 Neutral,Mass Actor Segment,Mass Actor,1069,1512.0,Insufficient Text,,1,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_1_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 1 Positive,Mass Actor Segment,Mass Actor,558,718.0,Insufficient Text,,1,Ambiguous Community-Mass Association,Positive
+MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 1 Mixed,Mass Actor Segment,Mass Actor,2,4.0,Insufficient Text,Mixed_3plus_Brands,1,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 1 Negative,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Mixed_3plus_Brands,1,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 1 Neutral,Mass Actor Segment,Mass Actor,3,4.0,Insufficient Text,Mixed_3plus_Brands,1,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 1 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,1,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_204_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 204 Mixed,Mass Actor Segment,Mass Actor,42,110.0,Insufficient Text,,204,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_204_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 204 Negative,Mass Actor Segment,Mass Actor,38,65.0,Insufficient Text,,204,Ambiguous Community-Mass Association,Negative
+MASS_HCC_204_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 204 Neutral,Mass Actor Segment,Mass Actor,167,303.0,Insufficient Text,,204,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_204_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 204 Positive,Mass Actor Segment,Mass Actor,61,104.0,Insufficient Text,,204,Ambiguous Community-Mass Association,Positive
+MASS_HCC_205_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 205 Mixed,Mass Actor Segment,Mass Actor,62,188.0,Insufficient Text,,205,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_205_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 205 Negative,Mass Actor Segment,Mass Actor,88,126.0,Insufficient Text,,205,Ambiguous Community-Mass Association,Negative
+MASS_HCC_205_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 205 Neutral,Mass Actor Segment,Mass Actor,304,568.0,Insufficient Text,,205,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_205_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 205 Positive,Mass Actor Segment,Mass Actor,136,209.0,Insufficient Text,,205,Ambiguous Community-Mass Association,Positive
+MASS_HCC_205_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 205 Neutral,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,205,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_206_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 206 Mixed,Mass Actor Segment,Mass Actor,48,158.0,Insufficient Text,,206,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_206_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 206 Negative,Mass Actor Segment,Mass Actor,147,216.0,Insufficient Text,,206,Ambiguous Community-Mass Association,Negative
+MASS_HCC_206_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 206 Neutral,Mass Actor Segment,Mass Actor,278,472.0,Insufficient Text,,206,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_206_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 206 Positive,Mass Actor Segment,Mass Actor,239,289.0,Insufficient Text,,206,Ambiguous Community-Mass Association,Positive
+MASS_HCC_20_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 20 Mixed,Mass Actor Segment,Mass Actor,265,655.0,Insufficient Text,,20,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_20_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 20 Negative,Mass Actor Segment,Mass Actor,2219,2463.0,Insufficient Text,,20,Ambiguous Community-Mass Association,Negative
+MASS_HCC_20_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 20 Neutral,Mass Actor Segment,Mass Actor,1239,1761.0,Insufficient Text,,20,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_20_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 20 Positive,Mass Actor Segment,Mass Actor,1406,1668.0,Insufficient Text,,20,Ambiguous Community-Mass Association,Positive
+MASS_HCC_20_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 20 Negative,Mass Actor Segment,Mass Actor,13,14.0,Insufficient Text,Daviena,20,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_20_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 20 Neutral,Mass Actor Segment,Mass Actor,6,9.0,Insufficient Text,Daviena,20,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_20_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 20 Positive,Mass Actor Segment,Mass Actor,8,15.0,Insufficient Text,Daviena,20,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_20_Shared_Video_Context_Only_Mixed,Mass Shared-Video Context Only 20 Mixed,Mass Actor Segment,Mass Actor,18,37.0,Insufficient Text,Daviena,20,Shared-Video Context Only,Mixed
+MASS_HCC_20_Shared_Video_Context_Only_Negative,Mass Shared-Video Context Only 20 Negative,Mass Actor Segment,Mass Actor,287,296.0,Insufficient Text,Daviena,20,Shared-Video Context Only,Negative
+MASS_HCC_20_Shared_Video_Context_Only_Neutral,Mass Shared-Video Context Only 20 Neutral,Mass Actor Segment,Mass Actor,569,588.0,Insufficient Text,Daviena,20,Shared-Video Context Only,Neutral
+MASS_HCC_20_Shared_Video_Context_Only_Positive,Mass Shared-Video Context Only 20 Positive,Mass Actor Segment,Mass Actor,419,461.0,Insufficient Text,Daviena,20,Shared-Video Context Only,Positive
+MASS_HCC_20_Verified_Community_Mass_Direct_Interaction_Neutral,Mass Verified Community-Mass Direct Interaction 20 Neutral,Mass Actor Segment,Mass Actor,1,4.0,Neutral Engagement,Daviena,20,Verified Community-Mass Direct Interaction,Neutral
+MASS_HCC_2_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 2 Mixed,Mass Actor Segment,Mass Actor,53,178.0,Insufficient Text,,2,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_2_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 2 Negative,Mass Actor Segment,Mass Actor,133,206.0,Insufficient Text,,2,Ambiguous Community-Mass Association,Negative
+MASS_HCC_2_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 2 Neutral,Mass Actor Segment,Mass Actor,303,581.0,Insufficient Text,,2,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_2_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 2 Positive,Mass Actor Segment,Mass Actor,130,225.0,Insufficient Text,,2,Ambiguous Community-Mass Association,Positive
+MASS_HCC_2_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 2 Neutral,Mass Actor Segment,Mass Actor,3,6.0,Insufficient Text,Maryame,2,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_2_Verified_Community_Mass_Direct_Interaction_Neutral,Mass Verified Community-Mass Direct Interaction 2 Neutral,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Maryame,2,Verified Community-Mass Direct Interaction,Neutral
+MASS_HCC_2_Verified_Community_Mass_Direct_Interaction_Positive,Mass Verified Community-Mass Direct Interaction 2 Positive,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Maryame,2,Verified Community-Mass Direct Interaction,Positive
+MASS_HCC_34_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 34 Mixed,Mass Actor Segment,Mass Actor,321,774.0,Insufficient Text,,34,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_34_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 34 Negative,Mass Actor Segment,Mass Actor,2592,2811.0,Insufficient Text,,34,Ambiguous Community-Mass Association,Negative
+MASS_HCC_34_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 34 Neutral,Mass Actor Segment,Mass Actor,5937,6508.0,Insufficient Text,,34,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_34_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 34 Positive,Mass Actor Segment,Mass Actor,2591,2841.0,Insufficient Text,,34,Ambiguous Community-Mass Association,Positive
+MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 34 Mixed,Mass Actor Segment,Mass Actor,24,72.0,Insufficient Text,Daviena,34,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 34 Negative,Mass Actor Segment,Mass Actor,158,177.0,Insufficient Text,Daviena,34,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 34 Neutral,Mass Actor Segment,Mass Actor,233,243.0,Insufficient Text,Daviena,34,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 34 Positive,Mass Actor Segment,Mass Actor,107,125.0,Insufficient Text,Daviena,34,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_3_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 3 Mixed,Mass Actor Segment,Mass Actor,43,149.0,Insufficient Text,,3,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_3_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 3 Negative,Mass Actor Segment,Mass Actor,50,114.0,Insufficient Text,,3,Ambiguous Community-Mass Association,Negative
+MASS_HCC_3_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 3 Neutral,Mass Actor Segment,Mass Actor,186,397.0,Insufficient Text,,3,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_3_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 3 Positive,Mass Actor Segment,Mass Actor,46,106.0,Insufficient Text,,3,Ambiguous Community-Mass Association,Positive
+MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 3 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Mixed_2_Brands,3,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 3 Negative,Mass Actor Segment,Mass Actor,1,3.0,Critical / Complaint,Mixed_2_Brands,3,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 3 Neutral,Mass Actor Segment,Mass Actor,1,8.0,Neutral Engagement,Mixed_2_Brands,3,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 3 Positive,Mass Actor Segment,Mass Actor,2,4.0,Insufficient Text,Mixed_2_Brands,3,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_42_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 42 Mixed,Mass Actor Segment,Mass Actor,46,122.0,Insufficient Text,,42,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_42_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 42 Negative,Mass Actor Segment,Mass Actor,106,148.0,Insufficient Text,,42,Ambiguous Community-Mass Association,Negative
+MASS_HCC_42_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 42 Neutral,Mass Actor Segment,Mass Actor,283,529.0,Insufficient Text,,42,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_42_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 42 Positive,Mass Actor Segment,Mass Actor,151,235.0,Insufficient Text,,42,Ambiguous Community-Mass Association,Positive
+MASS_HCC_42_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 42 Neutral,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Daviena,42,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_42_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 42 Positive,Mass Actor Segment,Mass Actor,3,3.0,Insufficient Text,Daviena,42,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_45_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 45 Mixed,Mass Actor Segment,Mass Actor,124,357.0,Insufficient Text,,45,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_45_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 45 Negative,Mass Actor Segment,Mass Actor,288,393.0,Insufficient Text,,45,Ambiguous Community-Mass Association,Negative
+MASS_HCC_45_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 45 Neutral,Mass Actor Segment,Mass Actor,685,1156.0,Insufficient Text,,45,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_45_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 45 Positive,Mass Actor Segment,Mass Actor,396,535.0,Insufficient Text,,45,Ambiguous Community-Mass Association,Positive
+MASS_HCC_45_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 45 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,45,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_45_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 45 Neutral,Mass Actor Segment,Mass Actor,4,15.0,Insufficient Text,Mixed_3plus_Brands,45,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_45_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 45 Positive,Mass Actor Segment,Mass Actor,1,8.0,Promotional / Supportive,Mixed_3plus_Brands,45,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_46_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 46 Mixed,Mass Actor Segment,Mass Actor,47,153.0,Insufficient Text,,46,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_46_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 46 Negative,Mass Actor Segment,Mass Actor,77,115.0,Insufficient Text,,46,Ambiguous Community-Mass Association,Negative
+MASS_HCC_46_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 46 Neutral,Mass Actor Segment,Mass Actor,331,621.0,Insufficient Text,,46,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_46_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 46 Positive,Mass Actor Segment,Mass Actor,118,201.0,Insufficient Text,,46,Ambiguous Community-Mass Association,Positive
+MASS_HCC_46_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 46 Mixed,Mass Actor Segment,Mass Actor,1,13.0,Mixed Goals,The Originote,46,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_46_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 46 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,46,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_46_Shared_Video_Context_Only_Negative,Mass Shared-Video Context Only 46 Negative,Mass Actor Segment,Mass Actor,2,4.0,Critical / Complaint,The Originote,46,Shared-Video Context Only,Negative
+MASS_HCC_46_Shared_Video_Context_Only_Neutral,Mass Shared-Video Context Only 46 Neutral,Mass Actor Segment,Mass Actor,23,31.0,Insufficient Text,The Originote,46,Shared-Video Context Only,Neutral
+MASS_HCC_46_Shared_Video_Context_Only_Positive,Mass Shared-Video Context Only 46 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,46,Shared-Video Context Only,Positive
+MASS_HCC_48_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 48 Mixed,Mass Actor Segment,Mass Actor,126,343.0,Insufficient Text,,48,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_48_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 48 Negative,Mass Actor Segment,Mass Actor,244,335.0,Insufficient Text,,48,Ambiguous Community-Mass Association,Negative
+MASS_HCC_48_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 48 Neutral,Mass Actor Segment,Mass Actor,689,1154.0,Insufficient Text,,48,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_48_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 48 Positive,Mass Actor Segment,Mass Actor,393,565.0,Insufficient Text,,48,Ambiguous Community-Mass Association,Positive
+MASS_HCC_48_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 48 Mixed,Mass Actor Segment,Mass Actor,2,8.0,Insufficient Text,Mixed_3plus_Brands,48,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_48_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 48 Neutral,Mass Actor Segment,Mass Actor,2,2.0,Insufficient Text,Mixed_3plus_Brands,48,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_48_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 48 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,48,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_49_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 49 Mixed,Mass Actor Segment,Mass Actor,58,177.0,Insufficient Text,,49,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_49_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 49 Negative,Mass Actor Segment,Mass Actor,92,146.0,Insufficient Text,,49,Ambiguous Community-Mass Association,Negative
+MASS_HCC_49_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 49 Neutral,Mass Actor Segment,Mass Actor,354,744.0,Insufficient Text,,49,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_49_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 49 Positive,Mass Actor Segment,Mass Actor,98,202.0,Insufficient Text,,49,Ambiguous Community-Mass Association,Positive
+MASS_HCC_49_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 49 Neutral,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,49,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_49_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 49 Positive,Mass Actor Segment,Mass Actor,3,7.0,Insufficient Text,Mixed_3plus_Brands,49,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_49_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 49 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Mixed_3plus_Brands,49,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_50_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 50 Mixed,Mass Actor Segment,Mass Actor,69,214.0,Insufficient Text,,50,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_50_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 50 Negative,Mass Actor Segment,Mass Actor,215,259.0,Insufficient Text,,50,Ambiguous Community-Mass Association,Negative
+MASS_HCC_50_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 50 Neutral,Mass Actor Segment,Mass Actor,546,746.0,Insufficient Text,,50,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_50_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 50 Positive,Mass Actor Segment,Mass Actor,285,375.0,Insufficient Text,,50,Ambiguous Community-Mass Association,Positive
+MASS_HCC_50_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 50 Negative,Mass Actor Segment,Mass Actor,3,3.0,Insufficient Text,Maryame,50,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_50_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 50 Neutral,Mass Actor Segment,Mass Actor,4,5.0,Insufficient Text,Maryame,50,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_50_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 50 Positive,Mass Actor Segment,Mass Actor,2,2.0,Insufficient Text,Maryame,50,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_50_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 50 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Maryame,50,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_50_Verified_Community_Mass_Direct_Interaction_Positive,Mass Verified Community-Mass Direct Interaction 50 Positive,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Maryame,50,Verified Community-Mass Direct Interaction,Positive
+MASS_HCC_52_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 52 Mixed,Mass Actor Segment,Mass Actor,148,379.0,Insufficient Text,,52,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_52_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 52 Negative,Mass Actor Segment,Mass Actor,300,401.0,Insufficient Text,,52,Ambiguous Community-Mass Association,Negative
+MASS_HCC_52_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 52 Neutral,Mass Actor Segment,Mass Actor,880,1426.0,Insufficient Text,,52,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_52_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 52 Positive,Mass Actor Segment,Mass Actor,305,438.0,Insufficient Text,,52,Ambiguous Community-Mass Association,Positive
+MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 52 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Daviena,52,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 52 Negative,Mass Actor Segment,Mass Actor,3,4.0,Insufficient Text,Daviena,52,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 52 Neutral,Mass Actor Segment,Mass Actor,2,2.0,Insufficient Text,Daviena,52,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 52 Positive,Mass Actor Segment,Mass Actor,3,3.0,Insufficient Text,Daviena,52,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_52_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 52 Mixed,Mass Actor Segment,Mass Actor,1,7.0,Mixed Goals,Daviena,52,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_54_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 54 Mixed,Mass Actor Segment,Mass Actor,231,594.0,Insufficient Text,,54,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_54_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 54 Negative,Mass Actor Segment,Mass Actor,508,623.0,Insufficient Text,,54,Ambiguous Community-Mass Association,Negative
+MASS_HCC_54_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 54 Neutral,Mass Actor Segment,Mass Actor,1415,2009.0,Insufficient Text,,54,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_54_Ambiguous_Community_Mass_Association_No_text,Mass Ambiguous Community-Mass Association 54 No text,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,,54,Ambiguous Community-Mass Association,No text
+MASS_HCC_54_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 54 Positive,Mass Actor Segment,Mass Actor,812,1032.0,Insufficient Text,,54,Ambiguous Community-Mass Association,Positive
+MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 54 Mixed,Mass Actor Segment,Mass Actor,16,43.0,Insufficient Text,Azarine,54,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 54 Negative,Mass Actor Segment,Mass Actor,17,32.0,Insufficient Text,Azarine,54,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 54 Neutral,Mass Actor Segment,Mass Actor,26,50.0,Insufficient Text,Azarine,54,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_54_Observed_Community_Mass_Temporal_Association_No_text,Mass Observed Community-Mass Temporal Association 54 No text,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Azarine,54,Observed Community-Mass Temporal Association,No text
+MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 54 Positive,Mass Actor Segment,Mass Actor,28,40.0,Insufficient Text,Azarine,54,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_54_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 54 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Azarine,54,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_54_Verified_Community_Mass_Direct_Interaction_Neutral,Mass Verified Community-Mass Direct Interaction 54 Neutral,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Azarine,54,Verified Community-Mass Direct Interaction,Neutral
+MASS_HCC_54_Verified_Community_Mass_Direct_Interaction_Positive,Mass Verified Community-Mass Direct Interaction 54 Positive,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Azarine,54,Verified Community-Mass Direct Interaction,Positive
+MASS_HCC_5_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 5 Mixed,Mass Actor Segment,Mass Actor,129,388.0,Insufficient Text,,5,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_5_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 5 Negative,Mass Actor Segment,Mass Actor,197,284.0,Insufficient Text,,5,Ambiguous Community-Mass Association,Negative
+MASS_HCC_5_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 5 Neutral,Mass Actor Segment,Mass Actor,805,1265.0,Insufficient Text,,5,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_5_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 5 Positive,Mass Actor Segment,Mass Actor,287,463.0,Insufficient Text,,5,Ambiguous Community-Mass Association,Positive
+MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 5 Mixed,Mass Actor Segment,Mass Actor,4,10.0,Insufficient Text,The Originote,5,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 5 Negative,Mass Actor Segment,Mass Actor,5,11.0,Insufficient Text,The Originote,5,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 5 Neutral,Mass Actor Segment,Mass Actor,5,13.0,Insufficient Text,The Originote,5,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 5 Positive,Mass Actor Segment,Mass Actor,4,10.0,Insufficient Text,The Originote,5,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_5_Shared_Video_Context_Only_Mixed,Mass Shared-Video Context Only 5 Mixed,Mass Actor Segment,Mass Actor,6,16.0,Mixed Goals,The Originote,5,Shared-Video Context Only,Mixed
+MASS_HCC_5_Shared_Video_Context_Only_Negative,Mass Shared-Video Context Only 5 Negative,Mass Actor Segment,Mass Actor,21,23.0,Insufficient Text,The Originote,5,Shared-Video Context Only,Negative
+MASS_HCC_5_Shared_Video_Context_Only_Neutral,Mass Shared-Video Context Only 5 Neutral,Mass Actor Segment,Mass Actor,39,43.0,Insufficient Text,The Originote,5,Shared-Video Context Only,Neutral
+MASS_HCC_5_Shared_Video_Context_Only_Positive,Mass Shared-Video Context Only 5 Positive,Mass Actor Segment,Mass Actor,11,11.0,Insufficient Text,The Originote,5,Shared-Video Context Only,Positive
+MASS_HCC_60_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 60 Mixed,Mass Actor Segment,Mass Actor,70,192.0,Insufficient Text,,60,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_60_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 60 Negative,Mass Actor Segment,Mass Actor,109,155.0,Insufficient Text,,60,Ambiguous Community-Mass Association,Negative
+MASS_HCC_60_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 60 Neutral,Mass Actor Segment,Mass Actor,307,500.0,Insufficient Text,,60,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_60_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 60 Positive,Mass Actor Segment,Mass Actor,118,198.0,Insufficient Text,,60,Ambiguous Community-Mass Association,Positive
+MASS_HCC_63_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 63 Mixed,Mass Actor Segment,Mass Actor,209,599.0,Insufficient Text,,63,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_63_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 63 Negative,Mass Actor Segment,Mass Actor,471,671.0,Insufficient Text,,63,Ambiguous Community-Mass Association,Negative
+MASS_HCC_63_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 63 Neutral,Mass Actor Segment,Mass Actor,1412,2280.0,Insufficient Text,,63,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_63_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 63 Positive,Mass Actor Segment,Mass Actor,851,1111.0,Insufficient Text,,63,Ambiguous Community-Mass Association,Positive
+MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 63 Mixed,Mass Actor Segment,Mass Actor,2,4.0,Insufficient Text,Mixed_3plus_Brands,63,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 63 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,63,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 63 Neutral,Mass Actor Segment,Mass Actor,8,14.0,Insufficient Text,Mixed_3plus_Brands,63,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 63 Positive,Mass Actor Segment,Mass Actor,3,7.0,Insufficient Text,Mixed_3plus_Brands,63,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_63_Verified_Community_Mass_Direct_Interaction_Positive,Mass Verified Community-Mass Direct Interaction 63 Positive,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Mixed_3plus_Brands,63,Verified Community-Mass Direct Interaction,Positive
+MASS_HCC_74_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 74 Mixed,Mass Actor Segment,Mass Actor,69,199.0,Insufficient Text,,74,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_74_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 74 Negative,Mass Actor Segment,Mass Actor,163,234.0,Insufficient Text,,74,Ambiguous Community-Mass Association,Negative
+MASS_HCC_74_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 74 Neutral,Mass Actor Segment,Mass Actor,368,720.0,Insufficient Text,,74,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_74_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 74 Positive,Mass Actor Segment,Mass Actor,176,255.0,Insufficient Text,,74,Ambiguous Community-Mass Association,Positive
+MASS_HCC_74_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 74 Neutral,Mass Actor Segment,Mass Actor,2,5.0,Insufficient Text,Daviena,74,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_74_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 74 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Daviena,74,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_75_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 75 Mixed,Mass Actor Segment,Mass Actor,131,316.0,Insufficient Text,,75,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_75_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 75 Negative,Mass Actor Segment,Mass Actor,559,630.0,Insufficient Text,,75,Ambiguous Community-Mass Association,Negative
+MASS_HCC_75_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 75 Neutral,Mass Actor Segment,Mass Actor,5150,5461.0,Insufficient Text,,75,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_75_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 75 Positive,Mass Actor Segment,Mass Actor,1483,1577.0,Insufficient Text,,75,Ambiguous Community-Mass Association,Positive
+MASS_HCC_75_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 75 Negative,Mass Actor Segment,Mass Actor,4,5.0,Insufficient Text,Mixed_2_Brands,75,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_75_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 75 Neutral,Mass Actor Segment,Mass Actor,37,49.0,Insufficient Text,Mixed_2_Brands,75,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_75_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 75 Positive,Mass Actor Segment,Mass Actor,14,15.0,Insufficient Text,Mixed_2_Brands,75,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_87_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 87 Mixed,Mass Actor Segment,Mass Actor,189,476.0,Insufficient Text,,87,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_87_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 87 Negative,Mass Actor Segment,Mass Actor,705,826.0,Insufficient Text,,87,Ambiguous Community-Mass Association,Negative
+MASS_HCC_87_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 87 Neutral,Mass Actor Segment,Mass Actor,1665,2111.0,Insufficient Text,,87,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_87_Ambiguous_Community_Mass_Association_No_text,Mass Ambiguous Community-Mass Association 87 No text,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,,87,Ambiguous Community-Mass Association,No text
+MASS_HCC_87_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 87 Positive,Mass Actor Segment,Mass Actor,905,1070.0,Insufficient Text,,87,Ambiguous Community-Mass Association,Positive
+MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Mixed,Mass Observed Community-Mass Temporal Association 87 Mixed,Mass Actor Segment,Mass Actor,18,40.0,Insufficient Text,Mixed_2_Brands,87,Observed Community-Mass Temporal Association,Mixed
+MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 87 Negative,Mass Actor Segment,Mass Actor,18,28.0,Insufficient Text,Mixed_2_Brands,87,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 87 Neutral,Mass Actor Segment,Mass Actor,31,49.0,Insufficient Text,Mixed_2_Brands,87,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 87 Positive,Mass Actor Segment,Mass Actor,53,62.0,Insufficient Text,Mixed_2_Brands,87,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_90_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 90 Mixed,Mass Actor Segment,Mass Actor,69,176.0,Insufficient Text,,90,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_90_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 90 Negative,Mass Actor Segment,Mass Actor,266,305.0,Insufficient Text,,90,Ambiguous Community-Mass Association,Negative
+MASS_HCC_90_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 90 Neutral,Mass Actor Segment,Mass Actor,786,1020.0,Insufficient Text,,90,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_90_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 90 Positive,Mass Actor Segment,Mass Actor,365,424.0,Insufficient Text,,90,Ambiguous Community-Mass Association,Positive
+MASS_HCC_90_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 90 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,90,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_90_Observed_Community_Mass_Temporal_Association_Neutral,Mass Observed Community-Mass Temporal Association 90 Neutral,Mass Actor Segment,Mass Actor,5,5.0,Insufficient Text,Mixed_3plus_Brands,90,Observed Community-Mass Temporal Association,Neutral
+MASS_HCC_90_Observed_Community_Mass_Temporal_Association_Positive,Mass Observed Community-Mass Temporal Association 90 Positive,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,Mixed_3plus_Brands,90,Observed Community-Mass Temporal Association,Positive
+MASS_HCC_90_Verified_Community_Mass_Direct_Interaction_Mixed,Mass Verified Community-Mass Direct Interaction 90 Mixed,Mass Actor Segment,Mass Actor,1,2.0,Insufficient Text,Mixed_3plus_Brands,90,Verified Community-Mass Direct Interaction,Mixed
+MASS_HCC_99_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association 99 Mixed,Mass Actor Segment,Mass Actor,72,211.0,Insufficient Text,,99,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_99_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association 99 Negative,Mass Actor Segment,Mass Actor,189,229.0,Insufficient Text,,99,Ambiguous Community-Mass Association,Negative
+MASS_HCC_99_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association 99 Neutral,Mass Actor Segment,Mass Actor,706,1023.0,Insufficient Text,,99,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_99_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association 99 Positive,Mass Actor Segment,Mass Actor,327,431.0,Insufficient Text,,99,Ambiguous Community-Mass Association,Positive
+MASS_HCC_99_Observed_Community_Mass_Temporal_Association_Negative,Mass Observed Community-Mass Temporal Association 99 Negative,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,The Originote,99,Observed Community-Mass Temporal Association,Negative
+MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Mixed,Mass Ambiguous Community-Mass Association Non-HCC Mixed,Mass Actor Segment,Mass Actor,557,1334.0,Insufficient Text,,Non-HCC,Ambiguous Community-Mass Association,Mixed
+MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Negative,Mass Ambiguous Community-Mass Association Non-HCC Negative,Mass Actor Segment,Mass Actor,1051,1512.0,Insufficient Text,,Non-HCC,Ambiguous Community-Mass Association,Negative
+MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Neutral,Mass Ambiguous Community-Mass Association Non-HCC Neutral,Mass Actor Segment,Mass Actor,2131,3608.0,Insufficient Text,,Non-HCC,Ambiguous Community-Mass Association,Neutral
+MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_No_text,Mass Ambiguous Community-Mass Association Non-HCC No text,Mass Actor Segment,Mass Actor,1,1.0,Insufficient Text,,Non-HCC,Ambiguous Community-Mass Association,No text
+MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Positive,Mass Ambiguous Community-Mass Association Non-HCC Positive,Mass Actor Segment,Mass Actor,813,1160.0,Insufficient Text,,Non-HCC,Ambiguous Community-Mass Association,Positive

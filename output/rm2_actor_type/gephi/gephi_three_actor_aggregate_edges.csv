@@ -1,254 +1,503 @@
-source,target,edge_type,weight,shared_video_count,direct_interaction_count
-HCC_1,MASS_HCC_1_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,105,164,0
-HCC_1,MASS_HCC_1_Shared_Video_Exposure_Negative,Observed Community-Mass Association,443,457,0
-HCC_1,MASS_HCC_1_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,987,1053,0
-HCC_1,MASS_HCC_1_Shared_Video_Exposure_Positive,Observed Community-Mass Association,529,563,0
-HCC_1,MASS_HCC_1_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,2,2,0
-HCC_1,MASS_HCC_1_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,2,0
-HCC_1,MASS_HCC_1_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,6,6,0
-HCC_1,MASS_HCC_1_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_103,MASS_HCC_103_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_103,MASS_HCC_103_Direct_Interaction_Neutral,Observed Community-Mass Association,1,2,2
-HCC_103,MASS_HCC_103_Direct_Interaction_Positive,Observed Community-Mass Association,2,4,4
-HCC_103,MASS_HCC_103_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,4,10,0
-HCC_103,MASS_HCC_103_Shared_Video_Exposure_Negative,Observed Community-Mass Association,3,12,0
-HCC_103,MASS_HCC_103_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,11,31,0
-HCC_103,MASS_HCC_103_Shared_Video_Exposure_Positive,Observed Community-Mass Association,2,8,0
-HCC_103,MASS_HCC_103_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,6,10,0
-HCC_103,MASS_HCC_103_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,10,10,0
-HCC_103,MASS_HCC_103_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,36,40,0
-HCC_103,MASS_HCC_103_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,14,18,0
-HCC_113,MASS_HCC_113_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,1,2,0
-HCC_113,MASS_HCC_113_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,2,4,0
-HCC_113,MASS_HCC_113_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,4,4,0
-HCC_113,MASS_HCC_113_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,6,0
-HCC_114,MASS_HCC_114_Shared_Video_Exposure_Negative,Observed Community-Mass Association,2,4,0
-HCC_114,MASS_HCC_114_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,1,2,0
-HCC_117,MASS_HCC_117_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_117,MASS_HCC_117_Shared_Video_Exposure_Negative,Observed Community-Mass Association,1,4,0
-HCC_117,MASS_HCC_117_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,1,4,0
-HCC_117,MASS_HCC_117_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,1,3,0
-HCC_117,MASS_HCC_117_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,2,2,0
-HCC_132,MASS_HCC_132_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_132,MASS_HCC_132_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,3,13,0
-HCC_132,MASS_HCC_132_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_134,MASS_HCC_134_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,4,8,0
-HCC_134,MASS_HCC_134_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,7,16,0
-HCC_134,MASS_HCC_134_Shared_Video_Exposure_Positive,Observed Community-Mass Association,2,4,0
-HCC_134,MASS_HCC_134_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,1,2,0
-HCC_134,MASS_HCC_134_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,2,2,0
-HCC_134,MASS_HCC_134_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,14,15,0
-HCC_134,MASS_HCC_134_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,2,2,0
-HCC_14,MASS_HCC_14_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,236,297,0
-HCC_14,MASS_HCC_14_Shared_Video_Exposure_Negative,Observed Community-Mass Association,2498,2511,0
-HCC_14,MASS_HCC_14_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,5473,5508,0
-HCC_14,MASS_HCC_14_Shared_Video_Exposure_Positive,Observed Community-Mass Association,2344,2359,0
-HCC_14,MASS_HCC_14_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,8,11,0
-HCC_14,MASS_HCC_14_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,41,41,0
-HCC_14,MASS_HCC_14_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,288,290,0
-HCC_14,MASS_HCC_14_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,88,92,0
-HCC_15,MASS_HCC_15_Direct_Interaction_Neutral,Observed Community-Mass Association,1,2,2
-HCC_15,MASS_HCC_15_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,30,38,0
-HCC_15,MASS_HCC_15_Shared_Video_Exposure_Negative,Observed Community-Mass Association,148,151,0
-HCC_15,MASS_HCC_15_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,289,299,0
-HCC_15,MASS_HCC_15_Shared_Video_Exposure_Positive,Observed Community-Mass Association,141,142,0
-HCC_15,MASS_HCC_15_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_15,MASS_HCC_15_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,1,1,0
-HCC_15,MASS_HCC_15_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_150,MASS_HCC_150_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_150,MASS_HCC_150_Direct_Interaction_Positive,Observed Community-Mass Association,2,4,4
-HCC_150,MASS_HCC_150_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,10,26,0
-HCC_150,MASS_HCC_150_Shared_Video_Exposure_Negative,Observed Community-Mass Association,9,21,0
-HCC_150,MASS_HCC_150_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,19,62,0
-HCC_150,MASS_HCC_150_Shared_Video_Exposure_Positive,Observed Community-Mass Association,5,16,0
-HCC_150,MASS_HCC_150_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,13,15,0
-HCC_150,MASS_HCC_150_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,49,49,0
-HCC_150,MASS_HCC_150_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,537,539,0
-HCC_150,MASS_HCC_150_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,145,150,0
-HCC_16,MASS_HCC_16_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,40,53,0
-HCC_16,MASS_HCC_16_Shared_Video_Exposure_Negative,Observed Community-Mass Association,154,156,0
-HCC_16,MASS_HCC_16_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,576,600,0
-HCC_16,MASS_HCC_16_Shared_Video_Exposure_Positive,Observed Community-Mass Association,278,289,0
-HCC_16,MASS_HCC_16_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,2,2,0
-HCC_16,MASS_HCC_16_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,10,10,0
-HCC_16,MASS_HCC_16_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,5,8,0
-HCC_16,MASS_HCC_16_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,4,4,0
-HCC_17,MASS_HCC_17_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_17,MASS_HCC_17_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,87,136,0
-HCC_17,MASS_HCC_17_Shared_Video_Exposure_Negative,Observed Community-Mass Association,240,256,0
-HCC_17,MASS_HCC_17_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,900,957,0
-HCC_17,MASS_HCC_17_Shared_Video_Exposure_Positive,Observed Community-Mass Association,385,416,0
-HCC_17,MASS_HCC_17_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,1,2,0
-HCC_17,MASS_HCC_17_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_17,MASS_HCC_17_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,2,2,0
-HCC_17,MASS_HCC_17_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,4,5,0
-HCC_18,MASS_HCC_18_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_18,MASS_HCC_18_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,15,18,0
-HCC_18,MASS_HCC_18_Shared_Video_Exposure_Negative,Observed Community-Mass Association,67,69,0
-HCC_18,MASS_HCC_18_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,122,126,0
-HCC_18,MASS_HCC_18_Shared_Video_Exposure_Positive,Observed Community-Mass Association,259,260,0
-HCC_18,MASS_HCC_18_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_18,MASS_HCC_18_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_180,MASS_HCC_180_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,1,2,0
-HCC_180,MASS_HCC_180_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,3,5,0
-HCC_180,MASS_HCC_180_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,3,3,0
-HCC_181,MASS_HCC_181_Shared_Video_Exposure_Negative,Observed Community-Mass Association,1,4,0
-HCC_181,MASS_HCC_181_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,5,18,0
-HCC_182,MASS_HCC_182_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_182,MASS_HCC_182_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_182,MASS_HCC_182_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,1,1,0
-HCC_183,MASS_HCC_183_Direct_Interaction_Mixed,Observed Community-Mass Association,3,6,6
-HCC_183,MASS_HCC_183_Direct_Interaction_Positive,Observed Community-Mass Association,1,2,2
-HCC_183,MASS_HCC_183_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,2,2,0
-HCC_183,MASS_HCC_183_Shared_Video_Exposure_Negative,Observed Community-Mass Association,27,27,0
-HCC_183,MASS_HCC_183_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,79,79,0
-HCC_183,MASS_HCC_183_Shared_Video_Exposure_Positive,Observed Community-Mass Association,32,32,0
-HCC_183,MASS_HCC_183_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,1,1,0
-HCC_183,MASS_HCC_183_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,4,5,0
-HCC_183,MASS_HCC_183_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_191,MASS_HCC_191_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,3,0
-HCC_2,MASS_HCC_2_Direct_Interaction_Neutral,Observed Community-Mass Association,1,2,2
-HCC_2,MASS_HCC_2_Direct_Interaction_Positive,Observed Community-Mass Association,1,2,2
-HCC_2,MASS_HCC_2_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,31,52,0
-HCC_2,MASS_HCC_2_Shared_Video_Exposure_Negative,Observed Community-Mass Association,118,125,0
-HCC_2,MASS_HCC_2_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,250,278,0
-HCC_2,MASS_HCC_2_Shared_Video_Exposure_Positive,Observed Community-Mass Association,109,115,0
-HCC_2,MASS_HCC_2_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,3,3,0
-HCC_20,MASS_HCC_20_Direct_Interaction_Neutral,Observed Community-Mass Association,1,4,4
-HCC_20,MASS_HCC_20_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,48,88,0
-HCC_20,MASS_HCC_20_Shared_Video_Exposure_Negative,Observed Community-Mass Association,382,392,0
-HCC_20,MASS_HCC_20_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,812,842,0
-HCC_20,MASS_HCC_20_Shared_Video_Exposure_Positive,Observed Community-Mass Association,682,707,0
-HCC_20,MASS_HCC_20_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,13,13,0
-HCC_20,MASS_HCC_20_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,6,9,0
-HCC_20,MASS_HCC_20_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,8,8,0
-HCC_205,MASS_HCC_205_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,2,6,0
-HCC_205,MASS_HCC_205_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,1,1,0
-HCC_206,MASS_HCC_206_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,1,2,0
-HCC_206,MASS_HCC_206_Shared_Video_Exposure_Negative,Observed Community-Mass Association,1,2,0
-HCC_206,MASS_HCC_206_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,1,3,0
-HCC_3,MASS_HCC_3_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,9,13,0
-HCC_3,MASS_HCC_3_Shared_Video_Exposure_Negative,Observed Community-Mass Association,15,16,0
-HCC_3,MASS_HCC_3_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,103,103,0
-HCC_3,MASS_HCC_3_Shared_Video_Exposure_Positive,Observed Community-Mass Association,12,12,0
-HCC_3,MASS_HCC_3_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,1,2,0
-HCC_3,MASS_HCC_3_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_3,MASS_HCC_3_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,1,8,0
-HCC_3,MASS_HCC_3_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,2,4,0
-HCC_34,MASS_HCC_34_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,11,18,0
-HCC_34,MASS_HCC_34_Shared_Video_Exposure_Negative,Observed Community-Mass Association,31,36,0
-HCC_34,MASS_HCC_34_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,77,82,0
-HCC_34,MASS_HCC_34_Shared_Video_Exposure_Positive,Observed Community-Mass Association,34,38,0
-HCC_34,MASS_HCC_34_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,24,33,0
-HCC_34,MASS_HCC_34_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,158,162,0
-HCC_34,MASS_HCC_34_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,233,235,0
-HCC_34,MASS_HCC_34_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,107,107,0
-HCC_42,MASS_HCC_42_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,9,19,0
-HCC_42,MASS_HCC_42_Shared_Video_Exposure_Negative,Observed Community-Mass Association,27,27,0
-HCC_42,MASS_HCC_42_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,109,140,0
-HCC_42,MASS_HCC_42_Shared_Video_Exposure_Positive,Observed Community-Mass Association,25,28,0
-HCC_42,MASS_HCC_42_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,1,1,0
-HCC_42,MASS_HCC_42_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,3,3,0
-HCC_45,MASS_HCC_45_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,41,64,0
-HCC_45,MASS_HCC_45_Shared_Video_Exposure_Negative,Observed Community-Mass Association,246,253,0
-HCC_45,MASS_HCC_45_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,483,525,0
-HCC_45,MASS_HCC_45_Shared_Video_Exposure_Positive,Observed Community-Mass Association,353,367,0
-HCC_45,MASS_HCC_45_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_45,MASS_HCC_45_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,5,16,0
-HCC_45,MASS_HCC_45_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,8,0
-HCC_46,MASS_HCC_46_Shared_Video_Exposure_Negative,Observed Community-Mass Association,2,2,0
-HCC_46,MASS_HCC_46_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,24,24,0
-HCC_46,MASS_HCC_46_Shared_Video_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_46,MASS_HCC_46_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,2,2,0
-HCC_46,MASS_HCC_46_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,2,2,0
-HCC_46,MASS_HCC_46_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_48,MASS_HCC_48_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,3,6,0
-HCC_48,MASS_HCC_48_Shared_Video_Exposure_Negative,Observed Community-Mass Association,6,8,0
-HCC_48,MASS_HCC_48_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,17,20,0
-HCC_48,MASS_HCC_48_Shared_Video_Exposure_Positive,Observed Community-Mass Association,5,8,0
-HCC_48,MASS_HCC_48_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,2,7,0
-HCC_48,MASS_HCC_48_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,2,2,0
-HCC_48,MASS_HCC_48_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_49,MASS_HCC_49_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_49,MASS_HCC_49_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,6,11,0
-HCC_49,MASS_HCC_49_Shared_Video_Exposure_Negative,Observed Community-Mass Association,17,21,0
-HCC_49,MASS_HCC_49_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,39,44,0
-HCC_49,MASS_HCC_49_Shared_Video_Exposure_Positive,Observed Community-Mass Association,13,17,0
-HCC_49,MASS_HCC_49_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,2,2,0
-HCC_49,MASS_HCC_49_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,3,7,0
-HCC_5,MASS_HCC_5_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,103,211,0
-HCC_5,MASS_HCC_5_Shared_Video_Exposure_Negative,Observed Community-Mass Association,194,221,0
-HCC_5,MASS_HCC_5_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,721,910,0
-HCC_5,MASS_HCC_5_Shared_Video_Exposure_Positive,Observed Community-Mass Association,263,327,0
-HCC_5,MASS_HCC_5_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,4,10,0
-HCC_5,MASS_HCC_5_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,5,11,0
-HCC_5,MASS_HCC_5_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,7,15,0
-HCC_5,MASS_HCC_5_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,4,10,0
-HCC_50,MASS_HCC_50_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_50,MASS_HCC_50_Direct_Interaction_Positive,Observed Community-Mass Association,1,2,2
-HCC_50,MASS_HCC_50_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,22,24,0
-HCC_50,MASS_HCC_50_Shared_Video_Exposure_Negative,Observed Community-Mass Association,145,145,0
-HCC_50,MASS_HCC_50_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,389,389,0
-HCC_50,MASS_HCC_50_Shared_Video_Exposure_Positive,Observed Community-Mass Association,226,226,0
-HCC_50,MASS_HCC_50_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,3,3,0
-HCC_50,MASS_HCC_50_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,4,5,0
-HCC_50,MASS_HCC_50_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,2,2,0
-HCC_52,MASS_HCC_52_Direct_Interaction_Mixed,Observed Community-Mass Association,1,7,7
-HCC_52,MASS_HCC_52_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,25,44,0
-HCC_52,MASS_HCC_52_Shared_Video_Exposure_Negative,Observed Community-Mass Association,54,55,0
-HCC_52,MASS_HCC_52_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,114,133,0
-HCC_52,MASS_HCC_52_Shared_Video_Exposure_Positive,Observed Community-Mass Association,62,65,0
-HCC_52,MASS_HCC_52_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,3,7,0
-HCC_52,MASS_HCC_52_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,3,3,0
-HCC_52,MASS_HCC_52_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,2,2,0
-HCC_52,MASS_HCC_52_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,3,3,0
-HCC_54,MASS_HCC_54_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_54,MASS_HCC_54_Direct_Interaction_Neutral,Observed Community-Mass Association,1,2,2
-HCC_54,MASS_HCC_54_Direct_Interaction_Positive,Observed Community-Mass Association,1,2,2
-HCC_54,MASS_HCC_54_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,23,28,0
-HCC_54,MASS_HCC_54_Shared_Video_Exposure_Negative,Observed Community-Mass Association,154,154,0
-HCC_54,MASS_HCC_54_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,143,193,0
-HCC_54,MASS_HCC_54_Shared_Video_Exposure_Positive,Observed Community-Mass Association,213,221,0
-HCC_54,MASS_HCC_54_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,17,36,0
-HCC_54,MASS_HCC_54_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,17,23,0
-HCC_54,MASS_HCC_54_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,26,40,0
-HCC_54,MASS_HCC_54_Temporal_Context_Exposure_No_text,Observed Community-Mass Association,1,1,0
-HCC_54,MASS_HCC_54_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,29,41,0
-HCC_60,MASS_HCC_60_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,4,4,0
-HCC_60,MASS_HCC_60_Shared_Video_Exposure_Negative,Observed Community-Mass Association,7,7,0
-HCC_60,MASS_HCC_60_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,84,84,0
-HCC_60,MASS_HCC_60_Shared_Video_Exposure_Positive,Observed Community-Mass Association,3,3,0
-HCC_63,MASS_HCC_63_Direct_Interaction_Positive,Observed Community-Mass Association,1,2,2
-HCC_63,MASS_HCC_63_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,19,44,0
-HCC_63,MASS_HCC_63_Shared_Video_Exposure_Negative,Observed Community-Mass Association,25,53,0
-HCC_63,MASS_HCC_63_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,115,241,0
-HCC_63,MASS_HCC_63_Shared_Video_Exposure_Positive,Observed Community-Mass Association,35,84,0
-HCC_63,MASS_HCC_63_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,2,2,0
-HCC_63,MASS_HCC_63_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_63,MASS_HCC_63_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,9,14,0
-HCC_63,MASS_HCC_63_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,3,7,0
-HCC_74,MASS_HCC_74_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,1,2,0
-HCC_74,MASS_HCC_74_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,2,3,0
-HCC_74,MASS_HCC_74_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_75,MASS_HCC_75_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,1,3,0
-HCC_75,MASS_HCC_75_Shared_Video_Exposure_Negative,Observed Community-Mass Association,1,3,0
-HCC_75,MASS_HCC_75_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,4,4,0
-HCC_75,MASS_HCC_75_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,37,46,0
-HCC_75,MASS_HCC_75_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,14,14,0
-HCC_87,MASS_HCC_87_Shared_Video_Exposure_Mixed,Observed Community-Mass Association,1,7,0
-HCC_87,MASS_HCC_87_Shared_Video_Exposure_Negative,Observed Community-Mass Association,1,7,0
-HCC_87,MASS_HCC_87_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,2,6,0
-HCC_87,MASS_HCC_87_Shared_Video_Exposure_Positive,Observed Community-Mass Association,1,4,0
-HCC_87,MASS_HCC_87_Temporal_Context_Exposure_Mixed,Observed Community-Mass Association,21,42,0
-HCC_87,MASS_HCC_87_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,29,38,0
-HCC_87,MASS_HCC_87_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,42,64,0
-HCC_87,MASS_HCC_87_Temporal_Context_Exposure_No_text,Observed Community-Mass Association,1,1,0
-HCC_87,MASS_HCC_87_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,76,88,0
-HCC_90,MASS_HCC_90_Direct_Interaction_Mixed,Observed Community-Mass Association,1,2,2
-HCC_90,MASS_HCC_90_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,1,3,0
-HCC_90,MASS_HCC_90_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_90,MASS_HCC_90_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,5,5,0
-HCC_90,MASS_HCC_90_Temporal_Context_Exposure_Positive,Observed Community-Mass Association,1,1,0
-HCC_99,MASS_HCC_99_Shared_Video_Exposure_Neutral,Observed Community-Mass Association,1,3,0
-HCC_99,MASS_HCC_99_Temporal_Context_Exposure_Negative,Observed Community-Mass Association,1,1,0
-HCC_99,MASS_HCC_99_Temporal_Context_Exposure_Neutral,Observed Community-Mass Association,3,6,0
+source,target,edge_type,is_ambiguous_association,weight,raw_account_count,fractional_account_weight,shared_video_count,verified_direct_interaction_count,temporal_mass_comment_count,temporal_pair_count,hcc_account_count,hcc_comment_count
+HCC_1,MASS_HCC_1_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,23.486747622227163,141,23.486747622227163,0.0,0,0,0,0.0,0.0
+HCC_1,MASS_HCC_1_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,116.08949640830446,471,116.08949640830446,0.0,0,0,0,0.0,0.0
+HCC_1,MASS_HCC_1_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,255.66897701541663,1069,255.66897701541663,0.0,0,0,0,0.0,0.0
+HCC_1,MASS_HCC_1_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,140.0236123955164,558,140.0236123955164,0.0,0,0,0,0.0,0.0
+HCC_1,MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,3,9,0.0,0.0
+HCC_1,MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,3,0.0,0.0
+HCC_1,MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,8,0.0,0.0
+HCC_1,MASS_HCC_1_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_103,MASS_HCC_103_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,18.27209459958686,134,18.27209459958686,0.0,0,0,0,0.0,0.0
+HCC_103,MASS_HCC_103_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,51.33703508393911,237,51.33703508393911,0.0,0,0,0,0.0,0.0
+HCC_103,MASS_HCC_103_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,193.07281062161093,953,193.07281062161093,0.0,0,0,0,0.0,0.0
+HCC_103,MASS_HCC_103_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,73.70482593172221,341,73.70482593172221,0.0,0,0,0,0.0,0.0
+HCC_103,MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,5.0,5,5.0,0.0,0,5,5,0.0,0.0
+HCC_103,MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,10.0,10,10.0,0.0,0,11,11,0.0,0.0
+HCC_103,MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,36.0,36,36.0,0.0,0,38,38,0.0,0.0
+HCC_103,MASS_HCC_103_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,14.0,14,14.0,0.0,0,14,14,0.0,0.0
+HCC_103,MASS_HCC_103_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_103,MASS_HCC_103_Verified_Community_Mass_Direct_Interaction_Neutral,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_103,MASS_HCC_103_Verified_Community_Mass_Direct_Interaction_Positive,Verified Community-Mass Direct Interaction,False,2.0,2,2.0,0.0,4,0,0,0.0,0.0
+HCC_113,MASS_HCC_113_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,10.433905916289481,75,10.433905916289481,0.0,0,0,0,0.0,0.0
+HCC_113,MASS_HCC_113_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,43.85300522490925,202,43.85300522490925,0.0,0,0,0,0.0,0.0
+HCC_113,MASS_HCC_113_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,78.83858492298894,377,78.83858492298894,0.0,0,0,0,0.0,0.0
+HCC_113,MASS_HCC_113_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,41.69369231559634,184,41.69369231559634,0.0,0,0,0,0.0,0.0
+HCC_113,MASS_HCC_113_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,4,34,0.0,0.0
+HCC_113,MASS_HCC_113_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,11,0.0,0.0
+HCC_114,MASS_HCC_114_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,8.55425032483856,49,8.55425032483856,0.0,0,0,0,0.0,0.0
+HCC_114,MASS_HCC_114_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,28.87694615326194,119,28.87694615326194,0.0,0,0,0,0.0,0.0
+HCC_114,MASS_HCC_114_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,61.56857052046681,284,61.56857052046681,0.0,0,0,0,0.0,0.0
+HCC_114,MASS_HCC_114_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,39.76952579584158,156,39.76952579584158,0.0,0,0,0,0.0,0.0
+HCC_117,MASS_HCC_117_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,5.271176759257255,41,5.271176759257255,0.0,0,0,0,0.0,0.0
+HCC_117,MASS_HCC_117_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,10.068658139246375,55,10.068658139246375,0.0,0,0,0,0.0,0.0
+HCC_117,MASS_HCC_117_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,47.592654971447544,260,47.592654971447544,0.0,0,0,0,0.0,0.0
+HCC_117,MASS_HCC_117_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,15.226188006180266,83,15.226188006180266,0.0,0,0,0,0.0,0.0
+HCC_117,MASS_HCC_117_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,3,0.0,0.0
+HCC_117,MASS_HCC_117_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,6,0.0,0.0
+HCC_117,MASS_HCC_117_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_132,MASS_HCC_132_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,9.61314312622362,67,9.61314312622362,0.0,0,0,0,0.0,0.0
+HCC_132,MASS_HCC_132_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,27.857175177763413,82,27.857175177763413,0.0,0,0,0,0.0,0.0
+HCC_132,MASS_HCC_132_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,102.74584124595735,364,102.74584124595735,0.0,0,0,0,0.0,0.0
+HCC_132,MASS_HCC_132_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,35.12980244729471,104,35.12980244729471,0.0,0,0,0,0.0,0.0
+HCC_132,MASS_HCC_132_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,4,0.0,0.0
+HCC_132,MASS_HCC_132_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,7,0.0,0.0
+HCC_132,MASS_HCC_132_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,4,0.0,0.0
+HCC_134,MASS_HCC_134_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,29.241632109720346,202,29.241632109720346,0.0,0,0,0,0.0,0.0
+HCC_134,MASS_HCC_134_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,139.3396954352837,743,139.3396954352837,0.0,0,0,0,0.0,0.0
+HCC_134,MASS_HCC_134_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,1111.1844850153286,5696,1111.1844850153286,0.0,0,0,0,0.0,0.0
+HCC_134,MASS_HCC_134_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,340.10503734311783,1732,340.10503734311783,0.0,0,0,0,0.0,0.0
+HCC_134,MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,2,2,0.0,0.0
+HCC_134,MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,2,0.0,0.0
+HCC_134,MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,14.0,14,14.0,0.0,0,15,15,0.0,0.0
+HCC_134,MASS_HCC_134_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,2,0.0,0.0
+HCC_14,MASS_HCC_14_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,60.47912923162149,308,60.47912923162149,0.0,0,8,22,0.0,0.0
+HCC_14,MASS_HCC_14_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,757.3072519585677,2589,757.3072519585677,0.0,0,21,60,0.0,0.0
+HCC_14,MASS_HCC_14_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,1222.0192480464152,5855,1222.0192480464152,0.0,0,247,706,0.0,0.0
+HCC_14,MASS_HCC_14_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,608.4866253629411,2502,608.4866253629411,0.0,0,78,216,0.0,0.0
+HCC_14,MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,3,7,0.0,0.0
+HCC_14,MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,21.0,21,21.0,0.0,0,23,63,0.0,0.0
+HCC_14,MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,57.0,57,57.0,0.0,0,58,170,0.0,0.0
+HCC_14,MASS_HCC_14_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,18.0,18,18.0,0.0,0,18,53,0.0,0.0
+HCC_15,MASS_HCC_15_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,11.347344438551533,83,11.347344438551533,0.0,0,0,0,0.0,0.0
+HCC_15,MASS_HCC_15_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,36.42986082544906,212,36.42986082544906,0.0,0,0,0,0.0,0.0
+HCC_15,MASS_HCC_15_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,86.85619586381969,519,86.85619586381969,0.0,0,0,0,0.0,0.0
+HCC_15,MASS_HCC_15_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,39.73622062062464,213,39.73622062062464,0.0,0,0,0,0.0,0.0
+HCC_15,MASS_HCC_15_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,4,0.0,0.0
+HCC_15,MASS_HCC_15_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,2,0.0,0.0
+HCC_15,MASS_HCC_15_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,6,0.0,0.0
+HCC_15,MASS_HCC_15_Verified_Community_Mass_Direct_Interaction_Neutral,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_150,MASS_HCC_150_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,45.32095278582861,274,45.32095278582861,0.0,0,3,6,0.0,0.0
+HCC_150,MASS_HCC_150_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,253.2167284899483,1125,253.2167284899483,0.0,0,6,11,0.0,0.0
+HCC_150,MASS_HCC_150_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,1359.671105236353,6480,1359.671105236353,0.0,0,96,181,0.0,0.0
+HCC_150,MASS_HCC_150_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,499.2016019498218,2257,499.2016019498218,0.0,0,34,62,0.0,0.0
+HCC_150,MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,12.0,12,12.0,0.0,0,17,21,0.0,0.0
+HCC_150,MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,48.0,48,48.0,0.0,0,50,68,0.0,0.0
+HCC_150,MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,524.0,524,524.0,0.0,0,541,788,0.0,0.0
+HCC_150,MASS_HCC_150_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,137.0,137,137.0,0.0,0,140,212,0.0,0.0
+HCC_150,MASS_HCC_150_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_150,MASS_HCC_150_Verified_Community_Mass_Direct_Interaction_Positive,Verified Community-Mass Direct Interaction,False,2.0,2,2.0,0.0,4,0,0,0.0,0.0
+HCC_16,MASS_HCC_16_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,14.442411782404042,101,14.442411782404042,0.0,0,0,0,0.0,0.0
+HCC_16,MASS_HCC_16_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,69.04805374364197,315,69.04805374364197,0.0,0,0,0,0.0,0.0
+HCC_16,MASS_HCC_16_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,204.8825207214526,941,204.8825207214526,0.0,0,0,0,0.0,0.0
+HCC_16,MASS_HCC_16_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,108.03768612708241,441,108.03768612708241,0.0,0,0,0,0.0,0.0
+HCC_16,MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,4,19,0.0,0.0
+HCC_16,MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,10.0,10,10.0,0.0,0,12,53,0.0,0.0
+HCC_16,MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,5.0,5,5.0,0.0,0,5,22,0.0,0.0
+HCC_16,MASS_HCC_16_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,15,0.0,0.0
+HCC_168,MASS_HCC_168_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,6.195468039872065,56,6.195468039872065,0.0,0,0,0,0.0,0.0
+HCC_168,MASS_HCC_168_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,4.520887342791368,29,4.520887342791368,0.0,0,0,0,0.0,0.0
+HCC_168,MASS_HCC_168_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,34.70179464927917,215,34.70179464927917,0.0,0,0,0,0.0,0.0
+HCC_168,MASS_HCC_168_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,6.539945593622065,43,6.539945593622065,0.0,0,0,0,0.0,0.0
+HCC_17,MASS_HCC_17_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,29.01548754845161,202,29.01548754845161,0.0,0,0,0,0.0,0.0
+HCC_17,MASS_HCC_17_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,99.35350652099878,422,99.35350652099878,0.0,0,0,0,0.0,0.0
+HCC_17,MASS_HCC_17_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,330.17532138484154,1489,330.17532138484154,0.0,0,0,0,0.0,0.0
+HCC_17,MASS_HCC_17_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,132.7195565657253,522,132.7195565657253,0.0,0,0,0,0.0,0.0
+HCC_17,MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_17,MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_17,MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,5,0.0,0.0
+HCC_17,MASS_HCC_17_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,4.0,4,4.0,0.0,0,4,14,0.0,0.0
+HCC_17,MASS_HCC_17_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_18,MASS_HCC_18_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,14.578779669986764,90,14.578779669986764,0.0,0,0,0,0.0,0.0
+HCC_18,MASS_HCC_18_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,50.92710145032127,216,50.92710145032127,0.0,0,0,0,0.0,0.0
+HCC_18,MASS_HCC_18_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,164.736702345642,788,164.736702345642,0.0,0,0,0,0.0,0.0
+HCC_18,MASS_HCC_18_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,157.60402365092767,431,157.60402365092767,0.0,0,0,0,0.0,0.0
+HCC_18,MASS_HCC_18_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,2,0.0,0.0
+HCC_18,MASS_HCC_18_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,3,0.0,0.0
+HCC_18,MASS_HCC_18_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_180,MASS_HCC_180_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,11.260869408369409,76,11.260869408369409,0.0,0,0,0,0.0,0.0
+HCC_180,MASS_HCC_180_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,25.96958674280656,141,25.96958674280656,0.0,0,0,0,0.0,0.0
+HCC_180,MASS_HCC_180_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,115.74959735826609,612,115.74959735826609,0.0,0,0,0,0.0,0.0
+HCC_180,MASS_HCC_180_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,31.897695665187925,174,31.897695665187925,0.0,0,1,7,0.0,0.0
+HCC_180,MASS_HCC_180_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,7,0.0,0.0
+HCC_180,MASS_HCC_180_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,21,0.0,0.0
+HCC_180,MASS_HCC_180_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,8,0.0,0.0
+HCC_181,MASS_HCC_181_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,10.706779054279053,83,10.706779054279053,0.0,0,0,0,0.0,0.0
+HCC_181,MASS_HCC_181_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,33.513962834551066,209,33.513962834551066,0.0,0,0,0,0.0,0.0
+HCC_181,MASS_HCC_181_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,99.80845938976744,609,99.80845938976744,0.0,0,0,0,0.0,0.0
+HCC_181,MASS_HCC_181_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,36.52731326980553,227,36.52731326980553,0.0,0,0,0,0.0,0.0
+HCC_182,MASS_HCC_182_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,7.285150096945426,48,7.285150096945426,0.0,0,0,0,0.0,0.0
+HCC_182,MASS_HCC_182_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,14.33553756185335,51,14.33553756185335,0.0,0,0,0,0.0,0.0
+HCC_182,MASS_HCC_182_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,36.29770809256103,138,36.29770809256103,0.0,0,0,0,0.0,0.0
+HCC_182,MASS_HCC_182_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,19.74940604631007,75,19.74940604631007,0.0,0,0,0,0.0,0.0
+HCC_182,MASS_HCC_182_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_182,MASS_HCC_182_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_183,MASS_HCC_183_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,11.991336965632295,77,11.991336965632295,0.0,0,0,0,0.0,0.0
+HCC_183,MASS_HCC_183_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,58.55341027221832,245,58.55341027221832,0.0,0,0,0,0.0,0.0
+HCC_183,MASS_HCC_183_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,135.47582643534656,551,135.47582643534656,0.0,0,0,0,0.0,0.0
+HCC_183,MASS_HCC_183_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,129.0933758621839,391,129.0933758621839,0.0,0,0,0,0.0,0.0
+HCC_183,MASS_HCC_183_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,2,12,0.0,0.0
+HCC_183,MASS_HCC_183_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,4.0,4,4.0,0.0,0,4,9,0.0,0.0
+HCC_183,MASS_HCC_183_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,6,0.0,0.0
+HCC_183,MASS_HCC_183_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,3.0,3,3.0,0.0,6,0,0,0.0,0.0
+HCC_183,MASS_HCC_183_Verified_Community_Mass_Direct_Interaction_Positive,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_191,MASS_HCC_191_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,9.579598076502101,62,9.579598076502101,0.0,0,0,0,0.0,0.0
+HCC_191,MASS_HCC_191_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,24.67048872180451,97,24.67048872180451,0.0,0,0,0,0.0,0.0
+HCC_191,MASS_HCC_191_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,108.00175755187365,459,108.00175755187365,0.0,0,0,0,0.0,0.0
+HCC_191,MASS_HCC_191_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,33.817710372702635,128,33.817710372702635,0.0,0,0,0,0.0,0.0
+HCC_191,MASS_HCC_191_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,9,0.0,0.0
+HCC_2,MASS_HCC_2_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,7.524850075329615,53,7.524850075329615,0.0,0,0,0,0.0,0.0
+HCC_2,MASS_HCC_2_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,28.16955266955267,133,28.16955266955267,0.0,0,0,0,0.0,0.0
+HCC_2,MASS_HCC_2_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,61.03630556320185,303,61.03630556320185,0.0,0,0,0,0.0,0.0
+HCC_2,MASS_HCC_2_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,27.24091829223408,130,27.24091829223408,0.0,0,0,0,0.0,0.0
+HCC_2,MASS_HCC_2_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,6,25,0.0,0.0
+HCC_2,MASS_HCC_2_Verified_Community_Mass_Direct_Interaction_Neutral,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_2,MASS_HCC_2_Verified_Community_Mass_Direct_Interaction_Positive,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,54.599830269713834,265,54.599830269713834,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,704.0288821257861,2219,704.0288821257861,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,352.936544883565,1239,352.936544883565,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,451.13398433351995,1406,451.13398433351995,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,13.0,13,13.0,0.0,0,14,35,0.0,0.0
+HCC_20,MASS_HCC_20_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,6.0,6,6.0,0.0,0,6,18,0.0,0.0
+HCC_20,MASS_HCC_20_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,8.0,8,8.0,0.0,0,8,24,0.0,0.0
+HCC_20,MASS_HCC_20_Shared_Video_Context_Only_Mixed,Shared-Video Context Only,False,18.0,18,18.0,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Shared_Video_Context_Only_Negative,Shared-Video Context Only,False,287.0,287,287.0,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Shared_Video_Context_Only_Neutral,Shared-Video Context Only,False,569.0,569,569.0,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Shared_Video_Context_Only_Positive,Shared-Video Context Only,False,419.0,419,419.0,0.0,0,0,0,0.0,0.0
+HCC_20,MASS_HCC_20_Verified_Community_Mass_Direct_Interaction_Neutral,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,4,0,0,0.0,0.0
+HCC_204,MASS_HCC_204_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,5.517268331084121,42,5.517268331084121,0.0,0,0,0,0.0,0.0
+HCC_204,MASS_HCC_204_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,7.155952380952381,38,7.155952380952381,0.0,0,0,0,0.0,0.0
+HCC_204,MASS_HCC_204_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,30.5553006204322,167,30.5553006204322,0.0,0,0,0,0.0,0.0
+HCC_204,MASS_HCC_204_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,11.453906632583104,61,11.453906632583104,0.0,0,0,0,0.0,0.0
+HCC_205,MASS_HCC_205_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,11.209889360949395,62,11.209889360949395,0.0,0,0,0,0.0,0.0
+HCC_205,MASS_HCC_205_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,30.285964035964035,88,30.285964035964035,0.0,0,0,0,0.0,0.0
+HCC_205,MASS_HCC_205_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,82.75010503772114,304,82.75010503772114,0.0,0,0,0,0.0,0.0
+HCC_205,MASS_HCC_205_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,44.938249087513796,136,44.938249087513796,0.0,0,0,0,0.0,0.0
+HCC_205,MASS_HCC_205_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_206,MASS_HCC_206_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,7.133907187583658,48,7.133907187583658,0.0,0,0,0,0.0,0.0
+HCC_206,MASS_HCC_206_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,40.0605431118589,147,40.0605431118589,0.0,0,0,0,0.0,0.0
+HCC_206,MASS_HCC_206_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,73.1277424759623,278,73.1277424759623,0.0,0,0,0,0.0,0.0
+HCC_206,MASS_HCC_206_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,72.68887721755368,239,72.68887721755368,0.0,0,0,0,0.0,0.0
+HCC_3,MASS_HCC_3_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,5.957827799135848,43,5.957827799135848,0.0,0,0,0,0.0,0.0
+HCC_3,MASS_HCC_3_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,10.841093117408906,50,10.841093117408906,0.0,0,0,0,0.0,0.0
+HCC_3,MASS_HCC_3_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,38.69596520180885,186,38.69596520180885,0.0,0,0,0,0.0,0.0
+HCC_3,MASS_HCC_3_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,10.437007333911358,46,10.437007333911358,0.0,0,0,0,0.0,0.0
+HCC_3,MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,5,0.0,0.0
+HCC_3,MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,2,10,0.0,0.0
+HCC_3,MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,4,0.0,0.0
+HCC_3,MASS_HCC_3_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,8,0.0,0.0
+HCC_34,MASS_HCC_34_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,62.13635682623265,321,62.13635682623265,0.0,0,8,8,0.0,0.0
+HCC_34,MASS_HCC_34_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,761.8201270951271,2592,761.8201270951271,0.0,0,17,17,0.0,0.0
+HCC_34,MASS_HCC_34_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,1246.6539653715738,5937,1246.6539653715738,0.0,0,154,154,0.0,0.0
+HCC_34,MASS_HCC_34_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,636.5033810315931,2591,636.5033810315931,0.0,0,44,44,0.0,0.0
+HCC_34,MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,24.0,24,24.0,0.0,0,42,42,0.0,0.0
+HCC_34,MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,158.0,158,158.0,0.0,0,167,167,0.0,0.0
+HCC_34,MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,233.0,233,233.0,0.0,0,240,240,0.0,0.0
+HCC_34,MASS_HCC_34_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,107.0,107,107.0,0.0,0,114,114,0.0,0.0
+HCC_42,MASS_HCC_42_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,6.9771322376117775,46,6.9771322376117775,0.0,0,0,0,0.0,0.0
+HCC_42,MASS_HCC_42_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,24.661387631975867,106,24.661387631975867,0.0,0,0,0,0.0,0.0
+HCC_42,MASS_HCC_42_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,61.72074889764518,283,61.72074889764518,0.0,0,0,0,0.0,0.0
+HCC_42,MASS_HCC_42_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,34.74742002063984,151,34.74742002063984,0.0,0,0,0,0.0,0.0
+HCC_42,MASS_HCC_42_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_42,MASS_HCC_42_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,11,0.0,0.0
+HCC_45,MASS_HCC_45_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,17.3907115074991,124,17.3907115074991,0.0,0,0,0,0.0,0.0
+HCC_45,MASS_HCC_45_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,68.6505309018467,288,68.6505309018467,0.0,0,0,0,0.0,0.0
+HCC_45,MASS_HCC_45_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,153.39497036331403,685,153.39497036331403,0.0,0,0,0,0.0,0.0
+HCC_45,MASS_HCC_45_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,97.91411396910622,396,97.91411396910622,0.0,0,0,0,0.0,0.0
+HCC_45,MASS_HCC_45_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,2,0.0,0.0
+HCC_45,MASS_HCC_45_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,4.0,4,4.0,0.0,0,4,9,0.0,0.0
+HCC_45,MASS_HCC_45_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,4,0.0,0.0
+HCC_46,MASS_HCC_46_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,7.097724423203963,47,7.097724423203963,0.0,0,2,14,0.0,0.0
+HCC_46,MASS_HCC_46_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,16.66535409035409,77,16.66535409035409,0.0,0,2,14,0.0,0.0
+HCC_46,MASS_HCC_46_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,68.96523249712104,331,68.96523249712104,0.0,0,0,0,0.0,0.0
+HCC_46,MASS_HCC_46_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,25.370294205278725,118,25.370294205278725,0.0,0,0,0,0.0,0.0
+HCC_46,MASS_HCC_46_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,4,25,0.0,0.0
+HCC_46,MASS_HCC_46_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,6,0.0,0.0
+HCC_46,MASS_HCC_46_Shared_Video_Context_Only_Negative,Shared-Video Context Only,False,2.0,2,2.0,0.0,0,0,0,0.0,0.0
+HCC_46,MASS_HCC_46_Shared_Video_Context_Only_Neutral,Shared-Video Context Only,False,23.0,23,23.0,0.0,0,0,0,0.0,0.0
+HCC_46,MASS_HCC_46_Shared_Video_Context_Only_Positive,Shared-Video Context Only,False,1.0,1,1.0,0.0,0,0,0,0.0,0.0
+HCC_48,MASS_HCC_48_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,18.30065137671141,126,18.30065137671141,0.0,0,0,0,0.0,0.0
+HCC_48,MASS_HCC_48_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,53.17578707841866,244,53.17578707841866,0.0,0,0,0,0.0,0.0
+HCC_48,MASS_HCC_48_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,146.2804301048109,689,146.2804301048109,0.0,0,0,0,0.0,0.0
+HCC_48,MASS_HCC_48_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,88.882408479893,393,88.882408479893,0.0,0,0,0,0.0,0.0
+HCC_48,MASS_HCC_48_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,4,0.0,0.0
+HCC_48,MASS_HCC_48_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,8,0.0,0.0
+HCC_48,MASS_HCC_48_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_49,MASS_HCC_49_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,8.036597612913402,58,8.036597612913402,0.0,0,0,0,0.0,0.0
+HCC_49,MASS_HCC_49_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,18.640616736204972,92,18.640616736204972,0.0,0,0,0,0.0,0.0
+HCC_49,MASS_HCC_49_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,64.31631845966211,354,64.31631845966211,0.0,0,0,0,0.0,0.0
+HCC_49,MASS_HCC_49_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,18.140927493559072,98,18.140927493559072,0.0,0,0,0,0.0,0.0
+HCC_49,MASS_HCC_49_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,4,0.0,0.0
+HCC_49,MASS_HCC_49_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,11,0.0,0.0
+HCC_49,MASS_HCC_49_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,20.516144407931996,129,20.516144407931996,0.0,0,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,52.55200432522414,197,52.55200432522414,0.0,0,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,191.76027480861072,805,191.76027480861072,0.0,0,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,76.15549146416019,287,76.15549146416019,0.0,0,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,4.0,4,4.0,0.0,0,4,5,0.0,0.0
+HCC_5,MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,5.0,5,5.0,0.0,0,5,7,0.0,0.0
+HCC_5,MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,5.0,5,5.0,0.0,0,5,6,0.0,0.0
+HCC_5,MASS_HCC_5_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,4.0,4,4.0,0.0,0,4,4,0.0,0.0
+HCC_5,MASS_HCC_5_Shared_Video_Context_Only_Mixed,Shared-Video Context Only,False,6.0,6,6.0,0.0,0,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Shared_Video_Context_Only_Negative,Shared-Video Context Only,False,21.0,21,21.0,0.0,0,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Shared_Video_Context_Only_Neutral,Shared-Video Context Only,False,39.0,39,39.0,0.0,0,0,0,0.0,0.0
+HCC_5,MASS_HCC_5_Shared_Video_Context_Only_Positive,Shared-Video Context Only,False,11.0,11,11.0,0.0,0,0,0,0.0,0.0
+HCC_50,MASS_HCC_50_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,9.688925297493073,69,9.688925297493073,0.0,0,0,0,0.0,0.0
+HCC_50,MASS_HCC_50_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,48.53951136582715,215,48.53951136582715,0.0,0,0,0,0.0,0.0
+HCC_50,MASS_HCC_50_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,121.90472623781447,546,121.90472623781447,0.0,0,0,0,0.0,0.0
+HCC_50,MASS_HCC_50_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,65.2323685086843,285,65.2323685086843,0.0,0,0,0,0.0,0.0
+HCC_50,MASS_HCC_50_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,15,0.0,0.0
+HCC_50,MASS_HCC_50_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,4.0,4,4.0,0.0,0,4,17,0.0,0.0
+HCC_50,MASS_HCC_50_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,7,0.0,0.0
+HCC_50,MASS_HCC_50_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_50,MASS_HCC_50_Verified_Community_Mass_Direct_Interaction_Positive,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_52,MASS_HCC_52_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,21.89725169223621,148,21.89725169223621,0.0,0,1,3,0.0,0.0
+HCC_52,MASS_HCC_52_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,73.55846365536767,300,73.55846365536767,0.0,0,0,0,0.0,0.0
+HCC_52,MASS_HCC_52_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,183.6811012044371,880,183.6811012044371,0.0,0,0,0,0.0,0.0
+HCC_52,MASS_HCC_52_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,72.276627272796,305,72.276627272796,0.0,0,0,0,0.0,0.0
+HCC_52,MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,5,0.0,0.0
+HCC_52,MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,6,0.0,0.0
+HCC_52,MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,6,0.0,0.0
+HCC_52,MASS_HCC_52_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,7,0.0,0.0
+HCC_52,MASS_HCC_52_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,7,2,10,0.0,0.0
+HCC_54,MASS_HCC_54_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,38.80429565726746,231,38.80429565726746,0.0,0,6,6,0.0,0.0
+HCC_54,MASS_HCC_54_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,134.20365267687248,508,134.20365267687248,0.0,0,11,11,0.0,0.0
+HCC_54,MASS_HCC_54_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,312.3926232651078,1415,312.3926232651078,0.0,0,10,10,0.0,0.0
+HCC_54,MASS_HCC_54_Ambiguous_Community_Mass_Association_No_text,Ambiguous Community-Mass Association,True,0.3333333333333333,1,0.3333333333333333,0.0,0,1,1,0.0,0.0
+HCC_54,MASS_HCC_54_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,224.89004436825644,812,224.89004436825644,0.0,0,23,23,0.0,0.0
+HCC_54,MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,16.0,16,16.0,0.0,0,19,19,0.0,0.0
+HCC_54,MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,17.0,17,17.0,0.0,0,20,21,0.0,0.0
+HCC_54,MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,26.0,26,26.0,0.0,0,32,36,0.0,0.0
+HCC_54,MASS_HCC_54_Observed_Community_Mass_Temporal_Association_No_text,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,2,0.0,0.0
+HCC_54,MASS_HCC_54_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,28.0,28,28.0,0.0,0,28,28,0.0,0.0
+HCC_54,MASS_HCC_54_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_54,MASS_HCC_54_Verified_Community_Mass_Direct_Interaction_Neutral,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_54,MASS_HCC_54_Verified_Community_Mass_Direct_Interaction_Positive,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,1,1,0.0,0.0
+HCC_60,MASS_HCC_60_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,8.780785500189525,70,8.780785500189525,0.0,0,0,0,0.0,0.0
+HCC_60,MASS_HCC_60_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,29.562554009458033,109,29.562554009458033,0.0,0,0,0,0.0,0.0
+HCC_60,MASS_HCC_60_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,63.03049552356828,307,63.03049552356828,0.0,0,0,0,0.0,0.0
+HCC_60,MASS_HCC_60_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,28.57739276547326,118,28.57739276547326,0.0,0,0,0,0.0,0.0
+HCC_63,MASS_HCC_63_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,32.334243384119205,209,32.334243384119205,0.0,0,1,1,0.0,0.0
+HCC_63,MASS_HCC_63_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,112.11758498639304,471,112.11758498639304,0.0,0,0,0,0.0,0.0
+HCC_63,MASS_HCC_63_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,312.54909781051424,1412,312.54909781051424,0.0,0,0,0,0.0,0.0
+HCC_63,MASS_HCC_63_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,261.2119339982343,851,261.2119339982343,0.0,0,0,0,0.0,0.0
+HCC_63,MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,2,0.0,0.0
+HCC_63,MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,1,0.0,0.0
+HCC_63,MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,8.0,8,8.0,0.0,0,9,9,0.0,0.0
+HCC_63,MASS_HCC_63_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,3.0,3,3.0,0.0,0,3,3,0.0,0.0
+HCC_63,MASS_HCC_63_Verified_Community_Mass_Direct_Interaction_Positive,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,1,1,0.0,0.0
+HCC_74,MASS_HCC_74_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,10.707551116118891,69,10.707551116118891,0.0,0,0,0,0.0,0.0
+HCC_74,MASS_HCC_74_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,43.46163646295225,163,43.46163646295225,0.0,0,0,0,0.0,0.0
+HCC_74,MASS_HCC_74_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,80.06606870941236,368,80.06606870941236,0.0,0,0,0,0.0,0.0
+HCC_74,MASS_HCC_74_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,47.91632148381374,176,47.91632148381374,0.0,0,0,0,0.0,0.0
+HCC_74,MASS_HCC_74_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,2.0,2,2.0,0.0,0,2,3,0.0,0.0
+HCC_74,MASS_HCC_74_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,3,0.0,0.0
+HCC_75,MASS_HCC_75_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,19.645109493189988,131,19.645109493189988,0.0,0,0,0,0.0,0.0
+HCC_75,MASS_HCC_75_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,108.91768776459179,559,108.91768776459179,0.0,0,0,0,0.0,0.0
+HCC_75,MASS_HCC_75_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,1018.2206888269969,5150,1018.2206888269969,0.0,0,0,0,0.0,0.0
+HCC_75,MASS_HCC_75_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,292.6604478854479,1483,292.6604478854479,0.0,0,0,0,0.0,0.0
+HCC_75,MASS_HCC_75_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,4.0,4,4.0,0.0,0,5,16,0.0,0.0
+HCC_75,MASS_HCC_75_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,37.0,37,37.0,0.0,0,38,137,0.0,0.0
+HCC_75,MASS_HCC_75_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,14.0,14,14.0,0.0,0,15,54,0.0,0.0
+HCC_87,MASS_HCC_87_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,33.628941436325,189,33.628941436325,0.0,0,6,21,0.0,0.0
+HCC_87,MASS_HCC_87_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,173.06388503137728,705,173.06388503137728,0.0,0,11,41,0.0,0.0
+HCC_87,MASS_HCC_87_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,367.2048351330472,1665,367.2048351330472,0.0,0,10,39,0.0,0.0
+HCC_87,MASS_HCC_87_Ambiguous_Community_Mass_Association_No_text,Ambiguous Community-Mass Association,True,0.3333333333333333,1,0.3333333333333333,0.0,0,1,4,0.0,0.0
+HCC_87,MASS_HCC_87_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,242.45644704452755,905,242.45644704452755,0.0,0,22,88,0.0,0.0
+HCC_87,MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Mixed,Observed Community-Mass Temporal Association,False,18.0,18,18.0,0.0,0,18,62,0.0,0.0
+HCC_87,MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,18.0,18,18.0,0.0,0,19,55,0.0,0.0
+HCC_87,MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,31.0,31,31.0,0.0,0,33,97,0.0,0.0
+HCC_87,MASS_HCC_87_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,53.0,53,53.0,0.0,0,55,199,0.0,0.0
+HCC_90,MASS_HCC_90_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,11.25735971544795,69,11.25735971544795,0.0,0,0,0,0.0,0.0
+HCC_90,MASS_HCC_90_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,62.87803574993978,266,62.87803574993978,0.0,0,0,0,0.0,0.0
+HCC_90,MASS_HCC_90_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,179.6943345225466,786,179.6943345225466,0.0,0,0,0,0.0,0.0
+HCC_90,MASS_HCC_90_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,87.6979380698421,365,87.6979380698421,0.0,0,0,0,0.0,0.0
+HCC_90,MASS_HCC_90_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,4,0.0,0.0
+HCC_90,MASS_HCC_90_Observed_Community_Mass_Temporal_Association_Neutral,Observed Community-Mass Temporal Association,False,5.0,5,5.0,0.0,0,5,18,0.0,0.0
+HCC_90,MASS_HCC_90_Observed_Community_Mass_Temporal_Association_Positive,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,2,0.0,0.0
+HCC_90,MASS_HCC_90_Verified_Community_Mass_Direct_Interaction_Mixed,Verified Community-Mass Direct Interaction,False,1.0,1,1.0,0.0,2,0,0,0.0,0.0
+HCC_99,MASS_HCC_99_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,11.08692767500817,72,11.08692767500817,0.0,0,0,0,0.0,0.0
+HCC_99,MASS_HCC_99_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,51.61419593478417,189,51.61419593478417,0.0,0,0,0,0.0,0.0
+HCC_99,MASS_HCC_99_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,180.09445235706846,706,180.09445235706846,0.0,0,3,33,0.0,0.0
+HCC_99,MASS_HCC_99_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,92.23785638166443,327,92.23785638166443,0.0,0,0,0,0.0,0.0
+HCC_99,MASS_HCC_99_Observed_Community_Mass_Temporal_Association_Negative,Observed Community-Mass Temporal Association,False,1.0,1,1.0,0.0,0,1,3,0.0,0.0
+HCC_Non-HCC,MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Mixed,Ambiguous Community-Mass Association,True,110.69346006011607,557,110.69346006011607,0.0,0,0,0,0.0,0.0
+HCC_Non-HCC,MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Negative,Ambiguous Community-Mass Association,True,241.10660897410122,1051,241.10660897410122,0.0,0,0,0,0.0,0.0
+HCC_Non-HCC,MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Neutral,Ambiguous Community-Mass Association,True,432.9195107352228,2131,432.9195107352228,0.0,0,0,0,0.0,0.0
+HCC_Non-HCC,MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_No_text,Ambiguous Community-Mass Association,True,0.3333333333333333,1,0.3333333333333333,0.0,0,0,0,0.0,0.0
+HCC_Non-HCC,MASS_HCC_Non_HCC_Ambiguous_Community_Mass_Association_Positive,Ambiguous Community-Mass Association,True,178.17179733750942,813,178.17179733750942,0.0,0,0,0,0.0,0.0
+IND_adilana.na,HCC_103,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_adilana.na,HCC_42,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_adilana.na,HCC_52,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_adiliarizqa,HCC_103,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_adiliarizqa,HCC_168,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_adiliarizqa,HCC_60,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_adiliarizqa,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_afikarrhnur,HCC_134,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_afikarrhnur,HCC_204,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,7.0
+IND_afikarrhnur,HCC_3,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_afikarrhnur,HCC_45,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_afikarrhnur,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,10.0,10.0
+IND_ansyashine,HCC_204,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_ansyashine,HCC_45,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_ansyashine,HCC_48,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_ansyashine,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,10.0,10.0
+IND_asabelavvv,HCC_132,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_asabelavvv,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_asabelavvv,HCC_180,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_asabelavvv,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,10.0,10.0
+IND_cellynstore_,HCC_132,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_cellynstore_,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_cellynstore_,HCC_205,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_cellynstore_,HCC_52,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_daviena_dvn,HCC_1,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_daviena_dvn,HCC_52,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_daviena_dvn,HCC_60,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_deswitatata2,HCC_1,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_deswitatata2,HCC_14,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_deswitatata2,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_deswitatata2,HCC_18,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_deswitatata2,HCC_63,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,2.0,4.0
+IND_dewihanijayanti,HCC_1,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_dewihanijayanti,HCC_134,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_dewihanijayanti,HCC_15,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_dewihanijayanti,HCC_182,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_dewihanijayanti,HCC_183,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_dewihanijayanti,HCC_20,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_dewihanijayanti,HCC_45,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_dewihanijayanti,HCC_48,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_dewihanijayanti,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_dicannnns,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_dicannnns,HCC_16,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_dicannnns,HCC_99,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,11.0
+IND_dr.okypratamaa_kedua,HCC_134,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_dr.okypratamaa_kedua,HCC_14,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_dr.okypratamaa_kedua,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_dr.okypratamaa_kedua,HCC_34,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_dr.okypratamaa_kedua,HCC_75,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_dww.srtk,HCC_191,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_dww.srtk,HCC_46,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_dww.srtk,HCC_48,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_dww.srtk,HCC_5,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,8.0,8.0
+IND_faniabsaa,HCC_14,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_faniabsaa,HCC_20,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_faniabsaa,HCC_42,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_faniabsaa,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,1.0,1.0
+IND_fvajar_,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_fvajar_,HCC_18,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_fvajar_,HCC_180,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,7.0
+IND_fvajar_,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,9.0,10.0
+IND_fvajar_,HCC_87,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_glowupyuk34,HCC_46,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_iketiaaa,HCC_34,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_iketiaaa,HCC_42,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_iketiaaa,HCC_46,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_iketiaaa,HCC_74,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_irnaayu27,HCC_103,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,5.0,10.0
+IND_irnaayu27,HCC_16,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_irnaayu27,HCC_168,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_irnaayu27,HCC_181,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_irnaayu27,HCC_52,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,5.0,10.0
+IND_irnaayu27,HCC_60,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_irnaayu27,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_irnaayu27,HCC_75,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_janeabys,HCC_205,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_janeabys,HCC_5,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,8.0,8.0
+IND_jesyjeyn,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_jesyjeyn,HCC_49,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_juliadoang08,HCC_134,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_juliadoang08,HCC_15,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_juliadoang08,HCC_16,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_juliadoang08,HCC_181,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_juliadoang08,HCC_183,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_juliadoang08,HCC_87,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_lookatmeeh__,HCC_5,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,8.0,8.0
+IND_maharajasp8,HCC_103,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_maharajasp8,HCC_50,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_maharajasp8,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_maharajasp8,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_maryame.official,HCC_114,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,6.0,22.0
+IND_maryame.official,HCC_17,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,8.0,9.0
+IND_maryame.official,HCC_2,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_maryame.official,HCC_20,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,3.0,6.0
+IND_maryame.official,HCC_206,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,5.0,18.0
+IND_maryame.official,HCC_34,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_maryame.official,HCC_45,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_maryame.official,HCC_50,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_maryame.official,HCC_52,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_maryame.official,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_maryame.official,HCC_74,Observed Creator-Community Context,False,2.0,1,1.0,2.0,0,0,0,3.0,6.0
+IND_mayhapid2,HCC_1,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_mayhapid2,HCC_113,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,11.0
+IND_mayhapid2,HCC_117,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_mayhapid2,HCC_132,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_mayhapid2,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_mayhapid2,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_mayhapid2,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_mayhapid2,HCC_75,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_mayhapid2,HCC_87,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_mayhapid2,HCC_90,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_melvinahusyanti96,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_melvinahusyanti96,HCC_87,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_mimiaudmua,HCC_1,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_mimiaudmua,HCC_113,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_mimiaudmua,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_mimiaudmua,HCC_52,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_mputrizahro,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_mputrizahro,HCC_2,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_mputrizahro,HCC_3,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_nabellaolivia,HCC_1,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_nabellaolivia,HCC_181,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_nabellaolivia,HCC_49,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_namicwn_,HCC_14,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_namicwn_,HCC_15,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_namicwn_,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_namicwn_,HCC_18,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_namicwn_,HCC_191,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_namicwn_,HCC_49,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_nooraabeautycreator,HCC_114,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_nooraabeautycreator,HCC_2,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_nooraabeautycreator,HCC_20,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_nooraabeautycreator,HCC_49,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_nooraabeautycreator,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_notforsheil,HCC_206,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_notforsheil,HCC_50,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_notforsheil,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,1.0,1.0
+IND_notforsheil,HCC_75,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_orinagista13,HCC_103,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_orinagista13,HCC_134,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_orinagista13,HCC_168,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_orinagista13,HCC_60,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_orinagista13,HCC_74,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_orinagista13,HCC_90,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_racunwithdivani,HCC_117,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_racunwithdivani,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_racunwithdivani,HCC_34,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_racunwithdivani,HCC_5,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,8.0,8.0
+IND_racunwithdivani,HCC_99,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,11.0
+IND_rikut02,HCC_113,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,11.0
+IND_rikut02,HCC_150,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_rikut02,HCC_45,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_rikut02,HCC_48,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_skinby_sindy,HCC_180,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,7.0
+IND_skinby_sindy,HCC_182,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_skinby_sindy,HCC_48,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_skinby_sindy,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,8.0,8.0
+IND_skinby_sindy,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_skincarebyw,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_skincarebyw,HCC_204,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,7.0
+IND_skincarebyw,HCC_34,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_skincarebyw,HCC_52,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_skincarebyw,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,9.0,9.0
+IND_soufberry,HCC_134,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_soufberry,HCC_17,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_soufberry,HCC_5,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,8.0,8.0
+IND_soufberry,HCC_99,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_susiyuliani30,HCC_182,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_susiyuliani30,HCC_20,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_susiyuliani30,HCC_87,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_theoriginote,HCC_117,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,6.0,6.0
+IND_theoriginote,HCC_205,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_theoriginote,HCC_3,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_theoriginote,HCC_45,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_theoriginote,HCC_48,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,5.0
+IND_theoriginote,HCC_5,Observed Creator-Community Context,False,3.0,1,1.0,3.0,0,0,0,8.0,24.0
+IND_theoriginote,HCC_63,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
+IND_thisisalulaa,HCC_20,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_tiarach18,HCC_183,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,7.0,7.0
+IND_tiarach18,HCC_191,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,5.0,9.0
+IND_vivianmarguerre,HCC_1,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_vivianmarguerre,HCC_54,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,10.0,11.0
+IND_vivianmarguerre,HCC_90,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,4.0,4.0
+IND_yulyadew123,HCC_14,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_yulyadew123,HCC_20,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,3.0,3.0
+IND_yulyadew123,HCC_34,Observed Creator-Community Context,False,1.0,1,1.0,1.0,0,0,0,2.0,2.0
