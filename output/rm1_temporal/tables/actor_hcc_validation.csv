@@ -1,5 +1,0 @@
-metric,value
-comments_without_actor_type,0
-community_actor_comments_without_valid_hcc_id,0
-comments_with_non_hcc_as_hcc_id,0
-distinct_actor_types_in_comments,Community Actor; Individual Actor; Mass Actor

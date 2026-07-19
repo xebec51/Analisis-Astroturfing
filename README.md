@@ -185,10 +185,10 @@ skor (brand, similarity) sengaja tidak dimasukkan ke file Gephi -- lihat tabel d
 
 ### `output/visualisasi/`
 
-Seluruh grafik ditampilkan inline di notebook; sebagian juga disimpan sebagai file:
+Seluruh grafik ditampilkan inline di notebook; sebagian juga disimpan sebagai file PNG:
 
 - `output/visualisasi/HCC_hashtag_*`, `output/visualisasi/hashtag_by_community/` -- visualisasi hashtag
-  (konteks brand/video) per HCC.
+  (konteks brand/video) per HCC, format **PNG saja**.
 - `output/visualisasi/brand_similarity/` -- visualisasi Co-Similarity ala Weber & Neumann (matrix,
   bar/boxplot per HCC & per brand) dan kandidat copypasta, format **PNG saja**.
 
@@ -267,7 +267,7 @@ menjadi dasar interpretasi utama (lihat Section 16.2 & 19.11 pada notebook).
 | `tiktok_coordination_analysis.ipynb` | Notebook utama -- seluruh pipeline analisis |
 | `output/tables/` | Tabel hasil analisis lengkap (lihat [Struktur Output](#struktur-output)) |
 | `output/gephi/` | Berkas jaringan siap-impor ke Gephi, ringkas untuk visualisasi |
-| `output/visualisasi/` | Grafik & visualisasi (PNG/PDF/SVG untuk grafik lama, PNG-only untuk grafik baru) |
+| `output/visualisasi/` | Grafik & visualisasi (PNG saja; ekspor PDF/SVG duplikat tidak dipertahankan) |
 | `README.md` | Berkas dokumentasi ini |
 
 Seluruh hasil analisis **hanya berupa indikasi pola koordinasi** berdasarkan data yang teramati. Pola
@@ -278,51 +278,39 @@ produk, atau komunitas diskusi yang wajar.
 
 ## RM1 — Temporal Activity Profile
 
-Section 19 pada notebook `tiktok_coordination_analysis.ipynb` menambahkan analisis hari dalam pekan, jam,
-daypart, recurrence mingguan, dan konteks brand sebagai bagian dari Rumusan Masalah 1. Analisis ini
-membaca pola waktu aktivitas komentar pada struktur HCC/LCN yang sudah terbentuk. Output RM2 actor type
-dan sentiment/goals yang sudah tersedia hanya dibaca sebagai konteks pendukung, bukan sebagai penempatan
-rumusan masalah.
+Section 19 pada notebook `tiktok_coordination_analysis.ipynb` berisi analisis temporal ringkas untuk RM1.
+Fokusnya hanya membaca kapan aktivitas komentar pada struktur HCC/LCN teramati:
 
-- Zona waktu utama output temporal adalah `Asia/Jakarta` / WIB. Notebook tetap menghitung sensitivity
-  WIB-WITA untuk melihat berapa komentar yang berubah hari bila dibaca dengan `Asia/Makassar`.
-- `weekday_activity_lift` membandingkan share komentar Community Actor pada suatu hari dengan baseline
-  seluruh komentar pada hari yang sama.
-- Normalisasi per-video tersedia melalui `comments_per_active_video` dan
-  `community_accounts_per_active_video`, sehingga raw count tidak dibaca sendirian.
-- Profil dibuat pada comment-level, account-level, HCC-level, brand-context level, video-normalized level,
-  dan week-level recurrence.
-- HCC-level profile memakai weekday entropy dan `weekday_concentration_score`; HCC dengan sedikit komentar
-  atau minggu aktif terbatas diberi reliability `Insufficient observations` atau `Limited recurrence`.
-- Visualisasi weekday x hour, weekday x daypart, weekday lift, HCC concentration, recurrence, dan konteks
-  brand disimpan sebagai PNG di `output/rm1_temporal/visualisasi/`.
-- Output tabel disimpan di `output/rm1_temporal/tables/`, termasuk
-  `actor_type_weekday_summary.csv`, `community_weekday_activity_lift.csv`,
-  `account_temporal_profile.csv`, `hcc_weekday_profile.csv`, `hcc_temporal_goal_profile.csv`,
-  `weekday_actor_type_chi_square.csv`, dan tabel audit timestamp/checksum.
-- Output Gephi temporal disimpan di `output/rm1_temporal/gephi/`; edge HCC disalin tanpa perubahan dan
-  hash edge divalidasi sama dengan sumbernya.
+- distribusi komentar Community Actor dan Individual Actor menurut hari dalam pekan;
+- distribusi komentar menurut hari x jam lokal;
+- jumlah HCC aktif unik per hari dan per jam;
+- profil temporal singkat per HCC.
 
-Analisis brand-HCC pada section temporal memakai `output/tables/hcc_brand_profile_auto.csv`, yaitu hasil
-auto-labeling RM1 berdasarkan hashtag metadata video:
+Zona waktu utama output temporal adalah `Asia/Jakarta` / WIB. Analisis brand-context temporal,
+sentiment/goals temporal, recurrence mingguan rinci, dan ekspor Gephi temporal tidak dimasukkan ke bagian
+inti RM1 agar kode dan output tetap proporsional.
 
-- `brand_label_auto` adalah klasifikasi eksklusif per HCC. Exclusive count selalu berjumlah total HCC valid.
-- HCC mixed dapat diasosiasikan dengan beberapa brand pada analisis multi-label melalui `brand_combo`.
-  Multi-label incidence dapat mempunyai total lebih besar daripada jumlah HCC.
-- Jumlah komunitas HCC berbeda dari jumlah node pada legenda Gephi; satu HCC dapat berisi beberapa akun.
-- Jika satu HCC memiliki `brand_combo = Maryame + The Originote + Azarine`, maka pada ringkasan eksklusif
-  HCC tersebut dihitung satu kali sebagai `Mixed_3plus_Brands`. Pada analisis multi-label, HCC yang sama
-  dihitung masing-masing satu kali pada Maryame, The Originote, dan Azarine.
-- Konteks brand berasal dari hashtag metadata video, bukan nama username, teks komentar, hashtag komentar,
-  dugaan manual, atau warna visualisasi Gephi.
+Output tabel ringkas disimpan di `output/rm1_temporal/tables/`:
+
+- `temporal_data_quality_audit.csv`
+- `temporal_method_parameters.csv`
+- `actor_type_weekday_summary.csv`
+- `actor_type_weekday_hour_matrix.csv`
+- `hcc_weekday_summary.csv`
+- `hcc_weekday_hour_matrix.csv`
+- `hcc_temporal_profile.csv`
+- `temporal_final_summary.csv`
+
+Visualisasi PNG ringkas disimpan di `output/rm1_temporal/visualisasi/`:
+
+- `actor_type_weekday_comments.png`
+- `community_actor_weekday_share.png`
+- `active_hcc_by_weekday.png`
+- `hcc_weekday_hour_heatmap.png`
 
 Community Actor merupakan akun anggota HCC, bukan akun yang telah terbukti sebagai buzzer. Aktivitas yang
-terkonsentrasi pada hari atau jam tertentu tidak membuktikan jadwal kerja, pembayaran, atau koordinasi
-terencana.
-
-Pengelompokan brand pada HCC menunjukkan konteks video yang dikomentari oleh anggota komunitas berdasarkan
-hashtag metadata video. Label tersebut tidak berarti seluruh anggota HCC menulis hashtag, mendukung brand,
-berafiliasi dengan brand, atau membahas brand secara eksplisit dalam setiap komentar.
+terkonsentrasi pada hari atau jam tertentu tidak membuktikan jadwal kerja, pembayaran, hubungan komersial,
+atau koordinasi terencana.
 
 ## RM2 — Sentiment-based Goals Mapping
 
