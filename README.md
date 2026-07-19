@@ -276,26 +276,27 @@ produk, atau komunitas diskusi yang wajar.
 
 ---
 
-## RM1 — Temporal Activity Profile
+## RM1 ? Temporal Activity Profile
 
 Section 19 pada notebook `tiktok_coordination_analysis.ipynb` berisi analisis temporal ringkas untuk RM1.
-Fokusnya hanya membaca kapan aktivitas komentar pada struktur HCC/LCN teramati:
+Fokusnya menampilkan grafik garis pola aktivitas komentar berdasarkan tiga cakupan:
 
-- distribusi komentar Community Actor dan Individual Actor menurut hari dalam pekan;
-- distribusi komentar menurut hari x jam lokal;
-- jumlah HCC aktif unik per hari dan per jam;
-- profil temporal singkat per HCC.
+- seluruh dataset;
+- akun yang masuk LCN;
+- akun yang masuk HCC.
 
-Zona waktu utama output temporal adalah `Asia/Jakarta` / WIB. Analisis brand-context temporal,
-sentiment/goals temporal, recurrence mingguan rinci, dan ekspor Gephi temporal tidak dimasukkan ke bagian
-inti RM1 agar kode dan output tetap proporsional.
+Visual temporal ditampilkan menurut hari dalam pekan, jam lokal, serta kombinasi hari x jam. Zona waktu
+utama output temporal adalah `Asia/Jakarta` / WIB. Analisis brand-context temporal, sentiment/goals
+temporal, recurrence mingguan rinci, dan ekspor Gephi temporal tidak dimasukkan ke bagian inti RM1 agar
+kode dan output tetap proporsional.
 
 Output tabel ringkas disimpan di `output/rm1_temporal/tables/`:
 
 - `temporal_data_quality_audit.csv`
 - `temporal_method_parameters.csv`
-- `actor_type_weekday_summary.csv`
-- `actor_type_weekday_hour_matrix.csv`
+- `temporal_scope_weekday_summary.csv`
+- `temporal_scope_hour_summary.csv`
+- `temporal_scope_weekday_hour_summary.csv`
 - `hcc_weekday_summary.csv`
 - `hcc_weekday_hour_matrix.csv`
 - `hcc_temporal_profile.csv`
@@ -303,10 +304,10 @@ Output tabel ringkas disimpan di `output/rm1_temporal/tables/`:
 
 Visualisasi PNG ringkas disimpan di `output/rm1_temporal/visualisasi/`:
 
-- `actor_type_weekday_comments.png`
-- `community_actor_weekday_share.png`
-- `active_hcc_by_weekday.png`
-- `hcc_weekday_hour_heatmap.png`
+- `temporal_scope_weekday_lines.png`
+- `temporal_scope_hour_lines.png`
+- `temporal_scope_weekday_hour_lines.png`
+- `active_hcc_by_weekday_line.png`
 
 Community Actor merupakan akun anggota HCC, bukan akun yang telah terbukti sebagai buzzer. Aktivitas yang
 terkonsentrasi pada hari atau jam tertentu tidak membuktikan jadwal kerja, pembayaran, hubungan komersial,
@@ -365,6 +366,7 @@ di Section 2 jika model diganti.
 `sentiment_distribution_overall.png`, `sentiment_hcc_vs_nonhcc.png`, `sentiment_by_brand_label_auto.png`,
 `hcc_sentiment_heatmap.png`, `top_hcc_positive_ratio.png`, `top_hcc_negative_ratio.png`,
 `goal_orientation_by_brand.png`.
+
 
 ### WordCloud Narasi Komentar
 

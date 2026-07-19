@@ -1,6 +1,9 @@
 ﻿parameter,value
-analysis_scope,RM1 temporal essentials
+analysis_scope,"RM1 temporal essentials by All Dataset, LCN, and HCC"
 timezone,Asia/Jakarta
-community_actor_definition,username ada pada output/gephi/gephi_hcc_nodes.csv
+all_dataset_definition,semua komentar dengan timestamp valid
+lcn_definition,username ada pada output/gephi/gephi_lcn_nodes.csv
+hcc_definition,username ada pada output/gephi/gephi_hcc_nodes.csv
 weekday_order,Senin;Selasa;Rabu;Kamis;Jumat;Sabtu;Minggu
+visualization_type,line charts
 omitted_from_compact_version,"brand-context temporal, sentiment/goal temporal, recurrence detail, Gephi temporal export"
