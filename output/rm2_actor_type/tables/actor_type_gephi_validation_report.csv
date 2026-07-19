@@ -1,0 +1,25 @@
+metric,source_value,output_value,passed,notes
+actor_universe_row_count,26427,26427,True,Penambahan network_position tidak mengubah jumlah baris actor universe.
+actor_universe_unique_accounts,26427,26427,True,Jumlah akun unik tidak berubah.
+single_actor_type_per_account,0,0,True,Setiap akun hanya satu baris dan satu actor_type_primary.
+actor_type_not_empty,0,0,True,Tidak ada actor type kosong.
+individual_priority,0,0,True,Video creator/verified registry selalu Individual Actor.
+community_actor_rule,0,0,True,HCC non-individual menjadi Community Actor.
+mass_actor_residual_rule,26166,26166,True,Mass Actor adalah residual actor universe.
+mass_actor_lcn_or_outside,LCN Non-HCC/Outside LCN,26166,True,Mass Actor dapat berada di LCN Non-HCC atau Outside LCN.
+community_actor_position_hcc,0,0,True,Seluruh Community Actor berada di HCC.
+hcc_subset_lcn,218,218,True,Seluruh node HCC merupakan subset node LCN.
+gephi_node_count_equals_lcn,724,724,True,Node Gephi actor type sama dengan node LCN sumber.
+gephi_node_id_set_equals_lcn,724,724,True,Set node output sama dengan set node LCN sumber.
+no_outside_lcn_in_gephi,0,0,True,Tidak ada node Outside LCN dalam Gephi LCN.
+edge_endpoints_available,724,724,True,Semua endpoint edge tersedia pada node output.
+edge_count_unchanged,1357,1357,True,Jumlah edge tidak berubah.
+edge_weight_unchanged,final_weight,Weight,True,Weight edge tidak berubah dari final_weight RM1.
+edge_structural_hash_unchanged,e22cbbe52d9f9e27195d65938d10325b7a661a410c69b04d5456b6c330af73fa,e22cbbe52d9f9e27195d65938d10325b7a661a410c69b04d5456b6c330af73fa,True,Hash struktur edge sama.
+non_hcc_not_valid_community_id,0,0,True,Tidak ada Non-HCC sebagai ID komunitas valid.
+no_duplicate_gephi_id,0,0,True,Tidak ada duplikasi Id.
+network_position_not_empty,0,0,True,Tidak ada network_position kosong.
+rm1_input_hashes_unchanged,"{'gephi_lcn_nodes.csv': '4c18fa649771899e334ad53d6044031458f0822032cab54f229e1aa989643cd2', 'gephi_lcn_edges.csv': '6b07f482a142d1151decd043cfd3cc465723491399642fc30882a567b7d2298b', 'gephi_hcc_nodes.csv': 'a87aedc3eac4d1ad2ea89bcbb5d9b9156c70aa20e26df5ad20946ab18b840bb0'}","{'gephi_lcn_nodes.csv': '4c18fa649771899e334ad53d6044031458f0822032cab54f229e1aa989643cd2', 'gephi_lcn_edges.csv': '6b07f482a142d1151decd043cfd3cc465723491399642fc30882a567b7d2298b', 'gephi_hcc_nodes.csv': 'a87aedc3eac4d1ad2ea89bcbb5d9b9156c70aa20e26df5ad20946ab18b840bb0'}",True,"File input RM1 hanya dibaca, tidak ditulis ulang."
+sentiment_model_not_rerun,not invoked,not invoked,True,Section ini hanya membaca account_actor_type.csv dan Gephi RM1.
+notebook_run_end_to_end,final section reached,final section reached,True,"Jika notebook mencapai cell ini tanpa exception, pipeline end-to-end berhasil."
+png_files_non_empty,5,5,True,Semua PNG visualisasi actor type berhasil dibuat dan tidak kosong.

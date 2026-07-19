@@ -425,6 +425,126 @@ yang dipakai hanya `Individual Actor`, `Community Actor`, dan `Mass Actor`.
 - Output tabel disimpan di `output/rm2_actor_type/tables/`, visualisasi PNG di
   `output/rm2_actor_type/visualisasi/`, dan file Gephi baru di `output/rm2_actor_type/gephi/`.
 
+## RM2 — Actor Type Visualization in Gephi
+
+Visualisasi Type Actor untuk RM2 membedakan **actor type** dari **posisi jaringan**:
+
+- `actor_type_primary`: `Individual Actor`, `Community Actor`, atau `Mass Actor`.
+- `network_position`: `HCC`, `LCN Non-HCC`, atau `Outside LCN`.
+
+Definisi utama:
+
+- `Individual Actor`: akun creator video atau registry individual yang terverifikasi.
+- `Community Actor`: akun anggota HCC final yang bukan Individual Actor.
+- `Mass Actor`: residual seluruh actor universe setelah Individual Actor dan Community Actor dikeluarkan.
+
+LCN bukan actor type. Mass Actor juga bukan hanya akun LCN: Mass Actor mencakup aktor residual yang berada
+di `LCN Non-HCC` maupun `Outside LCN`. Visualisasi Gephi hanya menampilkan subset akun yang masuk LCN,
+karena akun `Outside LCN` tidak mempunyai edge koordinasi yang memenuhi kriteria pembentukan jaringan.
+Mass Actor di luar LCN tetap dihitung dalam statistik actor universe.
+
+Output utama:
+
+- `output/rm2_actor_type/tables/actor_type_universe_summary.csv`
+- `output/rm2_actor_type/tables/lcn_actor_type_summary.csv`
+- `output/rm2_actor_type/tables/actor_type_network_position_matrix.csv`
+- `output/rm2_actor_type/tables/lcn_actor_type_edge_summary.csv`
+- `output/rm2_actor_type/tables/gephi_lcn_edge_integrity_audit.csv`
+- `output/rm2_actor_type/tables/actor_type_gephi_validation_report.csv`
+- `output/rm2_actor_type/gephi/gephi_lcn_nodes_actor_type.csv`
+- `output/rm2_actor_type/gephi/gephi_lcn_edges_actor_type.csv`
+
+Visualisasi PNG:
+
+- `actor_type_account_count.png`
+- `actor_type_comment_count.png`
+- `actor_type_network_position_stacked.png`
+- `lcn_edge_count_by_actor_type_pair.png`
+- `lcn_edge_weight_by_actor_type_pair.png`
+
+### Panduan Visualisasi Actor Type di Gephi
+
+Import:
+
+- Nodes: `output/rm2_actor_type/gephi/gephi_lcn_nodes_actor_type.csv`
+- Edges: `output/rm2_actor_type/gephi/gephi_lcn_edges_actor_type.csv`
+- Graph type: `Undirected`
+
+Pastikan tipe kolom:
+
+- `Id`: String
+- `Label`: String
+- `actor_type_primary`: String
+- `network_position`: String
+- `community`: String atau Integer sesuai sumber
+- `degree`: Integer
+- `weighted_degree`: Double
+- `betweenness`: Double
+- `Weight`: Double
+
+Tampilan 1 — Actor Type:
+
+- Partition / Color: `actor_type_primary`
+- `Individual Actor` = `#E69F00`
+- `Community Actor` = `#009E73`
+- `Mass Actor` = `#8A8A8A`
+- Ranking / Size: `weighted_degree`
+- Minimum node size = `5`, maximum node size = `30`
+- Edge color = light gray, opacity = `20–35%`, thickness = `Weight`
+- Judul: `Struktur Latent Coordination Network Berdasarkan Type Actor`
+
+Tampilan 2 — Network Position:
+
+- Partition / Color: `network_position`
+- Kategori: `HCC`, `LCN Non-HCC`
+- Judul: `Posisi Aktor dalam Latent Coordination Network`
+
+Tampilan 3 — Community dan Mass Actor:
+
+- Filter actor type: `Community Actor`, `Mass Actor`
+- Gunakan warna actor type dan ukuran `weighted_degree`
+- Judul: `Relasi Community Actor dan Mass Actor dalam LCN`
+
+Tampilan 4 — Edge Pair:
+
+- Filter: `actor_type_pair`
+- Tampilkan kategori edge secara terpisah, misalnya `Community–Community`, `Community–Mass`, `Mass–Mass`,
+  `Individual–Community`, dan `Individual–Mass`.
+- Jangan memakai semua kategori edge dengan warna berbeda sekaligus jika visualisasi menjadi terlalu padat.
+
+Layout:
+
+1. OpenOrd
+2. ForceAtlas2
+3. Noverlap
+
+Parameter awal ForceAtlas2:
+
+- Edge Weight Influence = `1`
+- Scaling = `5–15`
+- Gravity = `1`
+- Prevent Overlap = aktif
+- Barnes-Hut Optimization = aktif
+
+Jalankan sampai struktur relatif stabil, bukan sampai komponen terpisah terlalu jauh.
+
+Caption standar:
+
+> Visualisasi hanya mencakup akun yang masuk Latent Coordination Network. Mass Actor di luar LCN tidak
+> ditampilkan karena tidak mempunyai edge koordinasi yang memenuhi kriteria pembentukan jaringan. Seluruh
+> Mass Actor tetap dihitung dalam ringkasan statistik actor universe.
+
+Batas interpretasi:
+
+- Individual Actor tidak otomatis merupakan pengendali komunitas.
+- Community Actor adalah anggota HCC final, bukan akun yang terbukti sebagai buzzer.
+- Mass Actor adalah kategori residual komentator umum, bukan aktor yang terbukti melakukan amplifikasi massal.
+- Mass Actor dalam LCN hanya merupakan subset Mass Actor yang mempunyai posisi pada jaringan koordinasi laten.
+- Edge menunjukkan hubungan berdasarkan evidence RM1, bukan bukti pembayaran, instruksi, afiliasi,
+  pengaruh kausal, atau astroturfing.
+- Node besar menunjukkan weighted degree tinggi, bukan kekuasaan atau kendali.
+- Posisi pusat atau betweenness tinggi menunjukkan posisi struktural, bukan kepemimpinan.
+
 ### Interpretasi `goal_orientation`
 
 Dimensi *goals* dioperasionalisasikan melalui distribusi sentimen komentar pada akun dan HCC. Sentimen

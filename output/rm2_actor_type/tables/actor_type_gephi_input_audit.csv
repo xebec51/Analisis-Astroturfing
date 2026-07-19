@@ -1,0 +1,5 @@
+input_role,path_actual,n_rows,notes
+LCN nodes,output\gephi\gephi_lcn_nodes.csv,724,Node LCN sumber RM1; hanya dibaca.
+LCN edges,output\gephi\gephi_lcn_edges.csv,1357,Edge LCN sumber RM1; hanya dibaca.
+HCC nodes,output\gephi\gephi_hcc_nodes.csv,218,Node HCC final sumber RM1; hanya dibaca.
+Actor attributes,output\rm2_actor_type\tables\account_actor_type.csv,26427,Sumber utama atribut actor type RM2.
