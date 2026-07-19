@@ -1,0 +1,9 @@
+field,value
+pre_implementation_head,901784e2f082482bfc25ebfa19655e888a612da8
+pre_implementation_modified_files,HCC.gephi
+notebook_execution_head,901784e2f082482bfc25ebfa19655e888a612da8
+notebook_execution_git_status_short,"M HCC.gephi
+?? 04_rm2_temporal_activity_profile.ipynb
+?? __pycache__/
+?? output/rm2_temporal/
+?? temporal_pipeline_code.py"

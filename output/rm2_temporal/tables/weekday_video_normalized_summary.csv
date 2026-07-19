@@ -1,0 +1,64 @@
+analysis_level,brand_label_auto,weekday_number,weekday_name_id,n_comments,n_unique_videos,n_unique_community_actors,comments_per_active_video,community_accounts_per_active_video
+All comments,All,1,Senin,3941,55,84,71.65454545454546,1.5272727272727273
+All comments,All,2,Selasa,6604,55,118,120.07272727272728,2.1454545454545455
+All comments,All,3,Rabu,5087,55,95,92.49090909090908,1.7272727272727273
+All comments,All,4,Kamis,6013,55,131,109.32727272727273,2.381818181818182
+All comments,All,5,Jumat,4194,55,84,76.25454545454545,1.5272727272727273
+All comments,All,6,Sabtu,4193,55,98,76.23636363636363,1.7818181818181817
+All comments,All,7,Minggu,3756,54,67,69.55555555555556,1.2407407407407407
+Community Actor,All Community Actor,1,Senin,128,25,84,5.12,3.36
+Community Actor,All Community Actor,2,Selasa,162,30,118,5.4,3.933333333333333
+Community Actor,All Community Actor,3,Rabu,142,35,95,4.057142857142857,2.7142857142857144
+Community Actor,All Community Actor,4,Kamis,177,33,131,5.363636363636363,3.9696969696969697
+Community Actor,All Community Actor,5,Jumat,109,25,84,4.36,3.36
+Community Actor,All Community Actor,6,Sabtu,145,37,98,3.918918918918919,2.6486486486486487
+Community Actor,All Community Actor,7,Minggu,87,26,67,3.3461538461538463,2.576923076923077
+Brand context,Azarine,1,Senin,20,5,13,4.0,2.6
+Brand context,Azarine,2,Selasa,28,7,16,4.0,2.2857142857142856
+Brand context,Azarine,3,Rabu,7,5,7,1.4,1.4
+Brand context,Azarine,4,Kamis,20,5,12,4.0,2.4
+Brand context,Azarine,5,Jumat,7,4,6,1.75,1.5
+Brand context,Azarine,6,Sabtu,10,7,5,1.4285714285714286,0.7142857142857143
+Brand context,Azarine,7,Minggu,7,4,5,1.75,1.25
+Brand context,Daviena,1,Senin,12,4,7,3.0,1.75
+Brand context,Daviena,2,Selasa,33,8,24,4.125,3.0
+Brand context,Daviena,3,Rabu,24,8,18,3.0,2.25
+Brand context,Daviena,4,Kamis,37,12,26,3.0833333333333335,2.1666666666666665
+Brand context,Daviena,5,Jumat,17,6,16,2.8333333333333335,2.6666666666666665
+Brand context,Daviena,6,Sabtu,38,11,19,3.4545454545454546,1.7272727272727273
+Brand context,Daviena,7,Minggu,39,12,26,3.25,2.1666666666666665
+Brand context,Maryame,1,Senin,20,5,12,4.0,2.4
+Brand context,Maryame,2,Selasa,26,6,18,4.333333333333333,3.0
+Brand context,Maryame,3,Rabu,17,4,13,4.25,3.25
+Brand context,Maryame,4,Kamis,31,5,24,6.2,4.8
+Brand context,Maryame,5,Jumat,22,5,17,4.4,3.4
+Brand context,Maryame,6,Sabtu,31,6,24,5.166666666666667,4.0
+Brand context,Maryame,7,Minggu,2,2,2,1.0,1.0
+Brand context,The Originote,1,Senin,35,8,19,4.375,2.375
+Brand context,The Originote,2,Selasa,39,9,28,4.333333333333333,3.111111111111111
+Brand context,The Originote,3,Rabu,62,13,31,4.769230769230769,2.3846153846153846
+Brand context,The Originote,4,Kamis,35,9,28,3.888888888888889,3.111111111111111
+Brand context,The Originote,5,Jumat,6,5,4,1.2,0.8
+Brand context,The Originote,6,Sabtu,29,9,25,3.2222222222222223,2.7777777777777777
+Brand context,The Originote,7,Minggu,22,7,17,3.142857142857143,2.4285714285714284
+Brand context,Mixed_2_Brands,1,Senin,4,1,4,4.0,4.0
+Brand context,Mixed_2_Brands,2,Selasa,11,3,10,3.6666666666666665,3.3333333333333335
+Brand context,Mixed_2_Brands,3,Rabu,8,2,4,4.0,2.0
+Brand context,Mixed_2_Brands,4,Kamis,14,3,14,4.666666666666667,4.666666666666667
+Brand context,Mixed_2_Brands,5,Jumat,10,2,10,5.0,5.0
+Brand context,Mixed_2_Brands,6,Sabtu,9,2,9,4.5,4.5
+Brand context,Mixed_2_Brands,7,Minggu,0,0,0,,
+Brand context,Mixed_3plus_Brands,1,Senin,31,7,23,4.428571428571429,3.2857142857142856
+Brand context,Mixed_3plus_Brands,2,Selasa,25,6,22,4.166666666666667,3.6666666666666665
+Brand context,Mixed_3plus_Brands,3,Rabu,18,6,16,3.0,2.6666666666666665
+Brand context,Mixed_3plus_Brands,4,Kamis,40,12,27,3.3333333333333335,2.25
+Brand context,Mixed_3plus_Brands,5,Jumat,41,9,25,4.555555555555555,2.7777777777777777
+Brand context,Mixed_3plus_Brands,6,Sabtu,28,7,16,4.0,2.2857142857142856
+Brand context,Mixed_3plus_Brands,7,Minggu,17,4,17,4.25,4.25
+Brand context,Not identified,1,Senin,6,1,6,6.0,6.0
+Brand context,Not identified,2,Selasa,0,0,0,,
+Brand context,Not identified,3,Rabu,6,1,6,6.0,6.0
+Brand context,Not identified,4,Kamis,0,0,0,,
+Brand context,Not identified,5,Jumat,6,1,6,6.0,6.0
+Brand context,Not identified,6,Sabtu,0,0,0,,
+Brand context,Not identified,7,Minggu,0,0,0,,

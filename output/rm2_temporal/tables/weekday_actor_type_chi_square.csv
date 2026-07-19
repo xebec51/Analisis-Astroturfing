@@ -1,0 +1,2 @@
+test,chi_square_statistic,degrees_of_freedom,p_value,cramers_v,n_observations,caveat
+Chi-square actor_type_primary x weekday_name_id,57.68083208400028,12,5.953987706277147e-08,0.029215916712187817,33788,Uji chi-square diperlakukan sebagai analisis pendukung karena beberapa komentar berasal dari akun yang sama sehingga observasi comment-level tidak sepenuhnya independen. Ukuran efek Cramer's V dan analisis account-level harus dibaca bersama p-value.

@@ -1,0 +1,19 @@
+metric,value
+total_comments,33847
+comments_with_valid_timestamp,33788
+comments_with_invalid_timestamp,59
+timestamp_coverage_percentage,0.9982568617602742
+minimum_timestamp_utc,2022-07-21 12:34:13+00:00
+maximum_timestamp_utc,2026-06-12 11:45:49+00:00
+minimum_timestamp_local,2022-07-21 19:34:13+07:00
+maximum_timestamp_local,2026-06-12 18:45:49+07:00
+future_timestamps_relative_to_notebook_execution,0
+duplicate_comment_ids,0
+comments_without_actor_type,0
+comments_without_video_id,0
+community_actor_comments_without_valid_hcc_id,0
+timestamps_outside_plausible_research_range,0
+n_comments_weekday_changed_wib_vs_wita,1037
+weekday_changed_percentage_wib_vs_wita,0.03069136971705931
+comments_excluded_from_temporal_summaries_due_to_invalid_timestamp,59
+comments_excluded_due_to_future_or_outside_range_flags,0

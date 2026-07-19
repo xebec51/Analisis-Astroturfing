@@ -387,6 +387,53 @@ yang dipakai hanya `Individual Actor`, `Community Actor`, dan `Mass Actor`.
 - Output tabel disimpan di `output/rm2_actor_type/tables/`, visualisasi PNG di
   `output/rm2_actor_type/visualisasi/`, dan file Gephi baru di `output/rm2_actor_type/gephi/`.
 
+## RM2 — Temporal Activity Profile
+
+Notebook `04_rm2_temporal_activity_profile.ipynb` menambahkan analisis hari dalam pekan, jam, daypart,
+recurrence mingguan, dan konteks brand untuk tiga actor type RM2. Notebook ini hanya membaca output RM1
+dan RM2 yang sudah tersedia; tidak menjalankan ulang LCN, Louvain, FSA_V, model sentimen, WordCloud,
+keanggotaan HCC, atau aturan actor type.
+
+- Zona waktu utama output temporal adalah `Asia/Jakarta` / WIB. Notebook tetap menghitung sensitivity
+  WIB-WITA untuk melihat berapa komentar yang berubah hari bila dibaca dengan `Asia/Makassar`.
+- `weekday_activity_lift` membandingkan share komentar Community Actor pada suatu hari dengan baseline
+  seluruh komentar pada hari yang sama.
+- Normalisasi per-video tersedia melalui `comments_per_active_video` dan
+  `community_accounts_per_active_video`, sehingga raw count tidak dibaca sendirian.
+- Profil dibuat pada comment-level, account-level, HCC-level, brand-context level, video-normalized level,
+  dan week-level recurrence.
+- HCC-level profile memakai weekday entropy dan `weekday_concentration_score`; HCC dengan sedikit komentar
+  atau minggu aktif terbatas diberi reliability `Insufficient observations` atau `Limited recurrence`.
+- Visualisasi weekday x hour, weekday x daypart, weekday lift, HCC concentration, recurrence, dan konteks
+  brand disimpan sebagai PNG di `output/rm2_temporal/visualisasi/`.
+- Output tabel disimpan di `output/rm2_temporal/tables/`, termasuk
+  `actor_type_weekday_summary.csv`, `community_weekday_activity_lift.csv`,
+  `account_temporal_profile.csv`, `hcc_weekday_profile.csv`, `hcc_temporal_goal_profile.csv`,
+  `weekday_actor_type_chi_square.csv`, dan tabel audit timestamp/checksum.
+- Output Gephi temporal disimpan di `output/rm2_temporal/gephi/`; edge HCC disalin tanpa perubahan dan
+  hash edge divalidasi sama dengan sumbernya.
+
+Analisis brand-HCC pada notebook temporal memakai `output/tables/hcc_brand_profile_auto.csv`, yaitu hasil
+auto-labeling RM1 berdasarkan hashtag metadata video:
+
+- `brand_label_auto` adalah klasifikasi eksklusif per HCC. Exclusive count selalu berjumlah total HCC valid.
+- HCC mixed dapat diasosiasikan dengan beberapa brand pada analisis multi-label melalui `brand_combo`.
+  Multi-label incidence dapat mempunyai total lebih besar daripada jumlah HCC.
+- Jumlah komunitas HCC berbeda dari jumlah node pada legenda Gephi; satu HCC dapat berisi beberapa akun.
+- Jika satu HCC memiliki `brand_combo = Maryame + The Originote + Azarine`, maka pada ringkasan eksklusif
+  HCC tersebut dihitung satu kali sebagai `Mixed_3plus_Brands`. Pada analisis multi-label, HCC yang sama
+  dihitung masing-masing satu kali pada Maryame, The Originote, dan Azarine.
+- Konteks brand berasal dari hashtag metadata video, bukan nama username, teks komentar, hashtag komentar,
+  dugaan manual, atau warna visualisasi Gephi.
+
+Community Actor merupakan akun anggota HCC, bukan akun yang telah terbukti sebagai buzzer. Aktivitas yang
+terkonsentrasi pada hari atau jam tertentu tidak membuktikan jadwal kerja, pembayaran, atau koordinasi
+terencana.
+
+Pengelompokan brand pada HCC menunjukkan konteks video yang dikomentari oleh anggota komunitas berdasarkan
+hashtag metadata video. Label tersebut tidak berarti seluruh anggota HCC menulis hashtag, mendukung brand,
+berafiliasi dengan brand, atau membahas brand secara eksplisit dalam setiap komentar.
+
 ### Interpretasi `goal_orientation`
 
 Dimensi *goals* dioperasionalisasikan melalui distribusi sentimen komentar pada akun dan HCC. Sentimen

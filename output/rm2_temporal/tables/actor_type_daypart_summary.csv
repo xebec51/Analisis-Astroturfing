@@ -1,0 +1,16 @@
+actor_type_primary,daypart,n_comments,n_unique_actors,n_unique_videos,comment_share_within_actor_type,dominant_daypart
+Individual Actor,Dini Hari,52,13,13,0.03757225433526012,Malam
+Individual Actor,Pagi,309,27,33,0.22326589595375723,Malam
+Individual Actor,Siang,308,30,36,0.22254335260115607,Malam
+Individual Actor,Sore,291,30,32,0.21026011560693642,Malam
+Individual Actor,Malam,424,36,42,0.3063583815028902,Malam
+Community Actor,Dini Hari,54,41,19,0.056842105263157895,Malam
+Community Actor,Pagi,264,154,45,0.27789473684210525,Malam
+Community Actor,Siang,162,104,35,0.1705263157894737,Malam
+Community Actor,Sore,198,138,33,0.20842105263157895,Malam
+Community Actor,Malam,272,147,43,0.2863157894736842,Malam
+Mass Actor,Dini Hari,1923,1784,55,0.06113689832771667,Malam
+Mass Actor,Pagi,8318,7452,55,0.26444967253767404,Malam
+Mass Actor,Siang,7033,6326,55,0.22359636294271,Malam
+Mass Actor,Sore,4764,4319,55,0.15145927386024036,Malam
+Mass Actor,Malam,9416,8281,55,0.29935779233165893,Malam

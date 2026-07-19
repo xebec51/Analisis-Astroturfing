@@ -1,0 +1,43 @@
+hcc_id,Azarine,Daviena,Maryame,The Originote,n_active_brands,primary_brand,brand_label_auto
+1,1,1,1,0,3,Daviena,Mixed_3plus_Brands
+2,0,0,1,0,1,Maryame,Maryame
+3,0,0,1,1,2,Maryame,Mixed_2_Brands
+5,0,0,0,1,1,The Originote,The Originote
+14,0,1,1,1,3,Daviena,Mixed_3plus_Brands
+15,0,0,0,1,1,The Originote,The Originote
+16,0,1,0,1,2,Daviena,Daviena
+17,1,0,1,1,3,Maryame,Mixed_3plus_Brands
+18,0,0,0,1,1,The Originote,The Originote
+20,0,1,1,0,2,Daviena,Daviena
+34,0,1,1,1,3,Daviena,Daviena
+42,0,1,0,0,1,Daviena,Daviena
+45,1,0,1,1,3,Maryame,Mixed_3plus_Brands
+46,0,1,0,1,2,The Originote,The Originote
+48,1,0,1,1,3,The Originote,Mixed_3plus_Brands
+49,0,1,1,1,3,Daviena,Mixed_3plus_Brands
+50,0,0,1,0,1,Maryame,Maryame
+52,0,1,1,1,3,Daviena,Daviena
+54,1,1,0,0,2,Azarine,Azarine
+60,0,1,0,0,1,Daviena,Daviena
+63,0,1,1,1,3,Maryame,Mixed_3plus_Brands
+74,0,1,1,0,2,Daviena,Daviena
+75,0,1,1,0,2,Daviena,Mixed_2_Brands
+87,0,1,1,0,2,Daviena,Mixed_2_Brands
+90,1,1,1,0,3,Azarine,Mixed_3plus_Brands
+99,0,0,0,1,1,The Originote,The Originote
+103,0,1,0,0,1,Daviena,Daviena
+113,0,0,1,0,1,Maryame,Maryame
+114,0,0,1,0,1,Maryame,Maryame
+117,0,0,0,1,1,The Originote,The Originote
+132,1,0,1,1,3,Azarine,Mixed_3plus_Brands
+134,0,1,0,1,2,Daviena,Daviena
+150,0,0,1,1,2,Maryame,Maryame
+168,0,1,0,0,1,Daviena,Daviena
+180,1,0,0,0,1,Azarine,Azarine
+181,0,1,0,0,1,Daviena,Daviena
+182,0,0,0,0,0,Not identified,Not identified
+183,0,0,0,1,1,The Originote,The Originote
+191,0,0,0,1,1,The Originote,The Originote
+204,1,0,0,0,1,Azarine,Azarine
+205,0,0,0,1,1,The Originote,The Originote
+206,0,0,1,0,1,Maryame,Maryame
