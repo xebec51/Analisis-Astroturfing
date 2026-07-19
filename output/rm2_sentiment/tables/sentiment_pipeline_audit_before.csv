@@ -1,0 +1,9 @@
+component,current_method,detected_problem,risk_level,proposed_fix,changed,validation_result
+source_text,dataset.csv text column,Old notebook used a light-clean text without retaining explicit original/model text pair.,Medium,Store comment_text_original and comment_text_model with conservative variants.,True,Implemented.
+preprocessing,lowercase/light cleaning; no variant benchmark,"Risk of losing emoji, punctuation, and negation cues.",High,Benchmark minimal_raw and social_normalized while preserving negation/domain terms.,True,Implemented.
+model,mdhugol/indonesia-bert-sentiment-classification,Single transformer only; fallback could become analysis output.,High,Benchmark two transformers and calibrated classical baseline; disable final rule-based fallback.,True,Implemented with ALLOW_RULE_BASED_FINAL=False.
+fallback,rule-based or cached readback when transformer fails,Final outputs could silently stop being transformer-based.,High,Raise an error if transformer candidates cannot be loaded.,True,Implemented.
+label_mapping,manual LABEL_0/1/2 map,Mapping was documented but not persisted as a formal audit table.,Medium,"Read id2label from config, map to standard labels, run anchor sanity checks, save audit.",True,Implemented.
+validation_sample,manual_label template,manual_label remained empty; previous metrics were not valid.,High,Create AI-assisted semantic adjudication dev and held-out datasets; keep manual_label blank.,True,Implemented.
+probabilities,selected label confidence only,Class probabilities were not fully persisted.,Medium,"Store probability_positive, probability_neutral, probability_negative, top2_margin.",True,Implemented.
+goal_orientation,hard label ratios without bootstrap stability,Goal confidence could be over-interpreted.,High,Use transparent global rules and bootstrap goal stability.,True,Implemented.

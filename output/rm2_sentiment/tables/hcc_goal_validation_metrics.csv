@@ -1,0 +1,3 @@
+metric,value,n_hcc,notes
+exact_agreement,0.19047619047619047,42,Agreement between algorithmic goal_orientation and AI-assisted HCC-level semantic review.
+weighted_kappa_linear,0.14760147601476026,42,AI HCC review is not a human gold standard.

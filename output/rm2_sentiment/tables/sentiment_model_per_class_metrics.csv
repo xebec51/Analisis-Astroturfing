@@ -1,0 +1,4 @@
+sample_set,candidate,preprocessing_variant,class_label,precision,recall,f1,support
+holdout,ensemble_A0.00_B0.20_C0.80,social_normalized,Positive,0.41304347826086957,0.7755102040816326,0.5390070921985816,49
+holdout,ensemble_A0.00_B0.20_C0.80,social_normalized,Neutral,0.84,0.19090909090909092,0.3111111111111111,110
+holdout,ensemble_A0.00_B0.20_C0.80,social_normalized,Negative,0.3235294117647059,0.8461538461538461,0.46808510638297873,26

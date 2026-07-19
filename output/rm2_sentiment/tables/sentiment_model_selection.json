@@ -1,0 +1,30 @@
+{
+  "selected_candidate": "ensemble_A0.00_B0.20_C0.80",
+  "selected_preprocessing_variant": "social_normalized",
+  "selection_rule": "Highest development macro-F1 among transformer-based eligible pipelines; if within 0.01, prefer simpler and better calibrated pipeline.",
+  "confidence_threshold": 0.44,
+  "coverage_floor": 0.9,
+  "ensemble_weights": {
+    "model_A": 0.0,
+    "model_B": 0.2,
+    "model_C": 0.8
+  },
+  "model_revisions": {
+    "model_A": "80ccb4c2817cf976534ac491020a9572e5dae54f",
+    "model_B": "ac452dcb0f4966130bba44f4ee0013bb5d52c282"
+  },
+  "tokenizer_revisions": {
+    "model_A": "80ccb4c2817cf976534ac491020a9572e5dae54f",
+    "model_B": "ac452dcb0f4966130bba44f4ee0013bb5d52c282"
+  },
+  "allow_rule_based_final": false,
+  "heldout_not_used_for_selection": true,
+  "library_versions": {
+    "python": "3.12.2",
+    "pandas": "2.2.3",
+    "numpy": "2.1.1",
+    "sklearn": "1.5.2",
+    "torch": "2.13.0+cpu",
+    "transformers": "5.14.1"
+  }
+}

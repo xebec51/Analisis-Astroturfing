@@ -1,0 +1,3 @@
+actor_type_primary,n_accounts,accounts_min3_evaluable,accounts_min5_evaluable,accounts_min10_evaluable,coverage_min3,coverage_min5,coverage_min10,notes
+Community Actor,218,159,78,1,0.7293577981651376,0.3577981651376147,0.0045871559633027525,Pooled actor-type goals are distinct from account-level goal distribution.
+Mass/Other Actor,26206,702,196,38,0.02678775852858124,0.0074792032359001755,0.001450049606960238,Pooled actor-type goals are distinct from account-level goal distribution.

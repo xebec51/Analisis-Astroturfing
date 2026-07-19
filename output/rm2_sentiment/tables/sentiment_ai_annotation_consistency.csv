@@ -1,0 +1,4 @@
+sample_set,n_comments,raw_agreement,cohen_kappa_ai_self_consistency,disagreement_count,uncertainty_rate,no_text_rate,notes
+development,300,1.0,1.0,0,0.24,0.0,"Cohen's kappa measures two-pass AI self-consistency, not human inter-annotator agreement."
+holdout,300,1.0,1.0,0,0.18666666666666668,0.016666666666666666,"Cohen's kappa measures two-pass AI self-consistency, not human inter-annotator agreement."
+combined,600,1.0,1.0,0,0.21333333333333335,0.008333333333333333,"Cohen's kappa measures two-pass AI self-consistency, not human inter-annotator agreement."

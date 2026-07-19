@@ -325,11 +325,12 @@ notebook RM1, pipeline LCN/Louvain/FSA_V, hasil HCC, maupun file output RM1 yang
 
 ### Tujuan
 
-1. Melakukan analisis sentimen komentar TikTok (Positive / Neutral / Negative) menggunakan model IndoBERT
-   fine-tuned untuk sentimen Bahasa Indonesia.
+1. Melakukan analisis sentimen komentar TikTok sebagai indikator **orientasi pesan** (Positive / Neutral /
+   Negative), dengan status terpisah untuk `Uncertain` dan `No Text`.
 2. Mengagregasi sentimen pada tiga level: **komentar**, **akun**, **HCC**.
-3. Memetakan dimensi **`goals`** melalui `goal_orientation` (orientasi pesan berbasis distribusi sentimen).
-4. Menghubungkan hasil sentimen dengan hasil RM1 (`HCC`, `community`, `brand_label_auto`, `primary_brand`).
+3. Memetakan dimensi **`goals`** melalui `goal_orientation` berbasis distribusi sentimen teramati.
+4. Menghubungkan hasil sentimen dengan hasil RM1 (`HCC`, `community`, `brand_label_auto`, `primary_brand`)
+   tanpa mengubah LCN, Louvain, FSA_V, keanggotaan HCC, atau brand labeling RM1.
 
 ### Input
 
@@ -343,47 +344,70 @@ notebook RM1, pipeline LCN/Louvain/FSA_V, hasil HCC, maupun file output RM1 yang
 
 ### Model Sentimen
 
-Model utama: [`mdhugol/indonesia-bert-sentiment-classification`](https://huggingface.co/mdhugol/indonesia-bert-sentiment-classification)
-(IndoBERT *fine-tuned* untuk sentimen Bahasa Indonesia). Jika model gagal dimuat (mis. offline), notebook
-otomatis menggunakan fallback: baca ulang hasil prediksi sebelumnya jika tersedia, atau rule-based baseline
-sementara (bukan hasil final) — lihat Section 6 pada notebook. `MODEL_NAME` dan `LABEL_MAP` dapat diubah
-di Section 2 jika model diganti.
+Pipeline final dipilih secara reproducible dari benchmark development set menggunakan macro-F1, negative
+recall, calibration, dan coverage sebagai kriteria. Model yang dibandingkan:
+
+- Model A: `mdhugol/indonesia-bert-sentiment-classification`
+  (`80ccb4c2817cf976534ac491020a9572e5dae54f`).
+- Model B: `w11wo/indonesian-roberta-base-sentiment-classifier`
+  (`ac452dcb0f4966130bba44f4ee0013bb5d52c282`).
+- Model C: TF-IDF word/character n-gram + calibrated `LinearSVC` sebagai baseline domain klasik.
+
+Pipeline final: `ensemble_A0.00_B0.20_C0.80` dengan preprocessing `social_normalized` dan confidence
+threshold `0.44`. Model C mandiri memiliki macro-F1 development tertinggi, tetapi hasil final tetap memakai
+ensemble dengan komponen transformer sesuai gate metodologis bahwa prediksi final tidak boleh berasal dari
+rule-based atau fallback. `ALLOW_RULE_BASED_FINAL = False`; jika transformer gagal dimuat, notebook berhenti
+dengan error diagnostik.
+
+Label mapping dibaca dari konfigurasi model dan diuji dengan anchor sentences positif, netral, dan negatif.
+Probabilitas tiga kelas disimpan untuk setiap komentar, sedangkan komentar `Uncertain` dan `No Text` tidak
+diam-diam dipaksa menjadi Neutral.
+
+### Validasi Domain
+
+Validasi memakai **AI-assisted semantic adjudication**, bukan human manual validation. Dua sampel berukuran
+300 komentar digunakan secara terpisah:
+
+- development/challenge set untuk model selection, calibration, ensemble weighting, dan threshold;
+- representative held-out test untuk evaluasi final setelah pipeline dikunci.
+
+Setiap komentar dianotasi dua pass tanpa melihat prediksi model, lalu diadjudikasi menjadi `Positive`,
+`Neutral`, `Negative`, `Uncertain`, atau `No Text`. Kolom `manual_label` tetap kosong untuk validasi manusia
+di masa depan. Cohen's kappa yang dilaporkan adalah self-consistency dua pass AI, bukan human inter-annotator
+agreement.
+
+Held-out final (`n_evaluated=185`, `coverage=0.7741`) menghasilkan macro-F1 `0.4394` dengan bootstrap 95%
+CI `0.3642-0.5089`, accuracy `0.4378`, balanced accuracy `0.6042`, weighted F1 `0.3935`, MCC `0.3015`,
+negative recall `0.8462`, dan ECE `0.1768`. Pada seluruh dataset, coverage evaluable adalah `68.69%`
+(`23,249` komentar evaluable dari `33,847`), dengan `8,878` `Uncertain` dan `1,720` `No Text`.
 
 ### Output Tabel (`output/rm2_sentiment/tables/`)
 
 | File | Level | Isi |
 |---|---|---|
-| `comment_sentiment.csv` | Komentar | `sentiment_label`/`score`/`confidence` + keterkaitan HCC/brand per komentar |
+| `comment_sentiment.csv` | Komentar | `sentiment_label_final`, probabilitas kelas, confidence, uncertainty, HCC/brand per komentar |
 | `account_sentiment_summary.csv` | Akun | Agregasi sentimen per akun + atribut struktural HCC |
 | `hcc_sentiment_goals_summary.csv` | HCC | Agregasi sentimen per HCC + `goal_orientation`, `goal_confidence` |
 | `hcc_vs_nonhcc_sentiment_summary.csv` | Grup | Perbandingan distribusi sentimen HCC vs Non-HCC |
 | `brand_sentiment_summary.csv` | Brand | Agregasi sentimen & `dominant_goal_orientation` per `brand_label_auto` |
-| `sentiment_validation_sample.csv` | Validasi | Sampel stratified (hingga 300 komentar) untuk anotasi manual |
-| `sentiment_validation_metrics.csv` | Validasi | Accuracy/macro precision/recall/F1 (setelah `manual_label` diisi) |
+| `sentiment_validation_development_ai.csv` | Validasi | Development/challenge set hasil AI-assisted adjudication |
+| `sentiment_validation_holdout_ai.csv` | Validasi | Representative held-out test hasil AI-assisted adjudication |
+| `sentiment_model_selection.csv` | Model | Pipeline final, preprocessing, threshold, dan revision model |
+| `sentiment_model_holdout_metrics.csv` | Model | Metrik held-out final dan bootstrap CI |
+| `hcc_goal_ai_review.csv` | Goals | Review semantik seluruh 42 HCC pada level goal |
+| `hcc_goal_validation_metrics.csv` | Goals | Agreement AI HCC review vs rule global |
+| `sentiment_final_validation_report.csv` | Audit | Gate validasi data, model, goals, integrity, dan downstream |
 
 ### Output Visualisasi (`output/rm2_sentiment/visualisasi/`, PNG saja)
 
-`sentiment_distribution_overall.png`, `sentiment_hcc_vs_nonhcc.png`, `sentiment_by_brand_label_auto.png`,
-`hcc_sentiment_heatmap.png`, `top_hcc_positive_ratio.png`, `top_hcc_negative_ratio.png`,
-`goal_orientation_by_brand.png`.
+Visualisasi utama dibatasi menjadi tiga file:
 
+- `sentiment_validation_confusion_matrix.png`
+- `sentiment_hcc_vs_nonhcc_100pct.png`
+- `hcc_goal_orientation_confidence.png`
 
-### WordCloud Narasi Komentar
-
-WordCloud digunakan sebagai visualisasi **eksploratif** untuk membaca kata dominan dalam komentar (Section
-14.8 pada notebook) — dibangun dari `comment_sentiment` yang sudah ada (tidak ada prediksi sentimen ulang).
-Token WordCloud telah dibersihkan dengan stopwords khusus percakapan TikTok dan penghapusan emoji/simbol agar visualisasi lebih fokus pada tema substantif seperti bahan aktif, kondisi kulit, pengalaman pemakaian, harga, keamanan, dan keluhan.
-
-- Output disimpan di: `output/rm2_sentiment/visualisasi/wordcloud/` (dan subfolder `by_brand/` untuk
-  WordCloud per brand).
-- Token frequency disimpan di: `output/rm2_sentiment/tables/wordcloud_token_frequency.csv`.
-- WordCloud + bar chart top words dibuat untuk: keseluruhan (*overall*), per sentimen (Positive / Neutral
-  / Negative), dan HCC / Non-HCC. WordCloud (tanpa bar chart) juga dibuat per `brand_label_auto`.
-- Kata brand (azarine, daviena, maryame, originote, theoriginote) dihapus dari WordCloud secara default
-  (`REMOVE_BRAND_TERMS_FROM_WORDCLOUD = True`) supaya tema narasi lebih terlihat, tidak didominasi nama
-  brand.
-- **WordCloud bukan bukti sentimen atau astroturfing** — hanya alat bantu eksploratif untuk membaca pola
-  kata; harus dibaca bersama hasil analisis sentimen, HCC, dan `brand_label_auto`, bukan berdiri sendiri.
+WordCloud dan grafik eksploratif lama tidak dipertahankan sebagai output utama karena tidak berfungsi sebagai
+validasi sentimen.
 
 ### Output Gephi RM2 (`output/rm2_sentiment/gephi/`)
 
@@ -588,8 +612,8 @@ langsung niat aktor. `goal_orientation` per HCC diklasifikasikan menjadi `Promot
 - Sentimen **tidak** digunakan untuk membentuk HCC (HCC sudah final dari RM1) dan **tidak** digunakan
   untuk membuktikan astroturfing.
 - Akurasi model bergantung pada domain teks; komentar TikTok yang pendek, bahasa gaul, dan campur kode
-  berpotensi menurunkan akurasi dibanding korpus pelatihan model. Validasi manual (Section 13 notebook)
-  disediakan untuk mengukur potensi penyimpangan ini.
+  berpotensi menurunkan akurasi dibanding korpus pelatihan model. AI-assisted semantic adjudication telah
+  dilakukan; independent human validation remains a methodological limitation.
 - HCC dengan sedikit komentar bertext diberi label `Insufficient Text`/`goal_confidence` rendah secara
   eksplisit agar tidak disalahartikan sebagai pola yang kuat.
 - Perbandingan HCC vs Non-HCC dipakai untuk melihat perbedaan orientasi sentimen, **bukan** untuk
