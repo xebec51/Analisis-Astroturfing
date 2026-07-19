@@ -1,0 +1,36 @@
+brand_label_auto,daypart,n_comments,n_community_actors,n_unique_videos,n_hcc,comment_share_within_brand,dominant_daypart
+Azarine,Dini Hari,7,5,5,1,0.0707070707070707,Malam
+Azarine,Pagi,25,15,8,2,0.25252525252525254,Malam
+Azarine,Siang,16,8,7,1,0.16161616161616163,Malam
+Azarine,Sore,22,14,4,3,0.2222222222222222,Malam
+Azarine,Malam,29,14,7,2,0.29292929292929293,Malam
+Daviena,Dini Hari,6,6,3,3,0.03,Pagi
+Daviena,Pagi,57,34,14,9,0.285,Pagi
+Daviena,Siang,55,36,15,10,0.275,Pagi
+Daviena,Sore,41,26,15,7,0.205,Pagi
+Daviena,Malam,41,23,14,7,0.205,Pagi
+Maryame,Dini Hari,1,1,1,1,0.006711409395973154,Pagi
+Maryame,Pagi,58,30,11,5,0.38926174496644295,Pagi
+Maryame,Siang,18,10,6,2,0.12080536912751678,Pagi
+Maryame,Sore,28,22,5,4,0.18791946308724833,Pagi
+Maryame,Malam,44,24,8,4,0.2953020134228188,Pagi
+The Originote,Dini Hari,26,15,6,4,0.11403508771929824,Malam
+The Originote,Pagi,48,31,9,5,0.21052631578947367,Malam
+The Originote,Siang,33,21,7,3,0.14473684210526316,Malam
+The Originote,Sore,46,36,10,6,0.20175438596491227,Malam
+The Originote,Malam,75,39,15,6,0.32894736842105265,Malam
+Mixed_2_Brands,Dini Hari,6,6,2,2,0.10714285714285714,Malam
+Mixed_2_Brands,Pagi,0,0,0,0,0.0,Malam
+Mixed_2_Brands,Siang,4,4,1,1,0.07142857142857142,Malam
+Mixed_2_Brands,Sore,18,9,4,2,0.32142857142857145,Malam
+Mixed_2_Brands,Malam,28,14,7,3,0.5,Malam
+Mixed_3plus_Brands,Dini Hari,2,2,2,2,0.01,Pagi
+Mixed_3plus_Brands,Pagi,64,38,15,8,0.32,Pagi
+Mixed_3plus_Brands,Siang,36,25,12,7,0.18,Pagi
+Mixed_3plus_Brands,Sore,43,31,12,8,0.215,Pagi
+Mixed_3plus_Brands,Malam,55,33,15,8,0.275,Pagi
+Not identified,Dini Hari,6,6,1,1,0.3333333333333333,Pagi
+Not identified,Pagi,12,6,2,1,0.6666666666666666,Pagi
+Not identified,Siang,0,0,0,0,0.0,Pagi
+Not identified,Sore,0,0,0,0,0.0,Pagi
+Not identified,Malam,0,0,0,0,0.0,Pagi

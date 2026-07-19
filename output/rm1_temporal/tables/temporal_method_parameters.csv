@@ -1,0 +1,20 @@
+parameter,value,note
+TIMESTAMP_SOURCE_TIMEZONE,UTC,Only applied to timezone-naive timestamp values.
+ANALYSIS_TIMEZONE,Asia/Jakarta,Main local timezone for weekday and hour features: Jakarta/WIB.
+TIMEZONE_SENSITIVITY,Asia/Jakarta; Asia/Makassar,WIB versus WITA sensitivity audit.
+WEEKDAY_ORDER,Senin; Selasa; Rabu; Kamis; Jumat; Sabtu; Minggu,"Explicit mapping, independent from OS locale."
+DAYPART_ORDER,Dini Hari; Pagi; Siang; Sore; Malam,Explicit order for daypart summaries.
+daypart_boundaries,Dini Hari 00:00-04:59; Pagi 05:00-10:59; Siang 11:00-14:59; Sore 15:00-17:59; Malam 18:00-23:59,Hour ranges are inclusive.
+minimum_comments_temporal_profile,10,Minimum valid timestamp comments for descriptive HCC/account temporal profile.
+minimum_active_weeks,3,Minimum active weeks for descriptively sufficient recurrence.
+entropy_formula,-sum(p_i * log(p_i)) / log(7),Normalized weekday entropy.
+concentration_formula,1 - weekday_entropy_normalized,Higher means more concentrated weekday activity.
+weekday_lift_formula,community_weekday_share / overall_weekday_share,Relative Community Actor weekday activity compared with all comments.
+weekend_definition,Sabtu=True; Minggu=True; other weekdays=False,Indonesian weekday labels.
+timestamp_filtering_rules,Invalid timestamps excluded from temporal summaries; future/outside flags audited but not filtered by default.,TEMPORAL_MIN_DATE=None; TEMPORAL_MAX_DATE=None
+exclusive_hcc_brand_classification,brand_label_auto from output/tables/hcc_brand_profile_auto.csv,Each HCC belongs to exactly one RM1 auto-labeled category.
+multilabel_hcc_brand_incidence,brand_combo from output/tables/hcc_brand_profile_auto.csv,Uses RM1 active-brand representation from video metadata hashtag scores; mixed HCC can be counted once per active brand.
+rm1_brand_activation_source,RM1 Section 16.1.3: active_brands are brands with hashtag metadata frequency score > 0; brand_combo stores those active brands; brand_label_auto uses top_brand_share >= 0.60 for dominant single-brand labels.,Dominant share threshold documented from RM1: 0.60. No new activation threshold is introduced here.
+hcc_brand_context_note,"Pengelompokan brand pada HCC menunjukkan konteks video yang dikomentari oleh anggota komunitas berdasarkan hashtag metadata video. Label tersebut tidak berarti seluruh anggota HCC menulis hashtag, mendukung brand, berafiliasi dengan brand, atau membahas brand secara eksplisit dalam setiap komentar.",Brand context interpretation boundary.
+chi_square_caveat,Uji chi-square diperlakukan sebagai analisis pendukung karena beberapa komentar berasal dari akun yang sama sehingga observasi comment-level tidak sepenuhnya independen. Ukuran efek Cramer's V dan analisis account-level harus dibaca bersama p-value.,Do not infer substantive difference from p-value alone.
+methodological_note,"Analisis hari dan jam aktivitas hanya menggambarkan distribusi waktu komentar yang teramati. Konsentrasi aktivitas pada hari atau jam tertentu tidak membuktikan adanya jadwal kerja, hubungan komersial, koordinasi terencana, maupun status akun sebagai buzzer.",Interpretation boundary.

@@ -1,0 +1,673 @@
+brand,weekday_number,weekday_name_id,hour_local,n_active_hcc,n_community_actors,n_comments,n_unique_videos,hcc_ids
+Azarine,1,Senin,0,1,1,1,1,54
+Azarine,1,Senin,1,0,0,0,0,
+Azarine,1,Senin,2,0,0,0,0,
+Azarine,1,Senin,3,0,0,0,0,
+Azarine,1,Senin,4,0,0,0,0,
+Azarine,1,Senin,5,1,4,4,1,45
+Azarine,1,Senin,6,1,7,7,1,17
+Azarine,1,Senin,7,1,1,1,1,54
+Azarine,1,Senin,8,1,2,2,2,54
+Azarine,1,Senin,9,0,0,0,0,
+Azarine,1,Senin,10,0,0,0,0,
+Azarine,1,Senin,11,0,0,0,0,
+Azarine,1,Senin,12,1,1,1,1,17
+Azarine,1,Senin,13,0,0,0,0,
+Azarine,1,Senin,14,2,4,4,2,1;54
+Azarine,1,Senin,15,3,7,7,3,17;48;54
+Azarine,1,Senin,16,0,0,0,0,
+Azarine,1,Senin,17,0,0,0,0,
+Azarine,1,Senin,18,0,0,0,0,
+Azarine,1,Senin,19,1,2,2,2,54
+Azarine,1,Senin,20,1,1,1,1,54
+Azarine,1,Senin,21,1,1,1,1,54
+Azarine,1,Senin,22,2,8,8,2,17;54
+Azarine,1,Senin,23,2,6,9,2,54;180
+Azarine,2,Selasa,0,0,0,0,0,
+Azarine,2,Selasa,1,0,0,0,0,
+Azarine,2,Selasa,2,1,1,1,1,54
+Azarine,2,Selasa,3,0,0,0,0,
+Azarine,2,Selasa,4,0,0,0,0,
+Azarine,2,Selasa,5,1,1,1,1,54
+Azarine,2,Selasa,6,0,0,0,0,
+Azarine,2,Selasa,7,0,0,0,0,
+Azarine,2,Selasa,8,1,4,4,1,204
+Azarine,2,Selasa,9,2,5,5,2,45;54
+Azarine,2,Selasa,10,2,7,7,3,54;132
+Azarine,2,Selasa,11,0,0,0,0,
+Azarine,2,Selasa,12,1,1,1,1,54
+Azarine,2,Selasa,13,1,1,1,1,54
+Azarine,2,Selasa,14,1,1,2,2,54
+Azarine,2,Selasa,15,1,2,2,2,54
+Azarine,2,Selasa,16,1,1,1,1,54
+Azarine,2,Selasa,17,2,7,10,2,1;180
+Azarine,2,Selasa,18,1,1,1,1,17
+Azarine,2,Selasa,19,0,0,0,0,
+Azarine,2,Selasa,20,3,6,6,3,17;54;90
+Azarine,2,Selasa,21,1,1,1,1,54
+Azarine,2,Selasa,22,1,1,1,1,54
+Azarine,2,Selasa,23,1,1,1,1,54
+Azarine,3,Rabu,0,0,0,0,0,
+Azarine,3,Rabu,1,0,0,0,0,
+Azarine,3,Rabu,2,0,0,0,0,
+Azarine,3,Rabu,3,0,0,0,0,
+Azarine,3,Rabu,4,0,0,0,0,
+Azarine,3,Rabu,5,0,0,0,0,
+Azarine,3,Rabu,6,1,1,1,1,54
+Azarine,3,Rabu,7,0,0,0,0,
+Azarine,3,Rabu,8,2,5,5,2,45;54
+Azarine,3,Rabu,9,0,0,0,0,
+Azarine,3,Rabu,10,1,2,2,1,54
+Azarine,3,Rabu,11,0,0,0,0,
+Azarine,3,Rabu,12,0,0,0,0,
+Azarine,3,Rabu,13,0,0,0,0,
+Azarine,3,Rabu,14,0,0,0,0,
+Azarine,3,Rabu,15,1,1,1,1,54
+Azarine,3,Rabu,16,1,1,1,1,54
+Azarine,3,Rabu,17,0,0,0,0,
+Azarine,3,Rabu,18,0,0,0,0,
+Azarine,3,Rabu,19,0,0,0,0,
+Azarine,3,Rabu,20,0,0,0,0,
+Azarine,3,Rabu,21,0,0,0,0,
+Azarine,3,Rabu,22,3,9,9,3,54;90;132
+Azarine,3,Rabu,23,0,0,0,0,
+Azarine,4,Kamis,0,0,0,0,0,
+Azarine,4,Kamis,1,0,0,0,0,
+Azarine,4,Kamis,2,0,0,0,0,
+Azarine,4,Kamis,3,0,0,0,0,
+Azarine,4,Kamis,4,0,0,0,0,
+Azarine,4,Kamis,5,0,0,0,0,
+Azarine,4,Kamis,6,1,1,1,1,54
+Azarine,4,Kamis,7,1,1,1,1,54
+Azarine,4,Kamis,8,4,12,12,3,1;17;54;132
+Azarine,4,Kamis,9,1,2,2,1,54
+Azarine,4,Kamis,10,2,2,2,2,17;54
+Azarine,4,Kamis,11,1,3,3,1,1
+Azarine,4,Kamis,12,1,1,1,1,54
+Azarine,4,Kamis,13,1,2,2,2,54
+Azarine,4,Kamis,14,0,0,0,0,
+Azarine,4,Kamis,15,1,5,5,1,48
+Azarine,4,Kamis,16,1,3,3,1,1
+Azarine,4,Kamis,17,1,4,7,1,204
+Azarine,4,Kamis,18,1,1,1,1,54
+Azarine,4,Kamis,19,0,0,0,0,
+Azarine,4,Kamis,20,0,0,0,0,
+Azarine,4,Kamis,21,0,0,0,0,
+Azarine,4,Kamis,22,2,5,5,2,17;45
+Azarine,4,Kamis,23,1,3,3,2,54
+Azarine,5,Jumat,0,2,2,2,2,17;54
+Azarine,5,Jumat,1,1,1,1,1,54
+Azarine,5,Jumat,2,0,0,0,0,
+Azarine,5,Jumat,3,0,0,0,0,
+Azarine,5,Jumat,4,0,0,0,0,
+Azarine,5,Jumat,5,1,1,1,1,54
+Azarine,5,Jumat,6,0,0,0,0,
+Azarine,5,Jumat,7,0,0,0,0,
+Azarine,5,Jumat,8,0,0,0,0,
+Azarine,5,Jumat,9,0,0,0,0,
+Azarine,5,Jumat,10,1,3,3,1,1
+Azarine,5,Jumat,11,0,0,0,0,
+Azarine,5,Jumat,12,1,5,10,2,48
+Azarine,5,Jumat,13,1,2,2,2,54
+Azarine,5,Jumat,14,0,0,0,0,
+Azarine,5,Jumat,15,1,4,4,1,90
+Azarine,5,Jumat,16,1,5,6,2,17
+Azarine,5,Jumat,17,1,1,1,1,17
+Azarine,5,Jumat,18,1,1,1,1,54
+Azarine,5,Jumat,19,0,0,0,0,
+Azarine,5,Jumat,20,0,0,0,0,
+Azarine,5,Jumat,21,1,1,1,1,54
+Azarine,5,Jumat,22,0,0,0,0,
+Azarine,5,Jumat,23,0,0,0,0,
+Azarine,6,Sabtu,0,1,2,2,1,54
+Azarine,6,Sabtu,1,0,0,0,0,
+Azarine,6,Sabtu,2,1,1,1,1,54
+Azarine,6,Sabtu,3,0,0,0,0,
+Azarine,6,Sabtu,4,0,0,0,0,
+Azarine,6,Sabtu,5,1,5,5,1,48
+Azarine,6,Sabtu,6,0,0,0,0,
+Azarine,6,Sabtu,7,0,0,0,0,
+Azarine,6,Sabtu,8,0,0,0,0,
+Azarine,6,Sabtu,9,0,0,0,0,
+Azarine,6,Sabtu,10,1,4,4,1,17
+Azarine,6,Sabtu,11,2,5,6,3,45;54
+Azarine,6,Sabtu,12,2,3,3,3,17;54
+Azarine,6,Sabtu,13,1,1,1,1,54
+Azarine,6,Sabtu,14,0,0,0,0,
+Azarine,6,Sabtu,15,1,1,1,1,54
+Azarine,6,Sabtu,16,0,0,0,0,
+Azarine,6,Sabtu,17,2,5,5,2,45;54
+Azarine,6,Sabtu,18,0,0,0,0,
+Azarine,6,Sabtu,19,0,0,0,0,
+Azarine,6,Sabtu,20,0,0,0,0,
+Azarine,6,Sabtu,21,1,5,5,1,48
+Azarine,6,Sabtu,22,0,0,0,0,
+Azarine,6,Sabtu,23,0,0,0,0,
+Azarine,7,Minggu,0,0,0,0,0,
+Azarine,7,Minggu,1,0,0,0,0,
+Azarine,7,Minggu,2,0,0,0,0,
+Azarine,7,Minggu,3,0,0,0,0,
+Azarine,7,Minggu,4,0,0,0,0,
+Azarine,7,Minggu,5,0,0,0,0,
+Azarine,7,Minggu,6,0,0,0,0,
+Azarine,7,Minggu,7,0,0,0,0,
+Azarine,7,Minggu,8,1,1,1,1,54
+Azarine,7,Minggu,9,1,1,1,1,54
+Azarine,7,Minggu,10,1,3,3,1,1
+Azarine,7,Minggu,11,0,0,0,0,
+Azarine,7,Minggu,12,1,1,1,1,54
+Azarine,7,Minggu,13,0,0,0,0,
+Azarine,7,Minggu,14,0,0,0,0,
+Azarine,7,Minggu,15,0,0,0,0,
+Azarine,7,Minggu,16,0,0,0,0,
+Azarine,7,Minggu,17,0,0,0,0,
+Azarine,7,Minggu,18,1,2,2,2,54
+Azarine,7,Minggu,19,0,0,0,0,
+Azarine,7,Minggu,20,1,7,7,1,17
+Azarine,7,Minggu,21,1,1,1,1,54
+Azarine,7,Minggu,22,0,0,0,0,
+Azarine,7,Minggu,23,1,1,1,1,54
+Daviena,1,Senin,0,1,1,1,1,54
+Daviena,1,Senin,1,0,0,0,0,
+Daviena,1,Senin,2,0,0,0,0,
+Daviena,1,Senin,3,0,0,0,0,
+Daviena,1,Senin,4,0,0,0,0,
+Daviena,1,Senin,5,0,0,0,0,
+Daviena,1,Senin,6,0,0,0,0,
+Daviena,1,Senin,7,1,1,1,1,54
+Daviena,1,Senin,8,1,2,2,2,54
+Daviena,1,Senin,9,0,0,0,0,
+Daviena,1,Senin,10,1,1,1,1,103
+Daviena,1,Senin,11,0,0,0,0,
+Daviena,1,Senin,12,1,3,3,1,14
+Daviena,1,Senin,13,1,5,5,1,52
+Daviena,1,Senin,14,2,4,4,2,1;54
+Daviena,1,Senin,15,1,1,1,1,54
+Daviena,1,Senin,16,0,0,0,0,
+Daviena,1,Senin,17,1,1,1,1,103
+Daviena,1,Senin,18,1,3,3,1,52
+Daviena,1,Senin,19,2,4,4,3,52;54
+Daviena,1,Senin,20,1,1,1,1,54
+Daviena,1,Senin,21,2,5,5,2,54;87
+Daviena,1,Senin,22,1,1,1,1,54
+Daviena,1,Senin,23,1,2,2,1,54
+Daviena,2,Selasa,0,1,1,1,1,87
+Daviena,2,Selasa,1,0,0,0,0,
+Daviena,2,Selasa,2,1,1,1,1,54
+Daviena,2,Selasa,3,0,0,0,0,
+Daviena,2,Selasa,4,0,0,0,0,
+Daviena,2,Selasa,5,2,4,4,2,14;54
+Daviena,2,Selasa,6,0,0,0,0,
+Daviena,2,Selasa,7,1,5,9,1,168
+Daviena,2,Selasa,8,1,1,1,1,63
+Daviena,2,Selasa,9,1,1,1,1,54
+Daviena,2,Selasa,10,2,4,4,3,54;63
+Daviena,2,Selasa,11,3,9,13,3,14;42;134
+Daviena,2,Selasa,12,2,2,2,2,34;54
+Daviena,2,Selasa,13,4,10,10,4,34;46;54;134
+Daviena,2,Selasa,14,2,2,3,3,54;103
+Daviena,2,Selasa,15,1,2,2,2,54
+Daviena,2,Selasa,16,3,6,6,3,54;87;103
+Daviena,2,Selasa,17,2,4,4,2,1;87
+Daviena,2,Selasa,18,0,0,0,0,
+Daviena,2,Selasa,19,0,0,0,0,
+Daviena,2,Selasa,20,3,10,10,3,52;54;90
+Daviena,2,Selasa,21,1,1,1,1,54
+Daviena,2,Selasa,22,3,5,5,3,54;74;103
+Daviena,2,Selasa,23,1,1,1,1,54
+Daviena,3,Rabu,0,0,0,0,0,
+Daviena,3,Rabu,1,0,0,0,0,
+Daviena,3,Rabu,2,0,0,0,0,
+Daviena,3,Rabu,3,0,0,0,0,
+Daviena,3,Rabu,4,0,0,0,0,
+Daviena,3,Rabu,5,0,0,0,0,
+Daviena,3,Rabu,6,1,1,1,1,54
+Daviena,3,Rabu,7,3,7,7,3,52;63;103
+Daviena,3,Rabu,8,1,1,1,1,54
+Daviena,3,Rabu,9,1,1,1,1,63
+Daviena,3,Rabu,10,1,2,2,1,54
+Daviena,3,Rabu,11,1,3,3,1,74
+Daviena,3,Rabu,12,0,0,0,0,
+Daviena,3,Rabu,13,0,0,0,0,
+Daviena,3,Rabu,14,2,5,5,2,63;75
+Daviena,3,Rabu,15,1,1,1,1,54
+Daviena,3,Rabu,16,3,3,3,3,54;63;134
+Daviena,3,Rabu,17,3,8,8,3,20;75;103
+Daviena,3,Rabu,18,2,2,2,2,103;134
+Daviena,3,Rabu,19,1,5,5,1,52
+Daviena,3,Rabu,20,2,2,2,2,103;134
+Daviena,3,Rabu,21,1,1,1,1,49
+Daviena,3,Rabu,22,3,6,6,3,54;90;103
+Daviena,3,Rabu,23,1,1,1,1,49
+Daviena,4,Kamis,0,0,0,0,0,
+Daviena,4,Kamis,1,0,0,0,0,
+Daviena,4,Kamis,2,0,0,0,0,
+Daviena,4,Kamis,3,0,0,0,0,
+Daviena,4,Kamis,4,0,0,0,0,
+Daviena,4,Kamis,5,1,1,1,1,103
+Daviena,4,Kamis,6,2,2,2,2,34;54
+Daviena,4,Kamis,7,1,1,1,1,54
+Daviena,4,Kamis,8,4,6,6,3,1;34;54;60
+Daviena,4,Kamis,9,1,2,2,1,54
+Daviena,4,Kamis,10,3,4,4,4,54;60;103
+Daviena,4,Kamis,11,2,4,4,2,1;60
+Daviena,4,Kamis,12,3,3,3,3,54;60;103
+Daviena,4,Kamis,13,2,3,3,3,34;54
+Daviena,4,Kamis,14,2,2,2,2,103;134
+Daviena,4,Kamis,15,2,2,2,2,60;103
+Daviena,4,Kamis,16,5,14,14,4,1;16;34;87;134
+Daviena,4,Kamis,17,7,20,20,6,14;34;46;52;60;87;134
+Daviena,4,Kamis,18,1,1,1,1,54
+Daviena,4,Kamis,19,2,2,3,3,34;63
+Daviena,4,Kamis,20,3,6,7,4,34;63;75
+Daviena,4,Kamis,21,3,8,8,3,14;20;63
+Daviena,4,Kamis,22,1,1,1,1,34
+Daviena,4,Kamis,23,1,3,3,2,54
+Daviena,5,Jumat,0,1,1,1,1,54
+Daviena,5,Jumat,1,1,1,1,1,54
+Daviena,5,Jumat,2,0,0,0,0,
+Daviena,5,Jumat,3,0,0,0,0,
+Daviena,5,Jumat,4,0,0,0,0,
+Daviena,5,Jumat,5,2,6,6,2,49;54
+Daviena,5,Jumat,6,0,0,0,0,
+Daviena,5,Jumat,7,0,0,0,0,
+Daviena,5,Jumat,8,1,1,1,1,49
+Daviena,5,Jumat,9,0,0,0,0,
+Daviena,5,Jumat,10,1,3,3,1,1
+Daviena,5,Jumat,11,0,0,0,0,
+Daviena,5,Jumat,12,4,15,15,4,16;49;74;134
+Daviena,5,Jumat,13,3,4,4,4,54;63;103
+Daviena,5,Jumat,14,1,1,1,1,49
+Daviena,5,Jumat,15,4,9,9,4,20;63;90;103
+Daviena,5,Jumat,16,0,0,0,0,
+Daviena,5,Jumat,17,1,1,1,1,103
+Daviena,5,Jumat,18,1,1,1,1,54
+Daviena,5,Jumat,19,0,0,0,0,
+Daviena,5,Jumat,20,0,0,0,0,
+Daviena,5,Jumat,21,3,6,6,3,54;63;87
+Daviena,5,Jumat,22,2,2,2,2,63;87
+Daviena,5,Jumat,23,1,1,1,1,103
+Daviena,6,Sabtu,0,3,4,4,3,54;63;103
+Daviena,6,Sabtu,1,0,0,0,0,
+Daviena,6,Sabtu,2,1,1,1,1,54
+Daviena,6,Sabtu,3,0,0,0,0,
+Daviena,6,Sabtu,4,0,0,0,0,
+Daviena,6,Sabtu,5,0,0,0,0,
+Daviena,6,Sabtu,6,1,1,1,1,103
+Daviena,6,Sabtu,7,0,0,0,0,
+Daviena,6,Sabtu,8,3,9,9,3,20;52;103
+Daviena,6,Sabtu,9,0,0,0,0,
+Daviena,6,Sabtu,10,1,5,7,1,42
+Daviena,6,Sabtu,11,4,13,14,5,20;42;46;54
+Daviena,6,Sabtu,12,1,2,2,2,54
+Daviena,6,Sabtu,13,1,1,1,1,54
+Daviena,6,Sabtu,14,0,0,0,0,
+Daviena,6,Sabtu,15,2,5,5,1,54;87
+Daviena,6,Sabtu,16,1,5,5,1,52
+Daviena,6,Sabtu,17,3,3,3,3,54;103;134
+Daviena,6,Sabtu,18,3,7,7,3,42;63;87
+Daviena,6,Sabtu,19,0,0,0,0,
+Daviena,6,Sabtu,20,3,8,8,4,63;75;134
+Daviena,6,Sabtu,21,0,0,0,0,
+Daviena,6,Sabtu,22,2,2,2,2,63;103
+Daviena,6,Sabtu,23,0,0,0,0,
+Daviena,7,Minggu,0,0,0,0,0,
+Daviena,7,Minggu,1,2,2,2,2,60;134
+Daviena,7,Minggu,2,1,1,1,1,60
+Daviena,7,Minggu,3,2,2,2,2,60;134
+Daviena,7,Minggu,4,0,0,0,0,
+Daviena,7,Minggu,5,0,0,0,0,
+Daviena,7,Minggu,6,2,8,8,2,16;20
+Daviena,7,Minggu,7,0,0,0,0,
+Daviena,7,Minggu,8,2,3,3,3,54;103
+Daviena,7,Minggu,9,4,6,6,4,54;63;74;103
+Daviena,7,Minggu,10,2,6,6,2,1;20
+Daviena,7,Minggu,11,1,1,1,1,103
+Daviena,7,Minggu,12,2,2,2,2,54;103
+Daviena,7,Minggu,13,1,5,9,1,181
+Daviena,7,Minggu,14,0,0,0,0,
+Daviena,7,Minggu,15,1,5,5,1,49
+Daviena,7,Minggu,16,0,0,0,0,
+Daviena,7,Minggu,17,3,5,5,3,20;34;49
+Daviena,7,Minggu,18,2,3,3,3,34;54
+Daviena,7,Minggu,19,0,0,0,0,
+Daviena,7,Minggu,20,0,0,0,0,
+Daviena,7,Minggu,21,1,1,1,1,54
+Daviena,7,Minggu,22,1,1,1,1,103
+Daviena,7,Minggu,23,1,1,1,1,54
+Maryame,1,Senin,0,0,0,0,0,
+Maryame,1,Senin,1,0,0,0,0,
+Maryame,1,Senin,2,0,0,0,0,
+Maryame,1,Senin,3,0,0,0,0,
+Maryame,1,Senin,4,0,0,0,0,
+Maryame,1,Senin,5,1,4,4,1,45
+Maryame,1,Senin,6,1,7,7,1,17
+Maryame,1,Senin,7,2,12,12,2,113;150
+Maryame,1,Senin,8,0,0,0,0,
+Maryame,1,Senin,9,0,0,0,0,
+Maryame,1,Senin,10,0,0,0,0,
+Maryame,1,Senin,11,1,1,1,1,150
+Maryame,1,Senin,12,2,4,4,2,14;17
+Maryame,1,Senin,13,1,5,5,1,52
+Maryame,1,Senin,14,1,3,3,1,1
+Maryame,1,Senin,15,2,6,6,2,17;48
+Maryame,1,Senin,16,0,0,0,0,
+Maryame,1,Senin,17,0,0,0,0,
+Maryame,1,Senin,18,1,3,3,1,52
+Maryame,1,Senin,19,2,3,3,2,52;150
+Maryame,1,Senin,20,0,0,0,0,
+Maryame,1,Senin,21,1,4,4,1,87
+Maryame,1,Senin,22,1,7,7,1,17
+Maryame,1,Senin,23,1,6,6,1,150
+Maryame,2,Selasa,0,1,1,1,1,87
+Maryame,2,Selasa,1,0,0,0,0,
+Maryame,2,Selasa,2,1,1,1,1,150
+Maryame,2,Selasa,3,1,5,5,1,3
+Maryame,2,Selasa,4,0,0,0,0,
+Maryame,2,Selasa,5,1,3,3,1,14
+Maryame,2,Selasa,6,1,6,6,1,50
+Maryame,2,Selasa,7,0,0,0,0,
+Maryame,2,Selasa,8,1,1,1,1,63
+Maryame,2,Selasa,9,1,4,4,1,45
+Maryame,2,Selasa,10,3,8,8,4,63;132;150
+Maryame,2,Selasa,11,2,4,4,1,14;150
+Maryame,2,Selasa,12,1,1,1,1,34
+Maryame,2,Selasa,13,1,1,1,1,34
+Maryame,2,Selasa,14,1,2,2,2,150
+Maryame,2,Selasa,15,0,0,0,0,
+Maryame,2,Selasa,16,1,4,4,1,87
+Maryame,2,Selasa,17,2,4,4,2,1;87
+Maryame,2,Selasa,18,1,1,1,1,17
+Maryame,2,Selasa,19,0,0,0,0,
+Maryame,2,Selasa,20,4,16,21,4,17;52;90;113
+Maryame,2,Selasa,21,1,2,2,2,150
+Maryame,2,Selasa,22,1,3,3,1,74
+Maryame,2,Selasa,23,0,0,0,0,
+Maryame,3,Rabu,0,0,0,0,0,
+Maryame,3,Rabu,1,0,0,0,0,
+Maryame,3,Rabu,2,0,0,0,0,
+Maryame,3,Rabu,3,0,0,0,0,
+Maryame,3,Rabu,4,0,0,0,0,
+Maryame,3,Rabu,5,0,0,0,0,
+Maryame,3,Rabu,6,0,0,0,0,
+Maryame,3,Rabu,7,2,6,6,2,52;63
+Maryame,3,Rabu,8,2,10,10,2,2;45
+Maryame,3,Rabu,9,1,1,1,1,63
+Maryame,3,Rabu,10,1,1,1,1,150
+Maryame,3,Rabu,11,1,3,3,1,74
+Maryame,3,Rabu,12,1,5,9,1,206
+Maryame,3,Rabu,13,0,0,0,0,
+Maryame,3,Rabu,14,2,5,5,2,63;75
+Maryame,3,Rabu,15,0,0,0,0,
+Maryame,3,Rabu,16,1,1,1,1,63
+Maryame,3,Rabu,17,2,7,7,2,20;75
+Maryame,3,Rabu,18,0,0,0,0,
+Maryame,3,Rabu,19,1,5,5,1,52
+Maryame,3,Rabu,20,1,1,1,1,150
+Maryame,3,Rabu,21,1,1,1,1,49
+Maryame,3,Rabu,22,2,8,8,2,90;132
+Maryame,3,Rabu,23,1,1,1,1,49
+Maryame,4,Kamis,0,0,0,0,0,
+Maryame,4,Kamis,1,0,0,0,0,
+Maryame,4,Kamis,2,0,0,0,0,
+Maryame,4,Kamis,3,0,0,0,0,
+Maryame,4,Kamis,4,0,0,0,0,
+Maryame,4,Kamis,5,0,0,0,0,
+Maryame,4,Kamis,6,1,1,1,1,34
+Maryame,4,Kamis,7,1,1,1,1,150
+Maryame,4,Kamis,8,5,18,18,4,1;2;17;34;132
+Maryame,4,Kamis,9,1,1,1,1,150
+Maryame,4,Kamis,10,1,1,1,1,17
+Maryame,4,Kamis,11,1,3,3,1,1
+Maryame,4,Kamis,12,0,0,0,0,
+Maryame,4,Kamis,13,1,1,1,1,34
+Maryame,4,Kamis,14,0,0,0,0,
+Maryame,4,Kamis,15,1,5,5,1,48
+Maryame,4,Kamis,16,5,20,25,5,1;34;87;113;114
+Maryame,4,Kamis,17,4,10,10,4,14;34;52;87
+Maryame,4,Kamis,18,0,0,0,0,
+Maryame,4,Kamis,19,3,8,9,4,34;63;150
+Maryame,4,Kamis,20,4,11,12,5,3;34;63;75
+Maryame,4,Kamis,21,3,8,8,3,14;20;63
+Maryame,4,Kamis,22,3,6,6,3,17;34;45
+Maryame,4,Kamis,23,0,0,0,0,
+Maryame,5,Jumat,0,1,1,1,1,17
+Maryame,5,Jumat,1,0,0,0,0,
+Maryame,5,Jumat,2,0,0,0,0,
+Maryame,5,Jumat,3,0,0,0,0,
+Maryame,5,Jumat,4,0,0,0,0,
+Maryame,5,Jumat,5,1,5,5,1,49
+Maryame,5,Jumat,6,0,0,0,0,
+Maryame,5,Jumat,7,0,0,0,0,
+Maryame,5,Jumat,8,3,8,8,3,49;50;150
+Maryame,5,Jumat,9,1,1,1,1,150
+Maryame,5,Jumat,10,2,4,4,2,1;150
+Maryame,5,Jumat,11,0,0,0,0,
+Maryame,5,Jumat,12,4,14,19,5,48;49;74;150
+Maryame,5,Jumat,13,1,1,1,1,63
+Maryame,5,Jumat,14,1,1,1,1,49
+Maryame,5,Jumat,15,3,8,8,3,20;63;90
+Maryame,5,Jumat,16,1,5,6,2,17
+Maryame,5,Jumat,17,2,2,2,2,17;150
+Maryame,5,Jumat,18,0,0,0,0,
+Maryame,5,Jumat,19,1,6,11,1,114
+Maryame,5,Jumat,20,1,5,5,1,3
+Maryame,5,Jumat,21,2,5,5,2,63;87
+Maryame,5,Jumat,22,2,2,2,2,63;87
+Maryame,5,Jumat,23,0,0,0,0,
+Maryame,6,Sabtu,0,1,1,1,1,63
+Maryame,6,Sabtu,1,0,0,0,0,
+Maryame,6,Sabtu,2,0,0,0,0,
+Maryame,6,Sabtu,3,0,0,0,0,
+Maryame,6,Sabtu,4,0,0,0,0,
+Maryame,6,Sabtu,5,1,5,5,1,48
+Maryame,6,Sabtu,6,1,6,11,1,114
+Maryame,6,Sabtu,7,1,1,1,1,150
+Maryame,6,Sabtu,8,3,9,9,3,20;52;150
+Maryame,6,Sabtu,9,0,0,0,0,
+Maryame,6,Sabtu,10,1,4,4,1,17
+Maryame,6,Sabtu,11,2,7,7,2,20;45
+Maryame,6,Sabtu,12,2,2,2,2,17;150
+Maryame,6,Sabtu,13,0,0,0,0,
+Maryame,6,Sabtu,14,1,1,1,1,150
+Maryame,6,Sabtu,15,2,5,5,2,87;150
+Maryame,6,Sabtu,16,2,7,7,3,52;150
+Maryame,6,Sabtu,17,3,11,11,3,2;45;150
+Maryame,6,Sabtu,18,2,2,2,2,63;87
+Maryame,6,Sabtu,19,0,0,0,0,
+Maryame,6,Sabtu,20,2,6,6,3,63;75
+Maryame,6,Sabtu,21,1,5,5,1,48
+Maryame,6,Sabtu,22,1,1,1,1,63
+Maryame,6,Sabtu,23,1,6,6,1,50
+Maryame,7,Minggu,0,0,0,0,0,
+Maryame,7,Minggu,1,0,0,0,0,
+Maryame,7,Minggu,2,0,0,0,0,
+Maryame,7,Minggu,3,0,0,0,0,
+Maryame,7,Minggu,4,0,0,0,0,
+Maryame,7,Minggu,5,0,0,0,0,
+Maryame,7,Minggu,6,1,3,3,1,20
+Maryame,7,Minggu,7,0,0,0,0,
+Maryame,7,Minggu,8,0,0,0,0,
+Maryame,7,Minggu,9,2,4,4,2,63;74
+Maryame,7,Minggu,10,2,6,6,2,1;20
+Maryame,7,Minggu,11,1,1,1,1,150
+Maryame,7,Minggu,12,0,0,0,0,
+Maryame,7,Minggu,13,0,0,0,0,
+Maryame,7,Minggu,14,1,1,1,1,150
+Maryame,7,Minggu,15,1,5,5,1,49
+Maryame,7,Minggu,16,0,0,0,0,
+Maryame,7,Minggu,17,3,5,5,3,20;34;49
+Maryame,7,Minggu,18,1,1,1,1,34
+Maryame,7,Minggu,19,0,0,0,0,
+Maryame,7,Minggu,20,1,7,7,1,17
+Maryame,7,Minggu,21,0,0,0,0,
+Maryame,7,Minggu,22,0,0,0,0,
+Maryame,7,Minggu,23,0,0,0,0,
+The Originote,1,Senin,0,1,2,2,2,5
+The Originote,1,Senin,1,0,0,0,0,
+The Originote,1,Senin,2,0,0,0,0,
+The Originote,1,Senin,3,0,0,0,0,
+The Originote,1,Senin,4,0,0,0,0,
+The Originote,1,Senin,5,1,4,4,1,45
+The Originote,1,Senin,6,1,7,7,1,17
+The Originote,1,Senin,7,1,6,6,1,150
+The Originote,1,Senin,8,0,0,0,0,
+The Originote,1,Senin,9,0,0,0,0,
+The Originote,1,Senin,10,2,9,14,2,5;99
+The Originote,1,Senin,11,2,2,2,2,5;150
+The Originote,1,Senin,12,2,4,4,2,14;17
+The Originote,1,Senin,13,1,5,5,1,52
+The Originote,1,Senin,14,0,0,0,0,
+The Originote,1,Senin,15,2,6,6,2,17;48
+The Originote,1,Senin,16,2,6,10,2,5;191
+The Originote,1,Senin,17,1,2,2,2,5
+The Originote,1,Senin,18,2,4,4,2,5;52
+The Originote,1,Senin,19,2,3,3,2,52;150
+The Originote,1,Senin,20,1,2,2,1,5
+The Originote,1,Senin,21,1,2,2,2,5
+The Originote,1,Senin,22,2,8,8,2,5;17
+The Originote,1,Senin,23,1,6,6,1,150
+The Originote,2,Selasa,0,0,0,0,0,
+The Originote,2,Selasa,1,0,0,0,0,
+The Originote,2,Selasa,2,1,1,1,1,150
+The Originote,2,Selasa,3,1,5,5,1,3
+The Originote,2,Selasa,4,1,4,6,1,191
+The Originote,2,Selasa,5,2,5,6,2,14;191
+The Originote,2,Selasa,6,1,1,1,1,5
+The Originote,2,Selasa,7,0,0,0,0,
+The Originote,2,Selasa,8,1,1,1,1,63
+The Originote,2,Selasa,9,1,4,4,1,45
+The Originote,2,Selasa,10,3,8,8,4,63;132;150
+The Originote,2,Selasa,11,3,5,5,2,14;134;150
+The Originote,2,Selasa,12,2,2,2,2,5;34
+The Originote,2,Selasa,13,3,9,9,3,34;46;134
+The Originote,2,Selasa,14,2,3,3,3,5;150
+The Originote,2,Selasa,15,0,0,0,0,
+The Originote,2,Selasa,16,0,0,0,0,
+The Originote,2,Selasa,17,1,6,6,1,15
+The Originote,2,Selasa,18,2,7,7,1,15;17
+The Originote,2,Selasa,19,0,0,0,0,
+The Originote,2,Selasa,20,2,6,6,2,17;52
+The Originote,2,Selasa,21,1,2,2,2,150
+The Originote,2,Selasa,22,1,2,2,2,5
+The Originote,2,Selasa,23,1,6,6,1,18
+The Originote,3,Rabu,0,2,6,15,2,5;205
+The Originote,3,Rabu,1,0,0,0,0,
+The Originote,3,Rabu,2,0,0,0,0,
+The Originote,3,Rabu,3,0,0,0,0,
+The Originote,3,Rabu,4,0,0,0,0,
+The Originote,3,Rabu,5,0,0,0,0,
+The Originote,3,Rabu,6,0,0,0,0,
+The Originote,3,Rabu,7,3,11,11,3,52;63;183
+The Originote,3,Rabu,8,1,4,4,1,45
+The Originote,3,Rabu,9,3,4,4,3,5;63;183
+The Originote,3,Rabu,10,1,1,1,1,150
+The Originote,3,Rabu,11,1,2,2,2,5
+The Originote,3,Rabu,12,1,2,2,2,5
+The Originote,3,Rabu,13,2,7,7,2,5;117
+The Originote,3,Rabu,14,2,2,2,2,5;63
+The Originote,3,Rabu,15,1,2,2,2,5
+The Originote,3,Rabu,16,3,3,3,3,5;63;134
+The Originote,3,Rabu,17,2,6,6,2,5;183
+The Originote,3,Rabu,18,2,2,2,2,134;183
+The Originote,3,Rabu,19,4,14,14,5,5;18;52;183
+The Originote,3,Rabu,20,3,4,4,4,5;134;150
+The Originote,3,Rabu,21,2,7,7,1,18;49
+The Originote,3,Rabu,22,1,4,4,1,132
+The Originote,3,Rabu,23,1,1,1,1,49
+The Originote,4,Kamis,0,0,0,0,0,
+The Originote,4,Kamis,1,0,0,0,0,
+The Originote,4,Kamis,2,0,0,0,0,
+The Originote,4,Kamis,3,0,0,0,0,
+The Originote,4,Kamis,4,0,0,0,0,
+The Originote,4,Kamis,5,1,5,5,1,191
+The Originote,4,Kamis,6,2,2,2,2,5;34
+The Originote,4,Kamis,7,1,1,1,1,150
+The Originote,4,Kamis,8,3,9,9,2,17;34;132
+The Originote,4,Kamis,9,1,1,1,1,150
+The Originote,4,Kamis,10,1,1,1,1,17
+The Originote,4,Kamis,11,0,0,0,0,
+The Originote,4,Kamis,12,1,1,1,1,5
+The Originote,4,Kamis,13,1,1,1,1,34
+The Originote,4,Kamis,14,1,1,1,1,134
+The Originote,4,Kamis,15,2,11,11,2,48;117
+The Originote,4,Kamis,16,4,9,9,5,5;16;34;134
+The Originote,4,Kamis,17,6,18,18,5,5;14;34;46;52;134
+The Originote,4,Kamis,18,0,0,0,0,
+The Originote,4,Kamis,19,4,14,20,4,34;63;99;150
+The Originote,4,Kamis,20,3,7,8,4,3;34;63
+The Originote,4,Kamis,21,3,6,6,3,5;14;63
+The Originote,4,Kamis,22,3,6,6,3,17;34;45
+The Originote,4,Kamis,23,0,0,0,0,
+The Originote,5,Jumat,0,1,1,1,1,17
+The Originote,5,Jumat,1,0,0,0,0,
+The Originote,5,Jumat,2,0,0,0,0,
+The Originote,5,Jumat,3,0,0,0,0,
+The Originote,5,Jumat,4,1,1,1,1,5
+The Originote,5,Jumat,5,2,6,6,2,5;49
+The Originote,5,Jumat,6,1,1,1,1,5
+The Originote,5,Jumat,7,0,0,0,0,
+The Originote,5,Jumat,8,2,2,2,2,49;150
+The Originote,5,Jumat,9,1,1,1,1,150
+The Originote,5,Jumat,10,1,1,1,1,150
+The Originote,5,Jumat,11,0,0,0,0,
+The Originote,5,Jumat,12,5,18,23,6,16;48;49;134;150
+The Originote,5,Jumat,13,1,1,1,1,63
+The Originote,5,Jumat,14,1,1,1,1,49
+The Originote,5,Jumat,15,1,1,1,1,63
+The Originote,5,Jumat,16,1,5,6,2,17
+The Originote,5,Jumat,17,3,3,3,3,5;17;150
+The Originote,5,Jumat,18,0,0,0,0,
+The Originote,5,Jumat,19,0,0,0,0,
+The Originote,5,Jumat,20,1,5,5,1,3
+The Originote,5,Jumat,21,1,1,1,1,63
+The Originote,5,Jumat,22,2,3,3,3,5;63
+The Originote,5,Jumat,23,0,0,0,0,
+The Originote,6,Sabtu,0,1,1,1,1,63
+The Originote,6,Sabtu,1,0,0,0,0,
+The Originote,6,Sabtu,2,1,1,1,1,5
+The Originote,6,Sabtu,3,0,0,0,0,
+The Originote,6,Sabtu,4,0,0,0,0,
+The Originote,6,Sabtu,5,1,5,5,1,48
+The Originote,6,Sabtu,6,1,1,1,1,5
+The Originote,6,Sabtu,7,2,2,2,2,5;150
+The Originote,6,Sabtu,8,2,6,6,2,52;150
+The Originote,6,Sabtu,9,0,0,0,0,
+The Originote,6,Sabtu,10,1,4,4,1,17
+The Originote,6,Sabtu,11,3,12,12,3,5;45;46
+The Originote,6,Sabtu,12,3,3,3,3,5;17;150
+The Originote,6,Sabtu,13,1,1,1,1,5
+The Originote,6,Sabtu,14,1,1,1,1,150
+The Originote,6,Sabtu,15,2,2,2,2,5;150
+The Originote,6,Sabtu,16,2,7,7,3,52;150
+The Originote,6,Sabtu,17,4,7,7,4,5;45;134;150
+The Originote,6,Sabtu,18,2,2,2,2,5;63
+The Originote,6,Sabtu,19,0,0,0,0,
+The Originote,6,Sabtu,20,2,4,4,3,63;134
+The Originote,6,Sabtu,21,2,10,10,2,48;183
+The Originote,6,Sabtu,22,3,8,8,3,63;117;183
+The Originote,6,Sabtu,23,1,1,1,1,5
+The Originote,7,Minggu,0,1,1,1,1,183
+The Originote,7,Minggu,1,1,1,1,1,134
+The Originote,7,Minggu,2,0,0,0,0,
+The Originote,7,Minggu,3,1,1,1,1,134
+The Originote,7,Minggu,4,0,0,0,0,
+The Originote,7,Minggu,5,0,0,0,0,
+The Originote,7,Minggu,6,1,5,5,1,16
+The Originote,7,Minggu,7,0,0,0,0,
+The Originote,7,Minggu,8,2,6,10,2,5;205
+The Originote,7,Minggu,9,1,1,1,1,63
+The Originote,7,Minggu,10,1,2,2,2,5
+The Originote,7,Minggu,11,1,1,1,1,150
+The Originote,7,Minggu,12,0,0,0,0,
+The Originote,7,Minggu,13,0,0,0,0,
+The Originote,7,Minggu,14,1,1,1,1,150
+The Originote,7,Minggu,15,1,5,5,1,49
+The Originote,7,Minggu,16,0,0,0,0,
+The Originote,7,Minggu,17,2,2,2,2,34;49
+The Originote,7,Minggu,18,2,2,2,2,5;34
+The Originote,7,Minggu,19,1,6,6,1,15
+The Originote,7,Minggu,20,2,8,8,2,5;17
+The Originote,7,Minggu,21,1,1,1,1,5
+The Originote,7,Minggu,22,0,0,0,0,
+The Originote,7,Minggu,23,0,0,0,0,

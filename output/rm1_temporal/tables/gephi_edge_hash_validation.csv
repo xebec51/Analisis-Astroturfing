@@ -1,0 +1,6 @@
+metric,value
+edge_source_path,output\rm2_actor_type\gephi\gephi_hcc_edges_actor_type.csv
+edge_output_path,output\rm1_temporal\gephi\gephi_hcc_edges_temporal.csv
+edge_source_sha256,5f41376b5f2a262fbf077f54b1914584824055934242f8c92efcae46dd0a2213
+edge_output_sha256,5f41376b5f2a262fbf077f54b1914584824055934242f8c92efcae46dd0a2213
+edge_hash_equal,True
