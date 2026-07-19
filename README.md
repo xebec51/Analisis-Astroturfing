@@ -443,14 +443,28 @@ di `LCN Non-HCC` maupun `Outside LCN`. Visualisasi Gephi hanya menampilkan subse
 karena akun `Outside LCN` tidak mempunyai edge koordinasi yang memenuhi kriteria pembentukan jaringan.
 Mass Actor di luar LCN tetap dihitung dalam statistik actor universe.
 
+Untuk ekspor aggregate actor type, `Non-HCC` diperlakukan sebagai kategori residual, bukan ID HCC valid.
+Node atau edge seperti `HCC_Non-HCC` dan `MASS_HCC_Non_HCC_*` adalah artefak konstruksi aggregate dan
+dihapus di dalam notebook sebelum file Gephi diekspor. Notebook menyimpan audit pembersihan sehingga
+proses dapat dijalankan ulang tanpa pembersihan manual.
+
+Bobot mentah edge tetap disimpan untuk analisis sebagai `edge_weight_raw`. File khusus Gephi memakai
+`Weight = log1p(edge_weight_raw)` agar edge `Ambiguous` dengan nilai fraksional besar tidak mendominasi
+ketebalan visual. Edge `Ambiguous` menunjukkan alokasi fraksional, bukan hubungan langsung yang pasti;
+ketebalan edge bukan bukti pengaruh, kendali, atau intensi koordinasi.
+
 Output utama:
 
 - `output/rm2_actor_type/tables/actor_type_universe_summary.csv`
+- `output/rm2_actor_type/tables/actor_type_edges_analysis.csv`
 - `output/rm2_actor_type/tables/lcn_actor_type_summary.csv`
 - `output/rm2_actor_type/tables/actor_type_network_position_matrix.csv`
 - `output/rm2_actor_type/tables/lcn_actor_type_edge_summary.csv`
 - `output/rm2_actor_type/tables/gephi_lcn_edge_integrity_audit.csv`
 - `output/rm2_actor_type/tables/actor_type_gephi_validation_report.csv`
+- `output/rm2_actor_type/audit/actor_type_gephi_cleaning_audit.csv`
+- `output/rm2_actor_type/gephi/gephi_actor_type_nodes.csv`
+- `output/rm2_actor_type/gephi/gephi_actor_type_edges.csv`
 - `output/rm2_actor_type/gephi/gephi_lcn_nodes_actor_type.csv`
 - `output/rm2_actor_type/gephi/gephi_lcn_edges_actor_type.csv`
 
@@ -464,7 +478,20 @@ Visualisasi PNG:
 
 ### Panduan Visualisasi Actor Type di Gephi
 
-Import:
+Import aggregate actor type:
+
+- Nodes: `output/rm2_actor_type/gephi/gephi_actor_type_nodes.csv`
+- Edges: `output/rm2_actor_type/gephi/gephi_actor_type_edges.csv`
+- Graph type: `Directed`
+- Node color: `actor_type_primary`
+- Node size: `Degree`
+- Edge color: `edge_type`
+- Edge thickness: `Weight` dari `gephi_actor_type_edges.csv`
+- Edge opacity: gunakan `edge_visual_opacity`; `Ambiguous` dibuat lebih transparan daripada `Observed`
+  dan `Verified`.
+- Jangan memakai `edge_weight_raw` sebagai thickness utama pada visualisasi publik.
+
+Import LCN actor type:
 
 - Nodes: `output/rm2_actor_type/gephi/gephi_lcn_nodes_actor_type.csv`
 - Edges: `output/rm2_actor_type/gephi/gephi_lcn_edges_actor_type.csv`
