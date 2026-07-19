@@ -29,7 +29,7 @@ from sklearn.metrics import (
     precision_recall_fscore_support,
 )
 from sklearn.pipeline import FeatureUnion, Pipeline
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import RepeatedStratifiedKFold, StratifiedKFold
 from sklearn.svm import LinearSVC
 
 os.environ.setdefault("TRANSFORMERS_NO_TF", "1")
@@ -50,8 +50,12 @@ ACTOR_TYPE_COUNTS_EXPECTED = {
 GEPHI_AGGREGATE_EXPECTED = {"nodes": 396, "edges": 497}
 
 LABELS = ["Positive", "Neutral", "Negative"]
-ALLOWED_AI_LABELS = ["Positive", "Neutral", "Negative", "Uncertain", "No Text"]
+ALLOWED_REFERENCE_LABELS = ["Positive", "Neutral", "Negative", "Uncertain", "No Text"]
 ALLOW_RULE_BASED_FINAL = False
+REFERENCE_LABEL_SOURCE = "heuristic_pseudo_label"
+VALIDATION_MODE = "PROVISIONAL"
+FINAL_VALIDATION_STATUS = "PROVISIONAL"
+HUMAN_VALIDATION_COMPLETED = False
 
 MODEL_A = "mdhugol/indonesia-bert-sentiment-classification"
 MODEL_B = "w11wo/indonesian-roberta-base-sentiment-classifier"
@@ -329,7 +333,7 @@ def text_quality_flags(text: str) -> dict[str, bool]:
     }
 
 
-def semantic_label_for_text(text: str, pass_id: int = 1) -> tuple[str, list[str], str]:
+def heuristic_label_for_text(text: str, pass_id: int = 1) -> tuple[str, list[str], str]:
     text = normalize_blank(text)
     if text == "":
         return "No Text", ["blank_text"], "Tidak ada teks yang dapat dievaluasi."
@@ -386,10 +390,10 @@ def semantic_label_for_text(text: str, pass_id: int = 1) -> tuple[str, list[str]
     return "Uncertain", ambiguity + ["mixed_or_low_margin"], "Sinyal positif dan negatif saling bertentangan atau margin terlalu rendah."
 
 
-def adjudicate_ai_labels(text: str, label1: str, label2: str) -> tuple[str, str]:
+def adjudicate_heuristic_labels(text: str, label1: str, label2: str) -> tuple[str, str]:
     if label1 == label2:
         return label1, "Pass 1 dan pass 2 konsisten."
-    label3, flags, reason = semantic_label_for_text(text, pass_id=1)
+    label3, flags, reason = heuristic_label_for_text(text, pass_id=1)
     if label3 in {label1, label2}:
         return label3, f"Adjudikasi ulang mengikuti pedoman label; {reason}"
     if "No Text" in {label1, label2}:
@@ -449,7 +453,8 @@ def stratified_take(frame: pd.DataFrame, strata_col: str, n: int, rng: np.random
     return sampled.sample(frac=1, random_state=RANDOM_STATE).head(n).reset_index(drop=True)
 
 
-def make_validation_samples(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def make_validation_samples(df: pd.DataFrame, locked_test_exclusion_ids: set[str] | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
+    locked_test_exclusion_ids = {str(x) for x in (locked_test_exclusion_ids or set())}
     rng = np.random.default_rng(RANDOM_STATE)
     work = df.copy()
     quality_cols = [
@@ -506,7 +511,13 @@ def make_validation_samples(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
         development = pd.concat([development, extra], ignore_index=True)
     development["sample_set"] = "development"
 
-    remaining = work.loc[~work["comment_id"].isin(development["comment_id"])].copy()
+    remaining = work.loc[
+        ~work["comment_id"].astype(str).isin(set(development["comment_id"].astype(str)) | locked_test_exclusion_ids)
+    ].copy()
+    if len(remaining) < 300:
+        raise AssertionError(
+            f"Not enough unseen comments for locked test after excluding current development and previous validation samples: {len(remaining)}"
+        )
     remaining["sampling_stratum"] = (
         remaining["is_hcc"].map({True: "HCC", False: "Non-HCC"})
         + "|"
@@ -517,7 +528,7 @@ def make_validation_samples(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
         + remaining["length_bin"].astype(str)
     )
     holdout = stratified_take(remaining, "sampling_stratum", 300, rng)
-    holdout["sample_set"] = "holdout"
+    holdout["sample_set"] = "locked_test"
 
     development["sampling_stratum"] = (
         development["is_hcc"].map({True: "HCC", False: "Non-HCC"})
@@ -528,7 +539,7 @@ def make_validation_samples(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
     )
 
     combined = pd.concat([development, holdout], ignore_index=True)
-    for sample_set in ["development", "holdout"]:
+    for sample_set in ["development", "locked_test"]:
         sub = combined[combined["sample_set"].eq(sample_set)]
         total_by_stratum = work["sampling_stratum"].value_counts() if "sampling_stratum" in work.columns else None
         if sample_set == "development":
@@ -549,82 +560,278 @@ def make_validation_samples(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
     combined["sample_probability"] = pd.to_numeric(combined["sample_probability"], errors="coerce").fillna(300 / len(work))
     combined["sample_weight"] = 1 / combined["sample_probability"].clip(lower=1e-9)
     development = combined[combined["sample_set"].eq("development")].copy()
-    holdout = combined[combined["sample_set"].eq("holdout")].copy()
+    holdout = combined[combined["sample_set"].eq("locked_test")].copy()
+    if set(development["comment_id"].astype(str)) & set(holdout["comment_id"].astype(str)):
+        raise AssertionError("Development and locked test samples overlap.")
+    if locked_test_exclusion_ids & set(holdout["comment_id"].astype(str)):
+        raise AssertionError("Locked test contains previously used validation comment IDs.")
     return development.reset_index(drop=True), holdout.reset_index(drop=True)
 
 
-def annotate_sample(sample: pd.DataFrame) -> pd.DataFrame:
+def annotate_heuristic_reference_sample(sample: pd.DataFrame) -> pd.DataFrame:
     pass1 = []
     for row in sample.itertuples(index=False):
-        label, flags, reason = semantic_label_for_text(getattr(row, "comment_text_original"), pass_id=1)
+        label, flags, reason = heuristic_label_for_text(getattr(row, "comment_text_original"), pass_id=1)
         pass1.append((getattr(row, "comment_id"), label, ";".join(flags), reason))
-    pass1_df = pd.DataFrame(pass1, columns=["comment_id", "ai_label_pass1", "ambiguity_flags_pass1", "ai_reason_pass1"])
+    pass1_df = pd.DataFrame(pass1, columns=["comment_id", "heuristic_label_pass1", "ambiguity_flags_pass1", "heuristic_reason_pass1"])
 
     shuffled = sample.sample(frac=1, random_state=RANDOM_STATE + 7).reset_index(drop=True)
     pass2 = []
     for row in shuffled.itertuples(index=False):
-        label, flags, reason = semantic_label_for_text(getattr(row, "comment_text_original"), pass_id=2)
+        label, flags, reason = heuristic_label_for_text(getattr(row, "comment_text_original"), pass_id=2)
         pass2.append((getattr(row, "comment_id"), label, ";".join(flags), reason))
-    pass2_df = pd.DataFrame(pass2, columns=["comment_id", "ai_label_pass2", "ambiguity_flags_pass2", "ai_reason_pass2"])
+    pass2_df = pd.DataFrame(pass2, columns=["comment_id", "heuristic_label_pass2", "ambiguity_flags_pass2", "heuristic_reason_pass2"])
 
     annotated = sample.merge(pass1_df, on="comment_id", how="left").merge(pass2_df, on="comment_id", how="left")
     adjudicated = []
     reasons = []
     flags = []
     for row in annotated.itertuples(index=False):
-        label, reason = adjudicate_ai_labels(
+        label, reason = adjudicate_heuristic_labels(
             getattr(row, "comment_text_original"),
-            getattr(row, "ai_label_pass1"),
-            getattr(row, "ai_label_pass2"),
+            getattr(row, "heuristic_label_pass1"),
+            getattr(row, "heuristic_label_pass2"),
         )
         adjudicated.append(label)
         reasons.append(reason)
         merged_flags = sorted(set(str(getattr(row, "ambiguity_flags_pass1")).split(";") + str(getattr(row, "ambiguity_flags_pass2")).split(";")) - {""})
         flags.append(";".join(merged_flags))
-    annotated["ai_adjudicated_label"] = adjudicated
-    annotated["ai_adjudication_reason"] = reasons
+    annotated["heuristic_reference_label"] = adjudicated
+    annotated["heuristic_reference_reason"] = reasons
     annotated["ambiguity_flags"] = flags
     annotated["manual_label"] = ""
     keep_cols = [
         "sample_set",
         "comment_id",
         "comment_text_original",
+        "video_id",
+        "product_category",
         "is_hcc",
         "hcc_id",
         "brand_label_auto",
         "sampling_stratum",
         "sample_probability",
         "sample_weight",
-        "ai_label_pass1",
-        "ai_reason_pass1",
-        "ai_label_pass2",
-        "ai_reason_pass2",
-        "ai_adjudicated_label",
-        "ai_adjudication_reason",
+        "heuristic_label_pass1",
+        "heuristic_reason_pass1",
+        "heuristic_label_pass2",
+        "heuristic_reason_pass2",
+        "heuristic_reference_label",
+        "heuristic_reference_reason",
         "ambiguity_flags",
         "manual_label",
     ]
     return annotated[keep_cols].copy()
 
 
-def annotation_consistency(dev: pd.DataFrame, holdout: pd.DataFrame) -> pd.DataFrame:
+def deterministic_rule_reproducibility(dev: pd.DataFrame, holdout: pd.DataFrame) -> pd.DataFrame:
     records = []
-    for name, frame in [("development", dev), ("holdout", holdout), ("combined", pd.concat([dev, holdout], ignore_index=True))]:
-        y1 = frame["ai_label_pass1"].astype(str)
-        y2 = frame["ai_label_pass2"].astype(str)
+    for name, frame in [("development", dev), ("locked_test", holdout), ("combined", pd.concat([dev, holdout], ignore_index=True))]:
+        y1 = frame["heuristic_label_pass1"].astype(str)
+        y2 = frame["heuristic_label_pass2"].astype(str)
         records.append(
             {
                 "sample_set": name,
                 "n_comments": len(frame),
-                "raw_agreement": float((y1 == y2).mean()),
-                "cohen_kappa_ai_self_consistency": float(cohen_kappa_score(y1, y2, labels=ALLOWED_AI_LABELS)),
+                "deterministic_rule_reproducibility": float((y1 == y2).mean()),
+                "cohen_kappa_deterministic_reproducibility": float(cohen_kappa_score(y1, y2, labels=ALLOWED_REFERENCE_LABELS)),
                 "disagreement_count": int((y1 != y2).sum()),
-                "uncertainty_rate": float(frame["ai_adjudicated_label"].eq("Uncertain").mean()),
-                "no_text_rate": float(frame["ai_adjudicated_label"].eq("No Text").mean()),
-                "notes": "Cohen's kappa measures two-pass AI self-consistency, not human inter-annotator agreement.",
+                "uncertainty_rate": float(frame["heuristic_reference_label"].eq("Uncertain").mean()),
+                "no_text_rate": float(frame["heuristic_reference_label"].eq("No Text").mean()),
+                "passes_independent": False,
+                "use_as_validation_evidence": False,
+                "notes": "This metric measures reproducibility of the same deterministic rule system, not annotation reliability or human inter-annotator agreement.",
             }
         )
     return pd.DataFrame(records)
+
+
+def write_human_validation_package(sample_full: pd.DataFrame, human_dir: Path) -> pd.DataFrame:
+    human_dir.mkdir(parents=True, exist_ok=True)
+    allowed = [
+        {
+            "label": "Positive",
+            "definition": "Pujian, pengalaman cocok, dukungan, rekomendasi, kepuasan, atau evaluasi yang jelas menguntungkan.",
+        },
+        {
+            "label": "Neutral",
+            "definition": "Pertanyaan, informasi faktual, tagging, nama produk/brand saja, atau komentar tanpa posisi evaluatif.",
+        },
+        {
+            "label": "Negative",
+            "definition": "Keluhan, ketidakcocokan, efek buruk, kekecewaan, penolakan, peringatan, atau evaluasi yang jelas merugikan.",
+        },
+        {
+            "label": "Uncertain",
+            "definition": "Sarkasme, mixed sentiment, target ambigu, atau konteks tidak cukup untuk menetapkan Positive/Neutral/Negative.",
+        },
+        {
+            "label": "No Text",
+            "definition": "Tidak ada informasi yang dapat dievaluasi; bukan sinonim Neutral.",
+        },
+    ]
+    pd.DataFrame(allowed).to_csv(human_dir / "sentiment_human_annotation_codebook.csv", index=False)
+
+    blind_cols = ["sample_set", "comment_id", "comment_text_original", "video_id", "product_category"]
+    blind = sample_full[blind_cols].copy()
+    blind = blind.rename(columns={"product_category": "brand_or_video_context"})
+    for col in [
+        "annotator_1_label",
+        "annotator_1_notes",
+        "annotator_2_label",
+        "annotator_2_notes",
+        "adjudicated_human_label",
+        "adjudication_notes",
+    ]:
+        blind[col] = ""
+    forbidden = {
+        "sentiment_label_raw",
+        "sentiment_label_final",
+        "heuristic_reference_label",
+        "prediction_confidence",
+        "baseline_confidence",
+        "goal_orientation",
+        "hcc_id",
+    }
+    if forbidden & set(blind.columns):
+        raise AssertionError(f"Blind human annotation file contains forbidden columns: {sorted(forbidden & set(blind.columns))}")
+    if len(blind) < 600:
+        raise AssertionError(f"Human validation package requires at least 600 comments, got {len(blind)}")
+    if blind["comment_id"].duplicated().any():
+        raise AssertionError("Human validation package contains duplicate comment_id values.")
+    blind.to_csv(human_dir / "sentiment_human_annotation_blind.csv", index=False)
+    blind.to_csv(human_dir / "sentiment_human_validation_template.csv", index=False)
+
+    guideline = """# Sentiment Human Annotation Guideline
+
+Tujuan anotasi ini adalah memberi reference labels manusia untuk evaluasi sentimen komentar TikTok skincare.
+Label manusia tidak boleh diisi oleh pipeline, Codex, heuristic rules, atau model.
+
+Allowed labels: Positive, Neutral, Negative, Uncertain, No Text.
+
+Sentimen dipakai sebagai indikator orientasi pesan, bukan bukti niat, afiliasi, pembayaran, kontrol, pengaruh kausal, buzzer, bot, atau astroturfing.
+Gunakan `Uncertain` untuk sarkasme, mixed sentiment yang tidak terselesaikan, target ambigu, atau konteks terlalu pendek.
+Gunakan `No Text` hanya jika komentar tidak memiliki informasi yang dapat dievaluasi.
+"""
+    (human_dir / "sentiment_human_annotation_guideline.md").write_text(guideline, encoding="utf-8")
+
+    readme = """# RM2 Sentiment Human Validation Package
+
+File utama untuk anotator adalah `sentiment_human_annotation_blind.csv`.
+File tersebut tidak menyertakan prediksi model, heuristic reference label, confidence model, HCC goal result, atau hcc_id.
+
+Isi `annotator_1_label` dan `annotator_2_label` menggunakan label pada `sentiment_human_annotation_codebook.csv`.
+Setelah adjudication, isi `adjudicated_human_label`.
+
+Validator menolak label di luar daftar allowed labels, menghitung agreement, Cohen's kappa, per-class disagreement, confusion matrix, dan adjudication coverage. Selama label manusia kosong, pipeline RM2 sentiment berjalan sebagai exploratory/provisional dan tidak boleh diklaim validated.
+"""
+    (human_dir / "README_HUMAN_VALIDATION.md").write_text(readme, encoding="utf-8")
+
+    status = validate_human_annotation_frame(blind)
+    status.to_csv(human_dir / "human_validation_status.csv", index=False)
+    return status
+
+
+def validate_human_annotation_frame(frame: pd.DataFrame) -> pd.DataFrame:
+    required = [
+        "comment_id",
+        "comment_text_original",
+        "annotator_1_label",
+        "annotator_2_label",
+        "adjudicated_human_label",
+    ]
+    missing = [col for col in required if col not in frame.columns]
+    if missing:
+        return pd.DataFrame(
+            [
+                {
+                    "metric": "required_columns",
+                    "value": ";".join(missing),
+                    "status": "FAIL",
+                    "notes": "Human validation file is missing required columns.",
+                }
+            ]
+        )
+    allowed = set(ALLOWED_REFERENCE_LABELS)
+    a1 = frame["annotator_1_label"].fillna("").astype(str).str.strip()
+    a2 = frame["annotator_2_label"].fillna("").astype(str).str.strip()
+    adjudicated = frame["adjudicated_human_label"].fillna("").astype(str).str.strip()
+    complete_pair = a1.ne("") & a2.ne("")
+    complete_adjudication = adjudicated.ne("")
+    invalid = sorted((set(a1[a1.ne("")]) | set(a2[a2.ne("")]) | set(adjudicated[adjudicated.ne("")])) - allowed)
+    rows = [
+        {
+            "metric": "human_validation_completed",
+            "value": bool(complete_pair.all() and complete_adjudication.all() and not invalid),
+            "status": "PASS" if complete_pair.all() and complete_adjudication.all() and not invalid else "NOT_AVAILABLE",
+            "notes": "Human labels are not filled by the pipeline.",
+        },
+        {
+            "metric": "blank_annotator_1_labels",
+            "value": int(a1.eq("").sum()),
+            "status": "PASS" if int(a1.eq("").sum()) == 0 else "NOT_AVAILABLE",
+            "notes": "",
+        },
+        {
+            "metric": "blank_annotator_2_labels",
+            "value": int(a2.eq("").sum()),
+            "status": "PASS" if int(a2.eq("").sum()) == 0 else "NOT_AVAILABLE",
+            "notes": "",
+        },
+        {
+            "metric": "blank_adjudicated_human_labels",
+            "value": int(adjudicated.eq("").sum()),
+            "status": "PASS" if int(adjudicated.eq("").sum()) == 0 else "NOT_AVAILABLE",
+            "notes": "",
+        },
+        {
+            "metric": "invalid_human_labels",
+            "value": ";".join(invalid),
+            "status": "FAIL" if invalid else "PASS",
+            "notes": "Allowed labels are Positive, Neutral, Negative, Uncertain, No Text.",
+        },
+        {
+            "metric": "adjudication_coverage",
+            "value": float(complete_adjudication.mean()) if len(frame) else 0.0,
+            "status": "PASS" if complete_adjudication.all() and len(frame) else "NOT_AVAILABLE",
+            "notes": "",
+        },
+    ]
+    if complete_pair.any() and not invalid:
+        rows.append(
+            {
+                "metric": "annotator_raw_agreement",
+                "value": float((a1[complete_pair] == a2[complete_pair]).mean()),
+                "status": "PASS",
+                "notes": "Agreement between human annotators only.",
+            }
+        )
+        rows.append(
+            {
+                "metric": "cohens_kappa_human_annotators",
+                "value": float(cohen_kappa_score(a1[complete_pair], a2[complete_pair], labels=ALLOWED_REFERENCE_LABELS)),
+                "status": "PASS",
+                "notes": "Human inter-annotator agreement.",
+            }
+        )
+    else:
+        rows.extend(
+            [
+                {
+                    "metric": "annotator_raw_agreement",
+                    "value": "",
+                    "status": "NOT_AVAILABLE",
+                    "notes": "Human labels are blank.",
+                },
+                {
+                    "metric": "cohens_kappa_human_annotators",
+                    "value": "",
+                    "status": "NOT_AVAILABLE",
+                    "notes": "Human labels are blank.",
+                },
+            ]
+        )
+    return pd.DataFrame(rows)
 
 
 def infer_label_map(model_name: str, id2label: dict[int, str]) -> dict[int, str]:
@@ -798,7 +1005,7 @@ def metric_row(y_true: list[str], probs: np.ndarray, candidate: str, sample_set:
         "sample_set": sample_set,
         "preprocessing_variant": preprocessing,
         "threshold": np.nan if threshold is None else float(threshold),
-        "n_ai_labeled": int(y_true.isin(LABELS).sum()),
+        "n_reference_labeled": int(y_true.isin(LABELS).sum()),
         "n_evaluated": int(len(y)),
         "coverage": float(len(y) / max(int(y_true.isin(LABELS).sum()), 1)),
         "macro_f1": float(f1_score(y, pred, labels=LABELS, average="macro", zero_division=0)) if y else np.nan,
@@ -808,6 +1015,8 @@ def metric_row(y_true: list[str], probs: np.ndarray, candidate: str, sample_set:
         "mcc": float(matthews_corrcoef(y, pred)) if y else np.nan,
         "negative_recall": float(recall[LABELS.index("Negative")]) if y else np.nan,
         "neutral_recall": float(recall[LABELS.index("Neutral")]) if y else np.nan,
+        "min_per_class_recall": float(np.min(recall)) if y else np.nan,
+        "min_per_class_f1": float(np.min(f1)) if y else np.nan,
         "log_loss": float(log_loss(y, p, labels=LABELS)) if y else np.nan,
         "brier_score": brier_multiclass(y, p) if y else np.nan,
         "ece": ece_score(y, p) if y else np.nan,
@@ -842,6 +1051,98 @@ def bootstrap_macro_f1_ci(y_true: list[str], probs: np.ndarray, threshold: float
         sample_idx = rng.choice(idx, size=len(idx), replace=True)
         scores.append(f1_score(y_true[sample_idx], pred[sample_idx], labels=LABELS, average="macro", zero_division=0))
     return (float(np.percentile(scores, 2.5)), float(np.percentile(scores, 97.5)))
+
+
+def repeated_cv_diagnostics(
+    development_frame: pd.DataFrame,
+    variants: dict[str, str],
+    candidate_probs: dict[tuple[str, str, str], np.ndarray],
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    rows = []
+    dev = development_frame.reset_index(drop=True).copy()
+    valid_mask = dev["heuristic_reference_label"].isin(LABELS).to_numpy()
+    y = dev.loc[valid_mask, "heuristic_reference_label"].astype(str).reset_index(drop=True)
+    if len(y) < 30 or y.value_counts().min() < 3:
+        return pd.DataFrame(), pd.DataFrame()
+    splits = RepeatedStratifiedKFold(n_splits=3, n_repeats=5, random_state=RANDOM_STATE)
+    valid_positions = np.where(valid_mask)[0]
+    for variant, text_col in variants.items():
+        valid_text = dev.loc[valid_mask, text_col].fillna("").astype(str).reset_index(drop=True)
+        transformer_names = ["model_A", "model_B"]
+        transformer_probs = {
+            name: candidate_probs[("development", name, variant)][valid_positions]
+            for name in transformer_names
+            if ("development", name, variant) in candidate_probs
+        }
+        if len(transformer_probs) == 2:
+            transformer_probs["ensemble_transformer_A0.50_B0.50"] = (
+                0.5 * transformer_probs["model_A"] + 0.5 * transformer_probs["model_B"]
+            )
+        for split_no, (train_idx, test_idx) in enumerate(splits.split(valid_text, y), start=1):
+            repeat = (split_no - 1) // 3 + 1
+            fold = (split_no - 1) % 3 + 1
+            for candidate_name, probs in transformer_probs.items():
+                row = metric_row(y.iloc[test_idx].tolist(), probs[test_idx], candidate_name, "development_cv", variant)
+                row.update(
+                    {
+                        "repeat": repeat,
+                        "fold": fold,
+                        "reference_label_source": REFERENCE_LABEL_SOURCE,
+                        "modeling_mode": VALIDATION_MODE,
+                        "notes": "Repeated CV over heuristic pseudo-labels; diagnostic only, not human validation.",
+                    }
+                )
+                rows.append(row)
+            clf, fold_probs = fit_classical_predict(
+                valid_text.iloc[train_idx].tolist(),
+                y.iloc[train_idx].tolist(),
+                valid_text.iloc[test_idx].tolist(),
+            )
+            row = metric_row(y.iloc[test_idx].tolist(), fold_probs, "model_C_pseudo_label_experiment", "development_cv", variant)
+            row.update(
+                {
+                    "repeat": repeat,
+                    "fold": fold,
+                    "reference_label_source": REFERENCE_LABEL_SOURCE,
+                    "modeling_mode": VALIDATION_MODE,
+                    "notes": "Model C is trained inside each fold on heuristic pseudo-labels; diagnostic only.",
+                }
+            )
+            rows.append(row)
+    cv = pd.DataFrame(rows)
+    if cv.empty:
+        return cv, pd.DataFrame()
+    metric_cols = [
+        "macro_f1",
+        "balanced_accuracy",
+        "mcc",
+        "accuracy",
+        "weighted_f1",
+        "positive_precision",
+        "positive_recall",
+        "positive_f1",
+        "neutral_precision",
+        "neutral_recall",
+        "neutral_f1",
+        "negative_precision",
+        "negative_recall",
+        "negative_f1",
+        "min_per_class_recall",
+        "min_per_class_f1",
+        "brier_score",
+        "ece",
+        "coverage",
+    ]
+    summary = (
+        cv.groupby(["candidate", "preprocessing_variant"], dropna=False)[metric_cols]
+        .agg(["mean", "std"])
+        .reset_index()
+    )
+    summary.columns = ["_".join([str(part) for part in col if str(part) != ""]).rstrip("_") for col in summary.columns]
+    summary["reference_label_source"] = REFERENCE_LABEL_SOURCE
+    summary["modeling_mode"] = VALIDATION_MODE
+    summary["notes"] = "Mean/std over repeated stratified CV folds using heuristic pseudo-labels."
+    return cv, summary
 
 
 def hard_counts(frame: pd.DataFrame) -> dict:
@@ -984,7 +1285,7 @@ def save_confusion_matrix_png(cm_df: pd.DataFrame, output_path: Path, title: str
     ax.set_xticklabels(LABELS)
     ax.set_yticklabels(LABELS)
     ax.set_xlabel("Predicted sentiment")
-    ax.set_ylabel("AI-adjudicated sentiment")
+    ax.set_ylabel("heuristic-reference sentiment")
     ax.set_title(title)
     for i in range(len(LABELS)):
         for j in range(len(LABELS)):
@@ -1043,10 +1344,11 @@ def plot_goal_confidence(hcc_summary: pd.DataFrame, output_path: Path) -> None:
                 ax.text(i, bottom[i] + val / 2, str(int(val)), ha="center", va="center", color="white", fontsize=8)
         bottom += values
     ax.set_ylabel("Jumlah HCC")
-    ax.set_title("HCC Goal Orientation by Bootstrap Confidence")
+    ax.set_title("HCC Goal Orientation by Bootstrap Stability (Provisional)")
     ax.tick_params(axis="x", rotation=25)
     ax.legend(title="goal_confidence")
-    fig.tight_layout()
+    fig.text(0.01, 0.01, "Confidence reflects bootstrap stability, not correctness or human validation.", fontsize=8)
+    fig.tight_layout(rect=[0, 0.06, 1, 1])
     fig.savefig(output_path, dpi=180, bbox_inches="tight")
     plt.close(fig)
 
@@ -1079,6 +1381,39 @@ def infer_error_taxonomy(text: str, true_label: str, pred_label: str, flags: str
     return "label ambiguity"
 
 
+def infer_neutral_error_taxonomy(text: str, flags: str) -> str:
+    lowered = normalize_blank(text).lower()
+    flag_set = set(str(flags).split(";")) if flags else set()
+    if "question" in flag_set or "?" in lowered:
+        if any(term in lowered for term in ["harga", "harganya", "link", "beli", "belinya", "checkout"]):
+            return "harga/link/beli"
+        return "pertanyaan"
+    if re.fullmatch(r"(@\w+\s*)+", lowered.strip()):
+        return "mention/tagging"
+    if any(term in lowered for term in ["azarine", "daviena", "maryame", "originote", "the originote"]) and not (
+        contains_any(lowered, POSITIVE_TERMS) or contains_any(lowered, NEGATIVE_TERMS)
+    ):
+        return "brand mention without evaluation"
+    if "emoji_only" in flag_set:
+        return "emoji"
+    if "very_short" in flag_set:
+        return "short acknowledgement"
+    if "slang" in flag_set:
+        return "slang"
+    if "code_mixing" in flag_set:
+        return "code mixing"
+    if "negation" in flag_set:
+        return "negation"
+    if "mixed_sentiment" in flag_set:
+        return "mixed evaluation"
+    if "potential_sarcasm" in flag_set:
+        return "sarcasm"
+    tokens = re.findall(r"\b\w+\b", lowered)
+    if 1 <= len(tokens) <= 3 and any(term in lowered for term in DOMAIN_TERMS):
+        return "product name only"
+    return "brand mention without evaluation" if any(term in lowered for term in DOMAIN_TERMS) else "label ambiguity"
+
+
 def run_pipeline(root: str | Path = ".") -> dict:
     root = Path(root).resolve()
     random.seed(RANDOM_STATE)
@@ -1093,6 +1428,11 @@ def run_pipeline(root: str | Path = ".") -> dict:
     focal_path = root / "output" / "tables" / "focal_structures.csv"
     hcc_brand_path = root / "output" / "tables" / "hcc_brand_profile_auto.csv"
     old_comment_sentiment_path = root / "output" / "rm2_sentiment" / "tables" / "comment_sentiment.csv"
+    previous_validation_id_path = root / "output" / "rm2_sentiment" / "tables" / "sentiment_previous_validation_ids_excluded.csv"
+    legacy_validation_names = [
+        "sentiment_validation_development_" + "ai.csv",
+        "sentiment_validation_holdout_" + "ai.csv",
+    ]
     actor_type_path = root / "output" / "rm2_actor_type" / "tables" / "account_actor_type.csv"
     actor_gephi_nodes_path = root / "output" / "rm2_actor_type" / "gephi" / "gephi_actor_type_nodes.csv"
     actor_gephi_edges_path = root / "output" / "rm2_actor_type" / "gephi" / "gephi_actor_type_edges.csv"
@@ -1111,12 +1451,31 @@ def run_pipeline(root: str | Path = ".") -> dict:
     checksum_before = {name: sha256_file(path) for name, path in protected_inputs.items() if path.exists()}
 
     legacy_comment_sentiment = pd.read_csv(old_comment_sentiment_path, dtype=str, low_memory=False) if old_comment_sentiment_path.exists() else pd.DataFrame()
+    previously_seen_validation_ids: set[str] = set()
+    if previous_validation_id_path.exists():
+        previous_validation_ids = pd.read_csv(previous_validation_id_path, dtype=str, low_memory=False)
+        if "comment_id" in previous_validation_ids.columns:
+            previously_seen_validation_ids.update(previous_validation_ids["comment_id"].dropna().astype(str).tolist())
+    for legacy_name in legacy_validation_names:
+        old_validation_path = root / "output" / "rm2_sentiment" / "tables" / legacy_name
+        if old_validation_path.exists():
+            old_validation = pd.read_csv(old_validation_path, dtype=str, low_memory=False)
+            if "comment_id" in old_validation.columns:
+                previously_seen_validation_ids.update(old_validation["comment_id"].dropna().astype(str).tolist())
 
     out_dir = root / "output" / "rm2_sentiment"
     safe_clean_output_dir(out_dir, root)
     tables_dir = out_dir / "tables"
     vis_dir = out_dir / "visualisasi"
     gephi_dir = out_dir / "gephi"
+    human_dir = out_dir / "human_validation"
+    if previously_seen_validation_ids:
+        pd.DataFrame(
+            {
+                "comment_id": sorted(previously_seen_validation_ids),
+                "exclusion_reason": "Previously used validation sample excluded from new locked test.",
+            }
+        ).to_csv(tables_dir / "sentiment_previous_validation_ids_excluded.csv", index=False)
 
     dataset = pd.read_csv(dataset_path, dtype=str, low_memory=False)
     metadata = pd.read_csv(metadata_path, dtype=str, low_memory=False)
@@ -1177,9 +1536,9 @@ def run_pipeline(root: str | Path = ".") -> dict:
                 "current_method": "manual_label template",
                 "detected_problem": "manual_label remained empty; previous metrics were not valid.",
                 "risk_level": "High",
-                "proposed_fix": "Create AI-assisted semantic adjudication dev and held-out datasets; keep manual_label blank.",
+                "proposed_fix": "Create deterministic heuristic pseudo-label diagnostics plus a blind human-validation package; keep manual_label/human labels blank.",
                 "changed": True,
-                "validation_result": "Implemented.",
+                "validation_result": "Implemented as PROVISIONAL; not human validation.",
             },
             {
                 "component": "probabilities",
@@ -1254,7 +1613,7 @@ def run_pipeline(root: str | Path = ".") -> dict:
         )
         comments = comments.merge(legacy_lookup, on="comment_id", how="left")
     else:
-        diagnostic_labels = comments["comment_text_original"].map(lambda text: semantic_label_for_text(text, pass_id=1)[0])
+        diagnostic_labels = comments["comment_text_original"].map(lambda text: heuristic_label_for_text(text, pass_id=1)[0])
         comments["baseline_label"] = diagnostic_labels.replace({"Uncertain": "Unknown", "No Text": "No text"})
         comments["baseline_confidence"] = np.where(comments["baseline_label"].isin(LABELS), 0.50, 0.0)
     comments["baseline_label"] = comments["baseline_label"].fillna("Unknown")
@@ -1318,29 +1677,29 @@ def run_pipeline(root: str | Path = ".") -> dict:
         raise AssertionError("At least one transformer label mapping failed.")
     label_mapping_audit.to_csv(tables_dir / "sentiment_label_mapping_audit.csv", index=False)
 
-    development_raw, holdout_raw = make_validation_samples(comments)
-    development_ai = annotate_sample(development_raw)
-    holdout_ai = annotate_sample(holdout_raw)
-    if development_ai["ai_adjudicated_label"].eq("").any() or holdout_ai["ai_adjudicated_label"].eq("").any():
-        raise AssertionError("AI adjudicated labels must not be blank.")
-    development_ai.to_csv(tables_dir / "sentiment_validation_development_ai.csv", index=False)
-    holdout_ai.to_csv(tables_dir / "sentiment_validation_holdout_ai.csv", index=False)
-    consistency = annotation_consistency(development_ai, holdout_ai)
-    consistency.to_csv(tables_dir / "sentiment_ai_annotation_consistency.csv", index=False)
-    guideline = """# Sentiment AI Annotation Guideline
+    development_raw, holdout_raw = make_validation_samples(comments, locked_test_exclusion_ids=previously_seen_validation_ids)
+    development_reference = annotate_heuristic_reference_sample(development_raw)
+    locked_test_reference = annotate_heuristic_reference_sample(holdout_raw)
+    if development_reference["heuristic_reference_label"].eq("").any() or locked_test_reference["heuristic_reference_label"].eq("").any():
+        raise AssertionError("heuristic reference labels must not be blank.")
+    development_reference.to_csv(tables_dir / "sentiment_development_heuristic_reference.csv", index=False)
+    locked_test_reference.to_csv(tables_dir / "sentiment_holdout_heuristic_reference.csv", index=False)
+    consistency = deterministic_rule_reproducibility(development_reference, locked_test_reference)
+    consistency.to_csv(tables_dir / "sentiment_deterministic_rule_reproducibility.csv", index=False)
+    guideline = """# Sentiment Heuristic Reference Guideline
 
-AI-assisted semantic adjudication labels comments as Positive, Neutral, Negative, Uncertain, or No Text.
+heuristic pseudo-labeling labels comments as Positive, Neutral, Negative, Uncertain, or No Text.
 Positive covers praise, suitability, support, satisfaction, recommendation, and negation of bad effects.
 Negative covers complaints, adverse reactions, rejection, distrust, harmful price/value judgments, and product failure.
 Neutral covers questions, factual information, tagging, product names, and comments without evaluative stance.
 Uncertain covers unresolved mixed sentiment, sarcasm, very low-confidence semantics, or insufficient context.
 No Text is reserved for comments without evaluable information; it is not equivalent to Neutral.
 
-The two-pass kappa measures AI self-consistency, not human inter-annotator agreement. manual_label remains blank for future independent human validation.
+The reproducibility metric measures the same deterministic lexical rule system, not annotation reliability or human inter-annotator agreement. manual_label remains blank for future independent human validation.
 """
-    (tables_dir / "sentiment_ai_annotation_guideline.md").write_text(guideline, encoding="utf-8")
+    (tables_dir / "sentiment_heuristic_reference_guideline.md").write_text(guideline, encoding="utf-8")
 
-    sample_full = pd.concat([development_ai, holdout_ai], ignore_index=True).merge(
+    sample_full = pd.concat([development_reference, locked_test_reference], ignore_index=True).merge(
         comments[
             [
                 "comment_id",
@@ -1356,15 +1715,19 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
                 "very_short",
                 "potential_sarcasm",
                 "mixed_sentiment",
+                "domain_term",
             ]
         ],
         on="comment_id",
         how="left",
     )
-    dev_eval = sample_full[sample_full["sample_set"].eq("development") & sample_full["ai_adjudicated_label"].isin(LABELS)].copy()
-    hold_eval = sample_full[sample_full["sample_set"].eq("holdout") & sample_full["ai_adjudicated_label"].isin(LABELS)].copy()
+    if set(development_reference["comment_id"].astype(str)) & set(locked_test_reference["comment_id"].astype(str)):
+        raise AssertionError("Development and locked test heuristic reference samples overlap.")
+    human_validation_status = write_human_validation_package(sample_full, human_dir)
+    dev_eval = sample_full[sample_full["sample_set"].eq("development") & sample_full["heuristic_reference_label"].isin(LABELS)].copy()
+    hold_eval = sample_full[sample_full["sample_set"].eq("locked_test") & sample_full["heuristic_reference_label"].isin(LABELS)].copy()
     if len(dev_eval) < 100 or len(hold_eval) < 100:
-        raise AssertionError("Development and hold-out evaluable AI labels are too sparse.")
+        raise AssertionError("Development and locked-test evaluable heuristic labels are too sparse.")
 
     candidate_probs: dict[tuple[str, str, str], np.ndarray] = {}
     benchmark_rows = []
@@ -1377,35 +1740,41 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
     }
     for variant, text_col in variants.items():
         for candidate in candidates:
-            for sample_set, frame in [("development", sample_full[sample_full["sample_set"].eq("development")]), ("holdout", sample_full[sample_full["sample_set"].eq("holdout")])]:
+            for sample_set, frame in [("development", sample_full[sample_full["sample_set"].eq("development")]), ("locked_test", sample_full[sample_full["sample_set"].eq("locked_test")])]:
                 probs = predict_transformer(frame[text_col].tolist(), candidate, device, batch_size=batch_size, max_length=max_length)
                 candidate_probs[(sample_set, candidate.key, variant)] = probs
-                row = metric_row(frame["ai_adjudicated_label"].tolist(), probs, candidate.key, sample_set, variant)
+                row = metric_row(frame["heuristic_reference_label"].tolist(), probs, candidate.key, sample_set, variant)
                 row["model_name"] = candidate.model_name
                 row["eligible_final"] = True
+                row["reference_label_source"] = REFERENCE_LABEL_SOURCE
+                row["modeling_mode"] = VALIDATION_MODE
+                row["model_c_role"] = "not_applicable"
                 benchmark_rows.append(row)
                 calibration_rows.append({k: row[k] for k in ["candidate", "sample_set", "preprocessing_variant", "log_loss", "brier_score", "ece", "coverage"]})
 
         clf, dev_probs_c_eval, hold_probs_c = fit_classical_oof_and_predict(
             dev_eval[text_col].tolist(),
-            dev_eval["ai_adjudicated_label"].tolist(),
-            sample_full[sample_full["sample_set"].eq("holdout")][text_col].tolist(),
+            dev_eval["heuristic_reference_label"].tolist(),
+            sample_full[sample_full["sample_set"].eq("locked_test")][text_col].tolist(),
         )
         fitted_classical[variant] = clf
         dev_probs_c = np.full((len(sample_full[sample_full["sample_set"].eq("development")]), len(LABELS)), 1 / len(LABELS), dtype=float)
         dev_eval_positions = sample_full[sample_full["sample_set"].eq("development")].reset_index(drop=True).index[
-            sample_full[sample_full["sample_set"].eq("development")]["ai_adjudicated_label"].isin(LABELS).to_numpy()
+            sample_full[sample_full["sample_set"].eq("development")]["heuristic_reference_label"].isin(LABELS).to_numpy()
         ]
         dev_probs_c[dev_eval_positions, :] = dev_probs_c_eval
         candidate_probs[("development", "model_C", variant)] = dev_probs_c
-        candidate_probs[("holdout", "model_C", variant)] = hold_probs_c
+        candidate_probs[("locked_test", "model_C", variant)] = hold_probs_c
         for sample_set, frame, probs in [
             ("development", sample_full[sample_full["sample_set"].eq("development")], dev_probs_c),
-            ("holdout", sample_full[sample_full["sample_set"].eq("holdout")], hold_probs_c),
+            ("locked_test", sample_full[sample_full["sample_set"].eq("locked_test")], hold_probs_c),
         ]:
-            row = metric_row(frame["ai_adjudicated_label"].tolist(), probs, "model_C", sample_set, variant)
-            row["model_name"] = "TF-IDF word(1-2)+char(3-6)+LinearSVC calibrated on AI-adjudicated development labels"
+            row = metric_row(frame["heuristic_reference_label"].tolist(), probs, "model_C", sample_set, variant)
+            row["model_name"] = "TF-IDF word(1-2)+char(3-6)+LinearSVC calibrated on heuristic pseudo-label development labels"
             row["eligible_final"] = False
+            row["reference_label_source"] = REFERENCE_LABEL_SOURCE
+            row["modeling_mode"] = VALIDATION_MODE
+            row["model_c_role"] = "pseudo-label adaptation experiment; not eligible as final without human labels"
             benchmark_rows.append(row)
             calibration_rows.append({k: row[k] for k in ["candidate", "sample_set", "preprocessing_variant", "log_loss", "brier_score", "ece", "coverage"]})
 
@@ -1413,59 +1782,81 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
         best_ensemble = None
         for w_a in grid_values:
             for w_b in grid_values:
-                for w_c in grid_values:
-                    if w_a + w_b + w_c <= 0 or w_a + w_b <= 0:
-                        continue
-                    weights = np.array([w_a, w_b, w_c], dtype=float)
-                    weights = weights / weights.sum()
-                    dev_probs = (
-                        weights[0] * candidate_probs[("development", "model_A", variant)]
-                        + weights[1] * candidate_probs[("development", "model_B", variant)]
-                        + weights[2] * candidate_probs[("development", "model_C", variant)]
-                    )
-                    row = metric_row(sample_full[sample_full["sample_set"].eq("development")]["ai_adjudicated_label"].tolist(), dev_probs, "ensemble", "development", variant)
-                    row["weights_model_A"] = float(weights[0])
-                    row["weights_model_B"] = float(weights[1])
-                    row["weights_model_C"] = float(weights[2])
-                    if best_ensemble is None or row["macro_f1"] > best_ensemble["row"]["macro_f1"]:
-                        best_ensemble = {"row": row, "weights": weights, "probs": dev_probs}
+                if w_a + w_b <= 0:
+                    continue
+                weights = np.array([w_a, w_b], dtype=float)
+                weights = weights / weights.sum()
+                dev_probs = (
+                    weights[0] * candidate_probs[("development", "model_A", variant)]
+                    + weights[1] * candidate_probs[("development", "model_B", variant)]
+                )
+                row = metric_row(sample_full[sample_full["sample_set"].eq("development")]["heuristic_reference_label"].tolist(), dev_probs, "ensemble_transformer", "development", variant)
+                row["weights_model_A"] = float(weights[0])
+                row["weights_model_B"] = float(weights[1])
+                row["weights_model_C"] = 0.0
+                if best_ensemble is None or (
+                    row["macro_f1"],
+                    row["min_per_class_recall"],
+                    row["balanced_accuracy"],
+                    -row["ece"],
+                ) > (
+                    best_ensemble["row"]["macro_f1"],
+                    best_ensemble["row"]["min_per_class_recall"],
+                    best_ensemble["row"]["balanced_accuracy"],
+                    -best_ensemble["row"]["ece"],
+                ):
+                    best_ensemble = {"row": row, "weights": weights, "probs": dev_probs}
         if best_ensemble is not None:
             weights = best_ensemble["weights"]
-            candidate_name = f"ensemble_A{weights[0]:.2f}_B{weights[1]:.2f}_C{weights[2]:.2f}"
-            for sample_set in ["development", "holdout"]:
+            candidate_name = f"ensemble_transformer_A{weights[0]:.2f}_B{weights[1]:.2f}"
+            for sample_set in ["development", "locked_test"]:
                 probs = (
                     weights[0] * candidate_probs[(sample_set, "model_A", variant)]
                     + weights[1] * candidate_probs[(sample_set, "model_B", variant)]
-                    + weights[2] * candidate_probs[(sample_set, "model_C", variant)]
                 )
                 candidate_probs[(sample_set, candidate_name, variant)] = probs
                 frame = sample_full[sample_full["sample_set"].eq(sample_set)]
-                row = metric_row(frame["ai_adjudicated_label"].tolist(), probs, candidate_name, sample_set, variant)
-                row["model_name"] = "Soft-voting transformer/classical ensemble selected on development set"
+                row = metric_row(frame["heuristic_reference_label"].tolist(), probs, candidate_name, sample_set, variant)
+                row["model_name"] = "Soft-voting transformer-only ensemble selected on development heuristic pseudo-labels"
                 row["eligible_final"] = True
                 row["weights_model_A"] = float(weights[0])
                 row["weights_model_B"] = float(weights[1])
-                row["weights_model_C"] = float(weights[2])
+                row["weights_model_C"] = 0.0
+                row["reference_label_source"] = REFERENCE_LABEL_SOURCE
+                row["modeling_mode"] = VALIDATION_MODE
+                row["model_c_role"] = "excluded from provisional final selection"
                 benchmark_rows.append(row)
                 calibration_rows.append({k: row[k] for k in ["candidate", "sample_set", "preprocessing_variant", "log_loss", "brier_score", "ece", "coverage"]})
 
     benchmark = pd.DataFrame(benchmark_rows)
     benchmark.to_csv(tables_dir / "sentiment_model_benchmark_development.csv", index=False)
     pd.DataFrame(calibration_rows).to_csv(tables_dir / "sentiment_model_calibration_metrics.csv", index=False)
+    cv_rows, cv_summary = repeated_cv_diagnostics(
+        sample_full[sample_full["sample_set"].eq("development")],
+        variants,
+        candidate_probs,
+    )
+    cv_rows.to_csv(tables_dir / "sentiment_repeated_cv_metrics.csv", index=False)
+    cv_summary.to_csv(tables_dir / "sentiment_repeated_cv_summary.csv", index=False)
 
     dev_candidates = benchmark[(benchmark["sample_set"].eq("development")) & (benchmark["eligible_final"] == True)].copy()
+    if dev_candidates["candidate"].astype(str).str.contains("model_C|_C", regex=True).any():
+        raise AssertionError("Model C must not be eligible for PROVISIONAL final selection.")
     best_macro = dev_candidates["macro_f1"].max()
     near_best = dev_candidates[dev_candidates["macro_f1"] >= best_macro - 0.01].copy()
     near_best["complexity_rank"] = near_best["candidate"].map(lambda x: 1 if x in {"model_A", "model_B"} else 2)
-    near_best = near_best.sort_values(["complexity_rank", "ece", "negative_recall", "macro_f1"], ascending=[True, True, False, False])
+    near_best = near_best.sort_values(
+        ["complexity_rank", "min_per_class_recall", "balanced_accuracy", "macro_f1", "ece", "coverage"],
+        ascending=[True, False, False, False, True, False],
+    )
     selected = near_best.iloc[0].to_dict()
     selected_candidate = selected["candidate"]
     selected_variant = selected["preprocessing_variant"]
     selected_dev_probs = candidate_probs[("development", selected_candidate, selected_variant)]
-    selected_holdout_probs = candidate_probs[("holdout", selected_candidate, selected_variant)]
+    selected_holdout_probs = candidate_probs[("locked_test", selected_candidate, selected_variant)]
 
     curve = selective_curve(
-        sample_full[sample_full["sample_set"].eq("development")]["ai_adjudicated_label"].tolist(),
+        sample_full[sample_full["sample_set"].eq("development")]["heuristic_reference_label"].tolist(),
         selected_dev_probs,
         selected_candidate,
         "development",
@@ -1476,35 +1867,42 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
         selected_threshold = 0.0
         selected_curve_row = curve.sort_values("coverage", ascending=False).iloc[0].to_dict()
     else:
-        selected_curve_row = eligible_curve.sort_values(["macro_f1", "coverage"], ascending=[False, False]).iloc[0].to_dict()
+        selected_curve_row = eligible_curve.sort_values(
+            ["macro_f1", "min_per_class_recall", "balanced_accuracy", "neutral_recall", "ece", "coverage"],
+            ascending=[False, False, False, False, True, False],
+        ).iloc[0].to_dict()
         selected_threshold = float(selected_curve_row["threshold"])
     curve["selected_threshold"] = curve["threshold"].eq(selected_threshold)
     curve.to_csv(tables_dir / "sentiment_selective_classification_curve.csv", index=False)
 
     holdout_metric = metric_row(
-        sample_full[sample_full["sample_set"].eq("holdout")]["ai_adjudicated_label"].tolist(),
+        sample_full[sample_full["sample_set"].eq("locked_test")]["heuristic_reference_label"].tolist(),
         selected_holdout_probs,
         selected_candidate,
-        "holdout",
+        "locked_test",
         selected_variant,
         threshold=selected_threshold,
     )
     ci_low, ci_high = bootstrap_macro_f1_ci(
-        sample_full[sample_full["sample_set"].eq("holdout")]["ai_adjudicated_label"].tolist(),
+        sample_full[sample_full["sample_set"].eq("locked_test")]["heuristic_reference_label"].tolist(),
         selected_holdout_probs,
         selected_threshold,
     )
     holdout_metric["macro_f1_ci_low"] = ci_low
     holdout_metric["macro_f1_ci_high"] = ci_high
+    holdout_metric["reference_label_source"] = REFERENCE_LABEL_SOURCE
+    holdout_metric["modeling_mode"] = VALIDATION_MODE
+    holdout_metric["human_validation_completed"] = HUMAN_VALIDATION_COMPLETED
+    pd.DataFrame([holdout_metric]).to_csv(tables_dir / "sentiment_model_locked_test_metrics.csv", index=False)
     pd.DataFrame([holdout_metric]).to_csv(tables_dir / "sentiment_model_holdout_metrics.csv", index=False)
 
-    hold_y = sample_full[sample_full["sample_set"].eq("holdout")]["ai_adjudicated_label"].astype(str).to_numpy()
+    hold_y = sample_full[sample_full["sample_set"].eq("locked_test")]["heuristic_reference_label"].astype(str).to_numpy()
     hold_pred = np.array([LABELS[i] for i in selected_holdout_probs.argmax(axis=1)])
     hold_valid = np.isin(hold_y, LABELS) & (selected_holdout_probs.max(axis=1) >= selected_threshold)
     precision, recall, f1v, support = precision_recall_fscore_support(hold_y[hold_valid], hold_pred[hold_valid], labels=LABELS, zero_division=0)
     per_class = pd.DataFrame(
         {
-            "sample_set": "holdout",
+            "sample_set": "locked_test",
             "candidate": selected_candidate,
             "preprocessing_variant": selected_variant,
             "class_label": LABELS,
@@ -1525,17 +1923,96 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
     )
     cm_df.to_csv(tables_dir / "sentiment_confusion_matrix.csv", index=False)
 
+    locked_frame = sample_full[sample_full["sample_set"].eq("locked_test")].reset_index(drop=True).copy()
+    locked_frame["predicted_label"] = hold_pred
+    locked_frame["selected_model_confidence"] = selected_holdout_probs.max(axis=1)
+    locked_frame["included_at_threshold"] = hold_valid
+    neutral_error_mask = hold_valid & (hold_y == "Neutral") & np.isin(hold_pred, ["Positive", "Negative"])
+    neutral_errors = locked_frame.loc[neutral_error_mask].copy()
+    if not neutral_errors.empty:
+        neutral_errors["neutral_error_taxonomy"] = neutral_errors.apply(
+            lambda row: infer_neutral_error_taxonomy(row["comment_text_original"], row.get("ambiguity_flags", "")),
+            axis=1,
+        )
+    else:
+        neutral_errors["neutral_error_taxonomy"] = pd.Series(dtype=str)
+    neutral_common_cols = [
+        "comment_id",
+        "comment_text_original",
+        "video_id",
+        "product_category",
+        "heuristic_reference_label",
+        "predicted_label",
+        "selected_model_confidence",
+        "ambiguity_flags",
+        "neutral_error_taxonomy",
+    ]
+    for predicted_label, filename in [
+        ("Positive", "neutral_false_positive_to_positive.csv"),
+        ("Negative", "neutral_false_positive_to_negative.csv"),
+    ]:
+        sub = neutral_errors.loc[neutral_errors["predicted_label"].eq(predicted_label), neutral_common_cols].copy()
+        sub.to_csv(tables_dir / filename, index=False)
+    if neutral_errors.empty:
+        neutral_taxonomy = pd.DataFrame(columns=["neutral_error_taxonomy", "n_errors", "error_percentage", "example_comment_ids"])
+    else:
+        neutral_taxonomy = (
+            neutral_errors.groupby("neutral_error_taxonomy", dropna=False)
+            .agg(
+                n_errors=("comment_id", "count"),
+                example_comment_ids=("comment_id", lambda s: ";".join(s.astype(str).head(8))),
+            )
+            .reset_index()
+        )
+        neutral_taxonomy["error_percentage"] = neutral_taxonomy["n_errors"] / max(len(neutral_errors), 1) * 100
+        neutral_taxonomy = neutral_taxonomy[["neutral_error_taxonomy", "n_errors", "error_percentage", "example_comment_ids"]]
+    neutral_taxonomy.to_csv(tables_dir / "neutral_error_taxonomy.csv", index=False)
+
+    neutral_metric_rows = []
+    text_type_cols = [
+        "question",
+        "emoji_only",
+        "very_short",
+        "slang",
+        "code_mixing",
+        "negation",
+        "mixed_sentiment",
+        "potential_sarcasm",
+        "domain_term",
+    ]
+    neutral_eval_frame = locked_frame.loc[hold_valid & (hold_y == "Neutral")].copy()
+    for text_type in text_type_cols + ["standard"]:
+        if text_type == "standard":
+            mask = ~neutral_eval_frame[text_type_cols].fillna(False).astype(bool).any(axis=1)
+        else:
+            mask = neutral_eval_frame[text_type].fillna(False).astype(bool)
+        sub = neutral_eval_frame.loc[mask]
+        correct = int(sub["predicted_label"].eq("Neutral").sum()) if not sub.empty else 0
+        neutral_metric_rows.append(
+            {
+                "text_type": text_type,
+                "neutral_support": int(len(sub)),
+                "neutral_correct": correct,
+                "neutral_recall": float(correct / len(sub)) if len(sub) else np.nan,
+                "predicted_positive": int(sub["predicted_label"].eq("Positive").sum()) if not sub.empty else 0,
+                "predicted_negative": int(sub["predicted_label"].eq("Negative").sum()) if not sub.empty else 0,
+                "reference_label_source": REFERENCE_LABEL_SOURCE,
+                "notes": "Neutral metrics use locked-test heuristic reference labels; diagnostic only.",
+            }
+        )
+    pd.DataFrame(neutral_metric_rows).to_csv(tables_dir / "neutral_class_metrics_by_text_type.csv", index=False)
+
     error_rows = []
-    for candidate_name in sorted({k[1] for k in candidate_probs if k[0] == "holdout"}):
+    for candidate_name in sorted({k[1] for k in candidate_probs if k[0] == "locked_test"}):
         for variant in variants:
-            key = ("holdout", candidate_name, variant)
+            key = ("locked_test", candidate_name, variant)
             if key not in candidate_probs:
                 continue
             probs = candidate_probs[key]
             pred = np.array([LABELS[i] for i in probs.argmax(axis=1)])
-            hframe = sample_full[sample_full["sample_set"].eq("holdout")].reset_index(drop=True)
+            hframe = sample_full[sample_full["sample_set"].eq("locked_test")].reset_index(drop=True)
             for row_idx, row in hframe.iterrows():
-                true_label = row["ai_adjudicated_label"]
+                true_label = row["heuristic_reference_label"]
                 if true_label not in LABELS or pred[row_idx] == true_label:
                     continue
                 taxonomy = infer_error_taxonomy(row["comment_text_original"], true_label, pred[row_idx], row.get("ambiguity_flags", ""))
@@ -1543,7 +2020,7 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
                     {
                         "candidate": candidate_name,
                         "preprocessing_variant": variant,
-                        "sample_set": "holdout",
+                        "sample_set": "locked_test",
                         "error_taxonomy": taxonomy,
                         "comment_id": row["comment_id"],
                         "true_label": true_label,
@@ -1567,6 +2044,8 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
         }
     if sum(selected_weights[k] for k in ["model_A", "model_B"]) <= 0:
         raise AssertionError("Final pipeline must include at least one transformer component.")
+    if selected_weights.get("model_C", 0.0) > 0:
+        raise AssertionError("Model C is a pseudo-label adaptation experiment and cannot be part of the PROVISIONAL final model.")
     if ALLOW_RULE_BASED_FINAL:
         raise AssertionError("ALLOW_RULE_BASED_FINAL must remain False.")
 
@@ -1575,14 +2054,20 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
     selection_payload = {
         "selected_candidate": selected_candidate,
         "selected_preprocessing_variant": selected_variant,
-        "selection_rule": "Highest development macro-F1 among transformer-based eligible pipelines; if within 0.01, prefer simpler and better calibrated pipeline.",
+        "validation_mode": VALIDATION_MODE,
+        "final_validation_status": FINAL_VALIDATION_STATUS,
+        "human_validation_completed": HUMAN_VALIDATION_COMPLETED,
+        "reference_label_source": REFERENCE_LABEL_SOURCE,
+        "selection_rule": "PROVISIONAL mode: choose among Model A, Model B, and transformer-only ensembles using development heuristic pseudo-labels; prioritize macro-F1, minimum per-class recall, balanced accuracy, calibration, and coverage. Model C is diagnostic only until human labels exist.",
         "confidence_threshold": selected_threshold,
         "coverage_floor": 0.90,
         "ensemble_weights": selected_weights,
         "model_revisions": model_revision_map,
         "tokenizer_revisions": tokenizer_revision_map,
         "allow_rule_based_final": ALLOW_RULE_BASED_FINAL,
-        "heldout_not_used_for_selection": True,
+        "locked_test_not_used_for_selection": True,
+        "previous_validation_ids_excluded_from_locked_test": len(previously_seen_validation_ids),
+        "model_c_status": "pseudo-label adaptation experiment; excluded from PROVISIONAL final selection",
         "library_versions": {},
     }
     try:
@@ -1775,8 +2260,11 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
                 **soft,
                 "dominant_sentiment": dominant_sentiment(counts["positive_ratio"], counts["neutral_ratio"], counts["negative_ratio"], n_valid),
                 "goal_orientation": goal,
+                "goal_orientation_status": "Insufficient Text" if goal == "Insufficient Text" else "Assigned",
                 "goal_confidence": boot["goal_confidence"],
                 "goal_stability": boot["goal_stability"],
+                "goal_validation_status": "Provisional",
+                "goal_method": "hard_label_ratios_with_bootstrap_stability",
                 "effective_sample_size": boot["effective_sample_size"],
                 "positive_ratio_ci_low": boot["positive_ratio_ci_low"],
                 "positive_ratio_ci_high": boot["positive_ratio_ci_high"],
@@ -1797,6 +2285,77 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
     hcc_summary = pd.DataFrame(hcc_records).sort_values("hcc_id", key=lambda s: pd.to_numeric(s, errors="coerce")).reset_index(drop=True)
     if len(hcc_summary) != HCC_COUNT_EXPECTED:
         raise AssertionError(f"HCC summary rows expected {HCC_COUNT_EXPECTED}, got {len(hcc_summary)}")
+    goal_method_rows = []
+    for hcc_id, grp in comment_sentiment[comment_sentiment["is_hcc"]].groupby("hcc_id"):
+        base_counts = hard_counts(grp)
+        n_valid = base_counts["n_valid_text_comments"]
+        methods = [
+            (
+                "hard_label_ratios",
+                base_counts["positive_ratio"],
+                base_counts["neutral_ratio"],
+                base_counts["negative_ratio"],
+                n_valid,
+                base_counts["evaluable_coverage"],
+            )
+        ]
+        soft = soft_counts(grp)
+        methods.append(
+            (
+                "soft_probability_mass",
+                soft["soft_positive_share"],
+                soft["soft_neutral_share"],
+                soft["soft_negative_share"],
+                soft["soft_denominator"],
+                base_counts["evaluable_coverage"],
+            )
+        )
+        prob_frame = grp.loc[~grp["sentiment_status"].eq("No Text")].copy()
+        if prob_frame.empty:
+            cw_pos = cw_neu = cw_neg = 0.0
+            cw_n = 0
+        else:
+            weights = pd.to_numeric(prob_frame["prediction_confidence"], errors="coerce").fillna(0.0).to_numpy()
+            if weights.sum() <= 0:
+                weights = np.ones(len(prob_frame))
+            cw_pos = float(np.average(prob_frame["probability_positive"], weights=weights))
+            cw_neu = float(np.average(prob_frame["probability_neutral"], weights=weights))
+            cw_neg = float(np.average(prob_frame["probability_negative"], weights=weights))
+            total_cw = cw_pos + cw_neu + cw_neg
+            cw_pos, cw_neu, cw_neg = cw_pos / total_cw, cw_neu / total_cw, cw_neg / total_cw
+            cw_n = int(len(prob_frame))
+        methods.append(("confidence_weighted_probability_mass", cw_pos, cw_neu, cw_neg, cw_n, base_counts["evaluable_coverage"]))
+        hard_label_counts = grp.loc[grp["sentiment_status"].eq("Evaluable"), "sentiment_label_final"].value_counts().reindex(LABELS, fill_value=0)
+        smoothed = (hard_label_counts + 1) / (hard_label_counts.sum() + 3) if hard_label_counts.sum() else pd.Series([1 / 3, 1 / 3, 1 / 3], index=LABELS)
+        methods.append(
+            (
+                "dirichlet_smoothed_hard_labels_alpha1",
+                float(smoothed["Positive"]),
+                float(smoothed["Neutral"]),
+                float(smoothed["Negative"]),
+                int(hard_label_counts.sum()),
+                base_counts["evaluable_coverage"],
+            )
+        )
+        final_goal = hcc_summary.loc[hcc_summary["hcc_id"].astype(str).eq(str(hcc_id)), "goal_orientation"].iloc[0]
+        for method, pos_r, neu_r, neg_r, effective_n, coverage in methods:
+            method_goal = classify_goal(pos_r, neu_r, neg_r, int(effective_n), coverage, float(effective_n))
+            goal_method_rows.append(
+                {
+                    "hcc_id": hcc_id,
+                    "goal_method": method,
+                    "positive_share": pos_r,
+                    "neutral_share": neu_r,
+                    "negative_share": neg_r,
+                    "effective_sample_size": effective_n,
+                    "evaluable_coverage": coverage,
+                    "method_goal_orientation": method_goal,
+                    "matches_selected_goal": method_goal == final_goal,
+                    "selected_goal_method": "hard_label_ratios_with_bootstrap_stability",
+                    "selection_basis": "Reported as sensitivity only; no method is promoted to validated without human validation.",
+                }
+            )
+    pd.DataFrame(goal_method_rows).to_csv(tables_dir / "hcc_goal_method_sensitivity.csv", index=False)
     hcc_summary.to_csv(tables_dir / "hcc_sentiment_goals_summary.csv", index=False)
 
     group_records = []
@@ -1905,15 +2464,15 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
             rep_parts.append(sub)
         rep_parts.append(grp[grp["sentiment_status"].ne("Evaluable")].sort_values("prediction_confidence").head(3))
         rep = pd.concat(rep_parts, ignore_index=False).drop_duplicates("comment_id").head(12)
-        ai_labels = []
+        heuristic_labels = []
         reasons = []
         for text in rep["comment_text_original"].tolist():
-            l1, _, _ = semantic_label_for_text(text, pass_id=1)
-            l2, _, _ = semantic_label_for_text(text, pass_id=2)
-            lab, reason = adjudicate_ai_labels(text, l1, l2)
-            ai_labels.append(lab)
+            l1, _, _ = heuristic_label_for_text(text, pass_id=1)
+            l2, _, _ = heuristic_label_for_text(text, pass_id=2)
+            lab, reason = adjudicate_heuristic_labels(text, l1, l2)
+            heuristic_labels.append(lab)
             reasons.append(reason)
-        eval_labels = [lab for lab in ai_labels if lab in LABELS]
+        eval_labels = [lab for lab in heuristic_labels if lab in LABELS]
         counts = pd.Series(eval_labels).value_counts().reindex(LABELS, fill_value=0)
         n_eval = int(counts.sum())
         pos_r = counts["Positive"] / n_eval if n_eval else 0
@@ -1928,42 +2487,116 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
                 "hcc_id": hcc_id,
                 "n_representative_comments": len(rep),
                 "representative_comment_ids": ";".join(rep["comment_id"].astype(str).tolist()),
-                "ai_hcc_goal_review": review_goal,
-                "ai_hcc_goal_reason": f"AI-assisted review of representative comments: pos={counts['Positive']}, neu={counts['Neutral']}, neg={counts['Negative']}, non-evaluable={len(rep)-n_eval}.",
-                "ai_hcc_review_confidence": "High" if n_eval >= 10 and review_goal != "Insufficient Text" else ("Medium" if n_eval >= 5 else "Low"),
+                "heuristic_hcc_goal_review": review_goal,
+                "heuristic_hcc_goal_reason": f"Deterministic lexical reference over representative comments: pos={counts['Positive']}, neu={counts['Neutral']}, neg={counts['Negative']}, non-evaluable={len(rep)-n_eval}.",
+                "heuristic_hcc_review_confidence": "High" if n_eval >= 10 and review_goal != "Insufficient Text" else ("Medium" if n_eval >= 5 else "Low"),
                 "observed_message_orientation": observed_orientation,
-                "ambiguity_notes": ";".join(sorted(set(flag for text in rep["comment_text_original"] for _, flags, _ in [semantic_label_for_text(text, pass_id=1)] for flag in flags))),
+                "ambiguity_notes": ";".join(sorted(set(flag for text in rep["comment_text_original"] for _, flags, _ in [heuristic_label_for_text(text, pass_id=1)] for flag in flags))),
                 "algorithmic_goal_orientation": alg_goal,
                 "algorithmic_goal_confidence": alg_conf,
                 "exact_match": review_goal == alg_goal,
-                "notes": "AI HCC review is not human gold-standard validation.",
+                "notes": "Heuristic HCC review is an internal diagnostic, not human gold-standard validation.",
             }
         )
     hcc_review = pd.DataFrame(hcc_review_rows)
-    hcc_review.to_csv(tables_dir / "hcc_goal_ai_review.csv", index=False)
+    hcc_review.to_csv(tables_dir / "hcc_goal_heuristic_review.csv", index=False)
 
-    review_valid = hcc_review[hcc_review["ai_hcc_goal_review"].ne("Insufficient Text") | hcc_review["algorithmic_goal_orientation"].ne("Insufficient Text")]
     goal_labels = ["Promotional / Supportive", "Critical / Complaint", "Neutral Engagement", "Polarized / Contested", "Mixed Goals", "Insufficient Text"]
+    goal_exact_agreement = float(hcc_review["exact_match"].mean())
+    goal_weighted_kappa = float(
+        cohen_kappa_score(
+            hcc_review["heuristic_hcc_goal_review"],
+            hcc_review["algorithmic_goal_orientation"],
+            labels=goal_labels,
+            weights="linear",
+        )
+    )
+
+    def goal_metric_status(metric: str, value: float) -> str:
+        if metric == "exact_agreement":
+            if value < 0.60:
+                return "FAIL"
+            if value < 0.75:
+                return "WARNING"
+            return "PASS"
+        if value < 0.40:
+            return "FAIL"
+        if value < 0.60:
+            return "WARNING"
+        return "PASS"
+
     review_metrics = pd.DataFrame(
         [
             {
                 "metric": "exact_agreement",
-                "value": float(hcc_review["exact_match"].mean()),
+                "value": goal_exact_agreement,
                 "n_hcc": len(hcc_review),
-                "notes": "Agreement between algorithmic goal_orientation and AI-assisted HCC-level semantic review.",
+                "status": goal_metric_status("exact_agreement", goal_exact_agreement),
+                "notes": "Agreement between algorithmic goal_orientation and heuristic HCC-level diagnostic review. This is not human validation.",
             },
             {
                 "metric": "weighted_kappa_linear",
-                "value": float(cohen_kappa_score(hcc_review["ai_hcc_goal_review"], hcc_review["algorithmic_goal_orientation"], labels=goal_labels, weights="linear")),
+                "value": goal_weighted_kappa,
                 "n_hcc": len(hcc_review),
-                "notes": "AI HCC review is not a human gold standard.",
+                "status": goal_metric_status("weighted_kappa_linear", goal_weighted_kappa),
+                "notes": "Heuristic HCC review is not a human gold standard.",
             },
         ]
     )
     review_metrics.to_csv(tables_dir / "hcc_goal_validation_metrics.csv", index=False)
-    hcc_review.loc[~hcc_review["exact_match"]].to_csv(tables_dir / "hcc_goal_disagreement_analysis.csv", index=False)
+    disagreement = (
+        hcc_review.loc[~hcc_review["exact_match"]]
+        .merge(
+            hcc_summary[
+                [
+                    "hcc_id",
+                    "positive_ratio",
+                    "neutral_ratio",
+                    "negative_ratio",
+                    "soft_positive_share",
+                    "soft_neutral_share",
+                    "soft_negative_share",
+                    "evaluable_coverage",
+                    "n_valid_text_comments",
+                    "goal_stability",
+                    "goal_confidence",
+                ]
+            ],
+            on="hcc_id",
+            how="left",
+        )
+        .rename(
+            columns={
+                "algorithmic_goal_orientation": "algorithmic_goal",
+                "heuristic_hcc_goal_review": "semantic_review_goal",
+                "n_valid_text_comments": "n_valid",
+                "heuristic_hcc_goal_reason": "disagreement_reason",
+            }
+        )
+    )
+    if not disagreement.empty:
+        disagreement["suggested_action"] = "Requires human validation before goal counts can be treated as validated."
+    disagreement[
+        [
+            "hcc_id",
+            "algorithmic_goal",
+            "semantic_review_goal",
+            "positive_ratio",
+            "neutral_ratio",
+            "negative_ratio",
+            "soft_positive_share",
+            "soft_neutral_share",
+            "soft_negative_share",
+            "evaluable_coverage",
+            "n_valid",
+            "goal_stability",
+            "goal_confidence",
+            "disagreement_reason",
+            "suggested_action",
+        ]
+    ].to_csv(tables_dir / "hcc_goal_disagreement_analysis.csv", index=False)
 
-    save_confusion_matrix_png(cm_df, vis_dir / "sentiment_validation_confusion_matrix.png", f"Final Pipeline Confusion Matrix (held-out evaluable n={int(hold_valid.sum())})")
+    save_confusion_matrix_png(cm_df, vis_dir / "sentiment_validation_confusion_matrix.png", f"Heuristic-reference evaluation (locked test evaluable n={int(hold_valid.sum())})")
     plot_hcc_vs_nonhcc(hcc_vs_nonhcc, vis_dir / "sentiment_hcc_vs_nonhcc_100pct.png")
     plot_goal_confidence(hcc_summary, vis_dir / "hcc_goal_orientation_confidence.png")
 
@@ -1974,8 +2607,11 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
         "neutral_ratio",
         "negative_ratio",
         "goal_orientation",
+        "goal_orientation_status",
         "goal_confidence",
         "goal_stability",
+        "goal_validation_status",
+        "goal_method",
         "avg_sentiment_confidence",
         "evaluable_coverage",
     ]
@@ -2012,54 +2648,107 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
     goal_counts = hcc_summary["goal_orientation"].value_counts().to_dict()
     goal_conf_counts = hcc_summary["goal_confidence"].value_counts().to_dict()
     low_conf_hcc = hcc_summary.loc[hcc_summary["goal_confidence"].eq("Low"), "hcc_id"].astype(str).tolist()
-    final_report_records = [
-        ("DATA", "dataset rows", len(comment_sentiment), len(comment_sentiment) == TOTAL_COMMENTS_EXPECTED, ""),
-        ("DATA", "unique comment IDs", comment_sentiment["comment_id"].nunique(), comment_sentiment["comment_id"].nunique() == TOTAL_COMMENTS_EXPECTED, ""),
-        ("DATA", "duplicate rows removed", duplicate_rows_removed, True, ""),
-        ("DATA", "blank text", int(comments["blank_text"].sum()), True, ""),
-        ("DATA", "emoji-only", int(comments["emoji_only"].sum()), True, ""),
-        ("DATA", "evaluable", int(comment_sentiment["sentiment_status"].eq("Evaluable").sum()), True, ""),
-        ("DATA", "uncertain", int(comment_sentiment["sentiment_status"].eq("Uncertain").sum()), True, ""),
-        ("DATA", "no text", int(comment_sentiment["sentiment_status"].eq("No Text").sum()), True, ""),
-        ("DATA", "coverage", float(comment_sentiment["sentiment_status"].eq("Evaluable").mean()), True, ""),
-        ("MODEL", "selected model/pipeline", selected_candidate, True, ""),
-        ("MODEL", "model revision", json.dumps(model_revision_map, ensure_ascii=False), all(model_revision_map.values()), ""),
-        ("MODEL", "preprocessing", selected_variant, True, ""),
-        ("MODEL", "calibration", "LinearSVC calibrated when model_C participates; transformer probabilities otherwise unmodified.", True, ""),
-        ("MODEL", "ensemble weights", json.dumps(selected_weights), True, ""),
-        ("MODEL", "confidence threshold", selected_threshold, True, ""),
-        ("MODEL", "fallback used", False, True, ""),
-        ("DEVELOPMENT", "macro-F1", float(selected["macro_f1"]), True, ""),
-        ("DEVELOPMENT", "accuracy", float(selected["accuracy"]), True, ""),
-        ("DEVELOPMENT", "balanced accuracy", float(selected["balanced_accuracy"]), True, ""),
-        ("DEVELOPMENT", "negative recall", float(selected["negative_recall"]), True, ""),
-        ("DEVELOPMENT", "calibration ECE", float(selected["ece"]), True, ""),
-        ("HELD-OUT", "macro-F1", holdout_metric["macro_f1"], True, ""),
-        ("HELD-OUT", "bootstrap 95% CI", f"{ci_low:.4f}-{ci_high:.4f}", True, ""),
-        ("HELD-OUT", "accuracy", holdout_metric["accuracy"], True, ""),
-        ("HELD-OUT", "balanced accuracy", holdout_metric["balanced_accuracy"], True, ""),
-        ("HELD-OUT", "weighted F1", holdout_metric["weighted_f1"], True, ""),
-        ("HELD-OUT", "MCC", holdout_metric["mcc"], True, ""),
-        ("HELD-OUT", "Brier score", holdout_metric["brier_score"], True, ""),
-        ("HELD-OUT", "ECE", holdout_metric["ece"], True, ""),
-        ("HELD-OUT", "coverage", holdout_metric["coverage"], True, ""),
-        ("GOALS", "HCC count", len(hcc_summary), len(hcc_summary) == HCC_COUNT_EXPECTED, ""),
-        ("GOALS", "goal counts", json.dumps(goal_counts, ensure_ascii=False), True, ""),
-        ("GOALS", "goal confidence counts", json.dumps(goal_conf_counts, ensure_ascii=False), True, ""),
-        ("GOALS", "AI HCC review agreement", float(hcc_review["exact_match"].mean()), True, "AI review is not human gold standard."),
-        ("GOALS", "low-confidence HCC list", ";".join(low_conf_hcc), True, ""),
-        ("GOALS", "insufficient HCC count", int(hcc_summary["goal_orientation"].eq("Insufficient Text").sum()), True, ""),
-        ("INTEGRITY", "RM1 checksums unchanged", rm1_unchanged, rm1_unchanged, ""),
-        ("INTEGRITY", "actor type counts unchanged", actor_counts_ok, actor_counts_ok, json.dumps(actor_counts, ensure_ascii=False)),
-        ("INTEGRITY", "Gephi aggregate 396/497 unchanged", gephi_aggregate_ok, gephi_aggregate_ok, ""),
-        ("INTEGRITY", "no Non-HCC artifact", no_non_hcc_artifact, no_non_hcc_artifact, ""),
-        ("INTEGRITY", "sentiment notebook reached final validation cell", True, True, ""),
-        ("INTEGRITY", "comment_sentiment sha256", comment_sentiment_checksum, True, ""),
-    ]
-    final_report = pd.DataFrame(final_report_records, columns=["section", "metric", "value", "passed", "notes"])
+    human_validation_completed = bool(
+        human_validation_status.loc[
+            human_validation_status["metric"].eq("human_validation_completed"),
+            "value",
+        ].astype(str).str.lower().eq("true").any()
+    )
+
+    def status_from_bool(ok: bool) -> str:
+        return "PASS" if bool(ok) else "FAIL"
+
+    def status_from_threshold(value: float, pass_at: float, warning_at: float | None = None) -> str:
+        if pd.isna(value):
+            return "NOT_AVAILABLE"
+        if value >= pass_at:
+            return "PASS"
+        if warning_at is not None and value >= warning_at:
+            return "WARNING"
+        return "FAIL"
+
+    macro_status = status_from_threshold(float(holdout_metric["macro_f1"]), 0.55, 0.45)
+    neutral_recall_status = status_from_threshold(float(holdout_metric["neutral_recall"]), 0.50, 0.35)
+    min_class_f1_status = status_from_threshold(float(holdout_metric["min_per_class_f1"]), 0.40, 0.30)
+    calibration_status = status_from_threshold(0.25 - float(holdout_metric["ece"]), 0.0, -0.10)
+    goal_exact_status = review_metrics.loc[review_metrics["metric"].eq("exact_agreement"), "status"].iloc[0]
+    goal_kappa_status = review_metrics.loc[review_metrics["metric"].eq("weighted_kappa_linear"), "status"].iloc[0]
+    hcc_goal_confidence_status = "WARNING" if goal_conf_counts.get("Low", 0) > 0 or goal_conf_counts.get("None", 0) > 0 else "PASS"
+
+    final_report_records = []
+
+    def add_report(section: str, metric: str, value, status: str, notes: str = "") -> None:
+        final_report_records.append(
+            {
+                "overall_pipeline_status": FINAL_VALIDATION_STATUS,
+                "section": section,
+                "metric": metric,
+                "value": value,
+                "status": status,
+                "passed": status == "PASS",
+                "notes": notes,
+            }
+        )
+
+    add_report("SUMMARY", "overall_pipeline_status", FINAL_VALIDATION_STATUS, "WARNING", "Human validation is not available; outputs are exploratory/provisional.")
+    add_report("SUMMARY", "validation_mode", VALIDATION_MODE, "WARNING", "Reference labels are deterministic heuristic pseudo-labels.")
+    add_report("DATA", "dataset rows", len(comment_sentiment), status_from_bool(len(comment_sentiment) == TOTAL_COMMENTS_EXPECTED), "")
+    add_report("DATA", "unique comment IDs", comment_sentiment["comment_id"].nunique(), status_from_bool(comment_sentiment["comment_id"].nunique() == TOTAL_COMMENTS_EXPECTED), "")
+    add_report("DATA", "duplicate rows removed", duplicate_rows_removed, "PASS", "")
+    add_report("DATA", "blank text", int(comments["blank_text"].sum()), "PASS", "")
+    add_report("DATA", "emoji-only", int(comments["emoji_only"].sum()), "PASS", "")
+    add_report("DATA", "evaluable", int(comment_sentiment["sentiment_status"].eq("Evaluable").sum()), "PASS", "")
+    add_report("DATA", "uncertain", int(comment_sentiment["sentiment_status"].eq("Uncertain").sum()), "PASS", "")
+    add_report("DATA", "no text", int(comment_sentiment["sentiment_status"].eq("No Text").sum()), "PASS", "")
+    add_report("DATA", "coverage", float(comment_sentiment["sentiment_status"].eq("Evaluable").mean()), "PASS", "")
+    add_report("MODEL", "selected model/pipeline", selected_candidate, "WARNING", "Selected under PROVISIONAL mode using heuristic pseudo-labels.")
+    add_report("MODEL", "model revision", json.dumps(model_revision_map, ensure_ascii=False), status_from_bool(all(model_revision_map.values())), "")
+    add_report("MODEL", "preprocessing", selected_variant, "PASS", "")
+    add_report("MODEL", "calibration", "LinearSVC calibrated only for Model C diagnostic experiment; transformer probabilities otherwise unmodified.", "WARNING", "Model C is not eligible as final without human labels.")
+    add_report("MODEL", "ensemble weights", json.dumps(selected_weights), status_from_bool(selected_weights.get("model_C", 0.0) == 0.0), "Model C must remain 0 in PROVISIONAL final mode.")
+    add_report("MODEL", "confidence threshold", selected_threshold, "WARNING", "Threshold selected on heuristic pseudo-label development data.")
+    add_report("MODEL", "fallback used", False, "PASS", "")
+    add_report("MODEL", "human_validation_completed", human_validation_completed, "PASS" if human_validation_completed else "NOT_AVAILABLE", "Human labels remain blank in the generated package.")
+    add_report("MODEL", "model generalization", holdout_metric["macro_f1"], macro_status, "Validated status requires locked-test macro-F1 >= 0.55 on human labels.")
+    add_report("MODEL", "per-class performance minimum F1", holdout_metric["min_per_class_f1"], min_class_f1_status, "Validated status requires every class F1 >= 0.40.")
+    add_report("MODEL", "Neutral recall", holdout_metric["neutral_recall"], neutral_recall_status, "Validated status requires Neutral recall >= 0.50.")
+    add_report("MODEL", "calibration ECE", holdout_metric["ece"], calibration_status, "Lower ECE is better; threshold is diagnostic in provisional mode.")
+    add_report("DEVELOPMENT", "macro-F1", float(selected["macro_f1"]), "WARNING", "Measured against heuristic pseudo-labels.")
+    add_report("DEVELOPMENT", "accuracy", float(selected["accuracy"]), "WARNING", "Measured against heuristic pseudo-labels.")
+    add_report("DEVELOPMENT", "balanced accuracy", float(selected["balanced_accuracy"]), "WARNING", "Measured against heuristic pseudo-labels.")
+    add_report("DEVELOPMENT", "negative recall", float(selected["negative_recall"]), "WARNING", "Measured against heuristic pseudo-labels.")
+    add_report("DEVELOPMENT", "calibration ECE", float(selected["ece"]), "WARNING", "Measured against heuristic pseudo-labels.")
+    add_report("LOCKED_TEST", "macro-F1", holdout_metric["macro_f1"], macro_status, "Heuristic-reference locked test; not human validation.")
+    add_report("LOCKED_TEST", "bootstrap 95% CI", f"{ci_low:.4f}-{ci_high:.4f}", "WARNING", "Bootstrap over heuristic-reference locked test.")
+    add_report("LOCKED_TEST", "accuracy", holdout_metric["accuracy"], "WARNING", "Heuristic-reference locked test.")
+    add_report("LOCKED_TEST", "balanced accuracy", holdout_metric["balanced_accuracy"], "WARNING", "Heuristic-reference locked test.")
+    add_report("LOCKED_TEST", "weighted F1", holdout_metric["weighted_f1"], "WARNING", "Heuristic-reference locked test.")
+    add_report("LOCKED_TEST", "MCC", holdout_metric["mcc"], "WARNING", "Heuristic-reference locked test.")
+    add_report("LOCKED_TEST", "Brier score", holdout_metric["brier_score"], "WARNING", "Heuristic-reference locked test.")
+    add_report("LOCKED_TEST", "ECE", holdout_metric["ece"], calibration_status, "Heuristic-reference locked test.")
+    add_report("LOCKED_TEST", "coverage", holdout_metric["coverage"], "PASS" if holdout_metric["coverage"] >= 0.90 else "WARNING", "")
+    add_report("GOALS", "HCC count", len(hcc_summary), status_from_bool(len(hcc_summary) == HCC_COUNT_EXPECTED), "")
+    add_report("GOALS", "goal counts", json.dumps(goal_counts, ensure_ascii=False), "WARNING", "Goal counts are provisional until human sentiment validation is complete.")
+    add_report("GOALS", "goal confidence counts", json.dumps(goal_conf_counts, ensure_ascii=False), hcc_goal_confidence_status, "Confidence is bootstrap stability, not correctness.")
+    add_report("GOALS", "heuristic HCC review exact agreement", goal_exact_agreement, goal_exact_status, "Exact agreement <0.60 fails the diagnostic gate.")
+    add_report("GOALS", "heuristic HCC review weighted kappa", goal_weighted_kappa, goal_kappa_status, "Weighted kappa <0.40 fails the diagnostic gate.")
+    add_report("GOALS", "low-confidence HCC list", ";".join(low_conf_hcc), hcc_goal_confidence_status, "")
+    add_report("GOALS", "insufficient HCC count", int(hcc_summary["goal_orientation"].eq("Insufficient Text").sum()), "PASS", "")
+    add_report("INTEGRITY", "RM1 checksums unchanged", rm1_unchanged, status_from_bool(rm1_unchanged), "")
+    add_report("INTEGRITY", "actor type counts unchanged", actor_counts_ok, status_from_bool(actor_counts_ok), json.dumps(actor_counts, ensure_ascii=False))
+    add_report("INTEGRITY", "Gephi aggregate 396/497 unchanged", gephi_aggregate_ok, status_from_bool(gephi_aggregate_ok), "")
+    add_report("INTEGRITY", "no Non-HCC artifact", no_non_hcc_artifact, status_from_bool(no_non_hcc_artifact), "")
+    add_report("INTEGRITY", "sentiment notebook reached final validation cell", True, "PASS", "")
+    add_report("INTEGRITY", "comment_sentiment sha256", comment_sentiment_checksum, "PASS", "")
+    final_report = pd.DataFrame(final_report_records)
     final_report.to_csv(tables_dir / "sentiment_final_validation_report.csv", index=False)
-    if not final_report["passed"].astype(bool).all():
-        raise AssertionError("Final validation report contains failed gates.")
+    critical_integrity = final_report[
+        final_report["section"].eq("INTEGRITY")
+        | (final_report["section"].eq("DATA") & final_report["metric"].isin(["dataset rows", "unique comment IDs"]))
+        | (final_report["section"].eq("MODEL") & final_report["metric"].eq("fallback used"))
+    ]
+    if critical_integrity["status"].eq("FAIL").any():
+        raise AssertionError("Critical integrity validation failed.")
 
     print("RM2 SENTIMENT GOALS PIPELINE COMPLETE")
     print(f"- selected pipeline: {selected_candidate} ({selected_variant})")
@@ -2067,15 +2756,17 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
     print(f"- comment rows: {len(comment_sentiment):,}")
     print(f"- HCC comments: {int(comment_sentiment['is_hcc'].sum()):,}")
     print(f"- HCC count: {len(hcc_summary):,}")
+    print(f"- overall pipeline status: {FINAL_VALIDATION_STATUS}")
+    print(f"- human validation completed: {human_validation_completed}")
     print("- development macro-F1: {:.4f}".format(float(selected["macro_f1"])))
-    print("- held-out macro-F1: {:.4f} (95% CI {:.4f}-{:.4f})".format(float(holdout_metric["macro_f1"]), ci_low, ci_high))
+    print("- locked-test heuristic-reference macro-F1: {:.4f} (95% CI {:.4f}-{:.4f})".format(float(holdout_metric["macro_f1"]), ci_low, ci_high))
     print("- sentiment status counts:")
     print(comment_sentiment["sentiment_status"].value_counts().to_string())
     print("- HCC goal counts:")
     print(hcc_summary["goal_orientation"].value_counts().to_string())
     print("- HCC goal confidence counts:")
     print(hcc_summary["goal_confidence"].value_counts().to_string())
-    print("- AI annotation consistency:")
+    print("- deterministic rule reproducibility (not annotation reliability):")
     print(consistency.to_string(index=False))
     print("- RM1 protected inputs unchanged:", rm1_unchanged)
 
@@ -2083,9 +2774,12 @@ The two-pass kappa measures AI self-consistency, not human inter-annotator agree
         "selected_candidate": selected_candidate,
         "selected_variant": selected_variant,
         "selected_threshold": selected_threshold,
+        "overall_pipeline_status": FINAL_VALIDATION_STATUS,
+        "human_validation_completed": human_validation_completed,
         "development_macro_f1": float(selected["macro_f1"]),
-        "holdout_macro_f1": float(holdout_metric["macro_f1"]),
-        "holdout_macro_f1_ci": [ci_low, ci_high],
+        "locked_test_macro_f1": float(holdout_metric["macro_f1"]),
+        "locked_test_macro_f1_ci": [ci_low, ci_high],
+        "locked_test_neutral_recall": float(holdout_metric["neutral_recall"]),
         "comment_rows": len(comment_sentiment),
         "hcc_comments": int(comment_sentiment["is_hcc"].sum()),
         "hcc_goal_counts": goal_counts,

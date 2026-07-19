@@ -1,44 +1,52 @@
-section,metric,value,passed,notes
-DATA,dataset rows,33847,True,
-DATA,unique comment IDs,33847,True,
-DATA,duplicate rows removed,0,True,
-DATA,blank text,4,True,
-DATA,emoji-only,2515,True,
-DATA,evaluable,23249,True,
-DATA,uncertain,8878,True,
-DATA,no text,1720,True,
-DATA,coverage,0.6868851005997577,True,
-MODEL,selected model/pipeline,ensemble_A0.00_B0.20_C0.80,True,
-MODEL,model revision,"{""model_A"": ""80ccb4c2817cf976534ac491020a9572e5dae54f"", ""model_B"": ""ac452dcb0f4966130bba44f4ee0013bb5d52c282""}",True,
-MODEL,preprocessing,social_normalized,True,
-MODEL,calibration,LinearSVC calibrated when model_C participates; transformer probabilities otherwise unmodified.,True,
-MODEL,ensemble weights,"{""model_A"": 0.0, ""model_B"": 0.2, ""model_C"": 0.8}",True,
-MODEL,confidence threshold,0.44,True,
-MODEL,fallback used,False,True,
-DEVELOPMENT,macro-F1,0.6479541305888611,True,
-DEVELOPMENT,accuracy,0.6973684210526315,True,
-DEVELOPMENT,balanced accuracy,0.6259874661545057,True,
-DEVELOPMENT,negative recall,0.8543689320388349,True,
-DEVELOPMENT,calibration ECE,0.07488167308808082,True,
-HELD-OUT,macro-F1,0.4394011032308905,True,
-HELD-OUT,bootstrap 95% CI,0.3642-0.5089,True,
-HELD-OUT,accuracy,0.43783783783783786,True,
-HELD-OUT,balanced accuracy,0.6041910470481899,True,
-HELD-OUT,weighted F1,0.3935339594914063,True,
-HELD-OUT,MCC,0.3014704091121282,True,
-HELD-OUT,Brier score,0.6727491983164345,True,
-HELD-OUT,ECE,0.17678746406460735,True,
-HELD-OUT,coverage,0.7740585774058577,True,
-GOALS,HCC count,42,True,
-GOALS,goal counts,"{""Promotional / Supportive"": 25, ""Polarized / Contested"": 16, ""Critical / Complaint"": 1}",True,
-GOALS,goal confidence counts,"{""Medium"": 19, ""High"": 13, ""Low"": 10}",True,
-GOALS,AI HCC review agreement,0.19047619047619047,True,AI review is not human gold standard.
-GOALS,low-confidence HCC list,1;2;16;20;45;50;75;87;103;132,True,
-GOALS,insufficient HCC count,0,True,
-INTEGRITY,RM1 checksums unchanged,True,True,
-INTEGRITY,actor type counts unchanged,True,True,{}
-INTEGRITY,Gephi aggregate 396/497 unchanged,True,True,
-INTEGRITY,no Non-HCC artifact,True,True,
-INTEGRITY,sentiment notebook reached final validation cell,True,True,
-INTEGRITY,comment_sentiment sha256,20413a8e270a87db2cd89e1c97914c6d3320dbc59ceae3d6fc77bcee9bae0c8e,True,
-INTEGRITY,actor type notebook run end-to-end,True,True,03_rm2_actor_type_typology.ipynb executed successfully after final sentiment outputs.
+overall_pipeline_status,section,metric,value,status,passed,notes
+PROVISIONAL,SUMMARY,overall_pipeline_status,PROVISIONAL,WARNING,False,Human validation is not available; outputs are exploratory/provisional.
+PROVISIONAL,SUMMARY,validation_mode,PROVISIONAL,WARNING,False,Reference labels are deterministic heuristic pseudo-labels.
+PROVISIONAL,DATA,dataset rows,33847,PASS,True,
+PROVISIONAL,DATA,unique comment IDs,33847,PASS,True,
+PROVISIONAL,DATA,duplicate rows removed,0,PASS,True,
+PROVISIONAL,DATA,blank text,4,PASS,True,
+PROVISIONAL,DATA,emoji-only,2515,PASS,True,
+PROVISIONAL,DATA,evaluable,31819,PASS,True,
+PROVISIONAL,DATA,uncertain,308,PASS,True,
+PROVISIONAL,DATA,no text,1720,PASS,True,
+PROVISIONAL,DATA,coverage,0.9400833160989157,PASS,True,
+PROVISIONAL,MODEL,selected model/pipeline,ensemble_transformer_A0.50_B0.50,WARNING,False,Selected under PROVISIONAL mode using heuristic pseudo-labels.
+PROVISIONAL,MODEL,model revision,"{""model_A"": ""80ccb4c2817cf976534ac491020a9572e5dae54f"", ""model_B"": ""ac452dcb0f4966130bba44f4ee0013bb5d52c282""}",PASS,True,
+PROVISIONAL,MODEL,preprocessing,social_normalized,PASS,True,
+PROVISIONAL,MODEL,calibration,LinearSVC calibrated only for Model C diagnostic experiment; transformer probabilities otherwise unmodified.,WARNING,False,Model C is not eligible as final without human labels.
+PROVISIONAL,MODEL,ensemble weights,"{""model_A"": 0.5, ""model_B"": 0.5, ""model_C"": 0.0}",PASS,True,Model C must remain 0 in PROVISIONAL final mode.
+PROVISIONAL,MODEL,confidence threshold,0.41,WARNING,False,Threshold selected on heuristic pseudo-label development data.
+PROVISIONAL,MODEL,fallback used,False,PASS,True,
+PROVISIONAL,MODEL,human_validation_completed,False,NOT_AVAILABLE,False,Human labels remain blank in the generated package.
+PROVISIONAL,MODEL,model generalization,0.495998737804815,WARNING,False,Validated status requires locked-test macro-F1 >= 0.55 on human labels.
+PROVISIONAL,MODEL,per-class performance minimum F1,0.36363636363636365,WARNING,False,Validated status requires every class F1 >= 0.40.
+PROVISIONAL,MODEL,Neutral recall,0.5367647058823529,PASS,True,Validated status requires Neutral recall >= 0.50.
+PROVISIONAL,MODEL,calibration ECE,0.20230117319727348,PASS,True,Lower ECE is better; threshold is diagnostic in provisional mode.
+PROVISIONAL,DEVELOPMENT,macro-F1,0.5193312814730963,WARNING,False,Measured against heuristic pseudo-labels.
+PROVISIONAL,DEVELOPMENT,accuracy,0.5860655737704918,WARNING,False,Measured against heuristic pseudo-labels.
+PROVISIONAL,DEVELOPMENT,balanced accuracy,0.5577554685363578,WARNING,False,Measured against heuristic pseudo-labels.
+PROVISIONAL,DEVELOPMENT,negative recall,0.6326530612244898,WARNING,False,Measured against heuristic pseudo-labels.
+PROVISIONAL,DEVELOPMENT,calibration ECE,0.05765025840848554,WARNING,False,Measured against heuristic pseudo-labels.
+PROVISIONAL,LOCKED_TEST,macro-F1,0.495998737804815,WARNING,False,Heuristic-reference locked test; not human validation.
+PROVISIONAL,LOCKED_TEST,bootstrap 95% CI,0.4296-0.5602,WARNING,False,Bootstrap over heuristic-reference locked test.
+PROVISIONAL,LOCKED_TEST,accuracy,0.5286343612334802,WARNING,False,Heuristic-reference locked test.
+PROVISIONAL,LOCKED_TEST,balanced accuracy,0.5543695973012862,WARNING,False,Heuristic-reference locked test.
+PROVISIONAL,LOCKED_TEST,weighted F1,0.5575414293669987,WARNING,False,Heuristic-reference locked test.
+PROVISIONAL,LOCKED_TEST,MCC,0.29354965805720734,WARNING,False,Heuristic-reference locked test.
+PROVISIONAL,LOCKED_TEST,Brier score,0.7224307686356116,WARNING,False,Heuristic-reference locked test.
+PROVISIONAL,LOCKED_TEST,ECE,0.20230117319727348,PASS,True,Heuristic-reference locked test.
+PROVISIONAL,LOCKED_TEST,coverage,0.9826839826839827,PASS,True,
+PROVISIONAL,GOALS,HCC count,42,PASS,True,
+PROVISIONAL,GOALS,goal counts,"{""Mixed Goals"": 17, ""Promotional / Supportive"": 11, ""Neutral Engagement"": 9, ""Polarized / Contested"": 5}",WARNING,False,Goal counts are provisional until human sentiment validation is complete.
+PROVISIONAL,GOALS,goal confidence counts,"{""High"": 17, ""Medium"": 13, ""Low"": 12}",WARNING,False,"Confidence is bootstrap stability, not correctness."
+PROVISIONAL,GOALS,heuristic HCC review exact agreement,0.2619047619047619,FAIL,False,Exact agreement <0.60 fails the diagnostic gate.
+PROVISIONAL,GOALS,heuristic HCC review weighted kappa,-0.11275415896487995,FAIL,False,Weighted kappa <0.40 fails the diagnostic gate.
+PROVISIONAL,GOALS,low-confidence HCC list,14;20;50;52;60;63;74;75;87;134;182;183,WARNING,False,
+PROVISIONAL,GOALS,insufficient HCC count,0,PASS,True,
+PROVISIONAL,INTEGRITY,RM1 checksums unchanged,True,PASS,True,
+PROVISIONAL,INTEGRITY,actor type counts unchanged,True,PASS,True,"{""Mass Actor"": 26166, ""Community Actor"": 218, ""Individual Actor"": 43}"
+PROVISIONAL,INTEGRITY,Gephi aggregate 396/497 unchanged,True,PASS,True,
+PROVISIONAL,INTEGRITY,no Non-HCC artifact,True,PASS,True,
+PROVISIONAL,INTEGRITY,sentiment notebook reached final validation cell,True,PASS,True,
+PROVISIONAL,INTEGRITY,comment_sentiment sha256,57bbd4f8c9ae6de5c719e04c611347d81db56ca172b5dc817bceff0f240c0af6,PASS,True,
+PROVISIONAL,INTEGRITY,actor type notebook run end-to-end,True,PASS,True,03_rm2_actor_type_typology.ipynb executed successfully after removing legacy actor type Gephi aliases.

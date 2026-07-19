@@ -1,0 +1,4 @@
+sample_set,n_comments,deterministic_rule_reproducibility,cohen_kappa_deterministic_reproducibility,disagreement_count,uncertainty_rate,no_text_rate,passes_independent,use_as_validation_evidence,notes
+development,300,1.0,1.0,0,0.18333333333333332,0.0033333333333333335,False,False,"This metric measures reproducibility of the same deterministic rule system, not annotation reliability or human inter-annotator agreement."
+locked_test,300,1.0,1.0,0,0.21666666666666667,0.013333333333333334,False,False,"This metric measures reproducibility of the same deterministic rule system, not annotation reliability or human inter-annotator agreement."
+combined,600,1.0,1.0,0,0.2,0.008333333333333333,False,False,"This metric measures reproducibility of the same deterministic rule system, not annotation reliability or human inter-annotator agreement."

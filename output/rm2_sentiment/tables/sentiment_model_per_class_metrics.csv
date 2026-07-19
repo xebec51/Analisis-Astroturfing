@@ -1,4 +1,4 @@
 sample_set,candidate,preprocessing_variant,class_label,precision,recall,f1,support
-holdout,ensemble_A0.00_B0.20_C0.80,social_normalized,Positive,0.41304347826086957,0.7755102040816326,0.5390070921985816,49
-holdout,ensemble_A0.00_B0.20_C0.80,social_normalized,Neutral,0.84,0.19090909090909092,0.3111111111111111,110
-holdout,ensemble_A0.00_B0.20_C0.80,social_normalized,Negative,0.3235294117647059,0.8461538461538461,0.46808510638297873,26
+locked_test,ensemble_transformer_A0.50_B0.50,social_normalized,Positive,0.6097560975609756,0.4166666666666667,0.49504950495049505,60
+locked_test,ensemble_transformer_A0.50_B0.50,social_normalized,Neutral,0.7604166666666666,0.5367647058823529,0.6293103448275862,136
+locked_test,ensemble_transformer_A0.50_B0.50,social_normalized,Negative,0.24444444444444444,0.7096774193548387,0.36363636363636365,31

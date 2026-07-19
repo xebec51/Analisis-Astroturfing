@@ -1,13 +1,17 @@
 {
-  "selected_candidate": "ensemble_A0.00_B0.20_C0.80",
+  "selected_candidate": "ensemble_transformer_A0.50_B0.50",
   "selected_preprocessing_variant": "social_normalized",
-  "selection_rule": "Highest development macro-F1 among transformer-based eligible pipelines; if within 0.01, prefer simpler and better calibrated pipeline.",
-  "confidence_threshold": 0.44,
+  "validation_mode": "PROVISIONAL",
+  "final_validation_status": "PROVISIONAL",
+  "human_validation_completed": false,
+  "reference_label_source": "heuristic_pseudo_label",
+  "selection_rule": "PROVISIONAL mode: choose among Model A, Model B, and transformer-only ensembles using development heuristic pseudo-labels; prioritize macro-F1, minimum per-class recall, balanced accuracy, calibration, and coverage. Model C is diagnostic only until human labels exist.",
+  "confidence_threshold": 0.41,
   "coverage_floor": 0.9,
   "ensemble_weights": {
-    "model_A": 0.0,
-    "model_B": 0.2,
-    "model_C": 0.8
+    "model_A": 0.5,
+    "model_B": 0.5,
+    "model_C": 0.0
   },
   "model_revisions": {
     "model_A": "80ccb4c2817cf976534ac491020a9572e5dae54f",
@@ -18,7 +22,9 @@
     "model_B": "ac452dcb0f4966130bba44f4ee0013bb5d52c282"
   },
   "allow_rule_based_final": false,
-  "heldout_not_used_for_selection": true,
+  "locked_test_not_used_for_selection": true,
+  "previous_validation_ids_excluded_from_locked_test": 600,
+  "model_c_status": "pseudo-label adaptation experiment; excluded from PROVISIONAL final selection",
   "library_versions": {
     "python": "3.12.2",
     "pandas": "2.2.3",

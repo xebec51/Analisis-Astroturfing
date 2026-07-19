@@ -1,4 +1,4 @@
 minimum_evaluable_comments,n_accounts,n_accounts_with_sufficient_text,coverage,goal_count_Promotional / Supportive,goal_count_Critical / Complaint,goal_count_Neutral Engagement,goal_count_Polarized / Contested,goal_count_Mixed Goals,goal_count_Insufficient Text
-3,26424,274,0.010369361186799878,132,50,0,88,4,26150
-5,26424,274,0.010369361186799878,132,50,0,88,4,26150
-10,26424,39,0.0014759309718437783,16,4,0,15,4,26385
+3,26424,416,0.01574326369966697,75,48,128,51,114,26008
+5,26424,416,0.01574326369966697,75,48,128,51,114,26008
+10,26424,55,0.002081441114138662,4,7,23,4,17,26369

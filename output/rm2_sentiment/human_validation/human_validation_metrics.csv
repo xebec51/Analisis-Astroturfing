@@ -1,0 +1,9 @@
+metric,value,status,notes
+human_validation_completed,False,NOT_AVAILABLE,Human labels are not filled by the pipeline.
+blank_annotator_1_labels,600,NOT_AVAILABLE,
+blank_annotator_2_labels,600,NOT_AVAILABLE,
+blank_adjudicated_human_labels,600,NOT_AVAILABLE,
+invalid_human_labels,,PASS,"Allowed labels are Positive, Neutral, Negative, Uncertain, No Text."
+adjudication_coverage,0.0,NOT_AVAILABLE,
+annotator_raw_agreement,,NOT_AVAILABLE,Human labels are blank.
+cohens_kappa_human_annotators,,NOT_AVAILABLE,Human labels are blank.

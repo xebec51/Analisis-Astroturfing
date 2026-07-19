@@ -1,0 +1,11 @@
+text_type,neutral_support,neutral_correct,neutral_recall,predicted_positive,predicted_negative,reference_label_source,notes
+question,52,30,0.5769230769230769,2,20,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+emoji_only,0,0,,0,0,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+very_short,2,1,0.5,0,1,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+slang,89,48,0.5393258426966292,9,32,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+code_mixing,0,0,,0,0,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+negation,33,16,0.48484848484848486,4,13,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+mixed_sentiment,0,0,,0,0,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+potential_sarcasm,6,1,0.16666666666666666,0,5,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+domain_term,0,0,,0,0,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
+standard,30,17,0.5666666666666667,1,12,heuristic_pseudo_label,Neutral metrics use locked-test heuristic reference labels; diagnostic only.
