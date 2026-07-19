@@ -386,16 +386,17 @@ Paket human validation siap anotasi tersedia di `output/rm2_sentiment/human_vali
 masih kosong, `human_validation_completed=False`, `overall_pipeline_status=PROVISIONAL`, dan pipeline tidak
 mengklaim model sebagai validated.
 
-Hasil provisional saat ini memilih `model_A` dengan preprocessing `social_normalized` dan threshold `0.34`
-(`ensemble_weights`: Model A `1.0`, Model B `0.0`, Model C `0.0`). Locked-test heuristic-reference
-evaluation menghasilkan macro-F1 `0.4857` (bootstrap 95% CI `0.4127-0.5533`), accuracy `0.5755`, balanced
-accuracy `0.5218`, MCC `0.2461`, Neutral recall `0.6582`, Negative recall `0.5200`, minimum class F1
-`0.3023`, dan ECE `0.3327`. Nilai tersebut transparan sebagai diagnostic provisional, bukan klaim
+Hasil provisional saat ini memilih `ensemble_transformer_A0.50_B0.50` dengan preprocessing
+`social_normalized` dan threshold `0.41` (`ensemble_weights`: Model A `0.5`, Model B `0.5`, Model C
+`0.0`). Locked-test heuristic-reference evaluation menghasilkan macro-F1 `0.4960` (bootstrap 95% CI
+`0.4296-0.5602`), accuracy `0.5286`, balanced accuracy `0.5544`, MCC `0.2935`, Neutral recall `0.5368`,
+Negative recall `0.7097`, minimum class F1 `0.3636`, ECE `0.2023`, dan coverage `0.9827`. Nilai tersebut
+transparan sebagai diagnostic provisional, bukan klaim
 validated performance.
 
 Goal counts provisional saat ini: `Mixed Goals` 17 HCC, `Promotional / Supportive` 11 HCC,
 `Neutral Engagement` 9 HCC, dan `Polarized / Contested` 5 HCC. Diagnostic agreement goal terhadap heuristic HCC review masih gagal
-gate metodologis (`exact_agreement=0.4524`, `weighted_kappa=0.1121`), sehingga goal counts tidak boleh
+gate metodologis (`exact_agreement=0.2619047619`, `weighted_kappa=-0.1127541590`, status `FAIL`), sehingga goal counts tidak boleh
 dibaca sebagai validated tanpa human validation.
 
 ### Output Tabel (`output/rm2_sentiment/tables/`)

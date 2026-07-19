@@ -21,7 +21,7 @@ PROVISIONAL,MODEL,human_validation_completed,False,NOT_AVAILABLE,False,Human lab
 PROVISIONAL,MODEL,model generalization,0.495998737804815,WARNING,False,Validated status requires locked-test macro-F1 >= 0.55 on human labels.
 PROVISIONAL,MODEL,per-class performance minimum F1,0.36363636363636365,WARNING,False,Validated status requires every class F1 >= 0.40.
 PROVISIONAL,MODEL,Neutral recall,0.5367647058823529,PASS,True,Validated status requires Neutral recall >= 0.50.
-PROVISIONAL,MODEL,calibration ECE,0.20230117319727348,PASS,True,Lower ECE is better; threshold is diagnostic in provisional mode.
+PROVISIONAL,MODEL,calibration ECE,0.20230117319727348,WARNING,False,Lower ECE is better; threshold is diagnostic in provisional mode.
 PROVISIONAL,DEVELOPMENT,macro-F1,0.5193312814730963,WARNING,False,Measured against heuristic pseudo-labels.
 PROVISIONAL,DEVELOPMENT,accuracy,0.5860655737704918,WARNING,False,Measured against heuristic pseudo-labels.
 PROVISIONAL,DEVELOPMENT,balanced accuracy,0.5577554685363578,WARNING,False,Measured against heuristic pseudo-labels.
