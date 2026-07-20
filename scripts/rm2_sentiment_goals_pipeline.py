@@ -241,7 +241,8 @@ def safe_clean_output_dir(path: Path, root: Path, preserve_names: set[str] | Non
     resolved_path = path.resolve()
     if resolved_path == resolved_root or resolved_root not in resolved_path.parents:
         raise ValueError(f"Refusing to clean unsafe path: {resolved_path}")
-    preserve_names = preserve_names or set()
+    protected_preserve_names = {"human_validation", "human_validation_v2"}
+    preserve_names = protected_preserve_names | (preserve_names or set())
     if path.exists():
         for child in path.iterdir():
             if child.name in preserve_names:
@@ -254,6 +255,7 @@ def safe_clean_output_dir(path: Path, root: Path, preserve_names: set[str] | Non
     (path / "visualisasi").mkdir(parents=True, exist_ok=True)
     (path / "gephi").mkdir(parents=True, exist_ok=True)
     (path / "human_validation").mkdir(parents=True, exist_ok=True)
+    (path / "human_validation_v2").mkdir(parents=True, exist_ok=True)
 
 
 def normalize_username(value) -> str:

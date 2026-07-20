@@ -1,0 +1,8 @@
+metric,value,status,notes
+v1_unique_comment_ids_preserved,579,INFO,Current V1 file is used as the exclusion set and is not overwritten.
+development_v2_comments,300,PASS,Active-learning and error-focused sample.
+locked_test_v2_comments,300,PASS,"Stratified random sample, not selected from error list."
+v1_v2_overlap,0,PASS,No V2 comment_id appears in current V1.
+development_locked_overlap,0,PASS,Development V2 and locked test V2 are disjoint.
+model_retraining,not run,PASS,Package creation only.
+comment_sentiment_update,not modified by this script,PASS,Existing predictions are read only for sampling diagnostics.

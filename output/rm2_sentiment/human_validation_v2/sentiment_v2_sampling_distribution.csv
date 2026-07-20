@@ -1,0 +1,42 @@
+sample_role,distribution_dimension,category,n_comments
+all,sample_role,development_v2,300
+all,sample_role,locked_test_v2,300
+development_v2,actor_segment,HCC,42
+development_v2,actor_segment,Non-HCC,258
+locked_test_v2,actor_segment,HCC,30
+locked_test_v2,actor_segment,Non-HCC,270
+development_v2,brand_or_video_context,Azarine,44
+development_v2,brand_or_video_context,Daviena,93
+development_v2,brand_or_video_context,Maryame,101
+development_v2,brand_or_video_context,The Originote,62
+locked_test_v2,brand_or_video_context,Azarine,20
+locked_test_v2,brand_or_video_context,Daviena,98
+locked_test_v2,brand_or_video_context,Maryame,142
+locked_test_v2,brand_or_video_context,The Originote,40
+development_v2,text_type_major,mixed_or_negation,84
+development_v2,text_type_major,question,215
+development_v2,text_type_major,slang_or_code_mixing,1
+locked_test_v2,text_type_major,emoji_only,23
+locked_test_v2,text_type_major,general,43
+locked_test_v2,text_type_major,mixed_or_negation,9
+locked_test_v2,text_type_major,purchase_or_cta,13
+locked_test_v2,text_type_major,question,80
+locked_test_v2,text_type_major,short_text,54
+locked_test_v2,text_type_major,skin_condition,5
+locked_test_v2,text_type_major,slang_or_code_mixing,73
+development_v2,length_bin,long,128
+development_v2,length_bin,medium,138
+development_v2,length_bin,short,31
+development_v2,length_bin,very_short,3
+locked_test_v2,length_bin,long,13
+locked_test_v2,length_bin,medium,81
+locked_test_v2,length_bin,short,120
+locked_test_v2,length_bin,very_short,86
+development_v2,baseline_prediction,Negative,119
+development_v2,baseline_prediction,Neutral,77
+development_v2,baseline_prediction,No Text,47
+development_v2,baseline_prediction,Positive,57
+locked_test_v2,baseline_prediction,Negative,95
+locked_test_v2,baseline_prediction,Neutral,130
+locked_test_v2,baseline_prediction,No Text,39
+locked_test_v2,baseline_prediction,Positive,36

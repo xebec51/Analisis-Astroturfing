@@ -1,0 +1,22 @@
+field,allowed_value,definition
+sentiment_label,Positive,"Clear favorable evaluation, improvement, recommendation, support, or promotion."
+sentiment_label,Neutral,"Question, factual mention, condition description, tagging, purchase logistics, or unclear context without dominant sentiment."
+sentiment_label,Negative,"Clear unfavorable evaluation, adverse product effect, safety concern, authenticity concern, complaint, or rejection."
+sentiment_label,Uncertain,Balanced or ambiguous positive and negative signals with no dominant polarity.
+sentiment_label,No Text,"Empty, deleted, unreadable, or non-linguistic content that cannot be interpreted."
+sentiment_target,Product / Brand,Sentiment is mainly toward the product or brand.
+sentiment_target,Skin condition,Text mainly describes a skin condition without necessarily evaluating a product.
+sentiment_target,Usage question,"Text asks how, when, or whether to use a product or ingredient."
+sentiment_target,Creator / Seller,"Sentiment is mainly toward the creator, seller, service, or account."
+sentiment_target,Price / Purchase,"Text concerns price, purchase process, stock, link, shipping, or availability."
+sentiment_target,Promotion / CTA,"Text is mainly a recommendation, sales prompt, affiliate-like call to action, or promotional cue."
+sentiment_target,General discussion,General skincare or conversational content not tied to a specific product evaluation.
+sentiment_target,Other / unclear,Target cannot be determined confidently.
+complaint_scope,product_effect,Complaint or praise about the product effect on skin or usage result.
+complaint_scope,skin_condition,"Complaint about skin condition itself, not necessarily caused by the product."
+complaint_scope,price_value,"Concern about price, value, affordability, shipping, or purchase terms."
+complaint_scope,safety_concern,"Concern about irritation, danger, ingredient safety, or health risk."
+complaint_scope,authenticity_concern,"Concern about fake product, official seller, originality, or trustworthiness."
+complaint_scope,usage_confusion,"Confusion about sequence, frequency, compatibility, or how to use."
+complaint_scope,not_applicable,No complaint scope applies.
+complaint_scope,unclear,Scope cannot be determined from the comment.
