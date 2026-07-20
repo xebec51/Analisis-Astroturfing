@@ -1,9 +1,9 @@
 metric,value,status,notes
-human_validation_completed,False,NOT_AVAILABLE,Human labels are not filled by the pipeline.
-blank_annotator_1_labels,600,NOT_AVAILABLE,
-blank_annotator_2_labels,600,NOT_AVAILABLE,
-blank_adjudicated_human_labels,600,NOT_AVAILABLE,
+human_validation_completed,True,PASS,Human labels are read from a completed annotation file; the pipeline does not create human labels.
+blank_annotator_1_labels,0,PASS,
+blank_annotator_2_labels,0,PASS,
+blank_adjudicated_human_labels,0,PASS,
 invalid_human_labels,,PASS,"Allowed labels are Positive, Neutral, Negative, Uncertain, No Text."
-adjudication_coverage,0.0,NOT_AVAILABLE,
-annotator_raw_agreement,,NOT_AVAILABLE,Human labels are blank.
-cohens_kappa_human_annotators,,NOT_AVAILABLE,Human labels are blank.
+adjudication_coverage,1.0,PASS,
+annotator_raw_agreement,0.8833333333333333,PASS,Agreement between human annotators only.
+cohens_kappa_human_annotators,0.8301808977769871,PASS,Human inter-annotator agreement.

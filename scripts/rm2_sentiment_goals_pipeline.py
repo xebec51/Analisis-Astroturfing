@@ -56,6 +56,7 @@ REFERENCE_LABEL_SOURCE = "heuristic_pseudo_label"
 VALIDATION_MODE = "PROVISIONAL"
 FINAL_VALIDATION_STATUS = "PROVISIONAL"
 HUMAN_VALIDATION_COMPLETED = False
+COMPLETED_HUMAN_ANNOTATION_FILENAME = "sentiment_human_annotation_validated.csv"
 
 MODEL_A = "mdhugol/indonesia-bert-sentiment-classification"
 MODEL_B = "w11wo/indonesian-roberta-base-sentiment-classifier"
@@ -235,16 +236,24 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
-def safe_clean_output_dir(path: Path, root: Path) -> None:
+def safe_clean_output_dir(path: Path, root: Path, preserve_names: set[str] | None = None) -> None:
     resolved_root = root.resolve()
     resolved_path = path.resolve()
     if resolved_path == resolved_root or resolved_root not in resolved_path.parents:
         raise ValueError(f"Refusing to clean unsafe path: {resolved_path}")
+    preserve_names = preserve_names or set()
     if path.exists():
-        shutil.rmtree(path)
+        for child in path.iterdir():
+            if child.name in preserve_names:
+                continue
+            if child.is_dir():
+                shutil.rmtree(child)
+            else:
+                child.unlink()
     (path / "tables").mkdir(parents=True, exist_ok=True)
     (path / "visualisasi").mkdir(parents=True, exist_ok=True)
     (path / "gephi").mkdir(parents=True, exist_ok=True)
+    (path / "human_validation").mkdir(parents=True, exist_ok=True)
 
 
 def normalize_username(value) -> str:
@@ -764,7 +773,7 @@ def validate_human_annotation_frame(frame: pd.DataFrame) -> pd.DataFrame:
             "metric": "human_validation_completed",
             "value": bool(complete_pair.all() and complete_adjudication.all() and not invalid),
             "status": "PASS" if complete_pair.all() and complete_adjudication.all() and not invalid else "NOT_AVAILABLE",
-            "notes": "Human labels are not filled by the pipeline.",
+            "notes": "Human labels are read from a completed annotation file; the pipeline does not create human labels.",
         },
         {
             "metric": "blank_annotator_1_labels",
@@ -832,6 +841,62 @@ def validate_human_annotation_frame(frame: pd.DataFrame) -> pd.DataFrame:
             ]
         )
     return pd.DataFrame(rows)
+
+
+def human_validation_is_completed(status: pd.DataFrame) -> bool:
+    if status.empty or "metric" not in status.columns or "value" not in status.columns:
+        return False
+    value = status.loc[status["metric"].eq("human_validation_completed"), "value"]
+    return bool(value.astype(str).str.lower().eq("true").any())
+
+
+def load_completed_human_annotations(human_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, bool]:
+    path = human_dir / COMPLETED_HUMAN_ANNOTATION_FILENAME
+    if not path.exists():
+        return pd.DataFrame(), pd.DataFrame(), False
+    frame = pd.read_csv(path, dtype=str, low_memory=False).fillna("")
+    status = validate_human_annotation_frame(frame)
+    if status["status"].eq("FAIL").any():
+        failures = status.loc[status["status"].eq("FAIL"), ["metric", "value", "notes"]].to_dict("records")
+        raise AssertionError(f"Human annotation file has invalid labels or structure: {failures}")
+    completed = human_validation_is_completed(status)
+    if not completed:
+        return frame, status, False
+    if frame["comment_id"].astype(str).duplicated().any():
+        duplicated = frame.loc[frame["comment_id"].astype(str).duplicated(keep=False), "comment_id"].head(10).tolist()
+        raise AssertionError(f"Human annotation file contains duplicate comment_id values: {duplicated}")
+    sample_counts = frame["sample_set"].astype(str).value_counts().to_dict()
+    expected_counts = {"development": 300, "locked_test": 300}
+    if sample_counts != expected_counts:
+        raise AssertionError(f"Human annotation sample_set counts must be {expected_counts}, got {sample_counts}")
+    if set(frame["sample_set"].astype(str)) != set(expected_counts):
+        raise AssertionError(f"Human annotation sample_set values must be {sorted(expected_counts)}, got {sorted(set(frame['sample_set'].astype(str)))}")
+    return frame, status, True
+
+
+def build_human_reference_samples(comments: pd.DataFrame, human_annotations: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    required_cols = ["sample_set", "comment_id"]
+    missing = [col for col in required_cols if col not in human_annotations.columns]
+    if missing:
+        raise AssertionError(f"Human annotation file is missing required sample columns: {missing}")
+    human_order = human_annotations[required_cols].copy()
+    human_order["comment_id"] = human_order["comment_id"].astype(str)
+    human_order["_human_order"] = np.arange(len(human_order))
+    comment_lookup = comments.copy()
+    comment_lookup["comment_id"] = comment_lookup["comment_id"].astype(str)
+    merged = human_order.merge(comment_lookup, on="comment_id", how="left", validate="one_to_one")
+    missing_ids = merged.loc[merged["username"].isna(), "comment_id"].astype(str).head(10).tolist()
+    if missing_ids:
+        raise AssertionError(f"Human annotations contain comment_id values not found in dataset: {missing_ids}")
+    merged = merged.sort_values("_human_order").drop(columns=["_human_order"]).reset_index(drop=True)
+    merged["sampling_stratum"] = "human_validated|" + merged["sample_set"].astype(str)
+    merged["sample_probability"] = 1.0
+    merged["sample_weight"] = 1.0
+    development = merged[merged["sample_set"].eq("development")].copy()
+    locked_test = merged[merged["sample_set"].eq("locked_test")].copy()
+    if set(development["comment_id"].astype(str)) & set(locked_test["comment_id"].astype(str)):
+        raise AssertionError("Human development and locked test samples overlap.")
+    return development.reset_index(drop=True), locked_test.reset_index(drop=True)
 
 
 def infer_label_map(model_name: str, id2label: dict[int, str]) -> dict[int, str]:
@@ -1057,11 +1122,14 @@ def repeated_cv_diagnostics(
     development_frame: pd.DataFrame,
     variants: dict[str, str],
     candidate_probs: dict[tuple[str, str, str], np.ndarray],
+    reference_col: str,
+    reference_label_source: str,
+    validation_mode: str,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     rows = []
     dev = development_frame.reset_index(drop=True).copy()
-    valid_mask = dev["heuristic_reference_label"].isin(LABELS).to_numpy()
-    y = dev.loc[valid_mask, "heuristic_reference_label"].astype(str).reset_index(drop=True)
+    valid_mask = dev[reference_col].isin(LABELS).to_numpy()
+    y = dev.loc[valid_mask, reference_col].astype(str).reset_index(drop=True)
     if len(y) < 30 or y.value_counts().min() < 3:
         return pd.DataFrame(), pd.DataFrame()
     splits = RepeatedStratifiedKFold(n_splits=3, n_repeats=5, random_state=RANDOM_STATE)
@@ -1087,9 +1155,9 @@ def repeated_cv_diagnostics(
                     {
                         "repeat": repeat,
                         "fold": fold,
-                        "reference_label_source": REFERENCE_LABEL_SOURCE,
-                        "modeling_mode": VALIDATION_MODE,
-                        "notes": "Repeated CV over heuristic pseudo-labels; diagnostic only, not human validation.",
+                        "reference_label_source": reference_label_source,
+                        "modeling_mode": validation_mode,
+                        "notes": f"Repeated CV over {reference_label_source}.",
                     }
                 )
                 rows.append(row)
@@ -1103,9 +1171,9 @@ def repeated_cv_diagnostics(
                 {
                     "repeat": repeat,
                     "fold": fold,
-                    "reference_label_source": REFERENCE_LABEL_SOURCE,
-                    "modeling_mode": VALIDATION_MODE,
-                    "notes": "Model C is trained inside each fold on heuristic pseudo-labels; diagnostic only.",
+                    "reference_label_source": reference_label_source,
+                    "modeling_mode": validation_mode,
+                    "notes": f"Model C is trained inside each fold on {reference_label_source}.",
                 }
             )
             rows.append(row)
@@ -1139,9 +1207,9 @@ def repeated_cv_diagnostics(
         .reset_index()
     )
     summary.columns = ["_".join([str(part) for part in col if str(part) != ""]).rstrip("_") for col in summary.columns]
-    summary["reference_label_source"] = REFERENCE_LABEL_SOURCE
-    summary["modeling_mode"] = VALIDATION_MODE
-    summary["notes"] = "Mean/std over repeated stratified CV folds using heuristic pseudo-labels."
+    summary["reference_label_source"] = reference_label_source
+    summary["modeling_mode"] = validation_mode
+    summary["notes"] = f"Mean/std over repeated stratified CV folds using {reference_label_source}."
     return cv, summary
 
 
@@ -1285,7 +1353,7 @@ def save_confusion_matrix_png(cm_df: pd.DataFrame, output_path: Path, title: str
     ax.set_xticklabels(LABELS)
     ax.set_yticklabels(LABELS)
     ax.set_xlabel("Predicted sentiment")
-    ax.set_ylabel("heuristic-reference sentiment")
+    ax.set_ylabel("Reference sentiment")
     ax.set_title(title)
     for i in range(len(LABELS)):
         for j in range(len(LABELS)):
@@ -1322,7 +1390,7 @@ def plot_hcc_vs_nonhcc(summary: pd.DataFrame, output_path: Path) -> None:
     plt.close(fig)
 
 
-def plot_goal_confidence(hcc_summary: pd.DataFrame, output_path: Path) -> None:
+def plot_goal_confidence(hcc_summary: pd.DataFrame, output_path: Path, validation_status: str = "PROVISIONAL") -> None:
     order = [
         "Promotional / Supportive",
         "Critical / Complaint",
@@ -1344,10 +1412,11 @@ def plot_goal_confidence(hcc_summary: pd.DataFrame, output_path: Path) -> None:
                 ax.text(i, bottom[i] + val / 2, str(int(val)), ha="center", va="center", color="white", fontsize=8)
         bottom += values
     ax.set_ylabel("Jumlah HCC")
-    ax.set_title("HCC Goal Orientation by Bootstrap Stability (Provisional)")
+    title_status = "Human-Validated Sentiment Model" if validation_status == "VALIDATED" else validation_status
+    ax.set_title(f"HCC Goal Orientation by Bootstrap Stability ({title_status})")
     ax.tick_params(axis="x", rotation=25)
     ax.legend(title="goal_confidence")
-    fig.text(0.01, 0.01, "Confidence reflects bootstrap stability, not correctness or human validation.", fontsize=8)
+    fig.text(0.01, 0.01, "Confidence reflects bootstrap stability, not correctness or direct HCC-goal human validation.", fontsize=8)
     fig.tight_layout(rect=[0, 0.06, 1, 1])
     fig.savefig(output_path, dpi=180, bbox_inches="tight")
     plt.close(fig)
@@ -1415,6 +1484,8 @@ def infer_neutral_error_taxonomy(text: str, flags: str) -> str:
 
 
 def run_pipeline(root: str | Path = ".") -> dict:
+    global REFERENCE_LABEL_SOURCE, VALIDATION_MODE, FINAL_VALIDATION_STATUS, HUMAN_VALIDATION_COMPLETED
+
     root = Path(root).resolve()
     random.seed(RANDOM_STATE)
     np.random.seed(RANDOM_STATE)
@@ -1464,11 +1535,24 @@ def run_pipeline(root: str | Path = ".") -> dict:
                 previously_seen_validation_ids.update(old_validation["comment_id"].dropna().astype(str).tolist())
 
     out_dir = root / "output" / "rm2_sentiment"
-    safe_clean_output_dir(out_dir, root)
+    safe_clean_output_dir(out_dir, root, preserve_names={"human_validation", "visualisasi_exploratory"})
     tables_dir = out_dir / "tables"
     vis_dir = out_dir / "visualisasi"
     gephi_dir = out_dir / "gephi"
     human_dir = out_dir / "human_validation"
+    human_annotations, human_validation_status, human_validation_completed_input = load_completed_human_annotations(human_dir)
+    if human_validation_completed_input:
+        REFERENCE_LABEL_SOURCE = "human_adjudicated_label"
+        VALIDATION_MODE = "HUMAN_VALIDATED"
+        HUMAN_VALIDATION_COMPLETED = True
+        FINAL_VALIDATION_STATUS = "PENDING"
+        human_validation_status.to_csv(human_dir / "human_validation_metrics.csv", index=False)
+        human_validation_status.to_csv(human_dir / "human_validation_status.csv", index=False)
+    else:
+        REFERENCE_LABEL_SOURCE = "heuristic_pseudo_label"
+        VALIDATION_MODE = "PROVISIONAL"
+        HUMAN_VALIDATION_COMPLETED = False
+        FINAL_VALIDATION_STATUS = "PROVISIONAL"
     if previously_seen_validation_ids:
         pd.DataFrame(
             {
@@ -1538,7 +1622,7 @@ def run_pipeline(root: str | Path = ".") -> dict:
                 "risk_level": "High",
                 "proposed_fix": "Create deterministic heuristic pseudo-label diagnostics plus a blind human-validation package; keep manual_label/human labels blank.",
                 "changed": True,
-                "validation_result": "Implemented as PROVISIONAL; not human validation.",
+                "validation_result": "Completed human validation loaded." if HUMAN_VALIDATION_COMPLETED else "Implemented as PROVISIONAL; not human validation.",
             },
             {
                 "component": "probabilities",
@@ -1677,7 +1761,10 @@ def run_pipeline(root: str | Path = ".") -> dict:
         raise AssertionError("At least one transformer label mapping failed.")
     label_mapping_audit.to_csv(tables_dir / "sentiment_label_mapping_audit.csv", index=False)
 
-    development_raw, holdout_raw = make_validation_samples(comments, locked_test_exclusion_ids=previously_seen_validation_ids)
+    if human_validation_completed_input:
+        development_raw, holdout_raw = build_human_reference_samples(comments, human_annotations)
+    else:
+        development_raw, holdout_raw = make_validation_samples(comments, locked_test_exclusion_ids=previously_seen_validation_ids)
     development_reference = annotate_heuristic_reference_sample(development_raw)
     locked_test_reference = annotate_heuristic_reference_sample(holdout_raw)
     if development_reference["heuristic_reference_label"].eq("").any() or locked_test_reference["heuristic_reference_label"].eq("").any():
@@ -1722,18 +1809,44 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         how="left",
     )
     if set(development_reference["comment_id"].astype(str)) & set(locked_test_reference["comment_id"].astype(str)):
-        raise AssertionError("Development and locked test heuristic reference samples overlap.")
-    human_validation_status = write_human_validation_package(sample_full, human_dir)
-    dev_eval = sample_full[sample_full["sample_set"].eq("development") & sample_full["heuristic_reference_label"].isin(LABELS)].copy()
-    hold_eval = sample_full[sample_full["sample_set"].eq("locked_test") & sample_full["heuristic_reference_label"].isin(LABELS)].copy()
+        raise AssertionError("Development and locked test reference samples overlap.")
+    if human_validation_completed_input:
+        human_cols = [
+            "comment_id",
+            "sample_set",
+            "annotator_1_label",
+            "annotator_1_notes",
+            "annotator_2_label",
+            "annotator_2_notes",
+            "adjudicated_human_label",
+            "adjudication_notes",
+        ]
+        human_merge = human_annotations[human_cols].copy()
+        human_merge["comment_id"] = human_merge["comment_id"].astype(str)
+        sample_full["comment_id"] = sample_full["comment_id"].astype(str)
+        sample_full = sample_full.merge(human_merge, on="comment_id", how="left", suffixes=("", "_human"), validate="one_to_one")
+        if not sample_full["sample_set"].astype(str).eq(sample_full["sample_set_human"].astype(str)).all():
+            raise AssertionError("Human annotation sample_set does not match reconstructed validation sample.")
+        sample_full = sample_full.drop(columns=["sample_set_human"])
+        sample_full["reference_label"] = sample_full["adjudicated_human_label"].fillna("").astype(str).str.strip()
+        sample_full["reference_label_source"] = REFERENCE_LABEL_SOURCE
+        sample_full[sample_full["sample_set"].eq("development")].to_csv(tables_dir / "sentiment_development_human_reference.csv", index=False)
+        sample_full[sample_full["sample_set"].eq("locked_test")].to_csv(tables_dir / "sentiment_locked_test_human_reference.csv", index=False)
+    else:
+        human_validation_status = write_human_validation_package(sample_full, human_dir)
+        sample_full["reference_label"] = sample_full["heuristic_reference_label"]
+        sample_full["reference_label_source"] = REFERENCE_LABEL_SOURCE
+    dev_eval = sample_full[sample_full["sample_set"].eq("development") & sample_full["reference_label"].isin(LABELS)].copy()
+    hold_eval = sample_full[sample_full["sample_set"].eq("locked_test") & sample_full["reference_label"].isin(LABELS)].copy()
     if len(dev_eval) < 100 or len(hold_eval) < 100:
-        raise AssertionError("Development and locked-test evaluable heuristic labels are too sparse.")
+        raise AssertionError(f"Development and locked-test evaluable {REFERENCE_LABEL_SOURCE} labels are too sparse.")
 
     candidate_probs: dict[tuple[str, str, str], np.ndarray] = {}
     benchmark_rows = []
     calibration_rows = []
     per_class_rows = []
     fitted_classical: dict[str, Pipeline] = {}
+    reference_col = "reference_label"
     variants = {
         "minimal_raw": "comment_text_model_minimal_raw",
         "social_normalized": "comment_text_model_social_normalized",
@@ -1743,7 +1856,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
             for sample_set, frame in [("development", sample_full[sample_full["sample_set"].eq("development")]), ("locked_test", sample_full[sample_full["sample_set"].eq("locked_test")])]:
                 probs = predict_transformer(frame[text_col].tolist(), candidate, device, batch_size=batch_size, max_length=max_length)
                 candidate_probs[(sample_set, candidate.key, variant)] = probs
-                row = metric_row(frame["heuristic_reference_label"].tolist(), probs, candidate.key, sample_set, variant)
+                row = metric_row(frame[reference_col].tolist(), probs, candidate.key, sample_set, variant)
                 row["model_name"] = candidate.model_name
                 row["eligible_final"] = True
                 row["reference_label_source"] = REFERENCE_LABEL_SOURCE
@@ -1754,13 +1867,13 @@ The reproducibility metric measures the same deterministic lexical rule system, 
 
         clf, dev_probs_c_eval, hold_probs_c = fit_classical_oof_and_predict(
             dev_eval[text_col].tolist(),
-            dev_eval["heuristic_reference_label"].tolist(),
+            dev_eval[reference_col].tolist(),
             sample_full[sample_full["sample_set"].eq("locked_test")][text_col].tolist(),
         )
         fitted_classical[variant] = clf
         dev_probs_c = np.full((len(sample_full[sample_full["sample_set"].eq("development")]), len(LABELS)), 1 / len(LABELS), dtype=float)
         dev_eval_positions = sample_full[sample_full["sample_set"].eq("development")].reset_index(drop=True).index[
-            sample_full[sample_full["sample_set"].eq("development")]["heuristic_reference_label"].isin(LABELS).to_numpy()
+            sample_full[sample_full["sample_set"].eq("development")][reference_col].isin(LABELS).to_numpy()
         ]
         dev_probs_c[dev_eval_positions, :] = dev_probs_c_eval
         candidate_probs[("development", "model_C", variant)] = dev_probs_c
@@ -1769,12 +1882,12 @@ The reproducibility metric measures the same deterministic lexical rule system, 
             ("development", sample_full[sample_full["sample_set"].eq("development")], dev_probs_c),
             ("locked_test", sample_full[sample_full["sample_set"].eq("locked_test")], hold_probs_c),
         ]:
-            row = metric_row(frame["heuristic_reference_label"].tolist(), probs, "model_C", sample_set, variant)
-            row["model_name"] = "TF-IDF word(1-2)+char(3-6)+LinearSVC calibrated on heuristic pseudo-label development labels"
-            row["eligible_final"] = False
+            row = metric_row(frame[reference_col].tolist(), probs, "model_C", sample_set, variant)
+            row["model_name"] = f"TF-IDF word(1-2)+char(3-6)+LinearSVC calibrated on {REFERENCE_LABEL_SOURCE} development labels"
+            row["eligible_final"] = bool(HUMAN_VALIDATION_COMPLETED)
             row["reference_label_source"] = REFERENCE_LABEL_SOURCE
             row["modeling_mode"] = VALIDATION_MODE
-            row["model_c_role"] = "pseudo-label adaptation experiment; not eligible as final without human labels"
+            row["model_c_role"] = "eligible human-supervised baseline" if HUMAN_VALIDATION_COMPLETED else "pseudo-label adaptation experiment; not eligible as final without human labels"
             benchmark_rows.append(row)
             calibration_rows.append({k: row[k] for k in ["candidate", "sample_set", "preprocessing_variant", "log_loss", "brier_score", "ece", "coverage"]})
 
@@ -1782,49 +1895,57 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         best_ensemble = None
         for w_a in grid_values:
             for w_b in grid_values:
-                if w_a + w_b <= 0:
-                    continue
-                weights = np.array([w_a, w_b], dtype=float)
-                weights = weights / weights.sum()
-                dev_probs = (
-                    weights[0] * candidate_probs[("development", "model_A", variant)]
-                    + weights[1] * candidate_probs[("development", "model_B", variant)]
-                )
-                row = metric_row(sample_full[sample_full["sample_set"].eq("development")]["heuristic_reference_label"].tolist(), dev_probs, "ensemble_transformer", "development", variant)
-                row["weights_model_A"] = float(weights[0])
-                row["weights_model_B"] = float(weights[1])
-                row["weights_model_C"] = 0.0
-                if best_ensemble is None or (
-                    row["macro_f1"],
-                    row["min_per_class_recall"],
-                    row["balanced_accuracy"],
-                    -row["ece"],
-                ) > (
-                    best_ensemble["row"]["macro_f1"],
-                    best_ensemble["row"]["min_per_class_recall"],
-                    best_ensemble["row"]["balanced_accuracy"],
-                    -best_ensemble["row"]["ece"],
-                ):
-                    best_ensemble = {"row": row, "weights": weights, "probs": dev_probs}
+                for w_c in (grid_values if HUMAN_VALIDATION_COMPLETED else [0.0]):
+                    if w_a + w_b + w_c <= 0:
+                        continue
+                    if not HUMAN_VALIDATION_COMPLETED and w_c > 0:
+                        continue
+                    weights = np.array([w_a, w_b, w_c], dtype=float)
+                    weights = weights / weights.sum()
+                    dev_probs = (
+                        weights[0] * candidate_probs[("development", "model_A", variant)]
+                        + weights[1] * candidate_probs[("development", "model_B", variant)]
+                        + weights[2] * candidate_probs[("development", "model_C", variant)]
+                    )
+                    row = metric_row(sample_full[sample_full["sample_set"].eq("development")][reference_col].tolist(), dev_probs, "ensemble", "development", variant)
+                    row["weights_model_A"] = float(weights[0])
+                    row["weights_model_B"] = float(weights[1])
+                    row["weights_model_C"] = float(weights[2])
+                    if best_ensemble is None or (
+                        row["macro_f1"],
+                        row["min_per_class_recall"],
+                        row["balanced_accuracy"],
+                        -row["ece"],
+                    ) > (
+                        best_ensemble["row"]["macro_f1"],
+                        best_ensemble["row"]["min_per_class_recall"],
+                        best_ensemble["row"]["balanced_accuracy"],
+                        -best_ensemble["row"]["ece"],
+                    ):
+                        best_ensemble = {"row": row, "weights": weights, "probs": dev_probs}
         if best_ensemble is not None:
             weights = best_ensemble["weights"]
-            candidate_name = f"ensemble_transformer_A{weights[0]:.2f}_B{weights[1]:.2f}"
+            if HUMAN_VALIDATION_COMPLETED:
+                candidate_name = f"ensemble_human_A{weights[0]:.2f}_B{weights[1]:.2f}_C{weights[2]:.2f}"
+            else:
+                candidate_name = f"ensemble_transformer_A{weights[0]:.2f}_B{weights[1]:.2f}"
             for sample_set in ["development", "locked_test"]:
                 probs = (
                     weights[0] * candidate_probs[(sample_set, "model_A", variant)]
                     + weights[1] * candidate_probs[(sample_set, "model_B", variant)]
+                    + weights[2] * candidate_probs[(sample_set, "model_C", variant)]
                 )
                 candidate_probs[(sample_set, candidate_name, variant)] = probs
                 frame = sample_full[sample_full["sample_set"].eq(sample_set)]
-                row = metric_row(frame["heuristic_reference_label"].tolist(), probs, candidate_name, sample_set, variant)
-                row["model_name"] = "Soft-voting transformer-only ensemble selected on development heuristic pseudo-labels"
+                row = metric_row(frame[reference_col].tolist(), probs, candidate_name, sample_set, variant)
+                row["model_name"] = f"Soft-voting ensemble selected on development {REFERENCE_LABEL_SOURCE}"
                 row["eligible_final"] = True
                 row["weights_model_A"] = float(weights[0])
                 row["weights_model_B"] = float(weights[1])
-                row["weights_model_C"] = 0.0
+                row["weights_model_C"] = float(weights[2])
                 row["reference_label_source"] = REFERENCE_LABEL_SOURCE
                 row["modeling_mode"] = VALIDATION_MODE
-                row["model_c_role"] = "excluded from provisional final selection"
+                row["model_c_role"] = "eligible if human validation is completed; otherwise weight remains 0"
                 benchmark_rows.append(row)
                 calibration_rows.append({k: row[k] for k in ["candidate", "sample_set", "preprocessing_variant", "log_loss", "brier_score", "ece", "coverage"]})
 
@@ -1835,12 +1956,15 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         sample_full[sample_full["sample_set"].eq("development")],
         variants,
         candidate_probs,
+        reference_col,
+        REFERENCE_LABEL_SOURCE,
+        VALIDATION_MODE,
     )
     cv_rows.to_csv(tables_dir / "sentiment_repeated_cv_metrics.csv", index=False)
     cv_summary.to_csv(tables_dir / "sentiment_repeated_cv_summary.csv", index=False)
 
     dev_candidates = benchmark[(benchmark["sample_set"].eq("development")) & (benchmark["eligible_final"] == True)].copy()
-    if dev_candidates["candidate"].astype(str).str.contains("model_C|_C", regex=True).any():
+    if VALIDATION_MODE == "PROVISIONAL" and dev_candidates["candidate"].astype(str).str.contains("model_C|_C", regex=True).any():
         raise AssertionError("Model C must not be eligible for PROVISIONAL final selection.")
     best_macro = dev_candidates["macro_f1"].max()
     near_best = dev_candidates[dev_candidates["macro_f1"] >= best_macro - 0.01].copy()
@@ -1856,7 +1980,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
     selected_holdout_probs = candidate_probs[("locked_test", selected_candidate, selected_variant)]
 
     curve = selective_curve(
-        sample_full[sample_full["sample_set"].eq("development")]["heuristic_reference_label"].tolist(),
+        sample_full[sample_full["sample_set"].eq("development")][reference_col].tolist(),
         selected_dev_probs,
         selected_candidate,
         "development",
@@ -1876,7 +2000,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
     curve.to_csv(tables_dir / "sentiment_selective_classification_curve.csv", index=False)
 
     holdout_metric = metric_row(
-        sample_full[sample_full["sample_set"].eq("locked_test")]["heuristic_reference_label"].tolist(),
+        sample_full[sample_full["sample_set"].eq("locked_test")][reference_col].tolist(),
         selected_holdout_probs,
         selected_candidate,
         "locked_test",
@@ -1884,7 +2008,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         threshold=selected_threshold,
     )
     ci_low, ci_high = bootstrap_macro_f1_ci(
-        sample_full[sample_full["sample_set"].eq("locked_test")]["heuristic_reference_label"].tolist(),
+        sample_full[sample_full["sample_set"].eq("locked_test")][reference_col].tolist(),
         selected_holdout_probs,
         selected_threshold,
     )
@@ -1893,10 +2017,18 @@ The reproducibility metric measures the same deterministic lexical rule system, 
     holdout_metric["reference_label_source"] = REFERENCE_LABEL_SOURCE
     holdout_metric["modeling_mode"] = VALIDATION_MODE
     holdout_metric["human_validation_completed"] = HUMAN_VALIDATION_COMPLETED
+    sentiment_model_gate_passed = bool(
+        HUMAN_VALIDATION_COMPLETED
+        and float(holdout_metric["macro_f1"]) >= 0.55
+        and float(holdout_metric["neutral_recall"]) >= 0.50
+        and float(holdout_metric["min_per_class_f1"]) >= 0.40
+    )
+    if HUMAN_VALIDATION_COMPLETED:
+        FINAL_VALIDATION_STATUS = "VALIDATED" if sentiment_model_gate_passed else "FAILED"
     pd.DataFrame([holdout_metric]).to_csv(tables_dir / "sentiment_model_locked_test_metrics.csv", index=False)
     pd.DataFrame([holdout_metric]).to_csv(tables_dir / "sentiment_model_holdout_metrics.csv", index=False)
 
-    hold_y = sample_full[sample_full["sample_set"].eq("locked_test")]["heuristic_reference_label"].astype(str).to_numpy()
+    hold_y = sample_full[sample_full["sample_set"].eq("locked_test")][reference_col].astype(str).to_numpy()
     hold_pred = np.array([LABELS[i] for i in selected_holdout_probs.argmax(axis=1)])
     hold_valid = np.isin(hold_y, LABELS) & (selected_holdout_probs.max(axis=1) >= selected_threshold)
     precision, recall, f1v, support = precision_recall_fscore_support(hold_y[hold_valid], hold_pred[hold_valid], labels=LABELS, zero_division=0)
@@ -1941,7 +2073,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         "comment_text_original",
         "video_id",
         "product_category",
-        "heuristic_reference_label",
+        reference_col,
         "predicted_label",
         "selected_model_confidence",
         "ambiguity_flags",
@@ -1997,7 +2129,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
                 "predicted_positive": int(sub["predicted_label"].eq("Positive").sum()) if not sub.empty else 0,
                 "predicted_negative": int(sub["predicted_label"].eq("Negative").sum()) if not sub.empty else 0,
                 "reference_label_source": REFERENCE_LABEL_SOURCE,
-                "notes": "Neutral metrics use locked-test heuristic reference labels; diagnostic only.",
+                "notes": f"Neutral metrics use locked-test {REFERENCE_LABEL_SOURCE} labels.",
             }
         )
     pd.DataFrame(neutral_metric_rows).to_csv(tables_dir / "neutral_class_metrics_by_text_type.csv", index=False)
@@ -2012,7 +2144,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
             pred = np.array([LABELS[i] for i in probs.argmax(axis=1)])
             hframe = sample_full[sample_full["sample_set"].eq("locked_test")].reset_index(drop=True)
             for row_idx, row in hframe.iterrows():
-                true_label = row["heuristic_reference_label"]
+                true_label = row[reference_col]
                 if true_label not in LABELS or pred[row_idx] == true_label:
                     continue
                 taxonomy = infer_error_taxonomy(row["comment_text_original"], true_label, pred[row_idx], row.get("ambiguity_flags", ""))
@@ -2035,6 +2167,8 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         selected_weights["model_A"] = 1.0
     elif selected_candidate == "model_B":
         selected_weights["model_B"] = 1.0
+    elif selected_candidate == "model_C":
+        selected_weights["model_C"] = 1.0
     elif selected_candidate.startswith("ensemble_"):
         selected_row = dev_candidates[dev_candidates["candidate"].eq(selected_candidate) & dev_candidates["preprocessing_variant"].eq(selected_variant)].iloc[0]
         selected_weights = {
@@ -2042,9 +2176,9 @@ The reproducibility metric measures the same deterministic lexical rule system, 
             "model_B": float(selected_row.get("weights_model_B", 0.0)),
             "model_C": float(selected_row.get("weights_model_C", 0.0)),
         }
-    if sum(selected_weights[k] for k in ["model_A", "model_B"]) <= 0:
-        raise AssertionError("Final pipeline must include at least one transformer component.")
-    if selected_weights.get("model_C", 0.0) > 0:
+    if sum(selected_weights[k] for k in ["model_A", "model_B", "model_C"]) <= 0:
+        raise AssertionError("Final pipeline must include at least one eligible model component.")
+    if VALIDATION_MODE == "PROVISIONAL" and selected_weights.get("model_C", 0.0) > 0:
         raise AssertionError("Model C is a pseudo-label adaptation experiment and cannot be part of the PROVISIONAL final model.")
     if ALLOW_RULE_BASED_FINAL:
         raise AssertionError("ALLOW_RULE_BASED_FINAL must remain False.")
@@ -2058,7 +2192,12 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         "final_validation_status": FINAL_VALIDATION_STATUS,
         "human_validation_completed": HUMAN_VALIDATION_COMPLETED,
         "reference_label_source": REFERENCE_LABEL_SOURCE,
-        "selection_rule": "PROVISIONAL mode: choose among Model A, Model B, and transformer-only ensembles using development heuristic pseudo-labels; prioritize macro-F1, minimum per-class recall, balanced accuracy, calibration, and coverage. Model C is diagnostic only until human labels exist.",
+        "selection_rule": (
+            "HUMAN_VALIDATED mode: choose among Model A, Model B, Model C, and soft-voting ensembles using development human-adjudicated labels; "
+            "locked test is evaluated once after selection."
+            if HUMAN_VALIDATION_COMPLETED
+            else "PROVISIONAL mode: choose among Model A, Model B, and transformer-only ensembles using development heuristic pseudo-labels; prioritize macro-F1, minimum per-class recall, balanced accuracy, calibration, and coverage. Model C is diagnostic only until human labels exist."
+        ),
         "confidence_threshold": selected_threshold,
         "coverage_floor": 0.90,
         "ensemble_weights": selected_weights,
@@ -2067,7 +2206,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         "allow_rule_based_final": ALLOW_RULE_BASED_FINAL,
         "locked_test_not_used_for_selection": True,
         "previous_validation_ids_excluded_from_locked_test": len(previously_seen_validation_ids),
-        "model_c_status": "pseudo-label adaptation experiment; excluded from PROVISIONAL final selection",
+        "model_c_status": "eligible human-supervised baseline" if HUMAN_VALIDATION_COMPLETED else "pseudo-label adaptation experiment; excluded from PROVISIONAL final selection",
         "library_versions": {},
     }
     try:
@@ -2263,7 +2402,11 @@ The reproducibility metric measures the same deterministic lexical rule system, 
                 "goal_orientation_status": "Insufficient Text" if goal == "Insufficient Text" else "Assigned",
                 "goal_confidence": boot["goal_confidence"],
                 "goal_stability": boot["goal_stability"],
-                "goal_validation_status": "Provisional",
+                "goal_validation_status": (
+                    "Human-validated sentiment model applied"
+                    if FINAL_VALIDATION_STATUS == "VALIDATED"
+                    else ("Human validation completed; sentiment model failed validation gate" if HUMAN_VALIDATION_COMPLETED else "Provisional")
+                ),
                 "goal_method": "hard_label_ratios_with_bootstrap_stability",
                 "effective_sample_size": boot["effective_sample_size"],
                 "positive_ratio_ci_low": boot["positive_ratio_ci_low"],
@@ -2352,7 +2495,11 @@ The reproducibility metric measures the same deterministic lexical rule system, 
                     "method_goal_orientation": method_goal,
                     "matches_selected_goal": method_goal == final_goal,
                     "selected_goal_method": "hard_label_ratios_with_bootstrap_stability",
-                    "selection_basis": "Reported as sensitivity only; no method is promoted to validated without human validation.",
+                    "selection_basis": (
+                        "Reported as sensitivity; selected goal method uses model labels from the human-validated sentiment pipeline."
+                        if FINAL_VALIDATION_STATUS == "VALIDATED"
+                        else "Reported as sensitivity only; downstream goals should not be treated as validated unless sentiment validation gates pass."
+                    ),
                 }
             )
     pd.DataFrame(goal_method_rows).to_csv(tables_dir / "hcc_goal_method_sensitivity.csv", index=False)
@@ -2575,7 +2722,11 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         )
     )
     if not disagreement.empty:
-        disagreement["suggested_action"] = "Requires human validation before goal counts can be treated as validated."
+        disagreement["suggested_action"] = (
+            "Requires targeted HCC-level human review before goal counts are treated as directly validated."
+            if HUMAN_VALIDATION_COMPLETED
+            else "Requires human validation before goal counts can be treated as validated."
+        )
     disagreement[
         [
             "hcc_id",
@@ -2596,9 +2747,14 @@ The reproducibility metric measures the same deterministic lexical rule system, 
         ]
     ].to_csv(tables_dir / "hcc_goal_disagreement_analysis.csv", index=False)
 
-    save_confusion_matrix_png(cm_df, vis_dir / "sentiment_validation_confusion_matrix.png", f"Heuristic-reference evaluation (locked test evaluable n={int(hold_valid.sum())})")
+    cm_title = (
+        f"Human-reference evaluation (locked test evaluable n={int(hold_valid.sum())})"
+        if HUMAN_VALIDATION_COMPLETED
+        else f"Heuristic-reference evaluation (locked test evaluable n={int(hold_valid.sum())})"
+    )
+    save_confusion_matrix_png(cm_df, vis_dir / "sentiment_validation_confusion_matrix.png", cm_title)
     plot_hcc_vs_nonhcc(hcc_vs_nonhcc, vis_dir / "sentiment_hcc_vs_nonhcc_100pct.png")
-    plot_goal_confidence(hcc_summary, vis_dir / "hcc_goal_orientation_confidence.png")
+    plot_goal_confidence(hcc_summary, vis_dir / "hcc_goal_orientation_confidence.png", FINAL_VALIDATION_STATUS)
 
     hcc_sent_cols = [
         "hcc_id",
@@ -2690,8 +2846,15 @@ The reproducibility metric measures the same deterministic lexical rule system, 
             }
         )
 
-    add_report("SUMMARY", "overall_pipeline_status", FINAL_VALIDATION_STATUS, "WARNING", "Human validation is not available; outputs are exploratory/provisional.")
-    add_report("SUMMARY", "validation_mode", VALIDATION_MODE, "WARNING", "Reference labels are deterministic heuristic pseudo-labels.")
+    overall_report_status = {"VALIDATED": "PASS", "PROVISIONAL": "WARNING", "FAILED": "FAIL"}.get(FINAL_VALIDATION_STATUS, "WARNING")
+    reference_notes = (
+        "Reference labels are adjudicated human labels."
+        if HUMAN_VALIDATION_COMPLETED
+        else "Reference labels are deterministic heuristic pseudo-labels."
+    )
+    reference_report_status = "PASS" if HUMAN_VALIDATION_COMPLETED else "WARNING"
+    add_report("SUMMARY", "overall_pipeline_status", FINAL_VALIDATION_STATUS, overall_report_status, reference_notes)
+    add_report("SUMMARY", "validation_mode", VALIDATION_MODE, reference_report_status, reference_notes)
     add_report("DATA", "dataset rows", len(comment_sentiment), status_from_bool(len(comment_sentiment) == TOTAL_COMMENTS_EXPECTED), "")
     add_report("DATA", "unique comment IDs", comment_sentiment["comment_id"].nunique(), status_from_bool(comment_sentiment["comment_id"].nunique() == TOTAL_COMMENTS_EXPECTED), "")
     add_report("DATA", "duplicate rows removed", duplicate_rows_removed, "PASS", "")
@@ -2701,34 +2864,34 @@ The reproducibility metric measures the same deterministic lexical rule system, 
     add_report("DATA", "uncertain", int(comment_sentiment["sentiment_status"].eq("Uncertain").sum()), "PASS", "")
     add_report("DATA", "no text", int(comment_sentiment["sentiment_status"].eq("No Text").sum()), "PASS", "")
     add_report("DATA", "coverage", float(comment_sentiment["sentiment_status"].eq("Evaluable").mean()), "PASS", "")
-    add_report("MODEL", "selected model/pipeline", selected_candidate, "WARNING", "Selected under PROVISIONAL mode using heuristic pseudo-labels.")
+    add_report("MODEL", "selected model/pipeline", selected_candidate, macro_status, f"Selected on development {REFERENCE_LABEL_SOURCE}; locked test evaluated once after selection.")
     add_report("MODEL", "model revision", json.dumps(model_revision_map, ensure_ascii=False), status_from_bool(all(model_revision_map.values())), "")
     add_report("MODEL", "preprocessing", selected_variant, "PASS", "")
-    add_report("MODEL", "calibration", "LinearSVC calibrated only for Model C diagnostic experiment; transformer probabilities otherwise unmodified.", "WARNING", "Model C is not eligible as final without human labels.")
-    add_report("MODEL", "ensemble weights", json.dumps(selected_weights), status_from_bool(selected_weights.get("model_C", 0.0) == 0.0), "Model C must remain 0 in PROVISIONAL final mode.")
-    add_report("MODEL", "confidence threshold", selected_threshold, "WARNING", "Threshold selected on heuristic pseudo-label development data.")
+    add_report("MODEL", "calibration", "Transformer probabilities are unmodified; Model C uses calibrated LinearSVC probabilities when selected.", "WARNING", "ECE is reported separately and remains a model-quality gate.")
+    add_report("MODEL", "ensemble weights", json.dumps(selected_weights), "PASS" if (HUMAN_VALIDATION_COMPLETED or selected_weights.get("model_C", 0.0) == 0.0) else "FAIL", "Model C is eligible only when human validation is completed.")
+    add_report("MODEL", "confidence threshold", selected_threshold, reference_report_status, f"Threshold selected on development {REFERENCE_LABEL_SOURCE}.")
     add_report("MODEL", "fallback used", False, "PASS", "")
-    add_report("MODEL", "human_validation_completed", human_validation_completed, "PASS" if human_validation_completed else "NOT_AVAILABLE", "Human labels remain blank in the generated package.")
+    add_report("MODEL", "human_validation_completed", human_validation_completed, "PASS" if human_validation_completed else "NOT_AVAILABLE", "Human labels are loaded from the completed validation file." if human_validation_completed else "Human labels remain blank in the generated package.")
     add_report("MODEL", "model generalization", holdout_metric["macro_f1"], macro_status, "Validated status requires locked-test macro-F1 >= 0.55 on human labels.")
     add_report("MODEL", "per-class performance minimum F1", holdout_metric["min_per_class_f1"], min_class_f1_status, "Validated status requires every class F1 >= 0.40.")
     add_report("MODEL", "Neutral recall", holdout_metric["neutral_recall"], neutral_recall_status, "Validated status requires Neutral recall >= 0.50.")
-    add_report("MODEL", "calibration ECE", holdout_metric["ece"], calibration_status, "Lower ECE is better; threshold is diagnostic in provisional mode.")
-    add_report("DEVELOPMENT", "macro-F1", float(selected["macro_f1"]), "WARNING", "Measured against heuristic pseudo-labels.")
-    add_report("DEVELOPMENT", "accuracy", float(selected["accuracy"]), "WARNING", "Measured against heuristic pseudo-labels.")
-    add_report("DEVELOPMENT", "balanced accuracy", float(selected["balanced_accuracy"]), "WARNING", "Measured against heuristic pseudo-labels.")
-    add_report("DEVELOPMENT", "negative recall", float(selected["negative_recall"]), "WARNING", "Measured against heuristic pseudo-labels.")
-    add_report("DEVELOPMENT", "calibration ECE", float(selected["ece"]), "WARNING", "Measured against heuristic pseudo-labels.")
-    add_report("LOCKED_TEST", "macro-F1", holdout_metric["macro_f1"], macro_status, "Heuristic-reference locked test; not human validation.")
-    add_report("LOCKED_TEST", "bootstrap 95% CI", f"{ci_low:.4f}-{ci_high:.4f}", "WARNING", "Bootstrap over heuristic-reference locked test.")
-    add_report("LOCKED_TEST", "accuracy", holdout_metric["accuracy"], "WARNING", "Heuristic-reference locked test.")
-    add_report("LOCKED_TEST", "balanced accuracy", holdout_metric["balanced_accuracy"], "WARNING", "Heuristic-reference locked test.")
-    add_report("LOCKED_TEST", "weighted F1", holdout_metric["weighted_f1"], "WARNING", "Heuristic-reference locked test.")
-    add_report("LOCKED_TEST", "MCC", holdout_metric["mcc"], "WARNING", "Heuristic-reference locked test.")
-    add_report("LOCKED_TEST", "Brier score", holdout_metric["brier_score"], "WARNING", "Heuristic-reference locked test.")
-    add_report("LOCKED_TEST", "ECE", holdout_metric["ece"], calibration_status, "Heuristic-reference locked test.")
+    add_report("MODEL", "calibration ECE", holdout_metric["ece"], calibration_status, "Lower ECE is better.")
+    add_report("DEVELOPMENT", "macro-F1", float(selected["macro_f1"]), reference_report_status, f"Measured against {REFERENCE_LABEL_SOURCE}.")
+    add_report("DEVELOPMENT", "accuracy", float(selected["accuracy"]), reference_report_status, f"Measured against {REFERENCE_LABEL_SOURCE}.")
+    add_report("DEVELOPMENT", "balanced accuracy", float(selected["balanced_accuracy"]), reference_report_status, f"Measured against {REFERENCE_LABEL_SOURCE}.")
+    add_report("DEVELOPMENT", "negative recall", float(selected["negative_recall"]), reference_report_status, f"Measured against {REFERENCE_LABEL_SOURCE}.")
+    add_report("DEVELOPMENT", "calibration ECE", float(selected["ece"]), "WARNING", f"Measured against {REFERENCE_LABEL_SOURCE}.")
+    add_report("LOCKED_TEST", "macro-F1", holdout_metric["macro_f1"], macro_status, f"{REFERENCE_LABEL_SOURCE} locked test.")
+    add_report("LOCKED_TEST", "bootstrap 95% CI", f"{ci_low:.4f}-{ci_high:.4f}", macro_status, f"Bootstrap over {REFERENCE_LABEL_SOURCE} locked test.")
+    add_report("LOCKED_TEST", "accuracy", holdout_metric["accuracy"], reference_report_status, f"{REFERENCE_LABEL_SOURCE} locked test.")
+    add_report("LOCKED_TEST", "balanced accuracy", holdout_metric["balanced_accuracy"], reference_report_status, f"{REFERENCE_LABEL_SOURCE} locked test.")
+    add_report("LOCKED_TEST", "weighted F1", holdout_metric["weighted_f1"], reference_report_status, f"{REFERENCE_LABEL_SOURCE} locked test.")
+    add_report("LOCKED_TEST", "MCC", holdout_metric["mcc"], reference_report_status, f"{REFERENCE_LABEL_SOURCE} locked test.")
+    add_report("LOCKED_TEST", "Brier score", holdout_metric["brier_score"], reference_report_status, f"{REFERENCE_LABEL_SOURCE} locked test.")
+    add_report("LOCKED_TEST", "ECE", holdout_metric["ece"], calibration_status, f"{REFERENCE_LABEL_SOURCE} locked test.")
     add_report("LOCKED_TEST", "coverage", holdout_metric["coverage"], "PASS" if holdout_metric["coverage"] >= 0.90 else "WARNING", "")
     add_report("GOALS", "HCC count", len(hcc_summary), status_from_bool(len(hcc_summary) == HCC_COUNT_EXPECTED), "")
-    add_report("GOALS", "goal counts", json.dumps(goal_counts, ensure_ascii=False), "WARNING", "Goal counts are provisional until human sentiment validation is complete.")
+    add_report("GOALS", "goal counts", json.dumps(goal_counts, ensure_ascii=False), "PASS" if FINAL_VALIDATION_STATUS == "VALIDATED" else "WARNING", "Goal counts are derived from model sentiment labels; confidence/stability is not accuracy.")
     add_report("GOALS", "goal confidence counts", json.dumps(goal_conf_counts, ensure_ascii=False), hcc_goal_confidence_status, "Confidence is bootstrap stability, not correctness.")
     add_report("GOALS", "heuristic HCC review exact agreement", goal_exact_agreement, goal_exact_status, "Exact agreement <0.60 fails the diagnostic gate.")
     add_report("GOALS", "heuristic HCC review weighted kappa", goal_weighted_kappa, goal_kappa_status, "Weighted kappa <0.40 fails the diagnostic gate.")
@@ -2759,7 +2922,7 @@ The reproducibility metric measures the same deterministic lexical rule system, 
     print(f"- overall pipeline status: {FINAL_VALIDATION_STATUS}")
     print(f"- human validation completed: {human_validation_completed}")
     print("- development macro-F1: {:.4f}".format(float(selected["macro_f1"])))
-    print("- locked-test heuristic-reference macro-F1: {:.4f} (95% CI {:.4f}-{:.4f})".format(float(holdout_metric["macro_f1"]), ci_low, ci_high))
+    print("- locked-test {} macro-F1: {:.4f} (95% CI {:.4f}-{:.4f})".format(REFERENCE_LABEL_SOURCE, float(holdout_metric["macro_f1"]), ci_low, ci_high))
     print("- sentiment status counts:")
     print(comment_sentiment["sentiment_status"].value_counts().to_string())
     print("- HCC goal counts:")

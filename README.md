@@ -355,7 +355,8 @@ Model yang dibandingkan:
   (`80ccb4c2817cf976534ac491020a9572e5dae54f`).
 - Model B: `w11wo/indonesian-roberta-base-sentiment-classifier`
   (`ac452dcb0f4966130bba44f4ee0013bb5d52c282`).
-- Model C: TF-IDF word/character n-gram + calibrated `LinearSVC` sebagai eksperimen adaptasi pseudo-label.
+- Model C: TF-IDF word/character n-gram + calibrated `LinearSVC`. Dalam mode human-validated,
+  Model C dilatih dengan label manusia development set dan boleh menjadi komponen final.
 
 Dalam mode PROVISIONAL, Model C tidak eligible sebagai model final karena dilatih dari heuristic
 pseudo-label, bukan label manusia. Final provisional hanya boleh berasal dari Model A, Model B, atau
@@ -382,22 +383,25 @@ Pass 1 dan pass 2 adalah reproduksibilitas sistem aturan deterministik, bukan bu
 Kappa deterministik tidak ditampilkan sebagai validasi utama. Kolom `manual_label` dan label manusia tetap
 kosong sampai anotator manusia mengisi paket validasi.
 
-Paket human validation siap anotasi tersedia di `output/rm2_sentiment/human_validation/`. Jika label manusia
-masih kosong, `human_validation_completed=False`, `overall_pipeline_status=PROVISIONAL`, dan pipeline tidak
-mengklaim model sebagai validated.
+Paket human validation tersedia di `output/rm2_sentiment/human_validation/`. File completed yang digunakan
+pipeline adalah `sentiment_human_annotation_validated.csv` berisi 600 komentar: 300 development dan
+300 locked test. Human validation saat ini lengkap (`human_validation_completed=True`), dengan raw
+agreement annotator `0.8833`, Cohen's kappa `0.8302`, dan adjudication coverage `1.0000`.
 
-Hasil provisional saat ini memilih `ensemble_transformer_A0.50_B0.50` dengan preprocessing
-`social_normalized` dan threshold `0.41` (`ensemble_weights`: Model A `0.5`, Model B `0.5`, Model C
-`0.0`). Locked-test heuristic-reference evaluation menghasilkan macro-F1 `0.4960` (bootstrap 95% CI
-`0.4296-0.5602`), accuracy `0.5286`, balanced accuracy `0.5544`, MCC `0.2935`, Neutral recall `0.5368`,
-Negative recall `0.7097`, minimum class F1 `0.3636`, ECE `0.2023`, dan coverage `0.9827`. Nilai tersebut
-transparan sebagai diagnostic provisional, bukan klaim
-validated performance.
+Hasil human-validated saat ini memilih `ensemble_human_A0.00_B0.25_C0.75` dengan preprocessing
+`social_normalized` dan threshold `0.43` (`ensemble_weights`: Model A `0.0`, Model B `0.25`, Model C
+`0.75`). Locked-test human-reference evaluation menghasilkan macro-F1 `0.5830` (bootstrap 95% CI
+`0.5056-0.6500`), accuracy `0.6435`, balanced accuracy `0.5950`, MCC `0.4131`, Neutral recall `0.6934`,
+Negative recall `0.7500`, minimum class F1 `0.4667`, ECE `0.0565`, dan coverage `0.8779`. Dengan gate
+macro-F1 >= 0.55, Neutral recall >= 0.50, dan minimum class F1 >= 0.40, comment-level sentiment model
+berstatus `VALIDATED`.
 
-Goal counts provisional saat ini: `Mixed Goals` 17 HCC, `Promotional / Supportive` 11 HCC,
-`Neutral Engagement` 9 HCC, dan `Polarized / Contested` 5 HCC. Diagnostic agreement goal terhadap heuristic HCC review masih gagal
-gate metodologis (`exact_agreement=0.2619047619`, `weighted_kappa=-0.1127541590`, status `FAIL`), sehingga goal counts tidak boleh
-dibaca sebagai validated tanpa human validation.
+Goal counts berbasis model human-validated saat ini: `Mixed Goals` 18 HCC, `Promotional / Supportive`
+11 HCC, `Neutral Engagement` 10 HCC, `Polarized / Contested` 2 HCC, dan `Critical / Complaint` 1 HCC.
+Namun diagnostic agreement goal terhadap heuristic HCC review masih gagal gate metodologis
+(`exact_agreement=0.3571428571`, `weighted_kappa=0.0331491713`, status `FAIL`). Karena itu,
+`goal_orientation` dibaca sebagai ringkasan downstream berbasis model sentimen yang tervalidasi pada level
+komentar, bukan sebagai label goal HCC yang sudah tervalidasi langsung oleh manusia.
 
 ### Output Tabel (`output/rm2_sentiment/tables/`)
 
@@ -411,9 +415,11 @@ dibaca sebagai validated tanpa human validation.
 | `sentiment_development_heuristic_reference.csv` | Diagnostic | Development/challenge set dengan heuristic pseudo-label |
 | `sentiment_holdout_heuristic_reference.csv` | Diagnostic | Locked-test sample dengan heuristic pseudo-label |
 | `sentiment_deterministic_rule_reproducibility.csv` | Diagnostic | Reproducibility aturan deterministik, bukan reliability anotasi |
+| `sentiment_development_human_reference.csv` | Human validation | Development/challenge set dengan adjudicated human labels |
+| `sentiment_locked_test_human_reference.csv` | Human validation | Locked-test set dengan adjudicated human labels |
 | `sentiment_model_selection.csv` | Model | Pipeline final, preprocessing, threshold, dan revision model |
-| `sentiment_model_locked_test_metrics.csv` | Model | Metrik locked-test heuristic-reference dan bootstrap CI |
-| `sentiment_repeated_cv_summary.csv` | Model | Mean/std repeated stratified CV berbasis heuristic pseudo-label |
+| `sentiment_model_locked_test_metrics.csv` | Model | Metrik locked-test human-reference dan bootstrap CI |
+| `sentiment_repeated_cv_summary.csv` | Model | Mean/std repeated stratified CV berbasis adjudicated human labels |
 | `neutral_error_taxonomy.csv` | Model | Audit khusus kegagalan kelas Neutral |
 | `hcc_goal_heuristic_review.csv` | Goals | Review heuristic seluruh 42 HCC pada level goal, diagnostic only |
 | `hcc_goal_validation_metrics.csv` | Goals | Diagnostic agreement; nilai rendah menahan status validated |
@@ -429,7 +435,8 @@ Visualisasi utama dibatasi menjadi tiga file:
 - `hcc_goal_orientation_confidence.png`
 
 WordCloud dan grafik eksploratif lama tidak dipertahankan sebagai output utama karena tidak berfungsi sebagai
-validasi sentimen.
+validasi sentimen. WordCloud eksploratif untuk paparan temuan tersedia terpisah di
+`output/rm2_sentiment/visualisasi_exploratory/` dan tidak digunakan sebagai evidence validasi model.
 
 ### Output Gephi RM2 (`output/rm2_sentiment/gephi/`)
 
@@ -625,8 +632,8 @@ positif, netral, dan negatif diperlakukan sebagai **indikator orientasi pesan**,
 langsung niat aktor. `goal_orientation` per HCC diklasifikasikan menjadi `Promotional / Supportive`,
 `Critical / Complaint`, `Neutral Engagement`, `Polarized / Contested`, `Mixed Goals`, atau
 `Insufficient Text` (HCC dengan `<5` komentar bertext) — masing-masing disertai `goal_confidence`
-(`High`/`Medium`/`Low`/`None`). Pada mode PROVISIONAL, `goal_confidence` adalah stabilitas bootstrap,
-bukan akurasi atau kebenaran label.
+(`High`/`Medium`/`Low`/`None`). `goal_confidence` adalah stabilitas bootstrap, bukan akurasi atau
+kebenaran label.
 
 ### Batasan Analisis
 
@@ -635,11 +642,11 @@ bukan akurasi atau kebenaran label.
 - Sentimen **tidak** digunakan untuk membentuk HCC (HCC sudah final dari RM1) dan **tidak** digunakan
   untuk membuktikan astroturfing.
 - Akurasi model bergantung pada domain teks; komentar TikTok yang pendek, bahasa gaul, dan campur kode
-  berpotensi menurunkan akurasi dibanding korpus pelatihan model. Human validation belum tersedia; paket
-  anotasi manusia disiapkan dan hasil sentiment/goals tetap PROVISIONAL.
+  berpotensi menurunkan akurasi dibanding korpus pelatihan model. Human validation 600 komentar sudah
+  tersedia dan comment-level sentiment model melewati gate validasi.
 - HCC dengan sedikit komentar bertext diberi label `Insufficient Text`/`goal_confidence` rendah secara
   eksplisit agar tidak disalahartikan sebagai pola yang kuat.
-- Goal counts bersifat provisional sampai human sentiment validation selesai dan gate agreement goals
-  memenuhi ambang metodologis.
+- Goal counts tetap perlu dibaca hati-hati karena diagnostic agreement goal terhadap heuristic HCC review
+  masih gagal; confidence/stability bukan bukti kebenaran label goal.
 - Perbandingan HCC vs Non-HCC dipakai untuk melihat perbedaan orientasi sentimen, **bukan** untuk
   membuktikan koordinasi.

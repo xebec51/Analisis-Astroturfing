@@ -1,52 +1,51 @@
 overall_pipeline_status,section,metric,value,status,passed,notes
-PROVISIONAL,SUMMARY,overall_pipeline_status,PROVISIONAL,WARNING,False,Human validation is not available; outputs are exploratory/provisional.
-PROVISIONAL,SUMMARY,validation_mode,PROVISIONAL,WARNING,False,Reference labels are deterministic heuristic pseudo-labels.
-PROVISIONAL,DATA,dataset rows,33847,PASS,True,
-PROVISIONAL,DATA,unique comment IDs,33847,PASS,True,
-PROVISIONAL,DATA,duplicate rows removed,0,PASS,True,
-PROVISIONAL,DATA,blank text,4,PASS,True,
-PROVISIONAL,DATA,emoji-only,2515,PASS,True,
-PROVISIONAL,DATA,evaluable,31819,PASS,True,
-PROVISIONAL,DATA,uncertain,308,PASS,True,
-PROVISIONAL,DATA,no text,1720,PASS,True,
-PROVISIONAL,DATA,coverage,0.9400833160989157,PASS,True,
-PROVISIONAL,MODEL,selected model/pipeline,ensemble_transformer_A0.50_B0.50,WARNING,False,Selected under PROVISIONAL mode using heuristic pseudo-labels.
-PROVISIONAL,MODEL,model revision,"{""model_A"": ""80ccb4c2817cf976534ac491020a9572e5dae54f"", ""model_B"": ""ac452dcb0f4966130bba44f4ee0013bb5d52c282""}",PASS,True,
-PROVISIONAL,MODEL,preprocessing,social_normalized,PASS,True,
-PROVISIONAL,MODEL,calibration,LinearSVC calibrated only for Model C diagnostic experiment; transformer probabilities otherwise unmodified.,WARNING,False,Model C is not eligible as final without human labels.
-PROVISIONAL,MODEL,ensemble weights,"{""model_A"": 0.5, ""model_B"": 0.5, ""model_C"": 0.0}",PASS,True,Model C must remain 0 in PROVISIONAL final mode.
-PROVISIONAL,MODEL,confidence threshold,0.41,WARNING,False,Threshold selected on heuristic pseudo-label development data.
-PROVISIONAL,MODEL,fallback used,False,PASS,True,
-PROVISIONAL,MODEL,human_validation_completed,False,NOT_AVAILABLE,False,Human labels remain blank in the generated package.
-PROVISIONAL,MODEL,model generalization,0.495998737804815,WARNING,False,Validated status requires locked-test macro-F1 >= 0.55 on human labels.
-PROVISIONAL,MODEL,per-class performance minimum F1,0.36363636363636365,WARNING,False,Validated status requires every class F1 >= 0.40.
-PROVISIONAL,MODEL,Neutral recall,0.5367647058823529,PASS,True,Validated status requires Neutral recall >= 0.50.
-PROVISIONAL,MODEL,calibration ECE,0.20230117319727348,WARNING,False,Lower ECE is better; threshold is diagnostic in provisional mode.
-PROVISIONAL,DEVELOPMENT,macro-F1,0.5193312814730963,WARNING,False,Measured against heuristic pseudo-labels.
-PROVISIONAL,DEVELOPMENT,accuracy,0.5860655737704918,WARNING,False,Measured against heuristic pseudo-labels.
-PROVISIONAL,DEVELOPMENT,balanced accuracy,0.5577554685363578,WARNING,False,Measured against heuristic pseudo-labels.
-PROVISIONAL,DEVELOPMENT,negative recall,0.6326530612244898,WARNING,False,Measured against heuristic pseudo-labels.
-PROVISIONAL,DEVELOPMENT,calibration ECE,0.05765025840848554,WARNING,False,Measured against heuristic pseudo-labels.
-PROVISIONAL,LOCKED_TEST,macro-F1,0.495998737804815,WARNING,False,Heuristic-reference locked test; not human validation.
-PROVISIONAL,LOCKED_TEST,bootstrap 95% CI,0.4296-0.5602,WARNING,False,Bootstrap over heuristic-reference locked test.
-PROVISIONAL,LOCKED_TEST,accuracy,0.5286343612334802,WARNING,False,Heuristic-reference locked test.
-PROVISIONAL,LOCKED_TEST,balanced accuracy,0.5543695973012862,WARNING,False,Heuristic-reference locked test.
-PROVISIONAL,LOCKED_TEST,weighted F1,0.5575414293669987,WARNING,False,Heuristic-reference locked test.
-PROVISIONAL,LOCKED_TEST,MCC,0.29354965805720734,WARNING,False,Heuristic-reference locked test.
-PROVISIONAL,LOCKED_TEST,Brier score,0.7224307686356116,WARNING,False,Heuristic-reference locked test.
-PROVISIONAL,LOCKED_TEST,ECE,0.20230117319727348,PASS,True,Heuristic-reference locked test.
-PROVISIONAL,LOCKED_TEST,coverage,0.9826839826839827,PASS,True,
-PROVISIONAL,GOALS,HCC count,42,PASS,True,
-PROVISIONAL,GOALS,goal counts,"{""Mixed Goals"": 17, ""Promotional / Supportive"": 11, ""Neutral Engagement"": 9, ""Polarized / Contested"": 5}",WARNING,False,Goal counts are provisional until human sentiment validation is complete.
-PROVISIONAL,GOALS,goal confidence counts,"{""High"": 17, ""Medium"": 13, ""Low"": 12}",WARNING,False,"Confidence is bootstrap stability, not correctness."
-PROVISIONAL,GOALS,heuristic HCC review exact agreement,0.2619047619047619,FAIL,False,Exact agreement <0.60 fails the diagnostic gate.
-PROVISIONAL,GOALS,heuristic HCC review weighted kappa,-0.11275415896487995,FAIL,False,Weighted kappa <0.40 fails the diagnostic gate.
-PROVISIONAL,GOALS,low-confidence HCC list,14;20;50;52;60;63;74;75;87;134;182;183,WARNING,False,
-PROVISIONAL,GOALS,insufficient HCC count,0,PASS,True,
-PROVISIONAL,INTEGRITY,RM1 checksums unchanged,True,PASS,True,
-PROVISIONAL,INTEGRITY,actor type counts unchanged,True,PASS,True,"{""Mass Actor"": 26166, ""Community Actor"": 218, ""Individual Actor"": 43}"
-PROVISIONAL,INTEGRITY,Gephi aggregate 396/497 unchanged,True,PASS,True,
-PROVISIONAL,INTEGRITY,no Non-HCC artifact,True,PASS,True,
-PROVISIONAL,INTEGRITY,sentiment notebook reached final validation cell,True,PASS,True,
-PROVISIONAL,INTEGRITY,comment_sentiment sha256,57bbd4f8c9ae6de5c719e04c611347d81db56ca172b5dc817bceff0f240c0af6,PASS,True,
-PROVISIONAL,INTEGRITY,actor type notebook run end-to-end,True,PASS,True,03_rm2_actor_type_typology.ipynb executed successfully after removing legacy actor type Gephi aliases.
+VALIDATED,SUMMARY,overall_pipeline_status,VALIDATED,PASS,True,Reference labels are adjudicated human labels.
+VALIDATED,SUMMARY,validation_mode,HUMAN_VALIDATED,PASS,True,Reference labels are adjudicated human labels.
+VALIDATED,DATA,dataset rows,33847,PASS,True,
+VALIDATED,DATA,unique comment IDs,33847,PASS,True,
+VALIDATED,DATA,duplicate rows removed,0,PASS,True,
+VALIDATED,DATA,blank text,4,PASS,True,
+VALIDATED,DATA,emoji-only,2515,PASS,True,
+VALIDATED,DATA,evaluable,28989,PASS,True,
+VALIDATED,DATA,uncertain,3138,PASS,True,
+VALIDATED,DATA,no text,1720,PASS,True,
+VALIDATED,DATA,coverage,0.8564717700239313,PASS,True,
+VALIDATED,MODEL,selected model/pipeline,ensemble_human_A0.00_B0.25_C0.75,PASS,True,Selected on development human_adjudicated_label; locked test evaluated once after selection.
+VALIDATED,MODEL,model revision,"{""model_A"": ""80ccb4c2817cf976534ac491020a9572e5dae54f"", ""model_B"": ""ac452dcb0f4966130bba44f4ee0013bb5d52c282""}",PASS,True,
+VALIDATED,MODEL,preprocessing,social_normalized,PASS,True,
+VALIDATED,MODEL,calibration,Transformer probabilities are unmodified; Model C uses calibrated LinearSVC probabilities when selected.,WARNING,False,ECE is reported separately and remains a model-quality gate.
+VALIDATED,MODEL,ensemble weights,"{""model_A"": 0.0, ""model_B"": 0.25, ""model_C"": 0.75}",PASS,True,Model C is eligible only when human validation is completed.
+VALIDATED,MODEL,confidence threshold,0.43,PASS,True,Threshold selected on development human_adjudicated_label.
+VALIDATED,MODEL,fallback used,False,PASS,True,
+VALIDATED,MODEL,human_validation_completed,True,PASS,True,Human labels are loaded from the completed validation file.
+VALIDATED,MODEL,model generalization,0.5829815793573748,PASS,True,Validated status requires locked-test macro-F1 >= 0.55 on human labels.
+VALIDATED,MODEL,per-class performance minimum F1,0.4666666666666667,PASS,True,Validated status requires every class F1 >= 0.40.
+VALIDATED,MODEL,Neutral recall,0.6934306569343066,PASS,True,Validated status requires Neutral recall >= 0.50.
+VALIDATED,MODEL,calibration ECE,0.05650882503029265,PASS,True,Lower ECE is better.
+VALIDATED,DEVELOPMENT,macro-F1,0.7435448942195569,PASS,True,Measured against human_adjudicated_label.
+VALIDATED,DEVELOPMENT,accuracy,0.7509025270758123,PASS,True,Measured against human_adjudicated_label.
+VALIDATED,DEVELOPMENT,balanced accuracy,0.7468060394889663,PASS,True,Measured against human_adjudicated_label.
+VALIDATED,DEVELOPMENT,negative recall,0.7619047619047619,PASS,True,Measured against human_adjudicated_label.
+VALIDATED,DEVELOPMENT,calibration ECE,0.14477079919525057,WARNING,False,Measured against human_adjudicated_label.
+VALIDATED,LOCKED_TEST,macro-F1,0.5829815793573748,PASS,True,human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,bootstrap 95% CI,0.5056-0.6500,PASS,True,Bootstrap over human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,accuracy,0.6434782608695652,PASS,True,human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,balanced accuracy,0.5949646905228178,PASS,True,human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,weighted F1,0.649541174833789,PASS,True,human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,MCC,0.41312329756286903,PASS,True,human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,Brier score,0.46890004520159695,PASS,True,human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,ECE,0.05650882503029265,PASS,True,human_adjudicated_label locked test.
+VALIDATED,LOCKED_TEST,coverage,0.8778625954198473,WARNING,False,
+VALIDATED,GOALS,HCC count,42,PASS,True,
+VALIDATED,GOALS,goal counts,"{""Mixed Goals"": 18, ""Promotional / Supportive"": 11, ""Neutral Engagement"": 10, ""Polarized / Contested"": 2, ""Critical / Complaint"": 1}",PASS,True,Goal counts are derived from model sentiment labels; confidence/stability is not accuracy.
+VALIDATED,GOALS,goal confidence counts,"{""Low"": 19, ""High"": 12, ""Medium"": 11}",WARNING,False,"Confidence is bootstrap stability, not correctness."
+VALIDATED,GOALS,heuristic HCC review exact agreement,0.35714285714285715,FAIL,False,Exact agreement <0.60 fails the diagnostic gate.
+VALIDATED,GOALS,heuristic HCC review weighted kappa,0.03314917127071837,FAIL,False,Weighted kappa <0.40 fails the diagnostic gate.
+VALIDATED,GOALS,low-confidence HCC list,1;2;5;17;18;34;45;46;48;60;63;74;75;103;117;134;150;182;183,WARNING,False,
+VALIDATED,GOALS,insufficient HCC count,0,PASS,True,
+VALIDATED,INTEGRITY,RM1 checksums unchanged,True,PASS,True,
+VALIDATED,INTEGRITY,actor type counts unchanged,True,PASS,True,"{""Mass Actor"": 26166, ""Community Actor"": 218, ""Individual Actor"": 43}"
+VALIDATED,INTEGRITY,Gephi aggregate 396/497 unchanged,True,PASS,True,
+VALIDATED,INTEGRITY,no Non-HCC artifact,True,PASS,True,
+VALIDATED,INTEGRITY,sentiment notebook reached final validation cell,True,PASS,True,
+VALIDATED,INTEGRITY,comment_sentiment sha256,c2722117cc522345117256046ab703fe76a801b39136e65bdf53fe165cde87c7,PASS,True,

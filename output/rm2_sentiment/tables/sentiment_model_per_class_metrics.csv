@@ -1,4 +1,4 @@
 sample_set,candidate,preprocessing_variant,class_label,precision,recall,f1,support
-locked_test,ensemble_transformer_A0.50_B0.50,social_normalized,Positive,0.6097560975609756,0.4166666666666667,0.49504950495049505,60
-locked_test,ensemble_transformer_A0.50_B0.50,social_normalized,Neutral,0.7604166666666666,0.5367647058823529,0.6293103448275862,136
-locked_test,ensemble_transformer_A0.50_B0.50,social_normalized,Negative,0.24444444444444444,0.7096774193548387,0.36363636363636365,31
+locked_test,ensemble_human_A0.00_B0.25_C0.75,social_normalized,Positive,0.7368421052631579,0.34146341463414637,0.4666666666666667,41
+locked_test,ensemble_human_A0.00_B0.25_C0.75,social_normalized,Neutral,0.811965811965812,0.6934306569343066,0.7480314960629921,137
+locked_test,ensemble_human_A0.00_B0.25_C0.75,social_normalized,Negative,0.4148936170212766,0.75,0.5342465753424658,52

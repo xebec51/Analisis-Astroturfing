@@ -1,55 +1,41 @@
-comment_id,comment_text_original,video_id,product_category,heuristic_reference_label,predicted_label,selected_model_confidence,ambiguity_flags,neutral_error_taxonomy
-7422576492603802373,gampang banget klarifikasi maaf kalau yg sudah pake tambah rosak mukanya kek mana... saking pengen banget Flexing hahaaa,7421104723333483782,davina_skincare,Neutral,Negative,0.7511691865765373,question;slang,pertanyaan
-7421166771632112390,"Ah mana percaya lagi , biasa nya muka nya happy terus skrng melas2 muka nya",7421104723333483782,davina_skincare,Neutral,Negative,0.9154917469788297,question;slang,pertanyaan
-7216607576683201307,bisa buat cowok gk,7182401543491128602,maryame_niacinamide,Neutral,Negative,0.5229421268983568,descriptive,label ambiguity
-7422273305950896901,untung aku gak pernah beli,7421104723333483782,davina_skincare,Neutral,Negative,0.5838786569524155,question;slang,harga/link/beli
-7421541385612182278,kenapa gak minta maaf dari awal😂udah kalah ya,7421104723333483782,davina_skincare,Neutral,Negative,0.9554726921203617,slang,slang
-7421696234786734854,minta maaf teruss gimana kerugian konsumen...mau tanggung jawab...??,7421104723333483782,davina_skincare,Neutral,Negative,0.9955595055403152,question,pertanyaan
-7422705433683591942,"maf gk tulus,takut kehilangan",7421104723333483782,davina_skincare,Neutral,Negative,0.9969952656413298,slang,slang
-7421196909073236741,skrg mnta maaf krena sdah sepi orderannya,7421104723333483782,davina_skincare,Neutral,Negative,0.9270075739549569,descriptive,label ambiguity
-7422946852851434246,baru ketahuan ..kemaaren kemana,7421104723333483782,davina_skincare,Neutral,Negative,0.9108219636575342,question,pertanyaan
-7320190270212195077,sama kok ak juga ap gk ccok mgkin ya sm kandugn vit.c,7314309007341063429,originote_niacinamide,Neutral,Negative,0.7207464860324807,potential_sarcasm;slang,slang
-7219842332353659674,emang kalau cekit² itu kenapa kak?,7185096421220158747,azarine_retinol,Neutral,Negative,0.806871965943192,question;slang,pertanyaan
-7388550852934189829,"keranjang kuningnya lupa KK bawa kah,???kok gak ada🤔🤔",7385065641595653382,maryame_niacinamide,Neutral,Negative,0.842106909255187,potential_sarcasm;question;slang,pertanyaan
-7376474635820876550,Habis berapa beli semua tu kak,7357662447248968966,daviena_retinol,Neutral,Negative,0.5348346111762242,question;slang,harga/link/beli
-7387213212251226885,g kurang ka harga y,7378347819268082950,daviena_retinol,Neutral,Negative,0.510188994837615,question;slang,harga/link/beli
-7344695480751162117,ini yg dibilang dr ika retinol yg mngndung hidroquinon bukan siih? apa bukan?,7340938843190725893,daviena_retinol,Neutral,Negative,0.9814700932059162,question;slang,pertanyaan
-7421784709947163398,"dituduh secara brutal gaess
-pdhl doktif pake hasil lab 🤣🤣
-kocakkkkkkkk",7421104723333483782,davina_skincare,Neutral,Negative,0.9542811399921555,slang,slang
-7341548105680814854,Perbaiki dulu kak skin barriernya basic skincare dikuatin dulu. Apalagi itu retinolnya dosis tinggi,7340938843190725893,daviena_retinol,Neutral,Negative,0.8552981559130104,slang,slang
-7422289119940002565,Halah merkuri tuh malah bikin rusak muka,7389110955214490886,daviena_retinol,Neutral,Negative,0.9986755459548851,slang,slang
-7430735516545106705,kezia kpan si,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.693131822403682,descriptive,label ambiguity
-7550882391452730119,lah Dy marketingnya😂,7523137946246008069,maryame_niacinamide,Neutral,Negative,0.7014421571797528,descriptive,label ambiguity
-7429616235484742407,iya kak betul . .,7429265515434036485,maryame_niacinamide,Neutral,Negative,0.4553371100372906,slang,slang
-7433353437812753170,"kok ga ada barang ny ka, di keranjang kuningnya😔",7429636271552728326,maryame_niacinamide,Neutral,Negative,0.9186703062319035,potential_sarcasm;slang,slang
-7378477471564235525,itu kan lagi proses kk🙄,7340938843190725893,daviena_retinol,Neutral,Negative,0.715575410584955,slang,slang
-7422305278123541254,hoiii jualan yg bnrr,7421104723333483782,davina_skincare,Neutral,Negative,0.5142496761127197,slang,slang
-7135404540996600602,"""cuma 30rb kesel ga lo"" dan sambil kaya nyentil hahaha lucu bgt",7129446710400601371,originote_niacinamide,Neutral,Negative,0.5454231426338181,potential_sarcasm;slang,slang
-7573263004461040385,dari umur berapa?,7507827983269350661,maryame_niacinamide,Neutral,Negative,0.7439534939609315,question,pertanyaan
-7428657699175138054,seruni sekincer dok.,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.7718257319335737,descriptive,label ambiguity
-7312026058579624709,"mau nanyaa jujur bingung bgt, aku beli serum ini di ofc store nya tapi bau nya tuh aga kaya lem gitu ada yg sama gaa??? exp nya juga masii lama",7258280563352587526,originote_niacinamide,Neutral,Negative,0.9686116076384816,question;slang,harga/link/beli
-7358272857816072965,retinol itu apa ka?maaf ga tau mknya nanya,7357662447248968966,daviena_retinol,Neutral,Negative,0.6039625184845003,question;slang,pertanyaan
-7360355476188513030,padahal enak banget dipake tpi isi nya dikit kurang banyak,7359717817601543429,daviena_retinol,Neutral,Negative,0.596299498051286,slang,slang
-7312025646363722502,Review judes apalagi? 💋💜👑,7312025661835578629,daviena_retinol,Neutral,Negative,0.997967682553442,question,pertanyaan
-7421583080894694150,"1 kata...""PREEETTTTTTTTTT",7421104723333483782,davina_skincare,Neutral,Negative,0.6482767771623184,slang,slang
-7449030034739118855,Di jeda’a berapa hari?,7262186413284822277,maryame_niacinamide,Neutral,Negative,0.5735405036465075,question,pertanyaan
-7422274808019469061,kemarin knp nyindir2 panas2,7421104723333483782,davina_skincare,Neutral,Negative,0.9922453951067021,descriptive,label ambiguity
-INJ000210,wah kak reply mulu 😂 beneran,7340938843190725893,daviena_retinol,Neutral,Negative,0.7874804999200156,slang,slang
-7409069596854076166,kk orang mna kk,7378347819268082950,daviena_retinol,Neutral,Negative,0.854616693024753,descriptive,label ambiguity
-7358506074859537158,pake bg ka,7340938843190725893,daviena_retinol,Neutral,Negative,0.44535767101254886,slang,slang
-7421304656255189765,kemarin kok nantangin?,7421104723333483782,davina_skincare,Neutral,Negative,0.9578773292169593,potential_sarcasm;question,pertanyaan
-7422687249274422022,"Terus Gimana Nasib reseler Yg udah banyak Belanja, dan akhirnya gk laku Di jual karna Mslh ini",7421104723333483782,davina_skincare,Neutral,Negative,0.9945336048831597,question;slang,pertanyaan
-7136552264877409050,"kurang tau ih, mending yg hydrating serum aja ka",7122773893844061466,originote_niacinamide,Neutral,Negative,0.5249800472267513,slang,slang
-7429631175880622866,mgkin jg kk...,7429265515434036485,maryame_niacinamide,Neutral,Negative,0.683902616583185,descriptive,label ambiguity
-7314197416533525254,orang kaya MH bebas,7312025661835578629,daviena_retinol,Neutral,Negative,0.8111329599134408,slang,slang
-7421737232745005829,"seperti terpaksa minta maafnya, ikut-ikutan aja minta maafnya sprti yg lain,,tapi iklas yg disana.",7421104723333483782,davina_skincare,Neutral,Negative,0.7399704239508326,slang,slang
-7329456753429496581,ini endorse kan?,7312025661835578629,daviena_retinol,Neutral,Negative,0.855786190384074,question;slang,pertanyaan
-7434043879738868498,berp kk sepaket ya,7385065641595653382,maryame_niacinamide,Neutral,Negative,0.5153750346834105,descriptive,label ambiguity
-INJ000494,real sih ini 🔥 (160),7421364555957275910,maryame_niacinamide,Neutral,Negative,0.9281628490776477,slang,slang
-7225800117394801435,Bismillah ya allah,7208499827234131226,originote_niacinamide,Neutral,Negative,0.45701720019933056,descriptive,label ambiguity
-7425849259604230917,exfoliasi itu pakek apa ?,7424146834534239493,maryame_niacinamide,Neutral,Negative,0.8798699117398266,question,pertanyaan
-7428445755185398534,lmyn...cmn klo pemula pakenya 2hr skli,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.485995976011408,descriptive,label ambiguity
-7428556319198462725,FA GLOW DONG DOK,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.5922803614014226,slang,slang
-INJ000306,iyaa sama disini jg gtu!!,7319688011891936517,daviena_retinol,Neutral,Negative,0.6209270470454613,descriptive,label ambiguity
-7423655942820250374,aslina ?,7421835937988070662,maryame_niacinamide,Neutral,Negative,0.693711929545397,question;very_short,pertanyaan
+comment_id,comment_text_original,video_id,product_category,reference_label,predicted_label,selected_model_confidence,ambiguity_flags,neutral_error_taxonomy
+7428485716349027090,ff dokkk,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.5412185005460478,very_short,short acknowledgement
+7201766217249571611,Pake yg peeling kak,7194330759329631514,originote_niacinamide,Neutral,Negative,0.6105307782803479,slang,slang
+7223215135145198363,kakak pakai yg apa?,7194330759329631514,originote_niacinamide,Neutral,Negative,0.47899949593912844,question;slang,pertanyaan
+7596250253708509968,kaloo beli awal bulan des aman ngga yaa izin?,7596239649517899016,davina_skincare,Neutral,Negative,0.4703046869831375,low_margin;question;slang,harga/link/beli
+7377300086337323781,apa produk ini aman utk busui?,7313383346447322373,azarine_retinol,Neutral,Negative,0.5341650778245008,low_margin;question,pertanyaan
+7358006128037233414,keranjang kuning nya kak,7357662447248968966,daviena_retinol,Neutral,Negative,0.48282469653645443,slang,slang
+7200692561793991451,ini dipakainya barengan? atau selang seling pagi-malam?,7188119070884056347,originote_niacinamide,Neutral,Negative,0.4580613658795291,question;slang,pertanyaan
+7429028316701229842,plisss jestam,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.5850969035721523,very_short,short acknowledgement
+7422680260849976069,aq dong pake citra🤭😂,7421104723333483782,davina_skincare,Neutral,Negative,0.5768899385714759,slang,slang
+7428506612707345157,seruni skincare dok,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.48881598390156533,descriptive,label ambiguity
+7219842332353659674,emang kalau cekit² itu kenapa kak?,7185096421220158747,azarine_retinol,Neutral,Negative,0.5478997062342437,question;slang,pertanyaan
+7388483085107643141,beli dimana itu k,7385065641595653382,maryame_niacinamide,Neutral,Negative,0.6592944396613617,question,harga/link/beli
+7376474635820876550,Habis berapa beli semua tu kak,7357662447248968966,daviena_retinol,Neutral,Negative,0.5513808013074163,question;slang,harga/link/beli
+7344695480751162117,ini yg dibilang dr ika retinol yg mngndung hidroquinon bukan siih? apa bukan?,7340938843190725893,daviena_retinol,Neutral,Negative,0.5192843763046217,question;slang,pertanyaan
+7358110590571135749,dalba spray serum cara pake nya gimana?,7357662447248968966,daviena_retinol,Neutral,Negative,0.5441479388136707,question,pertanyaan
+7428734455986258693,dokter kl ga di pake buat aku aja skin care nya...bismillah😂,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.5266626577036281,slang,slang
+7341548105680814854,Perbaiki dulu kak skin barriernya basic skincare dikuatin dulu. Apalagi itu retinolnya dosis tinggi,7340938843190725893,daviena_retinol,Neutral,Negative,0.682263410870269,slang,slang
+7429571066819953413,dok LS skincare dong,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.5469743584079911,slang,slang
+7340957972052607749,Tapi ngurangin ke jerawat nya kan?,7340938843190725893,daviena_retinol,Neutral,Negative,0.7003230036568695,low_margin;question;slang,pertanyaan
+7412493433497699078,toner nya apa kak,7242204399928593669,originote_niacinamide,Neutral,Negative,0.5885641433860724,slang,slang
+7253778547864306438,"gaboleh kayanya soalnya ada niacinamide nya, mending pake serum hydrating aja deh kak abis exfo",7235406683676167430,originote_niacinamide,Neutral,Negative,0.45997687619155553,slang,slang
+7428548606552916741,cream yg gue pakek ni,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.46186364272693126,slang,slang
+7378477471564235525,itu kan lagi proses kk🙄,7340938843190725893,daviena_retinol,Neutral,Negative,0.45140858211082524,slang,slang
+7428765065594061588,skincare dr widy clinic..??,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.7403803987866692,question,pertanyaan
+7425134688081543942,blinya kak..,7421364555957275910,maryame_niacinamide,Neutral,Negative,0.5441025476162905,slang;very_short,short acknowledgement
+7572615059345933076,ada yg mau gantiin paket maryame aku ga jual murah aja daripada nganggur bae mendjng di jual murah,7430007251076697350,maryame_niacinamide,Neutral,Negative,0.9111088286203624,low_margin;slang,slang
+7428475697990304519,LS dokkkkk,7428436533981613318,maryame_niacinamide,Neutral,Negative,0.5136293447493511,very_short,short acknowledgement
+7358272857816072965,retinol itu apa ka?maaf ga tau mknya nanya,7357662447248968966,daviena_retinol,Neutral,Negative,0.6185710848734804,question;slang,pertanyaan
+7312025646363722502,Review judes apalagi? 💋💜👑,7312025661835578629,daviena_retinol,Neutral,Negative,0.4720716407177815,question,pertanyaan
+7136552264877409050,"kurang tau ih, mending yg hydrating serum aja ka",7122773893844061466,originote_niacinamide,Neutral,Negative,0.5655046128164108,slang,slang
+7429631175880622866,mgkin jg kk...,7429265515434036485,maryame_niacinamide,Neutral,Negative,0.4843171533090922,descriptive,label ambiguity
+7329456753429496581,ini endorse kan?,7312025661835578629,daviena_retinol,Neutral,Negative,0.4809363527843783,question;slang,pertanyaan
+7186264225122517786,seminggu 2 kali aja kalo aku,7185096421220158747,azarine_retinol,Neutral,Negative,0.6660725564819553,slang,slang
+7217967587257336603,"buat wajah kusam , komedo pke yg ap kk",7194330759329631514,originote_niacinamide,Neutral,Negative,0.6266105208973545,slang,slang
+7398752527174697771,"saya punya flek hitam kak,cara oder nya gimana kirim ke Hongkong",7385065641595653382,maryame_niacinamide,Neutral,Negative,0.623430557608055,question;slang,pertanyaan
+7359220281518424850,Jum beli @maira,7357662447248968966,daviena_retinol,Neutral,Negative,0.609156078581887,question,harga/link/beli
+7425849259604230917,exfoliasi itu pakek apa ?,7424146834534239493,maryame_niacinamide,Neutral,Negative,0.8540995415159085,question,pertanyaan
+7421916425424601861,Semua titipan Allah.. ingat dri mana kita berasal.. jgn lupa apa yg di dapat hak kewajiban di keluarkan,7421104723333483782,davina_skincare,Neutral,Negative,0.6416269368469494,question;slang,pertanyaan
+7423655942820250374,aslina ?,7421835937988070662,maryame_niacinamide,Neutral,Negative,0.4796768433323815,question;very_short,pertanyaan
+7312052027029881606,lebih mantep lg di kombi sm apa ya?,7312025661835578629,daviena_retinol,Neutral,Negative,0.5715419580266966,question,pertanyaan

@@ -1,12 +1,3 @@
-comment_id,comment_text_original,video_id,product_category,heuristic_reference_label,predicted_label,selected_model_confidence,ambiguity_flags,neutral_error_taxonomy
-7421194569964421893,ga pernah tergiur sama daviena,7421104723333483782,davina_skincare,Neutral,Positive,0.51635804352336,slang,brand mention without evaluation
-INJ000209,bener bgt kak setuju!!,7340938843190725893,daviena_retinol,Neutral,Positive,0.6191851813033726,slang,slang
-7223398588939535110,dateng nya lama bngt bangga sama #skincarelokal #skincaretips wajib dicoba,7194330759329631514,originote_niacinamide,Neutral,Positive,0.5800852283925092,slang,slang
-7422285000957510405,gak penting gak ngaruh..karna saya gak pernah pakai dan gak tau Davina skincare..yg saya pakai dari dulu cuma Pond's age mirakel dan oil of olay,7421104723333483782,davina_skincare,Neutral,Positive,0.5342551235876332,slang,slang
-7446068116976730885,salfok kaosnya dr. tiap review pasti kocak2 🤣,7428436533981613318,maryame_niacinamide,Neutral,Positive,0.6724119997092107,slang,slang
-7421280025037603589,ak pelnggn setia G2G,7421104723333483782,davina_skincare,Neutral,Positive,0.8771182183735222,descriptive,label ambiguity
-INJ000728,bener bgt kak setuju 🔥 (160),7523137946246008069,maryame_niacinamide,Neutral,Positive,0.809192323020302,slang,slang
-7271481786881344261,kalo pemula bolehlah.. tp yg muka badak aku dah prnh pake tiap malem kurang nmpol hasilnya,7270117302614478086,azarine_retinol,Neutral,Positive,0.4241839224883356,slang,slang
-7422755859274744581,udah bener pakai brand2 terlama,7421104723333483782,davina_skincare,Neutral,Positive,0.5512409293142133,slang,slang
-7421916425424601861,Semua titipan Allah.. ingat dri mana kita berasal.. jgn lupa apa yg di dapat hak kewajiban di keluarkan,7421104723333483782,davina_skincare,Neutral,Positive,0.518875395090619,question;slang,pertanyaan
-7312052027029881606,lebih mantep lg di kombi sm apa ya?,7312025661835578629,daviena_retinol,Neutral,Positive,0.6893866544330371,question,pertanyaan
+comment_id,comment_text_original,video_id,product_category,reference_label,predicted_label,selected_model_confidence,ambiguity_flags,neutral_error_taxonomy
+7608481375372526354,lah biasanya gw pake malem Kaka yang fit c,7235406683676167430,originote_niacinamide,Neutral,Positive,0.44137389570728636,slang,slang
+7358413010857558790,Review jujur d’alba,7357662447248968966,daviena_retinol,Neutral,Positive,0.4310887778366179,descriptive,label ambiguity
