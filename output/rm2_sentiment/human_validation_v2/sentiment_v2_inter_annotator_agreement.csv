@@ -1,0 +1,81 @@
+Creator / Seller,General discussion,Negative,Neutral,No Text,Other / unclear,Positive,Price / Purchase,Product / Brand,Promotion / CTA,Skin condition,Uncertain,Usage question,annotator_1_complaint_scope,annotator_1_sentiment_label,annotator_1_sentiment_target,authenticity_concern,field,metric,n,not_applicable,notes,price_value,product_effect,safety_concern,sample_role,scope,section,skin_condition,unclear,usage_confusion,value
+,,,,,,,,,,,,,,,,,sentiment_label,raw_agreement,600.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,all_v2,agreement_metric,,,,0.9666666666666667
+,,,,,,,,,,,,,,,,,sentiment_label,cohen_kappa,600.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,all_v2,agreement_metric,,,,0.9466718809716383
+,,,,,,,,,,,,,,,,,sentiment_label,raw_agreement,592.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,observational_v2,agreement_metric,,,,0.9679054054054054
+,,,,,,,,,,,,,,,,,sentiment_label,cohen_kappa,592.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,observational_v2,agreement_metric,,,,0.9484507261719803
+,,,,,,,,,,,,,,,,,sentiment_label,raw_agreement,8.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,challenge_set,agreement_metric,,,,0.875
+,,,,,,,,,,,,,,,,,sentiment_label,cohen_kappa,8.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,challenge_set,agreement_metric,,,,0.7575757575757576
+,,,,,,,,,,,,,,,,,sentiment_label,raw_agreement,300.0,,,,,,development_v2,all_v2,agreement_by_sample_role,,,,0.9466666666666667
+,,,,,,,,,,,,,,,,,sentiment_label,cohen_kappa,300.0,,,,,,development_v2,all_v2,agreement_by_sample_role,,,,0.917819476784002
+,,,,,,,,,,,,,,,,,sentiment_label,raw_agreement,300.0,,,,,,locked_test_v2,all_v2,agreement_by_sample_role,,,,0.9866666666666667
+,,,,,,,,,,,,,,,,,sentiment_label,cohen_kappa,300.0,,,,,,locked_test_v2,all_v2,agreement_by_sample_role,,,,0.9767477910401486
+,,,,,,,,,,,,,,,,,sentiment_target,raw_agreement,600.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,all_v2,agreement_metric,,,,0.995
+,,,,,,,,,,,,,,,,,sentiment_target,cohen_kappa,600.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,all_v2,agreement_metric,,,,0.9930507296733843
+,,,,,,,,,,,,,,,,,sentiment_target,raw_agreement,592.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,observational_v2,agreement_metric,,,,0.9949324324324325
+,,,,,,,,,,,,,,,,,sentiment_target,cohen_kappa,592.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,observational_v2,agreement_metric,,,,0.9929463349537699
+,,,,,,,,,,,,,,,,,sentiment_target,raw_agreement,8.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,challenge_set,agreement_metric,,,,1.0
+,,,,,,,,,,,,,,,,,sentiment_target,cohen_kappa,8.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,challenge_set,agreement_metric,,,,1.0
+,,,,,,,,,,,,,,,,,sentiment_target,raw_agreement,300.0,,,,,,development_v2,all_v2,agreement_by_sample_role,,,,0.9933333333333333
+,,,,,,,,,,,,,,,,,sentiment_target,cohen_kappa,300.0,,,,,,development_v2,all_v2,agreement_by_sample_role,,,,0.9891606749286409
+,,,,,,,,,,,,,,,,,sentiment_target,raw_agreement,300.0,,,,,,locked_test_v2,all_v2,agreement_by_sample_role,,,,0.9966666666666667
+,,,,,,,,,,,,,,,,,sentiment_target,cohen_kappa,300.0,,,,,,locked_test_v2,all_v2,agreement_by_sample_role,,,,0.9957648055339874
+,,,,,,,,,,,,,,,,,complaint_scope,raw_agreement,600.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,all_v2,agreement_metric,,,,0.99
+,,,,,,,,,,,,,,,,,complaint_scope,cohen_kappa,600.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,all_v2,agreement_metric,,,,0.9872054590041582
+,,,,,,,,,,,,,,,,,complaint_scope,raw_agreement,592.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,observational_v2,agreement_metric,,,,0.9915540540540541
+,,,,,,,,,,,,,,,,,complaint_scope,cohen_kappa,592.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,observational_v2,agreement_metric,,,,0.9891880045293494
+,,,,,,,,,,,,,,,,,complaint_scope,raw_agreement,8.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,challenge_set,agreement_metric,,,,0.875
+,,,,,,,,,,,,,,,,,complaint_scope,cohen_kappa,8.0,,Treat as intra-rater consistency if both files were filled by the same annotator.,,,,all,challenge_set,agreement_metric,,,,0.8181818181818182
+,,,,,,,,,,,,,,,,,complaint_scope,raw_agreement,300.0,,,,,,development_v2,all_v2,agreement_by_sample_role,,,,0.99
+,,,,,,,,,,,,,,,,,complaint_scope,cohen_kappa,300.0,,,,,,development_v2,all_v2,agreement_by_sample_role,,,,0.9863300829308302
+,,,,,,,,,,,,,,,,,complaint_scope,raw_agreement,300.0,,,,,,locked_test_v2,all_v2,agreement_by_sample_role,,,,0.99
+,,,,,,,,,,,,,,,,,complaint_scope,cohen_kappa,300.0,,,,,,locked_test_v2,all_v2,agreement_by_sample_role,,,,0.9853969593224189
+,,127.0,1.0,0.0,,0.0,,,,,5.0,,,Negative,,,sentiment_label,,,,,,,,all,all_v2,confusion_table,,,,
+,,0.0,320.0,0.0,,0.0,,,,,3.0,,,Neutral,,,sentiment_label,,,,,,,,all,all_v2,confusion_table,,,,
+,,0.0,0.0,24.0,,0.0,,,,,0.0,,,No Text,,,sentiment_label,,,,,,,,all,all_v2,confusion_table,,,,
+,,0.0,0.0,0.0,,108.0,,,,,4.0,,,Positive,,,sentiment_label,,,,,,,,all,all_v2,confusion_table,,,,
+,,0.0,4.0,0.0,,3.0,,,,,1.0,,,Uncertain,,,sentiment_label,,,,,,,,all,all_v2,confusion_table,,,,
+,,127.0,1.0,0.0,,0.0,,,,,5.0,,,Negative,,,sentiment_label,,,,,,,,all,observational_v2,confusion_table,,,,
+,,0.0,318.0,0.0,,0.0,,,,,2.0,,,Neutral,,,sentiment_label,,,,,,,,all,observational_v2,confusion_table,,,,
+,,0.0,0.0,24.0,,0.0,,,,,0.0,,,No Text,,,sentiment_label,,,,,,,,all,observational_v2,confusion_table,,,,
+,,0.0,0.0,0.0,,103.0,,,,,4.0,,,Positive,,,sentiment_label,,,,,,,,all,observational_v2,confusion_table,,,,
+,,0.0,4.0,0.0,,3.0,,,,,1.0,,,Uncertain,,,sentiment_label,,,,,,,,all,observational_v2,confusion_table,,,,
+,,,2.0,,,0.0,,,,,1.0,,,Neutral,,,sentiment_label,,,,,,,,all,challenge_set,confusion_table,,,,
+,,,0.0,,,5.0,,,,,0.0,,,Positive,,,sentiment_label,,,,,,,,all,challenge_set,confusion_table,,,,
+43.0,0.0,,,,0.0,,0.0,0.0,0.0,0.0,,0.0,,,Creator / Seller,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+0.0,14.0,,,,0.0,,0.0,1.0,0.0,0.0,,0.0,,,General discussion,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+0.0,0.0,,,,42.0,,0.0,0.0,0.0,0.0,,0.0,,,Other / unclear,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,43.0,0.0,0.0,0.0,,0.0,,,Price / Purchase,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+0.0,1.0,,,,0.0,,0.0,247.0,0.0,1.0,,0.0,,,Product / Brand,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,0.0,0.0,19.0,0.0,,0.0,,,Promotion / CTA,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,0.0,0.0,0.0,7.0,,0.0,,,Skin condition,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,0.0,0.0,0.0,0.0,,182.0,,,Usage question,,sentiment_target,,,,,,,,all,all_v2,confusion_table,,,,
+42.0,0.0,,,,0.0,,0.0,0.0,0.0,0.0,,0.0,,,Creator / Seller,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+0.0,14.0,,,,0.0,,0.0,1.0,0.0,0.0,,0.0,,,General discussion,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+0.0,0.0,,,,39.0,,0.0,0.0,0.0,0.0,,0.0,,,Other / unclear,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,43.0,0.0,0.0,0.0,,0.0,,,Price / Purchase,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+0.0,1.0,,,,0.0,,0.0,243.0,0.0,1.0,,0.0,,,Product / Brand,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,0.0,0.0,19.0,0.0,,0.0,,,Promotion / CTA,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,0.0,0.0,0.0,7.0,,0.0,,,Skin condition,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+0.0,0.0,,,,0.0,,0.0,0.0,0.0,0.0,,182.0,,,Usage question,,sentiment_target,,,,,,,,all,observational_v2,confusion_table,,,,
+1.0,,,,,0.0,,,0.0,,,,,,,Creator / Seller,,sentiment_target,,,,,,,,all,challenge_set,confusion_table,,,,
+0.0,,,,,3.0,,,0.0,,,,,,,Other / unclear,,sentiment_target,,,,,,,,all,challenge_set,confusion_table,,,,
+0.0,,,,,0.0,,,4.0,,,,,,,Product / Brand,,sentiment_target,,,,,,,,all,challenge_set,confusion_table,,,,
+,,,,,,,,,,,,,authenticity_concern,,,19.0,complaint_scope,,,0.0,,0.0,0.0,0.0,all,all_v2,confusion_table,0.0,0.0,0.0,
+,,,,,,,,,,,,,not_applicable,,,0.0,complaint_scope,,,175.0,,0.0,1.0,0.0,all,all_v2,confusion_table,0.0,1.0,0.0,
+,,,,,,,,,,,,,price_value,,,0.0,complaint_scope,,,0.0,,31.0,0.0,0.0,all,all_v2,confusion_table,0.0,0.0,0.0,
+,,,,,,,,,,,,,product_effect,,,0.0,complaint_scope,,,0.0,,0.0,147.0,0.0,all,all_v2,confusion_table,1.0,0.0,0.0,
+,,,,,,,,,,,,,safety_concern,,,0.0,complaint_scope,,,0.0,,0.0,2.0,84.0,all,all_v2,confusion_table,0.0,0.0,0.0,
+,,,,,,,,,,,,,skin_condition,,,0.0,complaint_scope,,,0.0,,0.0,0.0,0.0,all,all_v2,confusion_table,9.0,0.0,0.0,
+,,,,,,,,,,,,,unclear,,,0.0,complaint_scope,,,1.0,,0.0,0.0,0.0,all,all_v2,confusion_table,0.0,0.0,0.0,
+,,,,,,,,,,,,,usage_confusion,,,0.0,complaint_scope,,,0.0,,0.0,0.0,0.0,all,all_v2,confusion_table,0.0,0.0,129.0,
+,,,,,,,,,,,,,authenticity_concern,,,19.0,complaint_scope,,,0.0,,0.0,0.0,0.0,all,observational_v2,confusion_table,0.0,,0.0,
+,,,,,,,,,,,,,not_applicable,,,0.0,complaint_scope,,,172.0,,0.0,1.0,0.0,all,observational_v2,confusion_table,0.0,,0.0,
+,,,,,,,,,,,,,price_value,,,0.0,complaint_scope,,,0.0,,29.0,0.0,0.0,all,observational_v2,confusion_table,0.0,,0.0,
+,,,,,,,,,,,,,product_effect,,,0.0,complaint_scope,,,0.0,,0.0,145.0,0.0,all,observational_v2,confusion_table,1.0,,0.0,
+,,,,,,,,,,,,,safety_concern,,,0.0,complaint_scope,,,0.0,,0.0,2.0,84.0,all,observational_v2,confusion_table,0.0,,0.0,
+,,,,,,,,,,,,,skin_condition,,,0.0,complaint_scope,,,0.0,,0.0,0.0,0.0,all,observational_v2,confusion_table,9.0,,0.0,
+,,,,,,,,,,,,,unclear,,,0.0,complaint_scope,,,1.0,,0.0,0.0,0.0,all,observational_v2,confusion_table,0.0,,0.0,
+,,,,,,,,,,,,,usage_confusion,,,0.0,complaint_scope,,,0.0,,0.0,0.0,0.0,all,observational_v2,confusion_table,0.0,,129.0,
+,,,,,,,,,,,,,not_applicable,,,,complaint_scope,,,3.0,,0.0,0.0,,all,challenge_set,confusion_table,,1.0,,
+,,,,,,,,,,,,,price_value,,,,complaint_scope,,,0.0,,2.0,0.0,,all,challenge_set,confusion_table,,0.0,,
+,,,,,,,,,,,,,product_effect,,,,complaint_scope,,,0.0,,0.0,2.0,,all,challenge_set,confusion_table,,0.0,,

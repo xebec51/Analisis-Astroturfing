@@ -1,0 +1,27 @@
+{
+  "status": "BLOCKED_SYNTHETIC_IDS",
+  "source_files": [
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_annotator_1_blind_final.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_annotator_2_blind_final.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_adjudication_template_final.csv"
+  ],
+  "outputs": [
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_human_annotation_v2_validated.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_human_annotation_v2_provenance.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_inter_annotator_agreement.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_annotation_validation_report.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_unresolved_rows.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_final_label_distribution.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_challenge_set.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_synthetic_id_audit.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_observational_sample_audit.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_locked_test_readiness.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v1_duplicate_id_audit.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_combined_training_provenance.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_locked_test_replacement_manifest.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_locked_test_replacement_annotator_1_blind.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_locked_test_replacement_annotator_2_blind.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_locked_test_replacement_adjudication_template.csv",
+    "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_source_checksum_manifest.csv"
+  ]
+}

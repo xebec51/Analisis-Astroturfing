@@ -1,0 +1,31 @@
+scope,sample_role,field,label,n
+observational_v2,development_v2,final_sentiment_label,Positive,59
+observational_v2,development_v2,final_sentiment_label,Neutral,139
+observational_v2,development_v2,final_sentiment_label,Negative,90
+observational_v2,development_v2,final_sentiment_label,Uncertain,12
+observational_v2,development_v2,final_sentiment_label,No Text,0
+observational_v2,development_v2,final_sentiment_label,UNRESOLVED,0
+observational_v2,locked_test_v2,final_sentiment_label,Positive,45
+observational_v2,locked_test_v2,final_sentiment_label,Neutral,181
+observational_v2,locked_test_v2,final_sentiment_label,Negative,40
+observational_v2,locked_test_v2,final_sentiment_label,Uncertain,2
+observational_v2,locked_test_v2,final_sentiment_label,No Text,24
+observational_v2,locked_test_v2,final_sentiment_label,UNRESOLVED,0
+challenge_set,locked_test_v2,final_sentiment_label,Positive,5
+challenge_set,locked_test_v2,final_sentiment_label,Neutral,2
+challenge_set,locked_test_v2,final_sentiment_label,Negative,0
+challenge_set,locked_test_v2,final_sentiment_label,Uncertain,1
+challenge_set,locked_test_v2,final_sentiment_label,No Text,0
+challenge_set,locked_test_v2,final_sentiment_label,UNRESOLVED,0
+all_v2_manual,development_v2,final_sentiment_label,Positive,59
+all_v2_manual,development_v2,final_sentiment_label,Neutral,139
+all_v2_manual,development_v2,final_sentiment_label,Negative,90
+all_v2_manual,development_v2,final_sentiment_label,Uncertain,12
+all_v2_manual,development_v2,final_sentiment_label,No Text,0
+all_v2_manual,development_v2,final_sentiment_label,UNRESOLVED,0
+all_v2_manual,locked_test_v2,final_sentiment_label,Positive,50
+all_v2_manual,locked_test_v2,final_sentiment_label,Neutral,183
+all_v2_manual,locked_test_v2,final_sentiment_label,Negative,40
+all_v2_manual,locked_test_v2,final_sentiment_label,Uncertain,3
+all_v2_manual,locked_test_v2,final_sentiment_label,No Text,24
+all_v2_manual,locked_test_v2,final_sentiment_label,UNRESOLVED,0

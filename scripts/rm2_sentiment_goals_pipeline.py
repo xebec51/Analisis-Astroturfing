@@ -241,7 +241,12 @@ def safe_clean_output_dir(path: Path, root: Path, preserve_names: set[str] | Non
     resolved_path = path.resolve()
     if resolved_path == resolved_root or resolved_root not in resolved_path.parents:
         raise ValueError(f"Refusing to clean unsafe path: {resolved_path}")
-    protected_preserve_names = {"human_validation", "human_validation_v2"}
+    protected_preserve_names = {
+        "human_validation",
+        "human_validation_v2",
+        "direct_interaction",
+        "audit",
+    }
     preserve_names = protected_preserve_names | (preserve_names or set())
     if path.exists():
         for child in path.iterdir():

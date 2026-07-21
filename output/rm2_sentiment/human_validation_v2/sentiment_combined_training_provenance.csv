@@ -1,0 +1,880 @@
+comment_id,annotation_version,training_pool_source_role,original_sample_role,final_sentiment_label,final_sentiment_target,final_complaint_scope,is_synthetic_or_injected,is_final_locked_test_v2,eligible_for_main_sentiment_training,training_status_note
+7340244606807933702,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7263057602950693637,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7385454151532036870,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7322418149794071301,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587090378680926993,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586898483333546760,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586967063266165512,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586883949931430677,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586911315824231188,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587018714543080200,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586874216371094280,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587404469648032513,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586981334897394439,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587266534801851144,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587284554609050388,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587083754239214344,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586893070479082248,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7592051181234750229,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586989507682779924,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587340302005322504,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587050897827775249,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587047004062302984,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586986926215463688,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586941362521047825,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+5245494283788784464,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587056804390142727,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7426981294342865669,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7319866693185585925,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7271123143014793989,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7323202371864658693,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320174726084772613,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7398888704423740166,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7373308421233181446,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7322964875817304838,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7576087834205963024,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7629393372600599304,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7325016522207494918,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428617808802333458,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7366843331944628997,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7392615078329172742,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7365480615469056773,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320194971344012038,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7355036012436882181,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7209486534167692059,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7209479424486589211,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7189785387321197339,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7228943450627818266,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185207886296711963,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7234410797719585542,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7208468520174600986,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7208949179580777243,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7212230677629207322,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185145582787248923,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185409712463348506,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185472248312529690,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185949967642166043,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7236712127872090885,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+1120417050812510865,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7260014628679238406,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7259975213534675718,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7186124451200516890,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7368769927723172614,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7318310862749598469,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7313084475474674438,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7304549734235947782,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7234205545531966213,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7231371183982871322,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7229325189413372699,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7226297707651318554,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7220602472028963610,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7209233072524542746,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7207712581409784603,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7220914824317960986,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7214331169352123163,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185955263932089114,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185228255841059611,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205425723123811099,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205784602542899995,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7204597576296121114,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7397989494555443974,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7414920277508850438,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7416899065499222789,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7455926382796620564,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+1078358560377612835,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7392860246442312453,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7393935094467707654,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7348653217889452805,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7609304634448429844,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+1522152682623702145,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7439952728133042952,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312052744050082566,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7336930083172811525,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312079393421067013,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312616985380291334,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312431204807574278,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312070282369745666,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7313678254987264774,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312260342766879493,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312078235625718534,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7339497686208840453,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7328343779596747525,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7319427771931280134,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7315105902082900742,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7314892219084014341,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7315204078517830405,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312045541902516997,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7560702496214172436,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7378353049834537734,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7385019751414563589,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+3049104154677394011,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+2870296268944714082,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7385185627312390918,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7385511702635201286,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7378522242004763398,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7378509528494883590,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7408709581616939782,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7411504802301182725,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7405783183332508421,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7409156165194056454,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+5823062342045730092,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430611441139801988,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7381871600696279813,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7384704331185275653,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7380750258316411653,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7289440939101487878,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7293134046904615685,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7294785610052748037,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7323855213848658693,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+6264831292812822701,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7287603631888171781,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7287440185271632646,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7382654512458777350,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7489496515816358657,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7417439479576855302,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422837050564592390,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7413639970093826821,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7402155614460314374,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422901539373581061,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425032039500497669,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7420444077306430226,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7419655483143504646,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7604494318586331911,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320640432550822661,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7329777098683826949,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7508015229289448209,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+4116937556682421084,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7601555992890884885,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320200273665704710,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7319966724798120710,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357919904164758277,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357754286313407237,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7367799658213491461,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7366216602360857349,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7366126355194430214,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7361665562604258053,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357913341787423493,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357879938664235782,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359049180055520006,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358976195483452166,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358682351831761670,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358669395169297157,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359708297187328774,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359457922583479046,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358089940905542405,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358153134517191430,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358513013169685253,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359803609520145157,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7340959147379753733,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7346591576313037574,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7342399595211244294,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7362048332192088838,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341667168893141765,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7368042803807421190,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7362041054177133318,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7400797592613634821,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7371428637312353030,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7349800291263841029,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7349753112858460934,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7345770746986021637,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7344885292023612165,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7344726387139085061,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7343449794621260550,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341904075972297478,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341706287556920070,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341210203004322566,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341031139064890117,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7360194937886130949,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596265723795030791,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596527205745754888,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596532525352600338,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596248705314472711,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596243696472048405,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596541301589934869,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596258109304619783,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596258896651600660,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7598869400267178773,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596250295992238849,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596250016088900373,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596247171654419208,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596245068638536468,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596241573664752402,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7622592044998247184,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7616819883376771847,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7616370759460717333,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596306201408652053,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422467471393374982,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421666913523106565,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421357573640831749,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421605417049228037,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421219407529558790,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421357373111796486,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421410346135929605,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421757743264858886,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421793931015570181,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421174883278078726,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421694309986616070,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421317270607135494,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422724410676691717,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421334589647749893,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421357101487932165,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421321032143487749,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421180308307641094,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422820164888118022,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422669074008752902,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422563564239962885,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422482887247692549,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422445133444252421,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422157481817916165,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422062139941225234,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421861705502130949,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421827838036574982,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421823098259358470,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421802458320700165,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421732204832162566,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421699540212777733,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421689344485016328,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421662707031294726,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421560012823610118,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421522707861799685,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421499051428168453,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421477033525494534,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421362960267805458,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421355942325437190,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421345500819407621,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421340991631868677,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421332730069861126,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421250789711364871,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421218004798931717,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421196498304484102,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421192938723574533,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421192788799177478,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421178084952982277,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7471587154696749841,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7460645723416118021,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7476293721170395921,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7584404639752258312,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7528720620843467537,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587403596787221266,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7451201472513639169,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7447931216701702929,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+6497555322016849843,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432672360526332678,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432588097660093189,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432153965032211216,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430767394401256198,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+8408552461890601760,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7544519747158508295,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7475307263701435153,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7475278462405542677,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7492613044883981074,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7472763590983729927,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7488801375967560456,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7553546197735850760,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7472563885531693832,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7559247366689506066,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7499305830140003088,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7529497235211502354,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7522470465038746376,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7514649415195149063,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7496302240958628626,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7499938333100081928,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428603770677265173,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428530090944496390,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428851794547442440,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7461658304499286790,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428437659293156103,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428587174855082758,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428822058321445638,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428439669740634886,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429159253703492358,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7122842433423524634,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7364606043051606789,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428838467994403592,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7408507744985334534,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7441221750413263634,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422576492603802373,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421166771632112390,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428495816291435285,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429145336802067217,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7216607576683201307,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428485716349027090,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7382901237107262214,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7420708516950262534,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7201766217249571611,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7223215135145198363,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205870415414133531,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7362055774011081478,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422273305950896901,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596250253708509968,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7377300086337323781,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421541385612182278,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7558457351746781959,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587401637221450514,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422715207862387461,v1,historical_test_v1,locked_test,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358006128037233414,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7363694116147069697,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432176182454256390,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7609142408161182471,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429132755578995462,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7489244047014593298,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7398146064732160774,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7485764405377909522,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7200692561793991451,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421338299190477573,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429028316701229842,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7402903879933215494,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422576551152059141,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422680260849976069,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421696234786734854,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358336881115562758,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422705433683591942,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357966465549173510,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320178699759371014,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421196909073236741,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422946852851434246,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7642942760416314113,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422136511120360197,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320190270212195077,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428506612707345157,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7345873485196903173,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7474106197714092808,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000601,v1,historical_test_v1,locked_test,Uncertain,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7223912416328352538,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7393693242472088326,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7187236283022017306,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421194569964421893,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7219842332353659674,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000657,v1,development_v1,development,Positive,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7188486918966035226,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7385772655045853958,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7206607576397644571,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359963567184069382,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7276778600861991686,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428445856640975621,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429631153680581381,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7388865843516850949,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7388483085107643141,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421196918393193221,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000209,v1,historical_test_v1,locked_test,Positive,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7397908535801742086,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7388550852934189829,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357943465521021702,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357962428879831813,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7330586327135748870,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7197465037236716314,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421356597995143942,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428752474125091589,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7457089687733142280,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7376474635820876550,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7608481375372526354,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7387213212251226885,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7450493094820905749,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421183758470824709,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422492164800840453,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7344695480751162117,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358110590571135749,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428734455986258693,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7223398588939535110,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357738122287497990,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421784709947163398,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341548105680814854,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429571066819953413,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7403878684140012293,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428582931218105094,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312358410547872518,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7398020507608531728,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7340957972052607749,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7314726590914691845,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422289119940002565,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7388517004779143942,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358413010857558790,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7360198958050935558,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7227745852666708763,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7145816213268431642,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7470081026904032007,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421710902540485384,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430735516545106705,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7412493433497699078,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7203718784850592538,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422285000957510405,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425811025532797701,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429677167732900613,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7550882391452730119,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428633081807258374,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429616235484742407,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428543676690187014,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428765995893981958,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7229876787517260570,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7446068116976730885,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7253778547864306438,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7398528735296111365,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428548606552916741,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596242591277318930,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7433353437812753170,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7378477471564235525,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422181169141744390,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425661579511300870,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422305278123541254,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7419324239080342278,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359491976821605126,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430612994918417158,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7433600559616656134,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428476443845493522,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428765065594061588,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7463307712945701639,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7330197851140145926,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425134688081543942,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421280025037603589,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7135404540996600602,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000224,v1,development_v1,development,Positive,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7426150407548535557,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422485276054979333,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428466021194318597,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429583439084765960,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7573263004461040385,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596403074463597330,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7572615059345933076,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428968112273523461,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7416369533113352966,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7231699537650926363,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422190420648837894,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428963863767991045,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7468841034799285010,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428657699175138054,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312026058579624709,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428440436811531014,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430035270222824199,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428456348255912710,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7310095696719659781,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7499000663357408001,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428475697990304519,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358272857816072965,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428466543288369925,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000728,v1,development_v1,development,Positive,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428594232217256722,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7389616131072656134,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430622321834099462,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7362870777459720966,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7360355476188513030,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312025646363722502,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7188126789989335835,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7506733608762655506,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430412938593469191,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421583080894694150,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428811723443012357,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7398020138375299856,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7192436621173048091,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7327644730078397190,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+4222079759054008477,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7923745513561139603,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7449030034739118855,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7382220334214234885,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428445060875731718,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422274808019469061,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428876801226998534,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7171752356215145243,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7452588865166967560,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422853182311514886,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7389542701371441925,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7513947477471413010,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000210,v1,historical_test_v1,locked_test,Positive,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7376631818244424453,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7409069596854076166,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7628196636800680712,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7560705639447888648,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7403753825418871558,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358506074859537158,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421767647789990662,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428535569023615765,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596240010019357447,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586945741224428309,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7535311622904070930,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421932903593984774,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421304656255189765,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7423348592411476741,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7208920530849432347,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7544171519753962258,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7253812676177232646,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422223331904062213,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428557501820699398,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428439997534487316,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422687249274422022,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428593573388256017,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7435685301819441928,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7323235263709496069,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7313101876785775365,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7388451253443445510,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7136552264877409050,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421797923333915397,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7389606230090892038,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7542774521083724551,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428928138698212104,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7248028245966242566,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429631175880622866,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7487241657223447314,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7314197416533525254,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7212104883314459418,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7220235125610922778,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428526083048047366,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7223041772460196634,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7318270451284214533,v1,development_v1,development,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359529480614691589,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7271481786881344261,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428599152005235461,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421737232745005829,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312996886096118533,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312055277820871429,v1,development_v1,development,Uncertain,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428503954495243013,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7226699875529868058,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7329456753429496581,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357881166093402886,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428877068372689671,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432876300069913345,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7434043879738868498,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185928239038432027,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000494,v1,historical_test_v1,locked_test,Positive,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428763751350698759,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422099038335845125,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7393629524293108485,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7225800117394801435,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7224553429305344794,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7438949534400955154,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7416656627098501893,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7186264225122517786,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428618595615507205,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7399732216680743686,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7397950655061426950,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7366220212520420101,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000212,v1,historical_test_v1,locked_test,Uncertain,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7172891950995194650,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7440748475967275784,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429109792779862789,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7217967587257336603,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320453843472810758,v1,historical_test_v1,locked_test,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7418877744614851334,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7398752527174697771,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428887299197518597,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7465180838009209607,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359220281518424850,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7391885138676564742,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428759606720250630,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421477111498883846,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000408,v1,development_v1,development,Uncertain,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7223390051597632282,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7361367850408739590,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428577078414607109,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425849259604230917,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428445755185398534,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422755859274744581,v1,historical_test_v1,locked_test,Positive,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421331441617076998,v1,historical_test_v1,locked_test,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428556319198462725,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428442543149466386,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+INJ000306,v1,historical_test_v1,locked_test,Uncertain,,,True,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7463833284758995733,v1,development_v1,development,Negative,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421916425424601861,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7463511687061848840,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7457694796343116565,v1,development_v1,development,No Text,,,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7423655942820250374,v1,historical_test_v1,locked_test,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312052027029881606,v1,development_v1,development,Neutral,,,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7215470372304028442,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422091852134089477,v2,development_v2,development_v2,Negative,Creator / Seller,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586959243639800577,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7390363726446117638,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357895755283874566,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7386158318811890437,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7272583051036525318,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7360260178366743301,v2,development_v2,development_v2,Neutral,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7228370189992444678,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320179262581293829,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7206872756942603034,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7167935907470476059,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7372857017117328134,v2,development_v2,development_v2,Positive,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429343019331863314,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7210114446663107355,v2,development_v2,development_v2,Neutral,Price / Purchase,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7458235264864649989,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7225220136587150106,v2,development_v2,development_v2,Neutral,Skin condition,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7457751365545100050,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7317156874541302533,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7382537171343885062,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7352760121527206661,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7378511320205411077,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7338633366067905285,v2,development_v2,development_v2,Uncertain,General discussion,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421366340701586181,v2,development_v2,development_v2,Negative,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428561340678177542,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7346452785782637318,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357996326225330950,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7385337645985514245,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422276782764147461,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7319876546654913285,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7362905236720190213,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422440553240249094,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358751640498995973,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7442612548783047442,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7330277470593417989,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7365492882062541573,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7287764800321405702,v2,development_v2,development_v2,Positive,Promotion / CTA,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320114192966533894,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7479242775281124114,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7461555616361186066,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7360292609473200902,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7372944638439162629,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7379096813607731974,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7459030067261539073,v2,development_v2,development_v2,Neutral,Skin condition,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430165395645055749,v2,development_v2,development_v2,Neutral,Price / Purchase,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586964246555542289,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358274389807022854,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+8047737222608403417,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7550625327639216913,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320190520797938438,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7309874085793678085,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341663354357875462,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421330981892915973,v2,development_v2,development_v2,Negative,Creator / Seller,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428465300708803346,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7343196983215817478,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341041442758378246,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7423754169369002758,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7449699424621642504,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421446158713684742,v2,development_v2,development_v2,Negative,Creator / Seller,authenticity_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7555913775367471880,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7236207709598597894,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428581743287141126,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7460640968758313729,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7222641991367803675,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7457145601819476744,v2,development_v2,development_v2,Positive,Skin condition,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205052922697155355,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422129577525461765,v2,development_v2,development_v2,Negative,Creator / Seller,authenticity_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7433844108995904262,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596314697344303893,v2,development_v2,development_v2,Positive,Creator / Seller,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7225198855330267931,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425309656337498885,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7251780942800634629,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7463272302371062545,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428889060893377285,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7583675366201262855,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7330626840119673605,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7402558354931647237,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430787814322995985,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7349751900659516166,v2,development_v2,development_v2,Neutral,General discussion,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7525614709035303688,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430659414204285738,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358155380872774405,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7582856549539234568,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7419546300117730054,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7272295526275203846,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7479242451200295688,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7407121439063835398,v2,development_v2,development_v2,Positive,Promotion / CTA,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7333985166328873746,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7478416409100993288,v2,development_v2,development_v2,Negative,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7455539312745251592,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7443643986155143944,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7446378412769936145,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422647379780535045,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7424452988745876229,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357755451231240966,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341253134432649990,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7292203062491874053,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357685823293670150,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432911172020765445,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185353867247911706,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422322317295354629,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7130517379667133211,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596572113365713665,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421352374406824709,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205542385199629062,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7424191177136767750,v2,development_v2,development_v2,Positive,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7413287003867316997,v2,development_v2,development_v2,Negative,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357971118916027142,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7377288569931399942,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7336853531112112902,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7569844570143671058,v2,development_v2,development_v2,Neutral,General discussion,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587404761705513736,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596245404438561552,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7629678808207016725,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7560670446296335124,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7537992251125973767,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587005908417315591,v2,development_v2,development_v2,Neutral,Skin condition,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432269383719240456,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7374730998196978437,v2,development_v2,development_v2,Negative,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7585865148133802770,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7210441183792169755,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7424300343573578501,v2,development_v2,development_v2,Uncertain,Product / Brand,safety_concern,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7335246645772174085,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7340950182969918214,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7350419864765629190,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7228770278636192539,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359578132838564614,v2,development_v2,development_v2,Neutral,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7470679442122146565,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+9228323173467744818,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7627907651800630023,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+3369842758478444215,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357795529356477190,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+9746819620080062517,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359770053929452293,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7187258978286699291,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7323463117349307142,v2,development_v2,development_v2,Neutral,General discussion,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7454813376210289426,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+1596193406559146509,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7572798974701716232,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7340944424291091206,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7510280569264915207,v2,development_v2,development_v2,Uncertain,Product / Brand,price_value,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7315403715216048902,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7544712267066802962,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7532129791417795335,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429590710049407762,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425109593426281221,v2,development_v2,development_v2,Negative,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7331025407977095941,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422435600087122694,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+4562441376510471655,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7371392504329667335,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425255870156964613,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7322890236819456773,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7345355533945340678,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7460928148445070085,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7251161318287475462,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357802776812454661,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7334161555136709382,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7123785566018388762,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428525688141906695,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320096353039188742,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7427083583670977286,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357260979196297989,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7377600918801433349,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357923330228126469,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7526059026929861383,v2,development_v2,development_v2,Neutral,Price / Purchase,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7341843669739897605,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358009959529267973,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422593349075026694,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7295751155098272517,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7456392465298260757,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7530867483558822674,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425184299190485766,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7455545471928795920,v2,development_v2,development_v2,Neutral,Skin condition,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7431735541747991314,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7143227982911046427,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7214765278814208773,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7397304738260632325,v2,development_v2,development_v2,Positive,Promotion / CTA,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357787611900101382,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7434041557042496262,v2,development_v2,development_v2,Negative,Price / Purchase,authenticity_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7346105465593709317,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7586944411960935186,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312979944723677958,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421581974575416069,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7369392701919675141,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7223013888890848026,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7363607326525342469,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7317885504392151814,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7377262921006957318,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7185132629136638746,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421739848506475270,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7317297651186598661,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7219874901083357979,v2,development_v2,development_v2,Neutral,Creator / Seller,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7434308241242620727,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7311310042953794310,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7434721570532557624,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7397229527270867718,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7507836969460876039,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7168754499258401538,v2,development_v2,development_v2,Positive,Promotion / CTA,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+4490276173539144062,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205794801386767130,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7447034586683687685,v2,development_v2,development_v2,Neutral,Price / Purchase,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430768733067723525,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596286836189512455,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205454395553956635,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7428589260124898054,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7622530006435496711,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7424249268200178438,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358335430620021510,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7462328282752910088,v2,development_v2,development_v2,Positive,Promotion / CTA,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7318715657784050438,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7459210143533335302,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7345105648386032390,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7418101137297425157,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357895236091560709,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7470516782697775878,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7385230242791375622,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7239665419245748998,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7362759977041675013,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7439702070418866962,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7429309304655659781,v2,development_v2,development_v2,Positive,Promotion / CTA,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7250806324341310213,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7596313425778524948,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7313555388275376901,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7340957919175099141,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7345023486530290437,v2,development_v2,development_v2,Neutral,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7506085705480831762,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7317205302574301957,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7209254849912537883,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358402111887573766,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7340244506267239173,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7399193633789346566,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7195213275775943450,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7321195775969477382,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7356999748694065926,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7377322865676763910,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7359525497539281669,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7308335086637122310,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7419290519233446661,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7498011086869709586,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7284901903266579206,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7336068256431522566,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312063390166713093,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7539699748082975506,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7439889454377403152,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358017720413651717,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7424761377402028806,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7476232595589169936,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7261518032432972549,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7587067398617383698,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7520828754064802568,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7432557226013033222,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421792961870906118,v2,development_v2,development_v2,Negative,Creator / Seller,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7386198819039806213,v2,development_v2,development_v2,Positive,Product / Brand,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7420752243659916038,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7237680786882347781,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7229237207624729371,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205945961834480390,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7314145291331027717,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421772799935775508,v2,development_v2,development_v2,Neutral,General discussion,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7450395610849248005,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7327474378933158662,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7252149555487179525,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7502680923206189831,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7345133626637501189,v2,development_v2,development_v2,Neutral,Skin condition,skin_condition,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7189422561767588635,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430111056922067718,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7540667810423915272,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7378571864202871558,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7226744900560683782,v2,development_v2,development_v2,Neutral,General discussion,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7452171435227611911,v2,development_v2,development_v2,Positive,Promotion / CTA,authenticity_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7580331590564692754,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7211434678505997082,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7455510146481193745,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7325669549071106822,v2,development_v2,development_v2,Negative,Price / Purchase,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7560667518839522069,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7331151541480784645,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7589273851784659733,v2,development_v2,development_v2,Positive,Promotion / CTA,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+5399258435274849751,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7221649341571629851,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7389064099441033990,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7363436657960289029,v2,development_v2,development_v2,Neutral,Product / Brand,not_applicable,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7425965376921518854,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320427899285668613,v2,development_v2,development_v2,Negative,Product / Brand,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7320121300960822021,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422569489793385221,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7174382298128024347,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7204646264817287963,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7205541472250610438,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7209497283485598490,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7325174818910487302,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7430786268167996167,v2,development_v2,development_v2,Uncertain,Product / Brand,product_effect,False,False,False,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422925531873542918,v2,development_v2,development_v2,Negative,Product / Brand,price_value,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7358488993119716101,v2,development_v2,development_v2,Neutral,Usage question,usage_confusion,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7357970691813344006,v2,development_v2,development_v2,Neutral,Price / Purchase,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7312423250763891462,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7327069054786601733,v2,development_v2,development_v2,Neutral,Usage question,safety_concern,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7422556449698464518,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7318659947952603909,v2,development_v2,development_v2,Positive,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7441948246169125687,v2,development_v2,development_v2,Negative,Product / Brand,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled
+7421616975119762181,v2,development_v2,development_v2,Negative,Creator / Seller,product_effect,False,False,True,candidate_development_pool; final V2 locked test is blocked until replacements are manually labeled

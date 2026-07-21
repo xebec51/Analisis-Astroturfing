@@ -1,0 +1,10 @@
+metric,value
+v2_total_manual_rows,600
+v2_observational_rows,592
+v2_challenge_rows,8
+development_v2_observational_rows,300
+development_v2_synthetic_rows,0
+locked_test_v2_observational_rows,292
+locked_test_v2_synthetic_rows,8
+locked_test_v2_replacement_rows_created_blank,8
+main_sentiment_training_candidate_rows,806
