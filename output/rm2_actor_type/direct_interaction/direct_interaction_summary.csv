@@ -1,2 +1,3 @@
 metric,value,sentiment_v2_status,notes
-verified_reply_events,0,SENTIMENT_V2_PENDING,Sentiment V2 final inference is blocked by locked-test synthetic IDs; direct layer stores structure only.
+analysis_scope,OPTIONAL_DIRECT_REPLY_DIAGNOSTIC,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,Reply-only Community-Mass output is retained only as an optional diagnostic.
+verified_reply_events,0,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,"Sentiment V2 development model is frozen, but final inference is blocked until locked-test replacement labels are complete; the direct-reply layer stores structure only."

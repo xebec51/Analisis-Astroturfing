@@ -1,5 +1,6 @@
 {
-  "sentiment_attribute_status": "SENTIMENT_V2_PENDING",
+  "analysis_scope": "OPTIONAL_DIRECT_REPLY_DIAGNOSTIC",
+  "sentiment_attribute_status": "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST",
   "sentiment_status_source": "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_locked_test_readiness.csv",
   "verified_direct_reply_events": 0,
   "unique_community_mass_pairs": 0,

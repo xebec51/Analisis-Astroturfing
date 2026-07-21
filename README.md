@@ -344,24 +344,16 @@ notebook RM1, pipeline LCN/Louvain/FSA_V, hasil HCC, maupun file output RM1 yang
 
 ### Model Sentimen
 
-Pipeline berjalan dalam dua mode. **Human-validated mode** baru aktif jika label manusia lengkap tersedia.
-Selama label manusia belum tersedia, pipeline berjalan sebagai **PROVISIONAL** dan hasilnya bersifat
-exploratory. Model dipilih secara reproducible dari development set menggunakan objective multi-kriteria:
-macro-F1, minimum per-class recall, balanced accuracy, calibration, dan coverage.
+Pipeline berjalan bertahap. Model development dapat dibekukan setelah label manusia development tersedia,
+tetapi **final locked-test evaluation** hanya boleh dilakukan satu kali setelah locked test V2 kembali
+lengkap 300 komentar observasional. Sampai tahap itu selesai, status model adalah
+`DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST`, bukan `FINAL_MODEL_VALIDATED`.
 
-Model yang dibandingkan:
-
-- Model A: `mdhugol/indonesia-bert-sentiment-classification`
-  (`80ccb4c2817cf976534ac491020a9572e5dae54f`).
-- Model B: `w11wo/indonesian-roberta-base-sentiment-classifier`
-  (`ac452dcb0f4966130bba44f4ee0013bb5d52c282`).
-- Model C: TF-IDF word/character n-gram + calibrated `LinearSVC`. Dalam mode human-validated,
-  Model C dilatih dengan label manusia development set dan boleh menjadi komponen final.
-
-Dalam mode PROVISIONAL, Model C tidak eligible sebagai model final karena dilatih dari heuristic
-pseudo-label, bukan label manusia. Final provisional hanya boleh berasal dari Model A, Model B, atau
-ensemble transformer-only. `ALLOW_RULE_BASED_FINAL = False`; jika transformer gagal dimuat, notebook
-berhenti dengan error diagnostik.
+Model development V2 yang dibandingkan mencakup baseline V1 lama sebagai pembanding diagnostik, TF-IDF
+word n-gram + Logistic Regression, TF-IDF word n-gram + LinearSVC, TF-IDF character n-gram + Logistic
+Regression, TF-IDF character n-gram + LinearSVC, gabungan word + character features, calibrated LinearSVC,
+dan ensemble development jika OOF development meningkat. Model human-supervised dibekukan dengan nama
+`model_C_human_supervised`.
 
 Label mapping dibaca dari konfigurasi model dan diuji dengan anchor sentences positif, netral, dan negatif.
 Probabilitas tiga kelas disimpan untuk setiap komentar, sedangkan komentar `Uncertain` dan `No Text` tidak
@@ -369,39 +361,30 @@ diam-diam dipaksa menjadi Neutral.
 
 ### Validasi Domain
 
-Sebelum label manusia tersedia, pipeline menggunakan **heuristic pseudo-label / deterministic lexical
-reference** sebagai diagnostic internal. Ini bukan independent human validation dan tidak boleh diperlakukan
-sebagai gold standard.
+V1 human validation yang sudah dibersihkan berisi `579` comment_id unik. Paket V2 memiliki hasil anotasi
+manusia lengkap pada file final, tetapi file kanonis observasional
+`output/rm2_sentiment/human_validation_v2/sentiment_human_annotation_v2_validated.csv` berisi `592` baris:
+`300` development V2 dan `292` locked-test V2 observasional. Delapan ID locked-test synthetic/injected
+masih menahan evaluasi final sampai replacement dianotasi manusia.
 
-Dua sampel berukuran 300 komentar digunakan secara terpisah:
+Development training pool V2 memakai label manusia observasional yang sah dari V1 development, V1 historical
+test, dan V2 development, setelah mengeluarkan seluruh synthetic/injected IDs dan seluruh 292 locked-test V2
+observasional. Pool final: `806` komentar unik (`Negative=216`, `Neutral=433`, `Positive=157`; sumber
+training: `V1=518`, `V2=288`).
 
-- development/challenge set untuk model selection, calibration, ensemble weighting, dan threshold;
-- locked test baru untuk evaluasi setelah pipeline dikunci. Locked test mengecualikan validation sample lama
-  yang sudah pernah terlihat.
+Model development yang dibekukan saat ini adalah ensemble top-2 human-supervised:
+`ensemble_top2_human_supervised_development_only`, terdiri dari
+`tfidf_char_linearsvc_social_C1_balanced` dan
+`calibrated_linearsvc_word_char_social_C1_balanced`. Threshold development dipilih `0.46` berdasarkan OOF
+development saja. Pada OOF development, ensemble memiliki mean macro-F1 `0.6916`, accuracy `0.7407`,
+balanced accuracy `0.6750`, MCC `0.5560`, ECE `0.1306`, dan Brier score `0.1278`. Pada threshold `0.46`,
+coverage `0.8251`, abstention `0.1749`, macro-F1 covered `0.7495`, dan bootstrap 95% CI macro-F1 covered
+`0.7084-0.7885`. Angka tersebut adalah **development diagnostics**, bukan locked-test performance.
 
-Pass 1 dan pass 2 adalah reproduksibilitas sistem aturan deterministik, bukan bukti reliabilitas anotasi.
-Kappa deterministik tidak ditampilkan sebagai validasi utama. Kolom `manual_label` dan label manusia tetap
-kosong sampai anotator manusia mengisi paket validasi.
-
-Paket human validation tersedia di `output/rm2_sentiment/human_validation/`. File completed yang digunakan
-pipeline adalah `sentiment_human_annotation_validated.csv` berisi 600 komentar: 300 development dan
-300 locked test. Human validation saat ini lengkap (`human_validation_completed=True`), dengan raw
-agreement annotator `0.8833`, Cohen's kappa `0.8302`, dan adjudication coverage `1.0000`.
-
-Hasil human-validated saat ini memilih `ensemble_human_A0.00_B0.25_C0.75` dengan preprocessing
-`social_normalized` dan threshold `0.43` (`ensemble_weights`: Model A `0.0`, Model B `0.25`, Model C
-`0.75`). Locked-test human-reference evaluation menghasilkan macro-F1 `0.5830` (bootstrap 95% CI
-`0.5056-0.6500`), accuracy `0.6435`, balanced accuracy `0.5950`, MCC `0.4131`, Neutral recall `0.6934`,
-Negative recall `0.7500`, minimum class F1 `0.4667`, ECE `0.0565`, dan coverage `0.8779`. Dengan gate
-macro-F1 >= 0.55, Neutral recall >= 0.50, dan minimum class F1 >= 0.40, comment-level sentiment model
-berstatus `VALIDATED`.
-
-Goal counts berbasis model human-validated saat ini: `Mixed Goals` 18 HCC, `Promotional / Supportive`
-11 HCC, `Neutral Engagement` 10 HCC, `Polarized / Contested` 2 HCC, dan `Critical / Complaint` 1 HCC.
-Namun diagnostic agreement goal terhadap heuristic HCC review masih gagal gate metodologis
-(`exact_agreement=0.3571428571`, `weighted_kappa=0.0331491713`, status `FAIL`). Karena itu,
-`goal_orientation` dibaca sebagai ringkasan downstream berbasis model sentimen yang tervalidasi pada level
-komentar, bukan sebagai label goal HCC yang sudah tervalidasi langsung oleh manusia.
+Locked-test V2 belum dievaluasi, tidak dibuat prediksi per baris locked-test, dan full inference 33.847
+komentar belum dijalankan. Karena itu `comment_sentiment.csv`, agregasi Goals, dan atribut sentimen Actor
+Type lama belum di-refresh oleh model V2. Goal counts lama tetap dibaca sebagai hasil sementara; confidence
+dan stability bukan akurasi.
 
 ### Output Tabel (`output/rm2_sentiment/tables/`)
 
@@ -460,10 +443,11 @@ yang dipakai hanya `Individual Actor`, `Community Actor`, dan `Mass Actor`.
   tersebut bukan `Individual Actor`.
 - `Mass Actor` adalah komentator non-individual dan non-HCC. Keanggotaan LCN untuk Mass Actor hanya atribut
   posisi sekunder (`LCN Non-HCC` atau `Outside LCN`), bukan actor type utama.
-- Community-Mass association dibaca melalui `Direct Interaction`, `Temporal Association`,
+- Community-Mass association aggregate dibaca melalui `Direct Interaction`, `Temporal Association`,
   `Shared-Video Context Only`, atau `No Observed Community Association`. Shared-video hanya konteks bersama,
   direct interaction harus lolos validasi parent comment, dan `temporal_mass_comment_count` dipisahkan dari
-  `temporal_hcc_comment_pair_count`.
+  `temporal_hcc_comment_pair_count`. Untuk layer account-level Community-Mass yang baru, edge dibentuk dari
+  Co-conv, Co-reply, dan Co-temporal, bukan dari syarat reply langsung saja.
 - Asosiasi HCC ambigu tidak dipaksa menjadi satu primary HCC; aktor ambigu dipertahankan sebagai many-to-many
   dan dihitung dengan fractional context weight pada ringkasan HCC.
 - Dimensi `goals` memiliki account-level goals dan pooled actor-type goals; model sentimen tidak dijalankan
@@ -520,6 +504,63 @@ Output utama:
 - `output/rm2_actor_type/gephi/gephi_actor_type_edges.csv`
 - `output/rm2_actor_type/gephi/gephi_lcn_nodes_actor_type.csv`
 - `output/rm2_actor_type/gephi/gephi_lcn_edges_actor_type.csv`
+
+### Community-Mass Account Evidence Network
+
+Layer ini membangun **observed Community-Mass interaction/coordination relation** pada level akun:
+
+- satu node = satu akun;
+- satu edge = satu pasangan akun `Community Actor` dan `Mass Actor`;
+- edge dibentuk dari gabungan evidence RM1: `co_conv_weight`, `co_reply_weight`, dan
+  `co_temporal_weight`;
+- `parent_comment_id` hanya relevan untuk evidence Co-reply, bukan syarat utama edge;
+- sentiment/goal tidak dipakai untuk membentuk edge.
+
+Layer ini berbeda dari graf aggregate 396 node/497 edge dan berbeda dari HCC-Mass segment association.
+Mass Actor tetap berasal dari seluruh residual actor universe; Mass Actor `Outside LCN` dapat muncul pada
+pasangan pre-LCN, tetapi tidak pernah dipromosikan menjadi edge LCN final. Direct-reply output lama tetap
+dipertahankan sebagai diagnostic tambahan dengan status
+`analysis_scope = OPTIONAL_DIRECT_REPLY_DIAGNOSTIC`.
+
+Ringkasan output saat ini:
+
+- total pasangan account-level Community-Mass: `434823`;
+- pasangan yang merupakan edge LCN final: `305`;
+- pasangan pre-LCN multi-evidence: `2667`;
+- pasangan pre-LCN single-evidence: `431851`;
+- Mass Actor `Outside LCN` yang memiliki evidence: `25660`;
+- status atribut sentimen sementara: `DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST`;
+- final locked-test evaluation: `BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS`.
+
+File utama:
+
+- `output/rm2_actor_type/account_interaction/community_mass_account_pairs.csv`
+- `output/rm2_actor_type/account_interaction/community_mass_account_summary.csv`
+- `output/rm2_actor_type/account_interaction/community_mass_by_network_position.csv`
+- `output/rm2_actor_type/account_interaction/community_mass_by_interaction_scope.csv`
+- `output/rm2_actor_type/account_interaction/community_mass_by_evidence_combination.csv`
+- `output/rm2_actor_type/account_interaction/community_mass_by_hcc.csv`
+- `output/rm2_actor_type/account_interaction/community_mass_integrity_report.csv`
+- `output/tables/pre_filter_combined_evidence_edges.csv`
+
+File Gephi account-level:
+
+- Full analytical: `output/rm2_actor_type/gephi/gephi_community_mass_account_nodes.csv` dan
+  `output/rm2_actor_type/gephi/gephi_community_mass_account_edges_all_evidence.csv`
+- Recommended visual: `output/rm2_actor_type/gephi/gephi_community_mass_account_nodes_visual.csv` dan
+  `output/rm2_actor_type/gephi/gephi_community_mass_account_edges_visual.csv`
+- Alias visual: `output/rm2_actor_type/gephi/gephi_community_mass_account_edges.csv`
+
+Panduan import Gephi:
+
+- Graph type: `Undirected`
+- Node color: `actor_type_primary`
+- Node size: `degree` atau `weighted_degree`
+- Edge thickness: `Weight` (`final_weight`)
+- Gunakan file visual untuk presentasi publik; file all-evidence sangat padat dan lebih cocok untuk audit.
+
+Batas interpretasi: edge menunjukkan keterhubungan struktural berdasarkan evidence LCN, bukan bukti
+pengaruh, kendali, pembayaran, perubahan opini, afiliasi, atau intensi koordinasi.
 
 Visualisasi PNG:
 

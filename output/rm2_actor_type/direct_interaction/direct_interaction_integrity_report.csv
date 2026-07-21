@@ -1,4 +1,5 @@
 metric,expected,observed,passed,notes
+analysis_scope,OPTIONAL_DIRECT_REPLY_DIAGNOSTIC,OPTIONAL_DIRECT_REPLY_DIAGNOSTIC,True,"Reply-only layer is optional diagnostic, not the main Community-Mass account network."
 dataset_rows,33847,33847,True,
 synthetic_comments_excluded_from_direct_layer,0,0,True,
 actor_universe,26427,26427,True,
@@ -16,4 +17,4 @@ gephi_direct_nodes_no_mass_segments,0,0,True,
 gephi_direct_edge_missing_endpoints,0,0,True,
 gephi_direct_edge_type_directed,Directed,Directed,True,
 source_hashes_unchanged,True,True,True,
-sentiment_v2_status_for_direct_layer,SENTIMENT_V2_PENDING,SENTIMENT_V2_PENDING,True,Sentiment V2 final inference is blocked by locked-test synthetic IDs; direct layer stores structure only.
+sentiment_v2_status_for_direct_layer,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,True,"Sentiment V2 development model is frozen, but final inference is blocked until locked-test replacement labels are complete; the direct-reply layer stores structure only."

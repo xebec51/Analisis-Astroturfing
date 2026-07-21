@@ -46,8 +46,13 @@ OUT_GEPHI_EDGES_UNDIRECTED = OUT_GEPHI_DIR / "gephi_community_mass_direct_edges_
 COMMUNITY = "Community Actor"
 MASS = "Mass Actor"
 MASS_HASH_SALT = "rm2_actor_type_public_mass_hash_v1"
-SENTIMENT_PENDING = "SENTIMENT_V2_PENDING"
-SENTIMENT_PENDING_NOTE = "Sentiment V2 final inference is blocked by locked-test synthetic IDs; direct layer stores structure only."
+ANALYSIS_SCOPE = "OPTIONAL_DIRECT_REPLY_DIAGNOSTIC"
+SENTIMENT_ATTRIBUTE_STATUS = "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST"
+SENTIMENT_PENDING = SENTIMENT_ATTRIBUTE_STATUS
+SENTIMENT_PENDING_NOTE = (
+    "Sentiment V2 development model is frozen, but final inference is blocked until locked-test "
+    "replacement labels are complete; the direct-reply layer stores structure only."
+)
 
 
 def read_csv(path: Path) -> pd.DataFrame:
@@ -508,6 +513,12 @@ def write_summary_tables(events: pd.DataFrame, verified: pd.DataFrame, pairs: pd
         summary = pd.DataFrame(
             [
                 {
+                    "metric": "analysis_scope",
+                    "value": ANALYSIS_SCOPE,
+                    "sentiment_v2_status": SENTIMENT_PENDING,
+                    "notes": "Reply-only Community-Mass output is retained only as an optional diagnostic.",
+                },
+                {
                     "metric": "verified_reply_events",
                     "value": 0,
                     "sentiment_v2_status": SENTIMENT_PENDING,
@@ -518,6 +529,12 @@ def write_summary_tables(events: pd.DataFrame, verified: pd.DataFrame, pairs: pd
     else:
         summary = pd.DataFrame(
             [
+                {
+                    "metric": "analysis_scope",
+                    "value": ANALYSIS_SCOPE,
+                    "sentiment_v2_status": SENTIMENT_PENDING,
+                    "notes": "Reply-only Community-Mass output is retained only as an optional diagnostic.",
+                },
                 {"metric": "verified_reply_events", "value": len(verified), "sentiment_v2_status": SENTIMENT_PENDING, "notes": SENTIMENT_PENDING_NOTE},
                 {"metric": "unique_community_mass_account_pairs", "value": len(pairs), "sentiment_v2_status": SENTIMENT_PENDING, "notes": ""},
                 {"metric": "community_accounts_involved", "value": verified["community_account"].nunique(), "sentiment_v2_status": SENTIMENT_PENDING, "notes": ""},
@@ -670,9 +687,19 @@ def main() -> None:
         missing_endpoints = int((~directed_edges["Source"].isin(node_ids)).sum() + (~directed_edges["Target"].isin(node_ids)).sum())
     aggregate_nodes_count = len(read_csv(AGGREGATE_NODES_PATH))
     aggregate_edges_count = len(read_csv(AGGREGATE_EDGES_PATH))
-    lcn_edge_counts = lcn_edges["actor_type_pair"].value_counts().to_dict()
+    lcn_pair_sets = lcn_edges[["source_actor_type", "target_actor_type"]].astype(str).apply(lambda row: frozenset(row), axis=1)
+    lcn_community_community_edges = int((lcn_pair_sets == frozenset({COMMUNITY})).sum())
+    lcn_community_mass_edges = int((lcn_pair_sets == frozenset({COMMUNITY, MASS})).sum())
+    lcn_mass_mass_edges = int((lcn_pair_sets == frozenset({MASS})).sum())
+    en_dash = "\u2013"
+    lcn_edge_counts = {
+        f"Community{en_dash}Community": lcn_community_community_edges,
+        f"Community{en_dash}Mass": lcn_community_mass_edges,
+        f"Mass{en_dash}Mass": lcn_mass_mass_edges,
+    }
 
     integrity_rows = [
+        ("analysis_scope", ANALYSIS_SCOPE, ANALYSIS_SCOPE, True, "Reply-only layer is optional diagnostic, not the main Community-Mass account network."),
         ("dataset_rows", 33847, len(comments_all), len(comments_all) == 33847, ""),
         ("synthetic_comments_excluded_from_direct_layer", 0, int(events["child_comment_id"].map(is_synthetic_comment_id).sum()) if not events.empty else 0, (events.empty or int(events["child_comment_id"].map(is_synthetic_comment_id).sum()) == 0), ""),
         ("actor_universe", 26427, len(account_type), len(account_type) == 26427, ""),
@@ -690,7 +717,7 @@ def main() -> None:
         ("gephi_direct_edge_missing_endpoints", 0, missing_endpoints, missing_endpoints == 0, ""),
         ("gephi_direct_edge_type_directed", "Directed", "Directed" if directed_edges.empty or directed_edges["Type"].eq("Directed").all() else "mixed", directed_edges.empty or directed_edges["Type"].eq("Directed").all(), ""),
         ("source_hashes_unchanged", True, source_hashes_before == source_hashes_after, source_hashes_before == source_hashes_after, ""),
-        ("sentiment_v2_status_for_direct_layer", "SENTIMENT_V2_PENDING", SENTIMENT_PENDING if sentiment_status != "READY" else "READY", sentiment_status != "READY", SENTIMENT_PENDING_NOTE),
+        ("sentiment_v2_status_for_direct_layer", SENTIMENT_ATTRIBUTE_STATUS, SENTIMENT_PENDING if sentiment_status != "READY" else "READY", sentiment_status != "READY", SENTIMENT_PENDING_NOTE),
     ]
     integrity = pd.DataFrame(
         [
@@ -703,6 +730,7 @@ def main() -> None:
         raise AssertionError("Direct interaction integrity failed:\n" + integrity.loc[~integrity["passed"]].to_string(index=False))
 
     manifest = {
+        "analysis_scope": ANALYSIS_SCOPE,
         "sentiment_attribute_status": SENTIMENT_PENDING,
         "sentiment_status_source": str(SENTIMENT_READINESS_PATH.relative_to(ROOT)),
         "verified_direct_reply_events": int(len(verified)),
@@ -735,6 +763,7 @@ def main() -> None:
     OUT_RUN_MANIFEST.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
     print("RM2 COMMUNITY-MASS DIRECT INTERACTION")
+    print(f"- analysis scope: {ANALYSIS_SCOPE}")
     print(f"- verified direct reply events: {len(verified)}")
     print(f"- unique Community-Mass account pairs: {len(pairs)}")
     print(f"- Community accounts: {verified['community_account'].nunique() if not verified.empty else 0}")
