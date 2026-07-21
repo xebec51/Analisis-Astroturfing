@@ -1,0 +1,72 @@
+{
+  "status": "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST",
+  "final_locked_test_evaluation_status": "BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS",
+  "model_name": "model_C_human_supervised",
+  "selected_candidate_id": "ensemble_top2_human_supervised_development_only",
+  "is_ensemble": true,
+  "ensemble_components": [
+    "tfidf_char_linearsvc_social_C1_balanced",
+    "calibrated_linearsvc_word_char_social_C1_balanced"
+  ],
+  "selected_threshold": 0.46,
+  "training_pool_rows": 806,
+  "training_pool_unique_comment_id": 806,
+  "class_distribution": {
+    "Negative": 216,
+    "Neutral": 433,
+    "Positive": 157
+  },
+  "source_distribution_training": {
+    "V1": 518,
+    "V2": 288
+  },
+  "sample_role_distribution_training": {
+    "development_v1": 258,
+    "development_v2": 288,
+    "historical_test_v1": 260
+  },
+  "synthetic_ids_excluded": 10,
+  "locked_test_v2_observational_ids_excluded": 292,
+  "locked_test_v2_manifest_ids_excluded": 300,
+  "development_data_hash": "743bb0773571843fe8c86a610ea0fed3c40cb392730407f2a139e98611c49dee",
+  "model_artifact_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+  "source_hashes_before": {
+    "dataset": "7e0ea9cbc82243445cccea1a14ccb847c61235e932f754f5e1bc42e390df32da",
+    "comment_sentiment": "c2722117cc522345117256046ab703fe76a801b39136e65bdf53fe165cde87c7",
+    "v1_validated": "e61e96a5111626bda3fa0d27b8eca3471faa0c7f97779e31d0b524b690abf559",
+    "v2_validated": "f85142364dc89d555cc01920d46e4e05e62257dee724c51df89798f690de469e",
+    "v2_adjudication_final": "fa9a90387ef58e272c720f4bb074ac07442cf34a8c295a1c54741cfbc8933979",
+    "v2_locked_manifest": "f99164ee1b6b78e6a91aadbf85621d8f84e1cfeac7fb08a43c4bfdac84c01123"
+  },
+  "source_hashes_after": {
+    "dataset": "7e0ea9cbc82243445cccea1a14ccb847c61235e932f754f5e1bc42e390df32da",
+    "comment_sentiment": "c2722117cc522345117256046ab703fe76a801b39136e65bdf53fe165cde87c7",
+    "v1_validated": "e61e96a5111626bda3fa0d27b8eca3471faa0c7f97779e31d0b524b690abf559",
+    "v2_validated": "f85142364dc89d555cc01920d46e4e05e62257dee724c51df89798f690de469e",
+    "v2_adjudication_final": "fa9a90387ef58e272c720f4bb074ac07442cf34a8c295a1c54741cfbc8933979",
+    "v2_locked_manifest": "f99164ee1b6b78e6a91aadbf85621d8f84e1cfeac7fb08a43c4bfdac84c01123"
+  },
+  "outputs": [
+    "output\\rm2_sentiment\\model_v2\\selected_model_development_frozen.joblib",
+    "output\\rm2_sentiment\\model_v2\\selected_model_development_frozen_config.json",
+    "output\\rm2_sentiment\\model_v2\\selected_model_development_frozen_hash.txt",
+    "output\\rm2_sentiment\\model_v2\\development_model_manifest.json",
+    "output\\rm2_sentiment\\model_v2\\development_model_selection_summary.csv",
+    "output\\rm2_sentiment\\model_v2\\development_cv_metrics.csv",
+    "output\\rm2_sentiment\\model_v2\\development_confusion_matrix.csv",
+    "output\\rm2_sentiment\\model_v2\\development_oof_predictions.csv",
+    "output\\rm2_sentiment\\model_v2\\development_error_analysis.csv",
+    "output\\rm2_sentiment\\model_v2\\development_training_pool_provenance.csv",
+    "output\\rm2_sentiment\\model_v2\\final_locked_test_evaluation_readiness.csv",
+    "output\\rm2_sentiment\\model_v2\\development_per_class_metrics.csv",
+    "output\\rm2_sentiment\\model_v2\\development_threshold_selection.csv",
+    "output\\rm2_sentiment\\model_v2\\development_group_diagnostic_metrics.csv",
+    "output\\rm2_sentiment\\model_v2\\development_grouped_cv_metrics.csv",
+    "output\\rm2_sentiment\\model_v2\\development_fold_class_distribution.csv",
+    "output\\rm2_sentiment\\model_v2\\development_calibration_metrics.csv",
+    "output\\rm2_sentiment\\model_v2\\development_bootstrap_ci.csv",
+    "output\\rm2_sentiment\\model_v2\\development_pool_summary.csv",
+    "output\\rm2_sentiment\\model_v2\\excluded_locked_test_v2_comment_ids.csv",
+    "output\\rm2_sentiment\\model_v2\\development_package_versions.csv"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST",
+  "model_name": "model_C_human_supervised",
+  "selected_candidate_id": "ensemble_top2_human_supervised_development_only",
+  "is_ensemble": true,
+  "ensemble_components": [
+    "tfidf_char_linearsvc_social_C1_balanced",
+    "calibrated_linearsvc_word_char_social_C1_balanced"
+  ],
+  "threshold": 0.46,
+  "preprocessing": "social_normalized",
+  "feature_kind": "char",
+  "classifier_kind": "linearsvc",
+  "class_weight": "balanced",
+  "C": 1.0,
+  "labels": [
+    "Negative",
+    "Neutral",
+    "Positive"
+  ],
+  "random_seed": 20260721,
+  "development_data_hash": "743bb0773571843fe8c86a610ea0fed3c40cb392730407f2a139e98611c49dee",
+  "excluded_locked_test_v2_hash": "ed0a1504617de8ba1ddb3e85b54824dbb26e30fd776818a63081a4865c38abb7",
+  "model_artifact_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc"
+}

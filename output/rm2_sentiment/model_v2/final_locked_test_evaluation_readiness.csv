@@ -1,0 +1,7 @@
+metric,value,passed,notes
+final_locked_test_evaluation_status,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,False,Do not evaluate until 8 human-annotated replacements are complete.
+locked_test_v2_observational_rows_available,292,False,Current observational locked test remains 292 rows.
+locked_test_v2_manifest_rows,300,True,Manifest includes 8 synthetic/injected IDs.
+locked_test_predictions_generated,0,True,Script never scores locked-test V2 rows.
+full_inference_generated,0,True,comment_sentiment.csv is not modified.
+source_hashes_unchanged,True,True,Input sentiment/RM1 files unchanged.

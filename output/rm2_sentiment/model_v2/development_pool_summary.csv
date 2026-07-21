@@ -1,0 +1,16 @@
+metric,value,notes
+training_pool_rows,806,"Primary sentiment labels only: Positive, Neutral, Negative."
+training_pool_unique_comment_id,806,
+v1_rows_available,579,
+v2_rows_available,592,
+synthetic_ids_excluded,10,
+locked_test_v2_observational_ids_excluded,292,
+locked_test_v2_manifest_ids_excluded,300,Includes 8 synthetic/injected locked-test IDs.
+final_locked_test_status,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,
+selected_model,ensemble_top2_human_supervised_development_only,Frozen as model_C_human_supervised.
+selected_model_is_ensemble,True,
+selected_ensemble_components,tfidf_char_linearsvc_social_C1_balanced;calibrated_linearsvc_word_char_social_C1_balanced,
+selected_threshold,0.46,Selected on development OOF predictions only.
+class_count_Negative,216,
+class_count_Neutral,433,
+class_count_Positive,157,
