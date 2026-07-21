@@ -1,0 +1,2 @@
+metric,value,sentiment_v2_status,notes
+verified_reply_events,0,SENTIMENT_V2_PENDING,Sentiment V2 final inference is blocked by locked-test synthetic IDs; direct layer stores structure only.

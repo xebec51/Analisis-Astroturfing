@@ -1,0 +1,27 @@
+{
+  "sentiment_attribute_status": "SENTIMENT_V2_PENDING",
+  "sentiment_status_source": "output\\rm2_sentiment\\human_validation_v2\\sentiment_v2_locked_test_readiness.csv",
+  "verified_direct_reply_events": 0,
+  "unique_community_mass_pairs": 0,
+  "gephi_nodes": 0,
+  "gephi_directed_edges": 0,
+  "private_mapping_path_not_for_commit": "output\\rm2_actor_type\\direct_interaction\\private\\community_mass_direct_private_mass_mapping.csv",
+  "outputs": [
+    "output\\rm2_actor_type\\direct_interaction\\community_mass_direct_reply_events.csv",
+    "output\\rm2_actor_type\\direct_interaction\\community_mass_probable_reply_references.csv",
+    "output\\rm2_actor_type\\direct_interaction\\community_mass_direct_account_pairs.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_summary.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_by_direction.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_by_mass_network_position.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_by_hcc.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_by_brand.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_by_sentiment.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_lcn_vs_non_lcn.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_multi_evidence_summary.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_reply_validation_audit.csv",
+    "output\\rm2_actor_type\\gephi\\gephi_community_mass_direct_nodes.csv",
+    "output\\rm2_actor_type\\gephi\\gephi_community_mass_direct_edges.csv",
+    "output\\rm2_actor_type\\gephi\\gephi_community_mass_direct_edges_undirected.csv",
+    "output\\rm2_actor_type\\direct_interaction\\direct_interaction_integrity_report.csv"
+  ]
+}
