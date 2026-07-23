@@ -1,7 +1,13 @@
 metric,value,passed,notes
 final_locked_test_evaluation_status,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,False,Do not evaluate until 8 human-annotated replacements are complete.
+development_model_status,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,True,Development model remains frozen pending final locked-test evaluation.
+threshold_refreeze_status,DEVELOPMENT_THRESHOLD_REFROZEN_HIGHER_COVERAGE,True,Higher-coverage abstention threshold was selected from development OOF only.
+selected_threshold,0.42,True,Do not change after locked test is opened.
+target_minimum_coverage,0.9,True,Selected threshold must meet development coverage >= 0.90.
 locked_test_v2_observational_rows_available,292,False,Current observational locked test remains 292 rows.
 locked_test_v2_manifest_rows,300,True,Manifest includes 8 synthetic/injected IDs.
-locked_test_predictions_generated,0,True,Script never scores locked-test V2 rows.
+locked_test_predictions_generated,0,True,Threshold refreeze never scores locked-test V2 rows.
 full_inference_generated,0,True,comment_sentiment.csv is not modified.
-source_hashes_unchanged,True,True,Input sentiment/RM1 files unchanged.
+next_step_1,annotate_8_replacements,False,Required before final locked-test construction.
+next_step_2,adjudicate_replacements,False,Required before one-time final locked-test evaluation.
+next_step_3,evaluate_final_locked_test_once,False,Only after locked test final has 300 observational rows.

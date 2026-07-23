@@ -10,7 +10,11 @@ final_locked_test_status,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,
 selected_model,ensemble_top2_human_supervised_development_only,Frozen as model_C_human_supervised.
 selected_model_is_ensemble,True,
 selected_ensemble_components,tfidf_char_linearsvc_social_C1_balanced;calibrated_linearsvc_word_char_social_C1_balanced,
-selected_threshold,0.46,Selected on development OOF predictions only.
+selected_threshold,0.42,Refrozen on development OOF predictions only with coverage >= 0.90 policy.
 class_count_Negative,216,
 class_count_Neutral,433,
 class_count_Positive,157,
+threshold_refreeze_status,DEVELOPMENT_THRESHOLD_REFROZEN_HIGHER_COVERAGE,
+previous_threshold,0.46,
+threshold_selection_policy,MAXIMIZE_MACRO_F1_SUBJECT_TO_COVERAGE_GTE_0_90,
+target_minimum_coverage,0.9,

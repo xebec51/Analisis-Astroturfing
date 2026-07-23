@@ -1,2 +1,2 @@
 model_id,threshold,ece,brier_score,coverage_at_threshold,abstention_rate_at_threshold
-ensemble_top2_human_supervised_development_only,0.46,0.1305644232107584,0.12779625935399994,0.825062034739454,0.17493796526054595
+ensemble_top2_human_supervised_development_only,0.42,0.1305644232107584,0.1277962593539999,0.9156327543424317,0.08436724565756824

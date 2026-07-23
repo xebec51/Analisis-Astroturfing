@@ -7,7 +7,7 @@
     "tfidf_char_linearsvc_social_C1_balanced",
     "calibrated_linearsvc_word_char_social_C1_balanced"
   ],
-  "threshold": 0.46,
+  "threshold": 0.42,
   "preprocessing": "social_normalized",
   "feature_kind": "char",
   "classifier_kind": "linearsvc",
@@ -21,5 +21,14 @@
   "random_seed": 20260721,
   "development_data_hash": "743bb0773571843fe8c86a610ea0fed3c40cb392730407f2a139e98611c49dee",
   "excluded_locked_test_v2_hash": "ed0a1504617de8ba1ddb3e85b54824dbb26e30fd776818a63081a4865c38abb7",
-  "model_artifact_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc"
+  "model_artifact_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+  "selected_threshold": 0.42,
+  "previous_threshold": 0.46,
+  "threshold_refreeze_status": "DEVELOPMENT_THRESHOLD_REFROZEN_HIGHER_COVERAGE",
+  "threshold_selection_policy": "MAXIMIZE_MACRO_F1_SUBJECT_TO_COVERAGE_GTE_0_90",
+  "target_minimum_coverage": 0.9,
+  "threshold_selection_data_scope": "DEVELOPMENT_OOF_ONLY",
+  "locked_test_used_for_threshold_selection": false,
+  "estimator_retrained_for_threshold_refreeze": false,
+  "full_inference_run_for_threshold_refreeze": false
 }

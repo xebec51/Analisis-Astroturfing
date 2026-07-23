@@ -375,11 +375,17 @@ training: `V1=518`, `V2=288`).
 Model development yang dibekukan saat ini adalah ensemble top-2 human-supervised:
 `ensemble_top2_human_supervised_development_only`, terdiri dari
 `tfidf_char_linearsvc_social_C1_balanced` dan
-`calibrated_linearsvc_word_char_social_C1_balanced`. Threshold development dipilih `0.46` berdasarkan OOF
-development saja. Pada OOF development, ensemble memiliki mean macro-F1 `0.6916`, accuracy `0.7407`,
-balanced accuracy `0.6750`, MCC `0.5560`, ECE `0.1306`, dan Brier score `0.1278`. Pada threshold `0.46`,
-coverage `0.8251`, abstention `0.1749`, macro-F1 covered `0.7495`, dan bootstrap 95% CI macro-F1 covered
-`0.7084-0.7885`. Angka tersebut adalah **development diagnostics**, bukan locked-test performance.
+`calibrated_linearsvc_word_char_social_C1_balanced`. Setelah model development dibekukan, dilakukan
+**development threshold refreeze** sebelum locked test V2 dibuka: threshold abstention lama `0.46` diganti
+menjadi **higher-coverage abstention threshold** `0.42`. Threshold baru dipilih hanya dari OOF development
+dengan policy **`MAXIMIZE_MACRO_F1_SUBJECT_TO_COVERAGE_GTE_0_90`**; locked test tidak dipakai untuk
+threshold selection.
+
+Trade-off development-only threshold selection tersebut adalah coverage naik dari `0.8251` menjadi `0.9156`
+dan abstention turun dari `0.1749` menjadi `0.0844`, sementara macro-F1 covered turun dari `0.7495` menjadi
+`0.7229`. Pada threshold `0.42`, balanced accuracy covered `0.7036`, MCC covered `0.5990`, bootstrap 95%
+CI macro-F1 covered `0.6835-0.7596`, ECE `0.1306`, dan Brier score `0.1278`. Angka tersebut adalah
+**development diagnostics**, bukan locked-test performance.
 
 Locked-test V2 belum dievaluasi, tidak dibuat prediksi per baris locked-test, dan full inference 33.847
 komentar belum dijalankan. Karena itu `comment_sentiment.csv`, agregasi Goals, dan atribut sentimen Actor
