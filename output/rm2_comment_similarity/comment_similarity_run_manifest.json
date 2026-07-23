@@ -1,0 +1,76 @@
+{
+  "analysis_scope": "COMMENT_LEVEL_EXACT_AND_NEAR_SIMILARITY",
+  "sentiment_attribute_status": "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST",
+  "method": {
+    "normalization": [
+      "Unicode NFKC normalization",
+      "lowercase",
+      "trim and collapse whitespace",
+      "collapse repeated punctuation/decorative marks",
+      "preserve words, numbers, negation, emojis, and product names"
+    ],
+    "similarity": "TF-IDF character 5-gram with cosine similarity",
+    "vectorizer": {
+      "analyzer": "char_wb",
+      "ngram_range": [
+        5,
+        5
+      ],
+      "lowercase": false,
+      "min_df": 2,
+      "sublinear_tf": true,
+      "norm": "l2"
+    },
+    "top_k_neighbors": 20,
+    "similarity_threshold": 0.7,
+    "cluster_threshold": 0.85
+  },
+  "performance": {
+    "unique_texts_fit": 28891,
+    "text_neighbor_pairs_before_expansion": 29843,
+    "expanded_near_pair_rows_before_dedup": 70238,
+    "top_k_neighbors": 20,
+    "similarity_threshold": 0.7,
+    "method": "TF-IDF char_wb 5-gram + sparse top-k cosine nearest neighbors",
+    "tfidf_shape_rows": 28891,
+    "tfidf_shape_features": 25484,
+    "pair_rows_before_canonical_dedup": 300773,
+    "pair_rows_after_canonical_dedup": 300773
+  },
+  "execution_time_seconds": 178.474,
+  "source_hashes_before": {
+    "dataset": "7e0ea9cbc82243445cccea1a14ccb847c61235e932f754f5e1bc42e390df32da",
+    "video_metadata_clean": "92d4fdf7e75dacbd658871a8503829af6a151d83005c2a6716298019bb9ad094",
+    "account_actor_type": "07a6de95a9913b99e8593dadb58d9ed075169c6ca8584ae12fe0826892667e60",
+    "comment_sentiment": "c2722117cc522345117256046ab703fe76a801b39136e65bdf53fe165cde87c7",
+    "hcc_nodes": "a87aedc3eac4d1ad2ea89bcbb5d9b9156c70aa20e26df5ad20946ab18b840bb0",
+    "lcn_nodes_actor_type": "6adf2d91b1f75e56402e85f669b29bc445cf0625640a887a992885abc12bda5d",
+    "lcn_edges_actor_type": "071298b8f0bd4d71069d743778a14a795742a94964f2d796b62dad02b51de743",
+    "community_mass_account_pairs": "5b64af89ded13e6a8cc1917b16ac9e7efe17d992ac959aeaf5d02dc2d7a75bdd",
+    "sentiment_model_artifact": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+    "sentiment_model_manifest": "c1434692999adee59dda22151c63330ec27dbca76315634a4e4ea135292c6132"
+  },
+  "outputs": [
+    "output\\rm2_comment_similarity\\comment_similarity_pairs_all.csv",
+    "output\\rm2_comment_similarity\\exact_duplicate_comment_groups.csv",
+    "output\\rm2_comment_similarity\\exact_duplicate_comment_group_members.csv",
+    "output\\rm2_comment_similarity\\near_similar_comment_clusters.csv",
+    "output\\rm2_comment_similarity\\near_similar_comment_cluster_members.csv",
+    "output\\rm2_comment_similarity\\presentation\\ppt_comment_similarity_examples.csv",
+    "output\\rm2_comment_similarity\\presentation\\ppt_comment_similarity_example_members.csv",
+    "output\\rm2_comment_similarity\\presentation\\ppt_comment_similarity_examples.md",
+    "output\\rm2_comment_similarity\\presentation\\ppt_comment_similarity_manual_review.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_summary.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_by_category.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_by_actor_pair.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_by_brand.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_by_hcc.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_same_vs_cross_video.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_same_vs_cross_account.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_community_mass_network_overlap.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_threshold_audit.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_threshold_manual_audit.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_integrity_report.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_run_manifest.json"
+  ]
+}

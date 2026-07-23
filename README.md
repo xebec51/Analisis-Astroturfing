@@ -562,6 +562,69 @@ Panduan import Gephi:
 Batas interpretasi: edge menunjukkan keterhubungan struktural berdasarkan evidence LCN, bukan bukti
 pengaruh, kendali, pembayaran, perubahan opini, afiliasi, atau intensi koordinasi.
 
+### Comment-Level Exact and Near-Similarity Analysis
+
+Analisis ini mencari **identical normalized comments**, **near-identical comments**, dan **high textual
+similarity** pada level komentar individual. Unit analisisnya berbeda dari
+`output/tables/hcc_cosimilarity_pairs.csv`: file lama membandingkan narasi gabungan akun dalam HCC,
+sedangkan pipeline ini membandingkan dua `comment_id` observasional yang berbeda.
+
+Metode:
+
+- sumber utama: `dataset.csv`;
+- synthetic/injected comment ID berawalan `INJ` dikeluarkan dari output similarity;
+- normalisasi teks memakai Unicode NFKC, lowercase, trim whitespace, collapse whitespace, dan normalisasi
+  tanda baca/karakter dekoratif berulang;
+- kata, angka, negasi, emoji bermakna, dan nama produk dipertahankan;
+- near-similarity dihitung memakai TF-IDF character 5-gram (`analyzer=char_wb`, `ngram_range=(5,5)`)
+  dengan cosine similarity;
+- pencarian pasangan memakai unique normalized texts dan sparse top-k nearest neighbors, bukan dense matrix
+  `33847 x 33847`;
+- threshold pasangan disimpan mulai `cosine_similarity_char5 >= 0.70`.
+
+Kategori interpretasi:
+
+- `EXACT_DUPLICATE`: normalized text identik;
+- `NEAR_EXACT`: cosine similarity `>= 0.92`;
+- `HIGH_SIMILARITY`: `0.85-0.9199`;
+- `MODERATE_SIMILARITY`: `0.75-0.8499`;
+- `WEAK_CANDIDATE`: `0.70-0.7499`, hanya untuk audit/manual review.
+
+Ringkasan output saat ini:
+
+- komentar input: `33847`, unique `comment_id`: `33847`;
+- synthetic/injected IDs dikeluarkan: `784`;
+- komentar observasional dianalisis: `33063`;
+- unique normalized texts: `28891`;
+- exact duplicate groups: `800`;
+- exact duplicate pairs: `230535`;
+- near-exact pairs: `10193`;
+- high-similarity pairs: `14674`;
+- moderate-similarity pairs: `28753`;
+- weak candidates: `16618`;
+- similarity pairs yang akun-akunnya juga LCN edge: `13`;
+- similarity pairs yang terkait pre-LCN Community-Mass evidence pair: `2758`;
+- kandidat awal PowerPoint: `30`, seluruhnya berstatus `PENDING_MANUAL_REVIEW`.
+
+Output utama:
+
+- `output/rm2_comment_similarity/comment_similarity_pairs_all.csv`
+- `output/rm2_comment_similarity/exact_duplicate_comment_groups.csv`
+- `output/rm2_comment_similarity/exact_duplicate_comment_group_members.csv`
+- `output/rm2_comment_similarity/near_similar_comment_clusters.csv`
+- `output/rm2_comment_similarity/near_similar_comment_cluster_members.csv`
+- `output/rm2_comment_similarity/comment_similarity_threshold_manual_audit.csv`
+- `output/rm2_comment_similarity/comment_similarity_integrity_report.csv`
+- `output/rm2_comment_similarity/presentation/ppt_comment_similarity_examples.csv`
+- `output/rm2_comment_similarity/presentation/ppt_comment_similarity_example_members.csv`
+- `output/rm2_comment_similarity/presentation/ppt_comment_similarity_examples.md`
+- `output/rm2_comment_similarity/presentation/ppt_comment_similarity_manual_review.csv`
+
+Actor type, network position, brand, HCC, dan Community-Mass evidence status hanya menjadi konteks tambahan.
+Similarity tidak membentuk atau mengubah LCN, Louvain, FSA_V, HCC, actor type, sentiment, atau Goals.
+Kemiripan tekstual tidak boleh dibaca sebagai bukti pasti copy-paste, bot, instruksi, kampanye, pembayaran,
+pengaruh, atau koordinasi yang disengaja. Contoh PowerPoint tetap perlu review manual sebelum dipresentasikan.
+
 Visualisasi PNG:
 
 - `actor_type_account_count.png`

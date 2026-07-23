@@ -1,0 +1,7 @@
+actor_pair_type,n_pairs,n_unique_comments,n_unique_accounts,mean_similarity,n_presentation_eligible
+Community–Community,1735,346,119,0.9150525567391052,1593
+Community–Individual,47,48,29,0.918722930498513,34
+Community–Mass,14067,2911,2664,0.9854297257917223,13386
+Individual–Individual,2348,438,35,0.8728076635287784,460
+Mass–Individual,2936,1190,849,0.8759390573630694,1347
+Mass–Mass,279640,12165,11107,0.9589410487152155,235568

@@ -1,0 +1,6 @@
+threshold_band,interpretation,n_pairs
+exact,normalized text identical,230535
+0.92-0.9999,NEAR_EXACT,10193
+0.85-0.9199,HIGH_SIMILARITY,14674
+0.75-0.8499,MODERATE_SIMILARITY,28753
+0.70-0.7499,WEAK_CANDIDATE,16618
