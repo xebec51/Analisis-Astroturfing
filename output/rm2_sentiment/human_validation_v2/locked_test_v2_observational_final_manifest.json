@@ -408,7 +408,7 @@
   ],
   "training_overlap_count": 0,
   "synthetic_count": 0,
-  "locked_test_final_sha256": "d94d322a877523e1317c8036d37752c89ec524c09b36f673910cc5219d270828",
+  "locked_test_final_sha256": "663a69964d57ccd9dc4e05ec091a30fb6b1f3e12d0ecb271ba56ba70603bbfc8",
   "model_hash": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
   "config_hash": "3aacda361f4143e0fca3df022d494bf0c6f128e6f04f0992f31e894b99fbe00a",
   "threshold": 0.42,
@@ -423,5 +423,6 @@
     "INJ000716": "2791148522699793486",
     "INJ000687": "7459575779187229446",
     "INJ000070": "7596245642101932808"
-  }
+  },
+  "line_ending_note": "SHA-256 is computed over the repository-stored LF CSV bytes."
 }
