@@ -1,25 +1,25 @@
-# RM2 Sentiment Human Validation V2
+# Validasi Manusia Sentimen RM2 V2
 
-This directory contains the second human annotation package for RM2 comment-level sentiment analysis.
+Direktori ini berisi paket anotasi manusia tahap kedua untuk analisis sentimen RM2 pada level komentar.
 
-Phase status: package creation only. No model retraining, threshold selection, ensemble selection, inference rerun, HCC goal update, actor-type update, or Gephi topology update was performed.
+Status fase: hanya pembuatan paket anotasi. Tidak ada retraining model, pemilihan threshold, pemilihan ensemble, inference ulang, pembaruan goal HCC, pembaruan actor type, atau perubahan topology Gephi.
 
-Current V1 exclusion set: 579 unique comment_id values from `output/rm2_sentiment/human_validation/sentiment_human_annotation_validated.csv`. The V1 file is preserved and not overwritten by this package.
+Daftar eksklusi V1 saat ini berisi 579 nilai `comment_id` unik dari `output/rm2_sentiment/human_validation/sentiment_human_annotation_validated.csv`. File V1 dipertahankan dan tidak ditimpa oleh paket ini.
 
-Files for annotators:
+File yang perlu diisi anotator:
 
 - `sentiment_v2_annotator_1_blind.csv`
 - `sentiment_v2_annotator_2_blind.csv`
 - `sentiment_v2_adjudication_template.csv`
 
-Do not add model predictions, heuristic labels, HCC IDs, goal outputs, probabilities, or error flags to annotator blind files.
+Jangan menambahkan prediksi model, label heuristik, ID HCC, output goal, probability, confidence, atau penanda error ke file blind anotator.
 
-Use `sentiment_human_annotation_v2_guideline.md` and `sentiment_human_annotation_v2_codebook.csv` when labeling.
+Gunakan `sentiment_human_annotation_v2_guideline.md` dan `sentiment_human_annotation_v2_codebook.csv` saat memberi label.
 
-After annotation is complete, run:
+Setelah anotasi selesai, jalankan:
 
 ```powershell
 python scripts/validate_rm2_sentiment_human_annotations_v2.py
 ```
 
-The locked-test V2 IDs are fixed in `locked_test_v2_manifest.csv`; they must not be used for model selection, threshold selection, ensemble weighting, preprocessing selection, or error-driven tuning.
+ID locked-test V2 sudah dikunci di `locked_test_v2_manifest.csv`. ID tersebut tidak boleh digunakan untuk model selection, threshold selection, ensemble weighting, preprocessing selection, atau tuning berbasis error.

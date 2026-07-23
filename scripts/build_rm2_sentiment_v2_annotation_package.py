@@ -477,6 +477,71 @@ This package collects additional human labels for RM2 comment-level sentiment an
     (OUT_DIR / "sentiment_human_annotation_v2_guideline.md").write_text(guideline, encoding="utf-8")
 
 
+def write_guideline() -> None:
+    guideline = """# Panduan Anotasi Manusia Sentimen RM2 V2
+
+## Tujuan
+
+Paket ini mengumpulkan label manusia tambahan untuk analisis sentimen RM2 pada level komentar. Tujuannya adalah memperbaiki diagnosis lanjutan terhadap recall kelas Positive, precision kelas Negative, pembedaan pertanyaan atau kondisi kulit dari evaluasi produk, serta coverage model.
+
+Saat memberi label, jangan menggunakan prediksi model, label heuristik, output goal HCC, probability, confidence, atau hasil otomatis sebelumnya. Nilai komentar hanya berdasarkan teks komentar dan konteks video/brand yang tersedia di file anotasi.
+
+## Label Sentimen Utama
+
+- Positive: gunakan jika komentar jelas memuji, merekomendasikan, mendukung, mempromosikan, atau melaporkan hasil membaik. Contoh: "Aku cocok, bekas jerawat makin pudar."
+- Neutral: gunakan untuk pertanyaan, pernyataan faktual, tagging, nama produk saja, logistik harga/pembelian tanpa evaluasi, atau deskripsi kondisi kulit tanpa evaluasi produk. Contoh: "Ini dipakai pagi atau malam?"
+- Negative: gunakan jika komentar jelas mengeluhkan efek produk/brand, keamanan, keaslian, nilai harga, atau hasil pemakaian. Contoh: "Setelah pakai ini wajahku perih dan merah."
+- Uncertain: gunakan jika sinyal positif dan negatif sama kuat atau konteks tidak cukup untuk menentukan polaritas dominan. Contoh: "Bagus sih, tapi di aku bikin kering."
+- No Text: gunakan jika teks kosong, terhapus, tidak terbaca, atau hanya berisi konten yang tidak dapat ditafsirkan.
+
+## Target Sentimen
+
+- Product / Brand: evaluasi terutama diarahkan pada produk skincare atau brand.
+- Skin condition: komentar terutama menjelaskan jerawat, kusam, iritasi, berminyak, kering, atau kondisi kulit lain.
+- Usage question: komentar menanyakan apakah, kapan, atau bagaimana memakai produk atau bahan tertentu.
+- Creator / Seller: evaluasi diarahkan pada creator, penjual, layanan, atau akun.
+- Price / Purchase: komentar membahas harga, link, keranjang, checkout, pengiriman, stok, atau ketersediaan.
+- Promotion / CTA: komentar terutama berupa rekomendasi, ajakan membeli, promosi, atau call to action.
+- General discussion: percakapan skincare umum tanpa target evaluasi spesifik.
+- Other / unclear: target tidak dapat ditentukan dengan cukup jelas.
+
+## Complaint Scope
+
+- product_effect: keluhan atau pujian berhubungan dengan efek produk atau hasil pemakaian.
+- skin_condition: kondisi kulit disebut sebagai masalah tanpa hubungan sebab-akibat produk yang jelas.
+- price_value: harga, nilai, ongkir, atau syarat pembelian menjadi isu utama.
+- safety_concern: iritasi, keamanan bahan, bahaya, atau risiko kesehatan menjadi isu utama.
+- authenticity_concern: keaslian produk, official store, originalitas, atau kepercayaan menjadi isu utama.
+- usage_confusion: urutan pemakaian, frekuensi, kompatibilitas, atau cara pakai menjadi sumber kebingungan.
+- not_applicable: tidak ada cakupan keluhan yang relevan.
+- unclear: cakupan tidak dapat ditentukan dari komentar.
+
+## Aturan Keputusan
+
+1. Pertanyaan tentang kondisi kulit tanpa evaluasi produk cenderung Neutral dengan target Skin condition atau Usage question.
+2. Keluhan kondisi kulit tidak otomatis berarti Negative terhadap Product / Brand. Beri Negative terhadap Product / Brand hanya jika komentar mengaitkan efek buruk dengan pemakaian produk.
+3. Efek buruk setelah menggunakan produk dapat diberi Negative, target Product / Brand, scope product_effect atau safety_concern.
+4. Hasil membaik, rekomendasi, dukungan, dan promosi yang jelas dapat diberi Positive.
+5. Jika sinyal positif dan negatif sama kuat, gunakan Uncertain.
+6. Emoji tidak boleh mengalahkan makna utama teks.
+7. Kata seperti jerawat, bruntusan, kusam, mahal, murah, aman, dan cocok harus dinilai berdasarkan konteks kalimat.
+
+## Contoh
+
+| Contoh komentar | Sentimen | Target | Complaint scope | Catatan |
+|---|---|---|---|---|
+| "Kak ini aman buat kulit sensitif?" | Neutral | Usage question | usage_confusion | Pertanyaan, bukan keluhan produk. |
+| "Jerawatku lagi parah banget" | Neutral | Skin condition | skin_condition | Kondisi kulit tanpa sebab-akibat produk. |
+| "Pakai ini malah breakout" | Negative | Product / Brand | product_effect | Efek produk disalahkan. |
+| "Aku cocok banget, jadi lebih cerah" | Positive | Product / Brand | product_effect | Ada hasil membaik yang jelas. |
+| "Mahal tapi worth it" | Positive | Product / Brand | price_value | Sinyal positif dominan meskipun harga disebut. |
+| "Bagus tapi bikin kering" | Uncertain | Product / Brand | product_effect | Sentimen campuran tanpa polaritas dominan. |
+| "Checkout sekarang, lagi promo" | Positive | Promotion / CTA | not_applicable | Ajakan promosi yang jelas. |
+| "[emoji tertawa]" | No Text | Other / unclear | unclear | Emoji saja tanpa sentimen yang dapat ditafsirkan. |
+"""
+    (OUT_DIR / "sentiment_human_annotation_v2_guideline.md").write_text(guideline, encoding="utf-8")
+
+
 def build_annotation_files(sample: pd.DataFrame) -> None:
     annotator_cols = [
         "sample_role",
@@ -676,6 +741,36 @@ python scripts/validate_rm2_sentiment_human_annotations_v2.py
 ```
 
 The locked-test V2 IDs are fixed in `locked_test_v2_manifest.csv`; they must not be used for model selection, threshold selection, ensemble weighting, preprocessing selection, or error-driven tuning.
+"""
+    (OUT_DIR / "README_HUMAN_VALIDATION_V2.md").write_text(text, encoding="utf-8")
+
+
+def write_readme(v1_count: int) -> None:
+    text = f"""# Validasi Manusia Sentimen RM2 V2
+
+Direktori ini berisi paket anotasi manusia tahap kedua untuk analisis sentimen RM2 pada level komentar.
+
+Status fase: hanya pembuatan paket anotasi. Tidak ada retraining model, pemilihan threshold, pemilihan ensemble, inference ulang, pembaruan goal HCC, pembaruan actor type, atau perubahan topology Gephi.
+
+Daftar eksklusi V1 saat ini berisi {v1_count} nilai `comment_id` unik dari `output/rm2_sentiment/human_validation/sentiment_human_annotation_validated.csv`. File V1 dipertahankan dan tidak ditimpa oleh paket ini.
+
+File yang perlu diisi anotator:
+
+- `sentiment_v2_annotator_1_blind.csv`
+- `sentiment_v2_annotator_2_blind.csv`
+- `sentiment_v2_adjudication_template.csv`
+
+Jangan menambahkan prediksi model, label heuristik, ID HCC, output goal, probability, confidence, atau penanda error ke file blind anotator.
+
+Gunakan `sentiment_human_annotation_v2_guideline.md` dan `sentiment_human_annotation_v2_codebook.csv` saat memberi label.
+
+Setelah anotasi selesai, jalankan:
+
+```powershell
+python scripts/validate_rm2_sentiment_human_annotations_v2.py
+```
+
+ID locked-test V2 sudah dikunci di `locked_test_v2_manifest.csv`. ID tersebut tidak boleh digunakan untuk model selection, threshold selection, ensemble weighting, preprocessing selection, atau tuning berbasis error.
 """
     (OUT_DIR / "README_HUMAN_VALIDATION_V2.md").write_text(text, encoding="utf-8")
 
