@@ -1,0 +1,153 @@
+{
+  "status": "FINAL_LOCKED_TEST_EVALUATED_ONCE",
+  "final_acceptance_status": "FINAL_MODEL_VALIDATED",
+  "evaluation_run_id": "f53b86fa11ac12ea",
+  "evaluation_timestamp_utc": "2026-07-23T04:08:45.483840+00:00",
+  "freeze_commit": "138b944111564fd494d505a4948d6a7bf8c8db60",
+  "locked_test_sha256": "663a69964d57ccd9dc4e05ec091a30fb6b1f3e12d0ecb271ba56ba70603bbfc8",
+  "model_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+  "config_sha256": "3aacda361f4143e0fca3df022d494bf0c6f128e6f04f0992f31e894b99fbe00a",
+  "threshold": 0.42,
+  "n_locked_test_rows": 300,
+  "n_reference_evaluable": 274,
+  "n_non_evaluable_reference": 26,
+  "metrics": {
+    "n_locked_test_rows": 300.0,
+    "n_reference_evaluable": 274.0,
+    "n_non_evaluable_reference": 26.0,
+    "n_covered": 256.0,
+    "n_abstained": 18.0,
+    "coverage": 0.9343065693430657,
+    "abstention_rate": 0.06569343065693431,
+    "macro_f1_covered": 0.7308704320423235,
+    "weighted_f1_covered": 0.8272674593570954,
+    "accuracy_covered": 0.8359375,
+    "balanced_accuracy_covered": 0.718795689879629,
+    "mcc_covered": 0.6368545406065418,
+    "minimum_per_class_recall": 0.4772727272727273,
+    "minimum_per_class_precision": 0.6756756756756757,
+    "correct_covered": 214.0,
+    "correct_covered_share_of_locked_test": 0.7133333333333334,
+    "selective_error": 0.1640625,
+    "ece_covered": 0.15212620820132527,
+    "brier_score_covered": 0.10008784281104481,
+    "ece_all_evaluable": 0.14548827482006668,
+    "brier_score_all_evaluable": 0.10728338259606472
+  },
+  "acceptance_gates": [
+    {
+      "metric": "no_class_collapse",
+      "threshold": true,
+      "observed": true,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "coverage",
+      "threshold": ">=0.85",
+      "observed": 0.9343065693430657,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "macro_f1_covered",
+      "threshold": ">=0.60",
+      "observed": 0.7308704320423235,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "balanced_accuracy_covered",
+      "threshold": ">=0.60",
+      "observed": 0.718795689879629,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "mcc_covered",
+      "threshold": ">=0.35",
+      "observed": 0.6368545406065418,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "minimum_per_class_recall",
+      "threshold": ">=0.40",
+      "observed": 0.4772727272727273,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "minimum_per_class_precision",
+      "threshold": ">=0.40",
+      "observed": 0.6756756756756757,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "positive_recall",
+      "threshold": ">0.341",
+      "observed": 0.4772727272727273,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "negative_precision",
+      "threshold": ">0.415",
+      "observed": 0.6756756756756757,
+      "passed": true,
+      "notes": "",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    },
+    {
+      "metric": "integrity_no_corruption_leakage_overlap",
+      "threshold": true,
+      "observed": true,
+      "passed": true,
+      "notes": "Frozen locked-test integrity and hash checks passed before scoring.",
+      "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+    }
+  ],
+  "per_class_metrics": [
+    {
+      "class_label": "Negative",
+      "precision": 0.6756756756756757,
+      "recall": 0.7352941176470589,
+      "f1": 0.704225352112676,
+      "support": 34,
+      "covered_predicted_count": 37,
+      "abstained_true_count": 7
+    },
+    {
+      "class_label": "Neutral",
+      "precision": 0.8842105263157894,
+      "recall": 0.9438202247191011,
+      "f1": 0.9130434782608695,
+      "support": 178,
+      "covered_predicted_count": 190,
+      "abstained_true_count": 8
+    },
+    {
+      "class_label": "Positive",
+      "precision": 0.7241379310344828,
+      "recall": 0.4772727272727273,
+      "f1": 0.5753424657534246,
+      "support": 44,
+      "covered_predicted_count": 29,
+      "abstained_true_count": 3
+    }
+  ],
+  "package_versions": {
+    "python": "3.12.2",
+    "pandas": "2.2.3",
+    "numpy": "2.1.1"
+  }
+}

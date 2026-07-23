@@ -1,0 +1,11 @@
+{
+  "locked_test_sha256": "663a69964d57ccd9dc4e05ec091a30fb6b1f3e12d0ecb271ba56ba70603bbfc8",
+  "model_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+  "config_sha256": "3aacda361f4143e0fca3df022d494bf0c6f128e6f04f0992f31e894b99fbe00a",
+  "threshold": 0.42,
+  "freeze_commit": "138b944111564fd494d505a4948d6a7bf8c8db60",
+  "evaluation_timestamp_utc": "2026-07-23T04:08:45.483840+00:00",
+  "evaluation_run_id": "f53b86fa11ac12ea",
+  "status": "FINAL_LOCKED_TEST_EVALUATED_ONCE",
+  "final_acceptance_status": "FINAL_MODEL_VALIDATED"
+}

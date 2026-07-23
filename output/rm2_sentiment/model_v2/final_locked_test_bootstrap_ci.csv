@@ -1,0 +1,2 @@
+metric,n_bootstrap,mean,ci_lower_95,ci_upper_95,random_seed
+macro_f1_covered,1000,0.7265458372035949,0.6488760931064227,0.792579252584568,20260721

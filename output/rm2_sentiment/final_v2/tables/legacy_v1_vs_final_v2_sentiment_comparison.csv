@@ -1,0 +1,18 @@
+comparison_scope,label,legacy_count,final_v2_count,count_delta_final_minus_legacy
+all_observational,Positive,2791,2718,-73
+all_observational,Neutral,13933,23977,10044
+all_observational,Negative,11585,4771,-6814
+all_observational,Uncertain,3034,1593,-1441
+all_observational,No Text,1720,4,-1716
+hcc_comments,Positive,293,289,-4
+hcc_comments,Neutral,323,541,218
+hcc_comments,Negative,212,87,-125
+hcc_comments,Uncertain,68,28,-40
+hcc_comments,No Text,49,0,-49
+nonhcc_comments,Positive,2498,2429,-69
+nonhcc_comments,Neutral,13610,23436,9826
+nonhcc_comments,Negative,11373,4684,-6689
+nonhcc_comments,Uncertain,2966,1565,-1401
+nonhcc_comments,No Text,1671,4,-1667
+all_observational,changed_comment_id,,13547,
+hcc_goals,changed_hcc_goal_orientation,,21,

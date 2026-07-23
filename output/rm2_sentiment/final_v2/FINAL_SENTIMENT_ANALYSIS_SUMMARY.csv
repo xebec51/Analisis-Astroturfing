@@ -1,0 +1,12 @@
+metric,value
+final_acceptance_status,FINAL_MODEL_VALIDATED
+observational_count,33063
+injected_diagnostic_count,784
+hcc_count,42
+hcc_member_count,218
+observational_Positive,2718
+observational_Neutral,23977
+observational_Negative,4771
+observational_Uncertain,1593
+observational_No Text,4
+observational_Evaluable coverage,31466

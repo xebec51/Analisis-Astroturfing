@@ -1,0 +1,29 @@
+{
+  "status": "FINAL_SENTIMENT_V2_FULL_INFERENCE_COMPLETE",
+  "final_acceptance_status": "FINAL_MODEL_VALIDATED",
+  "git_head_at_inference": "138b944111564fd494d505a4948d6a7bf8c8db60",
+  "timestamp_utc": "2026-07-23T04:20:13.823442+00:00",
+  "model_hash": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+  "config_hash": "3aacda361f4143e0fca3df022d494bf0c6f128e6f04f0992f31e894b99fbe00a",
+  "locked_test_sha256": "663a69964d57ccd9dc4e05ec091a30fb6b1f3e12d0ecb271ba56ba70603bbfc8",
+  "threshold": 0.42,
+  "dataset_rows": 33847,
+  "observational_rows": 33063,
+  "injected_diagnostic_rows": 784,
+  "observational_output_sha256": "64b4fdacb9c623798035b5ed024e050d7e73de2a2260a7a8fcede5a4032b20d6",
+  "injected_output_sha256": "a8127f75cce8733085f5b937ec9fae654ab31b3124bebd5037f394f2bcc72808",
+  "legacy_status": "LEGACY_V1_PROVISIONAL_FULL_INFERENCE",
+  "package_versions": {
+    "python": "3.12.2",
+    "pandas": "2.2.3",
+    "numpy": "2.1.1"
+  },
+  "outputs": [
+    "output\\rm2_sentiment\\final_v2\\comment_sentiment_v2_observational.csv",
+    "output\\rm2_sentiment\\final_v2\\comment_sentiment_v2_injected_diagnostic.csv",
+    "output\\rm2_sentiment\\final_v2\\tables",
+    "output\\rm2_sentiment\\final_v2\\gephi",
+    "output\\rm2_sentiment\\final_v2\\presentation"
+  ],
+  "integrity_all_passed": true
+}

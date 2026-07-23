@@ -344,10 +344,11 @@ notebook RM1, pipeline LCN/Louvain/FSA_V, hasil HCC, maupun file output RM1 yang
 
 ### Model Sentimen
 
-Pipeline berjalan bertahap. Model development dapat dibekukan setelah label manusia development tersedia,
-tetapi **final locked-test evaluation** hanya boleh dilakukan satu kali setelah locked test V2 kembali
-lengkap 300 komentar observasional. Sampai tahap itu selesai, status model adalah
-`DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST`, bukan `FINAL_MODEL_VALIDATED`.
+Pipeline Sentimen V2 sudah melewati evaluasi final locked test satu kali pada 300 komentar observasional
+yang dibekukan. Model accepted dengan status `FINAL_MODEL_VALIDATED`; evaluasi ini menggunakan threshold
+abstention `0.42`, model hash
+`477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc`, dan locked-test hash
+`663a69964d57ccd9dc4e05ec091a30fb6b1f3e12d0ecb271ba56ba70603bbfc8`.
 
 Model development V2 yang dibandingkan mencakup baseline V1 lama sebagai pembanding diagnostik, TF-IDF
 word n-gram + Logistic Regression, TF-IDF word n-gram + LinearSVC, TF-IDF character n-gram + Logistic
@@ -361,18 +362,20 @@ diam-diam dipaksa menjadi Neutral.
 
 ### Validasi Domain
 
-V1 human validation yang sudah dibersihkan berisi `579` comment_id unik. Paket V2 memiliki hasil anotasi
-manusia lengkap pada file final, tetapi file kanonis observasional
-`output/rm2_sentiment/human_validation_v2/sentiment_human_annotation_v2_validated.csv` berisi `592` baris:
-`300` development V2 dan `292` locked-test V2 observasional. Delapan ID locked-test synthetic/injected
-masih menahan evaluasi final sampai replacement dianotasi manusia.
+V1 human validation yang sudah dibersihkan berisi `579` comment_id unik. Paket V2 memakai label manusia
+observasional pada file kanonis
+`output/rm2_sentiment/human_validation_v2/sentiment_human_annotation_v2_validated.csv`, ditambah delapan
+replacement locked-test yang sudah diberi dua label manusia dan disetujui tanpa disagreement. Locked test
+final dibekukan sebagai
+`output/rm2_sentiment/human_validation_v2/locked_test_v2_observational_final.csv` dengan `300` komentar
+observasional, `0` synthetic/injected ID, dan `0` overlap dengan training pool.
 
 Development training pool V2 memakai label manusia observasional yang sah dari V1 development, V1 historical
 test, dan V2 development, setelah mengeluarkan seluruh synthetic/injected IDs dan seluruh 292 locked-test V2
 observasional. Pool final: `806` komentar unik (`Negative=216`, `Neutral=433`, `Positive=157`; sumber
 training: `V1=518`, `V2=288`).
 
-Model development yang dibekukan saat ini adalah ensemble top-2 human-supervised:
+Model development yang dibekukan adalah ensemble top-2 human-supervised:
 `ensemble_top2_human_supervised_development_only`, terdiri dari
 `tfidf_char_linearsvc_social_C1_balanced` dan
 `calibrated_linearsvc_word_char_social_C1_balanced`. Setelah model development dibekukan, dilakukan
@@ -387,10 +390,22 @@ dan abstention turun dari `0.1749` menjadi `0.0844`, sementara macro-F1 covered 
 CI macro-F1 covered `0.6835-0.7596`, ECE `0.1306`, dan Brier score `0.1278`. Angka tersebut adalah
 **development diagnostics**, bukan locked-test performance.
 
-Locked-test V2 belum dievaluasi, tidak dibuat prediksi per baris locked-test, dan full inference 33.847
-komentar belum dijalankan. Karena itu `comment_sentiment.csv`, agregasi Goals, dan atribut sentimen Actor
-Type lama belum di-refresh oleh model V2. Goal counts lama tetap dibaca sebagai hasil sementara; confidence
-dan stability bukan akurasi.
+Final locked-test evaluation dilakukan satu kali setelah file final dibekukan. Hasil locked-test pada covered
+predictions: coverage `0.9343`, abstention rate `0.0657`, macro-F1 `0.7309`, weighted-F1 `0.8273`,
+accuracy `0.8359`, balanced accuracy `0.7188`, MCC `0.6369`, ECE covered `0.1521`, dan Brier score
+`0.1001`. Per kelas: Negative precision/recall/F1 `0.6757`/`0.7353`/`0.7042`; Neutral
+`0.8842`/`0.9438`/`0.9130`; Positive `0.7241`/`0.4773`/`0.5753`.
+
+Full inference V2 sudah dijalankan setelah acceptance gate lulus. Output utama disimpan terpisah di
+`output/rm2_sentiment/final_v2/` agar `output/rm2_sentiment/tables/comment_sentiment.csv` legacy tidak
+ditimpa. Denominator utama adalah `33063` komentar observasional; `784` komentar `INJ` disimpan sebagai
+diagnostic terpisah. Distribusi observasional V2: Positive `2718` (`8.22%`), Neutral `23977` (`72.52%`),
+Negative `4771` (`14.43%`), Uncertain `1593` (`4.82%`), dan No Text `4` (`0.01%`).
+
+Pada 42 HCC, goal orientation V2 adalah `Neutral Engagement=31` dan `Promotional / Supportive=11`, dengan
+status `FINAL_MODEL_VALIDATED_SENTIMENT_V2`. Goal orientation tetap dibaca sebagai orientasi pesan
+deskriptif berbasis pola sentimen teramati; confidence dan stability bukan akurasi aktual pada setiap
+komentar.
 
 ### Output Tabel (`output/rm2_sentiment/tables/`)
 
@@ -415,6 +430,21 @@ dan stability bukan akurasi.
 | `hcc_goal_method_sensitivity.csv` | Goals | Sensitivity hard-label, soft probability, confidence-weighted, dan smoothed shares |
 | `sentiment_final_validation_report.csv` | Audit | Gate status `PASS`/`WARNING`/`FAIL`/`NOT_AVAILABLE` dan overall status |
 
+### Output Final Sentimen V2 (`output/rm2_sentiment/final_v2/`)
+
+| File | Level | Isi |
+|---|---|---|
+| `comment_sentiment_v2_observational.csv` | Komentar observasional | Prediksi final V2 untuk 33063 komentar non-`INJ` |
+| `comment_sentiment_v2_injected_diagnostic.csv` | Diagnostic | Prediksi V2 untuk 784 komentar `INJ`, tidak dicampur dalam denominator utama |
+| `tables/sentiment_distribution_observational.csv` | Komentar | Distribusi final Positive/Neutral/Negative/Uncertain/No Text |
+| `tables/hcc_vs_nonhcc_comment_sentiment_v2.csv` | Grup | Perbandingan HCC vs Non-HCC pada level komentar |
+| `tables/hcc_vs_nonhcc_account_sentiment_v2.csv` | Grup | Perbandingan HCC vs Non-HCC pada level akun |
+| `tables/hcc_sentiment_goals_summary_v2.csv` | HCC | Goal orientation V2 untuk 42 HCC |
+| `tables/brand_sentiment_summary_v2.csv` | Brand context | Ringkasan sentimen HCC menurut `brand_label_auto` |
+| `gephi/gephi_hcc_nodes_sentiment_v2.csv` | Gephi | Node HCC RM1 dengan atribut sentimen/goals V2 |
+| `gephi/gephi_hcc_edges_sentiment_v2.csv` | Gephi | Edge HCC RM1 disalin tanpa perubahan topologi |
+| `presentation/sentiment_presentation_summary.md` | Presentasi | Ringkasan pendek untuk paparan temuan |
+
 ### Output Visualisasi (`output/rm2_sentiment/visualisasi/`, PNG saja)
 
 Visualisasi utama dibatasi menjadi tiga file:
@@ -427,12 +457,13 @@ WordCloud dan grafik eksploratif lama tidak dipertahankan sebagai output utama k
 validasi sentimen. WordCloud eksploratif untuk paparan temuan tersedia terpisah di
 `output/rm2_sentiment/visualisasi_exploratory/` dan tidak digunakan sebagai evidence validasi model.
 
-### Output Gephi RM2 (`output/rm2_sentiment/gephi/`)
+### Output Gephi RM2
 
-File terpisah dari Gephi RM1 (tidak menimpa): `gephi_hcc_nodes_sentiment.csv` (node HCC RM1 + atribut
-sentimen/`goal_orientation`) dan `gephi_hcc_edges_sentiment.csv` (edge HCC RM1, disalin apa adanya —
-sentimen hanya atribut node, edge tidak diubah). Dipakai untuk mewarnai node di Gephi berdasarkan
-`dominant_sentiment` atau `goal_orientation`, disandingkan dengan `brand_label_auto` dari RM1.
+File legacy tetap berada di `output/rm2_sentiment/gephi/` dan tidak ditimpa. Output final V2 berada di
+`output/rm2_sentiment/final_v2/gephi/`: `gephi_hcc_nodes_sentiment_v2.csv` (node HCC RM1 + atribut
+sentimen/`goal_orientation` V2), `gephi_hcc_edges_sentiment_v2.csv` (edge HCC RM1 disalin apa adanya),
+dan `gephi_lcn_nodes_actor_type_sentiment_v2.csv` (node LCN actor type dengan atribut sentimen V2).
+Sentimen hanya menjadi atribut node; topologi edge RM1 tidak diubah.
 
 ## RM2 — Three Actor Types and Three Dimensions Typology
 
@@ -535,8 +566,8 @@ Ringkasan output saat ini:
 - pasangan pre-LCN multi-evidence: `2667`;
 - pasangan pre-LCN single-evidence: `431851`;
 - Mass Actor `Outside LCN` yang memiliki evidence: `25660`;
-- status atribut sentimen sementara: `DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST`;
-- final locked-test evaluation: `BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS`.
+- status atribut sentimen V2 final: `FINAL_MODEL_VALIDATED`;
+- final locked-test evaluation: `FINAL_LOCKED_TEST_EVALUATED_ONCE`.
 
 File utama:
 

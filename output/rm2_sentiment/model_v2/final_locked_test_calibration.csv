@@ -1,0 +1,15 @@
+section,metric,value,n_evaluable,n_covered,n_reference
+calibration,ece_covered,0.15212620820132527,,,
+calibration,brier_score_covered,0.10008784281104481,,,
+calibration,ece_all_evaluable,0.14548827482006668,,,
+calibration,brier_score_all_evaluable,0.10728338259606472,,,
+confidence_distribution,"(0.3, 0.4]",10.0,10.0,0.0,
+confidence_distribution,"(0.4, 0.5]",52.0,43.0,44.0,
+confidence_distribution,"(0.5, 0.6]",51.0,45.0,51.0,
+confidence_distribution,"(0.6, 0.7]",64.0,53.0,64.0,
+confidence_distribution,"(0.7, 0.8]",63.0,63.0,63.0,
+confidence_distribution,"(0.8, 0.9]",47.0,47.0,47.0,
+confidence_distribution,"(0.9, 1.0]",13.0,13.0,13.0,
+abstention_by_true_class,Negative,7.0,,34.0,41.0
+abstention_by_true_class,Neutral,8.0,,178.0,186.0
+abstention_by_true_class,Positive,3.0,,44.0,47.0

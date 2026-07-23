@@ -1,0 +1,11 @@
+metric,threshold,observed,passed,notes,final_acceptance_status
+no_class_collapse,True,True,True,,FINAL_MODEL_VALIDATED
+coverage,>=0.85,0.9343065693430657,True,,FINAL_MODEL_VALIDATED
+macro_f1_covered,>=0.60,0.7308704320423235,True,,FINAL_MODEL_VALIDATED
+balanced_accuracy_covered,>=0.60,0.718795689879629,True,,FINAL_MODEL_VALIDATED
+mcc_covered,>=0.35,0.6368545406065418,True,,FINAL_MODEL_VALIDATED
+minimum_per_class_recall,>=0.40,0.4772727272727273,True,,FINAL_MODEL_VALIDATED
+minimum_per_class_precision,>=0.40,0.6756756756756757,True,,FINAL_MODEL_VALIDATED
+positive_recall,>0.341,0.4772727272727273,True,,FINAL_MODEL_VALIDATED
+negative_precision,>0.415,0.6756756756756757,True,,FINAL_MODEL_VALIDATED
+integrity_no_corruption_leakage_overlap,True,True,True,Frozen locked-test integrity and hash checks passed before scoring.,FINAL_MODEL_VALIDATED

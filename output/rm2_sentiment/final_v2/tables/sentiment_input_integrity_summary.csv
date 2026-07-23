@@ -1,0 +1,6 @@
+metric,value
+dataset_rows,33847
+unique_comment_id,33847
+injected_rows,784
+observational_rows,33063
+legacy_status,LEGACY_V1_PROVISIONAL_FULL_INFERENCE
