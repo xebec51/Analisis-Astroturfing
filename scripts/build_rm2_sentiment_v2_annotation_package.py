@@ -664,7 +664,7 @@ def build_integrity_report(dataset: pd.DataFrame, comments: pd.DataFrame, hcc_no
     protected_rm1_paths = [
         "dataset.csv",
         "video_metadata_clean.csv",
-        "tiktok_coordination_analysis.ipynb",
+        "notebooks/rm1/tiktok_coordination_analysis.ipynb",
         "output/gephi/gephi_lcn_nodes.csv",
         "output/gephi/gephi_lcn_edges.csv",
         "output/gephi/gephi_hcc_nodes.csv",

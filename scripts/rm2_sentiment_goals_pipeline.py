@@ -1518,7 +1518,7 @@ def run_pipeline(root: str | Path = ".") -> dict:
     protected_inputs = {
         "dataset": dataset_path,
         "metadata": metadata_path,
-        "rm1_notebook": root / "tiktok_coordination_analysis.ipynb",
+        "rm1_notebook": root / "notebooks" / "rm1" / "tiktok_coordination_analysis.ipynb",
         "lcn_nodes": lcn_nodes_path,
         "lcn_edges": lcn_edges_path,
         "hcc_nodes": hcc_nodes_path,

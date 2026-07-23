@@ -34,7 +34,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 DATASET_PATH = ROOT / "dataset.csv"
 VIDEO_METADATA_PATH = ROOT / "video_metadata_clean.csv"
-TIKTOK_RM1_NOTEBOOK_PATH = ROOT / "tiktok_coordination_analysis.ipynb"
+TIKTOK_RM1_NOTEBOOK_PATH = ROOT / "notebooks" / "rm1" / "tiktok_coordination_analysis.ipynb"
 ACCOUNT_ACTOR_TYPE_PATH = ROOT / "output/rm2_actor_type/tables/account_actor_type.csv"
 HCC_NODES_PATH = ROOT / "output/gephi/gephi_hcc_nodes.csv"
 HCC_EDGES_PATH = ROOT / "output/gephi/gephi_hcc_edges.csv"
