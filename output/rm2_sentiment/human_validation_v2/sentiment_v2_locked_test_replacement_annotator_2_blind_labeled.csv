@@ -1,4 +1,4 @@
-sample_role,comment_id,comment_text_original,video_id,brand_or_video_context,sentiment_label,sentiment_target,complaint_scope,annotator_notes
+﻿sample_role,comment_id,comment_text_original,video_id,brand_or_video_context,sentiment_label,sentiment_target,complaint_scope,annotator_notes
 locked_test_v2_replacement,7428978154083336968,dok cek dong all merek zekinesia.. 😅,7428436533981613318,Maryame,Neutral,Product / Brand,not_applicable,"Isi komentar berupa permintaan pemeriksaan merek Zekinesia, bukan penilaian hasil atau kualitas produk."
 locked_test_v2_replacement,7532542644297024272,iya aku juga jerawatan terus muka gatal²,7122773893844061466,The Originote,Negative,Product / Brand,safety_concern,Frasa “aku juga” menunjukkan keluhan serupa dalam percakapan produk; jerawat dan gatal merupakan reaksi negatif.
 locked_test_v2_replacement,7238804410896450310,itu yg paket glowing moist sama serum bright B3 ya kak,7194330759329631514,The Originote,Neutral,Product / Brand,not_applicable,Isi komentar menanyakan apakah produk yang dibahas adalah paket glowing moisturizer dan serum Bright B3.
