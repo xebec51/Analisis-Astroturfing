@@ -11,7 +11,7 @@ Setiap contoh masih memerlukan review manual sebelum dimasukkan ke slide.
 
 > "gimana cara pesan nya mbak"
 
-> "cara pesan nya gimana"
+> "gimana cara pesan nya mbak"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -51,9 +51,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Azarine | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "2x seminggu"
+> "2x seminggu aja kak"
 
-> "seminggu 2x"
+> "2x seminggu"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -79,9 +79,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "keranjang kuning nya mana teh"
+> "keranjang kuning nya gk ada teh 🙏🙏"
 
-> "di mn keranjang nya tth"
+> "lgsg cek keranjang kuning aja kk"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -93,9 +93,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** NO_ACCOUNT_EVIDENCE_PAIR
 
-> "CARA PAKENYA GIMANA KAK"
+> "cara pakenya gimana"
 
-> "cara pakenya gimana kak?"
+> "CARA PAKENYA GIMANA KAK"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -123,7 +123,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 
 > "bolehh"
 
-> "bolehh ka"
+> "bolehh kok"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -135,9 +135,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** LCN edge
 
-> "makasih infonya kak 🙏 (160)"
+> "makasih infonya kak 🙏 beneran (160)"
 
-> "makasih infonya kak 🙏 😊 (160)"
+> "makasih infonya kak 🙏 🙏 (160)"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -149,9 +149,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Azarine | Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "wah baru tau, makasih infonyaa 😊 (160)"
+> "wah baru tau, makasih infonyaa!! (160)"
 
-> "wah baru tau, makasih infonyaa 🥰 (160)"
+> "wah baru tau, makasih infonyaa 😍 (160)"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -163,9 +163,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "harga nya berapa ya kk"
+> "berapa harga nya teh"
 
-> "berapa harga teh"
+> "harga nya berapa ya kk"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -177,9 +177,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "mana keranjang kuningnya 😒"
+> "cek keranjang kuningnya ya kak"
 
-> "mana keranjang kuningnya"
+> "mana keranjang kuningnya 😒"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -191,9 +191,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** PRE_LCN_MULTI_EVIDENCE
 
-> "ah masa? aku beda malah (160)"
+> "ah masa? aku beda malah ✨ (160)"
 
-> "ah masa? aku beda malah beneran (160)"
+> "ah masa? aku beda malah beneran"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -205,9 +205,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Daviena, 58
 **Status jaringan akun:** tidak relevan
 
-> "sama2 kak semangat 😊"
+> "sama2 kak semangat ✨ (160)"
 
-> "sama2 kak semangat ✨"
+> "sama2 kak semangat 🙏 (160)"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -219,9 +219,9 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Konteks:** Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "noted kak makasih ya btw (160)"
+> "noted kak makasih ya!! (160)"
 
-> "noted kak makasih ya 🙏"
+> "noted kak makasih ya 😍 (160)"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.

@@ -1,7 +1,9 @@
 {
-  "analysis_scope": "COMMENT_LEVEL_EXACT_AND_NEAR_SIMILARITY",
+  "analysis_scope": "COMMENT_LEVEL_MULTI_ACCOUNT_SIMILARITY_GROUPS",
   "sentiment_attribute_status": "FINAL_MODEL_VALIDATED_SENTIMENT_V2",
   "method": {
+    "primary_unit": "similarity_group",
+    "pairwise_output_policy": "Full pair table is computed for metrics but no longer materialized; only capped pair evidence samples are written.",
     "normalization": [
       "Unicode NFKC normalization",
       "lowercase",
@@ -23,7 +25,11 @@
     },
     "top_k_neighbors": 20,
     "similarity_threshold": 0.7,
-    "cluster_threshold": 0.85
+    "cluster_threshold": 0.85,
+    "pair_evidence_per_group": 4,
+    "max_pair_evidence_rows": 5000,
+    "max_screenshot_groups": 120,
+    "max_screenshot_members_per_group": 8
   },
   "performance": {
     "unique_texts_fit": 29458,
@@ -37,7 +43,13 @@
     "pair_rows_before_canonical_dedup": 421478,
     "pair_rows_after_canonical_dedup": 421478
   },
-  "execution_time_seconds": 257.04,
+  "group_outputs": {
+    "n_similarity_groups": 1452,
+    "n_group_members": 10770,
+    "n_pair_evidence_sample_rows": 5000,
+    "n_screenshot_queue_rows": 933
+  },
+  "execution_time_seconds": 165.252,
   "source_hashes_before": {
     "dataset": "db11a4738a43aceafa01fe9b888e7c61a5168d9004f90ca4e254592b083978b2",
     "video_metadata_clean": "0cb228682705840fef691c2d9c6bcb38d6a4953985960d656394c067e7b666e9",
@@ -52,6 +64,11 @@
   },
   "outputs": [
     "output\\rm2_comment_similarity\\comment_similarity_pairs_all.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_pair_evidence_sample.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_groups.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_group_members.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_group_account_summary.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_screenshot_queue.csv",
     "output\\rm2_comment_similarity\\exact_duplicate_comment_groups.csv",
     "output\\rm2_comment_similarity\\exact_duplicate_comment_group_members.csv",
     "output\\rm2_comment_similarity\\near_similar_comment_clusters.csv",
@@ -65,6 +82,10 @@
     "output\\rm2_comment_similarity\\comment_similarity_by_actor_pair.csv",
     "output\\rm2_comment_similarity\\comment_similarity_by_brand.csv",
     "output\\rm2_comment_similarity\\comment_similarity_by_hcc.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_groups_by_category.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_groups_by_actor_scope.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_groups_by_brand.csv",
+    "output\\rm2_comment_similarity\\comment_similarity_groups_by_hcc.csv",
     "output\\rm2_comment_similarity\\comment_similarity_same_vs_cross_video.csv",
     "output\\rm2_comment_similarity\\comment_similarity_same_vs_cross_account.csv",
     "output\\rm2_comment_similarity\\comment_similarity_community_mass_network_overlap.csv",

@@ -9,8 +9,7 @@ outputs unless a future analysis run is explicitly planned and documented.
 - Package versions for final Sentiment V2 are stored in
   `output/rm2_sentiment/final/FINAL_SENTIMENT_ANALYSIS_MANIFEST.json`.
 - Git LFS is required. LFS-tracked artifacts include
-  `output/rm2_comment_similarity/comment_similarity_pairs_all.csv`,
-  `output/rm2_actor_type/account_interaction/community_mass_account_pairs.csv`, and
+  `output/rm2_actor_type/account_interaction/community_mass_account_pairs.csv` and
   `output/rm2_actor_type/gephi/gephi_community_mass_account_edges_all_evidence.csv`.
 
 After cloning, run:
@@ -74,7 +73,10 @@ without forcing counts to match.
 | LCN Community-Mass pairs | 306 |
 | pre-LCN multi-evidence pairs | 2943 |
 | pre-LCN single-evidence pairs | 454379 |
-| comment similarity pairs | 421478 |
+| comment similarity pairs computed, not fully materialized | 421478 |
+| comment similarity groups | 1452 |
+| multi-account similarity groups | 1241 |
+| screenshot-eligible similarity groups | 734 |
 | exact duplicate groups | 972 |
 | final sentiment status | `INDOBERT_V3_NOT_ACCEPTED_KEEP_V2` |
 

@@ -1,0 +1,4 @@
+primary_similarity_category,n_groups,n_comments,n_accounts,mean_similarity,n_presentation_eligible
+EXACT_DUPLICATE,657,8475,7998,0.9702528249089629,389
+NEAR_EXACT,431,1480,1389,0.9370689018997223,303
+HIGH_SIMILARITY,364,815,774,0.8817159283016962,215
