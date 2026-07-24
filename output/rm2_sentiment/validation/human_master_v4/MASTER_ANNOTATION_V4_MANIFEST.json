@@ -1,0 +1,40 @@
+{
+  "status": "MASTER_ANNOTATION_V4_READY_FOR_HUMAN_LABELING",
+  "created_at_utc": "2026-07-24T09:55:15.327500+00:00",
+  "rules": {
+    "label_source": "human annotation only",
+    "model_predictions_used_for_sampling_only": true,
+    "model_predictions_visible_to_annotators": false,
+    "training_run": false,
+    "threshold_selection": false,
+    "locked_test_evaluation": false,
+    "full_inference": false
+  },
+  "counts": {
+    "historical_development_final": 546,
+    "development_pending": 1300,
+    "locked_test_pending": 700,
+    "total_pending": 2000,
+    "total_master_rows": 3187
+  },
+  "workbooks": {
+    "master": "output/rm2_sentiment/validation/human_master_v4/human_annotation_master_v4.xlsx",
+    "development_annotator_1": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_development_annotator_1.xlsx",
+    "development_annotator_2": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_development_annotator_2.xlsx",
+    "development_adjudication": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_development_adjudication.xlsx",
+    "locked_test_annotator_1": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_locked_test_annotator_1.xlsx",
+    "locked_test_annotator_2": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_locked_test_annotator_2.xlsx",
+    "locked_test_adjudication": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_locked_test_adjudication.xlsx"
+  },
+  "source_inventory_rows": 57,
+  "input_sha256": {
+    "output/rm2_sentiment/validation/human_v2_positive_recall/human_label_registry.csv": "36326bd9a8cae8e30143ba5f08a1e94e13749851ddc689ac40fc7fb1c0accdcc",
+    "output/rm2_sentiment/validation/human_v2_positive_recall/positive_active_learning_blind.csv": "0f603e8dd54f7d0afefe9404d6b9fc439891229896dbceb2deb0d97397a2f5b3",
+    "output/rm2_sentiment/validation/human_v2_positive_recall/new_locked_test_final.csv": "d98d6f442657ff35e3aa1adefadb4e4734d960a1dda734f57f5a65b8b80802c4",
+    "output/rm2_sentiment/final/comment_sentiment_v2_observational.csv": "64b4fdacb9c623798035b5ed024e050d7e73de2a2260a7a8fcede5a4032b20d6",
+    "dataset.csv": "db11a4738a43aceafa01fe9b888e7c61a5168d9004f90ca4e254592b083978b2"
+  },
+  "validation_status": "MASTER_ANNOTATION_V4_READY_FOR_HUMAN_LABELING",
+  "validation_report": "output/rm2_sentiment/validation/human_master_v4/master_validation_report.csv",
+  "agreement_report": "output/rm2_sentiment/validation/human_master_v4/master_agreement_report.csv"
+}

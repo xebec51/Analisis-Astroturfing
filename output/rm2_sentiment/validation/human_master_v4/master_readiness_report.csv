@@ -1,0 +1,17 @@
+﻿metric,value,passed,notes
+status,MASTER_ANNOTATION_V4_READY_FOR_HUMAN_LABELING,True,
+historical_development_total,546,True,
+historical_development_negative,147,True,
+historical_development_neutral,286,True,
+historical_development_positive,113,True,
+pending_development,1300,True,
+pending_locked_test,700,True,
+total_pending_manual_annotation,2000,True,
+total_master_rows,3187,True,
+hard_duplicate_leakage,0,True,
+pending_inj_count,0,True,
+pending_missing_comment_text,1,True,Reported for annotators; No Text is an allowed manual label and is not auto-filled.
+master_workbook,output/rm2_sentiment/validation/human_master_v4/human_annotation_master_v4.xlsx,True,
+codebook,output/rm2_sentiment/validation/human_master_v4/SENTIMENT_ANNOTATION_CODEBOOK_V4.md,True,
+validation_status,MASTER_ANNOTATION_V4_READY_FOR_HUMAN_LABELING,True,Validation script result.
+agreement_status,PENDING_HUMAN_LABELS;PENDING_HUMAN_LABELS,True,Agreement is pending until annotator workbooks are completed.
