@@ -8,8 +8,10 @@ outputs unless a future analysis run is explicitly planned and documented.
 - Python version recorded by the final Sentiment V2 manifest: `3.12.2`.
 - Package versions for final Sentiment V2 are stored in
   `output/rm2_sentiment/final/FINAL_SENTIMENT_ANALYSIS_MANIFEST.json`.
-- Git LFS is required. The LFS-tracked artifact is
-  `output/rm2_comment_similarity/comment_similarity_pairs_all.csv`.
+- Git LFS is required. LFS-tracked artifacts include
+  `output/rm2_comment_similarity/comment_similarity_pairs_all.csv`,
+  `output/rm2_actor_type/account_interaction/community_mass_account_pairs.csv`, and
+  `output/rm2_actor_type/gephi/gephi_community_mass_account_edges_all_evidence.csv`.
 
 After cloning, run:
 
@@ -54,7 +56,29 @@ Repository organization does not rerun these pipelines.
 | `scripts/validate_notebook_paths.py` | static notebook audit | Safe to run. |
 | `scripts/print_pipeline_output_plan.py` | dry-run output plan | Safe to run. |
 
-## Expected Scientific Counts
+## 2026-07-24 IndoBERT V3 Rerun
+
+The branch `research/indobert-v3-full-rerun` documents a full RM1 rerun and Sentiment V3 experiment in
+`docs/INDOBERT_V3_FULL_RERUN_REPORT.md`. The rerun intentionally records differences from the older baseline
+without forcing counts to match.
+
+| metric | 2026-07-24 rerun |
+|---|---:|
+| dataset rows | 35334 |
+| LCN nodes | 724 |
+| LCN edges | 1359 |
+| HCC count | 42 |
+| HCC members | 218 |
+| HCC edges | 465 |
+| Community-Mass pairs | 457628 |
+| LCN Community-Mass pairs | 306 |
+| pre-LCN multi-evidence pairs | 2943 |
+| pre-LCN single-evidence pairs | 454379 |
+| comment similarity pairs | 421478 |
+| exact duplicate groups | 972 |
+| final sentiment status | `INDOBERT_V3_NOT_ACCEPTED_KEEP_V2` |
+
+## Historical Baseline Counts
 
 | metric | expected |
 |---|---:|
