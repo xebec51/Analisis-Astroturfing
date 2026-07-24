@@ -1,0 +1,147 @@
+{
+  "status": "INDOBERT_V3_DEVELOPMENT_COMPLETE",
+  "created_at_utc": "2026-07-24T04:50:18.127600+00:00",
+  "registry": "output/rm2_sentiment/validation/human_v3/human_label_registry_v3.csv",
+  "output_dir": "output/rm2_sentiment/experiments/indobert_v3",
+  "candidate_dir": "output/rm2_sentiment/model/indobert_v3_candidate",
+  "selection_basis": "out-of-fold development predictions only",
+  "locked_test_used_for_training_or_selection": false,
+  "positive_shift_policy": "No post-hoc Positive shifting; final candidate uses argmax with no low-confidence-to-Positive rule.",
+  "resource_note": "CPU runtime used frozen IndoBERT encoders plus supervised linear heads; full encoder fine-tuning is not claimed for resource-blocked models.",
+  "selected_trial": {
+    "trial_id": "apriandito__indobert-sentiment-classifier__weighted_cross_entropy_lr3em05_len256_warm0.06_wd0.05_gna",
+    "model_id": "apriandito/indobert-sentiment-classifier",
+    "revision": "ba24f8cea1c00090cc4fce2b63c61ed307943a78",
+    "training_mode": "frozen_encoder_linear_head_cpu",
+    "loss": "weighted_cross_entropy",
+    "learning_rate": 3e-05,
+    "max_length": 256,
+    "warmup_ratio": 0.06,
+    "weight_decay": 0.05,
+    "focal_gamma": "",
+    "n_seeds": 3,
+    "mean_accuracy": 0.49625,
+    "std_accuracy": 0.30052731434374924,
+    "mean_macro_f1": 0.47244219399408866,
+    "std_macro_f1": 0.28477369589279805,
+    "mean_weighted_f1": 0.4994409145421554,
+    "std_weighted_f1": 0.29844552702570204,
+    "mean_balanced_accuracy": 0.47867780367780366,
+    "std_balanced_accuracy": 0.28599063666849245,
+    "mean_mcc": 0.22929495699465793,
+    "std_mcc": 0.4207798010131546,
+    "mean_positive_recall": 0.39999999999999997,
+    "std_positive_recall": 0.22055333560544368,
+    "mean_positive_precision": 0.4012208386918427,
+    "std_positive_precision": 0.2514586799681417,
+    "mean_positive_f1": 0.39803434094327117,
+    "std_positive_f1": 0.23910381525708688,
+    "mean_ece": 0.27542358652999005,
+    "std_ece": 0.199134284207688,
+    "mean_brier_score": 0.7160869414332467,
+    "std_brier_score": 0.3644428512565264,
+    "mean_mean_confidence": 0.6084017052625615,
+    "std_mean_confidence": 0.028893632683224573,
+    "selected_for_freeze": true,
+    "median_best_epoch": 6.0
+  },
+  "candidate_config": {
+    "status": "INDOBERT_V3_CANDIDATE_FROZEN",
+    "created_at_utc": "2026-07-24T04:50:18.059048+00:00",
+    "model_id": "apriandito/indobert-sentiment-classifier",
+    "revision": "ba24f8cea1c00090cc4fce2b63c61ed307943a78",
+    "trust_remote_code": false,
+    "training_mode": "frozen_encoder_linear_head_cpu",
+    "encoder_update_status": "frozen_encoder_no_base_model_committed",
+    "classifier_head": "single linear layer trained on human-supervised development folds",
+    "preprocessing": {
+      "normalization": [
+        "Unicode NFKC",
+        "HTML entity unescape",
+        "control character removal",
+        "URL to HTTPURL",
+        "mention to @USER",
+        "whitespace normalization"
+      ],
+      "preserved": [
+        "negation",
+        "emoji",
+        "emoticon",
+        "elongated words",
+        "abbreviations",
+        "brand names",
+        "product names",
+        "numbers",
+        "question and exclamation marks",
+        "Indonesian-English code mixing"
+      ]
+    },
+    "context_format": "context [SEP] comment_text",
+    "allowed_context_fields": [
+      "product_category",
+      "brand_or_video_context"
+    ],
+    "forbidden_context_fields": [
+      "label",
+      "prediction",
+      "HCC goal",
+      "goal_orientation",
+      "confusion matrix",
+      "evaluation result"
+    ],
+    "label_mapping": {
+      "Negative": 0,
+      "Neutral": 1,
+      "Positive": 2
+    },
+    "hyperparameters": {
+      "loss": "weighted_cross_entropy",
+      "learning_rate": 3e-05,
+      "max_length": 256,
+      "warmup_ratio": 0.06,
+      "weight_decay": 0.05,
+      "focal_gamma": null,
+      "max_epochs": 6,
+      "early_stopping_patience": 2,
+      "gradient_clipping": 1.0,
+      "gradient_accumulation": 1,
+      "mixed_precision": false,
+      "class_weights_scope": "training fold only during OOF; full development pool for frozen candidate",
+      "threshold": {
+        "prediction_rule": "argmax",
+        "abstention_threshold": 0.0
+      },
+      "calibration": {
+        "method": "none",
+        "selection_metric": "development OOF ECE/Brier reported only"
+      },
+      "seed": 42
+    },
+    "development_data_hash": "93b8dc5f06d5068eff2f1bd813a96d42b5adcaf130c66c2f5bbc746c7afaeda8",
+    "package_versions": {
+      "python": "3.12.2",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.13.0+cpu",
+      "cuda_available": "False",
+      "device": "cpu",
+      "transformers": "5.14.1",
+      "sklearn": "1.5.2",
+      "safetensors": "0.8.0"
+    },
+    "artifacts": {
+      "linear_head_safetensors": "linear_head.safetensors",
+      "embedding_scaler": "embedding_scaler.joblib",
+      "tokenizer_dir": "tokenizer"
+    }
+  },
+  "package_versions": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.13.0+cpu",
+    "cuda_available": "False",
+    "device": "cpu",
+    "transformers": "5.14.1",
+    "sklearn": "1.5.2",
+    "safetensors": "0.8.0"
+  }
+}

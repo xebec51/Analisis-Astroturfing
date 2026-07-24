@@ -1,0 +1,168 @@
+{
+  "status": "HUMAN_LABEL_REGISTRY_V3_BUILT",
+  "created_at_utc": "2026-07-24T03:38:15.247028+00:00",
+  "rules": {
+    "ground_truth": "human annotation/adjudication only",
+    "classification_labels": [
+      "Negative",
+      "Neutral",
+      "Positive"
+    ],
+    "non_evaluable_labels": [
+      "",
+      "No Text",
+      "Uncertain"
+    ],
+    "excluded_id_prefix": "INJ",
+    "final_test_source": "output/rm2_sentiment/validation/human_v2/locked_test_v2_observational_final.csv",
+    "test_usage": "final evaluation only; not used for tuning/model selection/threshold/preprocessing",
+    "duplicate_policy": "exact and near-identical text clusters are not allowed to cross development/final-test or multiple development folds",
+    "positive_shift_policy": "no post-hoc Positive shifting is applied"
+  },
+  "input_checksums_sha256": {
+    "output/rm2_sentiment/validation/human_v1/sentiment_human_annotation_validated.csv": "e61e96a5111626bda3fa0d27b8eca3471faa0c7f97779e31d0b524b690abf559",
+    "output/rm2_sentiment/validation/human_v2/sentiment_human_annotation_v2_validated.csv": "f85142364dc89d555cc01920d46e4e05e62257dee724c51df89798f690de469e",
+    "output/rm2_sentiment/validation/human_v2/locked_test_v2_observational_final.csv": "d94d322a877523e1317c8036d37752c89ec524c09b36f673910cc5219d270828"
+  },
+  "counts": {
+    "registry_rows": 1179,
+    "development_evaluable_rows": 800,
+    "final_test_evaluable_rows": 274,
+    "excluded_rows": 105,
+    "text_clusters": 1142,
+    "development_cv_groups": 58
+  },
+  "label_distribution": [
+    {
+      "split_family": "development",
+      "registry_role": "development_historical_v1",
+      "label": "Negative",
+      "count": 69,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_historical_v1",
+      "label": "Neutral",
+      "count": 144,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_historical_v1",
+      "label": "Positive",
+      "count": 43,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_v1",
+      "label": "Negative",
+      "count": 57,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_v1",
+      "label": "Neutral",
+      "count": 146,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_v1",
+      "label": "Positive",
+      "count": 53,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_v2",
+      "label": "Negative",
+      "count": 90,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_v2",
+      "label": "Neutral",
+      "count": 139,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "development",
+      "registry_role": "development_v2",
+      "label": "Positive",
+      "count": 59,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "excluded",
+      "registry_role": "excluded_final_test_text_cluster_overlap",
+      "label": "Neutral",
+      "count": 4,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "excluded",
+      "registry_role": "excluded_final_test_text_cluster_overlap",
+      "label": "Positive",
+      "count": 2,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "excluded",
+      "registry_role": "excluded_injected",
+      "label": "Positive",
+      "count": 6,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "excluded",
+      "registry_role": "excluded_injected",
+      "label": "Uncertain",
+      "count": 4,
+      "evaluable_three_class": false
+    },
+    {
+      "split_family": "excluded",
+      "registry_role": "excluded_non_evaluable",
+      "label": "No Text",
+      "count": 50,
+      "evaluable_three_class": false
+    },
+    {
+      "split_family": "excluded",
+      "registry_role": "excluded_non_evaluable",
+      "label": "Uncertain",
+      "count": 39,
+      "evaluable_three_class": false
+    },
+    {
+      "split_family": "final_test",
+      "registry_role": "final_test_v3",
+      "label": "Negative",
+      "count": 41,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "final_test",
+      "registry_role": "final_test_v3",
+      "label": "Neutral",
+      "count": 186,
+      "evaluable_three_class": true
+    },
+    {
+      "split_family": "final_test",
+      "registry_role": "final_test_v3",
+      "label": "Positive",
+      "count": 47,
+      "evaluable_three_class": true
+    }
+  ],
+  "outputs": {
+    "registry": "output/rm2_sentiment/validation/human_v3/human_label_registry_v3.csv",
+    "conflict_audit": "output/rm2_sentiment/validation/human_v3/human_label_conflict_audit_v3.csv",
+    "split_manifest": "output/rm2_sentiment/validation/human_v3/data_split_manifest_v3.csv"
+  }
+}
