@@ -1,0 +1,8 @@
+metric,value,notes
+locked_test_v2_status,BLOCKED_SYNTHETIC_IDS,Final locked-test evaluation is blocked until synthetic locked-test IDs are replaced and manually labeled.
+locked_test_v2_manifest_rows,300,
+locked_test_v2_observational_rows,292,
+locked_test_v2_synthetic_rows,8,
+locked_test_v2_unresolved_rows,0,
+replacement_package_rows,8,Blank human annotation package only; not eligible for evaluation until completed.
+locked_test_v2_observational_comment_id_sha256,5abe1dbc7e743cd460be5ba4ab37c7d98ee9f2e07ad89132844112748ade40fe,Hash after excluding synthetic IDs; not final complete locked test.

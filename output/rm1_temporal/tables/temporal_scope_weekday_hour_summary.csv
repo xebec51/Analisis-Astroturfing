@@ -1,0 +1,505 @@
+﻿scope,weekday_number,hour_local,weekday_name_id,n_comments,n_accounts,n_unique_videos
+All Dataset,1,0,Senin,102,89,26
+All Dataset,1,1,Senin,69,64,19
+All Dataset,1,2,Senin,34,34,16
+All Dataset,1,3,Senin,23,23,10
+All Dataset,1,4,Senin,61,49,18
+All Dataset,1,5,Senin,88,85,26
+All Dataset,1,6,Senin,141,134,30
+All Dataset,1,7,Senin,254,217,31
+All Dataset,1,8,Senin,211,197,38
+All Dataset,1,9,Senin,202,189,35
+All Dataset,1,10,Senin,235,214,39
+All Dataset,1,11,Senin,231,199,37
+All Dataset,1,12,Senin,198,176,37
+All Dataset,1,13,Senin,241,222,41
+All Dataset,1,14,Senin,201,188,38
+All Dataset,1,15,Senin,203,184,39
+All Dataset,1,16,Senin,186,178,37
+All Dataset,1,17,Senin,203,179,43
+All Dataset,1,18,Senin,185,170,46
+All Dataset,1,19,Senin,186,166,40
+All Dataset,1,20,Senin,217,203,51
+All Dataset,1,21,Senin,194,177,45
+All Dataset,1,22,Senin,160,148,44
+All Dataset,1,23,Senin,116,109,37
+All Dataset,2,0,Selasa,70,67,30
+All Dataset,2,1,Selasa,38,37,21
+All Dataset,2,2,Selasa,24,23,15
+All Dataset,2,3,Selasa,28,23,12
+All Dataset,2,4,Selasa,29,27,15
+All Dataset,2,5,Selasa,80,75,35
+All Dataset,2,6,Selasa,99,96,34
+All Dataset,2,7,Selasa,148,131,41
+All Dataset,2,8,Selasa,118,113,43
+All Dataset,2,9,Selasa,172,145,43
+All Dataset,2,10,Selasa,654,627,43
+All Dataset,2,11,Selasa,669,639,40
+All Dataset,2,12,Selasa,531,516,36
+All Dataset,2,13,Selasa,378,346,43
+All Dataset,2,14,Selasa,342,299,47
+All Dataset,2,15,Selasa,264,234,38
+All Dataset,2,16,Selasa,369,338,46
+All Dataset,2,17,Selasa,486,462,42
+All Dataset,2,18,Selasa,487,447,45
+All Dataset,2,19,Selasa,403,388,45
+All Dataset,2,20,Selasa,453,415,47
+All Dataset,2,21,Selasa,336,315,40
+All Dataset,2,22,Selasa,267,256,40
+All Dataset,2,23,Selasa,159,148,33
+All Dataset,3,0,Rabu,154,141,27
+All Dataset,3,1,Rabu,57,54,18
+All Dataset,3,2,Rabu,42,38,13
+All Dataset,3,3,Rabu,44,40,18
+All Dataset,3,4,Rabu,52,47,16
+All Dataset,3,5,Rabu,134,131,29
+All Dataset,3,6,Rabu,194,192,26
+All Dataset,3,7,Rabu,224,207,36
+All Dataset,3,8,Rabu,279,256,39
+All Dataset,3,9,Rabu,282,251,44
+All Dataset,3,10,Rabu,229,218,49
+All Dataset,3,11,Rabu,259,238,44
+All Dataset,3,12,Rabu,227,205,40
+All Dataset,3,13,Rabu,238,215,46
+All Dataset,3,14,Rabu,228,203,41
+All Dataset,3,15,Rabu,203,181,46
+All Dataset,3,16,Rabu,172,169,42
+All Dataset,3,17,Rabu,220,212,44
+All Dataset,3,18,Rabu,279,260,46
+All Dataset,3,19,Rabu,345,309,48
+All Dataset,3,20,Rabu,314,291,44
+All Dataset,3,21,Rabu,354,328,43
+All Dataset,3,22,Rabu,354,314,40
+All Dataset,3,23,Rabu,203,184,38
+All Dataset,4,0,Kamis,138,131,30
+All Dataset,4,1,Kamis,85,82,21
+All Dataset,4,2,Kamis,76,72,19
+All Dataset,4,3,Kamis,52,49,12
+All Dataset,4,4,Kamis,83,79,18
+All Dataset,4,5,Kamis,212,196,28
+All Dataset,4,6,Kamis,287,265,34
+All Dataset,4,7,Kamis,390,370,35
+All Dataset,4,8,Kamis,462,439,41
+All Dataset,4,9,Kamis,415,379,40
+All Dataset,4,10,Kamis,308,286,43
+All Dataset,4,11,Kamis,249,234,40
+All Dataset,4,12,Kamis,336,316,44
+All Dataset,4,13,Kamis,329,303,44
+All Dataset,4,14,Kamis,286,276,42
+All Dataset,4,15,Kamis,268,250,41
+All Dataset,4,16,Kamis,271,244,43
+All Dataset,4,17,Kamis,290,248,45
+All Dataset,4,18,Kamis,221,199,42
+All Dataset,4,19,Kamis,293,269,46
+All Dataset,4,20,Kamis,299,274,45
+All Dataset,4,21,Kamis,271,253,48
+All Dataset,4,22,Kamis,243,207,40
+All Dataset,4,23,Kamis,149,136,38
+All Dataset,5,0,Jumat,104,82,28
+All Dataset,5,1,Jumat,71,66,22
+All Dataset,5,2,Jumat,43,40,20
+All Dataset,5,3,Jumat,24,24,15
+All Dataset,5,4,Jumat,61,56,27
+All Dataset,5,5,Jumat,99,96,30
+All Dataset,5,6,Jumat,142,132,32
+All Dataset,5,7,Jumat,241,221,37
+All Dataset,5,8,Jumat,257,230,41
+All Dataset,5,9,Jumat,218,185,42
+All Dataset,5,10,Jumat,260,227,43
+All Dataset,5,11,Jumat,257,226,43
+All Dataset,5,12,Jumat,310,275,45
+All Dataset,5,13,Jumat,209,186,47
+All Dataset,5,14,Jumat,202,188,44
+All Dataset,5,15,Jumat,187,178,45
+All Dataset,5,16,Jumat,183,161,39
+All Dataset,5,17,Jumat,189,165,42
+All Dataset,5,18,Jumat,211,192,41
+All Dataset,5,19,Jumat,239,219,44
+All Dataset,5,20,Jumat,215,207,46
+All Dataset,5,21,Jumat,192,174,44
+All Dataset,5,22,Jumat,177,163,43
+All Dataset,5,23,Jumat,103,99,36
+All Dataset,6,0,Sabtu,85,82,31
+All Dataset,6,1,Sabtu,36,35,18
+All Dataset,6,2,Sabtu,33,32,17
+All Dataset,6,3,Sabtu,24,23,14
+All Dataset,6,4,Sabtu,36,33,25
+All Dataset,6,5,Sabtu,65,62,30
+All Dataset,6,6,Sabtu,109,98,32
+All Dataset,6,7,Sabtu,130,122,39
+All Dataset,6,8,Sabtu,192,174,38
+All Dataset,6,9,Sabtu,200,183,45
+All Dataset,6,10,Sabtu,203,189,38
+All Dataset,6,11,Sabtu,242,196,45
+All Dataset,6,12,Sabtu,200,174,44
+All Dataset,6,13,Sabtu,200,174,40
+All Dataset,6,14,Sabtu,202,187,45
+All Dataset,6,15,Sabtu,424,397,39
+All Dataset,6,16,Sabtu,246,229,39
+All Dataset,6,17,Sabtu,329,265,47
+All Dataset,6,18,Sabtu,230,214,44
+All Dataset,6,19,Sabtu,226,213,46
+All Dataset,6,20,Sabtu,228,212,45
+All Dataset,6,21,Sabtu,218,204,42
+All Dataset,6,22,Sabtu,204,191,46
+All Dataset,6,23,Sabtu,131,118,32
+All Dataset,7,0,Minggu,78,77,29
+All Dataset,7,1,Minggu,47,45,20
+All Dataset,7,2,Minggu,40,34,21
+All Dataset,7,3,Minggu,46,43,17
+All Dataset,7,4,Minggu,40,37,19
+All Dataset,7,5,Minggu,65,62,26
+All Dataset,7,6,Minggu,134,124,39
+All Dataset,7,7,Minggu,125,116,38
+All Dataset,7,8,Minggu,179,166,44
+All Dataset,7,9,Minggu,204,192,42
+All Dataset,7,10,Minggu,250,207,48
+All Dataset,7,11,Minggu,210,188,45
+All Dataset,7,12,Minggu,156,146,41
+All Dataset,7,13,Minggu,188,177,40
+All Dataset,7,14,Minggu,184,169,44
+All Dataset,7,15,Minggu,209,191,42
+All Dataset,7,16,Minggu,158,148,43
+All Dataset,7,17,Minggu,193,173,40
+All Dataset,7,18,Minggu,196,180,45
+All Dataset,7,19,Minggu,214,198,43
+All Dataset,7,20,Minggu,205,194,45
+All Dataset,7,21,Minggu,235,210,43
+All Dataset,7,22,Minggu,224,199,45
+All Dataset,7,23,Minggu,176,158,36
+LCN,1,0,Senin,8,8,8
+LCN,1,1,Senin,2,2,2
+LCN,1,2,Senin,1,1,1
+LCN,1,3,Senin,0,0,0
+LCN,1,4,Senin,3,3,2
+LCN,1,5,Senin,8,8,5
+LCN,1,6,Senin,12,12,5
+LCN,1,7,Senin,18,18,7
+LCN,1,8,Senin,20,20,10
+LCN,1,9,Senin,3,3,3
+LCN,1,10,Senin,26,21,11
+LCN,1,11,Senin,22,19,14
+LCN,1,12,Senin,20,20,14
+LCN,1,13,Senin,21,17,14
+LCN,1,14,Senin,12,12,9
+LCN,1,15,Senin,19,19,14
+LCN,1,16,Senin,18,14,8
+LCN,1,17,Senin,30,29,14
+LCN,1,18,Senin,18,18,12
+LCN,1,19,Senin,20,20,10
+LCN,1,20,Senin,22,22,14
+LCN,1,21,Senin,21,21,12
+LCN,1,22,Senin,32,32,16
+LCN,1,23,Senin,25,22,12
+LCN,2,0,Selasa,12,12,5
+LCN,2,1,Selasa,6,6,6
+LCN,2,2,Selasa,4,4,4
+LCN,2,3,Selasa,9,9,3
+LCN,2,4,Selasa,10,8,4
+LCN,2,5,Selasa,9,8,4
+LCN,2,6,Selasa,13,13,6
+LCN,2,7,Selasa,25,21,8
+LCN,2,8,Selasa,18,18,12
+LCN,2,9,Selasa,11,11,7
+LCN,2,10,Selasa,31,31,19
+LCN,2,11,Selasa,36,32,14
+LCN,2,12,Selasa,16,16,10
+LCN,2,13,Selasa,23,23,14
+LCN,2,14,Selasa,32,30,24
+LCN,2,15,Selasa,14,13,9
+LCN,2,16,Selasa,19,19,15
+LCN,2,17,Selasa,27,24,13
+LCN,2,18,Selasa,32,32,14
+LCN,2,19,Selasa,13,13,10
+LCN,2,20,Selasa,42,36,18
+LCN,2,21,Selasa,27,19,15
+LCN,2,22,Selasa,23,23,15
+LCN,2,23,Selasa,14,14,7
+LCN,3,0,Rabu,21,12,8
+LCN,3,1,Rabu,0,0,0
+LCN,3,2,Rabu,0,0,0
+LCN,3,3,Rabu,4,1,4
+LCN,3,4,Rabu,1,1,1
+LCN,3,5,Rabu,2,2,2
+LCN,3,6,Rabu,4,4,4
+LCN,3,7,Rabu,16,16,7
+LCN,3,8,Rabu,18,18,9
+LCN,3,9,Rabu,22,22,14
+LCN,3,10,Rabu,17,16,13
+LCN,3,11,Rabu,15,14,12
+LCN,3,12,Rabu,16,12,7
+LCN,3,13,Rabu,23,22,14
+LCN,3,14,Rabu,21,21,13
+LCN,3,15,Rabu,19,19,15
+LCN,3,16,Rabu,18,18,15
+LCN,3,17,Rabu,30,30,13
+LCN,3,18,Rabu,36,35,17
+LCN,3,19,Rabu,33,30,21
+LCN,3,20,Rabu,25,23,18
+LCN,3,21,Rabu,33,27,18
+LCN,3,22,Rabu,25,24,14
+LCN,3,23,Rabu,8,8,7
+LCN,4,0,Kamis,12,12,9
+LCN,4,1,Kamis,4,4,4
+LCN,4,2,Kamis,5,5,3
+LCN,4,3,Kamis,3,3,3
+LCN,4,4,Kamis,2,2,2
+LCN,4,5,Kamis,10,10,6
+LCN,4,6,Kamis,10,10,7
+LCN,4,7,Kamis,9,9,6
+LCN,4,8,Kamis,23,23,7
+LCN,4,9,Kamis,20,18,15
+LCN,4,10,Kamis,27,27,15
+LCN,4,11,Kamis,17,17,11
+LCN,4,12,Kamis,25,25,21
+LCN,4,13,Kamis,21,21,17
+LCN,4,14,Kamis,11,11,10
+LCN,4,15,Kamis,28,28,16
+LCN,4,16,Kamis,45,40,13
+LCN,4,17,Kamis,39,36,15
+LCN,4,18,Kamis,17,17,10
+LCN,4,19,Kamis,52,46,17
+LCN,4,20,Kamis,30,29,15
+LCN,4,21,Kamis,23,22,16
+LCN,4,22,Kamis,25,25,16
+LCN,4,23,Kamis,11,11,8
+LCN,5,0,Jumat,12,11,11
+LCN,5,1,Jumat,16,14,6
+LCN,5,2,Jumat,4,4,4
+LCN,5,3,Jumat,1,1,1
+LCN,5,4,Jumat,4,4,4
+LCN,5,5,Jumat,15,15,10
+LCN,5,6,Jumat,7,7,5
+LCN,5,7,Jumat,10,10,8
+LCN,5,8,Jumat,20,18,12
+LCN,5,9,Jumat,13,13,10
+LCN,5,10,Jumat,21,20,10
+LCN,5,11,Jumat,6,6,6
+LCN,5,12,Jumat,39,34,17
+LCN,5,13,Jumat,24,20,16
+LCN,5,14,Jumat,11,11,7
+LCN,5,15,Jumat,14,14,9
+LCN,5,16,Jumat,19,15,13
+LCN,5,17,Jumat,14,14,11
+LCN,5,18,Jumat,9,9,9
+LCN,5,19,Jumat,23,18,12
+LCN,5,20,Jumat,20,20,11
+LCN,5,21,Jumat,17,17,12
+LCN,5,22,Jumat,21,20,17
+LCN,5,23,Jumat,10,10,8
+LCN,6,0,Sabtu,12,12,10
+LCN,6,1,Sabtu,3,3,3
+LCN,6,2,Sabtu,7,7,5
+LCN,6,3,Sabtu,3,3,2
+LCN,6,4,Sabtu,3,3,3
+LCN,6,5,Sabtu,10,10,6
+LCN,6,6,Sabtu,18,13,8
+LCN,6,7,Sabtu,16,15,14
+LCN,6,8,Sabtu,21,20,11
+LCN,6,9,Sabtu,17,15,14
+LCN,6,10,Sabtu,36,30,18
+LCN,6,11,Sabtu,37,35,20
+LCN,6,12,Sabtu,14,14,12
+LCN,6,13,Sabtu,11,11,9
+LCN,6,14,Sabtu,6,6,5
+LCN,6,15,Sabtu,45,45,11
+LCN,6,16,Sabtu,26,26,10
+LCN,6,17,Sabtu,35,35,17
+LCN,6,18,Sabtu,17,17,12
+LCN,6,19,Sabtu,13,11,11
+LCN,6,20,Sabtu,19,19,12
+LCN,6,21,Sabtu,33,33,18
+LCN,6,22,Sabtu,15,15,9
+LCN,6,23,Sabtu,11,11,6
+LCN,7,0,Minggu,4,4,4
+LCN,7,1,Minggu,4,4,4
+LCN,7,2,Minggu,4,4,4
+LCN,7,3,Minggu,10,10,4
+LCN,7,4,Minggu,3,3,3
+LCN,7,5,Minggu,2,2,2
+LCN,7,6,Minggu,21,21,11
+LCN,7,7,Minggu,5,5,5
+LCN,7,8,Minggu,28,24,16
+LCN,7,9,Minggu,15,15,11
+LCN,7,10,Minggu,29,26,22
+LCN,7,11,Minggu,28,28,19
+LCN,7,12,Minggu,11,11,8
+LCN,7,13,Minggu,15,11,6
+LCN,7,14,Minggu,13,13,10
+LCN,7,15,Minggu,17,17,11
+LCN,7,16,Minggu,14,13,11
+LCN,7,17,Minggu,20,19,11
+LCN,7,18,Minggu,21,21,16
+LCN,7,19,Minggu,19,18,11
+LCN,7,20,Minggu,18,18,11
+LCN,7,21,Minggu,14,14,10
+LCN,7,22,Minggu,4,4,4
+LCN,7,23,Minggu,13,12,10
+HCC,1,0,Senin,3,3,3
+HCC,1,1,Senin,0,0,0
+HCC,1,2,Senin,0,0,0
+HCC,1,3,Senin,0,0,0
+HCC,1,4,Senin,0,0,0
+HCC,1,5,Senin,4,4,1
+HCC,1,6,Senin,7,7,1
+HCC,1,7,Senin,13,13,3
+HCC,1,8,Senin,8,8,3
+HCC,1,9,Senin,0,0,0
+HCC,1,10,Senin,15,10,3
+HCC,1,11,Senin,2,2,2
+HCC,1,12,Senin,4,4,2
+HCC,1,13,Senin,5,5,1
+HCC,1,14,Senin,4,4,2
+HCC,1,15,Senin,7,7,3
+HCC,1,16,Senin,10,6,2
+HCC,1,17,Senin,3,3,3
+HCC,1,18,Senin,4,4,2
+HCC,1,19,Senin,5,5,4
+HCC,1,20,Senin,3,3,2
+HCC,1,21,Senin,7,7,4
+HCC,1,22,Senin,9,9,3
+HCC,1,23,Senin,15,12,3
+HCC,2,0,Selasa,1,1,1
+HCC,2,1,Selasa,0,0,0
+HCC,2,2,Selasa,2,2,2
+HCC,2,3,Selasa,5,5,1
+HCC,2,4,Selasa,6,4,1
+HCC,2,5,Selasa,7,6,3
+HCC,2,6,Selasa,7,7,2
+HCC,2,7,Selasa,9,5,1
+HCC,2,8,Selasa,5,5,2
+HCC,2,9,Selasa,5,5,2
+HCC,2,10,Selasa,11,11,6
+HCC,2,11,Selasa,14,10,3
+HCC,2,12,Selasa,3,3,3
+HCC,2,13,Selasa,10,10,4
+HCC,2,14,Selasa,6,5,6
+HCC,2,15,Selasa,2,2,2
+HCC,2,16,Selasa,6,6,3
+HCC,2,17,Selasa,17,14,4
+HCC,2,18,Selasa,7,7,1
+HCC,2,19,Selasa,0,0,0
+HCC,2,20,Selasa,22,17,5
+HCC,2,21,Selasa,3,3,3
+HCC,2,22,Selasa,7,7,5
+HCC,2,23,Selasa,7,7,2
+HCC,3,0,Rabu,15,6,2
+HCC,3,1,Rabu,0,0,0
+HCC,3,2,Rabu,0,0,0
+HCC,3,3,Rabu,0,0,0
+HCC,3,4,Rabu,0,0,0
+HCC,3,5,Rabu,0,0,0
+HCC,3,6,Rabu,1,1,1
+HCC,3,7,Rabu,12,12,4
+HCC,3,8,Rabu,11,11,3
+HCC,3,9,Rabu,10,10,4
+HCC,3,10,Rabu,3,3,2
+HCC,3,11,Rabu,5,5,3
+HCC,3,12,Rabu,11,7,3
+HCC,3,13,Rabu,7,7,2
+HCC,3,14,Rabu,6,6,3
+HCC,3,15,Rabu,3,3,3
+HCC,3,16,Rabu,4,4,4
+HCC,3,17,Rabu,14,14,5
+HCC,3,18,Rabu,3,3,3
+HCC,3,19,Rabu,14,14,5
+HCC,3,20,Rabu,5,5,5
+HCC,3,21,Rabu,7,7,1
+HCC,3,22,Rabu,10,10,4
+HCC,3,23,Rabu,1,1,1
+HCC,4,0,Kamis,0,0,0
+HCC,4,1,Kamis,0,0,0
+HCC,4,2,Kamis,0,0,0
+HCC,4,3,Kamis,0,0,0
+HCC,4,4,Kamis,0,0,0
+HCC,4,5,Kamis,6,6,2
+HCC,4,6,Kamis,3,3,3
+HCC,4,7,Kamis,2,2,2
+HCC,4,8,Kamis,20,20,5
+HCC,4,9,Kamis,3,3,2
+HCC,4,10,Kamis,5,5,5
+HCC,4,11,Kamis,4,4,2
+HCC,4,12,Kamis,4,4,4
+HCC,4,13,Kamis,3,3,3
+HCC,4,14,Kamis,2,2,2
+HCC,4,15,Kamis,13,13,4
+HCC,4,16,Kamis,33,28,8
+HCC,4,17,Kamis,28,25,8
+HCC,4,18,Kamis,1,1,1
+HCC,4,19,Kamis,20,14,4
+HCC,4,20,Kamis,12,11,5
+HCC,4,21,Kamis,9,9,4
+HCC,4,22,Kamis,6,6,3
+HCC,4,23,Kamis,3,3,2
+HCC,5,0,Jumat,2,2,2
+HCC,5,1,Jumat,7,7,2
+HCC,5,2,Jumat,0,0,0
+HCC,5,3,Jumat,0,0,0
+HCC,5,4,Jumat,1,1,1
+HCC,5,5,Jumat,7,7,3
+HCC,5,6,Jumat,1,1,1
+HCC,5,7,Jumat,0,0,0
+HCC,5,8,Jumat,8,8,3
+HCC,5,9,Jumat,1,1,1
+HCC,5,10,Jumat,4,4,2
+HCC,5,11,Jumat,0,0,0
+HCC,5,12,Jumat,26,21,7
+HCC,5,13,Jumat,4,4,4
+HCC,5,14,Jumat,1,1,1
+HCC,5,15,Jumat,9,9,4
+HCC,5,16,Jumat,6,5,2
+HCC,5,17,Jumat,4,4,4
+HCC,5,18,Jumat,1,1,1
+HCC,5,19,Jumat,11,6,1
+HCC,5,20,Jumat,5,5,1
+HCC,5,21,Jumat,6,6,3
+HCC,5,22,Jumat,4,4,4
+HCC,5,23,Jumat,1,1,1
+HCC,6,0,Sabtu,4,4,3
+HCC,6,1,Sabtu,0,0,0
+HCC,6,2,Sabtu,2,2,2
+HCC,6,3,Sabtu,0,0,0
+HCC,6,4,Sabtu,0,0,0
+HCC,6,5,Sabtu,5,5,1
+HCC,6,6,Sabtu,13,8,3
+HCC,6,7,Sabtu,2,2,2
+HCC,6,8,Sabtu,10,10,4
+HCC,6,9,Sabtu,0,0,0
+HCC,6,10,Sabtu,11,9,2
+HCC,6,11,Sabtu,19,18,7
+HCC,6,12,Sabtu,5,5,5
+HCC,6,13,Sabtu,2,2,2
+HCC,6,14,Sabtu,1,1,1
+HCC,6,15,Sabtu,7,7,3
+HCC,6,16,Sabtu,7,7,3
+HCC,6,17,Sabtu,15,15,7
+HCC,6,18,Sabtu,8,8,4
+HCC,6,19,Sabtu,0,0,0
+HCC,6,20,Sabtu,8,8,4
+HCC,6,21,Sabtu,10,10,2
+HCC,6,22,Sabtu,9,9,4
+HCC,6,23,Sabtu,7,7,2
+HCC,7,0,Minggu,1,1,1
+HCC,7,1,Minggu,2,2,2
+HCC,7,2,Minggu,1,1,1
+HCC,7,3,Minggu,2,2,2
+HCC,7,4,Minggu,0,0,0
+HCC,7,5,Minggu,0,0,0
+HCC,7,6,Minggu,8,8,2
+HCC,7,7,Minggu,0,0,0
+HCC,7,8,Minggu,13,9,5
+HCC,7,9,Minggu,6,6,4
+HCC,7,10,Minggu,8,8,4
+HCC,7,11,Minggu,2,2,2
+HCC,7,12,Minggu,2,2,2
+HCC,7,13,Minggu,9,5,1
+HCC,7,14,Minggu,1,1,1
+HCC,7,15,Minggu,5,5,1
+HCC,7,16,Minggu,0,0,0
+HCC,7,17,Minggu,5,5,3
+HCC,7,18,Minggu,4,4,4
+HCC,7,19,Minggu,6,6,1
+HCC,7,20,Minggu,8,8,2
+HCC,7,21,Minggu,2,2,2
+HCC,7,22,Minggu,1,1,1
+HCC,7,23,Minggu,1,1,1

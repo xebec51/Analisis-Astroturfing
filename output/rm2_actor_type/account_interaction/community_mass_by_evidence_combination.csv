@@ -1,0 +1,5 @@
+evidence_combination,n_pairs,n_community_accounts,n_mass_accounts,total_final_weight,mean_final_weight
+All three evidence,1,1,1,0.6607142857142857,0.6607142857142857
+Co-conv + Co-reply,27,25,27,16.339285714285715,0.6051587301587302
+Co-conv + Co-temporal,2670,194,1301,673.75,0.25234082397003743
+Co-conv only,432125,218,26164,54863.0,0.12696094879953718

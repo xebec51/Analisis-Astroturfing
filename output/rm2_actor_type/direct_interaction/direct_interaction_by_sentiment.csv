@@ -1,0 +1,2 @@
+sentiment_attribute_status,verified_reply_events,sentiment_coverage,notes
+DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,0,0.0,"Sentiment V2 development model is frozen, but final inference is blocked until locked-test replacement labels are complete; the direct-reply layer stores structure only."

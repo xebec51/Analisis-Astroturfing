@@ -1,0 +1,7 @@
+actor_type_pair,n_edges,edge_percentage,total_weight,weight_percentage,mean_weight,median_weight,max_weight,n_unique_source_nodes,n_unique_target_nodes,n_unique_nodes_involved
+Individual–Individual,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0
+Individual–Community,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0
+Individual–Mass,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0
+Community–Community,464,34.193,412.464286,40.586,0.888932,0.75,2.0,172,170,218
+Community–Mass,305,22.476,165.125,16.248,0.541393,0.5,1.875,82,74,117
+Mass–Mass,588,43.331,438.678571,43.166,0.746052,0.625,2.0,276,286,477

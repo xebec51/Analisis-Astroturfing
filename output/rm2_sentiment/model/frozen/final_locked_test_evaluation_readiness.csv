@@ -1,0 +1,6 @@
+metric,value,passed,notes
+final_locked_test_evaluation_status,FINAL_LOCKED_TEST_EVALUATED_ONCE,True,Evaluation lock exists and final model is accepted.
+final_acceptance_status,FINAL_MODEL_VALIDATED,True,Full inference was allowed by acceptance gates.
+selected_threshold,0.42,True,Frozen threshold used for locked test and full inference.
+full_inference_generated,33063,True,Observational output generated separately from INJ diagnostic.
+injected_diagnostic_generated,784,True,INJ rows are not included in primary denominator.

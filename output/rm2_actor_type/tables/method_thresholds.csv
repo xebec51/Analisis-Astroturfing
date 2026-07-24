@@ -1,0 +1,6 @@
+parameter,value,interpretation
+ACCOUNT_GOAL_MIN_COMMENTS,3,Minimum valid text comments for account-level goals.
+MASS_TEMPORAL_WINDOW_MINUTES,60,Mass comment must appear after an HCC comment in this window.
+ANONYMIZE_PUBLIC_MASS_ACTORS,True,Public Mass Actor usernames are replaced with deterministic hashes.
+strong_association_score,3*verified_direct_interaction_count + 2*temporal_mass_comment_count,Shared-video context is not included in strong association score.
+contextual_association_score,strong_association_score + shared_video_context_count,"Descriptive context score, not an influence measure."

@@ -1,0 +1,31 @@
+metric,expected,observed,status,notes
+annotator_1_required_columns,all required columns,all present,PASS,
+annotator_1_development_v2_count,300,300,PASS,
+annotator_1_locked_test_v2_count,300,300,PASS,
+annotator_1_unique_comment_ids,600,600,PASS,
+annotator_1_sentiment_label_validity,allowed labels when completed,blank=600,NOT_AVAILABLE,Template labels are still blank.
+annotator_1_sentiment_target_validity,allowed labels when completed,blank=600,NOT_AVAILABLE,Template labels are still blank.
+annotator_1_complaint_scope_validity,allowed labels when completed,blank=600,NOT_AVAILABLE,Template labels are still blank.
+annotator_2_required_columns,all required columns,all present,PASS,
+annotator_2_development_v2_count,300,300,PASS,
+annotator_2_locked_test_v2_count,300,300,PASS,
+annotator_2_unique_comment_ids,600,600,PASS,
+annotator_2_sentiment_label_validity,allowed labels when completed,blank=600,NOT_AVAILABLE,Template labels are still blank.
+annotator_2_sentiment_target_validity,allowed labels when completed,blank=600,NOT_AVAILABLE,Template labels are still blank.
+annotator_2_complaint_scope_validity,allowed labels when completed,blank=600,NOT_AVAILABLE,Template labels are still blank.
+annotator_files_same_comment_ids,same 600 IDs,0,PASS,
+development_locked_overlap,0,0,PASS,
+v1_v2_overlap,0,0,PASS,
+locked_manifest_count,300,300,PASS,
+locked_manifest_matches_annotator_file,same locked_test_v2 IDs,0,PASS,
+provenance_v2_count,600,600,PASS,
+provenance_v1_retained,current V1 IDs included,0,PASS,
+sentiment_label_agreement,completed annotator labels,not available,NOT_AVAILABLE,No completed labels yet.
+sentiment_label_cohen_kappa,completed annotator labels,not available,NOT_AVAILABLE,No completed labels yet.
+sentiment_target_agreement,completed annotator labels,not available,NOT_AVAILABLE,No completed labels yet.
+sentiment_target_cohen_kappa,completed annotator labels,not available,NOT_AVAILABLE,No completed labels yet.
+complaint_scope_agreement,completed annotator labels,not available,NOT_AVAILABLE,No completed labels yet.
+complaint_scope_cohen_kappa,completed annotator labels,not available,NOT_AVAILABLE,No completed labels yet.
+adjudicated_sentiment_label_coverage,complete after adjudication,blank=600,NOT_AVAILABLE,Template labels are still blank.
+adjudicated_sentiment_target_coverage,complete after adjudication,blank=600,NOT_AVAILABLE,Template labels are still blank.
+adjudicated_complaint_scope_coverage,complete after adjudication,blank=600,NOT_AVAILABLE,Template labels are still blank.

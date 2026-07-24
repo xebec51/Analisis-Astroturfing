@@ -1,0 +1,301 @@
+comment_id,sample_role,sampling_stratum,selection_seed
+7227789969930421019,locked_test_v2,Non-HCC|Azarine|short|question,20260720
+7422237728911639301,locked_test_v2,Non-HCC|Daviena|medium|general,20260720
+INJ000239,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7431584077281559304,locked_test_v2,HCC|Maryame|medium|question,20260720
+7286083385822135046,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7376605817624445702,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7429137889378566920,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7585616439391978247,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7599308968561558279,locked_test_v2,Non-HCC|Daviena|very_short|emoji_only,20260720
+7421462548825195270,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7421411237357159174,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7429157937208673025,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7428460223155454726,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7422577460666139398,locked_test_v2,Non-HCC|Daviena|very_short|question,20260720
+7428889857612694278,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7134759817448637210,locked_test_v2,Non-HCC|The Originote|short|question,20260720
+7421538820863230726,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7432513948941992725,locked_test_v2,Non-HCC|Daviena|long|question,20260720
+7466696059927937800,locked_test_v2,Non-HCC|The Originote|medium|slang_or_code_mixing,20260720
+7467839248805823240,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7426186117136007941,locked_test_v2,Non-HCC|Maryame|medium|mixed_or_negation,20260720
+7389842743730946822,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7423328278143337222,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7388752935600259845,locked_test_v2,Non-HCC|Maryame|medium|general,20260720
+7432702262273704722,locked_test_v2,Non-HCC|Maryame|very_short|purchase_or_cta,20260720
+7494279268983161607,locked_test_v2,Non-HCC|Maryame|long|purchase_or_cta,20260720
+7186991378043781914,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+3357919827728827297,locked_test_v2,HCC|The Originote|short|slang_or_code_mixing,20260720
+7206937276471083803,locked_test_v2,Non-HCC|Azarine|medium|question,20260720
+7421313493649851142,locked_test_v2,Non-HCC|Daviena|long|question,20260720
+7310147081578070790,locked_test_v2,Non-HCC|The Originote|short|question,20260720
+7428461144417354501,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7517503547082081032,locked_test_v2,Non-HCC|Maryame|medium|question,20260720
+7312050257369121541,locked_test_v2,Non-HCC|Daviena|very_short|emoji_only,20260720
+7421762691590619909,locked_test_v2,Non-HCC|Daviena|long|mixed_or_negation,20260720
+7429037449547072257,locked_test_v2,Non-HCC|Maryame|medium|question,20260720
+7429354517555168005,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7422696211281265426,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7359464292435051270,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+5669702723891702888,locked_test_v2,HCC|Maryame|medium|purchase_or_cta,20260720
+7373691659638391558,locked_test_v2,Non-HCC|The Originote|medium|skin_condition,20260720
+7429565956877665031,locked_test_v2,Non-HCC|Maryame|short|skin_condition,20260720
+7358509278376608518,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7593650810175013652,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7357328578453078790,locked_test_v2,Non-HCC|Azarine|long|question,20260720
+7429348520055816966,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7428498831984558853,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7390741648151888646,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7428446209087619846,locked_test_v2,Non-HCC|Maryame|medium|general,20260720
+7422812686369129222,locked_test_v2,Non-HCC|Daviena|long|question,20260720
+7570918366391583496,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7457159016626144007,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7360250458226705157,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7412982060314755845,locked_test_v2,Non-HCC|Azarine|short|question,20260720
+INJ000589,locked_test_v2,Non-HCC|The Originote|short|slang_or_code_mixing,20260720
+7428614806468838149,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7269434550475096837,locked_test_v2,Non-HCC|The Originote|short|question,20260720
+7449421809071932181,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7596259820907987730,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7400625094260900614,locked_test_v2,Non-HCC|Maryame|very_short|question,20260720
+7429021415838483206,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7421919025287938821,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7313724069540233926,locked_test_v2,HCC|Daviena|medium|slang_or_code_mixing,20260720
+7426200411491549973,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7397676144198353670,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7379503590483936006,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7596274906154992385,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7313910577339630354,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7360479142289621765,locked_test_v2,HCC|Daviena|short|question,20260720
+7314970295458644741,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7466056717593101064,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7226177713979540251,locked_test_v2,Non-HCC|The Originote|short|slang_or_code_mixing,20260720
+7428485955474047749,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7402639355867923205,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7362693675128210181,locked_test_v2,Non-HCC|Daviena|medium|general,20260720
+7422866048057393926,locked_test_v2,Non-HCC|Daviena|long|purchase_or_cta,20260720
+7398408660358546184,locked_test_v2,Non-HCC|Maryame|very_short|question,20260720
+7469275329263567617,locked_test_v2,HCC|Daviena|very_short|emoji_only,20260720
+7532684680768799505,locked_test_v2,Non-HCC|Maryame|medium|question,20260720
+7421328248188699398,locked_test_v2,Non-HCC|Daviena|medium|mixed_or_negation,20260720
+7313510466662482694,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7385512058690372357,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7451820086632366866,locked_test_v2,Non-HCC|The Originote|very_short|emoji_only,20260720
+7428841295320253189,locked_test_v2,Non-HCC|Maryame|medium|question,20260720
+7449207059406701317,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7428577072044131078,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7463846918500156168,locked_test_v2,HCC|Maryame|very_short|emoji_only,20260720
+7531280872756134663,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7428847161670173445,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7398054275685597958,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7421814987835261701,locked_test_v2,Non-HCC|Daviena|very_short|emoji_only,20260720
+7358040056856494854,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7567969947058684680,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7551028755696452359,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7596251036481061639,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7357995647175787269,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7234553248231867141,locked_test_v2,Non-HCC|The Originote|very_short|short_text,20260720
+7359889579992400646,locked_test_v2,Non-HCC|Daviena|very_short|question,20260720
+7386959884338266886,locked_test_v2,Non-HCC|Daviena|long|slang_or_code_mixing,20260720
+INJ000054,locked_test_v2,Non-HCC|The Originote|medium|slang_or_code_mixing,20260720
+7428534314511565574,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+4405259890376876830,locked_test_v2,HCC|Daviena|medium|mixed_or_negation,20260720
+7431971853470941969,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7428504411284275974,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7428589483421319941,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7406632053963539205,locked_test_v2,Non-HCC|The Originote|medium|question,20260720
+7574593169062789906,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7422918474986504965,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7408765257906389765,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7429224975613051655,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7441947928178508600,locked_test_v2,Non-HCC|Maryame|medium|skin_condition,20260720
+7421338127577645830,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7422545353817506566,locked_test_v2,Non-HCC|Daviena|short|purchase_or_cta,20260720
+7429162136175739654,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7421411594657432326,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7428643486053876487,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7261629830364496646,locked_test_v2,Non-HCC|Azarine|short|general,20260720
+7432718272920945429,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7488648398528054024,locked_test_v2,Non-HCC|Maryame|medium|question,20260720
+7428990615768433414,locked_test_v2,HCC|Maryame|medium|slang_or_code_mixing,20260720
+7358437236473840389,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7429550884601021189,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7362725918083728133,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+INJ000618,locked_test_v2,HCC|Maryame|short|slang_or_code_mixing,20260720
+INJ000223,locked_test_v2,HCC|Daviena|short|general,20260720
+7596688697950733074,locked_test_v2,Non-HCC|Daviena|very_short|emoji_only,20260720
+INJ000716,locked_test_v2,HCC|Azarine|short|slang_or_code_mixing,20260720
+7357976597092205318,locked_test_v2,Non-HCC|Daviena|short|purchase_or_cta,20260720
+7377170670658011910,locked_test_v2,Non-HCC|Azarine|very_short|question,20260720
+7430115000776262406,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7465886167385965320,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7321512729655378693,locked_test_v2,HCC|Azarine|short|question,20260720
+7342497114079363846,locked_test_v2,Non-HCC|The Originote|short|question,20260720
+7428461398374171408,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7286370352413721350,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7421725151010849541,locked_test_v2,Non-HCC|Daviena|medium|purchase_or_cta,20260720
+7597822569248621330,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7422183775432147717,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7491248112024617783,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7421408683056481030,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7424302822076203781,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7380311734130639621,locked_test_v2,Non-HCC|The Originote|short|general,20260720
+7421900198786007813,locked_test_v2,Non-HCC|Maryame|very_short|question,20260720
+7399805760883196677,locked_test_v2,Non-HCC|Maryame|short|mixed_or_negation,20260720
+7428569782880846610,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7429023926967665426,locked_test_v2,Non-HCC|Maryame|long|question,20260720
+7391828834423554823,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7428556591240643346,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7397968313210716934,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7586899712042992404,locked_test_v2,Non-HCC|Azarine|very_short|short_text,20260720
+7421793210886980358,locked_test_v2,Non-HCC|Daviena|medium|purchase_or_cta,20260720
+7425617191975928581,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7424775237231264517,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7381399712429851398,locked_test_v2,HCC|Maryame|short|general,20260720
+7428575506948080391,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7421364111236498182,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7429191479983162118,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7421196980917060357,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7137340688504603418,locked_test_v2,Non-HCC|The Originote|medium|question,20260720
+7226267145008939802,locked_test_v2,Non-HCC|Azarine|medium|question,20260720
+7227502415246607110,locked_test_v2,Non-HCC|Azarine|short|question,20260720
+7428888347919926022,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7644004930474918677,locked_test_v2,Non-HCC|Azarine|medium|slang_or_code_mixing,20260720
+7429142951647363858,locked_test_v2,Non-HCC|Maryame|medium|general,20260720
+7374945300824441605,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7429616042521903877,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7421351419184186117,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7512779466701325073,locked_test_v2,HCC|Azarine|medium|question,20260720
+7227225045989671706,locked_test_v2,Non-HCC|The Originote|very_short|emoji_only,20260720
+7428540474379682565,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7397965076797342470,locked_test_v2,Non-HCC|Maryame|short|purchase_or_cta,20260720
+7634843508201128724,locked_test_v2,Non-HCC|Azarine|very_short|short_text,20260720
+7421868814864843525,locked_test_v2,Non-HCC|Daviena|medium|general,20260720
+7320109896015708933,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7429128443017396998,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7429154483453788946,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7193648881576674074,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7422156328569357062,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7358420239945696006,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7574301625432097544,locked_test_v2,HCC|Maryame|medium|slang_or_code_mixing,20260720
+7341052522985931525,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7315083308274270982,locked_test_v2,Non-HCC|The Originote|short|slang_or_code_mixing,20260720
+7346527247632188166,locked_test_v2,Non-HCC|The Originote|medium|question,20260720
+7421523816255390469,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7421196217663374085,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7430353219991913232,locked_test_v2,Non-HCC|Maryame|medium|purchase_or_cta,20260720
+7430653853153280785,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7426573345729020678,locked_test_v2,HCC|Azarine|medium|slang_or_code_mixing,20260720
+7398038906196247301,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7407805926062932742,locked_test_v2,Non-HCC|The Originote|medium|question,20260720
+7428619762898961158,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7287127448696718086,locked_test_v2,HCC|The Originote|medium|question,20260720
+7421835770980500229,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7122989874663490331,locked_test_v2,Non-HCC|The Originote|very_short|question,20260720
+7428607482233586438,locked_test_v2,Non-HCC|Maryame|short|purchase_or_cta,20260720
+6547173592868095747,locked_test_v2,HCC|The Originote|medium|mixed_or_negation,20260720
+7596244671824495368,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7596249466358809352,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+7428462412820824838,locked_test_v2,HCC|Maryame|very_short|short_text,20260720
+7431632563489637136,locked_test_v2,Non-HCC|Maryame|long|mixed_or_negation,20260720
+6847472872570691043,locked_test_v2,HCC|Daviena|short|slang_or_code_mixing,20260720
+7185720188284129669,locked_test_v2,HCC|The Originote|medium|slang_or_code_mixing,20260720
+7428456475935490821,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7433972782956020485,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7146932997035459355,locked_test_v2,Non-HCC|The Originote|very_short|short_text,20260720
+7421753144180540165,locked_test_v2,Non-HCC|Daviena|short|slang_or_code_mixing,20260720
+INJ000687,locked_test_v2,Non-HCC|The Originote|short|slang_or_code_mixing,20260720
+7418883831271097094,locked_test_v2,Non-HCC|Maryame|medium|purchase_or_cta,20260720
+7429238555925168901,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7357993730135360261,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7366926040054465286,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7564732627813466887,locked_test_v2,Non-HCC|Maryame|medium|question,20260720
+7428539222107767558,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7407250753318109958,locked_test_v2,Non-HCC|The Originote|long|question,20260720
+7429153388221022994,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7428494965888238342,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7429312732547859205,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7350599294599398150,locked_test_v2,Non-HCC|Azarine|medium|slang_or_code_mixing,20260720
+7428795413615149830,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7421494815831474950,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7588115397358912264,locked_test_v2,Non-HCC|Maryame|medium|question,20260720
+9858150902530457454,locked_test_v2,HCC|Maryame|medium|mixed_or_negation,20260720
+7359468311727997701,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7312669469585965830,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7328704453371757318,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7428519471285633799,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7428748514521776903,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7428454880098435845,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7421359906836218630,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7379810896615719685,locked_test_v2,Non-HCC|Daviena|medium|skin_condition,20260720
+7464884085678441223,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7146478371403498266,locked_test_v2,Non-HCC|The Originote|very_short|short_text,20260720
+7430131154924536581,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7480044655238005511,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7536083867553792788,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7361560506195018502,locked_test_v2,Non-HCC|The Originote|medium|question,20260720
+7428461865632252673,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7422942681682150150,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7421226779149779718,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7433639068200272658,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+INJ000070,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7428550375639565074,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7431742444515509010,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7428622818835923733,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7375410833168384774,locked_test_v2,Non-HCC|Maryame|medium|general,20260720
+7418588501644755718,locked_test_v2,HCC|The Originote|very_short|emoji_only,20260720
+7482145948186215186,locked_test_v2,Non-HCC|The Originote|very_short|question,20260720
+7490851543286792961,locked_test_v2,Non-HCC|Maryame|very_short|emoji_only,20260720
+7324661404614574854,locked_test_v2,Non-HCC|The Originote|short|question,20260720
+7127466501325882138,locked_test_v2,HCC|The Originote|very_short|short_text,20260720
+7438837106891768594,locked_test_v2,Non-HCC|Daviena|very_short|emoji_only,20260720
+7428763350627025670,locked_test_v2,Non-HCC|Maryame|long|slang_or_code_mixing,20260720
+7197345896890680091,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7298334000371598086,locked_test_v2,Non-HCC|The Originote|medium|question,20260720
+7478137477548000005,locked_test_v2,Non-HCC|Daviena|short|question,20260720
+7421489865839313669,locked_test_v2,Non-HCC|Daviena|medium|general,20260720
+7360699802160202501,locked_test_v2,Non-HCC|Azarine|short|slang_or_code_mixing,20260720
+7428741971107234566,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7430872042008019729,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7422453642731815685,locked_test_v2,Non-HCC|Daviena|medium|slang_or_code_mixing,20260720
+7428795255036084998,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7421240506473448198,locked_test_v2,Non-HCC|Daviena|long|slang_or_code_mixing,20260720
+7335444265679602437,locked_test_v2,HCC|Daviena|medium|question,20260720
+7385610350631060244,locked_test_v2,Non-HCC|The Originote|very_short|short_text,20260720
+7214987417747931930,locked_test_v2,Non-HCC|Azarine|short|slang_or_code_mixing,20260720
+7430457930178659080,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7596520523933467410,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7167339197756621594,locked_test_v2,Non-HCC|The Originote|very_short|short_text,20260720
+7559884925362258706,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7428887728904176391,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7421336123178451718,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7421312220099527429,locked_test_v2,Non-HCC|Daviena|short|mixed_or_negation,20260720
+7421205978493174533,locked_test_v2,Non-HCC|Daviena|short|general,20260720
+7468994546623136519,locked_test_v2,Non-HCC|Maryame|short|purchase_or_cta,20260720
+7422883855191360261,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+3161983647287578588,locked_test_v2,HCC|The Originote|medium|question,20260720
+7424322808920326917,locked_test_v2,HCC|Maryame|short|question,20260720
+7206547831497523994,locked_test_v2,Non-HCC|Azarine|medium|question,20260720
+7313081209524241157,locked_test_v2,Non-HCC|The Originote|medium|question,20260720
+7150095768443437850,locked_test_v2,Non-HCC|The Originote|short|general,20260720
+7430255700255064840,locked_test_v2,Non-HCC|Maryame|medium|slang_or_code_mixing,20260720
+7416283507020628741,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7428741061466161928,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7422391565605290757,locked_test_v2,Non-HCC|Daviena|very_short|emoji_only,20260720
+7410791063307469574,locked_test_v2,Non-HCC|Azarine|medium|question,20260720
+7447936951678583557,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7428439356644573958,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7236511249381950214,locked_test_v2,Non-HCC|Maryame|short|question,20260720
+7421417253801755397,locked_test_v2,Non-HCC|Daviena|short|skin_condition,20260720
+7428888303224652561,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7568469146984612609,locked_test_v2,HCC|The Originote|short|question,20260720
+7422398985362522885,locked_test_v2,Non-HCC|Daviena|medium|general,20260720
+7428466259833029381,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7440702612322779921,locked_test_v2,HCC|Maryame|short|slang_or_code_mixing,20260720
+7422326383210201861,locked_test_v2,Non-HCC|Daviena|very_short|short_text,20260720
+7358024564586545926,locked_test_v2,Non-HCC|Daviena|medium|question,20260720
+7432674675672597266,locked_test_v2,Non-HCC|Maryame|short|general,20260720
+7429515068930491141,locked_test_v2,Non-HCC|Maryame|very_short|short_text,20260720
+7398407595474289414,locked_test_v2,Non-HCC|Maryame|short|slang_or_code_mixing,20260720
+7290446743061627653,locked_test_v2,Non-HCC|The Originote|short|question,20260720

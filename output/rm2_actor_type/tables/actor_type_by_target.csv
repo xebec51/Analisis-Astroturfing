@@ -1,0 +1,20 @@
+actor_type_primary,target_scope,target_brand_primary,n_accounts,n_comments
+Community Actor,HCC Brand Context,The Originote,56,234.0
+Community Actor,HCC Brand Context,Daviena,45,228.0
+Community Actor,HCC Brand Context,Mixed_3plus_Brands,43,200.0
+Community Actor,HCC Brand Context,Maryame,35,163.0
+Community Actor,HCC Brand Context,Azarine,19,110.0
+Community Actor,HCC Brand Context,Mixed_2_Brands,14,56.0
+Community Actor,HCC Brand Context,Not identified,6,18.0
+Individual Actor,Single-brand Context,Daviena/Davina,14,248.0
+Individual Actor,Single-brand Context,Maryame,11,382.0
+Individual Actor,Single-brand Context,The Originote,11,501.0
+Individual Actor,Single-brand Context,Azarine,7,253.0
+Mass Actor,Associated HCC Brand Context,,22871,27457.0
+Mass Actor,Associated HCC Brand Context,Daviena,1968,2229.0
+Mass Actor,Associated HCC Brand Context,Maryame,744,851.0
+Mass Actor,Associated HCC Brand Context,Mixed_2_Brands,180,265.0
+Mass Actor,Associated HCC Brand Context,Mixed_3plus_Brands,157,233.0
+Mass Actor,Associated HCC Brand Context,The Originote,147,229.0
+Mass Actor,Associated HCC Brand Context,Azarine,97,187.0
+Mass Actor,Associated HCC Brand Context,Not identified,2,3.0

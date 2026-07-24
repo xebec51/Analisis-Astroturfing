@@ -1,0 +1,32 @@
+metric,value,notes
+analysis_scope,COMMUNITY_MASS_ACCOUNT_THREE_EVIDENCE_NETWORK,"Main Community-Mass account layer based on Co-conv, Co-reply, and Co-temporal evidence."
+optional_direct_reply_scope,OPTIONAL_DIRECT_REPLY_DIAGNOSTIC,Reply-only layer is retained only as a diagnostic.
+sentiment_attribute_status,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,Sentiment V2 development model is frozen; Actor Type sentiment attributes are not refreshed yet.
+locked_test_v2_status,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,Final locked-test evaluation remains blocked until replacement labels are complete.
+temporal_window_minutes,8,RM1 median/P50 temporal window calibration.
+min_co_conv,3,RM1 evidence threshold.
+min_co_reply,2,RM1 evidence threshold.
+min_co_temporal,3,RM1 evidence threshold.
+lcn_weight_percentile,50,Final RM1 LCN edge threshold.
+visual_single_evidence_rule,"Retain PRE_LCN_SINGLE_EVIDENCE only when it passes at least one RM1 evidence threshold: co_conv>=3, co_reply>=2, or co_temporal>=3.",Recommended visual export rule.
+total_unique_community_mass_account_pairs,434823,Full analytical pair table.
+lcn_edge_pairs,305,Pairs present in final LCN.
+pre_lcn_multi_evidence_pairs,2667,"Pairs not in final LCN, n_evidence >= 2."
+pre_lcn_single_evidence_pairs,431851,"Pairs not in final LCN, n_evidence == 1."
+community_accounts_involved,218,
+mass_accounts_involved,26166,
+mass_lcn_non_hcc_involved,506,
+mass_outside_lcn_involved,25660,
+all_evidence_gephi_nodes,26384,
+all_evidence_gephi_edges,434823,
+visual_gephi_nodes,1646,
+visual_gephi_edges,3328,
+all_evidence_connected_components,1,
+all_evidence_isolated_nodes,0,
+visual_connected_components,24,
+visual_isolated_nodes,0,
+pairs_with_all_three_evidence,1,
+co_conv_edge_count,434823,
+co_reply_edge_count,28,
+co_temporal_edge_count,2671,
+multi_evidence_edge_count,2698,

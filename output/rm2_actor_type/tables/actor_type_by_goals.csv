@@ -1,0 +1,20 @@
+actor_type_primary,account_goal_orientation,n_accounts,n_comments
+Community Actor,Neutral Engagement,73,339.0
+Community Actor,Promotional / Supportive,71,347.0
+Community Actor,Critical / Complaint,29,122.0
+Community Actor,Mixed Goals,29,145.0
+Community Actor,Insufficient Text,13,40.0
+Community Actor,Polarized / Contested,3,16.0
+Individual Actor,Neutral Engagement,21,1106.0
+Individual Actor,Promotional / Supportive,7,94.0
+Individual Actor,Mixed Goals,6,133.0
+Individual Actor,Insufficient Text,3,4.0
+Individual Actor,Not Observed from Comments,3,0.0
+Individual Actor,Critical / Complaint,2,7.0
+Individual Actor,Polarized / Contested,1,40.0
+Mass Actor,Insufficient Text,25204,27241.0
+Mass Actor,Neutral Engagement,449,1970.0
+Mass Actor,Critical / Complaint,245,1052.0
+Mass Actor,Promotional / Supportive,146,615.0
+Mass Actor,Mixed Goals,89,393.0
+Mass Actor,Polarized / Contested,33,183.0

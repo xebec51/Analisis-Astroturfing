@@ -1,0 +1,6 @@
+label,definition
+Positive,"Pujian, pengalaman cocok, dukungan, rekomendasi, kepuasan, atau evaluasi yang jelas menguntungkan."
+Neutral,"Pertanyaan, informasi faktual, tagging, nama produk/brand saja, atau komentar tanpa posisi evaluatif."
+Negative,"Keluhan, ketidakcocokan, efek buruk, kekecewaan, penolakan, peringatan, atau evaluasi yang jelas merugikan."
+Uncertain,"Sarkasme, mixed sentiment, target ambigu, atau konteks tidak cukup untuk menetapkan Positive/Neutral/Negative."
+No Text,Tidak ada informasi yang dapat dievaluasi; bukan sinonim Neutral.

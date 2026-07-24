@@ -1,0 +1,17 @@
+check,expected,observed,status,notes
+dataset rows,33847,33847,PASS,
+unique comment_id,33847,33847,PASS,
+HCC count,42,42,PASS,
+HCC members,218,218,PASS,
+HCC comments,1009,1009,PASS,
+actor universe,26427,26427,PASS,
+Individual Actor,43,43,PASS,
+Community Actor,218,218,PASS,
+Mass Actor,26166,26166,PASS,
+Gephi actor type nodes,396,396,PASS,
+Gephi actor type edges,497,497,PASS,
+missing endpoint,0,0,PASS,
+weakly connected components,1,1,PASS,weakly connected for directed graph
+HCC_Non-HCC artifact,0,0,PASS,
+RM1 checksums unchanged,no diff vs baseline,no diff,PASS,
+safe_clean preserves human_validation_v2,human_validation_v2 protected,human_validation_v2,PASS,

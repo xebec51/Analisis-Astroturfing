@@ -1,0 +1,5 @@
+notebook,module,json_valid,parse_error,code_cell_count,has_bootstrap,uses_project_paths,absolute_windows_path_count,absolute_posix_path_count,old_notebook_reference_count,unregistered_output_path_count,root_output_path_count,hardcoded_output_reference_count,status,notes
+notebooks/rm1/tiktok_coordination_analysis.ipynb,RM1,True,,74,True,True,0,0,0,0,0,14,PATH_CONTRACT_PASS,Static path audit passed or legacy paths documented.
+notebooks/rm2/02_rm2_sentiment_analysis.ipynb,RM2_SENTIMENT,True,,8,True,True,0,0,0,0,0,0,PATH_CONTRACT_PASS,Static path audit passed or legacy paths documented.
+notebooks/rm2/03_rm2_actor_type_typology.ipynb,RM2_ACTOR_TYPE,True,,29,True,True,0,0,0,0,0,1,PATH_CONTRACT_PASS,Static path audit passed or legacy paths documented.
+notebooks/legacy/02_rm2_sentiment_goals.ipynb,LEGACY_SENTIMENT_V1,True,,3,True,True,0,0,0,0,0,0,LEGACY_PATHS_DOCUMENTED,Static path audit passed or legacy paths documented.

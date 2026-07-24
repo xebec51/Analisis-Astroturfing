@@ -1,0 +1,3 @@
+video_scope,n_pairs,n_unique_comments,n_unique_accounts,mean_similarity,n_presentation_eligible
+Cross video,225713,8580,7168,0.9824421689876093,210899
+Same video,75060,9523,8590,0.8862543452810298,41489
