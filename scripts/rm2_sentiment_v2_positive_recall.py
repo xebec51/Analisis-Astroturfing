@@ -100,7 +100,11 @@ def artifact_predict_proba(artifact: dict[str, object], texts: pd.Series) -> np.
     labels = [str(label) for label in artifact.get("labels", LABELS)]
     components = artifact.get("components", [])
     if not components and "pipeline" in artifact:
-        components = [{"pipeline": artifact["pipeline"], "temperature": artifact.get("temperature", 1.0)}]
+        pipeline_obj = artifact["pipeline"]
+        if isinstance(pipeline_obj, list):
+            components = pipeline_obj
+        else:
+            components = [{"pipeline": pipeline_obj, "temperature": artifact.get("temperature", 1.0)}]
     if not components:
         raise ValueError("Candidate artifact contains no prediction components.")
     probs = []

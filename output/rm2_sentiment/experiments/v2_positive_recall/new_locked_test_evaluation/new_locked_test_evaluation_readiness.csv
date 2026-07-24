@@ -1,0 +1,11 @@
+﻿check,expected,observed,passed,notes
+candidate_model_exists,True,True,True,
+candidate_config_exists,True,True,True,
+locked_test_final_rows,>=400; ideal 500-600,600,True,
+no_pending_human_adjudication,0,600,False,Two blind annotator files and adjudication must be completed before evaluation.
+no_non_evaluable_in_locked_test,0,600,False,
+minimum_positive_support,>=100,0,False,
+minimum_negative_support,>=100,0,False,
+unique_comment_id,no duplicates,0,True,
+no_comment_id_overlap_with_development,0,0,True,Development registry overlap check.
+candidate_frozen_before_test_opened,True,True,True,
