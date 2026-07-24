@@ -1,0 +1,9 @@
+{
+  "overall_status": "PASS",
+  "n_checks": 54,
+  "n_passed": 54,
+  "n_failed": 0,
+  "git_head": "b2d69a5274a5c07184c7ef1be3b0b6f392dcbdb9",
+  "branch": "refactor/repository-structure",
+  "notes": "Read-only repository integrity verification; no analysis pipeline was executed."
+}

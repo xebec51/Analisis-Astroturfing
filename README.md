@@ -19,8 +19,9 @@ Pipeline-nya menggabungkan beberapa lapis analisis yang **sengaja dipisahkan** s
 - **Kandidat copypasta/near-copypasta** diidentifikasi sebagai indikasi kesamaan teks -- bukan bukti
   pasti adanya kampanye terkoordinasi.
 
-Seluruh proses -- mulai dari data mentah hingga jaringan siap divisualisasikan di Gephi -- dilakukan
-dalam satu notebook: `tiktok_coordination_analysis.ipynb`.
+Repository ini sekarang memisahkan pipeline kanonis, kode legacy, artefak final, output eksploratif,
+provenance, dan project visualisasi. RM1 tetap dijalankan melalui notebook kanonis, sedangkan RM2 memiliki
+beberapa entrypoint notebook/script yang terdokumentasi di `docs/PIPELINE_ENTRYPOINTS.md`.
 
 ---
 
@@ -250,9 +251,10 @@ menjadi dasar interpretasi utama (lihat Section 16.2 & 19.11 pada notebook).
 1. **Install dependency** (Python 3.9+): `pandas`, `numpy`, `networkx`, `scikit-learn`, `matplotlib`,
    `seaborn`, `tqdm`, serta `python-louvain` (opsional -- jika tidak tersedia, notebook otomatis
    menggunakan algoritma Louvain bawaan NetworkX).
-2. **Buka Jupyter Notebook/Lab** (atau Google Colab), lalu buka `tiktok_coordination_analysis.ipynb`.
-3. **Siapkan data** -- pastikan `dataset.csv` dan `video_metadata_clean.csv` berada satu folder dengan
-   notebook.
+2. **Buka Jupyter Notebook/Lab** lalu buka notebook kanonis sesuai modul:
+   `notebooks/rm1/tiktok_coordination_analysis.ipynb` untuk RM1 atau
+   `notebooks/rm2/03_rm2_actor_type_typology.ipynb` untuk RM2 Actor Type.
+3. **Siapkan data** -- `dataset.csv` dan `video_metadata_clean.csv` tetap berada di root repository.
 4. **Jalankan dari atas ke bawah** (*Run All*). Setiap tahap pipeline bergantung pada tahap sebelumnya,
    sehingga urutan sel tidak boleh diubah.
 
@@ -264,11 +266,34 @@ menjadi dasar interpretasi utama (lihat Section 16.2 & 19.11 pada notebook).
 |---|---|
 | `dataset.csv` | Dataset mentah komentar TikTok dari 5 kategori produk skincare |
 | `video_metadata_clean.csv` | Metadata video (hashtag & mention resmi per video) |
-| `tiktok_coordination_analysis.ipynb` | Notebook utama -- seluruh pipeline analisis |
+| `notebooks/rm1/tiktok_coordination_analysis.ipynb` | Notebook kanonis RM1 |
+| `notebooks/rm2/03_rm2_actor_type_typology.ipynb` | Notebook kanonis RM2 Actor Type |
+| `notebooks/legacy/02_rm2_sentiment_goals.ipynb` | Notebook legacy RM2 Sentiment/Goals V1 |
+| `scripts/` | Script kanonis, legacy, frozen, dan audit read-only |
+| `docs/` | Struktur repository, registry artefak, entrypoint, reproducibility, dan audit |
+| `artifacts/network_projects/` | Project Gephi/Visone; CSV output tetap sumber data kanonis |
+| `archive/` | Arsip historis terdokumentasi, bukan entrypoint kanonis |
 | `output/tables/` | Tabel hasil analisis lengkap (lihat [Struktur Output](#struktur-output)) |
 | `output/gephi/` | Berkas jaringan siap-impor ke Gephi, ringkas untuk visualisasi |
 | `output/visualisasi/` | Grafik & visualisasi (PNG saja; ekspor PDF/SVG duplikat tidak dipertahankan) |
 | `README.md` | Berkas dokumentasi ini |
+
+Struktur dan kontrak output lebih rinci tersedia di:
+
+- `docs/REPOSITORY_STRUCTURE.md`
+- `docs/PIPELINE_ENTRYPOINTS.md`
+- `docs/ARTIFACT_REGISTRY.md`
+- `docs/REPRODUCIBILITY.md`
+
+Konfigurasi path pusat berada di `scripts/project_paths.py`, dengan helper I/O aman di `scripts/io_utils.py`.
+Verifier integritas read-only berada di `scripts/verify_repository_integrity.py`.
+
+Git LFS diperlukan untuk mengambil file besar `output/rm2_comment_similarity/comment_similarity_pairs_all.csv`:
+
+```bash
+git lfs install
+git lfs pull
+```
 
 Seluruh hasil analisis **hanya berupa indikasi pola koordinasi** berdasarkan data yang teramati. Pola
 koordinasi yang terdeteksi dapat pula bersifat organik, misalnya berasal dari pengguna aktif, penggemar
@@ -278,7 +303,8 @@ produk, atau komunitas diskusi yang wajar.
 
 ## RM1 ? Temporal Activity Profile
 
-Section 19 pada notebook `tiktok_coordination_analysis.ipynb` berisi analisis temporal ringkas untuk RM1.
+Section 19 pada notebook `notebooks/rm1/tiktok_coordination_analysis.ipynb` berisi analisis temporal
+ringkas untuk RM1.
 Fokusnya menampilkan grafik garis pola aktivitas komentar berdasarkan tiga cakupan:
 
 - seluruh dataset;
@@ -317,11 +343,14 @@ atau koordinasi terencana.
 
 Rumusan Masalah 2 (RM2) menjawab pertanyaan *"Bagaimana three dimensions tipologi aktor digital
 astroturfing pada produk skincare overclaim di platform TikTok?"* — terdiri dari tiga dimensi: **target**
-dan **actor type** (dipetakan dengan SNA pada RM1, `tiktok_coordination_analysis.ipynb`), serta **goals**
-(dipetakan dengan analisis sentimen pada notebook `02_rm2_sentiment_goals.ipynb`, terpisah dari RM1).
+dan **actor type** (dipetakan dengan SNA pada RM1,
+`notebooks/rm1/tiktok_coordination_analysis.ipynb`), serta **goals** (dipetakan ulang pada Sentimen V2
+final melalui script dan output di `output/rm2_sentiment/final_v2/`; notebook V1 berada di
+`notebooks/legacy/02_rm2_sentiment_goals.ipynb`).
 
-**`02_rm2_sentiment_goals.ipynb` hanya membaca** output RM1 sebagai input dan **tidak pernah** mengubah
-notebook RM1, pipeline LCN/Louvain/FSA_V, hasil HCC, maupun file output RM1 yang sudah ada.
+Notebook legacy **`notebooks/legacy/02_rm2_sentiment_goals.ipynb` hanya membaca** output RM1 sebagai input
+dan **tidak pernah** mengubah notebook RM1, pipeline LCN/Louvain/FSA_V, hasil HCC, maupun file output RM1
+yang sudah ada. Hasil final yang digunakan saat ini adalah Sentimen V2.
 
 ### Tujuan
 
@@ -467,8 +496,8 @@ Sentimen hanya menjadi atribut node; topologi edge RM1 tidak diubah.
 
 ## RM2 — Three Actor Types and Three Dimensions Typology
 
-Notebook `03_rm2_actor_type_typology.ipynb` menambahkan tipologi tiga actor type dan mengintegrasikannya
-dengan dimensi target serta goals yang sudah dihitung pada notebook sentimen RM2. Tiga actor type utama
+Notebook `notebooks/rm2/03_rm2_actor_type_typology.ipynb` menambahkan tipologi tiga actor type dan
+mengintegrasikannya dengan dimensi target serta goals yang sudah dihitung pada pipeline sentimen RM2. Tiga actor type utama
 yang dipakai hanya `Individual Actor`, `Community Actor`, dan `Mass Actor`.
 
 - Actor universe merupakan gabungan akun komentator, seluruh creator pada `video_metadata_clean.csv`, dan
@@ -791,3 +820,31 @@ kebenaran label.
   masih gagal; confidence/stability bukan bukti kebenaran label goal.
 - Perbandingan HCC vs Non-HCC dipakai untuk melihat perbedaan orientasi sentimen, **bukan** untuk
   membuktikan koordinasi.
+
+## Repository Integrity and Reproducibility
+
+Gunakan pemeriksa integritas read-only berikut untuk audit struktur repository:
+
+```bash
+python scripts/validate_notebook_paths.py
+python scripts/print_pipeline_output_plan.py
+python scripts/verify_repository_integrity.py
+```
+
+Script tersebut tidak menjalankan notebook, tidak melatih model, tidak membuka ulang locked test, dan tidak
+melakukan full inference. Output audit repository berada di `docs/repository_audit/` dan
+`output/repository_integrity/`.
+
+Project visualisasi manual berada di `artifacts/network_projects/`:
+
+- `HCC.gephi`
+- `Type Actor.gephi`
+- `HCC_Visone.graphmlz`
+
+Project tersebut dapat dibuka di Gephi atau Visone sesuai jenis file, tetapi CSV pada `output/` tetap menjadi
+sumber data kanonis. Untuk Gephi, impor node dan edge CSV sesuai modul dari `output/gephi/`,
+`output/rm2_actor_type/gephi/`, atau `output/rm2_sentiment/final_v2/gephi/`; gunakan project file hanya
+sebagai layout/visualisasi manual.
+
+Catatan pemindahan file dan verifikasi hash berada di `docs/repository_audit/legacy_migration_map.csv`.
+Archive berada di `archive/` dan bukan entrypoint kanonis.
