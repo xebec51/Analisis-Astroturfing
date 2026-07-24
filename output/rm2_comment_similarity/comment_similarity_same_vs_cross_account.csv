@@ -1,3 +1,3 @@
 account_scope,n_pairs,n_unique_comments,n_unique_accounts,mean_similarity,n_presentation_eligible
-Cross account,299035,12686,11277,0.9586125051493061,252388
-Same account,1738,1194,356,0.9283831807661813,0
+Cross account,419673,14965,12870,0.9476741107407685,371717
+Same account,1805,1315,408,0.9263149052535679,0

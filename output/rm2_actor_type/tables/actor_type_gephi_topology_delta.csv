@@ -1,0 +1,9 @@
+stage,metric,expected_legacy_baseline,observed_rerun,delta,status
+before_cleaning,nodes,401,341,-60,RERUN_DIFF_RECORDED
+before_cleaning,edges,502,440,-62,RERUN_DIFF_RECORDED
+before_cleaning,missing_endpoint_count,1,0,-1,RERUN_DIFF_RECORDED
+before_cleaning,weakly_connected_components,6,1,-5,RERUN_DIFF_RECORDED
+after_cleaning,nodes,396,341,-55,RERUN_DIFF_RECORDED
+after_cleaning,edges,497,440,-57,RERUN_DIFF_RECORDED
+after_cleaning,missing_endpoint_count,0,0,0,MATCH
+after_cleaning,weakly_connected_components,1,1,0,MATCH

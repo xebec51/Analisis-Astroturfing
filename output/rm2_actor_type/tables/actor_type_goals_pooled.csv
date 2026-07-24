@@ -1,4 +1,4 @@
 actor_type_primary,n_accounts,n_accounts_with_comments,n_accounts_goal_evaluable,goal_evaluable_percentage,n_comments,n_valid_comments,pooled_positive_count,pooled_neutral_count,pooled_negative_count,pooled_positive_ratio,pooled_neutral_ratio,pooled_negative_ratio,pooled_dominant_sentiment,pooled_goal_orientation,pooled_goal_confidence,modal_account_goal_orientation
-Individual Actor,43,40,37,86.04651162790698,1384,1368,319,778,271,0.23318713450292397,0.5687134502923976,0.19809941520467836,Neutral,Neutral Engagement,Medium,Neutral Engagement
-Community Actor,218,218,205,94.03669724770643,1009,959,413,343,203,0.4306569343065693,0.35766423357664234,0.2116788321167883,Positive,Mixed Goals,Low,Neutral Engagement
-Mass Actor,26166,26166,962,3.676526790491477,31454,29492,5645,14490,9357,0.1914078394140784,0.4913196799131968,0.3172724806727248,Neutral,Neutral Engagement,Low,Insufficient Text
+Individual Actor,43,40,36,83.72093023255815,1384,1288,164,1055,69,0.12732919254658384,0.8190993788819876,0.05357142857142857,Neutral,Neutral Engagement,High,Neutral Engagement
+Community Actor,218,207,200,91.74311926605505,945,917,289,541,87,0.31515812431842966,0.5899672846237731,0.09487459105779716,Neutral,Neutral Engagement,Medium,Neutral Engagement
+Mass Actor,26166,25943,837,3.1988076129328133,30734,29261,2265,22381,4615,0.07740678719114179,0.7648747479580329,0.15771846485082533,Neutral,Neutral Engagement,High,Insufficient Text

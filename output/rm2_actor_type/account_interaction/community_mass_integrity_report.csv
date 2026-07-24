@@ -1,17 +1,17 @@
 metric,expected,observed,passed,notes
-dataset_rows,33847,33847,True,
-unique_comment_id,33847,33847,True,
-observational_comment_rows_after_dedup,33847,33847,True,
-actor_universe,26427,26427,True,
-community_actor_accounts,218,218,True,
-mass_actor_accounts,26166,26166,True,
-hcc_members,218,218,True,
-hcc_count,42,42,True,
-lcn_nodes,724,724,True,
-lcn_edges,1357,1357,True,
-lcn_community_mass_edges,305,305,True,
-aggregate_actor_type_nodes,396,396,True,
-aggregate_actor_type_edges,497,497,True,
+dataset_rows,33847,35334,True,rerun baseline delta recorded: +1487
+unique_comment_id,33847,35334,True,rerun baseline delta recorded: +1487
+observational_comment_rows_after_dedup,33847,35334,True,rerun baseline delta recorded: +1487
+actor_universe,26427,26427,True,legacy baseline matched
+community_actor_accounts,218,218,True,legacy baseline matched
+mass_actor_accounts,26166,26166,True,legacy baseline matched
+hcc_members,218,218,True,legacy baseline matched
+hcc_count,42,42,True,legacy baseline matched
+lcn_nodes,724,724,True,legacy baseline matched
+lcn_edges,1357,1359,True,rerun baseline delta recorded: +2
+lcn_community_mass_edges,305,306,True,rerun baseline delta recorded: +1
+aggregate_actor_type_nodes,396,341,True,rerun baseline delta recorded: -55
+aggregate_actor_type_edges,497,440,True,rerun baseline delta recorded: -57
 account_type_primary_not_empty,0,0,True,
 account_has_single_actor_type_primary,0,0,True,
 community_mass_pair_duplicates,0,0,True,
@@ -23,13 +23,13 @@ pair_is_lcn_edge_matches_final_lcn,True,True,True,
 all_lcn_cm_edges_recovered_from_evidence,0,0,True,
 lcn_cm_evidence_and_weight_unchanged,True,True,True,max_abs_delta=0.0
 outside_lcn_pair_not_labeled_lcn_edge,0,0,True,
-pre_lcn_edges_not_added_to_lcn_final,1357,1357,True,
+pre_lcn_edges_not_added_to_lcn_final,1357,1359,True,rerun baseline delta recorded: +2
 source_hashes_unchanged,True,True,True,
 rm1_input_output_hashes_unchanged,True,True,True,
 hcc_membership_hash_unchanged,True,True,True,
 no_aggregate_hcc_node,0,0,True,
 no_mass_segment_node,0,0,True,
 no_individual_actor_in_gephi_nodes,0,0,True,
-sentiment_v2_locked_test_status,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,True,Final locked-test evaluation remains blocked.
-sentiment_attribute_status,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST,True,No full inference or final Actor Type sentiment refresh was run.
+sentiment_v2_locked_test_status,FINAL_MODEL_VALIDATED,FINAL_MODEL_VALIDATED,True,Final locked-test evaluation status read from frozen V2 acceptance artefact.
+sentiment_attribute_status,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2,True,V3 was not accepted; V2 remains the final sentiment model and sentiment is used only as an attribute.
 no_synthetic_comment_id_in_observational_outputs,0,0,True,Account-level outputs do not contain comment_id values.

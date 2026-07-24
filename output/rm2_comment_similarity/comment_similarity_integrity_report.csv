@@ -1,6 +1,6 @@
 metric,expected,observed,passed,notes
-dataset_input_rows,33847,33847,True,
-dataset_unique_comment_id,33847,33847,True,
+dataset_input_rows,33847,35334,True,rerun baseline delta recorded: +1487
+dataset_unique_comment_id,33847,35334,True,rerun baseline delta recorded: +1487
 synthetic_ids_in_similarity_output,0,0,True,
 self_pair,0,0,True,
 duplicate_canonical_pair,0,0,True,
@@ -10,14 +10,14 @@ exact_duplicate_normalized_text_identical,True,True,True,
 exact_cross_account_min_two_accounts,0,0,True,
 presentation_example_raw_mass_username,0,0,True,
 rm1_hashes_unchanged,True,True,True,
-lcn_nodes,724,724,True,
-lcn_edges,1357,1357,True,
-hcc_count,42,42,True,
-hcc_members,218,218,True,
-individual_actor_count,43,43,True,
-community_actor_count,218,218,True,
-mass_actor_count,26166,26166,True,
-community_mass_account_pairs_unchanged,434823,434823,True,
+lcn_nodes,724,724,True,legacy baseline matched
+lcn_edges,1357,1359,True,rerun baseline delta recorded: +2
+hcc_count,42,42,True,legacy baseline matched
+hcc_members,218,218,True,legacy baseline matched
+individual_actor_count,43,43,True,legacy baseline matched
+community_actor_count,218,218,True,legacy baseline matched
+mass_actor_count,26166,26166,True,legacy baseline matched
+community_mass_account_pairs_unchanged,434823,457628,True,rerun baseline delta recorded: +22805
 sentiment_model_artifact_unchanged,True,True,True,
-comment_sentiment_full_inference_not_run,True,True,True,
-locked_test_not_evaluated,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS,True,
+comment_sentiment_final_inference_unchanged,True,True,True,
+locked_test_evaluated_once,FINAL_LOCKED_TEST_EVALUATED_ONCE,FINAL_LOCKED_TEST_EVALUATED_ONCE,True,

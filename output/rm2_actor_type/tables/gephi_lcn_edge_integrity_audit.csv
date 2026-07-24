@@ -1,7 +1,7 @@
 metric,source_value,output_value,passed,notes
-edge_count,1357,1357,True,Jumlah edge output harus sama dengan edge LCN sumber.
+edge_count,1359,1359,True,Jumlah edge output harus sama dengan edge LCN sumber.
 missing_source_endpoints,0,0,True,Semua Source harus tersedia pada node output.
 missing_target_endpoints,0,0,True,Semua Target harus tersedia pada node output.
 self_loop_count,0,0,True,Tidak ada self-loop baru.
 weight_values_unchanged,final_weight,Weight,True,Weight output diambil dari final_weight RM1 tanpa perubahan nilai.
-edge_structural_hash,e22cbbe52d9f9e27195d65938d10325b7a661a410c69b04d5456b6c330af73fa,e22cbbe52d9f9e27195d65938d10325b7a661a410c69b04d5456b6c330af73fa,True,Hash source/target/evidence/final_weight sama setelah sorting deterministik.
+edge_structural_hash,87f450c62f84ca43eb46374953b3e899c090d803dffffb9f8ea033c31f59d54b,87f450c62f84ca43eb46374953b3e899c090d803dffffb9f8ea033c31f59d54b,True,Hash source/target/evidence/final_weight sama setelah sorting deterministik.

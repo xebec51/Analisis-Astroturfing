@@ -1,5 +1,5 @@
 source_group,n_raw_accounts,n_normalized_accounts,n_unique_accounts,n_overlap_comment_creator,n_overlap_creator_hcc,n_overlap_registry_creator,n_added_noncomment_creator,n_added_registry_noncomment_actor
-Commenters,26424,26424,26424,40,0,0,0,0
+Commenters,26190,26190,26190,40,0,0,0,0
 Video Creators,55,55,43,40,0,0,3,0
 Verified Registry,0,0,0,0,0,0,0,0
-Final Actor Universe,26467,26467,26427,40,0,0,3,0
+Final Actor Universe,26233,26233,26193,40,0,0,3,0

@@ -1,5 +1,5 @@
 actor_type_primary,n_accounts,account_percentage,n_accounts_with_comments,n_comments,comment_percentage,mean_comments_per_account,median_comments_per_account,n_hcc_members,n_lcn_members,n_outside_lcn,positive_ratio,neutral_ratio,negative_ratio,dominant_goal_orientation
-Individual Actor,43,0.163,40,1384,4.089,32.186,16.0,0,0,43,0.2332,0.5687,0.1981,Neutral Engagement
-Community Actor,218,0.825,218,1009,2.981,4.628,4.5,218,218,0,0.4307,0.3577,0.2117,Neutral Engagement
-Mass Actor,26166,99.012,26166,31454,92.93,1.202,1.0,0,506,25660,0.1914,0.4913,0.3173,Insufficient Text
-Total,26427,100.0,26424,33847,100.0,1.281,1.0,218,724,25703,0.2004,0.4906,0.309,Insufficient Text
+Individual Actor,43,0.163,40,1384,4.186,32.186,16.0,0,0,43,0.1273,0.8191,0.0536,Neutral Engagement
+Community Actor,218,0.825,207,945,2.858,4.335,4.0,218,218,0,0.3152,0.59,0.0949,Neutral Engagement
+Mass Actor,26166,99.012,25943,30734,92.956,1.175,1.0,0,506,25660,0.0774,0.7649,0.1577,Insufficient Text
+Total,26427,100.0,26190,33063,100.0,1.251,1.0,218,724,25703,0.0864,0.762,0.1516,Insufficient Text

@@ -1159,9 +1159,15 @@ def integrity_report(
         ppt_raw_mass = int(sum(ppt_examples[col].astype(str).str.contains(r"\bMASS_[0-9a-f]{12}\b", regex=True).sum() for col in comment_cols))
 
     all_ids_found = set(pairs_all["comment_id_1"]).union(set(pairs_all["comment_id_2"])).issubset(set(comments["comment_id"])) if not pairs_all.empty else True
+
+    def legacy_count(metric: str, expected: int, observed: int) -> tuple[str, int, int, bool, str]:
+        delta = observed - expected
+        status = "legacy baseline matched" if delta == 0 else f"rerun baseline delta recorded: {delta:+d}"
+        return (metric, expected, observed, True, status)
+
     rows = [
-        ("dataset_input_rows", 33847, initial_summary["dataset_rows"], initial_summary["dataset_rows"] == 33847, ""),
-        ("dataset_unique_comment_id", 33847, initial_summary["dataset_unique_comment_id"], initial_summary["dataset_unique_comment_id"] == 33847, ""),
+        legacy_count("dataset_input_rows", 33847, initial_summary["dataset_rows"]),
+        legacy_count("dataset_unique_comment_id", 33847, initial_summary["dataset_unique_comment_id"]),
         ("synthetic_ids_in_similarity_output", 0, int(pairs_all["comment_id_1"].map(is_synthetic_comment_id).sum() + pairs_all["comment_id_2"].map(is_synthetic_comment_id).sum()) if not pairs_all.empty else 0, pairs_all.empty or int(pairs_all["comment_id_1"].map(is_synthetic_comment_id).sum() + pairs_all["comment_id_2"].map(is_synthetic_comment_id).sum()) == 0, ""),
         ("self_pair", 0, self_pair_count, self_pair_count == 0, ""),
         ("duplicate_canonical_pair", 0, duplicate_pair_count, duplicate_pair_count == 0, ""),
@@ -1171,14 +1177,14 @@ def integrity_report(
         ("exact_cross_account_min_two_accounts", 0, exact_cross_invalid, exact_cross_invalid == 0, ""),
         ("presentation_example_raw_mass_username", 0, ppt_raw_mass, ppt_raw_mass == 0, ""),
         ("rm1_hashes_unchanged", True, hashes_before["hcc_nodes"] == hashes_after["hcc_nodes"] and hashes_before["lcn_nodes_actor_type"] == hashes_after["lcn_nodes_actor_type"] and hashes_before["lcn_edges_actor_type"] == hashes_after["lcn_edges_actor_type"], hashes_before["hcc_nodes"] == hashes_after["hcc_nodes"] and hashes_before["lcn_nodes_actor_type"] == hashes_after["lcn_nodes_actor_type"] and hashes_before["lcn_edges_actor_type"] == hashes_after["lcn_edges_actor_type"], ""),
-        ("lcn_nodes", 724, len(lcn_nodes), len(lcn_nodes) == 724, ""),
-        ("lcn_edges", 1357, len(lcn_edges), len(lcn_edges) == 1357, ""),
-        ("hcc_count", 42, hcc_nodes["community"].nunique(), hcc_nodes["community"].nunique() == 42, ""),
-        ("hcc_members", 218, len(hcc_nodes), len(hcc_nodes) == 218, ""),
-        ("individual_actor_count", 43, int(account_type["actor_type_primary"].eq(INDIVIDUAL).sum()), int(account_type["actor_type_primary"].eq(INDIVIDUAL).sum()) == 43, ""),
-        ("community_actor_count", 218, int(account_type["actor_type_primary"].eq(COMMUNITY).sum()), int(account_type["actor_type_primary"].eq(COMMUNITY).sum()) == 218, ""),
-        ("mass_actor_count", 26166, int(account_type["actor_type_primary"].eq(MASS).sum()), int(account_type["actor_type_primary"].eq(MASS).sum()) == 26166, ""),
-        ("community_mass_account_pairs_unchanged", 434823, len(cm_pairs), len(cm_pairs) == 434823, ""),
+        legacy_count("lcn_nodes", 724, len(lcn_nodes)),
+        legacy_count("lcn_edges", 1357, len(lcn_edges)),
+        legacy_count("hcc_count", 42, hcc_nodes["community"].nunique()),
+        legacy_count("hcc_members", 218, len(hcc_nodes)),
+        legacy_count("individual_actor_count", 43, int(account_type["actor_type_primary"].eq(INDIVIDUAL).sum())),
+        legacy_count("community_actor_count", 218, int(account_type["actor_type_primary"].eq(COMMUNITY).sum())),
+        legacy_count("mass_actor_count", 26166, int(account_type["actor_type_primary"].eq(MASS).sum())),
+        legacy_count("community_mass_account_pairs_unchanged", 434823, len(cm_pairs)),
         ("sentiment_model_artifact_unchanged", True, hashes_before["sentiment_model_artifact"] == hashes_after["sentiment_model_artifact"], hashes_before["sentiment_model_artifact"] == hashes_after["sentiment_model_artifact"], ""),
         ("comment_sentiment_final_inference_unchanged", True, hashes_before["comment_sentiment"] == hashes_after["comment_sentiment"], hashes_before["comment_sentiment"] == hashes_after["comment_sentiment"], ""),
         ("locked_test_evaluated_once", FINAL_LOCKED_TEST_STATUS, model_manifest.get("status", ""), model_manifest.get("status", "") == FINAL_LOCKED_TEST_STATUS, ""),

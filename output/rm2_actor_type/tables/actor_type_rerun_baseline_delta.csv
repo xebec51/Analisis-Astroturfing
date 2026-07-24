@@ -1,0 +1,7 @@
+metric,expected_legacy_baseline,observed_rerun,delta,status
+dataset_comments,33847,35334,1487,RERUN_DIFF_RECORDED
+account_sentiment_rows,26424,26190,-234,RERUN_DIFF_RECORDED
+lcn_nodes,724,724,0,MATCH
+hcc_nodes,218,218,0,MATCH
+hcc_communities,42,42,0,MATCH
+hcc_edges,464,465,1,RERUN_DIFF_RECORDED

@@ -1,6 +1,6 @@
 {
   "analysis_scope": "COMMENT_LEVEL_EXACT_AND_NEAR_SIMILARITY",
-  "sentiment_attribute_status": "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST",
+  "sentiment_attribute_status": "FINAL_MODEL_VALIDATED_SENTIMENT_V2",
   "method": {
     "normalization": [
       "Unicode NFKC normalization",
@@ -26,29 +26,29 @@
     "cluster_threshold": 0.85
   },
   "performance": {
-    "unique_texts_fit": 28891,
-    "text_neighbor_pairs_before_expansion": 29843,
-    "expanded_near_pair_rows_before_dedup": 70238,
+    "unique_texts_fit": 29458,
+    "text_neighbor_pairs_before_expansion": 33645,
+    "expanded_near_pair_rows_before_dedup": 157981,
     "top_k_neighbors": 20,
     "similarity_threshold": 0.7,
     "method": "TF-IDF char_wb 5-gram + sparse top-k cosine nearest neighbors",
-    "tfidf_shape_rows": 28891,
-    "tfidf_shape_features": 25484,
-    "pair_rows_before_canonical_dedup": 300773,
-    "pair_rows_after_canonical_dedup": 300773
+    "tfidf_shape_rows": 29458,
+    "tfidf_shape_features": 25555,
+    "pair_rows_before_canonical_dedup": 421478,
+    "pair_rows_after_canonical_dedup": 421478
   },
-  "execution_time_seconds": 178.474,
+  "execution_time_seconds": 257.04,
   "source_hashes_before": {
-    "dataset": "7e0ea9cbc82243445cccea1a14ccb847c61235e932f754f5e1bc42e390df32da",
-    "video_metadata_clean": "92d4fdf7e75dacbd658871a8503829af6a151d83005c2a6716298019bb9ad094",
-    "account_actor_type": "07a6de95a9913b99e8593dadb58d9ed075169c6ca8584ae12fe0826892667e60",
-    "comment_sentiment": "c2722117cc522345117256046ab703fe76a801b39136e65bdf53fe165cde87c7",
-    "hcc_nodes": "a87aedc3eac4d1ad2ea89bcbb5d9b9156c70aa20e26df5ad20946ab18b840bb0",
-    "lcn_nodes_actor_type": "6adf2d91b1f75e56402e85f669b29bc445cf0625640a887a992885abc12bda5d",
-    "lcn_edges_actor_type": "071298b8f0bd4d71069d743778a14a795742a94964f2d796b62dad02b51de743",
-    "community_mass_account_pairs": "5b64af89ded13e6a8cc1917b16ac9e7efe17d992ac959aeaf5d02dc2d7a75bdd",
+    "dataset": "db11a4738a43aceafa01fe9b888e7c61a5168d9004f90ca4e254592b083978b2",
+    "video_metadata_clean": "0cb228682705840fef691c2d9c6bcb38d6a4953985960d656394c067e7b666e9",
+    "account_actor_type": "ab024aed84b4240d8a0087297ff9fde195eb83e3542d6dd86645dc8eb29ea278",
+    "comment_sentiment": "64b4fdacb9c623798035b5ed024e050d7e73de2a2260a7a8fcede5a4032b20d6",
+    "hcc_nodes": "20f4cca797381167e801ecebeb799b557579b97097d59dd09485fe75c5f3fd9a",
+    "lcn_nodes_actor_type": "9dc26de097d8b2f92bb83eebf1596cc28f4d347e8d7694556c5fa0c552fbc8a5",
+    "lcn_edges_actor_type": "06efbf7f66040e1dc0378d80a867f970ef8984ca4822eed4297a8a68f8a75aa8",
+    "community_mass_account_pairs": "5cd039be8befc97ee48b8c135b97c36373c0e6157c75b3184cfcd0d8dcca9ce3",
     "sentiment_model_artifact": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
-    "sentiment_model_manifest": "c1434692999adee59dda22151c63330ec27dbca76315634a4e4ea135292c6132"
+    "sentiment_model_manifest": "ea08186fc1bcb05507abea57991a06a5c918fffd66c3074a1849e6e9a96b81c2"
   },
   "outputs": [
     "output\\rm2_comment_similarity\\comment_similarity_pairs_all.csv",

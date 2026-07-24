@@ -1,11 +1,11 @@
-﻿# Preview Contoh Kemiripan Komentar
+# Preview Contoh Kemiripan Komentar
 
 Setiap contoh masih memerlukan review manual sebelum dimasukkan ke slide.
 
 ## Contoh 1 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Mass
+**Relasi aktor:** Community–Mass
 **Konteks:** Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** NO_ACCOUNT_EVIDENCE_PAIR
 
@@ -19,7 +19,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 2 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
+**Relasi aktor:** Community–Community
 **Konteks:** The Originote, 205
 **Status jaringan akun:** tidak relevan
 
@@ -33,7 +33,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 3 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Massâ€“Mass
+**Relasi aktor:** Mass–Mass
 **Konteks:** Azarine | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -47,7 +47,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 4 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Massâ€“Individual
+**Relasi aktor:** Mass–Individual
 **Konteks:** Azarine | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -61,13 +61,13 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 5 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Individual
+**Relasi aktor:** Community–Individual
 **Konteks:** Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "ðŸ¥°ðŸ¥°"
+> "🥰🥰"
 
-> "ðŸ¥°ðŸ¥°"
+> "🥰🥰"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -75,7 +75,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 6 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Individualâ€“Individual
+**Relasi aktor:** Individual–Individual
 **Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -89,7 +89,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 7 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Mass
+**Relasi aktor:** Community–Mass
 **Konteks:** The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** NO_ACCOUNT_EVIDENCE_PAIR
 
@@ -103,7 +103,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 8 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Massâ€“Individual
+**Relasi aktor:** Mass–Individual
 **Konteks:** The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -117,7 +117,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 9 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Individualâ€“Individual
+**Relasi aktor:** Individual–Individual
 **Konteks:** Azarine | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -130,28 +130,28 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 
 ## Contoh 10 - NEAR_EXACT
 
-**Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Mass
-**Konteks:** Maryame, Cross-HCC / Non-HCC
-**Status jaringan akun:** NO_ACCOUNT_EVIDENCE_PAIR
+**Kemiripan:** 0.9284
+**Relasi aktor:** Community–Mass
+**Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
+**Status jaringan akun:** LCN edge
 
-> "kk gmn cara beli"
+> "makasih infonya kak 🙏 (160)"
 
-> "cara beli nya gmn"
+> "makasih infonya kak 🙏 😊 (160)"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
 ## Contoh 11 - NEAR_EXACT
 
-**Kemiripan:** 0.9319
-**Relasi aktor:** Communityâ€“Community
-**Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
+**Kemiripan:** 0.9710
+**Relasi aktor:** Community–Community
+**Konteks:** Azarine | Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "review jujur originote niacinamide: enak dipakai, gampang nyerep, gak ada bau aneh"
+> "wah baru tau, makasih infonyaa 😊 (160)"
 
-> "review jujur originote niacinamide: enak dipakai, gampang nyerep, gak ada bau aneh"
+> "wah baru tau, makasih infonyaa 🥰 (160)"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -159,7 +159,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 12 - NEAR_EXACT
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Massâ€“Mass
+**Relasi aktor:** Mass–Mass
 **Konteks:** Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -172,12 +172,12 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 
 ## Contoh 13 - NEAR_EXACT
 
-**Kemiripan:** 0.9707
-**Relasi aktor:** Massâ€“Individual
+**Kemiripan:** 0.9703
+**Relasi aktor:** Mass–Individual
 **Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "mana keranjang kuningnya ðŸ˜’"
+> "mana keranjang kuningnya 😒"
 
 > "mana keranjang kuningnya"
 
@@ -186,112 +186,112 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 
 ## Contoh 14 - NEAR_EXACT
 
-**Kemiripan:** 1.0000
-**Relasi aktor:** Massâ€“Mass
+**Kemiripan:** 0.9509
+**Relasi aktor:** Community–Mass
 **Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
-**Status jaringan akun:** tidak relevan
+**Status jaringan akun:** PRE_LCN_MULTI_EVIDENCE
 
-> "buat busui bisa ga kak"
+> "ah masa? aku beda malah (160)"
 
-> "bisa gak buat busui"
-
-**Interpretasi aman:**
-Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
-
-## Contoh 15 - HIGH_SIMILARITY
-
-**Kemiripan:** 0.9178
-**Relasi aktor:** Communityâ€“Mass
-**Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
-**Status jaringan akun:** NO_ACCOUNT_EVIDENCE_PAIR
-
-> "ini aman bumil busui ?"
-
-> "aman bumil busui gak ka ?"
+> "ah masa? aku beda malah beneran (160)"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 16 - HIGH_SIMILARITY
+## Contoh 15 - NEAR_EXACT
 
-**Kemiripan:** 0.9199
-**Relasi aktor:** Communityâ€“Community
-**Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
+**Kemiripan:** 0.9658
+**Relasi aktor:** Community–Community
+**Konteks:** Daviena, 58
 **Status jaringan akun:** tidak relevan
 
-> "udah pakai originote niacinamide 2 minggu, hasilnya mulai kelihatan cerahan dikit"
+> "sama2 kak semangat 😊"
 
-> "udah pakai originote niacinamide 2 minggu, hasilnya mulai kelihatan cerahan dikit"
+> "sama2 kak semangat ✨"
+
+**Interpretasi aman:**
+Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
+
+## Contoh 16 - NEAR_EXACT
+
+**Kemiripan:** 1.0000
+**Relasi aktor:** Mass–Mass
+**Konteks:** Maryame, Cross-HCC / Non-HCC
+**Status jaringan akun:** tidak relevan
+
+> "noted kak makasih ya btw (160)"
+
+> "noted kak makasih ya 🙏"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
 ## Contoh 17 - HIGH_SIMILARITY
 
-**Kemiripan:** 0.9200
-**Relasi aktor:** Massâ€“Mass
+**Kemiripan:** 0.9198
+**Relasi aktor:** Mass–Mass
+**Konteks:** Daviena, Cross-HCC / Non-HCC
+**Status jaringan akun:** tidak relevan
+
+> "baru order davina semoga cocok kaya testimoni2 disini 🙏"
+
+> "baru order originote semoga cocok kaya testimoni2 disini beneran"
+
+**Interpretasi aman:**
+Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
+
+## Contoh 18 - MODERATE_SIMILARITY
+
+**Kemiripan:** 0.8500
+**Relasi aktor:** Mass–Mass
 **Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "berapa harganya"
+> "ready taiwan kah????"
 
-> "berapa harganya"
-
-**Interpretasi aman:**
-Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
-
-## Contoh 18 - HIGH_SIMILARITY
-
-**Kemiripan:** 0.9147
-**Relasi aktor:** Communityâ€“Mass
-**Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
-**Status jaringan akun:** NO_ACCOUNT_EVIDENCE_PAIR
-
-> "bisa di pake dari umur berapa?"
-
-> "bisa di pake dari umur berapa?"
+> "ada yg ready Taiwan kah"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 19 - MODERATE_SIMILARITY
+## Contoh 19 - EXACT_DUPLICATE
 
-**Kemiripan:** 0.8070
-**Relasi aktor:** Communityâ€“Mass
+**Kemiripan:** 1.0000
+**Relasi aktor:** Community–Community
 **Konteks:** The Originote, Cross-HCC / Non-HCC
-**Status jaringan akun:** LCN edge
+**Status jaringan akun:** tidak relevan
 
-> "bisa di pakai dari umur berapa"
+> "worth it bgt beli originote niacinamide, harga segitu hasilnya lumayan puas"
 
-> "di pakai umur berapa ka?"
+> "worth it bgt beli originote niacinamide, harga segitu hasilnya lumayan puas"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 20 - MODERATE_SIMILARITY
+## Contoh 20 - EXACT_DUPLICATE
 
-**Kemiripan:** 0.8327
-**Relasi aktor:** Communityâ€“Community
+**Kemiripan:** 1.0000
+**Relasi aktor:** Community–Community
 **Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "sumpah daviena retinol ini beneran ngefek di kulit aku, seneng banget nemu produk ini"
+> "sama nih pengalamannya, worth to try emang"
 
-> "sumpah maryame niacinamide ini beneran ngefek di kulit aku, seneng banget nemu produk ini"
+> "sama nih pengalamannya, worth to try emang"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 21 - MODERATE_SIMILARITY
+## Contoh 21 - EXACT_DUPLICATE
 
-**Kemiripan:** 0.8499
-**Relasi aktor:** Massâ€“Mass
-**Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
+**Kemiripan:** 1.0000
+**Relasi aktor:** Community–Community
+**Konteks:** The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
-> "bisa umur brp @USER.okypratamaa_kedua bener ga dok?"
+> "akhirnya nemu originote niacinamide yang cocok, gak bikin breakout sama sekali"
 
-> "cek harga kak @USER.okypratamaa_kedua bener ga dok?"
+> "akhirnya nemu originote niacinamide yang cocok, gak bikin breakout sama sekali"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
@@ -299,49 +299,7 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 ## Contoh 22 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
-**Konteks:** The Originote, Cross-HCC / Non-HCC
-**Status jaringan akun:** tidak relevan
-
-> "worth it bgt beli originote niacinamide, harga segitu hasilnya lumayan puas"
-
-> "worth it bgt beli originote niacinamide, harga segitu hasilnya lumayan puas"
-
-**Interpretasi aman:**
-Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
-
-## Contoh 23 - EXACT_DUPLICATE
-
-**Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
-**Konteks:** Daviena | Maryame, Cross-HCC / Non-HCC
-**Status jaringan akun:** tidak relevan
-
-> "sama nih pengalamannya, worth to try emang"
-
-> "sama nih pengalamannya, worth to try emang"
-
-**Interpretasi aman:**
-Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
-
-## Contoh 24 - EXACT_DUPLICATE
-
-**Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
-**Konteks:** The Originote, Cross-HCC / Non-HCC
-**Status jaringan akun:** tidak relevan
-
-> "akhirnya nemu originote niacinamide yang cocok, gak bikin breakout sama sekali"
-
-> "akhirnya nemu originote niacinamide yang cocok, gak bikin breakout sama sekali"
-
-**Interpretasi aman:**
-Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
-
-## Contoh 25 - EXACT_DUPLICATE
-
-**Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
+**Relasi aktor:** Community–Community
 **Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -352,10 +310,24 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 26 - EXACT_DUPLICATE
+## Contoh 23 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
+**Relasi aktor:** Community–Community
+**Konteks:** Maryame, Cross-HCC / Non-HCC
+**Status jaringan akun:** tidak relevan
+
+> "review jujur originote niacinamide: enak dipakai, gampang nyerep, gak ada bau aneh"
+
+> "review jujur originote niacinamide: enak dipakai, gampang nyerep, gak ada bau aneh"
+
+**Interpretasi aman:**
+Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
+
+## Contoh 24 - EXACT_DUPLICATE
+
+**Kemiripan:** 1.0000
+**Relasi aktor:** Community–Community
 **Konteks:** Azarine, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -366,10 +338,10 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 27 - EXACT_DUPLICATE
+## Contoh 25 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
+**Relasi aktor:** Community–Community
 **Konteks:** Azarine | The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -380,10 +352,10 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 28 - EXACT_DUPLICATE
+## Contoh 26 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
+**Relasi aktor:** Community–Community
 **Konteks:** The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -394,10 +366,10 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 29 - EXACT_DUPLICATE
+## Contoh 27 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Communityâ€“Community
+**Relasi aktor:** Community–Community
 **Konteks:** Daviena, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
@@ -408,16 +380,44 @@ Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemirip
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
 
-## Contoh 30 - EXACT_DUPLICATE
+## Contoh 28 - EXACT_DUPLICATE
 
 **Kemiripan:** 1.0000
-**Relasi aktor:** Massâ€“Mass
+**Relasi aktor:** Mass–Mass
 **Konteks:** The Originote, Cross-HCC / Non-HCC
 **Status jaringan akun:** tidak relevan
 
 > "tipe kulit ap ka"
 
 > "tipe kulit apa kk?"
+
+**Interpretasi aman:**
+Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
+
+## Contoh 29 - EXACT_DUPLICATE
+
+**Kemiripan:** 1.0000
+**Relasi aktor:** Mass–Mass
+**Konteks:** Maryame | The Originote, Cross-HCC / Non-HCC
+**Status jaringan akun:** tidak relevan
+
+> "cantik banget teh"
+
+> "cantik banget kak"
+
+**Interpretasi aman:**
+Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
+
+## Contoh 30 - EXACT_DUPLICATE
+
+**Kemiripan:** 1.0000
+**Relasi aktor:** Mass–Mass
+**Konteks:** Azarine | Daviena, Cross-HCC / Non-HCC
+**Status jaringan akun:** tidak relevan
+
+> "Bagus gk kak?"
+
+> "Bagus ga kak?"
 
 **Interpretasi aman:**
 Dua komentar menunjukkan kesamaan tekstual pada tingkat tersebut, tetapi kemiripan teks saja tidak membuktikan koordinasi yang disengaja.
