@@ -1,43 +1,43 @@
 hcc_id,community_size,n_unique_hashtags,total_hashtag_frequency,top_1_hashtag,top_1_frequency,top_5_hashtags,dominant_hashtag_share
-1,3,31,34,retinolskincare,2,retinolskincare; glowup; maryamebeautee; reviewretinol; retinolserum,0.059
-2,6,6,8,maryame,3,maryame; dokterdetektif; tips; tipsandtricks; mputrizahro,0.375
-3,5,12,12,skincareampuh,1,skincareampuh; encapsulatedretinol; mencerahkankulit; retinol; mengurangitandapenuaan,0.083
-5,8,16,21,theoriginote,6,theoriginote; brightserum; brighteningserum; niacinamideserum; capcut,0.286
-14,3,16,16,retinol,1,retinol; sleepingmaskretinoldaviena; skincaretips; sleepingmaskretinolbooster; permintaanmaaf,0.062
-15,6,4,4,racunjuju,1,racunjuju; hyalucserum; brightb3serum; theoriginote,0.25
-16,5,9,9,retinol,1,retinol; retinoldaviena; carapakeretinol; davienaskincare; racunjuju,0.111
-17,11,24,29,theoriginote,3,theoriginote; maryamebeautee; dokterdetektif; maryame; marvelxazarine,0.103
-18,6,6,6,retinolviral,1,retinolviral; skincaremaryame; skincareproducts; hyalucserum; brightb3serum,0.167
-20,3,20,21,maryame,2,maryame; retinol; sleepingmaskretinoldaviena; skincaretips; sleepingmaskretinolbooster,0.095
-34,3,20,20,katadrzie,1,katadrzie; serumazarine; azarinesuperserum; serum; retinol,0.05
-42,5,13,14,retinoldaviena,2,retinoldaviena; retinol; sleepingmaskretinoldaviena; skincaretips; sleepingmaskretinolbooster,0.143
-45,4,21,22,maryame,2,maryame; azarineproduct; retinolserum; azarine; serumazarinemarvel,0.091
-46,7,10,10,tipsskincare,1,tipsskincare; pejuangglowing; ceritaiketia; pejuangglowup; fyf,0.1
-48,5,21,21,retinol,1,retinol; acnefighter; azarineproduct; retinolserum; azarine,0.048
-49,6,24,25,retinolskincare,2,retinolskincare; racunnabella; davienaretinol; retinol101; retinolbeginners,0.08
-50,6,10,10,skincareviral,1,skincareviral; longervideos; reviewjudes; kerajaanglowing; retinol,0.1
-52,5,33,41,retinol,3,retinol; davienaskincare; retinoldaviena; retinolskincare; glowup,0.073
-54,11,30,37,retinol,4,retinol; retinolserum; marvelxazarine; azarinecosmetic; serumazarine,0.108
-60,3,25,27,davienaskincare,2,davienaskincare; retinoldaviena; reviewjujurdaviena; sleepingmaskretinoldaviena; retinolbosterdaviena,0.074
-63,3,35,41,retinol,4,retinol; davienaskincare; creamajaib; maryamebeautyglowupcream; acnefighter,0.098
-74,3,17,19,retinoldaviena,2,retinoldaviena; maryame; sleepingmaskretinoldaviena; retinolbosterdaviena; davienaretinol,0.105
-75,4,7,7,reviewjujurdaviena,1,reviewjujurdaviena; davienaskincare; creamviral; maryamebeautyglowupcream; creamajaib,0.143
-87,5,8,8,retinolviral,1,retinolviral; racunjuju; klarifikasi; komitmen; davienaskincare,0.125
-90,4,17,17,reviewretinol,1,reviewretinol; retinolserum; racuntiktokshop; marvelxazarine; retinolcomplex,0.059
-99,6,7,8,theoriginote,2,theoriginote; brightserum; serumviral; serumtheoriginote; viralditiktok,0.25
-103,5,21,27,davienaskincare,4,davienaskincare; retinoldaviena; retinol; skincareviral; longervideos,0.148
-113,6,11,12,cream,2,cream; maryame; creammaryamebeautee; cuantanpabatas; 4upage,0.167
-114,6,9,11,maryame,2,maryame; daycream; daycreamviral; hydrolizedcollagen; chromabright,0.182
-117,6,9,9,creamajaib,1,creamajaib; maryamebeutee; creamsatset; brighteningserum; niacinamideserum,0.111
-132,4,10,10,marvelxazarine,1,marvelxazarine; azarinecosmetic; creamajaib; creamsatset; maryamebeautee,0.1
-134,3,16,16,skincareampuh,1,skincareampuh; encapsulatedretinol; mencerahkankulit; retinol; mengurangitandapenuaan,0.062
-150,6,38,39,maryame,2,maryame; retinol101; retinolbeginners; reviewretinol; sleepingmaskretinoldaviena,0.051
-168,5,12,13,davienaskincare,2,davienaskincare; reviewjujurdaviena; sleepingmaskretinoldaviena; retinolbosterdaviena; davienaretinol,0.154
-180,4,5,5,retinol,1,retinol; acnefighter; marvelxazarine; azarinecosmetic; retinolviral,0.2
-181,5,8,8,retinol,1,retinol; retinoldaviena; carapakeretinol; davienaskincare; retinolskincare,0.125
-182,6,2,2,retinol,1,retinol; acnefighter,0.5
-183,7,3,3,racunjuju,1,racunjuju; brightserum; theoriginote,0.333
-191,5,7,8,theoriginote,2,theoriginote; hyalucserum; brightb3serum; reviewserumtheoriginote; rekomendasiserum,0.25
-204,4,15,17,serumazarine,2,serumazarine; retinol; azarineproduct; retinolserum; azarine,0.118
-205,5,9,11,theoriginote,3,theoriginote; brighteningserum; niacinamideserum; capcut; brightb3serum,0.273
-206,5,5,6,maryame,2,maryame; creamviral; maryamebeautyglowupcream; skincareviral; dokterdetektif,0.333
+1,3,31,34,retinolskincare,2,retinolskincare; maryamebeautee; glowup; retinoldaviena; creamajaib,0.059
+2,6,6,8,maryame,3,maryame; dokterdetektif; tipsandtricks; mputrizahro; tips,0.375
+3,5,12,12,skincareampuh,1,skincareampuh; mencerahkankulit; retinol; mengurangitandapenuaan; encapsulatedretinol,0.083
+5,8,16,21,theoriginote,6,theoriginote; brightserum; capcut; niacinamideserum; brighteningserum,0.286
+14,3,16,16,skincaretips,1,skincaretips; sleepingmaskretinoldaviena; retinol; sleepingmaskretinolbooster; klarifikasi,0.062
+15,6,4,4,racunjuju,1,racunjuju; theoriginote; brightb3serum; hyalucserum,0.25
+16,5,9,9,retinoldaviena,1,retinoldaviena; davienaskincare; carapakeretinol; retinol; racunjuju,0.111
+17,11,24,29,theoriginote,3,theoriginote; maryame; dokterdetektif; maryamebeautee; glowupcream,0.103
+18,6,6,6,retinolviral,1,retinolviral; skincaremaryame; skincareproducts; theoriginote; brightb3serum,0.167
+20,3,20,21,maryame,2,maryame; skincaretips; stepskincare; creamajaib; fishcollagen,0.095
+34,3,20,20,azarinesuperserum,1,azarinesuperserum; serum; serumtheoriginote; dokterdetektif; maryame,0.05
+40,5,13,14,retinoldaviena,2,retinoldaviena; skincaretips; sleepingmaskretinoldaviena; retinol; sleepingmaskretinolbooster,0.143
+43,4,21,22,maryame,2,maryame; mengurangitandapenuaan; theoriginote; berawaldaritiktokshop; skincareviral,0.091
+44,7,10,10,fyf,1,fyf; ceritaiketia; retinoldaviena; pejuangglowing; pejuangglowup,0.1
+46,5,21,21,acnefighter,1,acnefighter; creammaryamebeautee; rekomendasiserum; reviewserum; brighteningserum,0.048
+47,6,24,25,retinolskincare,2,retinolskincare; racunnabella; brightb3serum; theoriginote; daycream,0.08
+48,6,10,10,skincareviral,1,skincareviral; gayaditiktok; kerajaanglowing; retinol; reviewjudes,0.1
+50,5,33,41,retinol,3,retinol; retinoldaviena; davienaskincare; retinolskincare; glowup,0.073
+52,11,30,37,retinol,4,retinol; marvelxazarine; retinolserum; serumazarine; azarinecosmetic,0.108
+53,5,21,27,davienaskincare,4,davienaskincare; retinoldaviena; retinol; retinolbosterdaviena; reviewskincare,0.148
+58,3,25,27,davienaskincare,2,davienaskincare; retinoldaviena; buzzer; pemutihkulit; retinolskincare,0.074
+62,3,35,41,retinol,4,retinol; creamajaib; maryamebeautyglowupcream; davienaskincare; stepskincare,0.098
+73,3,17,19,retinoldaviena,2,retinoldaviena; maryame; fyf; daycreamviral; skincareviral,0.105
+74,4,7,7,reviewjujurdaviena,1,reviewjujurdaviena; davienaskincare; maryamebeautyglowupcream; creamviral; creamsatset,0.143
+86,5,8,8,retinolviral,1,retinolviral; racunjuju; klarifikasi; davienaskincare; komitmen,0.125
+90,4,17,17,retinolcomplex,1,retinolcomplex; davienabooster; creamsatset; creamajaib; davienaretinol,0.059
+99,6,7,8,theoriginote,2,theoriginote; brightserum; serumtheoriginote; serumviral; theoriginoteserum,0.25
+112,6,11,12,cream,2,cream; 4upage; maryame; creammaryamebeautee; cuantanpabatas,0.167
+113,6,9,11,maryame,2,maryame; daycream; daycreamviral; hydrolizedcollagen; niacinamide,0.182
+116,6,9,9,creamsatset,1,creamsatset; maryamebeutee; creamajaib; theoriginote; capcut,0.111
+130,4,10,10,azarinecosmetic,1,azarinecosmetic; marvelxazarine; creamajaib; creamsatset; maryamebeautee,0.1
+133,3,16,16,skincareampuh,1,skincareampuh; mencerahkankulit; retinol; mengurangitandapenuaan; encapsulatedretinol,0.062
+150,6,38,39,maryame,2,maryame; maryamebeauty; cuantanpabatas; tipsandtricks; mputrizahro,0.051
+169,5,12,13,davienaskincare,2,davienaskincare; reviewjujurdaviena; davienaretinolbooster; davienaskincareofficial; retinolbosterdaviena,0.154
+181,4,5,5,acnefighter,1,acnefighter; retinol; azarinecosmetic; marvelxazarine; retinolviral,0.2
+182,5,8,8,retinoldaviena,1,retinoldaviena; davienaskincare; carapakeretinol; retinol; racunnabella,0.125
+183,6,2,2,acnefighter,1,acnefighter; retinol,0.5
+184,7,3,3,racunjuju,1,racunjuju; theoriginote; brightserum,0.333
+193,5,7,8,theoriginote,2,theoriginote; brightb3serum; hyalucserum; reviewserum; rekomendasiserum,0.25
+204,4,15,17,serumazarine,2,serumazarine; retinol; azarineretinol; retinolserum; serumazarinemarvel,0.118
+205,5,9,11,theoriginote,3,theoriginote; capcut; niacinamideserum; brighteningserum; brightb3serum,0.273
+206,5,5,6,maryame,2,maryame; maryamebeautyglowupcream; creamviral; skincareviral; dokterdetektif,0.333

@@ -1,9 +1,9 @@
 ﻿metric,value,notes
 analysis_timezone,Asia/Jakarta,Output utama menggunakan WIB.
-total_comments,33847,Semua komentar pada comment_sentiment.csv.
-valid_timestamp_comments,33788,Timestamp berhasil dibaca.
+total_comments,33063,Semua komentar observasional pada comment_sentiment_v2_observational.csv.
+valid_timestamp_comments,33004,Timestamp berhasil dibaca.
 invalid_timestamp_comments,59,Dikeluarkan dari agregasi temporal.
 lcn_node_count,724,Jumlah akun pada gephi_lcn_nodes.csv.
-lcn_comments,2892,Komentar dari akun yang masuk LCN.
-hcc_comments,1009,Komentar dari akun yang masuk HCC.
+lcn_comments,2108,Komentar dari akun yang masuk LCN.
+hcc_comments,945,Komentar dari akun yang masuk HCC.
 valid_hcc_count,42,Jumlah HCC valid dari node Gephi dan focal_structures.csv.

@@ -1,22 +1,22 @@
 ﻿scope,weekday_number,weekday_name_id,n_comments,n_accounts,n_unique_videos,comment_share_within_scope
-All Dataset,1,Senin,3941,3339,55,11.664
-All Dataset,2,Selasa,6604,5857,55,19.545
-All Dataset,3,Rabu,5087,4400,55,15.056
-All Dataset,4,Kamis,6013,5251,55,17.796
-All Dataset,5,Jumat,4194,3552,55,12.413
-All Dataset,6,Sabtu,4193,3543,55,12.41
-All Dataset,7,Minggu,3756,3220,54,11.116
-LCN,1,Senin,381,279,53,13.449
-LCN,2,Selasa,466,326,54,16.449
-LCN,3,Rabu,407,291,52,14.366
-LCN,4,Kamis,469,366,52,16.555
-LCN,5,Jumat,350,263,50,12.354
-LCN,6,Sabtu,428,310,53,15.108
-LCN,7,Minggu,332,263,50,11.719
-HCC,1,Senin,128,84,25,13.474
-HCC,2,Selasa,162,118,30,17.053
-HCC,3,Rabu,142,95,35,14.947
-HCC,4,Kamis,177,131,33,18.632
-HCC,5,Jumat,109,84,25,11.474
-HCC,6,Sabtu,145,98,37,15.263
-HCC,7,Minggu,87,67,26,9.158
+All Dataset,1,Senin,3841,3258,55,11.638
+All Dataset,2,Selasa,6489,5771,55,19.661
+All Dataset,3,Rabu,4977,4309,55,15.08
+All Dataset,4,Kamis,5870,5137,55,17.786
+All Dataset,5,Jumat,4100,3483,55,12.423
+All Dataset,6,Sabtu,4069,3450,55,12.329
+All Dataset,7,Minggu,3658,3138,54,11.084
+LCN,1,Senin,281,198,53,13.714
+LCN,2,Selasa,351,240,53,17.13
+LCN,3,Rabu,297,200,52,14.495
+LCN,4,Kamis,326,252,52,15.91
+LCN,5,Jumat,256,194,48,12.494
+LCN,6,Sabtu,304,217,53,14.837
+LCN,7,Minggu,234,181,50,11.42
+HCC,1,Senin,126,83,25,14.221
+HCC,2,Selasa,155,113,30,17.494
+HCC,3,Rabu,132,88,35,14.898
+HCC,4,Kamis,160,122,33,18.059
+HCC,5,Jumat,99,78,24,11.174
+HCC,6,Sabtu,135,91,36,15.237
+HCC,7,Minggu,79,60,25,8.916

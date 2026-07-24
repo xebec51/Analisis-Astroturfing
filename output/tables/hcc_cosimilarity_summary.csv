@@ -10,34 +10,34 @@ hcc_id,brand_label_auto,primary_brand,brand_combo,community_size,n_accounts_with
 18,The Originote,The Originote,The Originote,6,6,15,0.0236,0.0128,0.0712,0,0,0.0,0.0,Low,beautyaddict_ct7716,skinclub_ct9386,0.0712
 20,Daviena,Daviena,Daviena + Maryame,3,3,3,0.0316,0.0268,0.0478,0,0,0.0,0.0,Low,glowup_ct95907,skincare_ct87875,0.0478
 34,Daviena,Daviena,Daviena + Maryame + The Originote,3,3,3,0.0086,0.0078,0.0128,0,0,0.0,0.0,Low,beautyaddict_rr41856,kulitsehat_rp54793,0.0128
-42,Daviena,Daviena,Daviena,5,5,10,0.4552,0.4528,0.6316,0,0,0.0,0.0,Medium,beautyfess_r3c05m03x8357,beautyfess_r3c05m04x3629,0.6316
-45,Mixed_3plus_Brands,Maryame,Maryame + Azarine + The Originote,4,4,6,0.0555,0.0508,0.0933,0,0,0.0,0.0,Low,racun_ct40815,testireal_ct49360,0.0933
-46,The Originote,The Originote,The Originote + Daviena,7,7,21,0.0431,0.0294,0.1878,0,0,0.0,0.0,Low,bestieku_ct63780,glowhunter_ct68859,0.1878
-48,Mixed_3plus_Brands,The Originote,The Originote + Azarine + Maryame,5,5,10,0.049,0.0509,0.0706,0,0,0.0,0.0,Low,glowhunter_ct43630,testireal_ct48546,0.0706
-49,Mixed_3plus_Brands,Daviena,Daviena + Maryame + The Originote,6,6,15,0.0206,0.0161,0.0731,0,0,0.0,0.0,Low,skincare_ct8136,skinlover_ct4123,0.0731
-50,Maryame,Maryame,Maryame,6,6,15,0.0123,0.004,0.0509,0,0,0.0,0.0,Low,cantik_ct3314,racun_ct1114,0.0509
-52,Daviena,Daviena,Daviena + Maryame + The Originote,5,5,10,0.0322,0.0338,0.0528,0,0,0.0,0.0,Low,kulitcerah_ct29113,reviewjujur_ct39243,0.0528
-54,Azarine,Azarine,Azarine + Daviena,11,11,55,0.0493,0.0472,0.1308,0,0,0.0,0.0,Low,glowup_rr94183,skinclub_ip8582,0.1308
-60,Daviena,Daviena,Daviena,3,3,3,0.1255,0.018,0.3452,0,0,0.0,0.0,Low,kulitcerah_rr59853,skinclub_rr74871,0.3452
-63,Mixed_3plus_Brands,Maryame,Maryame + Daviena + The Originote,3,3,3,0.0251,0.0257,0.0395,0,0,0.0,0.0,Low,reviewjujur_rp60551,skincare_rp71592,0.0395
-74,Daviena,Daviena,Daviena + Maryame,3,3,3,0.0322,0.0276,0.049,0,0,0.0,0.0,Low,bestieku_ct70500,skinclub_ct15395,0.049
-75,Mixed_2_Brands,Daviena,Daviena + Maryame,4,4,6,0.0114,0.0105,0.0252,0,0,0.0,0.0,Low,skincare_ct78893,testireal_ct35011,0.0252
-87,Mixed_2_Brands,Daviena,Daviena + Maryame,5,5,10,0.0254,0.0259,0.0489,0,0,0.0,0.0,Low,skinlover_ct23275,skintok_ct98906,0.0489
+40,Daviena,Daviena,Daviena,5,5,10,0.4552,0.4528,0.6316,0,0,0.0,0.0,Medium,beautyfess_r3c05m03x8357,beautyfess_r3c05m04x3629,0.6316
+43,Mixed_3plus_Brands,Maryame,Maryame + Azarine + The Originote,4,4,6,0.0555,0.0508,0.0933,0,0,0.0,0.0,Low,racun_ct40815,testireal_ct49360,0.0933
+44,The Originote,The Originote,The Originote + Daviena,7,7,21,0.0431,0.0294,0.1878,0,0,0.0,0.0,Low,bestieku_ct63780,glowhunter_ct68859,0.1878
+46,Mixed_3plus_Brands,The Originote,The Originote + Azarine + Maryame,5,5,10,0.049,0.0509,0.0706,0,0,0.0,0.0,Low,glowhunter_ct43630,testireal_ct48546,0.0706
+47,Mixed_3plus_Brands,Daviena,Daviena + Maryame + The Originote,6,6,15,0.0206,0.0161,0.0731,0,0,0.0,0.0,Low,skincare_ct8136,skinlover_ct4123,0.0731
+48,Maryame,Maryame,Maryame,6,6,15,0.0123,0.004,0.0509,0,0,0.0,0.0,Low,cantik_ct3314,racun_ct1114,0.0509
+50,Daviena,Daviena,Daviena + Maryame + The Originote,5,5,10,0.0322,0.0338,0.0528,0,0,0.0,0.0,Low,kulitcerah_ct29113,reviewjujur_ct39243,0.0528
+52,Azarine,Azarine,Azarine + Daviena,11,11,55,0.0493,0.0472,0.1308,0,0,0.0,0.0,Low,glowup_rr94183,skinclub_ip8582,0.1308
+53,Daviena,Daviena,Daviena,5,5,10,0.06,0.0598,0.0849,0,0,0.0,0.0,Low,kulitsehat_ip5592,skinlover_ip490,0.0849
+58,Daviena,Daviena,Daviena,3,3,3,0.1255,0.018,0.3452,0,0,0.0,0.0,Low,kulitcerah_rr59853,skinclub_rr74871,0.3452
+62,Mixed_3plus_Brands,Maryame,Maryame + Daviena + The Originote,3,3,3,0.0251,0.0257,0.0395,0,0,0.0,0.0,Low,reviewjujur_rp60551,skincare_rp71592,0.0395
+73,Daviena,Daviena,Daviena + Maryame,3,3,3,0.0322,0.0276,0.049,0,0,0.0,0.0,Low,bestieku_ct70500,skinclub_ct15395,0.049
+74,Mixed_2_Brands,Daviena,Daviena + Maryame,4,4,6,0.0114,0.0105,0.0252,0,0,0.0,0.0,Low,skincare_ct78893,testireal_ct35011,0.0252
+86,Mixed_2_Brands,Daviena,Daviena + Maryame,5,5,10,0.0254,0.0259,0.0489,0,0,0.0,0.0,Low,skinlover_ct23275,skintok_ct98906,0.0489
 90,Mixed_3plus_Brands,Azarine,Azarine + Daviena + Maryame,4,4,6,0.0378,0.0305,0.0695,0,0,0.0,0.0,Low,cantik_ct6414,skinlover_ct7606,0.0695
 99,The Originote,The Originote,The Originote,6,6,15,0.3837,0.3803,0.6111,0,0,0.0,0.0,Medium,cantiknyata_r3c06m00x8166,cantiknyata_r3c06m01x3833,0.6111
-103,Daviena,Daviena,Daviena,5,5,10,0.06,0.0598,0.0849,0,0,0.0,0.0,Low,kulitsehat_ip5592,skinlover_ip490,0.0849
-113,Maryame,Maryame,Maryame,6,6,15,0.4034,0.3739,0.7121,1,0,0.0667,0.0,Medium,glowcheck_r3c10m04x9521,glowcheck_r3c10m05x2485,0.7121
-114,Maryame,Maryame,Maryame,6,6,15,0.3797,0.3919,0.607,0,0,0.0,0.0,Medium,glowdiary_r3c03m00x2631,glowdiary_r3c03m01x2588,0.607
-117,The Originote,The Originote,The Originote,6,6,15,0.0273,0.0192,0.0946,0,0,0.0,0.0,Low,glowup_ct6488,skinclub_ct3535,0.0946
-132,Mixed_3plus_Brands,Azarine,Azarine + Maryame + The Originote,4,4,6,0.0165,0.0179,0.033,0,0,0.0,0.0,Low,glowup_ct8724,reviewjujur_ct9800,0.033
-134,Daviena,Daviena,Daviena + The Originote,3,3,3,0.0416,0.0323,0.068,0,0,0.0,0.0,Low,kulitglowing_rr91939,racun_rr28461,0.068
+112,Maryame,Maryame,Maryame,6,6,15,0.4034,0.3739,0.7121,1,0,0.0667,0.0,Medium,glowcheck_r3c10m04x9521,glowcheck_r3c10m05x2485,0.7121
+113,Maryame,Maryame,Maryame,6,6,15,0.3797,0.3919,0.607,0,0,0.0,0.0,Medium,glowdiary_r3c03m00x2631,glowdiary_r3c03m01x2588,0.607
+116,The Originote,The Originote,The Originote,6,6,15,0.0273,0.0192,0.0946,0,0,0.0,0.0,Low,glowup_ct6488,skinclub_ct3535,0.0946
+130,Mixed_3plus_Brands,Azarine,Azarine + Maryame + The Originote,4,4,6,0.0165,0.0179,0.033,0,0,0.0,0.0,Low,glowup_ct8724,reviewjujur_ct9800,0.033
+133,Daviena,Daviena,Daviena + The Originote,3,3,3,0.0416,0.0323,0.068,0,0,0.0,0.0,Low,kulitglowing_rr91939,racun_rr28461,0.068
 150,Maryame,Maryame,Maryame + The Originote,6,6,15,0.0341,0.0302,0.0649,0,0,0.0,0.0,Low,kulitglowing_ip334,skinbestie_ip9364,0.0649
-168,Daviena,Daviena,Daviena,5,5,10,0.3298,0.2746,0.6639,0,0,0.0,0.0,Low,kulitkece_r3c01m01x2583,kulitkece_r3c01m04x8079,0.6639
-180,Azarine,Azarine,Azarine,4,4,6,0.2485,0.1781,0.6353,0,0,0.0,0.0,Low,produkjujur_r3c00m01x6024,produkjujur_r3c00m02x8296,0.6353
-181,Daviena,Daviena,Daviena,5,5,10,0.3324,0.322,0.4767,0,0,0.0,0.0,Medium,racikcantik_r3c08m00x5448,racikcantik_r3c08m02x8325,0.4767
-182,Not identified,Not identified,,6,6,15,0.0183,0.0132,0.0655,0,0,0.0,0.0,Low,reviewjujur_ct8615,skinbestie_ct9146,0.0655
-183,The Originote,The Originote,The Originote,7,7,21,0.0209,0.0123,0.0901,0,0,0.0,0.0,Low,racun_ct7880,reviewjujur_ct9366,0.0901
-191,The Originote,The Originote,The Originote,5,5,10,0.3284,0.3289,0.4588,0,0,0.0,0.0,Medium,reviewpedas_r3c09m02x6779,reviewpedas_r3c09m04x5100,0.4588
+169,Daviena,Daviena,Daviena,5,5,10,0.3298,0.2746,0.6639,0,0,0.0,0.0,Low,kulitkece_r3c01m01x2583,kulitkece_r3c01m04x8079,0.6639
+181,Azarine,Azarine,Azarine,4,4,6,0.2485,0.1781,0.6353,0,0,0.0,0.0,Low,produkjujur_r3c00m01x6024,produkjujur_r3c00m02x8296,0.6353
+182,Daviena,Daviena,Daviena,5,5,10,0.3324,0.322,0.4767,0,0,0.0,0.0,Medium,racikcantik_r3c08m00x5448,racikcantik_r3c08m02x8325,0.4767
+183,Not identified,Not identified,,6,6,15,0.0183,0.0132,0.0655,0,0,0.0,0.0,Low,reviewjujur_ct8615,skinbestie_ct9146,0.0655
+184,The Originote,The Originote,The Originote,7,7,21,0.0209,0.0123,0.0901,0,0,0.0,0.0,Low,racun_ct7880,reviewjujur_ct9366,0.0901
+193,The Originote,The Originote,The Originote,5,5,10,0.3284,0.3289,0.4588,0,0,0.0,0.0,Medium,reviewpedas_r3c09m02x6779,reviewpedas_r3c09m04x5100,0.4588
 204,Azarine,Azarine,Azarine,4,4,6,0.2847,0.2135,0.5279,0,0,0.0,0.0,Low,skinreview_r3c04m00x5770,skinreview_r3c04m01x7927,0.5279
 205,The Originote,The Originote,The Originote,5,5,10,0.3886,0.3619,0.625,0,0,0.0,0.0,Medium,testiaman_r3c02m00x9822,testiaman_r3c02m01x8585,0.625
 206,Maryame,Maryame,Maryame,5,5,10,0.4579,0.436,0.7318,1,0,0.1,0.0,Medium,ulasankilat_r3c07m01x9795,ulasankilat_r3c07m03x2101,0.7318
