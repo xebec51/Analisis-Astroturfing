@@ -1,7 +1,7 @@
 """Local browser helper for manually finding TikTok comments from similarity groups.
 
-The script reads the prioritized screenshot queue, opens Microsoft Bing searches
-in Microsoft Edge by default, tries to highlight matching visible text, and
+The script reads the prioritized screenshot queue, opens direct TikTok candidate
+URLs in Microsoft Edge by default, tries to highlight matching visible text, and
 appends a manual review status. It is deliberately a review aid, not a
 sentiment/modeling input.
 """
@@ -518,7 +518,7 @@ def open_rows(rows: pd.DataFrame, args: argparse.Namespace) -> None:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Open Microsoft Bing searches or TikTok videos from comment-similarity outputs and help locate comments."
+        description="Open TikTok videos from comment-similarity outputs in Microsoft Edge and help locate comments."
     )
     parser.add_argument("--queue", type=Path, default=DEFAULT_QUEUE, help="CSV queue to read.")
     parser.add_argument("--status", type=Path, default=DEFAULT_STATUS, help="CSV lookup status log to append.")
@@ -533,14 +533,14 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument(
         "--lookup-mode",
         choices=["bing", "direct"],
-        default="bing",
-        help="Open Microsoft Bing searches by default, or direct TikTok candidate URLs.",
+        default="direct",
+        help="Open direct TikTok candidate URLs by default, or Microsoft Bing searches as a fallback.",
     )
     parser.add_argument("--bing-text-chars", type=int, default=120, help="Maximum comment-text characters included in Bing queries.")
     parser.add_argument(
         "--channel",
         default="msedge",
-        help='Browser channel. Default: msedge. Accepted aliases: bing, edge, msedge, chrome, or "" for Playwright Chromium.',
+        help='Browser channel. Default: msedge. Accepted aliases: edge, msedge, chrome, or "" for Playwright Chromium.',
     )
     parser.add_argument("--headless", action="store_true", help="Run browser headless.")
     parser.add_argument("--no-pause", action="store_true", help="Do not prompt between rows; append auto status only.")
