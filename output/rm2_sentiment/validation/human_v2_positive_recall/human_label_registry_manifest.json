@@ -1,0 +1,62 @@
+{
+  "status": "HUMAN_SUPERVISED_V2_POSITIVE_RECALL_REGISTRY_BUILT",
+  "created_at_utc": "2026-07-24T08:43:25.407370+00:00",
+  "registry_rows": 1187,
+  "development_rows": 546,
+  "development_class_counts": {
+    "Negative": 147,
+    "Neutral": 286,
+    "Positive": 113
+  },
+  "target_development_data_gate": {
+    "positive_250_to_350": false,
+    "negative_min_250": false,
+    "neutral_min_400": false
+  },
+  "target_development_data_gate_passed": false,
+  "split_leakage_audit_passed": true,
+  "selected_fold_seed": 42,
+  "annotation_sources": [
+    "output/rm2_sentiment/validation/human_v1/sentiment_human_annotation_validated.csv",
+    "output/rm2_sentiment/validation/human_v2/locked_test_v2_observational_final.csv",
+    "output/rm2_sentiment/validation/human_v2/sentiment_human_annotation_v2_validated.csv",
+    "output/rm2_sentiment/validation/human_v2/sentiment_v2_adjudication_template_final.csv",
+    "output/rm2_sentiment/validation/human_v2/sentiment_v2_replacement_adjudication_final.csv",
+    "output/rm2_sentiment/validation/human_v3/human_label_registry_v3.csv"
+  ],
+  "methodological_confirmations": {
+    "ground_truth_sources": "human final/adjudicated labels only",
+    "v2_predictions_used_as_ground_truth": false,
+    "indobert_predictions_used_as_ground_truth": false,
+    "lexicon_used_as_ground_truth": false,
+    "pseudo_labels_used_as_ground_truth": false,
+    "llm_labels_used_as_ground_truth": false,
+    "hcc_status_used_as_ground_truth": false,
+    "legacy_locked_tests_used_for_training_or_tuning": false,
+    "unknown_comments_forced_positive": false
+  },
+  "new_annotation_status": {
+    "positive_active_learning_blind_rows": 500,
+    "positive_active_learning_adjudicated_rows_loaded": 0,
+    "new_locked_test_template_rows": 600,
+    "new_locked_test_final_human_labels_available": false
+  },
+  "input_sha256": {
+    "output/rm2_sentiment/validation/human_v1/sentiment_human_annotation_validated.csv": "e61e96a5111626bda3fa0d27b8eca3471faa0c7f97779e31d0b524b690abf559",
+    "output/rm2_sentiment/validation/human_v2/sentiment_human_annotation_v2_validated.csv": "f85142364dc89d555cc01920d46e4e05e62257dee724c51df89798f690de469e",
+    "output/rm2_sentiment/validation/human_v2/sentiment_v2_adjudication_template_final.csv": "55f138d206be7b15e4d60d43c9a2045802321c3bef5b558c51502793c97fc8ce",
+    "output/rm2_sentiment/validation/human_v2/sentiment_v2_replacement_adjudication_final.csv": "c5a2689a3a225f9bebcde5828a40d124330830852c51ac34409cd108cd4635d1",
+    "output/rm2_sentiment/validation/human_v2/locked_test_v2_observational_final.csv": "d94d322a877523e1317c8036d37752c89ec524c09b36f673910cc5219d270828",
+    "output/rm2_sentiment/validation/human_v3/human_label_registry_v3.csv": "939456e7e7dcc40e9b60f3f94b3beb13c107fa8aa93506c95b39230ed6a56e26",
+    "output/rm2_sentiment/final/comment_sentiment_v2_observational.csv": "64b4fdacb9c623798035b5ed024e050d7e73de2a2260a7a8fcede5a4032b20d6"
+  },
+  "outputs": {
+    "registry": "output/rm2_sentiment/validation/human_v2_positive_recall/human_label_registry.csv",
+    "duplicate_cluster_audit": "output/rm2_sentiment/validation/human_v2_positive_recall/duplicate_cluster_audit.csv",
+    "label_conflict_audit": "output/rm2_sentiment/validation/human_v2_positive_recall/label_conflict_audit.csv",
+    "split_manifest": "output/rm2_sentiment/validation/human_v2_positive_recall/split_manifest.csv",
+    "annotation_source_summary": "output/rm2_sentiment/validation/human_v2_positive_recall/annotation_source_summary.csv",
+    "positive_active_learning_blind": "output/rm2_sentiment/validation/human_v2_positive_recall/positive_active_learning_blind.csv",
+    "new_locked_test_final_template": "output/rm2_sentiment/validation/human_v2_positive_recall/new_locked_test_final.csv"
+  }
+}

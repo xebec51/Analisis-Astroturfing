@@ -1,0 +1,16 @@
+{
+  "status": "NEW_LOCKED_TEST_TEMPLATE_PREPARED_PENDING_HUMAN_ADJUDICATION",
+  "created_at_utc": "2026-07-24T08:43:25.267618+00:00",
+  "n_candidate_rows": 600,
+  "required_before_evaluation": [
+    "two independent blind annotator files completed",
+    "disagreements adjudicated",
+    "INJ/No Text/Uncertain removed from evaluable locked test",
+    "at least 100 Positive and 100 Negative adjudicated evaluable rows",
+    "no exact or near-duplicate leakage with development or active-learning data",
+    "candidate model and thresholds frozen before final labels are used for evaluation"
+  ],
+  "template_sha256": "d98d6f442657ff35e3aa1adefadb4e4734d960a1dda734f57f5a65b8b80802c4",
+  "locked_test_used_for_training_or_selection": false,
+  "low_confidence_to_positive_rule": false
+}
