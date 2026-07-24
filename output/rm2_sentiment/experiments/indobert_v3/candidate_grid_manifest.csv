@@ -1,0 +1,28 @@
+﻿model_id,revision,trial,status,notes
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,weighted_cross_entropy_lr1em05_len128_warm0.06_wd0.01_gna,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,weighted_cross_entropy_lr2em05_len192_warm0.1_wd0.05_gna,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,weighted_cross_entropy_lr3em05_len256_warm0.06_wd0.05_gna,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,focal_loss_lr1em05_len192_warm0.1_wd0.01_g1p0,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,focal_loss_lr2em05_len256_warm0.06_wd0.01_g1p5,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,focal_loss_lr3em05_len128_warm0.1_wd0.05_g2p0,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,class_balanced_focal_loss_lr1em05_len256_warm0.1_wd0.05_g1p0,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,class_balanced_focal_loss_lr2em05_len128_warm0.1_wd0.01_g1p5,RUN,OOF development run on human labels only.
+apriandito/indobert-sentiment-classifier,ba24f8cea1c00090cc4fce2b63c61ed307943a78,class_balanced_focal_loss_lr3em05_len192_warm0.06_wd0.05_g2p0,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,weighted_cross_entropy_lr1em05_len128_warm0.06_wd0.01_gna,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,weighted_cross_entropy_lr2em05_len192_warm0.1_wd0.05_gna,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,weighted_cross_entropy_lr3em05_len256_warm0.06_wd0.05_gna,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,focal_loss_lr1em05_len192_warm0.1_wd0.01_g1p0,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,focal_loss_lr2em05_len256_warm0.06_wd0.01_g1p5,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,focal_loss_lr3em05_len128_warm0.1_wd0.05_g2p0,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,class_balanced_focal_loss_lr1em05_len256_warm0.1_wd0.05_g1p0,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,class_balanced_focal_loss_lr2em05_len128_warm0.1_wd0.01_g1p5,RUN,OOF development run on human labels only.
+indolem/indobertweet-base-uncased,32e28c05b47e33b6675d2670a1745c50a65e987a,class_balanced_focal_loss_lr3em05_len192_warm0.06_wd0.05_g2p0,RUN,OOF development run on human labels only.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,weighted_cross_entropy_lr1em05_len128_warm0.06_wd0.01_gna,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,weighted_cross_entropy_lr2em05_len192_warm0.1_wd0.05_gna,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,weighted_cross_entropy_lr3em05_len256_warm0.06_wd0.05_gna,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,focal_loss_lr1em05_len192_warm0.1_wd0.01_g1p0,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,focal_loss_lr2em05_len256_warm0.06_wd0.01_g1p5,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,focal_loss_lr3em05_len128_warm0.1_wd0.05_g2p0,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,class_balanced_focal_loss_lr1em05_len256_warm0.1_wd0.05_g1p0,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,class_balanced_focal_loss_lr2em05_len128_warm0.1_wd0.01_g1p5,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.
+indobenchmark/indobert-large-p2,4b280c3bfcc1ed2d6b4589be5c876076b7d73568,class_balanced_focal_loss_lr3em05_len192_warm0.06_wd0.05_g2p0,RESOURCE_BLOCKED_CPU_MODEL_LOAD_TIMEOUT,Model load exceeded local CPU runtime limit; not used for V3 selection.

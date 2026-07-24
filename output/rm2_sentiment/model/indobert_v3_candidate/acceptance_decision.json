@@ -1,0 +1,123 @@
+{
+  "status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2",
+  "created_at_utc": "2026-07-24T04:54:27.065956+00:00",
+  "test_source": "output/rm2_sentiment/validation/human_v3/human_label_registry_v3.csv",
+  "n_same_test_evaluable_rows": 274,
+  "v2": {
+    "artifact": "output/rm2_sentiment/model/frozen/selected_model_development_frozen.joblib",
+    "config": "output/rm2_sentiment/model/frozen/selected_model_development_frozen_config.json",
+    "artifact_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+    "threshold": 0.42,
+    "model_config_status": "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST"
+  },
+  "v3": {
+    "candidate_dir": "output/rm2_sentiment/model/indobert_v3_candidate",
+    "config": "output/rm2_sentiment/model/indobert_v3_candidate/v3_candidate_config.json",
+    "linear_head_sha256": "ab4cb68be0037e2f5eb432b22164f4ab6fcf594f8a1cf5327a20491018ee63e8",
+    "threshold": 0.0,
+    "model_id": "apriandito/indobert-sentiment-classifier",
+    "revision": "ba24f8cea1c00090cc4fce2b63c61ed307943a78",
+    "training_mode": "frozen_encoder_linear_head_cpu"
+  },
+  "acceptance_gate": [
+    {
+      "gate": "accuracy V3 > accuracy V2",
+      "passed": false,
+      "reference_or_threshold": 0.8359375,
+      "observed_v3": 0.10218978102189781,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "macro-F1 V3 >= macro-F1 V2 + 0.02",
+      "passed": false,
+      "reference_or_threshold": 0.7308704320423235,
+      "observed_v3": 0.08948171021810054,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "balanced accuracy V3 > V2",
+      "passed": false,
+      "reference_or_threshold": 0.718795689879629,
+      "observed_v3": 0.10421793305098459,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "MCC V3 > V2",
+      "passed": false,
+      "reference_or_threshold": 0.6368545406065418,
+      "observed_v3": -0.2721540951678637,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "Positive recall V3 >= 0.60",
+      "passed": false,
+      "reference_or_threshold": 0.6,
+      "observed_v3": 0.19148936170212766,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "Positive recall V3 >= V2 + 0.10",
+      "passed": false,
+      "reference_or_threshold": 0.4772727272727273,
+      "observed_v3": 0.19148936170212766,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "Positive precision V3 >= 0.65",
+      "passed": false,
+      "reference_or_threshold": 0.65,
+      "observed_v3": 0.06666666666666667,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "Positive F1 V3 > V2",
+      "passed": false,
+      "reference_or_threshold": 0.5753424657534246,
+      "observed_v3": 0.0989010989010989,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "coverage >= 0.90",
+      "passed": true,
+      "reference_or_threshold": 0.9,
+      "observed_v3": 1.0,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "no class collapse",
+      "passed": true,
+      "reference_or_threshold": true,
+      "observed_v3": true,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "no class recall below 0.50",
+      "passed": false,
+      "reference_or_threshold": 0.5,
+      "observed_v3": 0.024390243902439025,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "model stable lintas seed",
+      "passed": false,
+      "reference_or_threshold": "required",
+      "observed_v3": "development std macro-F1 documented; CPU linear-probe variance too high for stability claim",
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    },
+    {
+      "gate": "paired bootstrap no meaningful decrease",
+      "passed": false,
+      "reference_or_threshold": false,
+      "observed_v3": true,
+      "final_status": "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2"
+    }
+  ],
+  "policy_confirmations": {
+    "locked_test_used_for_tuning": false,
+    "post_hoc_positive_shift": false,
+    "low_confidence_to_positive_rule": false,
+    "neutral_to_positive_mass_shift": false,
+    "hcc_to_positive_rule": false,
+    "ground_truth": "human annotation/adjudication"
+  }
+}

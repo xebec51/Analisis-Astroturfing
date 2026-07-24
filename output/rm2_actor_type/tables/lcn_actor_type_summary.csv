@@ -1,5 +1,5 @@
 actor_type_primary,network_position,n_nodes,node_percentage_within_lcn,n_comments,mean_degree,median_degree,mean_weighted_degree,median_weighted_degree,mean_betweenness,max_betweenness
 Individual Actor,HCC,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0
 Individual Actor,LCN Non-HCC,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0
-Community Actor,HCC,218,30.11,1009,5.655963,4.0,4.54153,3.75,6.3e-05,0.006402
-Mass Actor,LCN Non-HCC,506,69.89,1883,2.926877,1.0,2.060241,0.866071,6.2e-05,0.007254
+Community Actor,HCC,218,30.11,945,5.669725,4.0,4.549558,3.75,7e-05,0.007286
+Mass Actor,LCN Non-HCC,506,69.89,1163,2.928854,1.0,2.061724,0.928571,6.9e-05,0.008077

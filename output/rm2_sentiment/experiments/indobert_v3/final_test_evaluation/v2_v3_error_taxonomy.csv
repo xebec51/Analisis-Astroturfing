@@ -1,0 +1,298 @@
+﻿model,comment_id,true_label,predicted_label,confidence,taxonomy_flags,brand_or_video_context,comment_text_original
+V2_frozen,3161983647287578588,Positive,Neutral,0.5296359812275392,negation,The Originote,"review jujur originote niacinamide: enak dipakai, gampang nyerep, gak ada bau aneh"
+V2_frozen,7150095768443437850,Neutral,Positive,0.6189828906356462,negation;emoji_or_non_ascii,The Originote,"iya sih agak takut, Niacin nya 10%😖"
+V2_frozen,7167339197756621594,Positive,Neutral,0.6544746738336467,very_short,The Originote,Kaka ny cantik:)
+V2_frozen,7186991378043781914,Neutral,Positive,0.5761697841862883,general_misclassification,Maryame,tpi kan kk EMG udah putih jdi bagus
+V2_frozen,7261629830364496646,Positive,Neutral,0.5536730027688244,general_misclassification,Azarine,votre peau d best
+V2_frozen,7346527247632188166,Neutral,Positive,0.4312765104226193,general_misclassification,The Originote,"betul,tiap pagi aja ya.
+malem bisa,tp mnding gausa si biar hemat haja"
+V2_frozen,7358420239945696006,Positive,Negative,0.6860219451373458,question,Daviena,ada yang mau gantiin retinol daviena aku ngga? masih baru
+V2_frozen,7358437236473840389,Negative,Neutral,0.45289412238629534,question;emoji_or_non_ascii,Daviena,susah digapai skinkernya kecuali dalba 🙏
+V2_frozen,7358509278376608518,Positive,Neutral,0.463291952823919,general_misclassification,Daviena,@melvinahusyanti96 testii mantul nih kak
+V2_frozen,7421196980917060357,Positive,Neutral,0.586528931627619,negation,Daviena,"klo ga ada doktif,mgkin takkan terungkap"
+V2_frozen,7421312220099527429,Neutral,Positive,0.8209059255441188,negation;emoji_or_non_ascii,Daviena,Alhamdulillah aku ngga suka pakai skincare viral😊
+V2_frozen,7421313493649851142,Negative,Neutral,0.6445807418724412,general_misclassification,Daviena,bahan2nya bahaya kl sdh nyerap k jaringan kulit bisa mrubah hormonal dlm tubuh yg bisa menimbulkan penyakit aneh2 dlm tubuh kita
+V2_frozen,7421328248188699398,Negative,Neutral,0.4615933322474241,negation;emoji_or_non_ascii,Daviena,Lebih ke kecewa sih kak plus ga mau buang” wkt pke product yg ga worth it
+V2_frozen,7421411594657432326,Neutral,Positive,0.5215265968360615,general_misclassification,Daviena,aku buat jadi handbody
+V2_frozen,7421494815831474950,Positive,Neutral,0.5008756288733722,question,Daviena,mewah apa nya..kalian kalau mau bersih ilang flex..pakai cosmelan aja
+V2_frozen,7421523816255390469,Positive,Neutral,0.4979893190506376,very_short,Daviena,Aslinyaa udh keliatan
+V2_frozen,7421538820863230726,Positive,Neutral,0.4942019918922229,very_short,Daviena,untung ada doktif
+V2_frozen,7421793210886980358,Positive,Negative,0.6089616593715199,negation,Daviena,dpkiran q malah pen beli hansui murah meriah muntah ok la untuk hrga sgtu
+V2_frozen,7422453642731815685,Negative,Neutral,0.4822102686048031,emoji_or_non_ascii,Daviena,"disengaja, untung ketauan kasian customer kak🥺 untungnya di kakak"
+V2_frozen,7422942681682150150,Positive,Neutral,0.5810823815229433,general_misclassification,Daviena,Viva the best pokoknya ..
+V2_frozen,7423328278143337222,Negative,Positive,0.4485551195416014,mixed_sentiment_connector,Daviena,bohongg...cuma isi air dan kunyit
+V2_frozen,7424775237231264517,Neutral,Negative,0.4502893182171235,general_misclassification,Maryame,takut ke makan iklan
+V2_frozen,7428569782880846610,Neutral,Positive,0.46288403441296233,general_misclassification,Maryame,dok cek Jian glow . karena di kampung saya LG buming Jian glow . prosesnya cepet banget . @dr.okypratamaa_kedua
+V2_frozen,7428607482233586438,Positive,Neutral,0.5625168895219276,emoji_or_non_ascii,Maryame,"spill isi lemarinya dok, knp bajunya lucu"" smua🥲"
+V2_frozen,7428841295320253189,Negative,Neutral,0.5918135994124367,negation;emoji_or_non_ascii,Maryame,dok kalo bisa abis di coba sama dokter itu buat aku yah. aku nga mampu belii abis mahaalll 😂@dr.okypratamaa @dr.okypratamaa_kedua
+V2_frozen,7431632563489637136,Neutral,Negative,0.5163284249197988,negation;emoji_or_non_ascii,Maryame,lagian hilang bukan berarti sekali pake cling langsung hilang GK ya pastinya perlahan lebih tepatnya memudar ..GK ada yg instan kecuali yg berbahaya😂😁
+V2_frozen,7432513948941992725,Positive,Negative,0.46980103214795366,question,Daviena,"ada yang mau gantiin retinol daviena ada 2pcs (new segelan) dan moisturizer pink daviena?
+kalo mau langsung chat aja ya, pengiriman dari jawa timur"
+V2_frozen,7432674675672597266,Positive,Neutral,0.5941325748219367,general_misclassification,Maryame,"dok bajunya lucu2,rapi lagi"
+V2_frozen,7432718272920945429,Positive,Neutral,0.807622442016892,very_short,Maryame,seht sll dok
+V2_frozen,7468994546623136519,Positive,Neutral,0.7305065742139133,emoji_or_non_ascii,Maryame,cek keranjang kuning aku kaka😍
+V2_frozen,7478137477548000005,Positive,Neutral,0.7645369108992063,question,Daviena,ka mau retinol daviena? dm aja bisa nego
+V2_frozen,7488648398528054024,Negative,Neutral,0.4339188928607794,question,Maryame,kalau d mm aq pake maryame kenapa jadi ada beberapa flek hitam yaaa... please solusinya gmn yaaa cc @maryame.official
+V2_frozen,7494279268983161607,Neutral,Negative,0.650092903675985,emoji_or_non_ascii;mixed_sentiment_connector,Maryame,"Tunggu dulu maryame pasti aku beli km klw dana ku udh ada buat membeli mu, skrng masih dana buat kebutuhan keluarga🥹🥲"
+V2_frozen,7517503547082081032,Positive,Negative,0.6608029433247384,question,Maryame,"ada yang mau gantiin maryame punyaku?
+pemakaian baru 3 hari day cream sama night cream. ku jual murah"
+V2_frozen,7532542644297024272,Negative,Positive,0.4630648082296335,negation;emoji_or_non_ascii,The Originote,iya aku juga jerawatan terus muka gatal²
+V2_frozen,7532684680768799505,Positive,Negative,0.5337882151644345,emoji_or_non_ascii,Maryame,"kalau sepaket bisa habis dlm sebulan atau 2 bulan, ku rasa bisalah di beli sisihin dri uang gaji😁"
+V2_frozen,7574301625432097544,Positive,Negative,0.5088567294882224,negation,Maryame,@Aulwiyah:ada yg mau bayariin day cream acne maryame ga soalnya mau ganti
+V2_frozen,7588115397358912264,Positive,Negative,0.6287547784240115,question;negation,Maryame,"mau gk kak? krim malam nya aja beli 150rb an... kujual 100rb aja deh, belum dibuka masih segel an"
+V2_frozen,7596249466358809352,Positive,Neutral,0.5555564859636412,general_misclassification,Daviena,kak galih terimakasih supportnya
+V2_frozen,7596259820907987730,Positive,Negative,0.654910991588295,emoji_or_non_ascii,Daviena,kami percaya kok kak😭😭
+V2_frozen,7596520523933467410,Neutral,Negative,0.5053361069087685,very_short,Daviena,masih kaa
+V2_frozen,7597822569248621330,Negative,Neutral,0.6055445458637849,very_short,Daviena,yg pnting hedon
+IndoBERT_V3_candidate,2791148522699793486,Positive,Negative,0.7667362321027776,general_misclassification,Azarine,"makasih infonya kak, jadi pengen coba juga"
+IndoBERT_V3_candidate,3161983647287578588,Positive,Negative,0.5753094955693421,negation,The Originote,"review jujur originote niacinamide: enak dipakai, gampang nyerep, gak ada bau aneh"
+IndoBERT_V3_candidate,3357919827728827297,Positive,Negative,0.7108485508070371,question,The Originote,"betul sekali, cocok banget buat pemakaian harian"
+IndoBERT_V3_candidate,4405259890376876830,Positive,Negative,0.537818086009869,question;negation;mixed_sentiment_connector,Daviena,"kulit aku kombinasi tapi daviena retinol tetep nyaman, gak lengket"
+IndoBERT_V3_candidate,5669702723891702888,Positive,Negative,0.6271112100262094,negation,Maryame,"worth it bgt beli maryame niacinamide, harga segitu hasilnya lumayan puas"
+IndoBERT_V3_candidate,6547173592868095747,Positive,Neutral,0.5942731559597053,negation;mixed_sentiment_connector,The Originote,packaging originote niacinamide lucu tapi yang penting isinya juga bagus kok
+IndoBERT_V3_candidate,6847472872570691043,Positive,Negative,0.7111409009222053,question,Daviena,"betul sekali, cocok banget buat pemakaian harian"
+IndoBERT_V3_candidate,7122989874663490331,Neutral,Positive,0.6588673659455027,negation;very_short,The Originote,ga boleh
+IndoBERT_V3_candidate,7127466501325882138,Neutral,Positive,0.4478077217872553,very_short,The Originote,@belaa01__
+IndoBERT_V3_candidate,7134759817448637210,Neutral,Positive,0.5038154770619808,question,The Originote,blh di gabung sma retinol kak?
+IndoBERT_V3_candidate,7137340688504603418,Neutral,Positive,0.4456852439253609,negation,The Originote,"retinol + niacinemide boleh deh, udah banyak yg up di tiktok, dokter juga blng boleh, baca google coba deh"
+IndoBERT_V3_candidate,7146478371403498266,Neutral,Negative,0.620047279830623,very_short,The Originote,"okk, makasi yaa"
+IndoBERT_V3_candidate,7146932997035459355,Neutral,Positive,0.4478077217872553,very_short,The Originote,@Cynkg
+IndoBERT_V3_candidate,7150095768443437850,Neutral,Positive,0.49685597531855225,negation;emoji_or_non_ascii,The Originote,"iya sih agak takut, Niacin nya 10%😖"
+IndoBERT_V3_candidate,7167339197756621594,Positive,Neutral,0.5447474710325402,very_short,The Originote,Kaka ny cantik:)
+IndoBERT_V3_candidate,7185720188284129669,Positive,Negative,0.6962413664835728,general_misclassification,The Originote,"yg lagi nyari originote niacinamide bagus, ini salah satu rekomendasi aku"
+IndoBERT_V3_candidate,7186991378043781914,Neutral,Negative,0.4616328052225346,general_misclassification,Maryame,tpi kan kk EMG udah putih jdi bagus
+IndoBERT_V3_candidate,7193648881576674074,Positive,Negative,0.6430463374884448,very_short,Maryame,glowing banget kakak
+IndoBERT_V3_candidate,7197345896890680091,Neutral,Positive,0.4896120833045459,question,Maryame,"kak,cara pesan nya kek mna?"
+IndoBERT_V3_candidate,7206547831497523994,Neutral,Positive,0.518068226884426,question,Azarine,kak mau tanya kalo pake retinol trs pake night cream gimana?boleh
+IndoBERT_V3_candidate,7206937276471083803,Neutral,Positive,0.5653552945124624,question,Azarine,Kakak ak bingung sama mousturizer nya merek apa yaaa combi toner sama retinol pratista tanya @azarinecosmetic donk
+IndoBERT_V3_candidate,7214987417747931930,Neutral,Positive,0.6095378037586703,general_misclassification,Azarine,bahas elformula dong bangg
+IndoBERT_V3_candidate,7226177713979540251,Neutral,Positive,0.5411385684314584,emoji_or_non_ascii,The Originote,cis yg dapet 75 .000☝ cc @theoriginote
+IndoBERT_V3_candidate,7226267145008939802,Neutral,Positive,0.6351929827805358,general_misclassification,Azarine,NOO!!! retinol di malam paginya baru boleh vit c
+IndoBERT_V3_candidate,7227502415246607110,Neutral,Positive,0.6026573320740188,question,Azarine,Btw retinol sama niacinamede boleh kah?
+IndoBERT_V3_candidate,7227789969930421019,Neutral,Negative,0.5039737303915682,question;negation;emoji_or_non_ascii,Azarine,retinol bisa ga kak buat nyembuhin urat”di muka??
+IndoBERT_V3_candidate,7234553248231867141,Positive,Negative,0.6982722097337797,very_short,The Originote,mantab nih
+IndoBERT_V3_candidate,7236511249381950214,Neutral,Negative,0.5052347312491337,question,Maryame,1 pot cukup berapa hari kk
+IndoBERT_V3_candidate,7238804410896450310,Neutral,Negative,0.40431179987929416,general_misclassification,The Originote,itu yg paket glowing moist sama serum bright B3 ya kak
+IndoBERT_V3_candidate,7261629830364496646,Positive,Neutral,0.530177754389507,general_misclassification,Azarine,votre peau d best
+IndoBERT_V3_candidate,7269434550475096837,Neutral,Negative,0.40584611193527836,question;negation,The Originote,ini boleh dipakai tiap hari ga kak?
+IndoBERT_V3_candidate,7286083385822135046,Neutral,Negative,0.3504353992886745,very_short,Daviena,pengen sih
+IndoBERT_V3_candidate,7286370352413721350,Positive,Negative,0.6202541087981,very_short,Daviena,bagus kulitnya
+IndoBERT_V3_candidate,7287127448696718086,Neutral,Positive,0.4403489441135272,question,The Originote,kalo lg bruntusan/jerawatan masih boleh paket atau di jada dulu kak?
+IndoBERT_V3_candidate,7290446743061627653,Neutral,Positive,0.4092831284371584,question,The Originote,khusus buat malam apa pagi hari itu kak
+IndoBERT_V3_candidate,7298334000371598086,Neutral,Positive,0.5790266440322963,question;emoji_or_non_ascii,The Originote,"untuk bumil aman gk si,bantu jawab donk🙏 lg hamil soal nya bingung mw lanjut pake apa gk"
+IndoBERT_V3_candidate,7310147081578070790,Neutral,Positive,0.5409185112256375,question,The Originote,serum dark spot itu pakenya kapan ya?
+IndoBERT_V3_candidate,7312669469585965830,Negative,Positive,0.6093331972188561,emoji_or_non_ascii;mixed_sentiment_connector,Daviena,pengen tapi mahal bangeeet😭
+IndoBERT_V3_candidate,7313081209524241157,Neutral,Negative,0.4316219509982478,emoji_or_non_ascii,The Originote,bisaa kaa tp balik lagi ke kulit masing masing yaah 🥰
+IndoBERT_V3_candidate,7313510466662482694,Neutral,Positive,0.5175046806838604,emoji_or_non_ascii,Daviena,Keliatan banget nyenggol King Zharif 🗿😁🗿😬
+IndoBERT_V3_candidate,7313724069540233926,Positive,Negative,0.8071160575781199,question;negation,Daviena,"aku juga udah coba, cocok bgt sama tipe kulitku"
+IndoBERT_V3_candidate,7313910577339630354,Neutral,Positive,0.6947160573577917,negation,Daviena,kk retinol mix dengan skincare merkuri boleh gak ya
+IndoBERT_V3_candidate,7314970295458644741,Neutral,Positive,0.5968140051831367,question,Daviena,kalo gapunya toner gimana kak? boleh skip ga
+IndoBERT_V3_candidate,7315083308274270982,Neutral,Positive,0.4206309329224598,general_misclassification,The Originote,kak cara bedain retinol originote ORI dan kW
+IndoBERT_V3_candidate,7320109896015708933,Neutral,Positive,0.4072241708248706,negation,Daviena,Bumil bisa pakai enggak kak
+IndoBERT_V3_candidate,7321512729655378693,Neutral,Negative,0.4086627606180812,general_misclassification,Azarine,bisa buat menghilangkn flek gk
+IndoBERT_V3_candidate,7324661404614574854,Neutral,Positive,0.5016126488902263,question,The Originote,kalo pake retinol seminggu berapa kali?
+IndoBERT_V3_candidate,7328704453371757318,Neutral,Negative,0.5568539625367069,question;emoji_or_non_ascii,Daviena,"Asal gaada kandungan aha bha aman aja ka, pastiin yg hydrating yaa🤗"
+IndoBERT_V3_candidate,7335444265679602437,Neutral,Positive,0.513414972000043,question;negation;emoji_or_non_ascii,Daviena,kalo barengan sama skincare yu Chun Mei bisa gak ya?? maju mundur bgt🥲
+IndoBERT_V3_candidate,7341052522985931525,Neutral,Positive,0.4890339591431684,general_misclassification,Daviena,"Bantu jawab ya kak, emang pada dasarnya warna retinol memang kuning. Kalo makin kuning berarti persentasi retinolnya makin tinggi"
+IndoBERT_V3_candidate,7342497114079363846,Neutral,Positive,0.6780992730052625,question;negation,The Originote,aman gak sii? soal nya niacinamaid nya 10persen
+IndoBERT_V3_candidate,7346527247632188166,Neutral,Positive,0.48471150371116517,general_misclassification,The Originote,"betul,tiap pagi aja ya.
+malem bisa,tp mnding gausa si biar hemat haja"
+IndoBERT_V3_candidate,7350599294599398150,Neutral,Positive,0.5465300744135501,question;negation,Azarine,ka aku sebelumnya pke pratista mau nyoba avoskin aman ga ya
+IndoBERT_V3_candidate,7357328578453078790,Neutral,Positive,0.5390958098392418,question;emoji_or_non_ascii,Azarine,"kak kalo step ny Toner Red>Serum Retinol>Moisturizer hbis itu langsung turu 😂 gmna kak , step gitu bisa kah? pemula soalnya kak"
+IndoBERT_V3_candidate,7357976597092205318,Neutral,Negative,0.4253311754412634,general_misclassification,Daviena,klw belik di Shopee ori gk si
+IndoBERT_V3_candidate,7357993730135360261,Neutral,Positive,0.4772244268214857,question,Daviena,urutan makenya gmn kak yg. spray dulu apa gmn
+IndoBERT_V3_candidate,7357995647175787269,Neutral,Positive,0.5702021469352674,question;negation,Daviena,retinol buat busui bisa ga sih ?
+IndoBERT_V3_candidate,7358024564586545926,Neutral,Negative,0.3869502935674005,question,Daviena,kak kalo kulitnya berminyak kusam jerawatan cocok nggk kak?
+IndoBERT_V3_candidate,7358437236473840389,Negative,Positive,0.5256162992465765,question;emoji_or_non_ascii,Daviena,susah digapai skinkernya kecuali dalba 🙏
+IndoBERT_V3_candidate,7358509278376608518,Positive,Negative,0.6290974282257434,general_misclassification,Daviena,@melvinahusyanti96 testii mantul nih kak
+IndoBERT_V3_candidate,7359464292435051270,Neutral,Positive,0.3610921254757284,question,Daviena,Cara pakenya malem aja kak ?
+IndoBERT_V3_candidate,7359468311727997701,Neutral,Negative,0.49671190074238,emoji_or_non_ascii,Daviena,Bikin vidio pas kmu pake skincare dari itu semua ka biar aku tau step nya 😭
+IndoBERT_V3_candidate,7359889579992400646,Neutral,Positive,0.4174077888998619,question;very_short,Daviena,mauu Jual berapa
+IndoBERT_V3_candidate,7360250458226705157,Neutral,Positive,0.5340183489158756,question;negation,Daviena,ka boleh dipake tiap MLM gak?
+IndoBERT_V3_candidate,7360479142289621765,Neutral,Positive,0.4878763014785524,question;negation,Daviena,pke moist lagi ga sih kak??
+IndoBERT_V3_candidate,7360699802160202501,Neutral,Negative,0.45501744836117053,emoji_or_non_ascii,Azarine,rekomendasi pelembab nya dong kak🤗
+IndoBERT_V3_candidate,7361560506195018502,Neutral,Positive,0.4839556264372944,general_misclassification,The Originote,klo B3 sama B5 d gabung bisa ngk kak
+IndoBERT_V3_candidate,7362693675128210181,Neutral,Negative,0.5590618057846508,general_misclassification,Daviena,"kalo mlm pakej itu aja sma moist doang gpp kan ya, gk ush pkek cream malm"
+IndoBERT_V3_candidate,7362725918083728133,Neutral,Negative,0.40268788288557794,very_short,Maryame,360 mba
+IndoBERT_V3_candidate,7366926040054465286,Neutral,Positive,0.3527882777598144,emoji_or_non_ascii;very_short,Daviena,"kak, urutan skinkernya🥺"
+IndoBERT_V3_candidate,7373691659638391558,Neutral,Positive,0.5123864538888157,emoji_or_non_ascii,The Originote,"mungkin kulit kmu sensitif.. klo panas ampe merah"" mending berentiin kakk🙏"
+IndoBERT_V3_candidate,7374945300824441605,Neutral,Positive,0.409744927001367,emoji_or_non_ascii;very_short,Daviena,SK II😔😔😔😔
+IndoBERT_V3_candidate,7375410833168384774,Neutral,Positive,0.6039679113963964,general_misclassification,Maryame,bikin merah ke muka GK y klo kena panas
+IndoBERT_V3_candidate,7376605817624445702,Neutral,Positive,0.3659890543496701,very_short,Daviena,pertamaa
+IndoBERT_V3_candidate,7377170670658011910,Neutral,Negative,0.4071472650512235,very_short,Azarine,bisa kak
+IndoBERT_V3_candidate,7380311734130639621,Neutral,Positive,0.5858553202073871,general_misclassification,The Originote,aha bha jgn dicmpur vit c
+IndoBERT_V3_candidate,7381399712429851398,Neutral,Negative,0.5135174592198345,general_misclassification,Maryame,"assalamualaikum teh,itu cream nya siang mlm ya"
+IndoBERT_V3_candidate,7385512058690372357,Neutral,Negative,0.4075871467085142,negation,Daviena,"bisa,jangan lupa pake sunscreen"
+IndoBERT_V3_candidate,7385610350631060244,Positive,Negative,0.7310984427966768,very_short,The Originote,thankyou sis
+IndoBERT_V3_candidate,7386959884338266886,Neutral,Positive,0.6800245130722488,general_misclassification,Daviena,blm tau ka soalnya lgi brekout tpi maksain pke retinol jd jerwat masih on off gt mau fokus ke jrwat du yang mau 100 aja dm lngsung
+IndoBERT_V3_candidate,7388752935600259845,Neutral,Positive,0.788098931155396,emoji_or_non_ascii,Maryame,𝒔𝒂𝒌𝒊𝒏𝒈 𝒃𝒏𝒚𝒂𝒌 𝒏𝒚𝒂 𝒔𝒌𝒊𝒏𝒄𝒂𝒓𝒆 𝒚𝒈 𝒍𝒆𝒘𝒂𝒕 𝒔𝒂𝒎𝒑𝒂𝒊 𝒃𝒊𝒏𝒈𝒖𝒏𝒈 𝒎𝒂𝒖 𝒎𝒂𝒌𝒆 𝒚𝒈 𝒎𝒂𝒏𝒂😫
+IndoBERT_V3_candidate,7391828834423554823,Neutral,Negative,0.3540450785846496,question,Daviena,cara pamakainya gimana kak
+IndoBERT_V3_candidate,7397676144198353670,Neutral,Positive,0.5343527318481787,question;negation,Daviena,ka kalau pake moisturizer yang lain bisa gak sii???
+IndoBERT_V3_candidate,7397965076797342470,Negative,Positive,0.3940047693531755,negation;emoji_or_non_ascii,Maryame,pas liat harga y😭😭
+IndoBERT_V3_candidate,7397968313210716934,Neutral,Negative,0.4241554613721916,question,Maryame,gimana caranya Bun sy mau beli
+IndoBERT_V3_candidate,7398054275685597958,Neutral,Negative,0.3990343804127849,general_misclassification,Maryame,kranjang kuning nya mana bun
+IndoBERT_V3_candidate,7398407595474289414,Neutral,Negative,0.4304849300669599,negation,Maryame,buat bumil bsa ngga kak
+IndoBERT_V3_candidate,7398408660358546184,Neutral,Negative,0.42213661051987494,question;very_short,Maryame,berapa bun
+IndoBERT_V3_candidate,7399805760883196677,Negative,Neutral,0.6718704245096451,negation;emoji_or_non_ascii,Maryame,mahal teh gak sanggup aku😭
+IndoBERT_V3_candidate,7400625094260900614,Neutral,Positive,0.45667275885337405,question;very_short,Maryame,berapa satu pket
+IndoBERT_V3_candidate,7402639355867923205,Positive,Negative,0.7316354425429171,question,Maryame,aku udah hbis 6 pot alhmdulillah cocok flek berkurang.
+IndoBERT_V3_candidate,7406632053963539205,Neutral,Negative,0.49565957870536986,negation;mixed_sentiment_connector,The Originote,mauu tapi ini bener bener bisa hilangkan pie dan pih gaksih sama noda hitam
+IndoBERT_V3_candidate,7407250753318109958,Neutral,Positive,0.6405846639826063,question;negation;emoji_or_non_ascii,The Originote,ada yang tauu kenapa yaa serum the originote yang vit c itu dalem nya jadi warna kuning gitu yaa..padahal aku nyimpen nya engga kena sinar matahari 🙏☺️
+IndoBERT_V3_candidate,7407805926062932742,Neutral,Positive,0.4154596737216081,question,The Originote,pake hylu vit c sama bright b3 serum itu pagi di gabungin KA apa gmna??
+IndoBERT_V3_candidate,7408765257906389765,Neutral,Negative,0.5047771513004504,general_misclassification,Maryame,Pengin banget kak soaly muka sy hitem
+IndoBERT_V3_candidate,7412982060314755845,Neutral,Positive,0.5722703613587354,question,Azarine,Cara pakenya urutannya gimana yakak?
+IndoBERT_V3_candidate,7416283507020628741,Neutral,Positive,0.4758648081578507,question;emoji_or_non_ascii,Daviena,kk urutan pake retinol gimana trs 1 minggu brp kli kk🙏
+IndoBERT_V3_candidate,7418883831271097094,Positive,Negative,0.7595337247813492,general_misclassification,Maryame,"aku pemula kaka, aku langsung co yang cream siang nya, alhamdulillah mantullll"
+IndoBERT_V3_candidate,7421196217663374085,Negative,Positive,0.5919070243719335,emoji_or_non_ascii,Daviena,mrasa trsakiti trs bgmn nsb costumer ny😭
+IndoBERT_V3_candidate,7421196980917060357,Positive,Neutral,0.35151536032718156,negation,Daviena,"klo ga ada doktif,mgkin takkan terungkap"
+IndoBERT_V3_candidate,7421226779149779718,Negative,Neutral,0.43003503699095824,emoji_or_non_ascii,Daviena,udah menang banyak baru minta maaf🤭
+IndoBERT_V3_candidate,7421240506473448198,Negative,Neutral,0.6433730526657003,negation,Daviena,"Makanya mba,,minimal kamu sekolah dgn jurusan kerjaan yg kamu geluti,biar kamu juga benar2 bermanfaat yg baik bukan hanya materi atau memperkaya diri sndri dan jgn anti kritik"
+IndoBERT_V3_candidate,7421312220099527429,Neutral,Negative,0.4334083960111781,negation;emoji_or_non_ascii,Daviena,Alhamdulillah aku ngga suka pakai skincare viral😊
+IndoBERT_V3_candidate,7421313493649851142,Negative,Positive,0.46805807337712213,general_misclassification,Daviena,bahan2nya bahaya kl sdh nyerap k jaringan kulit bisa mrubah hormonal dlm tubuh yg bisa menimbulkan penyakit aneh2 dlm tubuh kita
+IndoBERT_V3_candidate,7421328248188699398,Negative,Neutral,0.7986324859941086,negation;emoji_or_non_ascii,Daviena,Lebih ke kecewa sih kak plus ga mau buang” wkt pke product yg ga worth it
+IndoBERT_V3_candidate,7421336123178451718,Negative,Positive,0.5497352468704001,question,Daviena,"Heh? kemarin aja kamu bilang2 topeng2, panas2 gitu sm krywnmu, asli gedek bgt liat dy gituin doktif"
+IndoBERT_V3_candidate,7421338127577645830,Negative,Neutral,0.7836387778537983,general_misclassification,Daviena,enk hdup kaya raya ya
+IndoBERT_V3_candidate,7421351419184186117,Negative,Positive,0.508966649768002,emoji_or_non_ascii,Daviena,telaaattt.....untung g pakek daveina......panas...panas.....😅
+IndoBERT_V3_candidate,7421359906836218630,Negative,Positive,0.4857655152166675,general_misclassification,Daviena,udah kehilangan byk konsumen baru minta maaf
+IndoBERT_V3_candidate,7421364111236498182,Negative,Positive,0.494701436374401,very_short,Daviena,soalnya ownernya begitulah
+IndoBERT_V3_candidate,7421408683056481030,Positive,Negative,0.4952798983905246,general_misclassification,Daviena,"aku mulai dulu pakai hanasui, sampai handbody nya, bgs, cepat putih lg, wangi banget handbody nya,"
+IndoBERT_V3_candidate,7421411237357159174,Negative,Neutral,0.6050662484100825,general_misclassification,Daviena,bkn urusan mereka lah yg penting mereka kaya raya
+IndoBERT_V3_candidate,7421417253801755397,Negative,Positive,0.6917407224528082,general_misclassification,Daviena,pakek retinol malah kusam gk karuan
+IndoBERT_V3_candidate,7421462548825195270,Negative,Neutral,0.6214309962596465,very_short,Daviena,PENIPU
+IndoBERT_V3_candidate,7421489865839313669,Negative,Neutral,0.5934546971347939,general_misclassification,Daviena,seharusnya dr awal diam..introspeksi.. mintamaaf lebih elegan..drpd teriak panas panas panas
+IndoBERT_V3_candidate,7421494815831474950,Positive,Negative,0.44757158559740706,question,Daviena,mewah apa nya..kalian kalau mau bersih ilang flex..pakai cosmelan aja
+IndoBERT_V3_candidate,7421523816255390469,Positive,Neutral,0.5933938171142759,very_short,Daviena,Aslinyaa udh keliatan
+IndoBERT_V3_candidate,7421538820863230726,Positive,Neutral,0.5823972271667645,very_short,Daviena,untung ada doktif
+IndoBERT_V3_candidate,7421725151010849541,Negative,Neutral,0.6546230201192399,general_misclassification,Daviena,"untung blom sempat beli produk ini
+enak aja minta maaf, org sudah di tipu"
+IndoBERT_V3_candidate,7421753144180540165,Negative,Positive,0.3735783056875329,emoji_or_non_ascii;mixed_sentiment_connector,Daviena,AKU CUMA INGET KAMU BILANG PANAS PANAS 😂😂
+IndoBERT_V3_candidate,7421762691590619909,Negative,Positive,0.6295273761487759,emoji_or_non_ascii,Daviena,yg gk hbs fikir knp hrg nya mahal x tp ingredients utama nya sampe gk terdeteksi 😭😭😭 pdhl itu kandungan yg paling murah.
+IndoBERT_V3_candidate,7421793210886980358,Positive,Negative,0.6104420768554231,negation,Daviena,dpkiran q malah pen beli hansui murah meriah muntah ok la untuk hrga sgtu
+IndoBERT_V3_candidate,7421835770980500229,Negative,Neutral,0.4444190518899792,emoji_or_non_ascii;very_short,Daviena,takut bangkrut ya😭
+IndoBERT_V3_candidate,7421868814864843525,Negative,Neutral,0.7978710505157061,general_misclassification,Daviena,kemaren aja ngeyel di kasih tau sekarang menta maaf herang sama orang kaya
+IndoBERT_V3_candidate,7421900198786007813,Neutral,Positive,0.4229356820555329,question;very_short,Maryame,SPF berapa kak?
+IndoBERT_V3_candidate,7421919025287938821,Neutral,Positive,0.4867230703098448,negation;emoji_or_non_ascii,Daviena,kan gak pernah pakak..tau dri mana klo gak ngefek😂😂...pigmen kulit stiap orang beda
+IndoBERT_V3_candidate,7422183775432147717,Negative,Positive,0.5748247591067817,emoji_or_non_ascii,Daviena,aku make baruu 2 kali udah habisss😭
+IndoBERT_V3_candidate,7422237728911639301,Negative,Positive,0.6327491451444442,general_misclassification,Daviena,tetap aja klau udak kecewa sulit untuk percaya lgi cc @dr.okypratamaa_kedua
+IndoBERT_V3_candidate,7422398985362522885,Negative,Neutral,0.7326775784105093,negation;emoji_or_non_ascii,Daviena,khilaf bukan juga smpek kaya raya.. 😁😁 .. !!
+IndoBERT_V3_candidate,7422453642731815685,Negative,Positive,0.442452600831777,emoji_or_non_ascii,Daviena,"disengaja, untung ketauan kasian customer kak🥺 untungnya di kakak"
+IndoBERT_V3_candidate,7422545353817506566,Neutral,Negative,0.5472543041568672,general_misclassification,Daviena,beli nya di mana kak
+IndoBERT_V3_candidate,7422696211281265426,Neutral,Negative,0.41262730272083803,very_short,Maryame,panas g teh
+IndoBERT_V3_candidate,7422812686369129222,Neutral,Positive,0.6225117353068897,negation,Daviena,bikin skincare itu sejenis obat dengan bahan kimia harus ada ahli farmasinya dan ahli risetnya tidak bisa sembarangan beli bahan dan mencampur sendiri. atau beli skincare dari luar negeri difanti merk
+IndoBERT_V3_candidate,7422866048057393926,Negative,Positive,0.6313406222730422,negation;emoji_or_non_ascii,Daviena,"resah semua owber skincare😭 mantap doktif👍semoga semua owner jujur dn komitmen👍karna uang yg di kumpul2 utk beli skincare kdg hasil ditahan2 dari bli mkn,bli ini itu supaya cantik tp malah d tipu😞"
+IndoBERT_V3_candidate,7422883855191360261,Neutral,Negative,0.39145920249363114,question,Maryame,buat busui gimana kak
+IndoBERT_V3_candidate,7422918474986504965,Neutral,Negative,0.5008817216624767,general_misclassification,Daviena,"pke bedak doktr,retinol avoskin.sm serum avoskin"
+IndoBERT_V3_candidate,7422942681682150150,Positive,Negative,0.5541801693615193,general_misclassification,Daviena,Viva the best pokoknya ..
+IndoBERT_V3_candidate,7423328278143337222,Negative,Positive,0.4174662059683633,mixed_sentiment_connector,Daviena,bohongg...cuma isi air dan kunyit
+IndoBERT_V3_candidate,7424302822076203781,Neutral,Positive,0.49646197449205526,general_misclassification,Maryame,"smpe skrng masih pake ka,."
+IndoBERT_V3_candidate,7424322808920326917,Neutral,Negative,0.4591090116868387,question,Maryame,"buat acne, berminyak bisa kak?"
+IndoBERT_V3_candidate,7424775237231264517,Neutral,Positive,0.4854039150357572,general_misclassification,Maryame,takut ke makan iklan
+IndoBERT_V3_candidate,7425617191975928581,Neutral,Positive,0.6865050603844457,question,Maryame,SKSS SLLU minta pendapat @dr.okypratamaa_kedua
+IndoBERT_V3_candidate,7426200411491549973,Neutral,Negative,0.42323892409503666,general_misclassification,Maryame,kk aku mau pesan
+IndoBERT_V3_candidate,7426573345729020678,Negative,Positive,0.6061434181559436,mixed_sentiment_connector,Azarine,"hasil lab, cuman 0,0000 ya ampyunnnn...., ternyata sama aja ya semua skin care tuh bnyk yg abal2. cek review doktif"
+IndoBERT_V3_candidate,7428439356644573958,Neutral,Positive,0.3782735033595221,question,Maryame,kymm skin dok aman ngga
+IndoBERT_V3_candidate,7428446209087619846,Neutral,Positive,0.5360691304987049,general_misclassification,Maryame,Dok coba Adleeva soalnya sliweran di fyp saya terus
+IndoBERT_V3_candidate,7428454880098435845,Neutral,Negative,0.575324872625708,emoji_or_non_ascii;very_short,Maryame,adleeve dok 🙏
+IndoBERT_V3_candidate,7428456475935490821,Neutral,Positive,0.48967311974943284,question;negation,Maryame,kf beauty aman ga dok?
+IndoBERT_V3_candidate,7428460223155454726,Neutral,Negative,0.3733148930473227,very_short,Maryame,produknya ff dok
+IndoBERT_V3_candidate,7428461144417354501,Neutral,Negative,0.35690663938212175,emoji_or_non_ascii,Maryame,"biasakan menyimak dan membaca caption ya kaka, 🙏"
+IndoBERT_V3_candidate,7428461398374171408,Neutral,Positive,0.5845174852047654,general_misclassification,Maryame,HINDA SKINCARE dong dok
+IndoBERT_V3_candidate,7428461865632252673,Neutral,Positive,0.5042128573926984,very_short,Maryame,lumiwhite dong dok
+IndoBERT_V3_candidate,7428462412820824838,Neutral,Negative,0.7311903018765828,emoji_or_non_ascii;very_short,Maryame,Kf beauty dok🙏
+IndoBERT_V3_candidate,7428466259833029381,Neutral,Positive,0.4305184535723758,very_short,Maryame,byzoe coba dok
+IndoBERT_V3_candidate,7428485955474047749,Neutral,Positive,0.5641441456935276,emoji_or_non_ascii,Maryame,"dok, byzoe tolong di cek 🙏🙏"
+IndoBERT_V3_candidate,7428494965888238342,Neutral,Positive,0.48455694508331687,very_short,Maryame,Dabe dong dok
+IndoBERT_V3_candidate,7428498831984558853,Neutral,Negative,0.5622179280587632,general_misclassification,Maryame,gbee glow dong dok
+IndoBERT_V3_candidate,7428504411284275974,Neutral,Negative,0.45500441627804894,general_misclassification,Maryame,"Hanasui dok, day cream night cream"
+IndoBERT_V3_candidate,7428519471285633799,Neutral,Negative,0.5529749737147124,very_short,Maryame,dok coba glowglowing
+IndoBERT_V3_candidate,7428534314511565574,Neutral,Positive,0.6059330681919091,question,Maryame,Ls dok aman gk?
+IndoBERT_V3_candidate,7428539222107767558,Neutral,Positive,0.5463540075297084,question,Maryame,babygold aman ga? @Dr. Oky Pratama REAL
+IndoBERT_V3_candidate,7428540474379682565,Neutral,Positive,0.4642110670378146,very_short,Maryame,@lsskincareofficial dokk
+IndoBERT_V3_candidate,7428556591240643346,Neutral,Negative,0.5944529077062921,emoji_or_non_ascii,Maryame,dok kymm skin pleaseeeee di cek 🥺
+IndoBERT_V3_candidate,7428569782880846610,Neutral,Negative,0.6168641817855945,general_misclassification,Maryame,dok cek Jian glow . karena di kampung saya LG buming Jian glow . prosesnya cepet banget . @dr.okypratamaa_kedua
+IndoBERT_V3_candidate,7428577072044131078,Neutral,Positive,0.5151916534628851,question,Maryame,yu Chun mei aman ngk sih dok??
+IndoBERT_V3_candidate,7428589483421319941,Neutral,Negative,0.4099911461351649,question;emoji_or_non_ascii,Maryame,"Elizabeauty gmna dok,, soalnya dikampung qw laris bgt 🙏🏻"
+IndoBERT_V3_candidate,7428603371505304337,Neutral,Negative,0.5157538478476116,general_misclassification,Maryame,"dok riview skincare Gbee Glow,"
+IndoBERT_V3_candidate,7428607482233586438,Positive,Neutral,0.38673049122494946,emoji_or_non_ascii,Maryame,"spill isi lemarinya dok, knp bajunya lucu"" smua🥲"
+IndoBERT_V3_candidate,7428614806468838149,Neutral,Negative,0.43185053556086056,general_misclassification,Maryame,dok riview yeenka beauty
+IndoBERT_V3_candidate,7428619762898961158,Neutral,Positive,0.49571281804155226,general_misclassification,Maryame,dokter tolong cek skincare adleeva
+IndoBERT_V3_candidate,7428643486053876487,Neutral,Negative,0.3965917245966744,very_short,Maryame,amiglow doktif
+IndoBERT_V3_candidate,7428741061466161928,Neutral,Positive,0.4642421466668118,negation,Maryame,"itu bru krim siang, krim malamnya belum dok"
+IndoBERT_V3_candidate,7428741971107234566,Neutral,Positive,0.48456204100190775,question;negation;emoji_or_non_ascii,Maryame,Scarlett aman ga dok 😫
+IndoBERT_V3_candidate,7428763350627025670,Neutral,Negative,0.7178192497340553,question;negation,Maryame,dokter.. review jenem glow dong. aku lagi pakai itu katanya bumil busui aman..kebetulan lagi jadi busui .. semoga di review.. Aamiin
+IndoBERT_V3_candidate,7428795255036084998,Neutral,Negative,0.5685681866892855,general_misclassification,Maryame,ms. glow yg saya tunggu review nya
+IndoBERT_V3_candidate,7428795413615149830,Neutral,Negative,0.593523876076665,very_short,Maryame,seruni skincare dok
+IndoBERT_V3_candidate,7428841295320253189,Negative,Positive,0.5837354514003755,negation;emoji_or_non_ascii,Maryame,dok kalo bisa abis di coba sama dokter itu buat aku yah. aku nga mampu belii abis mahaalll 😂@dr.okypratamaa @dr.okypratamaa_kedua
+IndoBERT_V3_candidate,7428847161670173445,Neutral,Positive,0.5734059656447573,emoji_or_non_ascii,Maryame,WSC premium minta toling dicek dok🙏
+IndoBERT_V3_candidate,7428887728904176391,Neutral,Negative,0.44169563457526945,emoji_or_non_ascii,Maryame,Dok cek seruni dong🥰
+IndoBERT_V3_candidate,7428888303224652561,Neutral,Negative,0.5809228932141736,very_short,Maryame,bg skin dok
+IndoBERT_V3_candidate,7428888347919926022,Neutral,Positive,0.48236657350650847,general_misclassification,Maryame,DNY sidoarjo dong dokk
+IndoBERT_V3_candidate,7428889857612694278,Positive,Negative,0.7007774172474766,question;emoji_or_non_ascii;very_short,Maryame,alhmdllah aman🥰
+IndoBERT_V3_candidate,7428978154083336968,Neutral,Positive,0.47501971085671124,emoji_or_non_ascii,Maryame,dok cek dong all merek zekinesia.. 😅
+IndoBERT_V3_candidate,7428990615768433414,Neutral,Positive,0.5543189410299291,emoji_or_non_ascii,Maryame,"dokter oky , coba cek skincare WSC dan body care PUTH SKIN dok 🙏"
+IndoBERT_V3_candidate,7429021415838483206,Neutral,Negative,0.4043551341583222,question,Maryame,White story aman gasii??
+IndoBERT_V3_candidate,7429023926967665426,Positive,Neutral,0.5615984917074575,negation;emoji_or_non_ascii,Maryame,"Alhamdulillah gak salah pilih, sebelum fyp doktif review produk2 skincare aku udah order maryame krna penasaran selain itu emang nyari skincare yg praktis 1 produk bisa buat siang & malam 🥰🫰🏻"
+IndoBERT_V3_candidate,7429037449547072257,Neutral,Negative,0.4927547010385751,negation,Maryame,salamualaikum teh...kalau ke luar negara bisa ngirimnya gak teh
+IndoBERT_V3_candidate,7429128443017396998,Neutral,Negative,0.48232190391954805,very_short,Maryame,LS SKINCARE DOK
+IndoBERT_V3_candidate,7429137889378566920,Neutral,Positive,0.6567510314235055,general_misclassification,Maryame,dok @Nahda skincare dong di cek
+IndoBERT_V3_candidate,7429142951647363858,Neutral,Positive,0.48013657510886276,emoji_or_non_ascii,Maryame,coba cek putri glow dok soalnya sya pke itu😭
+IndoBERT_V3_candidate,7429154483453788946,Neutral,Negative,0.5059532422299707,general_misclassification,Maryame,the face temulawak dok
+IndoBERT_V3_candidate,7429157937208673025,Neutral,Positive,0.662178233637425,general_misclassification,Maryame,punya dr.grand dong @dr.okypratamaa_kedua
+IndoBERT_V3_candidate,7429162136175739654,Neutral,Positive,0.4465812082805939,general_misclassification,Maryame,dok review Kezia skincare dong.
+IndoBERT_V3_candidate,7429191479983162118,Neutral,Positive,0.5480508693453111,very_short,Maryame,rc dong dok
+IndoBERT_V3_candidate,7429224975613051655,Neutral,Positive,0.6907854110554787,very_short,Maryame,Dok x_beauty dong
+IndoBERT_V3_candidate,7429238555925168901,Neutral,Positive,0.590109778576092,general_misclassification,Maryame,"jenem glow dong dok tolong cek,soal nya aku pake itu"
+IndoBERT_V3_candidate,7429312732547859205,Neutral,Negative,0.4099453338825862,very_short,Maryame,prodak ss dok
+IndoBERT_V3_candidate,7429348520055816966,Neutral,Positive,0.4725994135838841,question,Maryame,klau msglow aman ngk yh
+IndoBERT_V3_candidate,7429354517555168005,Neutral,Positive,0.7172345181074254,general_misclassification,Maryame,dok @dr.okypratamaa dan @dr.okypratamaa_kedua tolong cek produk skincare yg lumiwhite...pliiis
+IndoBERT_V3_candidate,7429550884601021189,Neutral,Positive,0.6084601637005311,general_misclassification,Maryame,@kymmskinofficial coba dok yg ini pleasee
+IndoBERT_V3_candidate,7429565956877665031,Negative,Positive,0.45951277796298146,general_misclassification,Maryame,sama aku jg.muka gatal
+IndoBERT_V3_candidate,7429616042521903877,Negative,Neutral,0.6228309980385718,negation;mixed_sentiment_connector,Maryame,"udah cape,Gonta genti
+tapi aku udah gak mau ke makan iklan
+muka rusak"
+IndoBERT_V3_candidate,7430115000776262406,Neutral,Positive,0.5734234797213094,very_short,Maryame,berrijoy donk dok
+IndoBERT_V3_candidate,7430131154924536581,Neutral,Positive,0.572722872938517,general_misclassification,Maryame,the face temulawak dong dok
+IndoBERT_V3_candidate,7430255700255064840,Negative,Positive,0.6558588161711131,negation;emoji_or_non_ascii;mixed_sentiment_connector,Maryame,aku udh mau jln 2bln belum ada perubahan😁 tapi masih setau pake
+IndoBERT_V3_candidate,7430353219991913232,Neutral,Negative,0.5083081245107068,general_misclassification,Maryame,yg ORI kalo di shopee blinya di mana kak
+IndoBERT_V3_candidate,7430457930178659080,Neutral,Positive,0.5093536957694702,general_misclassification,Maryame,review DRW skincare dong dok
+IndoBERT_V3_candidate,7430653853153280785,Neutral,Negative,0.37140510040198454,general_misclassification,Maryame,dok review mois dari glad2glow
+IndoBERT_V3_candidate,7430872042008019729,Neutral,Negative,0.5809228932141736,very_short,Maryame,BG SKIN dok
+IndoBERT_V3_candidate,7431584077281559304,Neutral,Negative,0.402313252684559,question;negation,Maryame,bisa buat kulit berminyak berjerawat ga ya kak ?
+IndoBERT_V3_candidate,7431742444515509010,Negative,Neutral,0.5768683817872914,negation,Maryame,nggak ada perubahan di aku malah hitam
+IndoBERT_V3_candidate,7431971853470941969,Neutral,Positive,0.5472456701096601,question;negation,Maryame,dok skincare ZAM ZAM aman nggak sih
+IndoBERT_V3_candidate,7432513948941992725,Positive,Negative,0.38712775301109753,question,Daviena,"ada yang mau gantiin retinol daviena ada 2pcs (new segelan) dan moisturizer pink daviena?
+kalo mau langsung chat aja ya, pengiriman dari jawa timur"
+IndoBERT_V3_candidate,7432674675672597266,Positive,Neutral,0.5748393309935145,general_misclassification,Maryame,"dok bajunya lucu2,rapi lagi"
+IndoBERT_V3_candidate,7433639068200272658,Neutral,Positive,0.49210127179838836,very_short,Maryame,"dok,animate dong dok...."
+IndoBERT_V3_candidate,7433972782956020485,Negative,Positive,0.42999422578362295,general_misclassification,Maryame,susah belinya yg ada dikirim maryame yg palsu tutupnya yg ungu
+IndoBERT_V3_candidate,7440702612322779921,Neutral,Negative,0.47560745118683934,general_misclassification,Maryame,dok can beauty plis
+IndoBERT_V3_candidate,7441947928178508600,Negative,Positive,0.58359408850968,emoji_or_non_ascii,Maryame,aku pake ini knpa muka jdi beruntusan ya padahal udh Doble cleansing 😭
+IndoBERT_V3_candidate,7447936951678583557,Neutral,Negative,0.5384516406409107,general_misclassification,Maryame,coba Camille beauty dok
+IndoBERT_V3_candidate,7459575779187229446,Neutral,Positive,0.5749145301318549,general_misclassification,The Originote,retinol nya mana kak
+IndoBERT_V3_candidate,7466696059927937800,Neutral,Negative,0.4018977900522219,general_misclassification,The Originote,kk pakai sesudah pakai moisturizer baru serum ya kk
+IndoBERT_V3_candidate,7478137477548000005,Positive,Negative,0.35288650609409095,question,Daviena,ka mau retinol daviena? dm aja bisa nego
+IndoBERT_V3_candidate,7482145948186215186,Neutral,Negative,0.44761055130936145,question;emoji_or_non_ascii;very_short,The Originote,gimana siii😭
+IndoBERT_V3_candidate,7488648398528054024,Negative,Positive,0.860482133657321,question,Maryame,kalau d mm aq pake maryame kenapa jadi ada beberapa flek hitam yaaa... please solusinya gmn yaaa cc @maryame.official
+IndoBERT_V3_candidate,7494279268983161607,Neutral,Positive,0.5176267698184746,emoji_or_non_ascii;mixed_sentiment_connector,Maryame,"Tunggu dulu maryame pasti aku beli km klw dana ku udh ada buat membeli mu, skrng masih dana buat kebutuhan keluarga🥹🥲"
+IndoBERT_V3_candidate,7512779466701325073,Neutral,Positive,0.6668584641573364,negation,Azarine,"klo lnjut moisturizer ny BKN azzarine,trs lnjut cream mlm boleh gak"
+IndoBERT_V3_candidate,7531280872756134663,Positive,Negative,0.7238871477156168,general_misclassification,Maryame,Alhamdulillah pemakaian SDH 5 bulan
+IndoBERT_V3_candidate,7532542644297024272,Negative,Positive,0.5942591694012788,negation;emoji_or_non_ascii,The Originote,iya aku juga jerawatan terus muka gatal²
+IndoBERT_V3_candidate,7559884925362258706,Neutral,Positive,0.5264941127350975,question;negation,Maryame,bsa nego ga ka?
+IndoBERT_V3_candidate,7564732627813466887,Neutral,Negative,0.5374967693912728,question;negation,Maryame,"pake cream malam nya gak ka?
+sekintific retinol untuk malam hari bagus ka"
+IndoBERT_V3_candidate,7567969947058684680,Positive,Negative,0.632269836906632,question;emoji_or_non_ascii,Maryame,"alhamdulillah aku pakek maryame cocok, wajahku cerah lebih PD real, testi dari aku sendrin🥰🥰🥰"
+IndoBERT_V3_candidate,7568469146984612609,Neutral,Positive,0.5362356836809973,question;negation,The Originote,kalo buat bekas jerawat pie bisa nggak kk?
+IndoBERT_V3_candidate,7570918366391583496,Neutral,Negative,0.4078543799509792,question;negation,Maryame,Ini bisa buat beruntusan juga ga kak?
+IndoBERT_V3_candidate,7574593169062789906,Neutral,Positive,0.45748846795343184,general_misclassification,Maryame,klo kulit sawo mateng bikin abu2 gk ya
+IndoBERT_V3_candidate,7586899712042992404,Neutral,Positive,0.44676244643126695,emoji_or_non_ascii;very_short,Azarine,I'm good🤗
+IndoBERT_V3_candidate,7596244671824495368,Positive,Neutral,0.5838288073264403,negation,Daviena,"semangat kak davienaaa, semoga di permudah slalu urusan nya aminnn"
+IndoBERT_V3_candidate,7596245642101932808,Positive,Neutral,0.6075813399364063,negation;emoji_or_non_ascii,Daviena,SEMANGATT YAA BUKK OWNER JANGAN MENYERAH AKU TETAP SETIA DI DAVIENA DANN AKU SANGAT PERCYA PADA BUK OWNER🥰🥰
+IndoBERT_V3_candidate,7596249466358809352,Positive,Neutral,0.5021850151915934,general_misclassification,Daviena,kak galih terimakasih supportnya
+IndoBERT_V3_candidate,7596251036481061639,Positive,Neutral,0.6008750969601733,emoji_or_non_ascii;very_short,Daviena,semangat terus buuu🥰🥰🥰
+IndoBERT_V3_candidate,7596259820907987730,Positive,Neutral,0.681631968051959,emoji_or_non_ascii,Daviena,kami percaya kok kak😭😭
+IndoBERT_V3_candidate,7596274906154992385,Neutral,Positive,0.5171468506299041,negation,Daviena,"izin koreksi, live ya bu bukan leve"
+IndoBERT_V3_candidate,7597822569248621330,Negative,Neutral,0.5484783758809012,very_short,Daviena,yg pnting hedon
+IndoBERT_V3_candidate,7601343992638620437,Neutral,Positive,0.38007766688585076,emoji_or_non_ascii,Daviena,"pengen coba,isi katong tak mendukung buat nyetok😇"
+IndoBERT_V3_candidate,7634843508201128724,Neutral,Positive,0.5559228128730562,very_short,Azarine,sama
+IndoBERT_V3_candidate,7644004930474918677,Neutral,Positive,0.4465142773955502,general_misclassification,Azarine,"Setelah retinol sebaik nya pakai moisturizer aja kak dan jgn di gabung sama bahan aktif lain spt aha,bha ,vit c"
+IndoBERT_V3_candidate,9858150902530457454,Neutral,Negative,0.5852446193098165,question;negation,Maryame,"baru coba maryame niacinamide kemaren, semoga cocok di kulitku yang sensitif"

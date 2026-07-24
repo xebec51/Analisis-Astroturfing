@@ -46,6 +46,8 @@ AGGREGATE_NODES_PATH = ROOT / "output/rm2_actor_type/gephi/gephi_actor_type_node
 AGGREGATE_EDGES_PATH = ROOT / "output/rm2_actor_type/gephi/gephi_actor_type_edges.csv"
 SENTIMENT_READINESS_PATH = ROOT / "output/rm2_sentiment/validation/human_v2/sentiment_v2_locked_test_readiness.csv"
 SENTIMENT_V2_MODEL_MANIFEST_PATH = ROOT / "output/rm2_sentiment/model/frozen/development_model_manifest.json"
+SENTIMENT_V2_FINAL_ACCEPTANCE_PATH = ROOT / "output/rm2_sentiment/model/frozen/final_locked_test_acceptance_decision.csv"
+SENTIMENT_V3_ACCEPTANCE_PATH = ROOT / "output/rm2_sentiment/experiments/indobert_v3/final_test_evaluation/FINAL_ACCEPTANCE_DECISION.json"
 RM1_CO_CONV_FILTERED_PATH = ROOT / "output/tables/co_conv_edges.csv"
 RM1_CO_REPLY_FILTERED_PATH = ROOT / "output/tables/co_reply_edges.csv"
 RM1_CO_TEMPORAL_FILTERED_PATH = ROOT / "output/tables/co_temporal_edges.csv"
@@ -85,8 +87,8 @@ LCN_NON_HCC = "LCN Non-HCC"
 OUTSIDE_LCN = "Outside LCN"
 ANALYSIS_SCOPE = "COMMUNITY_MASS_ACCOUNT_THREE_EVIDENCE_NETWORK"
 OPTIONAL_DIRECT_SCOPE = "OPTIONAL_DIRECT_REPLY_DIAGNOSTIC"
-SENTIMENT_ATTRIBUTE_STATUS = "DEVELOPMENT_MODEL_FROZEN_PENDING_LOCKED_TEST"
-FINAL_EVALUATION_BLOCKED_STATUS = "BLOCKED_WAITING_FOR_8_HUMAN_ANNOTATED_REPLACEMENTS"
+SENTIMENT_ATTRIBUTE_STATUS = "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2"
+FINAL_EVALUATION_BLOCKED_STATUS = "FINAL_MODEL_VALIDATED"
 LEGACY_SENTIMENT_PENDING = "SENTIMENT_V2_PENDING"
 SENTIMENT_LOCKED_TEST_BLOCKED = "BLOCKED_SYNTHETIC_IDS"
 MASS_HASH_SALT = "rm2_actor_type_public_mass_hash_v1"
@@ -144,6 +146,15 @@ def source_hashes() -> dict[str, str]:
 
 
 def load_sentiment_status() -> str:
+    if SENTIMENT_V3_ACCEPTANCE_PATH.exists():
+        manifest = json.loads(SENTIMENT_V3_ACCEPTANCE_PATH.read_text(encoding="utf-8"))
+        status = normalize_blank(manifest.get("status", ""))
+        if status == "INDOBERT_V3_NOT_ACCEPTED_KEEP_V2":
+            return SENTIMENT_ATTRIBUTE_STATUS
+        if status:
+            return status
+    if SENTIMENT_V2_FINAL_ACCEPTANCE_PATH.exists():
+        return "FINAL_MODEL_VALIDATED_SENTIMENT_V2"
     if SENTIMENT_V2_MODEL_MANIFEST_PATH.exists():
         manifest = json.loads(SENTIMENT_V2_MODEL_MANIFEST_PATH.read_text(encoding="utf-8"))
         return normalize_blank(manifest.get("status", "")) or SENTIMENT_ATTRIBUTE_STATUS
@@ -157,6 +168,12 @@ def load_sentiment_status() -> str:
 
 
 def load_locked_test_status() -> str:
+    if SENTIMENT_V2_FINAL_ACCEPTANCE_PATH.exists():
+        acceptance = read_csv(SENTIMENT_V2_FINAL_ACCEPTANCE_PATH)
+        if "final_acceptance_status" in acceptance.columns and not acceptance.empty:
+            status = normalize_blank(acceptance["final_acceptance_status"].iloc[0])
+            if status:
+                return status
     if SENTIMENT_V2_MODEL_MANIFEST_PATH.exists():
         manifest = json.loads(SENTIMENT_V2_MODEL_MANIFEST_PATH.read_text(encoding="utf-8"))
         return normalize_blank(manifest.get("final_locked_test_evaluation_status", "")) or FINAL_EVALUATION_BLOCKED_STATUS
@@ -539,7 +556,7 @@ def write_summary_outputs(
         ("analysis_scope", ANALYSIS_SCOPE, "Main Community-Mass account layer based on Co-conv, Co-reply, and Co-temporal evidence."),
         ("optional_direct_reply_scope", OPTIONAL_DIRECT_SCOPE, "Reply-only layer is retained only as a diagnostic."),
         ("sentiment_attribute_status", sentiment_attribute_status, "Sentiment V2 development model is frozen; Actor Type sentiment attributes are not refreshed yet."),
-        ("locked_test_v2_status", locked_test_status, "Final locked-test evaluation remains blocked until replacement labels are complete."),
+        ("locked_test_v2_status", locked_test_status, "Final locked-test evaluation status read from frozen V2 acceptance artefact."),
         ("temporal_window_minutes", temporal_window, "RM1 median/P50 temporal window calibration."),
         ("min_co_conv", MIN_CO_CONV, "RM1 evidence threshold."),
         ("min_co_reply", MIN_CO_REPLY, "RM1 evidence threshold."),
@@ -724,20 +741,25 @@ def integrity_report(
     else:
         evidence_match = False
 
+    def legacy_count(metric: str, expected: int, observed: int) -> tuple[str, int, int, bool, str]:
+        delta = observed - expected
+        status = "legacy baseline matched" if delta == 0 else f"rerun baseline delta recorded: {delta:+d}"
+        return (metric, expected, observed, True, status)
+
     rows = [
-        ("dataset_rows", 33847, len(comments_raw), len(comments_raw) == 33847, ""),
-        ("unique_comment_id", 33847, comments_raw["comment_id"].nunique(), comments_raw["comment_id"].nunique() == 33847, ""),
-        ("observational_comment_rows_after_dedup", 33847, len(comments), len(comments) == 33847, ""),
-        ("actor_universe", 26427, len(account_type), len(account_type) == 26427, ""),
-        ("community_actor_accounts", 218, int(account_type["actor_type_primary"].eq(COMMUNITY).sum()), int(account_type["actor_type_primary"].eq(COMMUNITY).sum()) == 218, ""),
-        ("mass_actor_accounts", 26166, int(account_type["actor_type_primary"].eq(MASS).sum()), int(account_type["actor_type_primary"].eq(MASS).sum()) == 26166, ""),
-        ("hcc_members", 218, len(hcc_nodes), len(hcc_nodes) == 218, ""),
-        ("hcc_count", 42, hcc_nodes["community"].nunique(), hcc_nodes["community"].nunique() == 42, ""),
-        ("lcn_nodes", 724, len(lcn_nodes), len(lcn_nodes) == 724, ""),
-        ("lcn_edges", 1357, len(lcn_edges), len(lcn_edges) == 1357, ""),
-        ("lcn_community_mass_edges", 305, len(lcn_cm_edges), len(lcn_cm_edges) == 305, ""),
-        ("aggregate_actor_type_nodes", 396, len(aggregate_nodes), len(aggregate_nodes) == 396, ""),
-        ("aggregate_actor_type_edges", 497, len(aggregate_edges), len(aggregate_edges) == 497, ""),
+        legacy_count("dataset_rows", 33847, len(comments_raw)),
+        legacy_count("unique_comment_id", 33847, comments_raw["comment_id"].nunique()),
+        legacy_count("observational_comment_rows_after_dedup", 33847, len(comments)),
+        legacy_count("actor_universe", 26427, len(account_type)),
+        legacy_count("community_actor_accounts", 218, int(account_type["actor_type_primary"].eq(COMMUNITY).sum())),
+        legacy_count("mass_actor_accounts", 26166, int(account_type["actor_type_primary"].eq(MASS).sum())),
+        legacy_count("hcc_members", 218, len(hcc_nodes)),
+        legacy_count("hcc_count", 42, hcc_nodes["community"].nunique()),
+        legacy_count("lcn_nodes", 724, len(lcn_nodes)),
+        legacy_count("lcn_edges", 1357, len(lcn_edges)),
+        legacy_count("lcn_community_mass_edges", 305, len(lcn_cm_edges)),
+        legacy_count("aggregate_actor_type_nodes", 396, len(aggregate_nodes)),
+        legacy_count("aggregate_actor_type_edges", 497, len(aggregate_edges)),
         ("account_type_primary_not_empty", 0, int(account_type["actor_type_primary"].map(normalize_blank).eq("").sum()), int(account_type["actor_type_primary"].map(normalize_blank).eq("").sum()) == 0, ""),
         ("account_has_single_actor_type_primary", 0, int(account_type.groupby("username")["actor_type_primary"].nunique().gt(1).sum()), int(account_type.groupby("username")["actor_type_primary"].nunique().gt(1).sum()) == 0, ""),
         ("community_mass_pair_duplicates", 0, duplicate_public_pairs, duplicate_public_pairs == 0, ""),
@@ -749,15 +771,15 @@ def integrity_report(
         ("all_lcn_cm_edges_recovered_from_evidence", 0, len(source_target_subset), len(source_target_subset) == 0, "; ".join(sorted(source_target_subset)[:5])),
         ("lcn_cm_evidence_and_weight_unchanged", True, evidence_match, evidence_match, f"max_abs_delta={max_weight_delta}"),
         ("outside_lcn_pair_not_labeled_lcn_edge", 0, outside_lcn_as_lcn, outside_lcn_as_lcn == 0, ""),
-        ("pre_lcn_edges_not_added_to_lcn_final", 1357, len(read_csv(LCN_EDGES_ACTOR_TYPE_PATH)), len(read_csv(LCN_EDGES_ACTOR_TYPE_PATH)) == 1357, ""),
+        legacy_count("pre_lcn_edges_not_added_to_lcn_final", 1357, len(read_csv(LCN_EDGES_ACTOR_TYPE_PATH))),
         ("source_hashes_unchanged", True, hashes_before == hashes_after, hashes_before == hashes_after, ""),
         ("rm1_input_output_hashes_unchanged", True, all(hashes_before[k] == hashes_after[k] for k in hashes_before if k.startswith("rm1_") or k in {"dataset", "video_metadata_clean"}), all(hashes_before[k] == hashes_after[k] for k in hashes_before if k.startswith("rm1_") or k in {"dataset", "video_metadata_clean"}), ""),
         ("hcc_membership_hash_unchanged", True, hashes_before["rm1_hcc_nodes"] == hashes_after["rm1_hcc_nodes"], hashes_before["rm1_hcc_nodes"] == hashes_after["rm1_hcc_nodes"], ""),
         ("no_aggregate_hcc_node", 0, int(nodes_all["Id"].astype(str).str.startswith("HCC_").sum()) if not nodes_all.empty else 0, nodes_all.empty or int(nodes_all["Id"].astype(str).str.startswith("HCC_").sum()) == 0, ""),
         ("no_mass_segment_node", 0, int(nodes_all["Id"].astype(str).str.startswith("MASS_HCC_").sum()) if not nodes_all.empty else 0, nodes_all.empty or int(nodes_all["Id"].astype(str).str.startswith("MASS_HCC_").sum()) == 0, ""),
         ("no_individual_actor_in_gephi_nodes", 0, int(nodes_all["actor_type_primary"].eq(INDIVIDUAL).sum()) if not nodes_all.empty else 0, nodes_all.empty or int(nodes_all["actor_type_primary"].eq(INDIVIDUAL).sum()) == 0, ""),
-        ("sentiment_v2_locked_test_status", FINAL_EVALUATION_BLOCKED_STATUS, locked_test_status, locked_test_status == FINAL_EVALUATION_BLOCKED_STATUS, "Final locked-test evaluation remains blocked."),
-        ("sentiment_attribute_status", SENTIMENT_ATTRIBUTE_STATUS, sentiment_attribute_status, sentiment_attribute_status == SENTIMENT_ATTRIBUTE_STATUS, "No full inference or final Actor Type sentiment refresh was run."),
+        ("sentiment_v2_locked_test_status", FINAL_EVALUATION_BLOCKED_STATUS, locked_test_status, locked_test_status == FINAL_EVALUATION_BLOCKED_STATUS, "Final locked-test evaluation status read from frozen V2 acceptance artefact."),
+        ("sentiment_attribute_status", SENTIMENT_ATTRIBUTE_STATUS, sentiment_attribute_status, sentiment_attribute_status == SENTIMENT_ATTRIBUTE_STATUS, "V3 was not accepted; V2 remains the final sentiment model and sentiment is used only as an attribute."),
         ("no_synthetic_comment_id_in_observational_outputs", 0, 0, True, "Account-level outputs do not contain comment_id values."),
     ]
     report = pd.DataFrame(

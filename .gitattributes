@@ -1,1 +1,3 @@
 output/rm2_comment_similarity/comment_similarity_pairs_all.csv filter=lfs diff=lfs merge=lfs -text
+output/rm2_actor_type/account_interaction/community_mass_account_pairs.csv filter=lfs diff=lfs merge=lfs -text
+output/rm2_actor_type/gephi/gephi_community_mass_account_edges_all_evidence.csv filter=lfs diff=lfs merge=lfs -text
