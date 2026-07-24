@@ -257,12 +257,20 @@ Comment-level exact and near-similarity:
 | Observational comments analyzed | 35,334 |
 | Unique normalized texts | 29,458 |
 | Exact duplicate groups | 972 |
-| Similarity pairs | 421,478 |
+| Similarity pairs computed, not fully materialized | 421,478 |
+| Similarity groups | 1,452 |
+| Multi-account similarity groups | 1,241 |
+| Screenshot-eligible substantive groups | 734 |
+| Group member rows | 10,770 |
+| Pair evidence sample rows | 5,000 |
+| Screenshot queue rows | 933 |
 | Near-exact pairs | 29,754 |
 | High-similarity pairs | 75,132 |
 | Presentation candidate examples | 30 |
 
-Similarity is comment-level evidence only. It does not change LCN, HCC, actor type, or sentiment.
+Similarity is comment-level evidence only. The canonical output is now multi-comment similarity groups rather than
+a full pairwise CSV. The full pair set is computed for summary metrics, but only a capped pair-evidence sample is
+materialized. It does not change LCN, HCC, actor type, or sentiment.
 
 ## Key Output Locations
 
@@ -279,7 +287,9 @@ Similarity is comment-level evidence only. It does not change LCN, HCC, actor ty
 | Final accepted sentiment | `output/rm2_sentiment/final/` |
 | Actor type | `output/rm2_actor_type/` |
 | Community-Mass evidence | `output/rm2_actor_type/account_interaction/` |
-| Comment similarity | `output/rm2_comment_similarity/` |
+| Comment similarity groups | `output/rm2_comment_similarity/comment_similarity_groups.csv` |
+| Comment similarity members | `output/rm2_comment_similarity/comment_similarity_group_members.csv` |
+| TikTok screenshot queue | `output/rm2_comment_similarity/comment_similarity_screenshot_queue.csv` |
 
 ## Integrity Confirmations
 
