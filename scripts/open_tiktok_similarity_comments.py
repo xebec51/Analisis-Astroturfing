@@ -1,9 +1,9 @@
 """Local browser helper for manually finding TikTok comments from similarity groups.
 
-The script reads the prioritized screenshot queue, opens each candidate TikTok URL
-in a persistent local browser profile, tries to highlight matching visible text,
-and appends a manual review status. It is deliberately a review aid, not a
-sentiment/modeling input.
+The script reads the prioritized screenshot queue, opens Microsoft Bing searches
+or candidate TikTok URLs in a persistent local browser profile, tries to
+highlight matching visible text, and appends a manual review status. It is
+deliberately a review aid, not a sentiment/modeling input.
 """
 
 from __future__ import annotations
@@ -15,6 +15,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote_plus
 
 import pandas as pd
 
@@ -246,9 +247,46 @@ def completed_comment_ids(status_path: Path) -> set[str]:
     return set(status["comment_id"].map(normalize_blank))
 
 
-def row_url(row: pd.Series) -> str:
+def direct_tiktok_url(row: pd.Series) -> str:
     candidate = normalize_blank(row.get("tiktok_comment_url_candidate", ""))
     return candidate or normalize_blank(row.get("video_url", ""))
+
+
+def truncate_for_query(text: str, max_chars: int) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= max_chars:
+        return text
+    truncated = text[:max_chars].rsplit(" ", 1)[0].strip()
+    return truncated or text[:max_chars].strip()
+
+
+def build_bing_query(row: pd.Series, args: argparse.Namespace) -> str:
+    text = normalize_blank(row.get("comment_text_presentation", ""))
+    username = normalize_blank(row.get("platform_username", "")).lstrip("@")
+    video_id = normalize_blank(row.get("video_id", ""))
+    brand = normalize_blank(row.get("brand", ""))
+
+    pieces: list[str] = ["site:tiktok.com"]
+    if text:
+        pieces.append(f'"{truncate_for_query(text, args.bing_text_chars)}"')
+    if username:
+        pieces.append(f'"{username}"')
+    if brand:
+        pieces.append(f'"{brand}"')
+    if video_id:
+        pieces.append(video_id)
+    return " ".join(pieces)
+
+
+def bing_search_url(row: pd.Series, args: argparse.Namespace) -> str:
+    query = build_bing_query(row, args)
+    return f"https://www.bing.com/search?q={quote_plus(query)}"
+
+
+def row_url(row: pd.Series, args: argparse.Namespace) -> str:
+    if args.lookup_mode == "direct":
+        return direct_tiktok_url(row)
+    return bing_search_url(row, args)
 
 
 def build_search_terms(row: pd.Series) -> list[dict[str, object]]:
@@ -287,15 +325,20 @@ def append_status(status_path: Path, record: dict[str, object]) -> None:
         writer.writerow({field: normalize_blank(record.get(field, "")) for field in STATUS_FIELDS})
 
 
-def print_row_summary(index: int, total: int, row: pd.Series, opened_url: str) -> None:
+def print_row_summary(index: int, total: int, row: pd.Series, opened_url: str, args: argparse.Namespace) -> None:
+    group_rank = normalize_blank(row.get("screenshot_group_rank", "")) or normalize_blank(row.get("group_rank", ""))
     print("\n" + "=" * 88)
     print(f"Target {index}/{total}")
     print(f"group_id: {normalize_blank(row.get('group_id', ''))}")
-    print(f"group_rank: {normalize_blank(row.get('screenshot_group_rank', ''))} | member_rank: {normalize_blank(row.get('member_rank', ''))}")
+    print(f"group_rank: {group_rank} | member_rank: {normalize_blank(row.get('member_rank', ''))}")
     print(f"comment_id: {normalize_blank(row.get('comment_id', ''))}")
     print(f"username: {normalize_blank(row.get('platform_username', ''))}")
     print(f"video_id: {normalize_blank(row.get('video_id', ''))}")
+    print(f"lookup_mode: {args.lookup_mode}")
     print(f"opened_url: {opened_url}")
+    if args.lookup_mode == "bing":
+        print(f"bing_query: {build_bing_query(row, args)}")
+        print(f"direct_tiktok_url: {direct_tiktok_url(row)}")
     print(f"text: {normalize_blank(row.get('comment_text_presentation', ''))}")
 
 
@@ -325,7 +368,7 @@ def prompt_for_action(page: Any, row: pd.Series, args: argparse.Namespace, recor
         record["manual_status"] = "AUTO_ONLY"
         return record, False
 
-    print("\nActions: Enter=next | c=capture screenshot | f=mark found | n=mark not found | s=skip | q=quit")
+    print("\nActions: Enter=next | c=capture screenshot | b=open Bing | t=open TikTok | f=mark found | n=mark not found | s=skip | q=quit")
     while True:
         choice = input("Action: ").strip().lower()
         if choice == "":
@@ -342,6 +385,30 @@ def prompt_for_action(page: Any, row: pd.Series, args: argparse.Namespace, recor
             record["screenshot_file"] = str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else str(path)
             record["manual_status"] = "SCREENSHOT_CAPTURED"
             print(f"Saved screenshot: {record['screenshot_file']}")
+            continue
+        if choice == "b":
+            url = bing_search_url(row, args)
+            page.goto(url, wait_until="domcontentloaded", timeout=args.navigation_timeout_ms)
+            page.wait_for_timeout(args.initial_wait_ms)
+            record["opened_url"] = url
+            record["manual_status"] = "OPENED_BING"
+            print(f"Opened Bing search: {url}")
+            continue
+        if choice == "t":
+            url = direct_tiktok_url(row)
+            if not url:
+                print("No TikTok URL is available for this row.")
+                continue
+            page.goto(url, wait_until="domcontentloaded", timeout=args.navigation_timeout_ms)
+            page.wait_for_timeout(args.initial_wait_ms)
+            result = try_find_comment(page, row, args.scroll_steps, args.scroll_delay_ms)
+            record["opened_url"] = url
+            record["auto_match_status"] = "AUTO_MATCH_FOUND" if result.get("found") else "AUTO_MATCH_NOT_FOUND"
+            record["auto_match_term"] = result.get("term", "")
+            record["auto_match_text"] = result.get("text", "")
+            record["manual_status"] = "OPENED_TIKTOK"
+            print(f"Opened TikTok candidate: {url}")
+            print(f"auto_match_status: {record['auto_match_status']}")
             continue
         if choice == "f":
             record["manual_status"] = "FOUND_MANUALLY"
@@ -388,11 +455,11 @@ def open_rows(rows: pd.DataFrame, args: argparse.Namespace) -> None:
 
         for idx, row in enumerate(rows.to_dict("records"), start=1):
             row_series = pd.Series(row)
-            url = row_url(row_series)
-            print_row_summary(idx, len(rows), row_series, url)
+            url = row_url(row_series, args)
+            print_row_summary(idx, len(rows), row_series, url, args)
             record: dict[str, object] = {
                 "checked_at_local": datetime.now().astimezone().isoformat(timespec="seconds"),
-                "screenshot_group_rank": row.get("screenshot_group_rank", ""),
+                "screenshot_group_rank": row.get("screenshot_group_rank", row.get("group_rank", "")),
                 "group_id": row.get("group_id", ""),
                 "member_rank": row.get("member_rank", ""),
                 "comment_id": row.get("comment_id", ""),
@@ -414,10 +481,17 @@ def open_rows(rows: pd.DataFrame, args: argparse.Namespace) -> None:
             try:
                 page.goto(url, wait_until="domcontentloaded", timeout=args.navigation_timeout_ms)
                 page.wait_for_timeout(args.initial_wait_ms)
-                result = try_find_comment(page, row_series, args.scroll_steps, args.scroll_delay_ms)
-                record["auto_match_status"] = "AUTO_MATCH_FOUND" if result.get("found") else "AUTO_MATCH_NOT_FOUND"
-                record["auto_match_term"] = result.get("term", "")
-                record["auto_match_text"] = result.get("text", "")
+                if args.lookup_mode == "direct":
+                    result = try_find_comment(page, row_series, args.scroll_steps, args.scroll_delay_ms)
+                    record["auto_match_status"] = "AUTO_MATCH_FOUND" if result.get("found") else "AUTO_MATCH_NOT_FOUND"
+                    record["auto_match_term"] = result.get("term", "")
+                    record["auto_match_text"] = result.get("text", "")
+                else:
+                    result = page.evaluate(HIGHLIGHT_SCRIPT, {"terms": build_search_terms(row_series)})
+                    record["auto_match_status"] = "BING_SEARCH_OPENED"
+                    record["auto_match_term"] = result.get("term", "")
+                    record["auto_match_text"] = result.get("text", "")
+                    record["notes"] = f"lookup_mode=bing; direct_tiktok_url={direct_tiktok_url(row_series)}"
                 print(f"auto_match_status: {record['auto_match_status']}")
                 if record["auto_match_term"]:
                     print(f"matched_term: {record['auto_match_term']}")
@@ -443,7 +517,7 @@ def open_rows(rows: pd.DataFrame, args: argparse.Namespace) -> None:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Open TikTok videos from the comment-similarity screenshot queue and help locate comments."
+        description="Open Microsoft Bing searches or TikTok videos from comment-similarity outputs and help locate comments."
     )
     parser.add_argument("--queue", type=Path, default=DEFAULT_QUEUE, help="CSV queue to read.")
     parser.add_argument("--status", type=Path, default=DEFAULT_STATUS, help="CSV lookup status log to append.")
@@ -455,6 +529,13 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--start-row", type=int, default=1, help="1-based start row after filters.")
     parser.add_argument("--limit", type=int, default=10, help="Maximum rows to open. Use 0 for all filtered rows.")
     parser.add_argument("--resume", action="store_true", help="Skip comment_ids already present in the status file.")
+    parser.add_argument(
+        "--lookup-mode",
+        choices=["bing", "direct"],
+        default="bing",
+        help="Open Microsoft Bing searches by default, or direct TikTok candidate URLs.",
+    )
+    parser.add_argument("--bing-text-chars", type=int, default=120, help="Maximum comment-text characters included in Bing queries.")
     parser.add_argument("--channel", default="chrome", help='Browser channel: chrome, msedge, or "" for Playwright Chromium.')
     parser.add_argument("--headless", action="store_true", help="Run browser headless.")
     parser.add_argument("--no-pause", action="store_true", help="Do not prompt between rows; append auto status only.")
@@ -485,6 +566,7 @@ def main(argv: list[str] | None = None) -> int:
         col
         for col in [
             "screenshot_group_rank",
+            "group_rank",
             "group_id",
             "member_rank",
             "comment_id",
