@@ -19,3 +19,5 @@ desktop.ini
 .claude/
 output/rm2_actor_type/direct_interaction/private/
 output/rm2_actor_type/account_interaction/private/
+output/rm2_comment_similarity/tiktok_comment_lookup_status.csv
+output/rm2_comment_similarity/screenshots/

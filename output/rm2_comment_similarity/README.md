@@ -21,5 +21,19 @@ rather than expanded into all possible account/comment pairs.
 For platform screenshots, start from `comment_similarity_screenshot_queue.csv`, open `video_url` or
 `tiktok_comment_url_candidate`, then verify the `platform_username` and `comment_text_presentation` manually.
 
+Local browser automation aid:
+
+```powershell
+python scripts/open_tiktok_similarity_comments.py --dry-run --limit 5
+python scripts/open_tiktok_similarity_comments.py --group-rank 1 --limit 8
+python scripts/open_tiktok_similarity_comments.py --group-rank 1-3 --channel msedge
+```
+
+The helper opens each TikTok candidate in a persistent local profile, attempts to highlight the visible
+matching username/comment text, and appends review status to
+`output/rm2_comment_similarity/tiktok_comment_lookup_status.csv`. Press `c` while reviewing to capture a
+viewport screenshot under `output/rm2_comment_similarity/screenshots/`. TikTok may still require manual login,
+comment-panel scrolling, or direct visual confirmation because comment permalinks are not always stable.
+
 Textual similarity is descriptive evidence of kesamaan narasi and pola teramati. It is not proof of intent,
 payment, affiliation, or deliberate coordination. Presentation examples remain candidates until manually reviewed.
