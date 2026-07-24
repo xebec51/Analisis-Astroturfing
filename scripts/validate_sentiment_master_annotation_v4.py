@@ -228,7 +228,26 @@ def disagreement_rows(master: pd.DataFrame, a1: pd.DataFrame, a2: pd.DataFrame, 
     return disagreements[ADJUDICATION_COLUMNS]
 
 
+def adjudication_workbook_matches(path: Path, sheet_name: str, disagreements: pd.DataFrame) -> bool:
+    if not path.exists():
+        return False
+    if sheet_name not in load_workbook(path, read_only=True).sheetnames:
+        return False
+    try:
+        existing = read_excel_sheet_with_columns(path, ADJUDICATION_COLUMNS)
+    except AssertionError:
+        return False
+    existing = existing.reindex(columns=ADJUDICATION_COLUMNS).fillna("").astype(str)
+    expected = disagreements.reindex(columns=ADJUDICATION_COLUMNS).fillna("").astype(str).reset_index(drop=True)
+    existing = existing.reset_index(drop=True)
+    if len(existing) != len(expected):
+        return False
+    return existing.equals(expected)
+
+
 def write_adjudication_workbook(path: Path, sheet_name: str, disagreements: pd.DataFrame) -> None:
+    if adjudication_workbook_matches(path, sheet_name, disagreements):
+        return
     wb = Workbook()
     ws = wb.active
     ws.title = "README"
@@ -328,6 +347,7 @@ def main() -> None:
     report.to_csv(VALIDATION_REPORT, index=False, encoding="utf-8-sig")
 
     readiness = read_csv(READINESS)
+    readiness = readiness.loc[~readiness["metric"].isin(["validation_status", "agreement_status"])].copy()
     readiness = pd.concat(
         [
             readiness,
