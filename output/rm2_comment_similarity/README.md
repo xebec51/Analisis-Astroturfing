@@ -27,10 +27,12 @@ Local browser automation aid:
 python scripts/open_tiktok_similarity_comments.py --dry-run --limit 5
 python scripts/open_tiktok_similarity_comments.py --group-rank 1 --limit 8
 python scripts/open_tiktok_similarity_comments.py --queue output\rm2_comment_similarity\comment_similarity_group_members.csv --group-rank 47 --limit 0
-python scripts/open_tiktok_similarity_comments.py --group-rank 1-3 --lookup-mode direct --channel msedge
+python scripts/open_tiktok_similarity_comments.py --group-rank 1-3 --lookup-mode direct
 ```
 
-By default, the helper opens Microsoft Bing searches built from the comment text, username, brand, and video ID.
+By default, the helper opens Microsoft Bing searches in Microsoft Edge, built from the comment text, username,
+brand, and video ID. Use `--channel bing`, `--channel edge`, or `--channel msedge` for the same Edge-backed
+browser behavior.
 Press `t` while reviewing to open the direct TikTok candidate URL, or run with `--lookup-mode direct` to start
 from TikTok instead. It appends review status to
 `output/rm2_comment_similarity/tiktok_comment_lookup_status.csv`. Press `c` while reviewing to capture a viewport

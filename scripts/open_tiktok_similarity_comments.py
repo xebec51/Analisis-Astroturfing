@@ -1,9 +1,9 @@
 """Local browser helper for manually finding TikTok comments from similarity groups.
 
 The script reads the prioritized screenshot queue, opens Microsoft Bing searches
-or candidate TikTok URLs in a persistent local browser profile, tries to
-highlight matching visible text, and appends a manual review status. It is
-deliberately a review aid, not a sentiment/modeling input.
+in Microsoft Edge by default, tries to highlight matching visible text, and
+appends a manual review status. It is deliberately a review aid, not a
+sentiment/modeling input.
 """
 
 from __future__ import annotations
@@ -444,8 +444,9 @@ def open_rows(rows: pd.DataFrame, args: argparse.Namespace) -> None:
         except PlaywrightError as exc:
             raise RuntimeError(
                 "Could not launch browser. Try one of these:\n"
+                "  python -m playwright install msedge\n"
                 "  python -m playwright install chromium\n"
-                "  python scripts/open_tiktok_similarity_comments.py --channel msedge --limit 1\n"
+                "  python scripts/open_tiktok_similarity_comments.py --channel edge --limit 1\n"
                 "  python scripts/open_tiktok_similarity_comments.py --channel \"\" --limit 1\n"
                 f"Original error: {exc}"
             ) from exc
@@ -536,7 +537,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         help="Open Microsoft Bing searches by default, or direct TikTok candidate URLs.",
     )
     parser.add_argument("--bing-text-chars", type=int, default=120, help="Maximum comment-text characters included in Bing queries.")
-    parser.add_argument("--channel", default="chrome", help='Browser channel: chrome, msedge, or "" for Playwright Chromium.')
+    parser.add_argument(
+        "--channel",
+        default="msedge",
+        help='Browser channel. Default: msedge. Accepted aliases: bing, edge, msedge, chrome, or "" for Playwright Chromium.',
+    )
     parser.add_argument("--headless", action="store_true", help="Run browser headless.")
     parser.add_argument("--no-pause", action="store_true", help="Do not prompt between rows; append auto status only.")
     parser.add_argument("--keep-open", action="store_true", help="Wait before closing the browser after the last row.")
@@ -550,8 +555,17 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true", help="Print selected rows and exit without opening a browser.")
     args = parser.parse_args(argv)
     args.limit = None if args.limit == 0 else args.limit
-    if normalize_blank(args.channel) == "":
+    channel = normalize_blank(args.channel).lower()
+    if channel == "":
         args.channel = None
+    else:
+        channel_aliases = {
+            "bing": "msedge",
+            "microsoft-bing": "msedge",
+            "edge": "msedge",
+            "microsoft-edge": "msedge",
+        }
+        args.channel = channel_aliases.get(channel, channel)
     return args
 
 
