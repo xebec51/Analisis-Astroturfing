@@ -1,0 +1,38 @@
+{
+  "status": "BASELINE_V2_FROZEN_SNAPSHOT_FOR_POSITIVE_RECALL_EXPERIMENT",
+  "created_at_utc": "2026-07-24T08:32:39.831403+00:00",
+  "scope": "LEGACY_DIAGNOSTIC_TEST_ALREADY_OPENED",
+  "methodological_warning": "This old locked test has already been opened. It is stored only as baseline provenance and diagnostics, not for training, threshold tuning, feature selection, class-weight selection, preprocessing selection, or model selection.",
+  "metrics": {
+    "accuracy_covered": 0.8359375,
+    "macro_f1_covered": 0.7308704320423235,
+    "balanced_accuracy": 0.718795689879629,
+    "mcc": 0.6368545406065418,
+    "coverage": 0.9343065693430657,
+    "positive_precision": 0.7241379310344828,
+    "positive_recall": 0.4772727272727273,
+    "positive_f1": 0.5753424657534246
+  },
+  "positive_error_summary_on_legacy_test": {
+    "positive_true": 47,
+    "positive_predicted_positive": 21,
+    "positive_to_neutral": 15,
+    "positive_to_negative": 8,
+    "positive_abstain": 3
+  },
+  "source_files": {
+    "output/rm2_sentiment/model/frozen/final_locked_test_metrics.csv": "e0bbadcc451f1f332a6db6c3353cf23184b7ac16015d7f20942b4dc89a80d5cf",
+    "output/rm2_sentiment/model/frozen/final_locked_test_per_class_metrics.csv": "6fb44662ae5aab0d1d710d58b0155bb802b39eeba7808172145916fae744a42f",
+    "output/rm2_sentiment/model/frozen/final_locked_test_confusion_matrix.csv": "05125a96f2eb39aa868da97579d46036405f4ba5b12ed676ccdde872581209f5",
+    "output/rm2_sentiment/model/frozen/final_locked_test_report.json": "5766a3b8935595d2b1ec1c4a8c0a7af0c1af904db4a52e4caaf622f3d9cbbe55",
+    "output/rm2_sentiment/experiments/indobert_v3/final_test_evaluation/v2_v3_same_test_predictions.csv": "666f201b8a821449da4a9b575b11d83039caa92a36e722a6e3b5b8b9fab03136"
+  },
+  "reported_legacy_test_hash": "663a69964d57ccd9dc4e05ec091a30fb6b1f3e12d0ecb271ba56ba70603bbfc8",
+  "policy_confirmations": {
+    "v2_frozen_left_unchanged": true,
+    "old_locked_test_used_for_model_selection": false,
+    "low_confidence_to_positive_rule": false,
+    "neutral_to_positive_mass_shift": false,
+    "uncertain_to_positive_mass_shift": false
+  }
+}
