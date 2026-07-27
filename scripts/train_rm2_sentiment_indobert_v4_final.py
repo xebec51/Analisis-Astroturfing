@@ -384,7 +384,7 @@ def batch_plan(trial: Trial, device: torch.device) -> tuple[int, int]:
         per_device = 2 if trial.max_length <= 192 else 1
         effective = 48
     else:
-        per_device = 24 if trial.max_length <= 128 else 16 if trial.max_length <= 192 else 12
+        per_device = 12 if trial.max_length <= 128 else 8 if trial.max_length <= 192 else 6
         effective = 64
     grad_accum = max(1, math.ceil(effective / per_device))
     return per_device, grad_accum
