@@ -1,0 +1,61 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 35616.24it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: indobenchmark/indobert-base-p2
+Key               | Status  | 
+------------------+---------+-
+classifier.weight | MISSING | 
+classifier.bias   | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 10035.31it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: indobenchmark/indobert-base-p2
+Key               | Status  | 
+------------------+---------+-
+classifier.weight | MISSING | 
+classifier.bias   | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 9342.27it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: indobenchmark/indobert-base-p2
+Key               | Status  | 
+------------------+---------+-
+classifier.weight | MISSING | 
+classifier.bias   | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Windows fatal exception: access violation
+
+Thread 0x000042c4 (most recent call first):
+  <no Python frame>
+
+Thread 0x00004890 [tqdm_monitor] (most recent call first):
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 373 in wait
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 670 in wait
+  File "C:\Users\User\miniconda3\Lib\site-packages\tqdm\_monitor.py", line 69 in run
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 1082 in _bootstrap_inner
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 1044 in _bootstrap
+
+Current thread 0x00004950 (most recent call first):
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\utils\_foreach_utils.py", line 47 in _group_tensors_by_device_and_dtype
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\optimizer.py", line 559 in _group_tensors_by_device_and_dtype
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\adam.py", line 626 in _multi_tensor_adam
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\adam.py", line 970 in adam
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\optimizer.py", line 148 in maybe_fallback
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\adam.py", line 248 in step
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\optimizer.py", line 80 in _use_grad
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\optimizer.py", line 530 in wrapper
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\optim\lr_scheduler.py", line 166 in wrapper
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 686 in train_one_fold
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 833 in run_trial
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 1202 in main
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 1350 in <module>
+
+Current thread's C stack trace (most recent call first):
+  <cannot get C stack on this system>
