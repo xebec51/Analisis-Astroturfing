@@ -1062,6 +1062,11 @@ def main() -> None:
     parser.add_argument("--max-epochs", type=int, default=15)
     parser.add_argument("--patience", type=int, default=3)
     parser.add_argument("--max-trials", type=int, default=0, help="0 means run all planned trials.")
+    parser.add_argument(
+        "--no-finalize",
+        action="store_true",
+        help="Run/resume development trials and write partial OOF outputs without selecting/freezing the final model.",
+    )
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
@@ -1141,6 +1146,42 @@ def main() -> None:
     if summary.empty:
         raise RuntimeError("No completed ALL_OOF metrics available for model selection.")
     summary.to_csv(OUT_DIR / "development_trial_summary.csv", index=False, encoding="utf-8-sig")
+    if args.no_finalize:
+        partial_manifest = {
+            "status": "INDOBERT_V4_DEVELOPMENT_SEARCH_PARTIAL",
+            "created_at_utc": utc_now(),
+            "development_registry": DEV_REGISTRY.relative_to(ROOT).as_posix(),
+            "locked_test_registry": LOCKED_REGISTRY.relative_to(ROOT).as_posix(),
+            "development_evaluable_rows": int(len(data)),
+            "label_source_column": "final_human_label",
+            "label_vocabulary": LABELS,
+            "prediction_label_source_used": False,
+            "locked_test_used_for_training_or_selection": False,
+            "locked_test_used_for_early_stopping": False,
+            "locked_test_used_for_threshold_selection": False,
+            "full_corpus_inference_run": False,
+            "selection_basis": "partial development OOF summary only; no final model frozen in this run",
+            "planned_trials_in_this_invocation": int(len(trials)),
+            "completed_trials_total": int(summary["trial_id"].nunique()),
+            "current_best_trial_id": str(summary.iloc[0]["trial_id"]),
+            "current_best_mean_selection_score": float(summary.iloc[0]["mean_selection_score"]),
+            "device_info": info,
+            "package_versions": package_versions(),
+        }
+        save_json(OUT_DIR / "INDOBERT_V4_TRAINING_MANIFEST.partial.json", partial_manifest)
+        print(
+            json.dumps(
+                {
+                    "status": "partial_search_saved",
+                    "completed_trials_total": int(summary["trial_id"].nunique()),
+                    "current_best_trial_id": str(summary.iloc[0]["trial_id"]),
+                    "note": "Run again without --no-finalize after the intended search is complete.",
+                },
+                indent=2,
+            ),
+            flush=True,
+        )
+        return
     selected = summary.loc[summary["selected_for_final_training"].eq(True)].iloc[0]
     trial_lookup = {trial.trial_id: trial for trial in trials}
     selected_trial = trial_lookup[str(selected["trial_id"])]
