@@ -1,0 +1,35 @@
+{
+  "status": "V2_POSITIVE_RECALL_DEVELOPMENT_COMPLETE_CANDIDATE_NOT_ACCEPTED",
+  "acceptance_status": "V2_POSITIVE_RECALL_CANDIDATE_NOT_ACCEPTED_KEEP_ORIGINAL_V2",
+  "created_at_utc": "2026-07-24T09:00:18.500575+00:00",
+  "registry": "output/rm2_sentiment/validation/human_v2_positive_recall/human_label_registry.csv",
+  "model_dir": "output/rm2_sentiment/model/v2_positive_recall_candidate",
+  "development_selection_basis": "OOF development predictions only",
+  "selected_base_candidate": "char_3_5_linearsvc_balanced",
+  "selected_ensemble_seeds": [
+    42,
+    52,
+    62
+  ],
+  "selected_threshold_policy": {
+    "positive_threshold": 0.3,
+    "margin_positive_neutral": 0.0,
+    "margin_positive_negative": 0.0,
+    "abstention_threshold": 0.4
+  },
+  "candidate_model_sha256": "3f9d70f10979af3e9635587227dfe9daa8ad91999ead290ddceda84ef4402a05",
+  "locked_test_used_for_training_or_selection": false,
+  "full_inference_generated": false,
+  "positive_shift_policy": "No failed-recognition/low-confidence/unknown/Neutral/Uncertain/HCC/promotion shortcut to Positive.",
+  "development_data_target_gate_passed": false,
+  "new_locked_test_ready": false,
+  "outputs": {
+    "candidate_grid_manifest": "output/rm2_sentiment/experiments/v2_positive_recall/candidate_grid_manifest.csv",
+    "development_oof_predictions": "output/rm2_sentiment/experiments/v2_positive_recall/development_oof_predictions.csv",
+    "development_seed_metrics": "output/rm2_sentiment/experiments/v2_positive_recall/development_seed_metrics.csv",
+    "development_trial_summary": "output/rm2_sentiment/experiments/v2_positive_recall/development_trial_summary.csv",
+    "threshold_grid_results": "output/rm2_sentiment/experiments/v2_positive_recall/threshold_grid_results.csv",
+    "model_artifact": "output/rm2_sentiment/model/v2_positive_recall_candidate/selected_model.joblib",
+    "model_config": "output/rm2_sentiment/model/v2_positive_recall_candidate/selected_model_config.json"
+  }
+}

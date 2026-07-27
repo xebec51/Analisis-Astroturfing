@@ -1,0 +1,6 @@
+﻿split,target,negative,neutral,positive,total
+historical_development_current,already_final,147,286,113,546
+development_pending_v4,1300 pending candidates,,,,1300
+locked_test_pending_v4,700 pending candidates,,,,700
+development_final_goal,>=1450 evaluable; ideal 1500-1700,>=400,>=650,>=400,>=1450
+locked_test_final_goal,>=600 evaluable,>=150,>=300,>=150,>=600

@@ -1,0 +1,5 @@
+﻿gate,threshold,observed,passed
+std_macro_f1_across_selected_top3_seeds,<=0.04,0.0,True
+no_seed_class_collapse,True,True,True
+minimum_positive_precision_across_seeds,>=0.60,0.7111111111111111,True
+minimum_positive_recall_across_seeds,>=0.50,0.6274509803921569,True

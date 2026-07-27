@@ -1,0 +1,81 @@
+{
+  "status": "V2_POSITIVE_RECALL_CANDIDATE_NOT_ACCEPTED_KEEP_ORIGINAL_V2",
+  "created_at_utc": "2026-07-24T09:12:30.359655+00:00",
+  "reason": "New locked test human adjudication is not ready; candidate is not accepted and full inference is blocked.",
+  "readiness": [
+    {
+      "check": "candidate_model_exists",
+      "expected": true,
+      "observed": true,
+      "passed": true,
+      "notes": ""
+    },
+    {
+      "check": "candidate_config_exists",
+      "expected": true,
+      "observed": true,
+      "passed": true,
+      "notes": ""
+    },
+    {
+      "check": "locked_test_final_rows",
+      "expected": ">=400; ideal 500-600",
+      "observed": 600,
+      "passed": true,
+      "notes": ""
+    },
+    {
+      "check": "no_pending_human_adjudication",
+      "expected": 0,
+      "observed": 600,
+      "passed": false,
+      "notes": "Two blind annotator files and adjudication must be completed before evaluation."
+    },
+    {
+      "check": "no_non_evaluable_in_locked_test",
+      "expected": 0,
+      "observed": 600,
+      "passed": false,
+      "notes": ""
+    },
+    {
+      "check": "minimum_positive_support",
+      "expected": ">=100",
+      "observed": 0,
+      "passed": false,
+      "notes": ""
+    },
+    {
+      "check": "minimum_negative_support",
+      "expected": ">=100",
+      "observed": 0,
+      "passed": false,
+      "notes": ""
+    },
+    {
+      "check": "unique_comment_id",
+      "expected": "no duplicates",
+      "observed": 0,
+      "passed": true,
+      "notes": ""
+    },
+    {
+      "check": "no_comment_id_overlap_with_development",
+      "expected": 0,
+      "observed": 0,
+      "passed": true,
+      "notes": "Development registry overlap check."
+    },
+    {
+      "check": "candidate_frozen_before_test_opened",
+      "expected": true,
+      "observed": true,
+      "passed": true,
+      "notes": ""
+    }
+  ],
+  "locked_test_used_for_training_or_selection": false,
+  "full_inference_allowed": false,
+  "promotion_allowed": false,
+  "no_failed_recognition_to_positive": true
+}

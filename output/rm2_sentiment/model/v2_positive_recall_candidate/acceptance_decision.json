@@ -1,0 +1,14 @@
+{
+  "status": "V2_POSITIVE_RECALL_CANDIDATE_NOT_ACCEPTED_KEEP_ORIGINAL_V2",
+  "created_at_utc": "2026-07-24T09:00:16.090689+00:00",
+  "gates": {
+    "development_data_target_gate_passed": false,
+    "development_stability_gate_passed": true,
+    "development_selection_safety_gate_passed": true,
+    "new_locked_test_ready": false,
+    "full_inference_allowed": false,
+    "promote_to_final_allowed": false
+  },
+  "reason": "Candidate remains unaccepted until development data target and new locked-test adjudication/evaluation pass.",
+  "no_failed_recognition_to_positive": true
+}
