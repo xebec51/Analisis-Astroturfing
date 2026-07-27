@@ -23,6 +23,7 @@ OUT_IMPORT_REPORT = OUT_DIR / "sentiment_v4_import_report.csv"
 OUT_IMPORT_MANIFEST = OUT_DIR / "SENTIMENT_V4_COMPLETED_IMPORT_MANIFEST.json"
 
 LABELS = ["Negative", "Neutral", "Positive", "Uncertain", "No Text"]
+EVALUABLE = ["Negative", "Neutral", "Positive"]
 ANNOTATOR_COLUMNS = [
     "annotation_id",
     "comment_id",
@@ -96,25 +97,41 @@ def import_scope(master: pd.DataFrame, role: str, a1_path: Path, a2_path: Path, 
     rows["adjudicated_label"] = rows["adjudicated_label_imported"].fillna("")
     rows["disagreement_flag"] = rows["disagreement_flag_imported"].fillna(False)
     rows["adjudication_required"] = rows["adjudication_required_imported"].fillna(False)
+    rows["evaluable_three_class"] = rows["final_human_label"].isin(EVALUABLE)
     rows["annotation_status"] = rows["final_human_label"].map(lambda x: "FINAL_HUMAN_IMPORTED" if x in LABELS else "PENDING_ADJUDICATION")
+    return rows
+
+
+def count_metrics(scope: str, frame: pd.DataFrame) -> list[dict[str, object]]:
+    counts = frame["final_human_label"].value_counts()
+    rows: list[dict[str, object]] = [
+        {"metric": f"{scope}_rows", "value": len(frame)},
+        {"metric": f"{scope}_evaluable_three_class", "value": int(frame["final_human_label"].isin(EVALUABLE).sum())},
+        {"metric": f"{scope}_blank_final_label", "value": int(frame["final_human_label"].eq("").sum())},
+        {"metric": f"{scope}_inj_count", "value": int(frame["comment_id"].map(lambda x: str(x).upper().startswith("INJ")).sum())},
+    ]
+    for label in LABELS:
+        rows.append({"metric": f"{scope}_label_{label.lower().replace(' ', '_')}", "value": int(counts.get(label, 0))})
     return rows
 
 
 def main() -> None:
     master = read_master()
-    historical_before = master.loc[master["annotation_role"].eq("HISTORICAL_DEVELOPMENT_FINAL"), ["master_annotation_id", "final_human_label"]].copy()
+    historical_before = master.loc[
+        master["annotation_role"].eq("HISTORICAL_DEVELOPMENT_FINAL"),
+        ["master_annotation_id", "final_human_label"],
+    ].reset_index(drop=True)
     dev = import_scope(master, "DEVELOPMENT_NEW_PENDING", DEV_A1, DEV_A2, DEV_ADJ)
     locked = import_scope(master, "LOCKED_TEST_NEW_PENDING", LOCK_A1, LOCK_A2, LOCK_ADJ)
 
     unresolved = int(dev["final_human_label"].eq("").sum() + locked["final_human_label"].eq("").sum())
-    report = pd.DataFrame(
-        [
-            {"metric": "development_rows_imported", "value": len(dev)},
-            {"metric": "locked_rows_imported", "value": len(locked)},
-            {"metric": "unresolved_pending_adjudication", "value": unresolved},
-            {"metric": "historical_labels_overwritten", "value": 0},
-        ]
-    )
+    report_rows = [
+        {"metric": "development_rows_imported", "value": len(dev)},
+        {"metric": "locked_rows_imported", "value": len(locked)},
+        {"metric": "unresolved_pending_adjudication", "value": unresolved},
+        {"metric": "historical_labels_overwritten", "value": 0},
+    ]
+    report = pd.DataFrame(report_rows)
     report.to_csv(OUT_IMPORT_REPORT, index=False, encoding="utf-8-sig")
     if unresolved:
         raise AssertionError(f"Import blocked: {unresolved} rows still lack final human labels/adjudication.")
@@ -129,7 +146,39 @@ def main() -> None:
     )
     locked_final = locked.assign(annotation_role="LOCKED_TEST_NEW_FINAL", split_lock="LOCKED_TEST_FINAL_LOCKED")
 
-    historical_after = dev_final.loc[dev_final["annotation_role"].eq("HISTORICAL_DEVELOPMENT_FINAL"), ["master_annotation_id", "final_human_label"]].copy()
+    report_rows.extend(count_metrics("development_final", dev_final))
+    report_rows.extend(count_metrics("locked_test_final", locked_final))
+    dev_counts = dev_final["final_human_label"].value_counts()
+    locked_counts = locked_final["final_human_label"].value_counts()
+    dev_target_pass = (
+        int(dev_final["final_human_label"].isin(EVALUABLE).sum()) >= 1450
+        and int(dev_counts.get("Negative", 0)) >= 400
+        and int(dev_counts.get("Neutral", 0)) >= 650
+        and int(dev_counts.get("Positive", 0)) >= 400
+    )
+    locked_target_pass = (
+        int(locked_final["final_human_label"].isin(EVALUABLE).sum()) >= 600
+        and int(locked_counts.get("Negative", 0)) >= 150
+        and int(locked_counts.get("Neutral", 0)) >= 300
+        and int(locked_counts.get("Positive", 0)) >= 150
+    )
+    report_rows.extend(
+        [
+            {"metric": "development_final_class_target_pass", "value": dev_target_pass},
+            {"metric": "locked_test_final_class_target_pass", "value": locked_target_pass},
+            {
+                "metric": "locked_test_neutral_target_shortfall",
+                "value": max(0, 300 - int(locked_counts.get("Neutral", 0))),
+            },
+        ]
+    )
+    report = pd.DataFrame(report_rows)
+    report.to_csv(OUT_IMPORT_REPORT, index=False, encoding="utf-8-sig")
+
+    historical_after = dev_final.loc[
+        dev_final["annotation_role"].eq("HISTORICAL_DEVELOPMENT_FINAL"),
+        ["master_annotation_id", "final_human_label"],
+    ].reset_index(drop=True)
     if not historical_before.equals(historical_after):
         raise AssertionError("Historical labels changed during import; refusing to write outputs.")
 
@@ -142,6 +191,13 @@ def main() -> None:
                 "created_at_utc": datetime.now(timezone.utc).isoformat(),
                 "development_final_registry": str(OUT_DEV_FINAL.relative_to(ROOT)).replace("\\", "/"),
                 "locked_test_final_frozen": str(OUT_LOCKED_FINAL.relative_to(ROOT)).replace("\\", "/"),
+                "counts": {
+                    "development_final_rows": int(len(dev_final)),
+                    "development_final_evaluable_three_class": int(dev_final["final_human_label"].isin(EVALUABLE).sum()),
+                    "locked_test_final_rows": int(len(locked_final)),
+                    "locked_test_final_evaluable_three_class": int(locked_final["final_human_label"].isin(EVALUABLE).sum()),
+                    "locked_test_neutral_target_shortfall": max(0, 300 - int(locked_counts.get("Neutral", 0))),
+                },
                 "historical_labels_overwritten": False,
                 "model_used_as_adjudicator": False,
                 "majority_vote_used": False,

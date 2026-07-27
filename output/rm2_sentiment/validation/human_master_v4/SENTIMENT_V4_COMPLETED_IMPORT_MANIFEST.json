@@ -1,0 +1,16 @@
+{
+  "status": "SENTIMENT_MASTER_V4_COMPLETED_LABELS_IMPORTED",
+  "created_at_utc": "2026-07-27T02:09:36.461457+00:00",
+  "development_final_registry": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_development_final_registry.csv",
+  "locked_test_final_frozen": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_locked_test_final_frozen.csv",
+  "counts": {
+    "development_final_rows": 1846,
+    "development_final_evaluable_three_class": 1824,
+    "locked_test_final_rows": 700,
+    "locked_test_final_evaluable_three_class": 672,
+    "locked_test_neutral_target_shortfall": 6
+  },
+  "historical_labels_overwritten": false,
+  "model_used_as_adjudicator": false,
+  "majority_vote_used": false
+}

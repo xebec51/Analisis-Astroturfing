@@ -15,6 +15,9 @@ CHECKSUMS = OUT_DIR / "source_annotation_checksums.csv"
 LEAKAGE = OUT_DIR / "master_split_leakage_audit.csv"
 COMMENT_CONFLICTS = OUT_DIR / "master_comment_id_conflicts.csv"
 TEXT_CONFLICTS = OUT_DIR / "master_text_cluster_conflicts.csv"
+IMPORT_REPORT = OUT_DIR / "sentiment_v4_import_report.csv"
+DEV_FINAL = OUT_DIR / "sentiment_v4_development_final_registry.csv"
+LOCKED_FINAL = OUT_DIR / "sentiment_v4_locked_test_final_frozen.csv"
 
 ANNOTATOR_WORKBOOKS = [
     OUT_DIR / "sentiment_v4_development_annotator_1.xlsx",
@@ -24,6 +27,7 @@ ANNOTATOR_WORKBOOKS = [
 ]
 
 LABELS = {"Negative", "Neutral", "Positive", "Uncertain", "No Text"}
+EVALUABLE = {"Negative", "Neutral", "Positive"}
 PENDING_ROLES = {"DEVELOPMENT_NEW_PENDING", "LOCKED_TEST_NEW_PENDING"}
 DEV_ROLES = {"HISTORICAL_DEVELOPMENT_FINAL", "DEVELOPMENT_NEW_PENDING", "DEVELOPMENT_NEW_FINAL"}
 LOCKED_ROLES = {"LOCKED_TEST_NEW_PENDING", "LOCKED_TEST_NEW_FINAL"}
@@ -148,6 +152,34 @@ class SentimentMasterAnnotationV4Tests(unittest.TestCase):
         self.assertEqual(int(counts.get("DEVELOPMENT_NEW_PENDING", 0)), 1300)
         self.assertEqual(int(counts.get("LOCKED_TEST_NEW_PENDING", 0)), 700)
         self.assertEqual(int(self.master["annotation_role"].isin(PENDING_ROLES).sum()), 2000)
+
+    def test_completed_import_outputs_are_ready_for_training(self):
+        dev = read_csv(DEV_FINAL)
+        locked = read_csv(LOCKED_FINAL)
+        self.assertEqual(len(dev), 1846)
+        self.assertEqual(len(locked), 700)
+        self.assertTrue(dev["final_human_label"].isin(LABELS).all())
+        self.assertTrue(locked["final_human_label"].isin(LABELS).all())
+        self.assertEqual(int(dev["comment_id"].map(is_inj).sum()), 0)
+        self.assertEqual(int(locked["comment_id"].map(is_inj).sum()), 0)
+
+        for frame in [dev, locked]:
+            expected = frame["final_human_label"].isin(EVALUABLE).map(str)
+            self.assertTrue(frame["evaluable_three_class"].astype(str).reset_index(drop=True).equals(expected.reset_index(drop=True)))
+
+        dev_counts = dev["final_human_label"].value_counts()
+        self.assertGreaterEqual(int(dev["final_human_label"].isin(EVALUABLE).sum()), 1450)
+        self.assertGreaterEqual(int(dev_counts.get("Negative", 0)), 400)
+        self.assertGreaterEqual(int(dev_counts.get("Neutral", 0)), 650)
+        self.assertGreaterEqual(int(dev_counts.get("Positive", 0)), 400)
+
+        locked_counts = locked["final_human_label"].value_counts()
+        self.assertGreaterEqual(int(locked["final_human_label"].isin(EVALUABLE).sum()), 600)
+        self.assertGreaterEqual(int(locked_counts.get("Negative", 0)), 150)
+        self.assertGreaterEqual(int(locked_counts.get("Positive", 0)), 150)
+        report = read_csv(IMPORT_REPORT).set_index("metric")["value"]
+        self.assertEqual(report["locked_test_final_class_target_pass"], "False")
+        self.assertEqual(report["locked_test_neutral_target_shortfall"], "6")
 
 
 if __name__ == "__main__":
