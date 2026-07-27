@@ -471,13 +471,15 @@ def load_model_and_tokenizer(trial: Trial, device: torch.device) -> tuple[Any, A
     config.classifier_dropout = float(trial.classifier_dropout)
     if hasattr(config, "hidden_dropout_prob"):
         config.hidden_dropout_prob = float(max(getattr(config, "hidden_dropout_prob", 0.0), trial.classifier_dropout))
+    if hasattr(config, "use_cache"):
+        config.use_cache = False
     model = AutoModelForSequenceClassification.from_pretrained(
         trial.model_id,
         config=config,
         ignore_mismatched_sizes=True,
         trust_remote_code=False,
     )
-    if hasattr(model, "gradient_checkpointing_enable"):
+    if trial.model_family == "large" and hasattr(model, "gradient_checkpointing_enable"):
         model.gradient_checkpointing_enable()
     model.to(device)
     commit = str(getattr(model.config, "_commit_hash", "") or getattr(config, "_commit_hash", "") or "")
