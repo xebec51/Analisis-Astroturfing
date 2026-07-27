@@ -654,6 +654,7 @@ def train_one_fold(
     best_metrics: dict[str, Any] | None = None
     best_epoch = 0
     stagnant = 0
+    store_best_state = trial.model_family != "large"
     optimizer.zero_grad(set_to_none=True)
     global_step = 0
 
@@ -710,7 +711,8 @@ def train_one_fold(
         if best_metrics is None or metrics["selection_score"] > best_metrics["selection_score"] + 1e-9:
             best_metrics = metrics
             best_epoch = epoch
-            best_state = {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
+            if store_best_state:
+                best_state = {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
             stagnant = 0
         else:
             stagnant += 1
@@ -738,6 +740,12 @@ def train_one_fold(
             "gradient_accumulation_steps": int(grad_accum),
             "effective_batch_size": int(per_device_batch * grad_accum),
             "optimizer_steps": int(global_step),
+            "best_state_restored": bool(best_state is not None),
+            "best_state_restore_note": (
+                "disabled_for_large_model_resource_stability"
+                if not store_best_state
+                else "best_validation_state_restored"
+            ),
         }
     )
     del model, tokenizer, optimizer, scheduler, scaler, best_state
