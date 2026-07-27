@@ -131,6 +131,30 @@ def save_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(to_jsonable(payload), indent=2), encoding="utf-8")
 
 
+def log_event(payload: dict[str, Any]) -> None:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    row = json.dumps(to_jsonable({"created_at_utc": utc_now(), **payload}), ensure_ascii=False)
+    with (OUT_DIR / "training_events.jsonl").open("a", encoding="utf-8") as handle:
+        handle.write(row + "\n")
+    print(json.dumps(to_jsonable(payload)), flush=True)
+
+
+def upsert_rows_csv(path: Path, rows: list[dict[str, Any]], subset: list[str]) -> None:
+    if not rows:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    incoming = pd.DataFrame(rows)
+    if path.exists() and path.stat().st_size > 0:
+        existing = pd.read_csv(path, dtype=str, keep_default_na=False, low_memory=False)
+        combined = pd.concat([existing, incoming], ignore_index=True, sort=False)
+    else:
+        combined = incoming
+    available_subset = [col for col in subset if col in combined.columns]
+    if available_subset:
+        combined = combined.drop_duplicates(subset=available_subset, keep="last")
+    combined.to_csv(path, index=False, encoding="utf-8-sig")
+
+
 def to_jsonable(value: Any) -> Any:
     if isinstance(value, dict):
         return {str(k): to_jsonable(v) for k, v in value.items()}
@@ -357,7 +381,7 @@ def batch_plan(trial: Trial, device: torch.device) -> tuple[int, int]:
     if device.type != "cuda":
         return 2, 16
     if trial.model_family == "large":
-        per_device = 8 if trial.max_length <= 192 else 6
+        per_device = 2 if trial.max_length <= 192 else 1
         effective = 48
     else:
         per_device = 24 if trial.max_length <= 128 else 16 if trial.max_length <= 192 else 12
@@ -672,19 +696,16 @@ def train_one_fold(
         )
         metrics = metric_bundle(val_y, probs)
         metrics["epoch_train_loss"] = epoch_loss / max(1, len(train_loader))
-        print(
-            json.dumps(
-                {
-                    "event": "epoch",
-                    "trial_id": trial.trial_id,
-                    "seed": seed,
-                    "epoch": epoch,
-                    "val_macro_f1": metrics["macro_f1"],
-                    "val_accuracy": metrics["accuracy"],
-                    "selection_score": metrics["selection_score"],
-                }
-            ),
-            flush=True,
+        log_event(
+            {
+                "event": "epoch",
+                "trial_id": trial.trial_id,
+                "seed": seed,
+                "epoch": epoch,
+                "val_macro_f1": metrics["macro_f1"],
+                "val_accuracy": metrics["accuracy"],
+                "selection_score": metrics["selection_score"],
+            }
         )
         if best_metrics is None or metrics["selection_score"] > best_metrics["selection_score"] + 1e-9:
             best_metrics = metrics
@@ -746,25 +767,58 @@ def run_trial(
     for seed in seeds:
         seed_probs = np.zeros((len(data), len(LABELS)), dtype=float)
         seed_seen = np.zeros(len(data), dtype=bool)
+        seed_best_epochs: list[int] = []
         seed_assignments = assignments.loc[assignments["seed"].astype(int).eq(seed)]
         for fold in sorted(seed_assignments["fold"].unique(), key=lambda value: int(value)):
             val_idx = seed_assignments.loc[seed_assignments["fold"].eq(fold), "row_index"].astype(int).to_numpy()
             train_mask = np.ones(len(data), dtype=bool)
             train_mask[val_idx] = False
             train_idx = np.where(train_mask)[0]
-            print(
-                json.dumps(
-                    {
-                        "event": "fold_start",
-                        "trial_id": trial.trial_id,
-                        "model_id": trial.model_id,
-                        "seed": seed,
-                        "fold": fold,
-                        "n_train": int(len(train_idx)),
-                        "n_val": int(len(val_idx)),
-                    }
-                ),
-                flush=True,
+            existing_oof_path = OUT_DIR / "development_oof_predictions.csv"
+            if existing_oof_path.exists() and existing_oof_path.stat().st_size > 0:
+                existing_oof = pd.read_csv(existing_oof_path, dtype=str, keep_default_na=False, low_memory=False)
+                existing_fold = existing_oof.loc[
+                    existing_oof["trial_id"].eq(trial.trial_id)
+                    & existing_oof["seed"].astype(str).eq(str(seed))
+                    & existing_oof["fold"].astype(str).eq(str(fold))
+                ].copy()
+                if len(existing_fold) == len(val_idx):
+                    expected_ids = data.iloc[val_idx]["comment_id"].astype(str).tolist()
+                    existing_by_id = existing_fold.drop_duplicates("comment_id", keep="last").set_index("comment_id")
+                    if set(expected_ids).issubset(set(existing_by_id.index)):
+                        probs_existing = existing_by_id.loc[expected_ids, ["prob_negative", "prob_neutral", "prob_positive"]].to_numpy(dtype=float)
+                        seed_probs[val_idx] = probs_existing
+                        seed_seen[val_idx] = True
+                        existing_metrics_path = OUT_DIR / "development_fold_seed_metrics.csv"
+                        if existing_metrics_path.exists() and existing_metrics_path.stat().st_size > 0:
+                            existing_metrics = pd.read_csv(existing_metrics_path, dtype=str, keep_default_na=False, low_memory=False)
+                            existing_metric = existing_metrics.loc[
+                                existing_metrics["trial_id"].eq(trial.trial_id)
+                                & existing_metrics["seed"].astype(str).eq(str(seed))
+                                & existing_metrics["fold"].astype(str).eq(str(fold))
+                            ]
+                            if not existing_metric.empty:
+                                seed_best_epochs.append(int(float(existing_metric.iloc[-1]["best_epoch"])))
+                        log_event(
+                            {
+                                "event": "fold_skip_existing",
+                                "trial_id": trial.trial_id,
+                                "seed": seed,
+                                "fold": fold,
+                                "n_val": int(len(val_idx)),
+                            }
+                        )
+                        continue
+            log_event(
+                {
+                    "event": "fold_start",
+                    "trial_id": trial.trial_id,
+                    "model_id": trial.model_id,
+                    "seed": seed,
+                    "fold": fold,
+                    "n_train": int(len(train_idx)),
+                    "n_val": int(len(val_idx)),
+                }
             )
             probs, fold_metrics, commit = train_one_fold(
                 trial,
@@ -781,23 +835,24 @@ def run_trial(
             commit_hash = commit_hash or commit
             seed_probs[val_idx] = probs
             seed_seen[val_idx] = True
-            metric_rows.append(
-                {
-                    **asdict(trial),
-                    "trial_id": trial.trial_id,
-                    "model_revision": commit,
-                    "seed": int(seed),
-                    "fold": str(fold),
-                    "training_mode": "full_fine_tuning",
-                    "device": str(device),
-                    "mixed_precision": precision,
-                    **fold_metrics,
-                }
-            )
+            fold_metric_row = {
+                **asdict(trial),
+                "trial_id": trial.trial_id,
+                "model_revision": commit,
+                "seed": int(seed),
+                "fold": str(fold),
+                "training_mode": "full_fine_tuning",
+                "device": str(device),
+                "mixed_precision": precision,
+                **fold_metrics,
+            }
+            metric_rows.append(fold_metric_row)
+            seed_best_epochs.append(int(fold_metric_row["best_epoch"]))
+            fold_oof_rows: list[dict[str, Any]] = []
             for row_pos, source_idx in enumerate(val_idx):
                 row = data.iloc[source_idx]
                 pred_id = int(probs[row_pos].argmax())
-                oof_rows.append(
+                fold_oof_rows.append(
                     {
                         **asdict(trial),
                         "trial_id": trial.trial_id,
@@ -816,30 +871,47 @@ def run_trial(
                         "cv_group_id": row["cv_group_id"],
                     }
                 )
+            oof_rows.extend(fold_oof_rows)
+            upsert_rows_csv(
+                OUT_DIR / "development_fold_seed_metrics.csv",
+                [fold_metric_row],
+                ["trial_id", "seed", "fold"],
+            )
+            upsert_rows_csv(
+                OUT_DIR / "development_oof_predictions.csv",
+                fold_oof_rows,
+                ["trial_id", "seed", "fold", "comment_id"],
+            )
+            log_event(
+                {
+                    "event": "fold_complete_checkpointed",
+                    "trial_id": trial.trial_id,
+                    "seed": seed,
+                    "fold": fold,
+                    "macro_f1": fold_metrics["macro_f1"],
+                    "accuracy": fold_metrics["accuracy"],
+                }
+            )
         if not seed_seen.all():
             raise AssertionError(f"Incomplete OOF coverage for {trial.trial_id} seed={seed}")
         seed_metrics = metric_bundle(y_all, seed_probs)
-        metric_rows.append(
-            {
-                **asdict(trial),
-                "trial_id": trial.trial_id,
-                "model_revision": commit_hash,
-                "seed": int(seed),
-                "fold": "ALL_OOF",
-                "training_mode": "full_fine_tuning",
-                "device": str(device),
-                "mixed_precision": precision,
-                "best_epoch": int(
-                    np.median(
-                        [
-                            row["best_epoch"]
-                            for row in metric_rows
-                            if row["trial_id"] == trial.trial_id and row["seed"] == seed and row["fold"] != "ALL_OOF"
-                        ]
-                    )
-                ),
-                **seed_metrics,
-            }
+        seed_metric_row = {
+            **asdict(trial),
+            "trial_id": trial.trial_id,
+            "model_revision": commit_hash,
+            "seed": int(seed),
+            "fold": "ALL_OOF",
+            "training_mode": "full_fine_tuning",
+            "device": str(device),
+            "mixed_precision": precision,
+            "best_epoch": int(np.median(seed_best_epochs)) if seed_best_epochs else 1,
+            **seed_metrics,
+        }
+        metric_rows.append(seed_metric_row)
+        upsert_rows_csv(
+            OUT_DIR / "development_fold_seed_metrics.csv",
+            [seed_metric_row],
+            ["trial_id", "seed", "fold"],
         )
     return oof_rows, metric_rows, commit_hash
 
@@ -1102,7 +1174,12 @@ def main() -> None:
     if args.resume and (OUT_DIR / "development_fold_seed_metrics.csv").exists() and (OUT_DIR / "development_oof_predictions.csv").exists():
         existing_metrics = pd.read_csv(OUT_DIR / "development_fold_seed_metrics.csv", dtype=str, keep_default_na=False)
         existing_oof = pd.read_csv(OUT_DIR / "development_oof_predictions.csv", dtype=str, keep_default_na=False)
-        completed_ids = set(existing_metrics.loc[existing_metrics["fold"].eq("ALL_OOF"), "trial_id"].unique())
+        completed_by_seed = (
+            existing_metrics.loc[existing_metrics["fold"].eq("ALL_OOF")]
+            .groupby("trial_id")["seed"]
+            .nunique()
+        )
+        completed_ids = set(completed_by_seed.loc[completed_by_seed.ge(len(args.seeds))].index)
         all_metrics.extend(existing_metrics.to_dict("records"))
         all_oof.extend(existing_oof.to_dict("records"))
 
