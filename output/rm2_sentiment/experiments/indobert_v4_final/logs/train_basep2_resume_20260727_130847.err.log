@@ -1,0 +1,54 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 20177.11it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: indobenchmark/indobert-base-p2
+Key               | Status  | 
+------------------+---------+-
+classifier.weight | MISSING | 
+classifier.bias   | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+Windows fatal exception: access violation
+
+Thread 0x00000d68 (most recent call first):
+  <no Python frame>
+
+Thread 0x00003b40 [tqdm_monitor] (most recent call first):
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 373 in wait
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 670 in wait
+  File "C:\Users\User\miniconda3\Lib\site-packages\tqdm\_monitor.py", line 69 in run
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 1082 in _bootstrap_inner
+  File "C:\Users\User\miniconda3\Lib\threading.py", line 1044 in _bootstrap
+
+Current thread 0x00004d68 (most recent call first):
+  Garbage-collecting
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1782 in _call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1778 in _wrapped_call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\models\bert\modeling_bert.py", line 387 in forward
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1789 in _call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1778 in _wrapped_call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\utils\checkpoint.py", line 519 in checkpoint
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1446 in _fn
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\_compile.py", line 54 in inner
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\modeling_layers.py", line 109 in __call__
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\models\bert\modeling_bert.py", line 440 in forward
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1789 in _call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1778 in _wrapped_call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\models\bert\modeling_bert.py", line 673 in forward
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\utils\output_capturing.py", line 262 in wrapper
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\utils\generic.py", line 1040 in wrapper
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1789 in _call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1778 in _wrapped_call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\models\bert\modeling_bert.py", line 1110 in forward
+  File "C:\Users\User\miniconda3\Lib\site-packages\transformers\utils\generic.py", line 911 in wrapper
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1789 in _call_impl
+  File "C:\Users\User\miniconda3\Lib\site-packages\torch\nn\modules\module.py", line 1778 in _wrapped_call_impl
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 668 in train_one_fold
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 831 in run_trial
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 1200 in main
+  File "D:\NALDI\Analisis-Astroturfing\scripts\train_rm2_sentiment_indobert_v4_final.py", line 1348 in <module>
+
+Current thread's C stack trace (most recent call first):
+  <cannot get C stack on this system>
