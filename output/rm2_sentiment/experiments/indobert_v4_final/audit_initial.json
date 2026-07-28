@@ -1,0 +1,1318 @@
+{
+  "created_at_utc": "2026-07-28T08:21:40.157406+00:00",
+  "paths": {
+    "experiment_dir": "output\\rm2_sentiment\\experiments\\indobert_v4_final",
+    "development_oof_predictions": "output\\rm2_sentiment\\experiments\\indobert_v4_final\\development_oof_predictions.csv",
+    "development_fold_seed_metrics": "output\\rm2_sentiment\\experiments\\indobert_v4_final\\development_fold_seed_metrics.csv",
+    "development_trial_summary": "output\\rm2_sentiment\\experiments\\indobert_v4_final\\development_trial_summary.csv",
+    "development_fold_assignments": "output\\rm2_sentiment\\experiments\\indobert_v4_final\\development_fold_assignments.csv"
+  },
+  "file_presence": {
+    "development_oof_predictions.csv": true,
+    "development_fold_seed_metrics.csv": true,
+    "development_trial_summary.csv": true,
+    "development_fold_assignments.csv": true,
+    "candidate_grid_manifest.csv": true,
+    "training_events.jsonl": true,
+    "logs": true,
+    "checkpoints": false
+  },
+  "row_counts": {
+    "oof_rows": 55059,
+    "metrics_rows": 181,
+    "summary_rows": 10,
+    "fold_assignment_rows": 5472,
+    "candidate_grid_rows": 6
+  },
+  "oof_duplicate_key_rows": 0,
+  "oof_duplicate_key_count": 0,
+  "oof_coverage_by_trial_seed": [
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 42,
+      "oof_rows": 339,
+      "folds": [
+        "1"
+      ],
+      "unique_comment_ids": 339
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 42,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 52,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 62,
+      "oof_rows": 1824,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unique_comment_ids": 1824
+    }
+  ],
+  "metrics_duplicate_key_rows": 0,
+  "metrics_duplicate_key_count": 0,
+  "metrics_coverage_by_trial_seed": [
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 42,
+      "metric_rows": 1,
+      "fold_count": 1,
+      "has_all_oof": false,
+      "folds": [
+        "1"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 42,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 52,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "seed": 62,
+      "metric_rows": 6,
+      "fold_count": 5,
+      "has_all_oof": true,
+      "folds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  ],
+  "seed_count_by_trial": [
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "all_oof_seed_count": 3,
+      "seeds": [
+        42,
+        52,
+        62
+      ]
+    }
+  ],
+  "top_trials_by_requested_ranking": [
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "model_id": "indobenchmark/indobert-base-p2",
+      "text_mode": "context_sep_comment",
+      "max_length": "256",
+      "learning_rate": "3e-05",
+      "loss": "focal_loss",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8832236842105264",
+      "mean_macro_f1": "0.8793080026199229",
+      "mean_balanced_accuracy": "0.8825816182923792",
+      "mean_selection_score": "0.8796612825019942",
+      "mean_min_class_recall": "0.8645465253239104"
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len128__lr2p0em05__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "model_id": "indolem/indobertweet-base-uncased",
+      "text_mode": "comment_only",
+      "max_length": "128",
+      "learning_rate": "2e-05",
+      "loss": "weighted_cross_entropy",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8801169590643275",
+      "mean_macro_f1": "0.8779185284926121",
+      "mean_balanced_accuracy": "0.8831724185803703",
+      "mean_selection_score": "0.8776660860473072",
+      "mean_min_class_recall": "0.8582910321489002"
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "model_id": "indolem/indobertweet-base-uncased",
+      "text_mode": "context_sep_comment",
+      "max_length": "192",
+      "learning_rate": "2e-05",
+      "loss": "weighted_cross_entropy",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8775584795321637",
+      "mean_macro_f1": "0.8756084517638394",
+      "mean_balanced_accuracy": "0.8808236856780399",
+      "mean_selection_score": "0.8758431743911482",
+      "mean_min_class_recall": "0.8616751269035534"
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len192__lr2p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "model_id": "indobenchmark/indobert-base-p2",
+      "text_mode": "context_sep_comment",
+      "max_length": "192",
+      "learning_rate": "2e-05",
+      "loss": "weighted_cross_entropy",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8777412280701755",
+      "mean_macro_f1": "0.8733647935477727",
+      "mean_balanced_accuracy": "0.8776947358766328",
+      "mean_selection_score": "0.8746902035846005",
+      "mean_min_class_recall": "0.8648297056911233"
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "model_id": "indolem/indobertweet-base-uncased",
+      "text_mode": "context_sep_comment",
+      "max_length": "128",
+      "learning_rate": "1e-05",
+      "loss": "cross_entropy",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8733552631578947",
+      "mean_macro_f1": "0.8707873118781215",
+      "mean_balanced_accuracy": "0.8731602817034353",
+      "mean_selection_score": "0.8712939354496743",
+      "mean_min_class_recall": "0.8634037541037015"
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "model_id": "indobenchmark/indobert-base-p2",
+      "text_mode": "comment_only",
+      "max_length": "192",
+      "learning_rate": "2e-05",
+      "loss": "weighted_cross_entropy",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8744517543859649",
+      "mean_macro_f1": "0.8705901116573634",
+      "mean_balanced_accuracy": "0.8746976074340682",
+      "mean_selection_score": "0.8714688992841394",
+      "mean_min_class_recall": "0.8595780681859092"
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__comment_only__len128__lr3p0em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "model_id": "indobenchmark/indobert-base-p2",
+      "text_mode": "comment_only",
+      "max_length": "128",
+      "learning_rate": "3e-05",
+      "loss": "focal_loss",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8735380116959064",
+      "mean_macro_f1": "0.8697353629574406",
+      "mean_balanced_accuracy": "0.8741322410737747",
+      "mean_selection_score": "0.8702138289978016",
+      "mean_min_class_recall": "0.8543183209129855"
+    },
+    {
+      "trial_id": "indolem__indobertweet-base-uncased__comment_only__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "model_id": "indolem/indobertweet-base-uncased",
+      "text_mode": "comment_only",
+      "max_length": "256",
+      "learning_rate": "3e-05",
+      "loss": "focal_loss",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8702485380116959",
+      "mean_macro_f1": "0.867393698211905",
+      "mean_balanced_accuracy": "0.8722218914709118",
+      "mean_selection_score": "0.8680517150907442",
+      "mean_min_class_recall": "0.8557529610829103"
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr1p0em05__warm0p1__wd0p05__drop0p1__cross_entropy__ls0p05",
+      "model_id": "indobenchmark/indobert-base-p2",
+      "text_mode": "context_sep_comment",
+      "max_length": "256",
+      "learning_rate": "1e-05",
+      "loss": "cross_entropy",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8709795321637426",
+      "mean_macro_f1": "0.8662542197076748",
+      "mean_balanced_accuracy": "0.8690278854309686",
+      "mean_selection_score": "0.8672039614978191",
+      "mean_min_class_recall": "0.8560283687943263"
+    },
+    {
+      "trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len128__lr1p0em05__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "model_id": "indobenchmark/indobert-base-p2",
+      "text_mode": "context_sep_comment",
+      "max_length": "128",
+      "learning_rate": "1e-05",
+      "loss": "cross_entropy",
+      "n_seeds": "3",
+      "mean_accuracy": "0.8684210526315789",
+      "mean_macro_f1": "0.8633635682626707",
+      "mean_balanced_accuracy": "0.8662353033517447",
+      "mean_selection_score": "0.8641116614447646",
+      "mean_min_class_recall": "0.8499285767987369"
+    }
+  ],
+  "candidate_grid_status": [
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "128",
+      "learning_rate": "8e-06",
+      "warmup_ratio": "0.06",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.1",
+      "loss": "cross_entropy",
+      "label_smoothing": "0.0",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "192",
+      "learning_rate": "1e-05",
+      "warmup_ratio": "0.1",
+      "weight_decay": "0.05",
+      "classifier_dropout": "0.2",
+      "loss": "weighted_cross_entropy",
+      "label_smoothing": "0.03",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len192__lr1p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "256",
+      "learning_rate": "1.5e-05",
+      "warmup_ratio": "0.06",
+      "weight_decay": "0.05",
+      "classifier_dropout": "0.3",
+      "loss": "focal_loss",
+      "label_smoothing": "0.05",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len256__lr1p5em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "comment_only",
+      "max_length": "192",
+      "learning_rate": "2e-05",
+      "warmup_ratio": "0.1",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.1",
+      "loss": "weighted_cross_entropy",
+      "label_smoothing": "0.0",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "comment_only",
+      "max_length": "128",
+      "learning_rate": "1.5e-05",
+      "warmup_ratio": "0.06",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.2",
+      "loss": "focal_loss",
+      "label_smoothing": "0.03",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__comment_only__len128__lr1p5em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "256",
+      "learning_rate": "8e-06",
+      "warmup_ratio": "0.1",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.2",
+      "loss": "weighted_cross_entropy",
+      "label_smoothing": "0.0",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len256__lr8p0em06__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "status": "PENDING"
+    }
+  ],
+  "large_grid_rows": [
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "128",
+      "learning_rate": "8e-06",
+      "warmup_ratio": "0.06",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.1",
+      "loss": "cross_entropy",
+      "label_smoothing": "0.0",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "192",
+      "learning_rate": "1e-05",
+      "warmup_ratio": "0.1",
+      "weight_decay": "0.05",
+      "classifier_dropout": "0.2",
+      "loss": "weighted_cross_entropy",
+      "label_smoothing": "0.03",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len192__lr1p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "256",
+      "learning_rate": "1.5e-05",
+      "warmup_ratio": "0.06",
+      "weight_decay": "0.05",
+      "classifier_dropout": "0.3",
+      "loss": "focal_loss",
+      "label_smoothing": "0.05",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len256__lr1p5em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "comment_only",
+      "max_length": "192",
+      "learning_rate": "2e-05",
+      "warmup_ratio": "0.1",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.1",
+      "loss": "weighted_cross_entropy",
+      "label_smoothing": "0.0",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__comment_only__len192__lr2p0em05__warm0p1__wd0p01__drop0p1__weighted_cross_entropy__ls0p0",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "comment_only",
+      "max_length": "128",
+      "learning_rate": "1.5e-05",
+      "warmup_ratio": "0.06",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.2",
+      "loss": "focal_loss",
+      "label_smoothing": "0.03",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__comment_only__len128__lr1p5em05__warm0p06__wd0p01__drop0p2__focal_loss__ls0p03",
+      "status": "PENDING"
+    },
+    {
+      "model_id": "indobenchmark/indobert-large-p2",
+      "model_family": "large",
+      "text_mode": "context_sep_comment",
+      "max_length": "256",
+      "learning_rate": "8e-06",
+      "warmup_ratio": "0.1",
+      "weight_decay": "0.01",
+      "classifier_dropout": "0.2",
+      "loss": "weighted_cross_entropy",
+      "label_smoothing": "0.0",
+      "focal_gamma": "2.0",
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len256__lr8p0em06__warm0p1__wd0p01__drop0p2__weighted_cross_entropy__ls0p0",
+      "status": "PENDING"
+    }
+  ],
+  "development_evaluable_rows": 1824,
+  "locked_evaluable_rows": 672,
+  "development_class_counts": {
+    "Negative": 470,
+    "Neutral": 788,
+    "Positive": 566
+  },
+  "locked_class_counts": {
+    "Negative": 160,
+    "Neutral": 294,
+    "Positive": 218
+  },
+  "development_locked_overlap_evaluable": {
+    "comment_id": 0,
+    "text_cluster_id": 0,
+    "exact_duplicate_group_id": 0,
+    "near_duplicate_cluster_id": 12
+  },
+  "excluded_counts": {
+    "development_uncertain": 22,
+    "development_no_text": 0,
+    "development_non_evaluable": 22,
+    "locked_uncertain": 25,
+    "locked_no_text": 3,
+    "locked_non_evaluable": 28
+  },
+  "large_partial_metrics": [
+    {
+      "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "seed": 42,
+      "folds_completed": [
+        "1"
+      ],
+      "has_all_oof": false
+    }
+  ]
+}

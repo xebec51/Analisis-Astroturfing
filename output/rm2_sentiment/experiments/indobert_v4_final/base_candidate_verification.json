@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-07-28T08:26:06.576374+00:00",
+  "selected_trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+  "model_id": "indobenchmark/indobert-base-p2",
+  "hyperparameters": {
+    "text_mode": "context_sep_comment",
+    "max_length": 256,
+    "learning_rate": 3e-05,
+    "warmup_ratio": 0.06,
+    "weight_decay": 0.05,
+    "classifier_dropout": 0.3,
+    "loss": "focal_loss",
+    "label_smoothing": 0.05,
+    "focal_gamma": 2.0
+  },
+  "n_seeds": 3,
+  "mean_macro_f1": 0.8793080026199229,
+  "std_macro_f1": 0.0044350819799333,
+  "mean_selection_score": 0.8796612825019942,
+  "mean_accuracy": 0.8832236842105264,
+  "mean_balanced_accuracy": 0.8825816182923792,
+  "mean_min_class_recall": 0.8645465253239104,
+  "negative_f1": 0.8476207343750821,
+  "neutral_f1": 0.9027844565154192,
+  "positive_f1": 0.8875188169692677,
+  "median_best_epoch": 6.0,
+  "fold_macro_f1_min": 0.7841508438818566,
+  "fold_macro_f1_max": 0.9350884298468376,
+  "reason_for_selection": "Highest mean macro-F1 among IndoBERT-base candidates using 3-seed development OOF; also highest overall development ranking by requested tie-breakers at verification time.",
+  "locked_test_used": false
+}

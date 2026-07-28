@@ -1,0 +1,54 @@
+{
+  "cpu_model_load_success": true,
+  "cpu_inference_success": true,
+  "samples": [
+    {
+      "sample": "negatif",
+      "returncode": 0,
+      "stderr": "Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 201/201 [00:00<00:00, 12115.65it/s]",
+      "output": {
+        "text": "produk ini mengecewakan sekali dan kualitasnya buruk",
+        "predicted_label": "Negative",
+        "confidence": 0.8884915113449097,
+        "prob_negative": 0.8884915113449097,
+        "prob_neutral": 0.04221010580658913,
+        "prob_positive": 0.06929836422204971
+      },
+      "probability_count": 3,
+      "probability_sum": 0.9999999813735485,
+      "all_finite": true
+    },
+    {
+      "sample": "netral",
+      "returncode": 0,
+      "stderr": "Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 201/201 [00:00<00:00, 9592.71it/s]",
+      "output": {
+        "text": "produk ini tersedia dalam ukuran 250 ml dan dikirim hari ini",
+        "predicted_label": "Neutral",
+        "confidence": 0.8458787798881531,
+        "prob_negative": 0.058784931898117065,
+        "prob_neutral": 0.8458787798881531,
+        "prob_positive": 0.09533629566431046
+      },
+      "probability_count": 3,
+      "probability_sum": 1.0000000074505806,
+      "all_finite": true
+    },
+    {
+      "sample": "positif",
+      "returncode": 0,
+      "stderr": "Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 201/201 [00:00<00:00, 12341.79it/s]",
+      "output": {
+        "text": "produk ini sangat bagus dan sesuai deskripsi",
+        "predicted_label": "Positive",
+        "confidence": 0.7542480230331421,
+        "prob_negative": 0.1798454374074936,
+        "prob_neutral": 0.06590649485588074,
+        "prob_positive": 0.7542480230331421
+      },
+      "probability_count": 3,
+      "probability_sum": 0.9999999552965164,
+      "all_finite": true
+    }
+  ]
+}

@@ -1250,6 +1250,8 @@ def train_final_model(
     model.save_pretrained(output_model_dir, safe_serialization=True)
     tokenizer.save_pretrained(output_model_dir)
     save_json(output_model_dir / "label_map.json", {"label_to_id": LABEL_TO_ID, "id_to_label": ID_TO_LABEL})
+    if not (output_model_dir / "special_tokens_map.json").exists():
+        save_json(output_model_dir / "special_tokens_map.json", tokenizer.special_tokens_map)
     training_config = {
         **asdict(trial),
         "trial_id": trial.trial_id,
