@@ -502,6 +502,8 @@ def optimizer_for(model: torch.nn.Module, lr: float, weight_decay: float) -> tor
             {"params": no_decay_params, "weight_decay": 0.0},
         ],
         lr=lr,
+        foreach=False,
+        fused=False,
     )
 
 
