@@ -342,6 +342,58 @@ def make_fold_assignments(data: pd.DataFrame, seeds: list[int], n_splits: int) -
     return assignments
 
 
+def validate_fold_assignments(assignments: pd.DataFrame, data: pd.DataFrame, seeds: list[int]) -> pd.DataFrame:
+    required = {
+        "seed",
+        "fold",
+        "row_index",
+        "comment_id",
+        "final_human_label",
+        "text_cluster_id",
+        "exact_duplicate_group_id",
+        "near_duplicate_cluster_id",
+        "cv_group_id",
+    }
+    missing = sorted(required - set(assignments.columns))
+    if missing:
+        raise ValueError(f"Fold assignments missing required columns: {missing}")
+    assignments = assignments.copy()
+    assignments["seed"] = assignments["seed"].astype(int)
+    assignments = assignments.loc[assignments["seed"].isin([int(seed) for seed in seeds])].copy()
+    assignments["fold"] = assignments["fold"].astype(str)
+    assignments["row_index"] = assignments["row_index"].astype(int)
+    expected = len(data) * len(seeds)
+    if len(assignments) != expected:
+        raise AssertionError(f"Fold assignment rows={len(assignments)} expected={expected}")
+    data_ids = data["comment_id"].astype(str).tolist()
+    expected_ids = set(data_ids)
+    for seed in seeds:
+        seed_ids = assignments.loc[assignments["seed"].eq(int(seed)), "comment_id"].astype(str).tolist()
+        if len(seed_ids) != len(data) or set(seed_ids) != expected_ids:
+            raise AssertionError(f"Fold assignments for seed {seed} do not match development comment_ids")
+    row_id_by_index = dict(enumerate(data_ids))
+    bad_index = assignments.loc[
+        assignments.apply(lambda row: str(row_id_by_index.get(int(row["row_index"]), "")) != str(row["comment_id"]), axis=1)
+    ]
+    if not bad_index.empty:
+        row_index_by_id = {comment_id: idx for idx, comment_id in enumerate(data_ids)}
+        assignments["row_index"] = assignments["comment_id"].astype(str).map(row_index_by_id).astype(int)
+    leakage = assignments.groupby(["seed", "cv_group_id"])["fold"].nunique()
+    if int((leakage > 1).sum()) != 0:
+        raise AssertionError("cv_group_id leakage across development folds")
+    return assignments
+
+
+def load_or_make_fold_assignments(data: pd.DataFrame, seeds: list[int], n_splits: int, resume: bool) -> pd.DataFrame:
+    path = OUT_DIR / "development_fold_assignments.csv"
+    if resume and path.exists() and path.stat().st_size > 0:
+        existing = pd.read_csv(path, dtype=str, keep_default_na=False, low_memory=False)
+        return validate_fold_assignments(existing, data, seeds)
+    assignments = make_fold_assignments(data, seeds, n_splits)
+    assignments.to_csv(path, index=False, encoding="utf-8-sig")
+    return assignments
+
+
 def build_trials(models: list[str], search_profile: str) -> list[Trial]:
     large = "indobenchmark/indobert-large-p2"
     base = "indobenchmark/indobert-base-p2"
@@ -1176,8 +1228,7 @@ def main() -> None:
         trials = trials[: args.max_trials]
     if not trials:
         raise RuntimeError("No trials planned.")
-    assignments = make_fold_assignments(data, args.seeds, args.n_splits)
-    assignments.to_csv(OUT_DIR / "development_fold_assignments.csv", index=False, encoding="utf-8-sig")
+    assignments = load_or_make_fold_assignments(data, args.seeds, args.n_splits, args.resume)
     grid = pd.DataFrame([{**asdict(trial), "trial_id": trial.trial_id, "status": "PENDING"} for trial in trials])
     grid.to_csv(OUT_DIR / "candidate_grid_manifest.csv", index=False, encoding="utf-8-sig")
 
