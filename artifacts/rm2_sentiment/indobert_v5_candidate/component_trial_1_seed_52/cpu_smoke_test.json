@@ -1,0 +1,13 @@
+{
+  "device": "cpu",
+  "labels": [
+    "Neutral",
+    "Neutral",
+    "Neutral"
+  ],
+  "probability_sums": [
+    0.9999999403953552,
+    1.0,
+    0.9999999403953552
+  ]
+}

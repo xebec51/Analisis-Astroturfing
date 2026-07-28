@@ -1,0 +1,374 @@
+{
+  "status": "INDOBERT_V5_DEVELOPMENT_CANDIDATE_FROZEN_BEFORE_LOCKED_TEST",
+  "created_at_utc": "2026-07-28T18:47:30.719288+00:00",
+  "git_sha_before_locked_test": "8926109118da317d6a03c77fbcaaeeb272c545a4",
+  "development_registry": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv",
+  "development_dataset_hash": "31a5537a0483405632dd8c33bf2190ca405a2e8c77f84f571328be48d1b6004c",
+  "development_evaluable_rows": 977,
+  "development_class_distribution": {
+    "Negative": 178,
+    "Neutral": 569,
+    "Positive": 230
+  },
+  "selected_candidate": {
+    "status": "INDOBERT_V5_DEVELOPMENT_CANDIDATE_SELECTED",
+    "created_at_utc": "2026-07-28T18:40:52.031566+00:00",
+    "selection_basis": "development OOF only",
+    "locked_test_used": false,
+    "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+    "candidate_type": "top2_probability_blend",
+    "prediction_rule": "probability_average_argmax",
+    "trial_id": "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+    "component_trial_ids": [
+      "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+      "indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025"
+    ],
+    "trial": {
+      "input_mode": "context_sep_comment",
+      "max_length": 128,
+      "learning_rate": 3e-05,
+      "classifier_dropout": 0.3,
+      "loss": "cross_entropy",
+      "label_smoothing": 0.0,
+      "warmup_ratio": 0.06,
+      "weight_decay": 0.01,
+      "model_id": "indobenchmark/indobert-base-p2"
+    },
+    "component_trials": [
+      {
+        "input_mode": "context_sep_comment",
+        "max_length": 128,
+        "learning_rate": 3e-05,
+        "classifier_dropout": 0.3,
+        "loss": "cross_entropy",
+        "label_smoothing": 0.0,
+        "warmup_ratio": 0.06,
+        "weight_decay": 0.01,
+        "model_id": "indobenchmark/indobert-base-p2"
+      },
+      {
+        "input_mode": "context_sep_comment",
+        "max_length": 128,
+        "learning_rate": 2e-05,
+        "classifier_dropout": 0.2,
+        "loss": "cross_entropy",
+        "label_smoothing": 0.025,
+        "warmup_ratio": 0.06,
+        "weight_decay": 0.01,
+        "model_id": "indobenchmark/indobert-base-p2"
+      }
+    ],
+    "component_seeds": [
+      42,
+      52,
+      62
+    ],
+    "final_epoch_count": 5,
+    "metrics": {
+      "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "candidate_type": "top2_probability_blend",
+      "trial_id": "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0 + indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "seed": "42,52,62",
+      "component_seeds": "42,52,62",
+      "stage": "stage2",
+      "n": 977,
+      "accuracy": 0.7911975435005117,
+      "macro_f1": 0.7440157075228736,
+      "weighted_f1": 0.7931118492194997,
+      "balanced_accuracy": 0.7524049797537598,
+      "mcc": 0.6423499379130049,
+      "min_class_recall": 0.6179775280898876,
+      "positive_recall": 0.7956521739130434,
+      "selection_score_raw": 0.7165592428895365,
+      "selection_score": 0.7165592428895365,
+      "selection_penalty": 0.0,
+      "seed_instability_penalty": 0.0,
+      "class_collapse": false,
+      "negative_prediction_share": 0.18730808597748208,
+      "negative_prediction_drift": 0.005117707267144306,
+      "probability_finite": true,
+      "probability_sum_valid": true,
+      "oof_complete": true,
+      "auto_disqualified": false,
+      "ece": 0.05050748381537703,
+      "brier_score": 0.10356798937570723,
+      "negative_precision": 0.6010928961748634,
+      "negative_recall": 0.6179775280898876,
+      "negative_f1": 0.6094182825484764,
+      "negative_support": 178,
+      "predicted_negative": 183,
+      "neutral_precision": 0.8872458410351202,
+      "neutral_recall": 0.843585237258348,
+      "neutral_f1": 0.8648648648648649,
+      "neutral_support": 569,
+      "predicted_neutral": 541,
+      "positive_precision": 0.7233201581027668,
+      "positive_f1": 0.7577639751552795,
+      "positive_support": 230,
+      "predicted_positive": 253
+    },
+    "abstention_policy": [
+      {
+        "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+        "coverage_target": "0.9343",
+        "confidence_threshold": "0.5297177831331888",
+        "actual_coverage": "0.9344933469805528",
+        "covered_accuracy": "0.8181818181818182",
+        "covered_macro_f1": "0.7703800492449405",
+        "full_set_accuracy_abstain_wrong": "0.7645854657113613",
+        "n_abstained": "64",
+        "locked_test_used": "False"
+      },
+      {
+        "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+        "coverage_target": "0.95",
+        "confidence_threshold": "0.5050463229417801",
+        "actual_coverage": "0.9508700102354145",
+        "covered_accuracy": "0.8094725511302476",
+        "covered_macro_f1": "0.7607913093926874",
+        "full_set_accuracy_abstain_wrong": "0.7697031729785057",
+        "n_abstained": "48",
+        "locked_test_used": "False"
+      },
+      {
+        "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+        "coverage_target": "1.0",
+        "confidence_threshold": "0.0",
+        "actual_coverage": "1.0",
+        "covered_accuracy": "0.7911975435005117",
+        "covered_macro_f1": "0.7440157075228736",
+        "full_set_accuracy_abstain_wrong": "0.7911975435005117",
+        "n_abstained": "0",
+        "locked_test_used": "False"
+      }
+    ]
+  },
+  "exact_trial_id": "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+  "component_trial_ids": [
+    "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+    "indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025"
+  ],
+  "component_models": [
+    {
+      "trial_id": "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+      "seed": 42,
+      "path": "artifacts/rm2_sentiment/indobert_v5_candidate/component_trial_1_seed_42",
+      "model_revision": "94b4e0a82081fa57f227fcc2024d1ea89b57ac1f",
+      "hashes": {
+        "config.json": "6189b7d52db4165a2b115d3e1503556a75e8572619e0325441c4f4114a9f4943",
+        "cpu_smoke_test.json": "29441514ac3cfb22f6d7f68bab42d4c50024781669366326b6d963726a7d077d",
+        "gpu_smoke_test.json": "668c7ff8d22148c19644aecad13ed16134a8c03c7763fb2e8c453eb76ac36bef",
+        "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+        "model.safetensors": "c331cc069bcde1210df9cf893c2da4e57b8d1863a81b81b32322773d0196dbaa",
+        "selected_trial_config.json": "03aa53bf3560095721e66e351ea6bf5a61edd7d50fb324972ad34d8a98837066",
+        "tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+        "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+      }
+    },
+    {
+      "trial_id": "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+      "seed": 52,
+      "path": "artifacts/rm2_sentiment/indobert_v5_candidate/component_trial_1_seed_52",
+      "model_revision": "94b4e0a82081fa57f227fcc2024d1ea89b57ac1f",
+      "hashes": {
+        "config.json": "6189b7d52db4165a2b115d3e1503556a75e8572619e0325441c4f4114a9f4943",
+        "cpu_smoke_test.json": "d47bdffa0a3a43bbd7687036ebd5d2f2fd3595becad6308d96f8bd839e2a509d",
+        "gpu_smoke_test.json": "2bc201710b4c7cb89329346a0e99397568801b0bea847a6437a868797add0da3",
+        "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+        "model.safetensors": "9f55f9a6386d8ed84edd3428529ff95eba7c24e4a17c0c0a556be35b75c48787",
+        "selected_trial_config.json": "bee8cc22955dd43c263e1f49785e357782974e92e98c4a3760aa6db6faa76743",
+        "tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+        "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+      }
+    },
+    {
+      "trial_id": "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+      "seed": 62,
+      "path": "artifacts/rm2_sentiment/indobert_v5_candidate/component_trial_1_seed_62",
+      "model_revision": "94b4e0a82081fa57f227fcc2024d1ea89b57ac1f",
+      "hashes": {
+        "config.json": "6189b7d52db4165a2b115d3e1503556a75e8572619e0325441c4f4114a9f4943",
+        "cpu_smoke_test.json": "80b5b217bd58a08b3c128146eb77e1762728a705cd29eb2a1981d493de43b137",
+        "gpu_smoke_test.json": "35688db615827e7386c66b2eb91d5c66624cc539799a0b56121287bfe32abd33",
+        "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+        "model.safetensors": "2e03cf92321b011d7f4de1b581e181de4374677a874fcf26cbac2a0b43728c7f",
+        "selected_trial_config.json": "a3b08337485b96f78bf7cf9588c280e8d93bc09e71441a760ca091294c88c0b7",
+        "tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+        "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+      }
+    },
+    {
+      "trial_id": "indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "seed": 42,
+      "path": "artifacts/rm2_sentiment/indobert_v5_candidate/component_trial_2_seed_42",
+      "model_revision": "94b4e0a82081fa57f227fcc2024d1ea89b57ac1f",
+      "hashes": {
+        "config.json": "4d0881cae1a9b2d78ba6a1b97d2b622a2a1b9117cc519a5bb454c9349bc1237d",
+        "cpu_smoke_test.json": "4de77f16185f3480033ce5475b85df3feaa511b4be503f22d20552e5b02b3c8e",
+        "gpu_smoke_test.json": "55b915535afcd9d101c9aebcf7ffb15452332c38d2c97367daab1af62a06a2f3",
+        "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+        "model.safetensors": "25359a9d4b717cd6941b65b478b45e668409ef31235e647cfca4b1b08f3b4b41",
+        "selected_trial_config.json": "7123499d33d30ef3e21fc359aa7030541b6a4c3704a106810bc4ed7ef881c8f5",
+        "tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+        "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+      }
+    },
+    {
+      "trial_id": "indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "seed": 52,
+      "path": "artifacts/rm2_sentiment/indobert_v5_candidate/component_trial_2_seed_52",
+      "model_revision": "94b4e0a82081fa57f227fcc2024d1ea89b57ac1f",
+      "hashes": {
+        "config.json": "4d0881cae1a9b2d78ba6a1b97d2b622a2a1b9117cc519a5bb454c9349bc1237d",
+        "cpu_smoke_test.json": "4de77f16185f3480033ce5475b85df3feaa511b4be503f22d20552e5b02b3c8e",
+        "gpu_smoke_test.json": "558d224ea68c7497ef1f26f30ac595325c8b113e3a508d2afab3a074e687a375",
+        "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+        "model.safetensors": "f592b0cbb418d213eac9c0bb0c42f5886793301e5cdaf5dbd8de68b570a7063f",
+        "selected_trial_config.json": "0cd10525769a9fc2ec84bbda60834c349be3ff635ceb4c2508cb8ecf0f79665d",
+        "tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+        "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+      }
+    },
+    {
+      "trial_id": "indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "seed": 62,
+      "path": "artifacts/rm2_sentiment/indobert_v5_candidate/component_trial_2_seed_62",
+      "model_revision": "94b4e0a82081fa57f227fcc2024d1ea89b57ac1f",
+      "hashes": {
+        "config.json": "4d0881cae1a9b2d78ba6a1b97d2b622a2a1b9117cc519a5bb454c9349bc1237d",
+        "cpu_smoke_test.json": "b4a1c3ec71334e4ed4c8bcaa89b84a9aa6a2d7aa202fba20de4f6ce1620aa96f",
+        "gpu_smoke_test.json": "668c7ff8d22148c19644aecad13ed16134a8c03c7763fb2e8c453eb76ac36bef",
+        "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+        "model.safetensors": "671e6a8d1ac567631160cb8daaa834f988bba3b3432434b165888beb13f96c14",
+        "selected_trial_config.json": "3406e338fc0df40f4cde5c3db969f5519ee390b508d0f91ee24f0c8ed0d3e287",
+        "tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+        "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+      }
+    }
+  ],
+  "prediction_rule": "probability_average_argmax",
+  "abstention_policy_development_only": [
+    {
+      "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "coverage_target": "0.9343",
+      "confidence_threshold": "0.5297177831331888",
+      "actual_coverage": "0.9344933469805528",
+      "covered_accuracy": "0.8181818181818182",
+      "covered_macro_f1": "0.7703800492449405",
+      "full_set_accuracy_abstain_wrong": "0.7645854657113613",
+      "n_abstained": "64",
+      "locked_test_used": "False"
+    },
+    {
+      "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "coverage_target": "0.95",
+      "confidence_threshold": "0.5050463229417801",
+      "actual_coverage": "0.9508700102354145",
+      "covered_accuracy": "0.8094725511302476",
+      "covered_macro_f1": "0.7607913093926874",
+      "full_set_accuracy_abstain_wrong": "0.7697031729785057",
+      "n_abstained": "48",
+      "locked_test_used": "False"
+    },
+    {
+      "candidate_id": "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025",
+      "coverage_target": "1.0",
+      "confidence_threshold": "0.0",
+      "actual_coverage": "1.0",
+      "covered_accuracy": "0.7911975435005117",
+      "covered_macro_f1": "0.7440157075228736",
+      "full_set_accuracy_abstain_wrong": "0.7911975435005117",
+      "n_abstained": "0",
+      "locked_test_used": "False"
+    }
+  ],
+  "label_map": {
+    "label_to_id": {
+      "Negative": 0,
+      "Neutral": 1,
+      "Positive": 2
+    },
+    "id_to_label": {
+      "0": "Negative",
+      "1": "Neutral",
+      "2": "Positive"
+    }
+  },
+  "acceptance_config": "configs/rm2_sentiment_v5_acceptance_preregistered.json",
+  "acceptance_config_sha256": "194177c718683c8e43ab72ca7975f58628e4061388bf020ada96862482c6b428",
+  "locked_test_used_for_training_or_selection": false,
+  "locked_test_evaluated": false,
+  "package_versions": {
+    "python": "3.10.8",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": "True",
+    "transformers": "5.14.1",
+    "sklearn": "1.7.2",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "safetensors": "0.8.0"
+  },
+  "device_info": {
+    "device": "cuda",
+    "precision": "bf16",
+    "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
+    "cuda_total_memory_bytes": 17175150592,
+    "bf16_supported": true,
+    "torch_cuda": "12.4"
+  },
+  "artifact_hashes": {
+    "component_trial_1_seed_42/config.json": "6189b7d52db4165a2b115d3e1503556a75e8572619e0325441c4f4114a9f4943",
+    "component_trial_1_seed_42/cpu_smoke_test.json": "29441514ac3cfb22f6d7f68bab42d4c50024781669366326b6d963726a7d077d",
+    "component_trial_1_seed_42/gpu_smoke_test.json": "668c7ff8d22148c19644aecad13ed16134a8c03c7763fb2e8c453eb76ac36bef",
+    "component_trial_1_seed_42/label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "component_trial_1_seed_42/model.safetensors": "c331cc069bcde1210df9cf893c2da4e57b8d1863a81b81b32322773d0196dbaa",
+    "component_trial_1_seed_42/selected_trial_config.json": "03aa53bf3560095721e66e351ea6bf5a61edd7d50fb324972ad34d8a98837066",
+    "component_trial_1_seed_42/tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+    "component_trial_1_seed_42/tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982",
+    "component_trial_1_seed_52/config.json": "6189b7d52db4165a2b115d3e1503556a75e8572619e0325441c4f4114a9f4943",
+    "component_trial_1_seed_52/cpu_smoke_test.json": "d47bdffa0a3a43bbd7687036ebd5d2f2fd3595becad6308d96f8bd839e2a509d",
+    "component_trial_1_seed_52/gpu_smoke_test.json": "2bc201710b4c7cb89329346a0e99397568801b0bea847a6437a868797add0da3",
+    "component_trial_1_seed_52/label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "component_trial_1_seed_52/model.safetensors": "9f55f9a6386d8ed84edd3428529ff95eba7c24e4a17c0c0a556be35b75c48787",
+    "component_trial_1_seed_52/selected_trial_config.json": "bee8cc22955dd43c263e1f49785e357782974e92e98c4a3760aa6db6faa76743",
+    "component_trial_1_seed_52/tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+    "component_trial_1_seed_52/tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982",
+    "component_trial_1_seed_62/config.json": "6189b7d52db4165a2b115d3e1503556a75e8572619e0325441c4f4114a9f4943",
+    "component_trial_1_seed_62/cpu_smoke_test.json": "80b5b217bd58a08b3c128146eb77e1762728a705cd29eb2a1981d493de43b137",
+    "component_trial_1_seed_62/gpu_smoke_test.json": "35688db615827e7386c66b2eb91d5c66624cc539799a0b56121287bfe32abd33",
+    "component_trial_1_seed_62/label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "component_trial_1_seed_62/model.safetensors": "2e03cf92321b011d7f4de1b581e181de4374677a874fcf26cbac2a0b43728c7f",
+    "component_trial_1_seed_62/selected_trial_config.json": "a3b08337485b96f78bf7cf9588c280e8d93bc09e71441a760ca091294c88c0b7",
+    "component_trial_1_seed_62/tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+    "component_trial_1_seed_62/tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982",
+    "component_trial_2_seed_42/config.json": "4d0881cae1a9b2d78ba6a1b97d2b622a2a1b9117cc519a5bb454c9349bc1237d",
+    "component_trial_2_seed_42/cpu_smoke_test.json": "4de77f16185f3480033ce5475b85df3feaa511b4be503f22d20552e5b02b3c8e",
+    "component_trial_2_seed_42/gpu_smoke_test.json": "55b915535afcd9d101c9aebcf7ffb15452332c38d2c97367daab1af62a06a2f3",
+    "component_trial_2_seed_42/label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "component_trial_2_seed_42/model.safetensors": "25359a9d4b717cd6941b65b478b45e668409ef31235e647cfca4b1b08f3b4b41",
+    "component_trial_2_seed_42/selected_trial_config.json": "7123499d33d30ef3e21fc359aa7030541b6a4c3704a106810bc4ed7ef881c8f5",
+    "component_trial_2_seed_42/tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+    "component_trial_2_seed_42/tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982",
+    "component_trial_2_seed_52/config.json": "4d0881cae1a9b2d78ba6a1b97d2b622a2a1b9117cc519a5bb454c9349bc1237d",
+    "component_trial_2_seed_52/cpu_smoke_test.json": "4de77f16185f3480033ce5475b85df3feaa511b4be503f22d20552e5b02b3c8e",
+    "component_trial_2_seed_52/gpu_smoke_test.json": "558d224ea68c7497ef1f26f30ac595325c8b113e3a508d2afab3a074e687a375",
+    "component_trial_2_seed_52/label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "component_trial_2_seed_52/model.safetensors": "f592b0cbb418d213eac9c0bb0c42f5886793301e5cdaf5dbd8de68b570a7063f",
+    "component_trial_2_seed_52/selected_trial_config.json": "0cd10525769a9fc2ec84bbda60834c349be3ff635ceb4c2508cb8ecf0f79665d",
+    "component_trial_2_seed_52/tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+    "component_trial_2_seed_52/tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982",
+    "component_trial_2_seed_62/config.json": "4d0881cae1a9b2d78ba6a1b97d2b622a2a1b9117cc519a5bb454c9349bc1237d",
+    "component_trial_2_seed_62/cpu_smoke_test.json": "b4a1c3ec71334e4ed4c8bcaa89b84a9aa6a2d7aa202fba20de4f6ce1620aa96f",
+    "component_trial_2_seed_62/gpu_smoke_test.json": "668c7ff8d22148c19644aecad13ed16134a8c03c7763fb2e8c453eb76ac36bef",
+    "component_trial_2_seed_62/label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "component_trial_2_seed_62/model.safetensors": "671e6a8d1ac567631160cb8daaa834f988bba3b3432434b165888beb13f96c14",
+    "component_trial_2_seed_62/selected_trial_config.json": "3406e338fc0df40f4cde5c3db969f5519ee390b508d0f91ee24f0c8ed0d3e287",
+    "component_trial_2_seed_62/tokenizer.json": "114ca32bf264054f5c6336a062648b0f4b948f01eeb454338892936d74b38cca",
+    "component_trial_2_seed_62/tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982",
+    "development_selected_candidate.json": "98c953f0925835cb3e8707d40102222037a270ba84e77f585383b7589dc9758c",
+    "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "preprocessing_config.json": "c2bd6876ff3ab5cb9d745ca3dd79d22d976e1172361b564b743b618465d41a94"
+  }
+}

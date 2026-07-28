@@ -1,0 +1,5 @@
+{
+  "preprocessing_version": "rm2_sentiment_v5_context_sep_comment_v1",
+  "input_mode": "context_sep_comment",
+  "max_length": 128
+}
