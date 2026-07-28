@@ -458,6 +458,42 @@ status `FINAL_MODEL_VALIDATED_SENTIMENT_V2`. Goal orientation tetap dibaca sebag
 deskriptif berbasis pola sentimen teramati; confidence dan stability bukan akurasi aktual pada setiap
 komentar.
 
+### Final Sentimen IndoBERT V5 Canonical
+
+IndoBERT V5 sudah diterima sebagai model canonical RM2 Sentiment setelah kandidat development dibekukan
+di `artifacts/rm2_sentiment/indobert_v5_candidate/`, di-commit, lalu locked test V5 dievaluasi satu kali.
+Status final adalah `INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL`; pointer canonical tersimpan di
+`output/rm2_sentiment/final/CANONICAL_MODEL.json`. V2 tetap disimpan sebagai `baseline_legacy_v2`.
+
+Pada locked test V5 dengan denominator sama (`687` row evaluable three-class), V5 memperoleh accuracy
+`0.8355`, macro-F1 `0.8037`, weighted-F1 `0.8353`, balanced accuracy `0.8024`, MCC `0.7225`, dan
+positive recall `0.8035`. V2 forced three-class pada denominator yang sama memperoleh accuracy `0.7089`,
+macro-F1 `0.6353`, weighted-F1 `0.6868`, balanced accuracy `0.6211`, MCC `0.4907`, dan positive recall
+`0.3584`. Seluruh acceptance criteria preregistered lulus, termasuk delta positive recall `+0.4451`,
+minimum class recall V5 `0.7090`, McNemar exact p-value `2.396e-10`, serta bootstrap 95% CI delta
+macro-F1 `[0.1202, 0.2156]`.
+
+Full inference V5 dijalankan hanya pada universe observasional RM2 yang sama dengan V2: `33063` unique
+`comment_id` dari `comment_sentiment_v2_observational.csv`. Injected/evaluation rows tidak dimasukkan.
+Distribusi observasional V5 adalah Neutral `17875`, Positive `10263`, dan Negative `4925`. Output utama
+berada di `output/rm2_sentiment/final/indobert_v5_comment_sentiment.csv`, dengan manifest
+`output/rm2_sentiment/final/INDOBERT_V5_FULL_INFERENCE_MANIFEST.json`.
+
+Output V5 tambahan:
+
+| File | Level | Isi |
+|---|---|---|
+| `tables/sentiment_distribution_observational_v5.csv` | Komentar | Distribusi three-class V5 pada universe observasional |
+| `tables/hcc_vs_nonhcc_comment_sentiment_v5.csv` | Grup | Perbandingan HCC vs Non-HCC level komentar |
+| `tables/hcc_vs_nonhcc_account_sentiment_v5.csv` | Grup | Perbandingan HCC vs Non-HCC level akun |
+| `tables/account_sentiment_summary_v5.csv` | Akun | Ringkasan sentimen V5 pada level akun |
+| `tables/hcc_sentiment_goals_summary_v5.csv` | HCC | Goal orientation V5 untuk 42 HCC |
+| `tables/actor_type_goals_pooled_v5.csv` | Actor type | Pooled goals per actor type berbasis V5 |
+| `tables/target_brand_summary_v5.csv` | Target/brand | Ringkasan target-brand berbasis V5 |
+| `gephi/gephi_hcc_nodes_sentiment_v5.csv` | Gephi | Node HCC RM1 dengan atribut sentimen/goals V5 |
+| `gephi/gephi_hcc_edges_sentiment_v5.csv` | Gephi | Edge HCC RM1 disalin tanpa perubahan topologi |
+| `RM2_GOALS_INTERPRETATION_GUIDE_V5.md` | Interpretasi | Panduan batas baca goals V5 |
+
 ### Output Final Sentimen V2 (`output/rm2_sentiment/final/`)
 
 | File | Level | Isi |

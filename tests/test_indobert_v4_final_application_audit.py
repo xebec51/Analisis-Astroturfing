@@ -105,7 +105,9 @@ class IndoBertV4FinalApplicationAuditTests(unittest.TestCase):
         self.assertEqual(decision["status"], "INDOBERT_V4_NOT_ACCEPTED_KEEP_V2")
         self.assertFalse(decision["accepted"])
         self.assertIn("accuracy_gte_0p8159", decision["failed_criteria"])
-        self.assertFalse(CANONICAL_MODEL.exists())
+        if CANONICAL_MODEL.exists():
+            canonical = read_json(CANONICAL_MODEL)
+            self.assertNotEqual(canonical["canonical_model"], "indobert_v4_final")
         self.assertFalse(FINAL_MODEL_DIR.exists())
 
     def test_required_locked_test_report_outputs_exist(self):

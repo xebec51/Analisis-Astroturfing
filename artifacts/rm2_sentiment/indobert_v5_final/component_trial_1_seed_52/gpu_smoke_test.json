@@ -1,0 +1,13 @@
+{
+  "device": "cuda",
+  "labels": [
+    "Neutral",
+    "Neutral",
+    "Neutral"
+  ],
+  "probability_sums": [
+    1.0,
+    1.0,
+    0.9999999403953552
+  ]
+}

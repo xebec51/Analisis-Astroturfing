@@ -48,7 +48,10 @@ class RM2SentimentFairComparisonV5Tests(unittest.TestCase):
         decision = read_json(V4_DECISION)
         self.assertEqual(decision["status"], "INDOBERT_V4_NOT_ACCEPTED_KEEP_V2")
         self.assertFalse(decision["accepted"])
-        self.assertFalse(CANONICAL_MODEL.exists())
+        if CANONICAL_MODEL.exists():
+            canonical = read_json(CANONICAL_MODEL)
+            self.assertEqual(canonical["canonical_model"], "indobert_v5_final")
+            self.assertNotEqual(canonical["canonical_model"], "indobert_v4_final")
 
     def test_same_test_predictions_use_identical_denominator(self):
         predictions = read_csv(FAIR_DIR / "same_test_predictions.csv")

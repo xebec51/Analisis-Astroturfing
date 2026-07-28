@@ -21,6 +21,9 @@ ACCEPTANCE = ROOT / "configs/rm2_sentiment_v5_acceptance_preregistered.json"
 EXP = ROOT / "output/rm2_sentiment/experiments/indobert_v5_development"
 LOCKED_EVAL = ROOT / "output/rm2_sentiment/experiments/indobert_v5_final/locked_test_evaluation"
 TRAIN_SCRIPT = ROOT / "scripts/train_rm2_sentiment_indobert_v5_development.py"
+CANONICAL_MODEL = ROOT / "output/rm2_sentiment/final/CANONICAL_MODEL.json"
+V5_FULL_INFERENCE = ROOT / "output/rm2_sentiment/final/indobert_v5_comment_sentiment.csv"
+V5_FULL_MANIFEST = ROOT / "output/rm2_sentiment/final/INDOBERT_V5_FULL_INFERENCE_MANIFEST.json"
 RM1_SENTINELS = [
     ROOT / "output/gephi/gephi_hcc_nodes.csv",
     ROOT / "output/gephi/gephi_hcc_edges.csv",
@@ -149,6 +152,24 @@ class RM2SentimentIndoBertV5PipelineTests(unittest.TestCase):
     def test_rm1_sentinel_outputs_exist_and_are_not_v5_outputs(self):
         for path in RM1_SENTINELS:
             self.assertTrue(path.exists(), path)
+
+    def test_accepted_v5_canonical_and_full_inference_if_present(self):
+        if not CANONICAL_MODEL.exists():
+            self.skipTest("V5 canonical model not promoted yet")
+        canonical = read_json(CANONICAL_MODEL)
+        self.assertEqual(canonical["canonical_model"], "indobert_v5_final")
+        self.assertEqual(canonical["canonical_status"], "INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL")
+        manifest = read_json(V5_FULL_MANIFEST)
+        self.assertTrue(manifest["locked_test_evaluated_once"])
+        self.assertTrue(manifest["full_inference_excludes_injected_evaluation_rows"])
+        self.assertEqual(manifest["observational_rows"], 33063)
+        full = read_csv(V5_FULL_INFERENCE)
+        self.assertEqual(len(full), 33063)
+        self.assertEqual(full["comment_id"].nunique(), 33063)
+        probs = full[["probability_negative", "probability_neutral", "probability_positive"]].astype(float).to_numpy()
+        self.assertTrue(np.isfinite(probs).all())
+        self.assertTrue(np.allclose(probs.sum(axis=1), 1.0, atol=1e-5))
+        self.assertTrue(full["final_sentiment_label"].isin(LABELS).all())
 
 
 if __name__ == "__main__":

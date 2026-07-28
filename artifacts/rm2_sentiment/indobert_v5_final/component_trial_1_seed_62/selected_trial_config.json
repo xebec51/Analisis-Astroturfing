@@ -1,0 +1,32 @@
+{
+  "input_mode": "context_sep_comment",
+  "max_length": 128,
+  "learning_rate": 3e-05,
+  "classifier_dropout": 0.3,
+  "loss": "cross_entropy",
+  "label_smoothing": 0.0,
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01,
+  "model_id": "indobenchmark/indobert-base-p2",
+  "trial_id": "indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0",
+  "seed": 62,
+  "epochs": 5,
+  "model_revision": "94b4e0a82081fa57f227fcc2024d1ea89b57ac1f",
+  "prediction_rule": "three_class_argmax",
+  "label_source_column": "sentiment_toward_target/final_human_label",
+  "class_weights_source": "full_development_only_after_selection",
+  "forbidden_supervision_sources": [
+    "locked_test_v4_labels",
+    "locked_test_v4_errors",
+    "locked_test_v5_labels",
+    "v2_predictions",
+    "v4_predictions",
+    "hcc",
+    "actor_type",
+    "network_position",
+    "goals_previous",
+    "account_name",
+    "coordination_status",
+    "buzzer_status"
+  ]
+}

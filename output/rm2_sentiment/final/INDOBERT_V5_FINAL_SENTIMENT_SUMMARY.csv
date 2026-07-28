@@ -1,0 +1,12 @@
+metric,value
+status,INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL
+observational_rows,33063
+injected_rows_excluded,0
+rows_excluded_not_in_v2_observational_universe,2271
+hcc_count,42
+observational_Positive,10263
+observational_Neutral,17875
+observational_Negative,4925
+observational_Uncertain,0
+observational_No Text,0
+observational_Evaluable coverage,33063
