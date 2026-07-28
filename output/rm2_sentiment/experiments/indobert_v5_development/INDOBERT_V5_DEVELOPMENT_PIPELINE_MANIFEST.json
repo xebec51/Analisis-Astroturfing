@@ -1,36 +1,21 @@
 {
   "status": "INDOBERT_V5_DEVELOPMENT_FOLDS_READY",
-  "created_at_utc": "2026-07-28T17:13:37.259145+00:00",
-  "git_sha": "27bdc2a2c8c62808894f1375a21b5d342da38716",
+  "gpu_training_status": "INDOBERT_V5_DEVELOPMENT_GPU_TRAINING_READY",
+  "created_at_utc": "2026-07-28T17:47:40.664105+00:00",
+  "git_sha": "19d664af043aa68b87a2dd386267c8098a39f257",
+  "development_registry": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv",
+  "development_dataset_hash": "31a5537a0483405632dd8c33bf2190ca405a2e8c77f84f571328be48d1b6004c",
+  "development_evaluable_rows": 977,
   "primary_label": "sentiment_toward_target",
   "label_order": [
     "Negative",
     "Neutral",
     "Positive"
   ],
-  "seeds": [
-    42,
-    52,
-    62
-  ],
-  "candidate_trial_count": 810,
-  "selection_source": "development_oof_only",
   "locked_test_v4_errors_used": false,
   "locked_test_v5_labels_used_for_training_or_selection": false,
-  "locked_test_v5_labels_sealed_until_model_freeze": true,
-  "acceptance_config": "configs/rm2_sentiment_v5_acceptance_preregistered.json",
-  "acceptance_config_sha256": "194177c718683c8e43ab72ca7975f58628e4061388bf020ada96862482c6b428",
-  "selection_score": {
-    "base": "macro_f1 + balanced_accuracy + mcc + min_class_recall + positive_recall",
-    "stability_penalty": "seed metric standard deviation",
-    "class_collapse_penalty": true,
-    "excessive_negative_prediction_penalty": true
-  },
   "validation": {
     "development_rows": 1000,
-    "locked_test_candidate_rows": 700,
-    "comment_id_overlap": 0,
-    "normalized_text_overlap": 0,
     "development_final_registry": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv",
     "development_labels_available": 977,
     "development_final_distribution": {
@@ -38,8 +23,6 @@
       "Neutral": 569,
       "Positive": 230
     },
-    "locked_test_final_frozen": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv",
-    "locked_test_final_rows_sealed": 700,
     "locked_labels_available_for_training": 0,
     "locked_test_v5_used_for_training": false
   },
@@ -48,5 +31,28 @@
     "risk_coverage_policy": "output/rm2_sentiment/experiments/indobert_v5_development/development_risk_coverage_policy.csv",
     "development_fold_assignments": "output/rm2_sentiment/experiments/indobert_v5_development/development_grouped_fold_assignments.csv"
   },
-  "fold_assignment_rows": 2931
+  "training_script_reads_locked_test_registry": false,
+  "candidate_trial_count": 810,
+  "curated_screening_budget": 18,
+  "device_info": {
+    "device": "cuda",
+    "precision": "bf16",
+    "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
+    "cuda_total_memory_bytes": 17175150592,
+    "bf16_supported": true,
+    "torch_cuda": "12.4"
+  },
+  "package_versions": {
+    "python": "3.10.8",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": "True",
+    "transformers": "5.14.1",
+    "sklearn": "1.7.2",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "safetensors": "0.8.0"
+  },
+  "input_token_length_audit": "output/rm2_sentiment/experiments/indobert_v5_development/input_token_length_audit.json"
 }

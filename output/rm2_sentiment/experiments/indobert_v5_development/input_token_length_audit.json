@@ -1,0 +1,35 @@
+{
+  "created_at_utc": "2026-07-28T17:47:40.483696+00:00",
+  "model_id": "indobenchmark/indobert-base-p2",
+  "development_registry": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv",
+  "development_dataset_hash": "31a5537a0483405632dd8c33bf2190ca405a2e8c77f84f571328be48d1b6004c",
+  "parent_comment_text_non_empty_share": 0.001,
+  "input_modes_allowed": [
+    "comment_only",
+    "context_sep_comment"
+  ],
+  "input_modes_skipped": [
+    "target_context_parent_comment"
+  ],
+  "lengths_by_mode": {
+    "comment_only": {
+      "median": 12.0,
+      "p90": 28.0,
+      "p95": 34.0,
+      "p99": 50.48000000000002,
+      "truncated_share_128": 0.0,
+      "truncated_share_256": 0.0
+    },
+    "context_sep_comment": {
+      "median": 23.0,
+      "p90": 39.0,
+      "p95": 45.0,
+      "p99": 62.0,
+      "truncated_share_128": 0.0,
+      "truncated_share_256": 0.0
+    }
+  },
+  "max_lengths_allowed": [
+    128
+  ]
+}

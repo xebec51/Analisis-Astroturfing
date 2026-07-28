@@ -1,0 +1,5 @@
+﻿column,non_empty_rows,non_empty_share
+comment_text,1000,1.0
+brand_or_video_context,1000,1.0
+product_category,1000,1.0
+parent_comment_text,1,0.001

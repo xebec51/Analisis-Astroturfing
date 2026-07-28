@@ -4,3 +4,7 @@ output/rm2_sentiment/model/indobert_v4_final_candidate/*.safetensors filter=lfs 
 output/rm2_sentiment/model/indobert_v4_final_candidate/*.bin filter=lfs diff=lfs merge=lfs -text
 artifacts/rm2_sentiment/indobert_v4_final/** -text
 artifacts/rm2_sentiment/indobert_v4_final/**/model.safetensors filter=lfs diff=lfs merge=lfs -text
+artifacts/rm2_sentiment/indobert_v5_candidate/** -text
+artifacts/rm2_sentiment/indobert_v5_candidate/**/model.safetensors filter=lfs diff=lfs merge=lfs -text
+artifacts/rm2_sentiment/indobert_v5_final/** -text
+artifacts/rm2_sentiment/indobert_v5_final/**/model.safetensors filter=lfs diff=lfs merge=lfs -text
