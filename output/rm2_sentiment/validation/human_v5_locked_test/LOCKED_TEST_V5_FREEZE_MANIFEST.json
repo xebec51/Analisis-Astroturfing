@@ -1,0 +1,41 @@
+{
+  "status": "LOCKED_TEST_V5_CANDIDATE_LIST_FROZEN_PENDING_HUMAN_LABELS",
+  "created_at_utc": "2026-07-28T15:00:12.583975+00:00",
+  "development_rows": 1000,
+  "locked_test_candidate_rows": 700,
+  "label_status": "blank_human_labels_required",
+  "primary_label_for_rm2_goals": "sentiment_toward_target",
+  "existing_development_rows_excluded": 1846,
+  "existing_locked_test_rows_excluded": 700,
+  "comment_id_overlap_development_locked_v5": 0,
+  "normalized_text_overlap_development_locked_v5": 0,
+  "development_candidate_hash": "815b89c788ea9e912f7ea0811691d6caae2cadf1b8b98a18256a0878acaeb635",
+  "locked_test_candidate_hash": "6e8541bd64c416776c56754f0a485673b9e3b4679b34289e20c27a883c6f29f7",
+  "source_hashes": {
+    "dataset": "db11a4738a43aceafa01fe9b888e7c61a5168d9004f90ca4e254592b083978b2",
+    "v2_final_observational": "64b4fdacb9c623798035b5ed024e050d7e73de2a2260a7a8fcede5a4032b20d6",
+    "v4_development_registry": "af9df7bc52c4d2f4c2e572b99c5cc8f22c772d329327826fbbabebbde72623de",
+    "v4_locked_test_registry": "b11ce8e3b84ebfad95108689a283396aca61f7370defe3a908a94d20a5b218b7"
+  },
+  "methodology": {
+    "locked_test_v4_errors_used_for_sampling": false,
+    "locked_test_v4_labels_used_for_sampling_or_training": false,
+    "v2_predictions_used_for_sampling_only": true,
+    "model_predictions_visible_to_annotators": false,
+    "final_labels_auto_filled": false,
+    "target_aware_primary_label": "sentiment_toward_target"
+  },
+  "outputs": {
+    "development_candidates": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_candidates.csv",
+    "locked_candidates": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_candidates.csv",
+    "development_annotator_1": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_annotator_1.xlsx",
+    "development_annotator_2": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_annotator_2.xlsx",
+    "locked_annotator_1": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_annotator_1.xlsx",
+    "locked_annotator_2": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_annotator_2.xlsx"
+  },
+  "freeze_scope": "comment_id_list_and_sampling_manifest_only",
+  "final_label_freeze_status": "BLOCKED_PENDING_TWO_ANNOTATORS_AND_ADJUDICATION",
+  "final_label_dataset_hash": "",
+  "annotation_guideline_version": "SENTIMENT_TARGET_AWARE_ANNOTATION_GUIDE_V5",
+  "candidate_comment_id_hash": "88ac5e0893f71e8f943194aca17d424d99230dc01713a0d4a79fc62e75138405"
+}
