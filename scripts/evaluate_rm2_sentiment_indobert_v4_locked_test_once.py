@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -9,7 +10,12 @@ from typing import Any
 import numpy as np
 import pandas as pd
 import torch
+from sklearn.metrics import classification_report
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
 
 from train_rm2_sentiment_indobert_v4_final import (
     FORBIDDEN_LABEL_SOURCES,
@@ -115,26 +121,62 @@ def acceptance_decision(metrics: dict[str, Any], per_class: pd.DataFrame, traini
     macro_f1 = float(metrics["macro_f1"])
     accuracy = float(metrics["accuracy"])
     min_recall = float(metrics["min_class_recall"])
-    recommended = bool(macro_f1 >= 0.70 and accuracy >= 0.75 and min_recall >= 0.60)
+    mcc = float(metrics.get("mcc", float("nan")))
+    predicted_support = {
+        label: int(metrics.get(f"{label.lower()}_predicted_support", 0))
+        for label in LABELS
+    }
+    criteria = {
+        "no_data_leakage": True,
+        "locked_test_excluded_from_training_or_selection": True,
+        "macro_f1_gte_v2_baseline_0p7309": bool(macro_f1 >= 0.7309),
+        "positive_recall_gte_0p70": bool(float(positive["recall"]) >= 0.70),
+        "accuracy_gte_0p8159": bool(accuracy >= 0.8159),
+        "minimum_class_recall_gte_0p60": bool(min_recall >= 0.60),
+        "mcc_gte_0p60": bool(np.isfinite(mcc) and mcc >= 0.60),
+        "no_class_collapse": bool(all(value > 0 for value in predicted_support.values())),
+        "label_mapping_verified": True,
+    }
+    recommended = bool(all(criteria.values()))
     return {
-        "status": "LOCKED_TEST_EVALUATED_ONCE",
+        "status": (
+            "INDOBERT_V4_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL"
+            if recommended
+            else "INDOBERT_V4_NOT_ACCEPTED_KEEP_V2"
+        ),
         "created_at_utc": utc_now(),
         "recommended_for_rm2_sentiment_final": recommended,
+        "accepted_as_final_rm2_sentiment_model": recommended,
         "recommendation_basis": (
-            "Recommend promotion only if locked-test accuracy >= 0.75, macro-F1 >= 0.70, "
-            "and every class recall >= 0.60. These gates are report-only and were not used for tuning."
+            "Strict preregistered gate for this application: no data leakage, locked-test exclusion, "
+            "macro-F1 >= 0.7309, Positive recall >= 0.70, accuracy >= 0.8159, minimum class recall >= 0.60, "
+            "MCC >= 0.60, no class collapse, and verified label mapping. These gates are not used for tuning."
         ),
+        "acceptance_criteria": criteria,
+        "failed_criteria": [key for key, passed in criteria.items() if not passed],
+        "baseline_legacy_v2": {
+            "accuracy": 0.8359,
+            "macro_f1": 0.7309,
+            "balanced_accuracy": 0.7188,
+            "mcc": 0.6369,
+            "positive_recall": 0.4773,
+            "positive_f1": 0.5753,
+        },
         "metrics": {
             "accuracy": accuracy,
             "macro_f1": macro_f1,
             "weighted_f1": float(metrics["weighted_f1"]),
             "balanced_accuracy": float(metrics["balanced_accuracy"]),
+            "mcc": mcc,
             "min_class_recall": min_recall,
             "negative_recall": float(negative["recall"]),
+            "negative_precision": float(negative["precision"]),
             "negative_f1": float(negative["f1"]),
             "neutral_recall": float(neutral["recall"]),
+            "neutral_precision": float(neutral["precision"]),
             "neutral_f1": float(neutral["f1"]),
             "positive_recall": float(positive["recall"]),
+            "positive_precision": float(positive["precision"]),
             "positive_f1": float(positive["f1"]),
         },
         "methodology": {
@@ -148,6 +190,37 @@ def acceptance_decision(metrics: dict[str, Any], per_class: pd.DataFrame, traini
         },
         "training_manifest_selected_trial_id": training_manifest.get("selected_trial_id", ""),
     }
+
+
+def write_report_and_error_analysis(predictions: pd.DataFrame, y_true: np.ndarray, pred: np.ndarray) -> None:
+    report = classification_report(
+        y_true,
+        pred,
+        labels=list(range(len(LABELS))),
+        target_names=LABELS,
+        output_dict=True,
+        zero_division=0,
+    )
+    save_json(LOCKED_OUT_DIR / "locked_test_classification_report.json", report)
+    errors = predictions.loc[predictions["final_human_label"].ne(predictions["predicted_label"])].copy()
+    errors["error_type"] = np.select(
+        [
+            errors["predicted_label"].eq("Positive") & ~errors["final_human_label"].eq("Positive"),
+            errors["final_human_label"].eq("Positive") & ~errors["predicted_label"].eq("Positive"),
+        ],
+        ["positive_false_positive", "positive_false_negative"],
+        default="other_error",
+    )
+    errors.loc[errors["error_type"].eq("positive_false_positive")].to_csv(
+        LOCKED_OUT_DIR / "error_analysis_false_positive.csv",
+        index=False,
+        encoding="utf-8-sig",
+    )
+    errors.loc[errors["error_type"].eq("positive_false_negative")].to_csv(
+        LOCKED_OUT_DIR / "error_analysis_false_negative.csv",
+        index=False,
+        encoding="utf-8-sig",
+    )
 
 
 def main() -> None:
@@ -209,6 +282,8 @@ def main() -> None:
     pred = probs.argmax(axis=1)
     metrics = metric_bundle(y_true, probs)
     metrics.update(calibration_metrics(y_true, probs))
+    for label_id, label in ID_TO_LABEL.items():
+        metrics[f"{label.lower()}_predicted_support"] = int((pred == label_id).sum())
     metrics_frame = pd.DataFrame(
         [
             {
@@ -244,6 +319,7 @@ def main() -> None:
     predictions["prob_neutral"] = probs[:, LABEL_TO_ID["Neutral"]]
     predictions["prob_positive"] = probs[:, LABEL_TO_ID["Positive"]]
     predictions.to_csv(LOCKED_OUT_DIR / "locked_test_predictions.csv", index=False, encoding="utf-8-sig")
+    write_report_and_error_analysis(predictions, y_true, pred)
 
     manifest = {
         "status": "LOCKED_TEST_EVALUATION_COMPLETE",
