@@ -1,0 +1,22 @@
+{
+  "status": "INDOBERT_V5_ENSEMBLE_ABSTENTION_PLAN_READY_PENDING_OOF",
+  "created_at_utc": "2026-07-28T15:03:12.616838+00:00",
+  "selection_source": "development_oof_only",
+  "locked_test_used": false,
+  "ensemble_candidates": [
+    "single_best_seed",
+    "probability_average_ensemble",
+    "majority_vote_ensemble"
+  ],
+  "coverage_targets": [
+    0.9343,
+    0.95,
+    1.0
+  ],
+  "selection_score_formula": "0.25*macro_f1 + 0.20*balanced_accuracy + 0.20*mcc + 0.15*min_class_recall + 0.15*positive_recall + 0.05*accuracy - penalties",
+  "penalties": [
+    "class_collapse",
+    "excessive_negative_prediction_share_gt_0.45",
+    "seed_instability_to_be_applied_after_multi_seed_oof"
+  ]
+}

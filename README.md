@@ -405,6 +405,13 @@ Goals tetap memakai baseline V2 yang sudah diterima. Laporan audit tersimpan di
 `docs/INDOBERT_V4_ARTIFACT_AUDIT.md`, `docs/INDOBERT_V4_DATA_INTEGRITY_AUDIT.md`, dan
 `docs/INDOBERT_V4_FINAL_REPORT.md`.
 
+Fair same-test comparison berikutnya disimpan terpisah di
+`output/rm2_sentiment/experiments/fair_same_test_comparison/` dengan status
+`INDOBERT_V4_SAME_TEST_FAIR_COMPARISON`. Analisis ini membandingkan frozen V2 dan frozen V4 pada denominator
+672 baris yang sama, tetapi tidak mengubah keputusan canonical. Sensitivity analysis V4 non-canonical
+disimpan di `output/rm2_sentiment/sensitivity/indobert_v4/` dengan status
+`EXPLORATORY_SENSITIVITY_ANALYSIS_NOT_CANONICAL`.
+
 ### Validasi Domain
 
 V1 human validation yang sudah dibersihkan berisi `579` comment_id unik. Paket V2 memakai label manusia

@@ -1,0 +1,33 @@
+{
+  "status": "INDOBERT_V4_SAME_TEST_FAIR_COMPARISON",
+  "created_at_utc": "2026-07-28T14:57:05.890736+00:00",
+  "git_sha": "8d0e7620791d8c490e6edfb068cb1e33171b0977",
+  "same_test_rows": 672,
+  "same_test_class_counts": {
+    "Negative": 160,
+    "Neutral": 294,
+    "Positive": 218
+  },
+  "same_test_dataset_hash": "692aed0817a9d4f21f53049452e2501ad52a421cb027071a24f75c02307b26f6",
+  "v2_model_path": "output/rm2_sentiment/model/frozen/selected_model_development_frozen.joblib",
+  "v2_model_sha256": "477bfe11ebc3463eeff5a5fb8359f86022d719c8bea49dfdad0460fa0c5e2ccc",
+  "v2_config_path": "output/rm2_sentiment/model/frozen/selected_model_development_frozen_config.json",
+  "v2_native_threshold": 0.42,
+  "v2_native_threshold_source": "frozen V2 development OOF threshold, not selected on this locked test",
+  "v4_model_path": "artifacts/rm2_sentiment/indobert_v4_final/base_reference",
+  "v4_model_sha256": "2b13c75df848ca0abe02cabf8a1ace0b26814730762a4a7d506095bb518c3c52",
+  "v4_decision_preserved": "INDOBERT_V4_NOT_ACCEPTED_KEEP_V2",
+  "canonical_model_changed": false,
+  "locked_test_used_for_tuning": false,
+  "outputs": [
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_bootstrap_ci.json",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/SAME_TEST_COMPARISON_REPORT.md",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_confusion_matrices.json",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_disagreement.csv",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_examples.json",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_mcnemar.json",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_metrics.csv",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_per_class_metrics.csv",
+    "output/rm2_sentiment/experiments/fair_same_test_comparison/same_test_predictions.csv"
+  ]
+}
