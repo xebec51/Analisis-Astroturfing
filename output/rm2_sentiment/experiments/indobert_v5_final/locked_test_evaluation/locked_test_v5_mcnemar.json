@@ -1,0 +1,7 @@
+{
+  "v2_correct_v5_wrong": 52,
+  "v2_wrong_v5_correct": 139,
+  "discordant_n": 191,
+  "statistic_cc": 38.72251308900523,
+  "exact_p_value": 2.396018226725173e-10
+}

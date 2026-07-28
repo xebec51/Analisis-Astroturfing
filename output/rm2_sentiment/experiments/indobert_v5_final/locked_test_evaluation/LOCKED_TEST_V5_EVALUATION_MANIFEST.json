@@ -1,0 +1,22 @@
+{
+  "status": "LOCKED_TEST_V5_EVALUATED_ONCE",
+  "created_at_utc": "2026-07-28T19:19:58.392660+00:00",
+  "evaluated_once": true,
+  "locked_test_v5_execution_count": 1,
+  "locked_test_registry": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv",
+  "locked_test_dataset_hash": "368d0a9a17dece03c2adc0f3c2ce7e3c3e1b3631e260aec8001ace3dc2ca83ec",
+  "locked_test_evaluable_rows": 687,
+  "locked_test_class_counts": {
+    "Negative": 134,
+    "Neutral": 380,
+    "Positive": 173
+  },
+  "candidate_artifact": "artifacts/rm2_sentiment/indobert_v5_candidate",
+  "candidate_freeze_manifest": "artifacts/rm2_sentiment/indobert_v5_candidate/DEVELOPMENT_MODEL_FREEZE_MANIFEST.json",
+  "candidate_freeze_commit": "c6a5db1ff18f7496768e8412da238390b87cfb34",
+  "evaluation_commit": "c6a5db1ff18f7496768e8412da238390b87cfb34",
+  "acceptance_config_sha256": "194177c718683c8e43ab72ca7975f58628e4061388bf020ada96862482c6b428",
+  "locked_test_used_for_training_or_selection": false,
+  "locked_test_used_for_threshold_selection": false,
+  "denominator_same_v2_v5": true
+}

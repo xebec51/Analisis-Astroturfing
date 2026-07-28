@@ -1,0 +1,89 @@
+{
+  "status": "INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL",
+  "accepted": true,
+  "created_at_utc": "2026-07-28T19:19:58.391659+00:00",
+  "criteria": [
+    {
+      "criterion": "locked_test_v5_not_used_for_training_or_selection",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "criterion": "macro_f1_v5_not_lower_than_v2",
+      "passed": true,
+      "observed": "0.8036870905484478 >= 0.6352529157448011"
+    },
+    {
+      "criterion": "positive_recall_v5_substantial_improvement_min_delta",
+      "passed": true,
+      "observed": 0.44508670520231214
+    },
+    {
+      "criterion": "minimum_class_recall_v5_minimum",
+      "passed": true,
+      "observed": 0.7089552238805971
+    },
+    {
+      "criterion": "mcc_not_materially_lower_than_v2_max_drop",
+      "passed": true,
+      "observed": 0.2318137576321886
+    },
+    {
+      "criterion": "full_set_accuracy_non_inferiority_max_drop",
+      "passed": true,
+      "observed": 0.1266375545851528
+    },
+    {
+      "criterion": "no_class_collapse",
+      "passed": true,
+      "observed": {
+        "Negative": 124,
+        "Neutral": 379,
+        "Positive": 184
+      }
+    },
+    {
+      "criterion": "label_mapping_verified",
+      "passed": true,
+      "observed": {
+        "Negative": 0,
+        "Neutral": 1,
+        "Positive": 2
+      }
+    },
+    {
+      "criterion": "same_denominator_for_v2_and_v5",
+      "passed": true,
+      "observed": 687
+    },
+    {
+      "criterion": "paired_tests_considered",
+      "passed": true,
+      "observed": {
+        "mcnemar": {
+          "v2_correct_v5_wrong": 52,
+          "v2_wrong_v5_correct": 139,
+          "discordant_n": 191,
+          "statistic_cc": 38.72251308900523,
+          "exact_p_value": 2.396018226725173e-10
+        },
+        "bootstrap": {
+          "n_bootstrap": 2000,
+          "delta_accuracy": {
+            "point": 0.1266375545851528,
+            "ci95_low": 0.08879184861717604,
+            "ci95_high": 0.16448326055312945
+          },
+          "delta_macro_f1": {
+            "point": 0.16843417480364664,
+            "ci95_low": 0.12019801711237599,
+            "ci95_high": 0.21563332462594104
+          }
+        }
+      }
+    }
+  ],
+  "failed_criteria": [],
+  "acceptance_config_sha256": "194177c718683c8e43ab72ca7975f58628e4061388bf020ada96862482c6b428",
+  "no_retraining_after_locked_test": true
+}

@@ -1,0 +1,36 @@
+{
+  "V2_FORCED_THREE_CLASS": {
+    "Negative": [
+      80,
+      48,
+      6
+    ],
+    "Neutral": [
+      26,
+      345,
+      9
+    ],
+    "Positive": [
+      23,
+      88,
+      62
+    ]
+  },
+  "V5_FULL_THREE_CLASS": {
+    "Negative": [
+      95,
+      17,
+      22
+    ],
+    "Neutral": [
+      17,
+      340,
+      23
+    ],
+    "Positive": [
+      12,
+      22,
+      139
+    ]
+  }
+}
