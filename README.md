@@ -389,6 +389,22 @@ Label mapping dibaca dari konfigurasi model dan diuji dengan anchor sentences po
 Probabilitas tiga kelas disimpan untuk setiap komentar, sedangkan komentar `Uncertain` dan `No Text` tidak
 diam-diam dipaksa menjadi Neutral.
 
+### Audit Kandidat IndoBERT V4
+
+Kandidat IndoBERT V4 pada
+`artifacts/rm2_sentiment/indobert_v4_final/base_reference/` sudah diaudit sebagai artefak beku
+`indobenchmark/indobert-base-p2`. Checksum, label mapping `Negative`/`Neutral`/`Positive`, dan CPU smoke
+test berstatus PASS. Locked test V4 sudah memiliki manifest `evaluated_once=true`, sehingga hasilnya hanya
+dibaca ulang untuk audit dan tidak dievaluasi ulang.
+
+Dengan gate ketat terbaru, status kandidat adalah `INDOBERT_V4_NOT_ACCEPTED_KEEP_V2`: macro-F1 `0.7656`,
+Positive recall `0.7156`, balanced accuracy `0.7754`, dan MCC `0.6565` melewati gate, tetapi accuracy
+`0.7723` berada di bawah syarat `0.8159`. Karena itu IndoBERT V4 tidak dipromosikan, full inference V4
+tidak dijalankan, `output/rm2_sentiment/final/CANONICAL_MODEL.json` tidak dibuat untuk V4, dan output RM2
+Goals tetap memakai baseline V2 yang sudah diterima. Laporan audit tersimpan di
+`docs/INDOBERT_V4_ARTIFACT_AUDIT.md`, `docs/INDOBERT_V4_DATA_INTEGRITY_AUDIT.md`, dan
+`docs/INDOBERT_V4_FINAL_REPORT.md`.
+
 ### Validasi Domain
 
 V1 human validation yang sudah dibersihkan berisi `579` comment_id unik. Paket V2 memakai label manusia
