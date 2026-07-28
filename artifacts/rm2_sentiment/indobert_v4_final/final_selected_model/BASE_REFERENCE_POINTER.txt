@@ -1,0 +1,1 @@
+Final selected model reuses the base_reference checkpoint. Do not duplicate model.safetensors; use ../base_reference as --model-dir for inference/evaluation.

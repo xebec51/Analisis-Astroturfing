@@ -63,16 +63,16 @@ def assert_not_evaluated(force: bool) -> None:
             )
 
 
-def selected_text_mode() -> str:
-    config_path = MODEL_DIR / "selected_trial_config.json"
+def selected_text_mode(model_dir: Path) -> str:
+    config_path = model_dir / "selected_trial_config.json"
     if not config_path.exists():
         raise FileNotFoundError(f"Missing selected model config: {config_path}")
     config = load_json(config_path)
     return str(config.get("text_mode") or config.get("final_training_config", {}).get("text_mode") or "context_sep_comment")
 
 
-def selected_max_length() -> int:
-    config = load_json(MODEL_DIR / "selected_trial_config.json")
+def selected_max_length(model_dir: Path) -> int:
+    config = load_json(model_dir / "selected_trial_config.json")
     value = config.get("max_length") or config.get("final_training_config", {}).get("max_length")
     if value is None:
         raise ValueError("selected_trial_config.json does not include max_length")
@@ -83,6 +83,29 @@ def prediction_batch_size(device: torch.device, max_length: int) -> int:
     if device.type != "cuda":
         return 8
     return 48 if max_length <= 128 else 32 if max_length <= 192 else 24
+
+
+def verify_model_hashes(model_dir: Path, frozen_manifest: dict[str, Any]) -> dict[str, str]:
+    sha_path = model_dir / "SHA256SUMS.txt"
+    if not sha_path.exists():
+        raise FileNotFoundError(f"Missing SHA256SUMS.txt in frozen model dir: {model_dir}")
+    verified: dict[str, str] = {}
+    for line in sha_path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        expected, name = line.split(maxsplit=1)
+        path = model_dir / name.strip()
+        if not path.exists():
+            raise FileNotFoundError(f"Checksum references missing model file: {path}")
+        actual = sha256_file(path)
+        if actual != expected:
+            raise RuntimeError(f"Frozen model checksum mismatch for {name.strip()}: expected {expected}, got {actual}")
+        verified[name.strip()] = actual
+    checkpoint_hash = verified.get("model.safetensors") or verified.get("pytorch_model.bin")
+    manifest_hash = frozen_manifest.get("checkpoint_sha256")
+    if manifest_hash and checkpoint_hash and str(manifest_hash) != str(checkpoint_hash):
+        raise RuntimeError("Frozen manifest checkpoint_sha256 does not match model checkpoint hash.")
+    return verified
 
 
 def acceptance_decision(metrics: dict[str, Any], per_class: pd.DataFrame, training_manifest: dict[str, Any]) -> dict[str, Any]:
@@ -134,21 +157,31 @@ def main() -> None:
         action="store_true",
         help="Administrative escape hatch only; default enforces one-time locked-test evaluation.",
     )
+    parser.add_argument("--model-dir", default=str(MODEL_DIR), help="Frozen model directory to evaluate.")
+    parser.add_argument("--frozen-manifest", default=str(TRAINING_MANIFEST), help="Training/freeze manifest certifying locked-test exclusion.")
     args = parser.parse_args()
     assert_not_evaluated(args.force_rerun)
-    if not TRAINING_MANIFEST.exists():
-        raise FileNotFoundError(f"Train/freeze the V4 candidate first: {TRAINING_MANIFEST}")
+    model_dir = Path(args.model_dir)
+    frozen_manifest_path = Path(args.frozen_manifest)
+    if not model_dir.is_absolute():
+        model_dir = ROOT / model_dir
+    if not frozen_manifest_path.is_absolute():
+        frozen_manifest_path = ROOT / frozen_manifest_path
+    if not frozen_manifest_path.exists():
+        raise FileNotFoundError(f"Train/freeze the V4 candidate first: {frozen_manifest_path}")
 
-    training_manifest = load_json(TRAINING_MANIFEST)
+    training_manifest = load_json(frozen_manifest_path)
     if training_manifest.get("locked_test_used_for_training_or_selection") is not False:
         raise AssertionError("Training manifest does not certify locked-test exclusion.")
+    if training_manifest.get("locked_test_evaluated") is not False:
+        raise AssertionError("Frozen manifest must be created before locked-test evaluation.")
 
     LOCKED_OUT_DIR.mkdir(parents=True, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     info = device_info()
     precision = str(info["mixed_precision"])
-    text_mode = selected_text_mode()
-    max_length = selected_max_length()
+    text_mode = selected_text_mode(model_dir)
+    max_length = selected_max_length(model_dir)
     locked = read_locked_test_data()
     dev = read_development_data()
     comment_overlap = set(dev["comment_id"]) & set(locked["comment_id"])
@@ -158,8 +191,9 @@ def main() -> None:
     if comment_overlap or text_overlap or exact_overlap:
         raise AssertionError("Hard development/locked-test leakage detected.")
 
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR, trust_remote_code=False)
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_DIR, trust_remote_code=False)
+    model_hashes = verify_model_hashes(model_dir, training_manifest)
+    tokenizer = AutoTokenizer.from_pretrained(model_dir, trust_remote_code=False)
+    model = AutoModelForSequenceClassification.from_pretrained(model_dir, trust_remote_code=False)
     model.to(device)
     texts = locked.apply(lambda row: model_input(row, text_mode), axis=1).tolist()
     probs = predict_proba(
@@ -211,15 +245,11 @@ def main() -> None:
     predictions["prob_positive"] = probs[:, LABEL_TO_ID["Positive"]]
     predictions.to_csv(LOCKED_OUT_DIR / "locked_test_predictions.csv", index=False, encoding="utf-8-sig")
 
-    model_hashes = {
-        path.name: sha256_file(path)
-        for path in MODEL_DIR.glob("*")
-        if path.is_file() and path.suffix in {".safetensors", ".bin", ".json"}
-    }
     manifest = {
         "status": "LOCKED_TEST_EVALUATION_COMPLETE",
         "created_at_utc": utc_now(),
         "evaluated_once": True,
+        "locked_test_execution_count": 1,
         "force_rerun_used": bool(args.force_rerun),
         "locked_test_registry": LOCKED_REGISTRY.relative_to(ROOT).as_posix(),
         "locked_test_registry_sha256": sha256_file(LOCKED_REGISTRY),
@@ -238,7 +268,8 @@ def main() -> None:
             "Near-duplicate clusters are reported because the locked test is frozen; "
             "comment_id, text_cluster_id, and exact_duplicate_group_id hard leakage are zero."
         ),
-        "model_dir": MODEL_DIR.relative_to(ROOT).as_posix(),
+        "model_dir": model_dir.relative_to(ROOT).as_posix(),
+        "frozen_manifest": frozen_manifest_path.relative_to(ROOT).as_posix(),
         "model_hashes": model_hashes,
         "text_mode": text_mode,
         "max_length": int(max_length),
@@ -253,7 +284,7 @@ def main() -> None:
         "metrics": metrics,
         "package_versions": package_versions(),
         "device_info": info,
-        "training_manifest_selected_trial_id": training_manifest.get("selected_trial_id", ""),
+        "training_manifest_selected_trial_id": training_manifest.get("selected_trial_id", training_manifest.get("exact_trial_id", "")),
     }
     save_json(EVAL_MANIFEST, manifest)
     decision = acceptance_decision(metrics, per_class, training_manifest)
