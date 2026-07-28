@@ -1,0 +1,11 @@
+﻿check,value,status
+development_evaluable_rows,1824,PASS
+development_class_counts,"{""Negative"": 470, ""Neutral"": 788, ""Positive"": 566}",PASS
+locked_test_evaluable_rows,672,PASS
+locked_test_class_counts,"{""Negative"": 160, ""Neutral"": 294, ""Positive"": 218}",PASS
+comment_id_overlap,0,PASS
+text_cluster_id_overlap,0,PASS
+exact_duplicate_group_id_overlap,0,PASS
+normalized_text_overlap,0,PASS
+near_duplicate_cluster_id_overlap_report_only,12,WARN
+video_id_overlap_report_only,54,WARN

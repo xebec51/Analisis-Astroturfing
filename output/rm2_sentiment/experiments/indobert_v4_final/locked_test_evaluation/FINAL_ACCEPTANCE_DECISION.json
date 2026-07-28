@@ -1,38 +1,93 @@
 {
-  "status": "LOCKED_TEST_EVALUATED_ONCE",
-  "created_at_utc": "2026-07-28T10:32:35.186686+00:00",
-  "recommended_for_rm2_sentiment_final": true,
-  "recommendation_basis": "Recommend promotion only if locked-test accuracy >= 0.75, macro-F1 >= 0.70, and every class recall >= 0.60. These gates are report-only and were not used for tuning.",
-  "metrics": {
+  "status": "INDOBERT_V4_NOT_ACCEPTED_KEEP_V2",
+  "created_at_utc": "2026-07-28T14:31:06.141532+00:00",
+  "accepted": false,
+  "recommended_for_rm2_sentiment_final": false,
+  "strict_acceptance_criteria": {
+    "artifact_checksum_and_load_pass": true,
+    "no_hard_data_leakage": true,
+    "locked_test_evaluated_once": true,
+    "locked_test_excluded_from_training_or_selection": true,
+    "macro_f1_gte_0p7309": true,
+    "positive_recall_gte_0p70": true,
+    "accuracy_gte_0p8159": false,
+    "minimum_class_recall_gte_0p60": true,
+    "mcc_gte_0p60": true,
+    "no_class_collapse": true,
+    "label_mapping_verified": true,
+    "model_reproducible_from_saved_artifact": true
+  },
+  "failed_criteria": [
+    "accuracy_gte_0p8159"
+  ],
+  "acceptance_thresholds": {
+    "macro_f1": 0.7309,
+    "positive_recall": 0.7,
+    "accuracy": 0.8159,
+    "min_class_recall": 0.6,
+    "mcc": 0.6
+  },
+  "locked_test_metrics": {
+    "n": 672,
     "accuracy": 0.7723214285714286,
     "macro_f1": 0.7656419285242847,
     "weighted_f1": 0.7745533772314175,
     "balanced_accuracy": 0.7754368719965051,
+    "mcc": 0.6564857911291668,
     "min_class_recall": 0.7155963302752294,
+    "ece": 0.0629343898363095,
+    "brier_score": 0.3288791564775636,
+    "mean_confidence": 0.8349931628720239,
+    "negative_precision": 0.6376811594202898,
     "negative_recall": 0.825,
     "negative_f1": 0.7193460490463215,
+    "negative_support": 160,
+    "negative_predicted_support": 207,
+    "neutral_precision": 0.8339350180505415,
     "neutral_recall": 0.7857142857142857,
     "neutral_f1": 0.809106830122592,
+    "neutral_support": 294,
+    "neutral_predicted_support": 277,
+    "positive_precision": 0.8297872340425532,
     "positive_recall": 0.7155963302752294,
-    "positive_f1": 0.7684729064039408
+    "positive_f1": 0.7684729064039408,
+    "positive_support": 218,
+    "positive_predicted_support": 188
   },
+  "baseline_legacy_v2": {
+    "accuracy": 0.8359,
+    "macro_f1": 0.7309,
+    "balanced_accuracy": 0.7188,
+    "mcc": 0.6369,
+    "positive_recall": 0.4773,
+    "positive_f1": 0.5753
+  },
+  "delta_indobert_v4_minus_v2": {
+    "accuracy": -0.06357857142857137,
+    "macro_f1": 0.034741928524284704,
+    "balanced_accuracy": 0.056636871996505134,
+    "mcc": 0.019585791129166807,
+    "positive_recall": 0.2382963302752294,
+    "positive_f1": 0.1931729064039408
+  },
+  "full_inference_run": false,
+  "promotion_run": false,
+  "canonical_model_pointer_created": false,
+  "final_model_dir_created": false,
+  "reason": "IndoBERT V4 is not promoted because at least one strict locked-test acceptance gate failed. No full inference or RM2 downstream refresh is run from this candidate.",
   "methodology": {
-    "model_selection_source": "development OOF only",
+    "prediction_rule": "argmax_no_threshold_tuning",
+    "label_order": [
+      "Negative",
+      "Neutral",
+      "Positive"
+    ],
+    "label_source_column": "final_human_label",
     "locked_test_used_for_training_or_selection": false,
     "locked_test_used_for_threshold_selection": false,
-    "prediction_rule": "argmax, no locked-test threshold tuning",
-    "label_source_column": "final_human_label",
-    "prediction_label_source_used": false,
-    "forbidden_supervision_sources": [
-      "sentiment_v2_prediction",
-      "model_prediction",
-      "lexicon",
-      "hcc",
-      "actor_type",
-      "goal_orientation",
-      "llm",
-      "locked_test"
-    ]
-  },
-  "training_manifest_selected_trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05"
+    "no_label_changes": true,
+    "no_retraining_performed": true,
+    "no_full_inference_performed": true,
+    "no_rm1_outputs_modified": true
+  }
 }
