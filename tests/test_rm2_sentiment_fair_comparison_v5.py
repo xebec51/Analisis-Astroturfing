@@ -122,17 +122,46 @@ class RM2SentimentFairComparisonV5Tests(unittest.TestCase):
         self.assertEqual(config["primary_label"], "sentiment_toward_target")
         self.assertTrue(config["coverage_policy"]["do_not_compare_v2_covered_accuracy_to_v5_full_coverage_accuracy_as_gate"])
         locked_manifest = read_json(V5_LOCK_DIR / "LOCKED_TEST_V5_FREEZE_MANIFEST.json")
-        self.assertEqual(locked_manifest["status"], "LOCKED_TEST_V5_CANDIDATE_LIST_FROZEN_PENDING_HUMAN_LABELS")
-        self.assertEqual(locked_manifest["final_label_freeze_status"], "BLOCKED_PENDING_TWO_ANNOTATORS_AND_ADJUDICATION")
+        self.assertIn(
+            locked_manifest["status"],
+            {
+                "LOCKED_TEST_V5_CANDIDATE_LIST_FROZEN_PENDING_HUMAN_LABELS",
+                "LOCKED_TEST_V5_PENDING_HUMAN_ADJUDICATION",
+                "LOCKED_TEST_V5_FINAL_LABELS_FROZEN_SEALED",
+            },
+        )
+        self.assertIn(
+            locked_manifest["final_label_freeze_status"],
+            {
+                "BLOCKED_PENDING_TWO_ANNOTATORS_AND_ADJUDICATION",
+                "BLOCKED_PENDING_ADJUDICATION",
+                "FROZEN_NOT_OPEN_FOR_MODEL_SELECTION",
+            },
+        )
+        self.assertFalse(locked_manifest.get("locked_test_v5_used_for_training_or_selection", False))
 
     def test_v5_development_pipeline_plan_is_development_only(self):
         manifest = read_json(V5_EXP_DIR / "INDOBERT_V5_DEVELOPMENT_PIPELINE_MANIFEST.json")
-        self.assertEqual(manifest["status"], "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_PENDING_HUMAN_LABELS")
+        self.assertIn(
+            manifest["status"],
+            {
+                "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_PENDING_HUMAN_LABELS",
+                "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_FINAL_HUMAN_LABELS",
+                "INDOBERT_V5_DEVELOPMENT_FOLDS_READY",
+            },
+        )
         self.assertEqual(manifest["candidate_trial_count"], 810)
         self.assertFalse(manifest["locked_test_v4_errors_used"])
         self.assertFalse(manifest["locked_test_v5_labels_used_for_training_or_selection"])
+        self.assertEqual(manifest["validation"].get("locked_labels_available_for_training", 0), 0)
         grid = read_csv(V5_EXP_DIR / "candidate_grid_manifest.csv")
         self.assertEqual(len(grid), 810)
+        if manifest["status"] == "INDOBERT_V5_DEVELOPMENT_FOLDS_READY":
+            folds = read_csv(V5_EXP_DIR / "development_grouped_fold_assignments.csv")
+            locked_candidates = read_csv(V5_LOCK_DIR / "sentiment_v5_locked_test_candidates.csv")
+            self.assertEqual(len(folds), 2931)
+            self.assertEqual(set(folds["seed"].astype(int)), {42, 52, 62})
+            self.assertFalse(folds["comment_id"].isin(locked_candidates["comment_id"]).any())
 
     def test_target_context_parent_preprocessing(self):
         row = pd.Series({
@@ -154,6 +183,67 @@ class RM2SentimentFairComparisonV5Tests(unittest.TestCase):
         self.assertTrue(predictions["sentiment_label"].isin([*LABELS, "No Text"]).all())
         goals = read_csv(SENS_DIR / "tables/v2_vs_v4_hcc_goal_changes.csv")
         self.assertEqual(int(goals["goal_changed"].astype(str).str.lower().eq("true").sum()), 3)
+
+    def test_completed_v5_annotations_imported_and_finalized(self):
+        manifest = read_json(V5_DEV_DIR / "SENTIMENT_V5_IMPORT_MANIFEST.json")
+        self.assertIn(
+            manifest["status"],
+            {
+                "SENTIMENT_V5_PENDING_HUMAN_ADJUDICATION",
+                "SENTIMENT_V5_FINAL_HUMAN_LABELS_FROZEN",
+                "SENTIMENT_V5_FINAL_HUMAN_LABELS_IMPORTED",
+            },
+        )
+        self.assertEqual(manifest["development"]["rows"], 1000)
+        self.assertEqual(manifest["development"]["disagreement_rows"], 23)
+        self.assertGreaterEqual(manifest["development"]["sentiment_toward_target"]["cohen_kappa"], 0.95)
+        self.assertEqual(manifest["locked_test"]["rows"], 700)
+        self.assertEqual(manifest["locked_test"]["disagreement_rows"], 21)
+        self.assertGreaterEqual(manifest["locked_test"]["sentiment_toward_target"]["cohen_kappa"], 0.95)
+
+        final_manifest = read_json(V5_DEV_DIR / "SENTIMENT_V5_FINAL_IMPORT_MANIFEST.json")
+        self.assertEqual(final_manifest["status"], "SENTIMENT_V5_FINAL_HUMAN_LABELS_IMPORTED")
+        self.assertFalse(final_manifest["methodology"]["model_predictions_used_for_labels"])
+        self.assertFalse(final_manifest["methodology"]["auto_final_labels_for_disagreements"])
+        self.assertTrue(final_manifest["methodology"]["final_labels_from_human_agreement_or_adjudication_only"])
+        self.assertFalse(final_manifest["methodology"]["locked_test_v5_used_for_training_or_selection"])
+        self.assertEqual(final_manifest["development"]["evaluable_three_class_rows"], 977)
+        self.assertEqual(
+            final_manifest["development"]["label_counts"],
+            {"Negative": 178, "Neutral": 569, "Positive": 230, "Uncertain": 13, "No Text": 10},
+        )
+        self.assertEqual(final_manifest["locked_test_v5"]["evaluable_three_class_rows"], 687)
+        self.assertEqual(
+            final_manifest["locked_test_v5"]["label_counts"],
+            {"Negative": 134, "Neutral": 380, "Positive": 173, "Uncertain": 9, "No Text": 4},
+        )
+        self.assertTrue(final_manifest["leakage_audit"]["hard_leakage_pass"])
+
+        final_dev = read_csv(V5_DEV_DIR / "sentiment_v5_development_final_registry.csv")
+        final_locked = read_csv(V5_LOCK_DIR / "sentiment_v5_locked_test_final_frozen.csv")
+        self.assertEqual(len(final_dev), 1000)
+        self.assertEqual(len(final_locked), 700)
+        self.assertEqual(final_dev["comment_id"].nunique(), 1000)
+        self.assertEqual(final_locked["comment_id"].nunique(), 700)
+        self.assertFalse(set(final_dev["comment_id"]) & set(final_locked["comment_id"]))
+        self.assertTrue(final_dev["final_human_label"].isin([*LABELS, "Uncertain", "No Text"]).all())
+        self.assertTrue(final_locked["final_human_label"].isin([*LABELS, "Uncertain", "No Text"]).all())
+        self.assertTrue(final_dev.loc[final_dev["adjudication_required"].astype(str).str.lower().eq("true"), "final_label_source"].eq("human_adjudication").all())
+        self.assertTrue(final_locked.loc[final_locked["adjudication_required"].astype(str).str.lower().eq("true"), "final_label_source"].eq("human_adjudication").all())
+
+        for path, expected_rows in [
+            (V5_DEV_DIR / "sentiment_v5_development_adjudication.xlsx", 23),
+            (V5_LOCK_DIR / "sentiment_v5_locked_test_adjudication.xlsx", 21),
+        ]:
+            workbook = load_workbook(path, read_only=True)
+            sheet = workbook[workbook.sheetnames[0]]
+            rows = list(sheet.iter_rows())
+            self.assertEqual(len(rows) - 1, expected_rows)
+            headers = [cell.value for cell in rows[0]]
+            adjudicated_idx = headers.index("adjudicated_label")
+            labels = [row[adjudicated_idx].value for row in rows[1:]]
+            self.assertEqual(sum(value not in {None, ""} for value in labels), expected_rows)
+            self.assertTrue(all(value in {"Negative", "Neutral", "Positive", "Uncertain", "No Text"} for value in labels))
 
 
 if __name__ == "__main__":
