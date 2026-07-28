@@ -1,0 +1,41 @@
+{
+  "status": "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_PENDING_HUMAN_LABELS",
+  "created_at_utc": "2026-07-28T15:02:28.387734+00:00",
+  "git_sha": "8d0e7620791d8c490e6edfb068cb1e33171b0977",
+  "primary_label": "sentiment_toward_target",
+  "label_order": [
+    "Negative",
+    "Neutral",
+    "Positive"
+  ],
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "candidate_trial_count": 810,
+  "selection_source": "development_oof_only",
+  "locked_test_v4_errors_used": false,
+  "locked_test_v5_labels_used_for_training_or_selection": false,
+  "acceptance_config": "configs/rm2_sentiment_v5_acceptance_preregistered.json",
+  "acceptance_config_sha256": "6f672bacca3b749898c083c3e31204a2cf60cad299414255a0694f0e80ac2d42",
+  "selection_score": {
+    "base": "macro_f1 + balanced_accuracy + mcc + min_class_recall + positive_recall",
+    "stability_penalty": "seed metric standard deviation",
+    "class_collapse_penalty": true,
+    "excessive_negative_prediction_penalty": true
+  },
+  "validation": {
+    "development_rows": 1000,
+    "locked_test_candidate_rows": 700,
+    "comment_id_overlap": 0,
+    "normalized_text_overlap": 0,
+    "development_labels_available": 0,
+    "locked_labels_available": 0,
+    "locked_test_v5_used_for_training": false
+  },
+  "outputs": {
+    "candidate_grid": "output/rm2_sentiment/experiments/indobert_v5_development/candidate_grid_manifest.csv",
+    "risk_coverage_policy": "output/rm2_sentiment/experiments/indobert_v5_development/development_risk_coverage_policy.csv"
+  }
+}

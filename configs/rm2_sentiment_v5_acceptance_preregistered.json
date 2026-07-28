@@ -1,0 +1,80 @@
+{
+  "status": "RM2_SENTIMENT_V5_ACCEPTANCE_PREREGISTERED_BEFORE_LOCKED_TEST_V5_OPENED",
+  "created_at_utc": "2026-07-28T00:00:00+00:00",
+  "primary_label": "sentiment_toward_target",
+  "label_order": [
+    "Negative",
+    "Neutral",
+    "Positive"
+  ],
+  "frozen_models_to_compare_on_locked_test_v5": [
+    {
+      "model_version": "baseline_legacy_v2",
+      "mode": [
+        "full_three_class_prediction",
+        "native_coverage_aware_if_abstention_is_used"
+      ]
+    },
+    {
+      "model_version": "indobert_v5_candidate",
+      "mode": [
+        "full_three_class_prediction",
+        "development_only_abstention_policy_if_selected"
+      ]
+    }
+  ],
+  "primary_metrics": [
+    "macro_f1",
+    "balanced_accuracy",
+    "mcc",
+    "positive_recall",
+    "minimum_class_recall"
+  ],
+  "secondary_metrics": [
+    "full_set_accuracy",
+    "covered_accuracy",
+    "coverage",
+    "ece",
+    "brier_score"
+  ],
+  "acceptance_rules": {
+    "locked_test_v5_not_used_for_training_or_selection": true,
+    "macro_f1_v5_not_lower_than_v2": true,
+    "positive_recall_v5_substantial_improvement_min_delta": 0.10,
+    "minimum_class_recall_v5_minimum": 0.60,
+    "mcc_not_materially_lower_than_v2_max_drop": 0.03,
+    "full_set_accuracy_non_inferiority_max_drop": 0.03,
+    "no_class_collapse": true,
+    "label_mapping_verified": true,
+    "same_denominator_for_v2_and_v5": true,
+    "paired_tests_considered": [
+      "McNemar",
+      "paired_bootstrap_delta_accuracy",
+      "paired_bootstrap_delta_macro_f1"
+    ]
+  },
+  "coverage_policy": {
+    "do_not_compare_v2_covered_accuracy_to_v5_full_coverage_accuracy_as_gate": true,
+    "coverage_targets_selected_from_development_only": [
+      0.9343,
+      0.95,
+      1.0
+    ],
+    "abstention_counts_as_incorrect_for_full_set_accuracy": true
+  },
+  "prohibited_sources_for_training_or_tuning": [
+    "locked_test_v4_errors",
+    "locked_test_v4_labels",
+    "locked_test_v5_labels_before_final_evaluation",
+    "HCC",
+    "actor_type",
+    "network_coordinates",
+    "previous_model_predictions_as_labels",
+    "goals_previous",
+    "buzzer_status"
+  ],
+  "decision_status_values": {
+    "accepted": "INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL",
+    "rejected": "INDOBERT_V5_NOT_ACCEPTED_KEEP_CANONICAL_BASELINE"
+  }
+}
