@@ -1,7 +1,7 @@
 {
   "status": "INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL",
-  "created_at_utc": "2026-07-28T19:29:05.818086+00:00",
-  "git_head_at_inference": "c2e6785b548d1799f396ded028bd91978bb39bf0",
+  "created_at_utc": "2026-07-28T19:35:10.301960+00:00",
+  "git_head_at_inference": "da70f646c1045c19dbb922114bfc5d3ab73544a9",
   "model_artifact": "artifacts/rm2_sentiment/indobert_v5_final",
   "candidate_artifact": "artifacts/rm2_sentiment/indobert_v5_candidate",
   "locked_test_manifest": "output/rm2_sentiment/experiments/indobert_v5_final/locked_test_evaluation/LOCKED_TEST_V5_EVALUATION_MANIFEST.json",
@@ -17,7 +17,7 @@
   "component_model_count": 6,
   "precision": "bf16",
   "output": "output/rm2_sentiment/final/indobert_v5_comment_sentiment.csv",
-  "output_sha256": "de1b8e2bec225573164ba4aca06d0e2a456d1cfeea0c083ea21c8958de88fcb2",
+  "output_sha256": "0b996d5bf165e3c9d9577dd1781e77e13b7ad239b5203bbfe64c92acbd4bc648",
   "label_map": {
     "Negative": 0,
     "Neutral": 1,

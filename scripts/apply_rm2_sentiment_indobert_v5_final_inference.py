@@ -275,21 +275,22 @@ def join_v2_metadata(obs: pd.DataFrame) -> pd.DataFrame:
 def actor_type_tables(obs: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     actor = read_csv(V2_ACTOR)
     actor["username_norm"] = actor["username"].map(normalize_username)
-    account, _ = account_summary(obs)
-    merged = actor.merge(account, on="username_norm", how="left", suffixes=("", "_v5"))
+    known = actor.loc[actor["actor_type_primary"].isin(["Community Actor", "Individual Actor"]), ["username_norm", "actor_type_primary"]].drop_duplicates("username_norm")
+    actor_by_user = dict(zip(known["username_norm"], known["actor_type_primary"]))
+    comments = obs.copy()
+    comments["actor_type_primary"] = comments["username_norm"].map(actor_by_user).fillna("Mass Actor")
     rows = []
-    for actor_type, group in merged.groupby("actor_type_primary", dropna=False):
-        valid = group[pd.to_numeric(group["evaluable_comments"], errors="coerce").fillna(0) > 0]
-        n_valid = int(pd.to_numeric(valid["evaluable_comments"], errors="coerce").fillna(0).sum())
-        counts = {label: int(pd.to_numeric(valid[f"{label.lower()}_count"], errors="coerce").fillna(0).sum()) for label in LABEL_ORDER}
+    for actor_type, group in comments.groupby("actor_type_primary", dropna=False):
+        n_valid = int(len(group))
+        counts = {label: int(group["final_sentiment_label"].eq(label).sum()) for label in LABEL_ORDER}
         total = sum(counts.values())
         ratios = {label: counts[label] / total if total else 0.0 for label in LABEL_ORDER}
         dominant = max(LABEL_ORDER, key=lambda label: counts[label]) if total else "No evaluable sentiment"
         rows.append(
             {
                 "actor_type_primary": actor_type,
-                "n_accounts": int(len(group)),
-                "n_accounts_with_comments": int(valid["username_norm"].nunique()),
+                "n_accounts": int(group["username_norm"].nunique()),
+                "n_accounts_with_comments": int(group["username_norm"].nunique()),
                 "n_valid_comments": n_valid,
                 "pooled_positive_count": counts["Positive"],
                 "pooled_neutral_count": counts["Neutral"],

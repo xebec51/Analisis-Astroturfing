@@ -25,8 +25,8 @@ Frozen model: `artifacts/rm2_sentiment/indobert_v5_final`.
 
 | actor_type_primary | n_accounts | n_accounts_with_comments | n_valid_comments | pooled_positive_count | pooled_neutral_count | pooled_negative_count | pooled_positive_ratio | pooled_neutral_ratio | pooled_negative_ratio | pooled_dominant_sentiment | pooled_goal_orientation | goal_validation_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Community Actor | 218 | 207 | 945 | 289 | 541 | 87 | 0.31515812431842966 | 0.5899672846237731 | 0.09487459105779716 | Neutral | Neutral Engagement | INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL |
-| Individual Actor | 43 | 40 | 1384 | 164 | 1055 | 69 | 0.12732919254658384 | 0.8190993788819876 | 0.05357142857142857 | Neutral | Neutral Engagement | INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL |
-| Mass Actor | 26166 | 0 | 0 | 0 | 0 | 0 | 0.0 | 0.0 | 0.0 | No evaluable sentiment | Insufficient Text | INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL |
+| Community Actor | 207 | 207 | 945 | 489 | 406 | 50 | 0.5174603174603175 | 0.42962962962962964 | 0.05291005291005291 | Positive | Mixed Goals | INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL |
+| Individual Actor | 40 | 40 | 1384 | 599 | 731 | 54 | 0.4328034682080925 | 0.528179190751445 | 0.03901734104046243 | Neutral | Mixed Goals | INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL |
+| Mass Actor | 25943 | 25943 | 30734 | 9175 | 16738 | 4821 | 0.2985293160668966 | 0.5446085768204594 | 0.15686210711264398 | Neutral | Neutral Engagement | INDOBERT_V5_ACCEPTED_AS_FINAL_RM2_SENTIMENT_MODEL |
 
 Goal orientation is a descriptive message-orientation aggregate from sentiment, not evidence of intent, payment, coordination, or causal influence.
