@@ -1,12 +1,19 @@
 # IndoBERT V5 Development Plan
 
-Status: `INDOBERT_V5_DEVELOPMENT_PLAN_PREREGISTERED`
+Status: `INDOBERT_V5_DEVELOPMENT_FOLDS_READY`
 
 This plan prepares the next sentiment development cycle. V5 must not use the opened V4 locked-test errors or labels for model development. The V4 decision `INDOBERT_V4_NOT_ACCEPTED_KEEP_V2` remains unchanged.
 
 ## Data
 
 Human labels for V5 development are collected in `output/rm2_sentiment/validation/human_v5/`.
+
+Final adjudicated development registry:
+
+- `output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv`
+- Evaluable three-class rows: `977`
+- Distribution: Negative `178`, Neutral `569`, Positive `230`
+- Excluded from three-class training denominator: Uncertain `13`, No Text `10`
 
 The primary label is `sentiment_toward_target`. Rows with `Uncertain` or `No Text` are excluded from the three-class model denominator but retained in annotation audit files.
 
@@ -73,12 +80,15 @@ Risk-coverage curves must be computed from development OOF only.
 
 ## Locked Test V5
 
-The current V5 locked-test package is a candidate list pending human labels. It becomes a final locked test only after:
+The current V5 locked-test package has completed two-annotator labeling and human adjudication. It is frozen for future preregistered final evaluation, not for development-time tuning.
 
-1. Annotator 1 completes all rows.
-2. Annotator 2 completes all rows.
-3. Disagreements are adjudicated by a human.
-4. Final labels are frozen.
-5. `LOCKED_TEST_V5_FREEZE_MANIFEST.json` is updated with final label hash and freeze timestamp.
+Frozen locked-test registry:
+
+- `output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv`
+- Evaluable three-class rows: `687`
+- Distribution: Negative `134`, Neutral `380`, Positive `173`
+- Excluded from three-class evaluation denominator: Uncertain `9`, No Text `4`
+
+The Negative count is below the earlier target of 150. Do not change labels or move development data into the locked test to repair that target; report the actual distribution when V5 final evaluation is eventually run.
 
 Do not evaluate V2 or V5 on locked-test V5 until the preregistered acceptance config has already been committed and all V5 model decisions are frozen.
