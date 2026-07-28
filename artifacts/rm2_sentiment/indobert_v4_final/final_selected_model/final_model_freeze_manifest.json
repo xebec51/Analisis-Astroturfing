@@ -1,5 +1,5 @@
 {
-  "status": "FINAL_MODEL_FROZEN_BEFORE_LOCKED_TEST",
+  "status": "FINAL_MODEL_LOCKED_TEST_EVALUATED_ONCE",
   "created_at_utc": "2026-07-28T10:31:48.468768+00:00",
   "model_role": "final_selected_model",
   "final_model_uses_base_reference_checkpoint": true,
@@ -180,6 +180,69 @@
   "prediction_rule": "argmax_no_threshold_tuning",
   "locked_test_used_for_training_or_selection": false,
   "locked_test_used_for_threshold_selection": false,
-  "locked_test_evaluated": false,
-  "locked_test_execution_count": 0
+  "locked_test_evaluated": true,
+  "locked_test_execution_count": 1,
+  "locked_test_evaluation_manifest": "output/rm2_sentiment/experiments/indobert_v4_final/locked_test_evaluation/LOCKED_TEST_EVALUATION_MANIFEST.json",
+  "locked_test_metrics": {
+    "n": 672,
+    "accuracy": 0.7723214285714286,
+    "macro_f1": 0.7656419285242847,
+    "weighted_f1": 0.7745533772314175,
+    "balanced_accuracy": 0.7754368719965051,
+    "min_class_recall": 0.7155963302752294,
+    "selection_score": 0.7646002074079665,
+    "negative_precision": 0.6376811594202898,
+    "negative_recall": 0.825,
+    "negative_f1": 0.7193460490463215,
+    "negative_support": 160,
+    "neutral_precision": 0.8339350180505415,
+    "neutral_recall": 0.7857142857142857,
+    "neutral_f1": 0.809106830122592,
+    "neutral_support": 294,
+    "positive_precision": 0.8297872340425532,
+    "positive_recall": 0.7155963302752294,
+    "positive_f1": 0.7684729064039408,
+    "positive_support": 218,
+    "ece": 0.06293438153252714,
+    "brier_score": 0.3288791561294196,
+    "mean_confidence": 0.8349930644035339
+  },
+  "final_acceptance_decision": {
+    "status": "LOCKED_TEST_EVALUATED_ONCE",
+    "created_at_utc": "2026-07-28T10:32:35.186686+00:00",
+    "recommended_for_rm2_sentiment_final": true,
+    "recommendation_basis": "Recommend promotion only if locked-test accuracy >= 0.75, macro-F1 >= 0.70, and every class recall >= 0.60. These gates are report-only and were not used for tuning.",
+    "metrics": {
+      "accuracy": 0.7723214285714286,
+      "macro_f1": 0.7656419285242847,
+      "weighted_f1": 0.7745533772314175,
+      "balanced_accuracy": 0.7754368719965051,
+      "min_class_recall": 0.7155963302752294,
+      "negative_recall": 0.825,
+      "negative_f1": 0.7193460490463215,
+      "neutral_recall": 0.7857142857142857,
+      "neutral_f1": 0.809106830122592,
+      "positive_recall": 0.7155963302752294,
+      "positive_f1": 0.7684729064039408
+    },
+    "methodology": {
+      "model_selection_source": "development OOF only",
+      "locked_test_used_for_training_or_selection": false,
+      "locked_test_used_for_threshold_selection": false,
+      "prediction_rule": "argmax, no locked-test threshold tuning",
+      "label_source_column": "final_human_label",
+      "prediction_label_source_used": false,
+      "forbidden_supervision_sources": [
+        "sentiment_v2_prediction",
+        "model_prediction",
+        "lexicon",
+        "hcc",
+        "actor_type",
+        "goal_orientation",
+        "llm",
+        "locked_test"
+      ]
+    },
+    "training_manifest_selected_trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05"
+  }
 }
