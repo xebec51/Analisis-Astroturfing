@@ -60,19 +60,19 @@
   },
   "checkpoint_sha256": "2b13c75df848ca0abe02cabf8a1ace0b26814730762a4a7d506095bb518c3c52",
   "file_hashes": {
-    "config.json": "a0bde6a2be928809b38596d1e1c149d7a1a5a568bd936d4efaee196698e3a50c",
-    "cpu_inference_smoke_test.json": "cecb566744a586b8ab7e2eabf41f1306033ff4c24f184a167b2515104c8b6be9",
-    "label_map.json": "155572d5fb8cf46a85b34e70334bd4d8d6ad02e1050d9b39a11f0d7e89401d89",
+    "config.json": "7903656314b55d379cf44d6a2179ee159e5f73f77084df91c2ec89b42f75b96b",
+    "cpu_inference_smoke_test.json": "ea820cb4a9c029db61ea597b3082e8952c9cf1b2017a4f47a2ca7cb308bf964c",
+    "label_map.json": "999a6c5bb68d86de156468e38b523989fd88432bac3d9e897b1571fa26d8a7b5",
     "model.safetensors": "2b13c75df848ca0abe02cabf8a1ace0b26814730762a4a7d506095bb518c3c52",
-    "selected_trial_config.json": "5fddae56efa84515d0a7cc639d0e5beceefafd1ef5117fdc422b2ecd8aacbf24",
-    "special_tokens_map.json": "8c06bd3f930e97c86e84744a23e528a88ca60e04a731539625a38e0538210515",
+    "selected_trial_config.json": "f9ca87a32aca5bbfd4ec8b92cbdfadc28f91245f7d1f9f84b1c63cca5c24c856",
+    "special_tokens_map.json": "d2207e01f191626729e08582912c9bf23876883924839b2bbee97489f804e00e",
     "tokenizer.json": "cf77719b0af4f05ab66a4ca11b064be7687f375fd92d026aa1160d187d8192ee",
-    "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+    "tokenizer_config.json": "9f0c2c65a70ea18113ffa2e717103e7210ea826e7acc3442b69b346686b55a48"
   },
   "tokenizer_hashes": {
-    "special_tokens_map.json": "8c06bd3f930e97c86e84744a23e528a88ca60e04a731539625a38e0538210515",
+    "special_tokens_map.json": "d2207e01f191626729e08582912c9bf23876883924839b2bbee97489f804e00e",
     "tokenizer.json": "cf77719b0af4f05ab66a4ca11b064be7687f375fd92d026aa1160d187d8192ee",
-    "tokenizer_config.json": "81d76ff64c6837a77a26739668e51d61831f35d35e8a7043673b2c614a43c982"
+    "tokenizer_config.json": "9f0c2c65a70ea18113ffa2e717103e7210ea826e7acc3442b69b346686b55a48"
   },
   "prediction_rule": "argmax_no_threshold_tuning",
   "development_oof_summary_metrics": {
@@ -158,5 +158,5 @@
   "locked_test_used_for_training_or_selection": false,
   "locked_test_evaluated": false,
   "output_model_dir": "artifacts/rm2_sentiment/indobert_v4_final/base_reference",
-  "checksum_policy": "SHA256SUMS excludes *_manifest.json and SHA256SUMS.txt to avoid self-referential hashes."
+  "checksum_policy": "SHA256SUMS excludes *_manifest.json and SHA256SUMS.txt to avoid self-referential hashes. Text artifact files are committed with LF line endings via .gitattributes -text."
 }
