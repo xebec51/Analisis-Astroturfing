@@ -1,5 +1,5 @@
 {
-  "status": "LOCKED_TEST_V5_CANDIDATE_LIST_FROZEN_PENDING_HUMAN_LABELS",
+  "status": "LOCKED_TEST_V5_FINAL_LABELS_FROZEN_SEALED",
   "created_at_utc": "2026-07-28T15:00:12.583975+00:00",
   "development_rows": 1000,
   "locked_test_candidate_rows": 700,
@@ -34,8 +34,34 @@
     "locked_annotator_2": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_annotator_2.xlsx"
   },
   "freeze_scope": "comment_id_list_and_sampling_manifest_only",
-  "final_label_freeze_status": "BLOCKED_PENDING_TWO_ANNOTATORS_AND_ADJUDICATION",
-  "final_label_dataset_hash": "",
+  "final_label_freeze_status": "FROZEN_NOT_OPEN_FOR_MODEL_SELECTION",
+  "final_label_dataset_hash": "368d0a9a17dece03c2adc0f3c2ce7e3c3e1b3631e260aec8001ace3dc2ca83ec",
   "annotation_guideline_version": "SENTIMENT_TARGET_AWARE_ANNOTATION_GUIDE_V5",
-  "candidate_comment_id_hash": "88ac5e0893f71e8f943194aca17d424d99230dc01713a0d4a79fc62e75138405"
+  "candidate_comment_id_hash": "88ac5e0893f71e8f943194aca17d424d99230dc01713a0d4a79fc62e75138405",
+  "annotator_label_import_status": "ANNOTATOR_1_AND_2_IMPORTED",
+  "pre_adjudication_registry": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_pre_adjudication_registry.csv",
+  "disagreement_rows": 21,
+  "agreement_rows": 679,
+  "locked_test_v5_used_for_training_or_selection": false,
+  "final_label_registry": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv",
+  "final_label_distribution": {
+    "Negative": 134,
+    "Neutral": 380,
+    "Positive": 173,
+    "Uncertain": 9,
+    "No Text": 4
+  },
+  "final_evaluable_three_class_rows": 687,
+  "final_label_freeze_timestamp_utc": "2026-07-28T17:13:28.859001+00:00",
+  "final_split_leakage_audit": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_final_split_leakage_audit.csv",
+  "locked_test_v5_open_for_tuning": false,
+  "final_label_counts": {
+    "Negative": 134,
+    "Neutral": 380,
+    "Positive": 173,
+    "Uncertain": 9,
+    "No Text": 4
+  },
+  "model_selection_allowed_from_locked_test_v5": false,
+  "locked_test_v5_may_only_be_evaluated_after_v5_model_freeze": true
 }

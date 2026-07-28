@@ -1,0 +1,61 @@
+{
+  "status": "SENTIMENT_V5_FINAL_HUMAN_LABELS_IMPORTED",
+  "created_at_utc": "2026-07-28T17:13:28.853542+00:00",
+  "primary_label": "sentiment_toward_target",
+  "development": {
+    "rows": 1000,
+    "unique_comment_ids": 1000,
+    "disagreement_rows_adjudicated": 23,
+    "evaluable_three_class_rows": 977,
+    "label_counts": {
+      "Negative": 178,
+      "Neutral": 569,
+      "Positive": 230,
+      "Uncertain": 13,
+      "No Text": 10
+    },
+    "output": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv",
+    "label_distribution": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_label_distribution.csv",
+    "dataset_hash": "31a5537a0483405632dd8c33bf2190ca405a2e8c77f84f571328be48d1b6004c"
+  },
+  "locked_test_v5": {
+    "rows": 700,
+    "unique_comment_ids": 700,
+    "disagreement_rows_adjudicated": 21,
+    "evaluable_three_class_rows": 687,
+    "label_counts": {
+      "Negative": 134,
+      "Neutral": 380,
+      "Positive": 173,
+      "Uncertain": 9,
+      "No Text": 4
+    },
+    "output": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv",
+    "label_distribution": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen_label_distribution.csv",
+    "dataset_hash": "368d0a9a17dece03c2adc0f3c2ce7e3c3e1b3631e260aec8001ace3dc2ca83ec"
+  },
+  "leakage_audit": {
+    "development_locked_comment_id_overlap": 0,
+    "development_locked_normalized_text_overlap": 0,
+    "inj_comment_id_count": 0,
+    "development_duplicate_comment_ids": 0,
+    "locked_test_duplicate_comment_ids": 0,
+    "hard_leakage_pass": true
+  },
+  "validation_report": "output/rm2_sentiment/validation/human_v5/sentiment_v5_final_validation_report.csv",
+  "split_leakage_audit": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_final_split_leakage_audit.csv",
+  "adjudication_workbooks": {
+    "development": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_adjudication.xlsx",
+    "locked_test_canonical": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_adjudication.xlsx",
+    "locked_test_source_used": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_adjudication.xlsx",
+    "locked_test_canonical_synced_from_source": false
+  },
+  "methodology": {
+    "model_predictions_used_for_labels": false,
+    "auto_final_labels_for_disagreements": false,
+    "final_labels_from_human_agreement_or_adjudication_only": true,
+    "locked_test_v5_used_for_training_or_selection": false,
+    "v5_model_final": false,
+    "locked_test_v5_sealed_until_preregistered_final_evaluation": true
+  }
+}

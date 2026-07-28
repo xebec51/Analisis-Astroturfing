@@ -1,0 +1,4 @@
+﻿check,value,status
+development_locked_comment_id_overlap,0,PASS
+development_locked_normalized_text_overlap,0,PASS
+inj_comment_id_count,0,PASS

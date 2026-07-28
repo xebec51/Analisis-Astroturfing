@@ -1,0 +1,77 @@
+{
+  "status": "SENTIMENT_V5_FINAL_HUMAN_LABELS_FROZEN",
+  "created_at_utc": "2026-07-28T16:48:54.722505+00:00",
+  "primary_label": "sentiment_toward_target",
+  "development": {
+    "name": "development",
+    "rows": 1000,
+    "agreement_rows": 977,
+    "disagreement_rows": 23,
+    "pre_adjudication_three_class_rows": 954,
+    "sentiment_toward_target": {
+      "compared_rows": 1000,
+      "agreements": 977,
+      "disagreements": 23,
+      "raw_agreement": 0.977,
+      "cohen_kappa": 0.9614356663078507
+    },
+    "sentiment_overall": {
+      "compared_rows": 1000,
+      "agreements": 974,
+      "disagreements": 26,
+      "raw_agreement": 0.974,
+      "cohen_kappa": 0.956560021519497
+    },
+    "registry": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_pre_adjudication_registry.csv",
+    "disagreements": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_disagreements.csv",
+    "agreement_report": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_agreement_report.csv",
+    "adjudication_workbook": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_adjudication.xlsx",
+    "annotator_hashes": {
+      "sentiment_v5_development_annotator_1.xlsx": "ae79079dfe7c558f43a41b9f13589eb2326e3e1f637be9b09f25774747cd7b85",
+      "sentiment_v5_development_annotator_2.xlsx": "3cbf050de26e28a749322ac843085169207ecc86886dd18c96c6138875e2f6e2"
+    },
+    "pre_adjudication_hash": "0324508b67b0b0d36635eca10d2245432a62ca69fc94b3444b85bd60ced14d60"
+  },
+  "locked_test": {
+    "name": "locked_test",
+    "rows": 700,
+    "agreement_rows": 679,
+    "disagreement_rows": 21,
+    "pre_adjudication_three_class_rows": 668,
+    "sentiment_toward_target": {
+      "compared_rows": 700,
+      "agreements": 679,
+      "disagreements": 21,
+      "raw_agreement": 0.97,
+      "cohen_kappa": 0.9508397375443948
+    },
+    "sentiment_overall": {
+      "compared_rows": 700,
+      "agreements": 679,
+      "disagreements": 21,
+      "raw_agreement": 0.97,
+      "cohen_kappa": 0.9512012136623323
+    },
+    "registry": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_pre_adjudication_registry.csv",
+    "disagreements": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_disagreements.csv",
+    "agreement_report": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_agreement_report.csv",
+    "adjudication_workbook": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_adjudication.xlsx",
+    "annotator_hashes": {
+      "sentiment_v5_locked_test_annotator_1.xlsx": "4cda5f2813fd90d1dc5fd03046cdb89d2957191e26f4f0717c5177835a4fb189",
+      "sentiment_v5_locked_test_annotator_2.xlsx": "121e37a79d4fb90576012ee0e12069d7c5225ed387a7abeb84d3f9eabd81cec3"
+    },
+    "pre_adjudication_hash": "d18fc6b5b842a3a9d67596a7dfb2879ca6bc4dff91d0bc048a0b9d46f53af570"
+  },
+  "methodology": {
+    "auto_final_labels_for_disagreements": false,
+    "model_predictions_used_for_labels": false,
+    "locked_test_v5_used_for_training_or_selection": false,
+    "adjudication_required_before_v5_training_or_locked_evaluation": true,
+    "do_not_train_until_development_adjudication_complete": true,
+    "do_not_open_locked_test_for_model_selection": true
+  },
+  "final_import_manifest": "output/rm2_sentiment/validation/human_v5/SENTIMENT_V5_FINAL_IMPORT_MANIFEST.json",
+  "development_final_registry": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv",
+  "locked_test_final_frozen": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv",
+  "locked_test_v5_used_for_training_or_selection": false
+}

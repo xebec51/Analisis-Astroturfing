@@ -1,0 +1,8 @@
+﻿check,value,status
+development_rows,1000,PASS
+locked_test_rows,700,PASS
+development_evaluable_three_class_rows,977,PASS
+locked_test_evaluable_three_class_rows,687,PASS
+comment_id_leakage,0,PASS
+normalized_text_leakage,0,PASS
+inj_comment_id_count,0,PASS
