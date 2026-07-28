@@ -330,6 +330,8 @@ def load_folds(data: pd.DataFrame, seed: int, n_splits: int, stage: str, output_
         if "row_index" not in folds.columns:
             index_by_id = {cid: idx for idx, cid in enumerate(data["comment_id"].astype(str))}
             folds["row_index"] = folds["comment_id"].astype(str).map(index_by_id)
+        if "cv_group_id" not in folds.columns and "hard_group" in folds.columns:
+            folds["cv_group_id"] = folds["hard_group"]
         folds = folds.loc[folds["seed"].astype(int).eq(int(seed))].copy()
         if folds["fold"].nunique() != n_splits:
             raise AssertionError(f"Frozen stage2 folds for seed {seed} have {folds['fold'].nunique()} folds, expected {n_splits}")
@@ -363,6 +365,9 @@ def load_folds(data: pd.DataFrame, seed: int, n_splits: int, stage: str, output_
 
 
 def validate_fold_leakage(folds: pd.DataFrame) -> None:
+    if "cv_group_id" not in folds.columns and "hard_group" in folds.columns:
+        folds = folds.copy()
+        folds["cv_group_id"] = folds["hard_group"]
     leakage = folds.groupby(["seed", "cv_group_id"])["fold"].nunique()
     if int((leakage > 1).sum()) != 0:
         raise AssertionError("Grouped-fold leakage detected")
@@ -991,7 +996,6 @@ def train_full_model(
             "forbidden_supervision_sources": FORBIDDEN_SUPERVISION_SOURCES,
         },
     )
-    hashes = write_sha256s(model_dir)
     probs = predict_probabilities(
         model,
         tokenizer,
@@ -1002,6 +1006,22 @@ def train_full_model(
     )
     smoke = {"device": str(device), "labels": [ID_TO_LABEL[int(i)] for i in probs.argmax(axis=1)], "probability_sums": probs.sum(axis=1).tolist()}
     save_json(model_dir / "gpu_smoke_test.json", smoke)
+    model.to(torch.device("cpu"))
+    cpu_probs = predict_probabilities(
+        model,
+        tokenizer,
+        [model_input(row, trial.input_mode) for _, row in data.head(3).iterrows()],
+        trial.max_length,
+        batch_size=3,
+        device=torch.device("cpu"),
+    )
+    cpu_smoke = {
+        "device": "cpu",
+        "labels": [ID_TO_LABEL[int(i)] for i in cpu_probs.argmax(axis=1)],
+        "probability_sums": cpu_probs.sum(axis=1).tolist(),
+    }
+    save_json(model_dir / "cpu_smoke_test.json", cpu_smoke)
+    hashes = write_sha256s(model_dir)
     del model, tokenizer, optimizer, scheduler
     gc.collect()
     if device.type == "cuda":
@@ -1015,17 +1035,29 @@ def freeze_candidate(output_dir: Path, precision: str, device: torch.device) -> 
     if not selected_path.exists():
         raise FileNotFoundError("Run selection before freeze")
     selected = read_json(selected_path)
-    trial = Trial(**{key: selected["trial"][key] for key in Trial.__dataclass_fields__ if key in selected["trial"]})
+    component_trials = selected.get("component_trials") or [selected["trial"]]
+    trials = [Trial(**{key: trial_payload[key] for key in Trial.__dataclass_fields__ if key in trial_payload}) for trial_payload in component_trials]
+    trial = trials[0]
     component_seeds = selected["component_seeds"]
     final_epochs = int(selected["final_epoch_count"])
     if ARTIFACT_DIR.exists():
-        shutil.rmtree(ARTIFACT_DIR)
+        expected = (ROOT / "artifacts/rm2_sentiment/indobert_v5_candidate").resolve()
+        resolved = ARTIFACT_DIR.resolve()
+        if resolved != expected:
+            raise RuntimeError(f"Refusing to remove unexpected artifact directory: {resolved}")
+        shutil.rmtree(resolved)
     ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
     component_dirs = []
-    for seed in component_seeds:
-        subdir = ARTIFACT_DIR / ("selected_single_model" if len(component_seeds) == 1 else f"component_seed_{int(seed)}")
-        info = train_full_model(trial, data, int(seed), final_epochs, precision, device, subdir)
-        component_dirs.append({"seed": int(seed), "path": rel(subdir), **info})
+    for trial_index, component_trial in enumerate(trials, start=1):
+        for seed in component_seeds:
+            if len(trials) == 1 and len(component_seeds) == 1:
+                subdir = ARTIFACT_DIR / "selected_single_model"
+            elif len(trials) == 1:
+                subdir = ARTIFACT_DIR / f"component_seed_{int(seed)}"
+            else:
+                subdir = ARTIFACT_DIR / f"component_trial_{trial_index}_seed_{int(seed)}"
+            info = train_full_model(component_trial, data, int(seed), final_epochs, precision, device, subdir)
+            component_dirs.append({"trial_id": component_trial.trial_id, "seed": int(seed), "path": rel(subdir), **info})
     label_map = {"label_to_id": LABEL_TO_ID, "id_to_label": {str(k): v for k, v in ID_TO_LABEL.items()}}
     save_json(ARTIFACT_DIR / "label_map.json", label_map)
     save_json(
@@ -1045,6 +1077,7 @@ def freeze_candidate(output_dir: Path, precision: str, device: torch.device) -> 
         "development_class_distribution": class_distribution(data),
         "selected_candidate": selected,
         "exact_trial_id": trial.trial_id,
+        "component_trial_ids": [component_trial.trial_id for component_trial in trials],
         "component_models": component_dirs,
         "prediction_rule": selected["prediction_rule"],
         "abstention_policy_development_only": selected.get("abstention_policy", []),

@@ -6,6 +6,7 @@ import json
 import math
 import re
 import subprocess
+import sys
 from contextlib import nullcontext
 from datetime import datetime, timezone
 from pathlib import Path
@@ -26,10 +27,13 @@ from sklearn.metrics import (
 )
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from scripts.train_rm2_sentiment_indobert_v5_development import LABELS, LABEL_TO_ID, model_input, sha256_dataframe
 
 
-ROOT = Path(__file__).resolve().parents[1]
 LOCKED_REGISTRY = ROOT / "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv"
 FINAL_IMPORT_MANIFEST = ROOT / "output/rm2_sentiment/validation/human_v5/SENTIMENT_V5_FINAL_IMPORT_MANIFEST.json"
 ACCEPTANCE_CONFIG = ROOT / "configs/rm2_sentiment_v5_acceptance_preregistered.json"

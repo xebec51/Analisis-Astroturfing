@@ -1,0 +1,444 @@
+{
+  "single__stage2__indobert_base_p2__comment_only__len128__lr1em05__drop0p2__weighted_cross_entropy__ls0p0__seed42": {
+    "Negative": [
+      107,
+      25,
+      46
+    ],
+    "Neutral": [
+      63,
+      459,
+      47
+    ],
+    "Positive": [
+      27,
+      22,
+      181
+    ]
+  },
+  "single__stage2__indobert_base_p2__comment_only__len128__lr1em05__drop0p2__weighted_cross_entropy__ls0p0__seed52": {
+    "Negative": [
+      109,
+      29,
+      40
+    ],
+    "Neutral": [
+      70,
+      461,
+      38
+    ],
+    "Positive": [
+      26,
+      25,
+      179
+    ]
+  },
+  "single__stage2__indobert_base_p2__comment_only__len128__lr1em05__drop0p2__weighted_cross_entropy__ls0p0__seed62": {
+    "Negative": [
+      112,
+      24,
+      42
+    ],
+    "Neutral": [
+      73,
+      458,
+      38
+    ],
+    "Positive": [
+      26,
+      26,
+      178
+    ]
+  },
+  "single__stage2__indobert_base_p2__comment_only__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0__seed42": {
+    "Negative": [
+      109,
+      36,
+      33
+    ],
+    "Neutral": [
+      52,
+      483,
+      34
+    ],
+    "Positive": [
+      30,
+      25,
+      175
+    ]
+  },
+  "single__stage2__indobert_base_p2__comment_only__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0__seed52": {
+    "Negative": [
+      104,
+      29,
+      45
+    ],
+    "Neutral": [
+      65,
+      460,
+      44
+    ],
+    "Positive": [
+      23,
+      29,
+      178
+    ]
+  },
+  "single__stage2__indobert_base_p2__comment_only__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0__seed62": {
+    "Negative": [
+      103,
+      30,
+      45
+    ],
+    "Neutral": [
+      64,
+      465,
+      40
+    ],
+    "Positive": [
+      25,
+      21,
+      184
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025__seed42": {
+    "Negative": [
+      112,
+      32,
+      34
+    ],
+    "Neutral": [
+      48,
+      480,
+      41
+    ],
+    "Positive": [
+      31,
+      26,
+      173
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025__seed52": {
+    "Negative": [
+      105,
+      34,
+      39
+    ],
+    "Neutral": [
+      58,
+      454,
+      57
+    ],
+    "Positive": [
+      23,
+      17,
+      190
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025__seed62": {
+    "Negative": [
+      112,
+      38,
+      28
+    ],
+    "Neutral": [
+      58,
+      474,
+      37
+    ],
+    "Positive": [
+      32,
+      30,
+      168
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0__seed42": {
+    "Negative": [
+      119,
+      30,
+      29
+    ],
+    "Neutral": [
+      64,
+      460,
+      45
+    ],
+    "Positive": [
+      36,
+      33,
+      161
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0__seed52": {
+    "Negative": [
+      117,
+      27,
+      34
+    ],
+    "Neutral": [
+      71,
+      455,
+      43
+    ],
+    "Positive": [
+      26,
+      26,
+      178
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0__seed62": {
+    "Negative": [
+      111,
+      41,
+      26
+    ],
+    "Neutral": [
+      62,
+      473,
+      34
+    ],
+    "Positive": [
+      32,
+      26,
+      172
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__seed42": {
+    "Negative": [
+      108,
+      31,
+      39
+    ],
+    "Neutral": [
+      45,
+      487,
+      37
+    ],
+    "Positive": [
+      28,
+      31,
+      171
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__seed52": {
+    "Negative": [
+      98,
+      43,
+      37
+    ],
+    "Neutral": [
+      52,
+      475,
+      42
+    ],
+    "Positive": [
+      22,
+      24,
+      184
+    ]
+  },
+  "single__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__seed62": {
+    "Negative": [
+      106,
+      43,
+      29
+    ],
+    "Neutral": [
+      63,
+      465,
+      41
+    ],
+    "Positive": [
+      22,
+      23,
+      185
+    ]
+  },
+  "seed_prob_average__stage2__indobert_base_p2__comment_only__len128__lr1em05__drop0p2__weighted_cross_entropy__ls0p0": {
+    "Negative": [
+      109,
+      28,
+      41
+    ],
+    "Neutral": [
+      69,
+      463,
+      37
+    ],
+    "Positive": [
+      24,
+      27,
+      179
+    ]
+  },
+  "seed_majority_vote__stage2__indobert_base_p2__comment_only__len128__lr1em05__drop0p2__weighted_cross_entropy__ls0p0": {
+    "Negative": [
+      113,
+      24,
+      41
+    ],
+    "Neutral": [
+      73,
+      457,
+      39
+    ],
+    "Positive": [
+      23,
+      26,
+      181
+    ]
+  },
+  "seed_prob_average__stage2__indobert_base_p2__comment_only__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0": {
+    "Negative": [
+      103,
+      39,
+      36
+    ],
+    "Neutral": [
+      58,
+      477,
+      34
+    ],
+    "Positive": [
+      22,
+      23,
+      185
+    ]
+  },
+  "seed_majority_vote__stage2__indobert_base_p2__comment_only__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0": {
+    "Negative": [
+      110,
+      30,
+      38
+    ],
+    "Neutral": [
+      61,
+      473,
+      35
+    ],
+    "Positive": [
+      23,
+      24,
+      183
+    ]
+  },
+  "seed_prob_average__stage2__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025": {
+    "Negative": [
+      109,
+      36,
+      33
+    ],
+    "Neutral": [
+      56,
+      475,
+      38
+    ],
+    "Positive": [
+      24,
+      24,
+      182
+    ]
+  },
+  "seed_majority_vote__stage2__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025": {
+    "Negative": [
+      112,
+      36,
+      30
+    ],
+    "Neutral": [
+      57,
+      475,
+      37
+    ],
+    "Positive": [
+      26,
+      24,
+      180
+    ]
+  },
+  "seed_prob_average__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0": {
+    "Negative": [
+      113,
+      38,
+      27
+    ],
+    "Neutral": [
+      59,
+      478,
+      32
+    ],
+    "Positive": [
+      29,
+      29,
+      172
+    ]
+  },
+  "seed_majority_vote__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p1__weighted_cross_entropy__ls0p0": {
+    "Negative": [
+      119,
+      31,
+      28
+    ],
+    "Neutral": [
+      67,
+      468,
+      34
+    ],
+    "Positive": [
+      32,
+      22,
+      176
+    ]
+  },
+  "seed_prob_average__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0": {
+    "Negative": [
+      103,
+      38,
+      37
+    ],
+    "Neutral": [
+      51,
+      481,
+      37
+    ],
+    "Positive": [
+      20,
+      23,
+      187
+    ]
+  },
+  "seed_majority_vote__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0": {
+    "Negative": [
+      108,
+      38,
+      32
+    ],
+    "Neutral": [
+      58,
+      475,
+      36
+    ],
+    "Positive": [
+      22,
+      21,
+      187
+    ]
+  },
+  "top2_probability_blend__stage2__indobert_base_p2__context_sep_comment__len128__lr3em05__drop0p3__cross_entropy__ls0p0__PLUS__indobert_base_p2__context_sep_comment__len128__lr2em05__drop0p2__cross_entropy__ls0p025": {
+    "Negative": [
+      110,
+      35,
+      33
+    ],
+    "Neutral": [
+      52,
+      480,
+      37
+    ],
+    "Positive": [
+      21,
+      26,
+      183
+    ]
+  }
+}

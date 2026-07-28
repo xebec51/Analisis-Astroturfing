@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import math
+import sys
 from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,10 +22,13 @@ from sklearn.metrics import (
     precision_recall_fscore_support,
 )
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from scripts.train_rm2_sentiment_indobert_v5_development import LABELS, LABEL_TO_ID, Trial
 
 
-ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "output/rm2_sentiment/experiments/indobert_v5_development"
 OOF_PATH = OUT_DIR / "development_oof_predictions.csv"
 METRICS_PATH = OUT_DIR / "development_fold_seed_metrics.csv"
@@ -198,13 +202,20 @@ def risk_coverage(candidate_id: str, y_true: np.ndarray, probs: np.ndarray) -> p
 
 def parse_trial_from_oof(group: pd.DataFrame) -> Trial:
     row = group.iloc[0]
+    trial_id = str(row["trial_id"])
+    parts = trial_id.split("__")
+    loss_part = parts[-2] if len(parts) >= 2 else "cross_entropy"
+    ls_part = parts[-1].removeprefix("ls").replace("p", ".") if parts[-1].startswith("ls") else "0.0"
+    drop_part = next((part for part in parts if part.startswith("drop")), "drop0p1").removeprefix("drop").replace("p", ".")
+    lr_part = next((part for part in parts if part.startswith("lr")), "lr1em05").removeprefix("lr").replace("m", "-")
+    length_part = next((part for part in parts if part.startswith("len")), "len128").removeprefix("len")
     return Trial(
-        input_mode=str(row["input_mode"]) if "input_mode" in row else str(row["trial_id"]).split("__")[1],
-        max_length=int(row["max_length"]) if "max_length" in row else int(str(row["trial_id"]).split("__len")[1].split("__")[0]),
-        learning_rate=float(row["learning_rate"]) if "learning_rate" in row else float(str(row["trial_id"]).split("__lr")[1].split("__")[0].replace("m", "-")),
-        classifier_dropout=float(row["classifier_dropout"]) if "classifier_dropout" in row else 0.1,
-        loss=str(row["loss"]) if "loss" in row else "cross_entropy",
-        label_smoothing=float(row["label_smoothing"]) if "label_smoothing" in row else 0.0,
+        input_mode=str(row["input_mode"]) if "input_mode" in row else parts[1],
+        max_length=int(row["max_length"]) if "max_length" in row else int(length_part),
+        learning_rate=float(row["learning_rate"]) if "learning_rate" in row else float(lr_part),
+        classifier_dropout=float(row["classifier_dropout"]) if "classifier_dropout" in row else float(drop_part),
+        loss=str(row["loss"]) if "loss" in row else loss_part,
+        label_smoothing=float(row["label_smoothing"]) if "label_smoothing" in row else float(ls_part),
     )
 
 
@@ -353,9 +364,13 @@ def select_candidate(leaderboard: pd.DataFrame, metrics: pd.DataFrame, oof: pd.D
                 best_any = single
     candidate_type = str(best_any["candidate_type"])
     component_seeds = [int(x) for x in str(best_any["component_seeds"]).split(",") if str(x).strip().isdigit()]
-    trial_id = str(best_any["trial_id"]).split(" + ")[0]
-    trial_oof = oof.loc[oof["stage"].eq(stage) & oof["trial_id"].eq(trial_id)].copy()
-    trial = parse_trial_from_oof(trial_oof)
+    trial_ids = str(best_any["trial_id"]).split(" + ")
+    trial_id = trial_ids[0]
+    component_trials = []
+    for component_trial_id in trial_ids:
+        trial_oof = oof.loc[oof["stage"].eq(stage) & oof["trial_id"].eq(component_trial_id)].copy()
+        component_trials.append(asdict(parse_trial_from_oof(trial_oof)))
+    trial = Trial(**component_trials[0])
     metric_rows = metrics.loc[
         metrics["stage"].eq(stage)
         & metrics["trial_id"].eq(trial_id)
@@ -374,7 +389,9 @@ def select_candidate(leaderboard: pd.DataFrame, metrics: pd.DataFrame, oof: pd.D
         "candidate_type": candidate_type,
         "prediction_rule": "probability_average_argmax" if candidate_type in {"seed_probability_average", "top2_probability_blend"} else "three_class_argmax",
         "trial_id": trial_id,
+        "component_trial_ids": trial_ids,
         "trial": asdict(trial),
+        "component_trials": component_trials,
         "component_seeds": component_seeds,
         "final_epoch_count": final_epochs,
         "metrics": best_any,
