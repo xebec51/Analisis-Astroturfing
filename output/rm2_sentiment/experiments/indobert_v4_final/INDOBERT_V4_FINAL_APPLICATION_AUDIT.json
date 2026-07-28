@@ -1,0 +1,48 @@
+{
+  "status": "INDOBERT_V4_NOT_ACCEPTED_KEEP_V2",
+  "artifact_status": "PASS",
+  "data_status": "PASS",
+  "locked_metrics": {
+    "n": 672,
+    "accuracy": 0.7723214285714286,
+    "macro_f1": 0.7656419285242847,
+    "weighted_f1": 0.7745533772314175,
+    "balanced_accuracy": 0.7754368719965051,
+    "mcc": 0.6564857911291668,
+    "min_class_recall": 0.7155963302752294,
+    "ece": 0.0629343898363095,
+    "brier_score": 0.3288791564775636,
+    "mean_confidence": 0.8349931628720239,
+    "negative_precision": 0.6376811594202898,
+    "negative_recall": 0.825,
+    "negative_f1": 0.7193460490463215,
+    "negative_support": 160,
+    "negative_predicted_support": 207,
+    "neutral_precision": 0.8339350180505415,
+    "neutral_recall": 0.7857142857142857,
+    "neutral_f1": 0.809106830122592,
+    "neutral_support": 294,
+    "neutral_predicted_support": 277,
+    "positive_precision": 0.8297872340425532,
+    "positive_recall": 0.7155963302752294,
+    "positive_f1": 0.7684729064039408,
+    "positive_support": 218,
+    "positive_predicted_support": 188
+  },
+  "failed_criteria": [
+    "accuracy_gte_0p8159"
+  ],
+  "full_inference_run": false,
+  "canonical_model_pointer_exists": false,
+  "final_model_dir_exists": false,
+  "docs": [
+    "docs/INDOBERT_V4_ARTIFACT_AUDIT.md",
+    "docs/INDOBERT_V4_DATA_INTEGRITY_AUDIT.md",
+    "docs/INDOBERT_V4_FINAL_REPORT.md",
+    "docs/RM2_GOALS_INTERPRETATION_GUIDE.md"
+  ],
+  "runtime": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

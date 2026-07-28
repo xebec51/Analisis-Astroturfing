@@ -28,6 +28,7 @@ from sklearn.metrics import (
     balanced_accuracy_score,
     confusion_matrix,
     f1_score,
+    matthews_corrcoef,
     precision_recall_fscore_support,
 )
 from sklearn.model_selection import StratifiedGroupKFold
@@ -712,6 +713,7 @@ def metric_bundle(y_true: np.ndarray, probs: np.ndarray) -> dict[str, Any]:
         "macro_f1": float(f1_score(y_true, pred, labels=list(range(len(LABELS))), average="macro", zero_division=0)),
         "weighted_f1": float(f1_score(y_true, pred, labels=list(range(len(LABELS))), average="weighted", zero_division=0)),
         "balanced_accuracy": float(balanced_accuracy_score(y_true, pred)),
+        "mcc": float(matthews_corrcoef(y_true, pred)),
         "min_class_recall": float(np.min(recall)),
     }
     metrics["selection_score"] = float(

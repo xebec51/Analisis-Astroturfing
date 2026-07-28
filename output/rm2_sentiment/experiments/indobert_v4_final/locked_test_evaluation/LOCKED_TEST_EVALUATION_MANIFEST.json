@@ -55,23 +55,26 @@
     "macro_f1": 0.7656419285242847,
     "weighted_f1": 0.7745533772314175,
     "balanced_accuracy": 0.7754368719965051,
+    "mcc": 0.6564857911291668,
     "min_class_recall": 0.7155963302752294,
-    "selection_score": 0.7646002074079665,
+    "ece": 0.0629343898363095,
+    "brier_score": 0.3288791564775636,
+    "mean_confidence": 0.8349931628720239,
     "negative_precision": 0.6376811594202898,
     "negative_recall": 0.825,
     "negative_f1": 0.7193460490463215,
     "negative_support": 160,
+    "negative_predicted_support": 207,
     "neutral_precision": 0.8339350180505415,
     "neutral_recall": 0.7857142857142857,
     "neutral_f1": 0.809106830122592,
     "neutral_support": 294,
+    "neutral_predicted_support": 277,
     "positive_precision": 0.8297872340425532,
     "positive_recall": 0.7155963302752294,
     "positive_f1": 0.7684729064039408,
     "positive_support": 218,
-    "ece": 0.06293438153252714,
-    "brier_score": 0.3288791561294196,
-    "mean_confidence": 0.8349930644035339
+    "positive_predicted_support": 188
   },
   "package_versions": {
     "python": "3.10.8",
@@ -94,5 +97,14 @@
     "cuda_total_memory_bytes": 17175150592,
     "bf16_supported": true
   },
-  "training_manifest_selected_trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05"
+  "training_manifest_selected_trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+  "strict_acceptance_reviewed_at_utc": "2026-07-28T14:31:06.132727+00:00",
+  "probability_checks": {
+    "finite": true,
+    "sum_close_to_one_atol_1e_minus_5": true,
+    "max_abs_sum_error": 1.3499999995669754e-07,
+    "predicted_label_matches_argmax": true
+  },
+  "strict_acceptance_criteria_version": "indobert_v4_final_application_2026_07_28",
+  "locked_test_rerun_performed_by_audit": false
 }
