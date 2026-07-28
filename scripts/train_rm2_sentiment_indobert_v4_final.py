@@ -43,6 +43,8 @@ MODEL_DIR = ROOT / "output/rm2_sentiment/model/indobert_v4_final_candidate"
 LABELS = ["Negative", "Neutral", "Positive"]
 LABEL_TO_ID = {label: idx for idx, label in enumerate(LABELS)}
 ID_TO_LABEL = {idx: label for label, idx in LABEL_TO_ID.items()}
+OOF_KEYS = ["trial_id", "seed", "fold", "comment_id"]
+METRIC_KEYS = ["trial_id", "seed", "fold"]
 FORBIDDEN_LABEL_SOURCES = [
     "sentiment_v2_prediction",
     "model_prediction",
@@ -153,6 +155,21 @@ def upsert_rows_csv(path: Path, rows: list[dict[str, Any]], subset: list[str]) -
     if available_subset:
         combined = combined.drop_duplicates(subset=available_subset, keep="last")
     combined.to_csv(path, index=False, encoding="utf-8-sig")
+
+
+def dedupe_frame(frame: pd.DataFrame, keys: list[str]) -> pd.DataFrame:
+    if frame.empty:
+        return frame
+    missing = sorted(set(keys) - set(frame.columns))
+    if missing:
+        raise ValueError(f"Cannot de-duplicate frame missing keys: {missing}")
+    return frame.drop_duplicates(keys, keep="last").reset_index(drop=True)
+
+
+def dedupe_records(records: list[dict[str, Any]], keys: list[str]) -> list[dict[str, Any]]:
+    if not records:
+        return records
+    return dedupe_frame(pd.DataFrame(records), keys).to_dict("records")
 
 
 def to_jsonable(value: Any) -> Any:
@@ -1238,6 +1255,8 @@ def main() -> None:
     if args.resume and (OUT_DIR / "development_fold_seed_metrics.csv").exists() and (OUT_DIR / "development_oof_predictions.csv").exists():
         existing_metrics = pd.read_csv(OUT_DIR / "development_fold_seed_metrics.csv", dtype=str, keep_default_na=False)
         existing_oof = pd.read_csv(OUT_DIR / "development_oof_predictions.csv", dtype=str, keep_default_na=False)
+        existing_metrics = dedupe_frame(existing_metrics, METRIC_KEYS)
+        existing_oof = dedupe_frame(existing_oof, OOF_KEYS)
         completed_by_seed = (
             existing_metrics.loc[existing_metrics["fold"].eq("ALL_OOF")]
             .groupby("trial_id")["seed"]
@@ -1273,6 +1292,8 @@ def main() -> None:
                 if device.type == "cuda":
                     torch.cuda.empty_cache()
         grid_rows.append(row)
+        all_oof = dedupe_records(all_oof, OOF_KEYS)
+        all_metrics = dedupe_records(all_metrics, METRIC_KEYS)
         pd.DataFrame(grid_rows).to_csv(OUT_DIR / "candidate_grid_manifest.csv", index=False, encoding="utf-8-sig")
         if all_oof:
             pd.DataFrame(all_oof).to_csv(OUT_DIR / "development_oof_predictions.csv", index=False, encoding="utf-8-sig")
@@ -1281,8 +1302,8 @@ def main() -> None:
 
     if not all_metrics:
         raise RuntimeError("No V4 IndoBERT trials completed.")
-    oof = pd.DataFrame(all_oof)
-    metrics = pd.DataFrame(all_metrics)
+    oof = dedupe_frame(pd.DataFrame(all_oof), OOF_KEYS)
+    metrics = dedupe_frame(pd.DataFrame(all_metrics), METRIC_KEYS)
     summary = summarize_trials(metrics)
     if summary.empty:
         raise RuntimeError("No completed ALL_OOF metrics available for model selection.")
