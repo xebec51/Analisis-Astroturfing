@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-07-28T10:29:37.190761+00:00",
+  "base_trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
+  "large_candidates": [
+    "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+    "indobenchmark__indobert-large-p2__context_sep_comment__len192__lr1p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03"
+  ],
+  "best_large_trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len192__lr1p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+  "base_seed42_macro_f1": 0.8844353150233735,
+  "best_large_seed42_macro_f1": 0.8449080852702412,
+  "base_seed42_selection_score": 0.8848378680704895,
+  "best_large_seed42_selection_score": 0.8405781504831847,
+  "macro_delta_vs_base": -0.039527229753132276,
+  "selection_delta_vs_base": -0.04425971758730474,
+  "min_recall_delta_vs_base": -0.08127208480565373,
+  "fold_wins": [
+    {
+      "large_trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+      "macro_f1_fold_wins": 0,
+      "selection_score_fold_wins": 0
+    },
+    {
+      "large_trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len192__lr1p0em05__warm0p1__wd0p05__drop0p2__weighted_cross_entropy__ls0p03",
+      "macro_f1_fold_wins": 0,
+      "selection_score_fold_wins": 0
+    }
+  ],
+  "criteria": {
+    "macro_or_selection_not_lower_by_more_than_0p005": false,
+    "competitive_on_at_least_3_folds": false,
+    "min_class_recall_not_down_more_than_0p02": false,
+    "training_stable": true
+  },
+  "continue_large_to_seeds_52_62": false,
+  "decision": "stop_large_search_keep_base",
+  "locked_test_used": false
+}

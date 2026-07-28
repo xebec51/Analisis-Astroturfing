@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-07-28T08:52:38.522341+00:00",
+  "cleanup_reason": "Remove pre-patch partial large fold so staged screening reruns with best checkpoint restoration.",
+  "trial_id": "indobenchmark__indobert-large-p2__context_sep_comment__len128__lr8p0em06__warm0p06__wd0p01__drop0p1__cross_entropy__ls0p0",
+  "seed": 42,
+  "removed_rows": {
+    "development_oof_predictions.csv": 339,
+    "development_fold_seed_metrics.csv": 1,
+    "development_trial_summary.csv": 0
+  },
+  "base_and_tweet_outputs_preserved": true,
+  "backup_available": "output/rm2_sentiment/experiments/indobert_v4_final/backups/20260728_162052"
+}

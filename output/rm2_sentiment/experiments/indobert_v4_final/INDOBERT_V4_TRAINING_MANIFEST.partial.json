@@ -1,6 +1,6 @@
 {
   "status": "INDOBERT_V4_DEVELOPMENT_SEARCH_PARTIAL",
-  "created_at_utc": "2026-07-28T07:32:03.755356+00:00",
+  "created_at_utc": "2026-07-28T10:26:22.341983+00:00",
   "development_registry": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_development_final_registry.csv",
   "locked_test_registry": "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_locked_test_final_frozen.csv",
   "development_evaluable_rows": 1824,
@@ -16,8 +16,8 @@
   "locked_test_used_for_threshold_selection": false,
   "full_corpus_inference_run": false,
   "selection_basis": "partial development OOF summary only; no final model frozen in this run",
-  "planned_trials_in_this_invocation": 10,
-  "completed_trials_total": 10,
+  "planned_trials_in_this_invocation": 1,
+  "completed_trials_total": 12,
   "current_best_trial_id": "indobenchmark__indobert-base-p2__context_sep_comment__len256__lr3p0em05__warm0p06__wd0p05__drop0p3__focal_loss__ls0p05",
   "current_best_mean_selection_score": 0.8796612825019942,
   "device_info": {
