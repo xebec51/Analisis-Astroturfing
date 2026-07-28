@@ -23,6 +23,8 @@ HUMAN_V5_DIR = ROOT / "output/rm2_sentiment/validation/human_v5"
 LOCKED_V5_DIR = ROOT / "output/rm2_sentiment/validation/human_v5_locked_test"
 DEV_CANDIDATES = HUMAN_V5_DIR / "sentiment_v5_development_candidates.csv"
 LOCKED_CANDIDATES = LOCKED_V5_DIR / "sentiment_v5_locked_test_candidates.csv"
+DEV_FINAL = HUMAN_V5_DIR / "sentiment_v5_development_final_registry.csv"
+LOCKED_FINAL = LOCKED_V5_DIR / "sentiment_v5_locked_test_final_frozen.csv"
 OUT_DIR = ROOT / "output/rm2_sentiment/experiments/indobert_v5_development"
 ACCEPTANCE_CONFIG = ROOT / "configs/rm2_sentiment_v5_acceptance_preregistered.json"
 
@@ -64,7 +66,14 @@ def rel(path: Path) -> str:
 
 
 def git_head() -> str:
-    return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    try:
+        return subprocess.check_output(
+            ["git", "-c", f"safe.directory={ROOT.as_posix()}", "rev-parse", "HEAD"],
+            cwd=ROOT,
+            text=True,
+        ).strip()
+    except Exception:
+        return "UNKNOWN_GIT_HEAD"
 
 
 def read_csv(path: Path) -> pd.DataFrame:
@@ -160,13 +169,23 @@ def build_trials() -> list[Trial]:
 
 
 def completed_development_frame() -> pd.DataFrame:
-    if not DEV_CANDIDATES.exists():
-        raise FileNotFoundError(DEV_CANDIDATES)
-    frame = read_csv(DEV_CANDIDATES)
-    label_col = "sentiment_toward_target"
-    mask = frame[label_col].isin(LABELS)
+    if DEV_FINAL.exists():
+        frame = read_csv(DEV_FINAL)
+        label_col = "final_human_label"
+        if "evaluable_three_class" in frame.columns:
+            evaluable = frame["evaluable_three_class"].astype(str).str.lower().isin({"true", "1", "yes"})
+        else:
+            evaluable = frame[label_col].isin(LABELS)
+    elif DEV_CANDIDATES.exists():
+        frame = read_csv(DEV_CANDIDATES)
+        label_col = "sentiment_toward_target"
+        evaluable = frame[label_col].isin(LABELS)
+    else:
+        raise FileNotFoundError(DEV_FINAL)
+    mask = evaluable & frame[label_col].isin(LABELS)
     data = frame.loc[mask].copy()
     data["label_id"] = data[label_col].map(LABEL_TO_ID).astype(int)
+    data["training_label"] = data[label_col]
     data["normalized_text_group"] = data["comment_text"].map(normalize_text).str.lower()
     data["hard_group"] = data["normalized_text_group"].where(data["normalized_text_group"].ne(""), data["comment_id"])
     return data
@@ -175,17 +194,33 @@ def completed_development_frame() -> pd.DataFrame:
 def validate_candidate_lists() -> dict[str, Any]:
     dev = read_csv(DEV_CANDIDATES)
     locked = read_csv(LOCKED_CANDIDATES)
+    dev_final = read_csv(DEV_FINAL) if DEV_FINAL.exists() else pd.DataFrame()
+    locked_final = read_csv(LOCKED_FINAL) if LOCKED_FINAL.exists() else pd.DataFrame()
     dev_ids = set(dev["comment_id"])
     locked_ids = set(locked["comment_id"])
     dev_text = set(dev["comment_text"].map(normalize_text).str.lower())
     locked_text = set(locked["comment_text"].map(normalize_text).str.lower())
+    development_labels_available = 0
+    development_final_distribution: dict[str, int] = {}
+    if not dev_final.empty:
+        development_labels_available = int(dev_final["final_human_label"].isin(LABELS).sum())
+        development_final_distribution = {
+            label: int(dev_final["final_human_label"].eq(label).sum())
+            for label in LABELS
+        }
+    elif "sentiment_toward_target" in dev.columns:
+        development_labels_available = int(dev["sentiment_toward_target"].isin(LABELS).sum())
     return {
         "development_rows": int(len(dev)),
         "locked_test_candidate_rows": int(len(locked)),
         "comment_id_overlap": int(len(dev_ids & locked_ids)),
         "normalized_text_overlap": int(len((dev_text & locked_text) - {""})),
-        "development_labels_available": int(dev["sentiment_toward_target"].isin(LABELS).sum()),
-        "locked_labels_available": int(locked["sentiment_toward_target"].isin(LABELS).sum()) if "sentiment_toward_target" in locked.columns else 0,
+        "development_final_registry": rel(DEV_FINAL) if DEV_FINAL.exists() else "",
+        "development_labels_available": development_labels_available,
+        "development_final_distribution": development_final_distribution,
+        "locked_test_final_frozen": rel(LOCKED_FINAL) if LOCKED_FINAL.exists() else "",
+        "locked_test_final_rows_sealed": int(len(locked_final)) if not locked_final.empty else 0,
+        "locked_labels_available_for_training": 0,
         "locked_test_v5_used_for_training": False,
     }
 
@@ -207,7 +242,7 @@ def build_fold_assignments(data: pd.DataFrame, n_splits: int) -> pd.DataFrame:
                         "row_index": int(row_idx),
                         "annotation_id": row["annotation_id"],
                         "comment_id": row["comment_id"],
-                        "label": row["sentiment_toward_target"],
+                        "label": row["training_label"],
                         "hard_group": row["hard_group"],
                         "video_id": row["video_id"],
                     }
@@ -229,8 +264,13 @@ def write_plan_outputs() -> dict[str, Any]:
     )
     risk.to_csv(OUT_DIR / "development_risk_coverage_policy.csv", index=False, encoding="utf-8-sig")
     validation = validate_candidate_lists()
+    pipeline_status = (
+        "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_FINAL_HUMAN_LABELS"
+        if validation["development_labels_available"] >= 100
+        else "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_PENDING_HUMAN_LABELS"
+    )
     manifest = {
-        "status": "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_PENDING_HUMAN_LABELS",
+        "status": pipeline_status,
         "created_at_utc": utc_now(),
         "git_sha": git_head(),
         "primary_label": "sentiment_toward_target",
@@ -240,6 +280,7 @@ def write_plan_outputs() -> dict[str, Any]:
         "selection_source": "development_oof_only",
         "locked_test_v4_errors_used": False,
         "locked_test_v5_labels_used_for_training_or_selection": False,
+        "locked_test_v5_labels_sealed_until_model_freeze": LOCKED_FINAL.exists(),
         "acceptance_config": rel(ACCEPTANCE_CONFIG),
         "acceptance_config_sha256": sha256_file(ACCEPTANCE_CONFIG) if ACCEPTANCE_CONFIG.exists() else "",
         "selection_score": {
@@ -252,6 +293,9 @@ def write_plan_outputs() -> dict[str, Any]:
         "outputs": {
             "candidate_grid": rel(OUT_DIR / "candidate_grid_manifest.csv"),
             "risk_coverage_policy": rel(OUT_DIR / "development_risk_coverage_policy.csv"),
+            "development_fold_assignments": rel(OUT_DIR / "development_grouped_fold_assignments.csv")
+            if (OUT_DIR / "development_grouped_fold_assignments.csv").exists()
+            else "",
         },
     }
     write_json(OUT_DIR / "INDOBERT_V5_DEVELOPMENT_PIPELINE_MANIFEST.json", manifest)
@@ -269,9 +313,11 @@ def main() -> None:
         if len(data) < 100:
             raise RuntimeError("Human V5 development labels are not ready; refusing to create folds.")
         folds = build_fold_assignments(data, args.n_splits)
-        folds.to_csv(OUT_DIR / "development_grouped_fold_assignments.csv", index=False, encoding="utf-8-sig")
+        fold_path = OUT_DIR / "development_grouped_fold_assignments.csv"
+        folds.to_csv(fold_path, index=False, encoding="utf-8-sig")
         manifest["status"] = "INDOBERT_V5_DEVELOPMENT_FOLDS_READY"
         manifest["fold_assignment_rows"] = int(len(folds))
+        manifest["outputs"]["development_fold_assignments"] = rel(fold_path)
         write_json(OUT_DIR / "INDOBERT_V5_DEVELOPMENT_PIPELINE_MANIFEST.json", manifest)
     print(json.dumps({"status": manifest["status"], "candidate_trial_count": manifest["candidate_trial_count"]}, indent=2), flush=True)
 

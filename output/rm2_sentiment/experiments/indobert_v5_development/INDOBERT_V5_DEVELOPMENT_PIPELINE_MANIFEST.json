@@ -1,7 +1,7 @@
 {
-  "status": "INDOBERT_V5_DEVELOPMENT_PIPELINE_READY_PENDING_HUMAN_LABELS",
-  "created_at_utc": "2026-07-28T15:02:28.387734+00:00",
-  "git_sha": "8d0e7620791d8c490e6edfb068cb1e33171b0977",
+  "status": "INDOBERT_V5_DEVELOPMENT_FOLDS_READY",
+  "created_at_utc": "2026-07-28T17:13:37.259145+00:00",
+  "git_sha": "27bdc2a2c8c62808894f1375a21b5d342da38716",
   "primary_label": "sentiment_toward_target",
   "label_order": [
     "Negative",
@@ -17,8 +17,9 @@
   "selection_source": "development_oof_only",
   "locked_test_v4_errors_used": false,
   "locked_test_v5_labels_used_for_training_or_selection": false,
+  "locked_test_v5_labels_sealed_until_model_freeze": true,
   "acceptance_config": "configs/rm2_sentiment_v5_acceptance_preregistered.json",
-  "acceptance_config_sha256": "6f672bacca3b749898c083c3e31204a2cf60cad299414255a0694f0e80ac2d42",
+  "acceptance_config_sha256": "194177c718683c8e43ab72ca7975f58628e4061388bf020ada96862482c6b428",
   "selection_score": {
     "base": "macro_f1 + balanced_accuracy + mcc + min_class_recall + positive_recall",
     "stability_penalty": "seed metric standard deviation",
@@ -30,12 +31,22 @@
     "locked_test_candidate_rows": 700,
     "comment_id_overlap": 0,
     "normalized_text_overlap": 0,
-    "development_labels_available": 0,
-    "locked_labels_available": 0,
+    "development_final_registry": "output/rm2_sentiment/validation/human_v5/sentiment_v5_development_final_registry.csv",
+    "development_labels_available": 977,
+    "development_final_distribution": {
+      "Negative": 178,
+      "Neutral": 569,
+      "Positive": 230
+    },
+    "locked_test_final_frozen": "output/rm2_sentiment/validation/human_v5_locked_test/sentiment_v5_locked_test_final_frozen.csv",
+    "locked_test_final_rows_sealed": 700,
+    "locked_labels_available_for_training": 0,
     "locked_test_v5_used_for_training": false
   },
   "outputs": {
     "candidate_grid": "output/rm2_sentiment/experiments/indobert_v5_development/candidate_grid_manifest.csv",
-    "risk_coverage_policy": "output/rm2_sentiment/experiments/indobert_v5_development/development_risk_coverage_policy.csv"
-  }
+    "risk_coverage_policy": "output/rm2_sentiment/experiments/indobert_v5_development/development_risk_coverage_policy.csv",
+    "development_fold_assignments": "output/rm2_sentiment/experiments/indobert_v5_development/development_grouped_fold_assignments.csv"
+  },
+  "fold_assignment_rows": 2931
 }
