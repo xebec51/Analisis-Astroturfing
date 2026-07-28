@@ -215,7 +215,7 @@ def write_sha256s(model_dir: Path) -> dict[str, str]:
     hashes = {
         path.name: sha256_file(path)
         for path in sorted(model_dir.glob("*"))
-        if path.is_file() and path.name != "SHA256SUMS.txt"
+        if path.is_file() and path.name != "SHA256SUMS.txt" and not path.name.endswith("_manifest.json")
     }
     lines = [f"{digest}  {name}" for name, digest in sorted(hashes.items())]
     (model_dir / "SHA256SUMS.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
