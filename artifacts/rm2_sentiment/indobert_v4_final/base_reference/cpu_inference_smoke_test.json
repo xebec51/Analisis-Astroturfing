@@ -50,5 +50,8 @@
       "probability_sum": 0.9999999552965164,
       "all_finite": true
     }
-  ]
+  ],
+  "remote_download_success": true,
+  "checksum_verified": true,
+  "remote_verification_commit": "bf8c2eb"
 }

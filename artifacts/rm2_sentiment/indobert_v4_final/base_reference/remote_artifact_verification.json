@@ -1,0 +1,11 @@
+{
+  "remote_download_success": true,
+  "checksum_verified": true,
+  "cpu_model_load_success": true,
+  "cpu_inference_success": true,
+  "verification_clone_root": "C:\\Users\\User\\AppData\\Local\\Temp\\rm2_base_remote_verify_20260728_164820",
+  "model_size_bytes": 497798148,
+  "model_dir": "artifacts/rm2_sentiment/indobert_v4_final/base_reference",
+  "commit_verified": "bf8c2eb",
+  "method": "fresh git clone + git lfs pull + scripts/predict_rm2_sentiment_cpu.py"
+}
