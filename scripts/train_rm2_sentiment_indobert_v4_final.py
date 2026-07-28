@@ -10,6 +10,8 @@ import os
 import platform
 import random
 import re
+import shutil
+import subprocess
 import sys
 import unicodedata
 from contextlib import nullcontext
@@ -39,12 +41,15 @@ DEV_REGISTRY = ROOT / "output/rm2_sentiment/validation/human_master_v4/sentiment
 LOCKED_REGISTRY = ROOT / "output/rm2_sentiment/validation/human_master_v4/sentiment_v4_locked_test_final_frozen.csv"
 OUT_DIR = ROOT / "output/rm2_sentiment/experiments/indobert_v4_final"
 MODEL_DIR = ROOT / "output/rm2_sentiment/model/indobert_v4_final_candidate"
+ARTIFACT_MODEL_ROOT = ROOT / "artifacts/rm2_sentiment/indobert_v4_final"
+CHECKPOINT_ROOT = OUT_DIR / "checkpoints"
 
 LABELS = ["Negative", "Neutral", "Positive"]
 LABEL_TO_ID = {label: idx for idx, label in enumerate(LABELS)}
 ID_TO_LABEL = {idx: label for label, idx in LABEL_TO_ID.items()}
 OOF_KEYS = ["trial_id", "seed", "fold", "comment_id"]
 METRIC_KEYS = ["trial_id", "seed", "fold"]
+MODEL_HASH_SUFFIXES = {".safetensors", ".bin", ".json", ".txt", ".vocab", ".model"}
 FORBIDDEN_LABEL_SOURCES = [
     "sentiment_v2_prediction",
     "model_prediction",
@@ -198,6 +203,25 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def model_file_hashes(model_dir: Path) -> dict[str, str]:
+    return {
+        path.name: sha256_file(path)
+        for path in sorted(model_dir.glob("*"))
+        if path.is_file() and (path.suffix in MODEL_HASH_SUFFIXES or path.name == "SHA256SUMS.txt")
+    }
+
+
+def write_sha256s(model_dir: Path) -> dict[str, str]:
+    hashes = {
+        path.name: sha256_file(path)
+        for path in sorted(model_dir.glob("*"))
+        if path.is_file() and path.name != "SHA256SUMS.txt"
+    }
+    lines = [f"{digest}  {name}" for name, digest in sorted(hashes.items())]
+    (model_dir / "SHA256SUMS.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return hashes
+
+
 def sha256_dataframe(frame: pd.DataFrame, columns: list[str]) -> str:
     data = frame[columns].sort_values(columns).to_csv(index=False).encode("utf-8")
     return hashlib.sha256(data).hexdigest()
@@ -218,6 +242,20 @@ def package_versions() -> dict[str, str]:
         except Exception as exc:  # pragma: no cover
             versions[package] = f"unavailable:{exc}"
     return versions
+
+
+def git_head() -> str:
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=ROOT,
+            check=True,
+            text=True,
+            capture_output=True,
+        )
+        return result.stdout.strip()
+    except Exception:
+        return ""
 
 
 def device_info() -> dict[str, Any]:
@@ -445,6 +483,30 @@ def build_trials(models: list[str], search_profile: str) -> list[Trial]:
         keep = {large, base, tweet}
         planned = [trial for trial in planned if trial.model_id in keep][:6]
     return planned
+
+
+def select_only_trial_id(trials: list[Trial], only_trial_id: str | None) -> list[Trial]:
+    if not only_trial_id:
+        return trials
+    selected = [trial for trial in trials if trial.trial_id == only_trial_id]
+    if not selected:
+        available = "\n".join(trial.trial_id for trial in trials)
+        raise ValueError(f"--only-trial-id not found: {only_trial_id}\nAvailable trial ids:\n{available}")
+    if len(selected) != 1:
+        raise ValueError(f"--only-trial-id matched {len(selected)} trials, expected exactly one: {only_trial_id}")
+    return selected
+
+
+def cleanup_checkpoint(path_text: str) -> str:
+    if not path_text:
+        return "not_applicable"
+    path = ROOT / path_text
+    try:
+        if path.exists():
+            shutil.rmtree(path)
+        return "deleted_after_fold_checkpointed"
+    except Exception as exc:  # pragma: no cover - filesystem dependent
+        return f"cleanup_failed:{exc!r}"
 
 
 def batch_plan(trial: Trial, device: torch.device) -> tuple[int, int]:
@@ -700,6 +762,7 @@ def train_one_fold(
     val_texts: list[str],
     val_y: np.ndarray,
     seed: int,
+    fold: str,
     max_epochs: int,
     patience: int,
     device: torch.device,
@@ -729,6 +792,10 @@ def train_one_fold(
     best_epoch = 0
     stagnant = 0
     store_best_state = trial.model_family != "large"
+    checkpoint_path = CHECKPOINT_ROOT / trial.trial_id / f"seed_{seed}" / f"fold_{fold}"
+    best_checkpoint_saved = False
+    best_checkpoint_restored = False
+    checkpoint_cleanup_status = "not_applicable"
     optimizer.zero_grad(set_to_none=True)
     global_step = 0
 
@@ -787,6 +854,11 @@ def train_one_fold(
             best_epoch = epoch
             if store_best_state:
                 best_state = {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
+            else:
+                checkpoint_path.mkdir(parents=True, exist_ok=True)
+                model.save_pretrained(checkpoint_path, safe_serialization=True)
+                best_checkpoint_saved = True
+                checkpoint_cleanup_status = "pending"
             stagnant = 0
         else:
             stagnant += 1
@@ -795,6 +867,17 @@ def train_one_fold(
 
     if best_state is not None:
         model.load_state_dict(best_state)
+    elif best_checkpoint_saved:
+        del model
+        gc.collect()
+        if device.type == "cuda":
+            torch.cuda.empty_cache()
+        model = AutoModelForSequenceClassification.from_pretrained(
+            checkpoint_path,
+            trust_remote_code=False,
+        )
+        model.to(device)
+        best_checkpoint_restored = True
     probs = predict_proba(
         model,
         tokenizer,
@@ -814,12 +897,19 @@ def train_one_fold(
             "gradient_accumulation_steps": int(grad_accum),
             "effective_batch_size": int(per_device_batch * grad_accum),
             "optimizer_steps": int(global_step),
-            "best_state_restored": bool(best_state is not None),
+            "best_state_restored": bool(best_state is not None or best_checkpoint_restored),
             "best_state_restore_note": (
-                "disabled_for_large_model_resource_stability"
-                if not store_best_state
+                "best_checkpoint_restored_from_disk"
+                if best_checkpoint_restored
                 else "best_validation_state_restored"
+                if store_best_state
+                else "best_checkpoint_not_available"
             ),
+            "best_selection_score": float(best_metrics["selection_score"]) if best_metrics else None,
+            "checkpoint_path": checkpoint_path.relative_to(ROOT).as_posix() if best_checkpoint_saved else "",
+            "best_checkpoint_saved": bool(best_checkpoint_saved),
+            "best_checkpoint_restored": bool(best_checkpoint_restored),
+            "checkpoint_cleanup_status": checkpoint_cleanup_status,
         }
     )
     del model, tokenizer, optimizer, scheduler, scaler, best_state
@@ -909,6 +999,7 @@ def run_trial(
                 data.iloc[val_idx]["model_input"].tolist(),
                 y_all[val_idx],
                 seed,
+                str(fold),
                 max_epochs,
                 patience,
                 device,
@@ -964,6 +1055,13 @@ def run_trial(
                 fold_oof_rows,
                 ["trial_id", "seed", "fold", "comment_id"],
             )
+            cleanup_status = cleanup_checkpoint(str(fold_metric_row.get("checkpoint_path", "")))
+            fold_metric_row["checkpoint_cleanup_status"] = cleanup_status
+            upsert_rows_csv(
+                OUT_DIR / "development_fold_seed_metrics.csv",
+                [fold_metric_row],
+                ["trial_id", "seed", "fold"],
+            )
             log_event(
                 {
                     "event": "fold_complete_checkpointed",
@@ -972,6 +1070,12 @@ def run_trial(
                     "fold": fold,
                     "macro_f1": fold_metrics["macro_f1"],
                     "accuracy": fold_metrics["accuracy"],
+                    "best_epoch": fold_metrics["best_epoch"],
+                    "best_selection_score": fold_metrics.get("best_selection_score"),
+                    "checkpoint_path": fold_metric_row.get("checkpoint_path", ""),
+                    "best_checkpoint_saved": fold_metric_row.get("best_checkpoint_saved", False),
+                    "best_checkpoint_restored": fold_metric_row.get("best_checkpoint_restored", False),
+                    "checkpoint_cleanup_status": cleanup_status,
                 }
             )
         if not seed_seen.all():
@@ -1080,6 +1184,8 @@ def train_final_model(
     epochs: int,
     device: torch.device,
     precision: str,
+    output_model_dir: Path = MODEL_DIR,
+    model_role: str = "final_selected_model",
 ) -> dict[str, Any]:
     set_seed(seed)
     data = data.copy()
@@ -1140,13 +1246,14 @@ def train_final_model(
             flush=True,
         )
 
-    MODEL_DIR.mkdir(parents=True, exist_ok=True)
-    model.save_pretrained(MODEL_DIR, safe_serialization=True)
-    tokenizer.save_pretrained(MODEL_DIR)
-    save_json(MODEL_DIR / "label_map.json", {"label_to_id": LABEL_TO_ID, "id_to_label": ID_TO_LABEL})
+    output_model_dir.mkdir(parents=True, exist_ok=True)
+    model.save_pretrained(output_model_dir, safe_serialization=True)
+    tokenizer.save_pretrained(output_model_dir)
+    save_json(output_model_dir / "label_map.json", {"label_to_id": LABEL_TO_ID, "id_to_label": ID_TO_LABEL})
     training_config = {
         **asdict(trial),
         "trial_id": trial.trial_id,
+        "model_role": model_role,
         "model_revision": commit,
         "final_seed": int(seed),
         "final_epochs": int(epochs),
@@ -1160,8 +1267,11 @@ def train_final_model(
         "label_source_column": "final_human_label",
         "forbidden_supervision_sources": FORBIDDEN_LABEL_SOURCES,
         "locked_test_used_for_training_or_selection": False,
+        "locked_test_evaluated": False,
+        "output_model_dir": output_model_dir.relative_to(ROOT).as_posix(),
     }
-    save_json(MODEL_DIR / "selected_trial_config.json", training_config)
+    save_json(output_model_dir / "selected_trial_config.json", training_config)
+    write_sha256s(output_model_dir)
     del model, tokenizer, optimizer, scheduler, scaler
     gc.collect()
     if device.type == "cuda":
@@ -1186,6 +1296,96 @@ def save_selected_development_outputs(
     per_class_frame(true, probs).to_csv(OUT_DIR / "development_per_class_metrics.csv", index=False, encoding="utf-8-sig")
     save_json(OUT_DIR / "selected_development_oof_metrics.json", development_metrics)
     return development_metrics
+
+
+def train_full_development_artifact(
+    trial: Trial,
+    data: pd.DataFrame,
+    metrics: pd.DataFrame,
+    summary: pd.DataFrame,
+    output_model_dir: Path,
+    model_role: str,
+    max_epochs: int,
+    device: torch.device,
+    precision: str,
+    info: dict[str, Any],
+) -> dict[str, Any]:
+    trial_metrics = metrics.loc[metrics["trial_id"].eq(trial.trial_id)].copy()
+    if trial_metrics.empty:
+        raise RuntimeError(f"No development CV metrics available for exact trial: {trial.trial_id}")
+    all_oof = trial_metrics.loc[trial_metrics["fold"].eq("ALL_OOF")]
+    if all_oof["seed"].nunique() < 1:
+        raise RuntimeError(f"No ALL_OOF seed metrics available for exact trial: {trial.trial_id}")
+    trial_summary = summary.loc[summary["trial_id"].eq(trial.trial_id)]
+    if trial_summary.empty:
+        raise RuntimeError(f"No development summary row available for exact trial: {trial.trial_id}")
+    final_seed = selected_seed(metrics, trial.trial_id)
+    final_epochs = final_epoch_count(metrics, trial.trial_id, max_epochs)
+    final_config = train_final_model(
+        trial,
+        data,
+        final_seed,
+        final_epochs,
+        device,
+        precision,
+        output_model_dir=output_model_dir,
+        model_role=model_role,
+    )
+    checksum_before_manifest = write_sha256s(output_model_dir)
+    manifest = {
+        "status": "INDOBERT_V4_FULL_DEVELOPMENT_MODEL_TRAINED",
+        "created_at_utc": utc_now(),
+        "model_role": model_role,
+        "model_id": trial.model_id,
+        "model_revision": final_config.get("model_revision", ""),
+        "exact_trial_id": trial.trial_id,
+        "hyperparameters": asdict(trial),
+        "label_order": LABELS,
+        "training_seed": int(final_seed),
+        "training_epochs": int(final_epochs),
+        "development_dataset_hash": sha256_dataframe(data, ["comment_id", "final_human_label"]),
+        "development_row_count": int(len(data)),
+        "class_distribution": data["final_human_label"].value_counts().reindex(LABELS).fillna(0).astype(int).to_dict(),
+        "preprocessing_version": "normalize_text_v4_context_sep_comment",
+        "git_sha": git_head(),
+        "python_version": sys.version,
+        "package_versions": package_versions(),
+        "cuda_version": str(torch.version.cuda or ""),
+        "gpu_name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "",
+        "device_info": info,
+        "checkpoint_sha256": checksum_before_manifest.get("model.safetensors") or checksum_before_manifest.get("pytorch_model.bin"),
+        "file_hashes": checksum_before_manifest,
+        "tokenizer_hashes": {
+            name: digest
+            for name, digest in checksum_before_manifest.items()
+            if name not in {"model.safetensors", "pytorch_model.bin", "config.json", "selected_trial_config.json", "label_map.json"}
+        },
+        "prediction_rule": "argmax_no_threshold_tuning",
+        "development_oof_summary_metrics": trial_summary.iloc[0].to_dict(),
+        "locked_test_used_for_training_or_selection": False,
+        "locked_test_evaluated": False,
+        "output_model_dir": output_model_dir.relative_to(ROOT).as_posix(),
+    }
+    manifest_name = "base_reference_manifest.json" if model_role == "base_reference" else "final_model_freeze_manifest.json"
+    save_json(output_model_dir / manifest_name, manifest)
+    write_sha256s(output_model_dir)
+    save_json(output_model_dir / "selected_trial_config.json", {**final_config, "artifact_manifest": manifest_name})
+    write_sha256s(output_model_dir)
+    print(
+        json.dumps(
+            {
+                "status": "full_development_model_trained",
+                "model_role": model_role,
+                "trial_id": trial.trial_id,
+                "final_seed": final_seed,
+                "final_epochs": final_epochs,
+                "output_model_dir": output_model_dir.relative_to(ROOT).as_posix(),
+            },
+            indent=2,
+        ),
+        flush=True,
+    )
+    return manifest
 
 
 def write_search_space_coverage(trials: list[Trial]) -> dict[str, Any]:
@@ -1216,6 +1416,12 @@ def main() -> None:
     parser.add_argument("--max-epochs", type=int, default=15)
     parser.add_argument("--patience", type=int, default=3)
     parser.add_argument("--max-trials", type=int, default=0, help="0 means run all planned trials.")
+    parser.add_argument("--only-trial-id", default="", help="Run or freeze exactly one trial id.")
+    parser.add_argument("--train-full-development-only", action="store_true", help="Train the selected trial on all development data without CV or locked-test evaluation.")
+    parser.add_argument("--output-model-dir", default="", help="Directory for full-development model artifacts.")
+    parser.add_argument("--model-role", default="final_selected_model", choices=["base_reference", "final_selected_model"])
+    parser.add_argument("--evaluate-locked-test", action="store_true", help="Reserved guard: locked test evaluation is not part of the default training path.")
+    parser.add_argument("--frozen-manifest", default="", help="Freeze manifest path required by locked-test evaluation tooling.")
     parser.add_argument(
         "--no-finalize",
         action="store_true",
@@ -1241,10 +1447,44 @@ def main() -> None:
         for col in ["comment_id", "text_cluster_id", "exact_duplicate_group_id", "near_duplicate_cluster_id"]
     }
     trials = build_trials(args.models, args.search_profile)
-    if args.max_trials and args.max_trials > 0:
+    trials = select_only_trial_id(trials, args.only_trial_id or None)
+    if args.evaluate_locked_test:
+        if not args.frozen_manifest:
+            raise RuntimeError("--evaluate-locked-test requires --frozen-manifest and must use locked-test tooling.")
+        raise RuntimeError("Locked-test evaluation is intentionally not part of the training default path.")
+    if args.max_trials and args.max_trials > 0 and not args.only_trial_id:
         trials = trials[: args.max_trials]
     if not trials:
         raise RuntimeError("No trials planned.")
+    if args.train_full_development_only:
+        if len(trials) != 1:
+            raise RuntimeError("--train-full-development-only requires exactly one selected trial. Use --only-trial-id.")
+        metrics_path = OUT_DIR / "development_fold_seed_metrics.csv"
+        oof_path = OUT_DIR / "development_oof_predictions.csv"
+        if not metrics_path.exists() or not oof_path.exists():
+            raise FileNotFoundError("Development CV metrics and OOF predictions are required before full-development training.")
+        existing_metrics = dedupe_frame(pd.read_csv(metrics_path, dtype=str, keep_default_na=False, low_memory=False), METRIC_KEYS)
+        existing_oof = dedupe_frame(pd.read_csv(oof_path, dtype=str, keep_default_na=False, low_memory=False), OOF_KEYS)
+        summary = summarize_trials(existing_metrics)
+        if summary.empty:
+            raise RuntimeError("No completed ALL_OOF metrics available for full-development training.")
+        summary.to_csv(OUT_DIR / "development_trial_summary.csv", index=False, encoding="utf-8-sig")
+        output_model_dir = Path(args.output_model_dir) if args.output_model_dir else ARTIFACT_MODEL_ROOT / args.model_role
+        if not output_model_dir.is_absolute():
+            output_model_dir = ROOT / output_model_dir
+        train_full_development_artifact(
+            trials[0],
+            data,
+            existing_metrics,
+            summary,
+            output_model_dir,
+            args.model_role,
+            args.max_epochs,
+            device,
+            precision,
+            info,
+        )
+        return
     assignments = load_or_make_fold_assignments(data, args.seeds, args.n_splits, args.resume)
     grid = pd.DataFrame([{**asdict(trial), "trial_id": trial.trial_id, "status": "PENDING"} for trial in trials])
     grid.to_csv(OUT_DIR / "candidate_grid_manifest.csv", index=False, encoding="utf-8-sig")
