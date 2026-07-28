@@ -1,0 +1,32 @@
+{
+  "V2_FORCED_THREE_CLASS_vs_V4_ARGMAX_THREE_CLASS": {
+    "n_bootstrap": 5000,
+    "seed": 20260728,
+    "delta_definition": "model_b_minus_model_a",
+    "accuracy_delta_mean": 0.1828199404761905,
+    "accuracy_delta_ci_95": [
+      0.13988095238095233,
+      0.22619047619047616
+    ],
+    "macro_f1_delta_mean": 0.19172040163116552,
+    "macro_f1_delta_ci_95": [
+      0.14721730056597812,
+      0.23714322148815525
+    ]
+  },
+  "V2_NATIVE_POLICY_FULLSET_vs_V4_ARGMAX_THREE_CLASS": {
+    "n_bootstrap": 5000,
+    "seed": 20260728,
+    "delta_definition": "model_b_minus_model_a",
+    "accuracy_delta_mean": 0.29006726190476195,
+    "accuracy_delta_ci_95": [
+      0.24702380952380953,
+      0.33482142857142855
+    ],
+    "macro_f1_delta_mean": 0.220070974953378,
+    "macro_f1_delta_ci_95": [
+      0.1749971884231127,
+      0.2670388885327733
+    ]
+  }
+}

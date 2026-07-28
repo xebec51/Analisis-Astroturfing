@@ -1,0 +1,56 @@
+{
+  "V2_NATIVE_POLICY": {
+    "Negative": {
+      "Negative": 75,
+      "Neutral": 19,
+      "Positive": 15,
+      "Abstain": 51
+    },
+    "Neutral": {
+      "Negative": 34,
+      "Neutral": 169,
+      "Positive": 14,
+      "Abstain": 77
+    },
+    "Positive": {
+      "Negative": 17,
+      "Neutral": 60,
+      "Positive": 80,
+      "Abstain": 61
+    }
+  },
+  "V2_FORCED_THREE_CLASS": {
+    "Negative": {
+      "Negative": 96,
+      "Neutral": 36,
+      "Positive": 28
+    },
+    "Neutral": {
+      "Negative": 53,
+      "Neutral": 204,
+      "Positive": 37
+    },
+    "Positive": {
+      "Negative": 35,
+      "Neutral": 87,
+      "Positive": 96
+    }
+  },
+  "V4_ARGMAX_THREE_CLASS": {
+    "Negative": {
+      "Negative": 132,
+      "Neutral": 16,
+      "Positive": 12
+    },
+    "Neutral": {
+      "Negative": 43,
+      "Neutral": 231,
+      "Positive": 20
+    },
+    "Positive": {
+      "Negative": 32,
+      "Neutral": 30,
+      "Positive": 156
+    }
+  }
+}

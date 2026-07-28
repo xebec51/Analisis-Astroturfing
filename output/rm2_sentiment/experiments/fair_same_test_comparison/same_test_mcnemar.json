@@ -1,0 +1,18 @@
+{
+  "V2_FORCED_THREE_CLASS_vs_V4_ARGMAX_THREE_CLASS": {
+    "a_correct_b_wrong": 59,
+    "a_wrong_b_correct": 182,
+    "discordant_pairs": 241,
+    "chi_square_continuity_corrected": 61.75933609958506,
+    "p_value_chi_square_df1": 3.8810700873698555e-15,
+    "p_value_exact_binomial_two_sided": 8.878901605594256e-16
+  },
+  "V2_NATIVE_POLICY_FULLSET_vs_V4_ARGMAX_THREE_CLASS": {
+    "a_correct_b_wrong": 42,
+    "a_wrong_b_correct": 237,
+    "discordant_pairs": 279,
+    "chi_square_continuity_corrected": 134.89605734767025,
+    "p_value_chi_square_df1": 3.4791398163349863e-31,
+    "p_value_exact_binomial_two_sided": 3.5727954755038813e-34
+  }
+}
