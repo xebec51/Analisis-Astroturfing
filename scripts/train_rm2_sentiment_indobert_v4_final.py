@@ -370,11 +370,12 @@ def build_trials(models: list[str], search_profile: str) -> list[Trial]:
         Trial(warm, "warm_start", "context_sep_comment", 192, 2e-5, 0.10, 0.05, 0.2, "weighted_cross_entropy", 0.03),
         Trial(warm, "warm_start", "comment_only", 256, 3e-5, 0.06, 0.05, 0.3, "focal_loss", 0.05),
     ]
+    allowed = set(models)
+    planned = [trial for trial in planned if trial.model_id in allowed]
     if search_profile == "quick":
         keep = {large, base, tweet}
         planned = [trial for trial in planned if trial.model_id in keep][:6]
-    allowed = set(models)
-    return [trial for trial in planned if trial.model_id in allowed]
+    return planned
 
 
 def batch_plan(trial: Trial, device: torch.device) -> tuple[int, int]:
