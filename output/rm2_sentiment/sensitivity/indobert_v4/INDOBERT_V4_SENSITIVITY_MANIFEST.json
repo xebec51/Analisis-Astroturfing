@@ -1,0 +1,35 @@
+{
+  "status": "EXPLORATORY_SENSITIVITY_ANALYSIS_NOT_CANONICAL",
+  "created_at_utc": "2026-07-28T15:33:48.346505+00:00",
+  "git_sha": "8d0e7620791d8c490e6edfb068cb1e33171b0977",
+  "v4_decision_preserved": "INDOBERT_V4_NOT_ACCEPTED_KEEP_V2",
+  "canonical_model_changed": false,
+  "final_output_dir_modified": false,
+  "input_rows": 33063,
+  "input_unique_comment_id": 33063,
+  "v4_label_distribution": {
+    "Neutral": 19538,
+    "Positive": 7594,
+    "Negative": 5927,
+    "No Text": 4
+  },
+  "v2_label_distribution": {
+    "Neutral": 23977,
+    "Negative": 4771,
+    "Positive": 2718,
+    "Uncertain": 1593,
+    "No Text": 4
+  },
+  "dataset_hash": "fbbb13e7a97922bdaaa6bd0ff4989ea00ed7393fa7a5812290cda1c53486b972",
+  "outputs": {
+    "predictions": "output/rm2_sentiment/sensitivity/indobert_v4/indobert_v4_comment_sentiment_sensitivity.csv",
+    "distribution": "output/rm2_sentiment/sensitivity/indobert_v4/tables/v2_vs_v4_sentiment_distribution.csv",
+    "hcc_vs_nonhcc": "output/rm2_sentiment/sensitivity/indobert_v4/tables/hcc_vs_nonhcc_comment_sentiment_v4_sensitivity.csv",
+    "actor_type": "output/rm2_sentiment/sensitivity/indobert_v4/tables/actor_type_sentiment_v4_sensitivity.csv",
+    "hcc_goals": "output/rm2_sentiment/sensitivity/indobert_v4/tables/hcc_goals_v4_sensitivity.csv",
+    "brand": "output/rm2_sentiment/sensitivity/indobert_v4/tables/brand_sentiment_v4_sensitivity.csv",
+    "transition": "output/rm2_sentiment/sensitivity/indobert_v4/tables/v2_vs_v4_label_transition.csv",
+    "goal_changes": 3,
+    "conclusion": "model_dependent"
+  }
+}

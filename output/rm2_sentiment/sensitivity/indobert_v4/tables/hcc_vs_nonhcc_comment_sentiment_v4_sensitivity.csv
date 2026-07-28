@@ -1,0 +1,3 @@
+﻿group,total_comments,evaluable_comments,coverage,negative_count,negative_ratio_evaluable,neutral_count,neutral_ratio_evaluable,positive_count,positive_ratio_evaluable
+HCC,945,945,1.0,80,0.08465608465608465,452,0.4783068783068783,413,0.43703703703703706
+Non-HCC,32118,32114,0.9998754592440376,5847,0.18207012517904964,19086,0.5943202341657844,7181,0.22360964065516598

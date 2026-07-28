@@ -1,0 +1,9 @@
+﻿group,label,count,percentage_of_total,denominator
+Canonical V2,Positive,2718,8.220669630705018,33063
+Canonical V2,Neutral,23977,72.51913014547983,33063
+Canonical V2,Negative,4771,14.43002752321326,33063
+Canonical V2,No Text,4,0.012098115718476847,33063
+IndoBERT V4 sensitivity,Positive,7594,22.968272691528295,33063
+IndoBERT V4 sensitivity,Neutral,19538,59.09324622690016,33063
+IndoBERT V4 sensitivity,Negative,5927,17.92638296585307,33063
+IndoBERT V4 sensitivity,No Text,4,0.012098115718476847,33063
