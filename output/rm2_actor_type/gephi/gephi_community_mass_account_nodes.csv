@@ -126,10 +126,10 @@ racun_ct1114,racun_ct1114,Community Actor,HCC,48,True,3.0,Neutral,Neutral Engage
 racun_ct19392,racun_ct19392,Community Actor,HCC,44,True,3.0,Neutral,Neutral Engagement,The Originote,6,4.5,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 racun_ct2082,racun_ct2082,Community Actor,HCC,116,True,3.0,Neutral,Neutral Engagement,The Originote,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 racun_ct2295,racun_ct2295,Community Actor,HCC,15,True,3.0,Negative,Critical / Complaint,The Originote,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
-racun_ct2554,racun_ct2554,Community Actor,HCC,183,True,3.0,Positive,Promotional / Supportive,Not identified,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
+racun_ct2554,racun_ct2554,Community Actor,HCC,183,True,3.0,Positive,Promotional / Supportive,Maryame,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 racun_ct40815,racun_ct40815,Community Actor,HCC,43,True,6.0,Neutral,Neutral Engagement,Mixed_3plus_Brands,3,4.5,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 racun_ct5624,racun_ct5624,Community Actor,HCC,90,True,3.0,Neutral,Neutral Engagement,Mixed_3plus_Brands,3,2.25,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
-racun_ct5875,racun_ct5875,Community Actor,HCC,183,True,3.0,Negative,Insufficient Text,Not identified,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
+racun_ct5875,racun_ct5875,Community Actor,HCC,183,True,3.0,Negative,Insufficient Text,Maryame,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 racun_ct61657,racun_ct61657,Community Actor,HCC,17,True,3.0,Negative,Mixed Goals,Mixed_3plus_Brands,6,4.5,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 racun_ct7880,racun_ct7880,Community Actor,HCC,184,True,3.0,Neutral,Neutral Engagement,The Originote,4,3.0,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 racun_ct8621,racun_ct8621,Community Actor,HCC,15,True,3.0,Neutral,Insufficient Text,The Originote,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
@@ -138,12 +138,12 @@ racun_rr28461,racun_rr28461,Community Actor,HCC,133,True,0.0,Not Observed,Not Ob
 reviewjujur_ct33360,reviewjujur_ct33360,Community Actor,HCC,130,True,3.0,Neutral,Neutral Engagement,Mixed_3plus_Brands,3,2.25,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct39243,reviewjujur_ct39243,Community Actor,HCC,50,True,8.0,Neutral,Neutral Engagement,Daviena,5,8.875,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct43520,reviewjujur_ct43520,Community Actor,HCC,43,True,6.0,Neutral,Neutral Engagement,Mixed_3plus_Brands,3,4.5,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
-reviewjujur_ct5021,reviewjujur_ct5021,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Not identified,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
+reviewjujur_ct5021,reviewjujur_ct5021,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Maryame,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct55350,reviewjujur_ct55350,Community Actor,HCC,50,True,8.0,Neutral,Neutral Engagement,Daviena,5,8.875,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct6118,reviewjujur_ct6118,Community Actor,HCC,16,True,3.0,Neutral,Neutral Engagement,Daviena,4,3.0,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct7045,reviewjujur_ct7045,Community Actor,HCC,17,True,3.0,Neutral,Neutral Engagement,Mixed_3plus_Brands,4,2.7857142857142856,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct84556,reviewjujur_ct84556,Community Actor,HCC,44,True,3.0,Neutral,Neutral Engagement,The Originote,6,4.5,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
-reviewjujur_ct8615,reviewjujur_ct8615,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Not identified,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
+reviewjujur_ct8615,reviewjujur_ct8615,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Maryame,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct9366,reviewjujur_ct9366,Community Actor,HCC,184,True,3.0,Neutral,Insufficient Text,The Originote,4,3.0,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct97003,reviewjujur_ct97003,Community Actor,HCC,50,True,8.0,Neutral,Neutral Engagement,Daviena,5,8.875,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 reviewjujur_ct9773,reviewjujur_ct9773,Community Actor,HCC,184,True,3.0,Neutral,Neutral Engagement,The Originote,6,4.071428571428571,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
@@ -158,11 +158,11 @@ reviewpedas_r3c09m03x3704,reviewpedas_r3c09m03x3704,Community Actor,HCC,193,True
 reviewpedas_r3c09m04x5100,reviewpedas_r3c09m04x5100,Community Actor,HCC,193,True,5.0,Positive,Promotional / Supportive,The Originote,4,3.2857142857142856,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skinbestie_ct5848,skinbestie_ct5848,Community Actor,HCC,48,True,3.0,Neutral,Neutral Engagement,Maryame,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skinbestie_ct9114,skinbestie_ct9114,Community Actor,HCC,184,True,3.0,Negative,Mixed Goals,The Originote,7,4.875,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
-skinbestie_ct9146,skinbestie_ct9146,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Not identified,6,4.285714285714286,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
+skinbestie_ct9146,skinbestie_ct9146,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Maryame,6,4.285714285714286,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skinbestie_ct9276,skinbestie_ct9276,Community Actor,HCC,15,True,3.0,Negative,Critical / Complaint,The Originote,6,4.285714285714286,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skinbestie_ip1027,skinbestie_ip1027,Community Actor,HCC,5,True,8.0,Neutral,Neutral Engagement,The Originote,31,19.0,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skinbestie_ip9364,skinbestie_ip9364,Community Actor,HCC,150,True,8.0,Neutral,Neutral Engagement,Maryame,7,8.0,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
-skincare_ct1100,skincare_ct1100,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Not identified,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
+skincare_ct1100,skincare_ct1100,Community Actor,HCC,183,True,3.0,Neutral,Neutral Engagement,Maryame,5,3.75,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skincare_ct1453,skincare_ct1453,Community Actor,HCC,17,True,3.0,Negative,Mixed Goals,Mixed_3plus_Brands,3,2.25,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skincare_ct68797,skincare_ct68797,Community Actor,HCC,17,True,3.0,Neutral,Neutral Engagement,Mixed_3plus_Brands,6,4.5,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2
 skincare_ct7727,skincare_ct7727,Community Actor,HCC,2,True,3.0,Neutral,Neutral Engagement,Maryame,6,4.285714285714286,INDOBERT_V3_NOT_ACCEPTED_KEEP_V2__FINAL_SENTIMENT_MODEL_V2

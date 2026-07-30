@@ -102,7 +102,9 @@ Beberapa hal penting terkait alur di atas:
 - **Hashtag & Co-Similarity tidak membentuk LCN.** Keduanya murni dihitung **setelah** HCC final
   terbentuk, untuk karakterisasi/interpretasi -- tidak pernah mengubah struktur LCN, Louvain, atau FSA_V.
 - **Auto brand labeling murni data-driven**: label brand HCC dihitung dari skor hashtag brand pada
-  metadata video, tanpa mapping manual dari ketua tim maupun hardcode `community_id`.
+  metadata video; jika hashtag brand tidak mengidentifikasi brand, HCC dimasukkan ke brand terkuat
+  berdasarkan konteks produk/video (`product_category`) komentar anggotanya, tanpa mapping manual dari
+  ketua tim maupun hardcode `community_id`.
 
 ---
 
@@ -128,7 +130,7 @@ Beberapa hal penting terkait alur di atas:
 | `co_conv_edges.csv`, `co_reply_edges.csv`, `co_temporal_edges.csv` | Evidence mentah per pasangan akun, setelah filtering |
 | `focal_structures.csv` | Hasil FSA_V/HCC: Density, Average Degree, Average Weighted Degree, Candidate MEW, status HCC |
 | `hcc_hashtag_profile.csv`, `hcc_hashtag_all_communities_complete.csv`, `hcc_hashtag_community_summary.csv`, `hcc_hashtag_matrix_frequency.csv`, `hcc_hashtag_matrix_users_exposed.csv` | Profil hashtag metadata video (konteks brand/video) per HCC |
-| `hcc_brand_profile_auto.csv` | Skor & label brand otomatis per HCC (`BRAND_HASHTAG_LEXICON`, `primary_brand`, `brand_label_auto`, `brand_combo`, `brand_confidence`, skor per brand, dll.) |
+| `hcc_brand_profile_auto.csv` | Skor & label brand otomatis per HCC (`BRAND_HASHTAG_LEXICON`, fallback konteks produk/video, `primary_brand`, `brand_label_auto`, `brand_combo`, `brand_confidence`, `brand_label_source`, skor per brand, dll.) |
 | `hcc_cosimilarity_summary.csv` | Ringkasan kesamaan narasi per HCC (avg/median/max cosine, `narrative_similarity_level`, dll.) |
 | `hcc_cosimilarity_pairs.csv` | Cosine similarity per pasangan akun dalam HCC yang sama |
 | `hcc_copypasta_candidates.csv` | Kandidat exact/near-copypasta per HCC |
@@ -167,7 +169,7 @@ skor (brand, similarity) sengaja tidak dimasukkan ke file Gephi -- lihat tabel d
 | Kolom | Fungsi |
 |---|---|
 | `id`, `label`, `degree`, `weighted_degree`, `betweenness`, `community` | Sama seperti `gephi_lcn_nodes.csv`, khusus subset anggota HCC |
-| `primary_brand` | Brand dengan skor hashtag tertinggi pada HCC tsb |
+| `primary_brand` | Brand dengan skor hashtag tertinggi; jika skor hashtag kosong, brand terkuat dari konteks produk/video komentar anggota HCC |
 | `brand_label_auto` | Label brand final HCC: nama brand tunggal / `Mixed_2_Brands` / `Mixed_3plus_Brands` / `Not identified` -- dipakai untuk pewarnaan node di Gephi |
 | `brand_combo` | Gabungan brand aktif jika lebih dari satu (mis. `"Maryame + The Originote"`) |
 | `brand_confidence` | Tingkat keyakinan label brand: `High` / `Medium` / `Low` / `None` |
@@ -229,9 +231,10 @@ Seluruh grafik ditampilkan inline di notebook; sebagian juga disimpan sebagai fi
 Pipeline ini memisahkan tiga lapisan analisis yang **tidak boleh disatukan begitu saja**:
 
 1. **LCN/FSA_V** = koordinasi struktural berbasis perilaku (Co-conv/Co-reply/Co-temporal).
-2. **Hashtag metadata video** = asosiasi konteks brand/video -- brand label menunjukkan konteks video
-   yang dikomentari oleh anggota HCC berdasarkan hashtag metadata video, **bukan** berarti akun tersebut
-   menulis hashtag itu dalam komentarnya.
+2. **Hashtag metadata video + konteks produk/video** = asosiasi konteks brand/video -- brand label
+   menunjukkan konteks video yang dikomentari oleh anggota HCC berdasarkan hashtag metadata video; jika
+   hashtag tidak cukup mengidentifikasi brand, label memakai konteks `product_category` komentar/video.
+   Ini **bukan** berarti akun tersebut menulis hashtag itu dalam komentarnya.
 3. **Co-Similarity** = kesamaan narasi komentar antar akun dalam HCC, **bukan** bukti pasti koordinasi
    terencana -- termasuk kandidat copypasta/near-copypasta, yang tetap disebut sebagai *kandidat*, bukan
    bukti kampanye pasti.
