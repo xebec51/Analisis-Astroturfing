@@ -493,6 +493,7 @@ Output V5 tambahan:
 | `tables/hcc_sentiment_goals_summary_v5.csv` | HCC | Goal orientation V5 untuk 42 HCC |
 | `tables/actor_type_goals_pooled_v5.csv` | Actor type | Pooled goals per actor type berbasis V5 |
 | `tables/target_brand_summary_v5.csv` | Target/brand | Ringkasan target-brand berbasis V5 |
+| `tables/wordcloud_top_terms_indobert_v5_final.csv` | Visual audit | Top terms pembentuk wordcloud final V5 |
 | `gephi/gephi_hcc_nodes_sentiment_v5.csv` | Gephi | Node HCC RM1 dengan atribut sentimen/goals V5 |
 | `gephi/gephi_hcc_edges_sentiment_v5.csv` | Gephi | Edge HCC RM1 disalin tanpa perubahan topologi |
 | `RM2_GOALS_INTERPRETATION_GUIDE_V5.md` | Interpretasi | Panduan batas baca goals V5 |
@@ -518,11 +519,17 @@ Output V5 tambahan:
 Visualisasi final dibuat ulang oleh notebook kanonis
 `notebooks/rm2/02_rm2_sentiment_analysis.ipynb` dari tabel final yang sudah dibekukan. Notebook ini tidak
 melatih model, tidak membuka ulang locked test, dan tidak menjalankan full inference.
+Wordcloud final V5 dibuat oleh `scripts/build_rm2_sentiment_v5_final_wordclouds.py` dari
+`output/rm2_sentiment/final/indobert_v5_comment_sentiment.csv`; artifact ini bersifat deskriptif untuk
+paparan, bukan evidence validasi model.
 
 - `sentiment_hcc_vs_nonhcc_100pct.png`
 - `sentiment_distribution_observational.png`
 - `sentiment_validation_confusion_matrix.png`
 - `hcc_goal_orientation.png`
+- `indobert_v5_wordcloud_hcc_vs_nonhcc_final.png`
+- `indobert_v5_wordcloud_by_sentiment_final.png`
+- `indobert_v5_wordcloud_hcc_by_sentiment_final.png`
 
 Visualisasi lama V1/provisional tetap berada di `output/rm2_sentiment/legacy/v1/visualisasi/` untuk
 perbandingan visual. CSV legacy/intermediate yang terlalu besar atau tidak diperlukan untuk paparan final tidak

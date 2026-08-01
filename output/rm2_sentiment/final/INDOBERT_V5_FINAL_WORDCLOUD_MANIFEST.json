@@ -1,0 +1,22 @@
+{
+  "created_at_utc": "2026-08-01T12:29:10.695293+00:00",
+  "source": "output/rm2_sentiment/final/indobert_v5_comment_sentiment.csv",
+  "model": "indobert_v5_final",
+  "text_column": "text",
+  "sentiment_column": "final_sentiment_label",
+  "hcc_column": "is_hcc",
+  "comment_rows": 33063,
+  "figures": [
+    "output/rm2_sentiment/final/visualisasi/indobert_v5_wordcloud_hcc_vs_nonhcc_final.png",
+    "output/rm2_sentiment/final/visualisasi/indobert_v5_wordcloud_by_sentiment_final.png",
+    "output/rm2_sentiment/final/visualisasi/indobert_v5_wordcloud_hcc_by_sentiment_final.png"
+  ],
+  "tables": [
+    "output/rm2_sentiment/final/tables/wordcloud_top_terms_indobert_v5_final.csv"
+  ],
+  "notes": [
+    "Wordcloud terms are lowercased comment tokens from final IndoBERT V5 inference output.",
+    "Common Indonesian function words, TikTok conversational fillers, and skincare brand names are excluded.",
+    "This artifact is descriptive/presentation support, not model validation evidence."
+  ]
+}

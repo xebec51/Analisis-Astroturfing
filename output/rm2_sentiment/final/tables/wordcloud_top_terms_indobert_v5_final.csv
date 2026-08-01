@@ -1,0 +1,401 @@
+view,group,sentiment,rank,term,count,share
+hcc_vs_nonhcc,HCC,All,1,retinol,170,0.03632478632478633
+hcc_vs_nonhcc,HCC,All,2,niacinamide,104,0.022222222222222223
+hcc_vs_nonhcc,HCC,All,3,cocok,83,0.017735042735042734
+hcc_vs_nonhcc,HCC,All,4,kulit,81,0.01730769230769231
+hcc_vs_nonhcc,HCC,All,5,serum,57,0.01217948717948718
+hcc_vs_nonhcc,HCC,All,6,bagus,50,0.010683760683760684
+hcc_vs_nonhcc,HCC,All,7,hasilnya,45,0.009615384615384616
+hcc_vs_nonhcc,HCC,All,8,enak,43,0.009188034188034188
+hcc_vs_nonhcc,HCC,All,9,jerawat,39,0.008333333333333333
+hcc_vs_nonhcc,HCC,All,10,emang,37,0.007905982905982906
+hcc_vs_nonhcc,HCC,All,11,hari,37,0.007905982905982906
+hcc_vs_nonhcc,HCC,All,12,muka,34,0.007264957264957265
+hcc_vs_nonhcc,HCC,All,13,dipakai,34,0.007264957264957265
+hcc_vs_nonhcc,HCC,All,14,bikin,34,0.007264957264957265
+hcc_vs_nonhcc,HCC,All,15,pemakaian,33,0.007051282051282051
+hcc_vs_nonhcc,HCC,All,16,cream,32,0.006837606837606838
+hcc_vs_nonhcc,HCC,All,17,worth,31,0.006623931623931624
+hcc_vs_nonhcc,HCC,All,18,harga,31,0.006623931623931624
+hcc_vs_nonhcc,HCC,All,19,skincare,29,0.006196581196581196
+hcc_vs_nonhcc,HCC,All,20,tiap,29,0.006196581196581196
+hcc_vs_nonhcc,HCC,All,21,sekali,27,0.0057692307692307696
+hcc_vs_nonhcc,HCC,All,22,seneng,27,0.0057692307692307696
+hcc_vs_nonhcc,HCC,All,23,moist,26,0.005555555555555556
+hcc_vs_nonhcc,HCC,All,24,kulitku,24,0.005128205128205128
+hcc_vs_nonhcc,HCC,All,25,nemu,24,0.005128205128205128
+hcc_vs_nonhcc,HCC,All,26,satu,23,0.004914529914529914
+hcc_vs_nonhcc,HCC,All,27,produk,22,0.004700854700854701
+hcc_vs_nonhcc,HCC,All,28,lumayan,22,0.004700854700854701
+hcc_vs_nonhcc,HCC,All,29,sensitif,21,0.004487179487179487
+hcc_vs_nonhcc,HCC,All,30,isinya,21,0.004487179487179487
+hcc_vs_nonhcc,HCC,All,31,segitu,21,0.004487179487179487
+hcc_vs_nonhcc,HCC,All,32,puas,21,0.004487179487179487
+hcc_vs_nonhcc,HCC,All,33,vit,20,0.004273504273504274
+hcc_vs_nonhcc,HCC,All,34,salah,20,0.004273504273504274
+hcc_vs_nonhcc,HCC,All,35,semoga,19,0.00405982905982906
+hcc_vs_nonhcc,HCC,All,36,kombinasi,19,0.00405982905982906
+hcc_vs_nonhcc,HCC,All,37,tetep,19,0.00405982905982906
+hcc_vs_nonhcc,HCC,All,38,penting,19,0.00405982905982906
+hcc_vs_nonhcc,HCC,All,39,pagi,19,0.00405982905982906
+hcc_vs_nonhcc,HCC,All,40,wangi,19,0.00405982905982906
+hcc_vs_nonhcc,HCC,All,41,cara,19,0.00405982905982906
+hcc_vs_nonhcc,HCC,All,42,toner,18,0.0038461538461538464
+hcc_vs_nonhcc,HCC,All,43,review,18,0.0038461538461538464
+hcc_vs_nonhcc,HCC,All,44,masih,18,0.0038461538461538464
+hcc_vs_nonhcc,HCC,All,45,packaging,18,0.0038461538461538464
+hcc_vs_nonhcc,HCC,All,46,teksturnya,18,0.0038461538461538464
+hcc_vs_nonhcc,HCC,All,47,nyari,18,0.0038461538461538464
+hcc_vs_nonhcc,HCC,All,48,rutin,18,0.0038461538461538464
+hcc_vs_nonhcc,HCC,All,49,aman,17,0.0036324786324786326
+hcc_vs_nonhcc,HCC,All,50,terus,17,0.0036324786324786326
+hcc_vs_nonhcc,Non-HCC,All,1,skincare,2128,0.016290659664541022
+hcc_vs_nonhcc,Non-HCC,All,2,retinol,1838,0.014070597962136465
+hcc_vs_nonhcc,Non-HCC,All,3,cream,1280,0.00979889303130287
+hcc_vs_nonhcc,Non-HCC,All,4,serum,1134,0.008681206794919887
+hcc_vs_nonhcc,Non-HCC,All,5,aman,1071,0.008198917528535448
+hcc_vs_nonhcc,Non-HCC,All,6,cocok,916,0.007012332825526117
+hcc_vs_nonhcc,Non-HCC,All,7,glow,901,0.006897502047815536
+hcc_vs_nonhcc,Non-HCC,All,8,kulit,879,0.0067290835738400175
+hcc_vs_nonhcc,Non-HCC,All,9,tolong,736,0.00563436349299915
+hcc_vs_nonhcc,Non-HCC,All,10,masih,729,0.005580775796734213
+hcc_vs_nonhcc,Non-HCC,All,11,review,717,0.005488911174565748
+hcc_vs_nonhcc,Non-HCC,All,12,bagus,710,0.005435323478300811
+hcc_vs_nonhcc,Non-HCC,All,13,muka,697,0.005335803470951641
+hcc_vs_nonhcc,Non-HCC,All,14,jerawat,673,0.005152074226614712
+hcc_vs_nonhcc,Non-HCC,All,15,produk,659,0.005044898834084837
+hcc_vs_nonhcc,Non-HCC,All,16,dokter,556,0.004256394160472184
+hcc_vs_nonhcc,Non-HCC,All,17,soalnya,550,0.004210461849387952
+hcc_vs_nonhcc,Non-HCC,All,18,hari,509,0.0038965910569790318
+hcc_vs_nonhcc,Non-HCC,All,19,malam,489,0.0037434833533649247
+hcc_vs_nonhcc,Non-HCC,All,20,okypratamaa_kedua,486,0.0037205171978228085
+hcc_vs_nonhcc,Non-HCC,All,21,berapa,471,0.003605686420112228
+hcc_vs_nonhcc,Non-HCC,All,22,paket,442,0.003383680249871772
+hcc_vs_nonhcc,Non-HCC,All,23,malah,432,0.0033071263980647184
+hcc_vs_nonhcc,Non-HCC,All,24,owner,404,0.0030927756130049683
+hcc_vs_nonhcc,Non-HCC,All,25,beauty,401,0.003069809457462852
+hcc_vs_nonhcc,Non-HCC,All,26,krim,400,0.003062154072282147
+hcc_vs_nonhcc,Non-HCC,All,27,harga,378,0.0028937355983066288
+hcc_vs_nonhcc,Non-HCC,All,28,skin,375,0.0028707694427645126
+hcc_vs_nonhcc,Non-HCC,All,29,tau,371,0.0028401479020416912
+hcc_vs_nonhcc,Non-HCC,All,30,moist,364,0.0027865602057767537
+hcc_vs_nonhcc,Non-HCC,All,31,pernah,337,0.0025798648058977087
+hcc_vs_nonhcc,Non-HCC,All,32,brp,337,0.0025798648058977087
+hcc_vs_nonhcc,Non-HCC,All,33,siang,336,0.0025722094207170036
+hcc_vs_nonhcc,Non-HCC,All,34,glowing,335,0.002564554035536298
+hcc_vs_nonhcc,Non-HCC,All,35,takut,331,0.0025339324948134767
+hcc_vs_nonhcc,Non-HCC,All,36,acne,322,0.002465034028187128
+hcc_vs_nonhcc,Non-HCC,All,37,pagi,320,0.0024497232578257174
+hcc_vs_nonhcc,Non-HCC,All,38,cara,316,0.002419101717102896
+hcc_vs_nonhcc,Non-HCC,All,39,day,316,0.002419101717102896
+hcc_vs_nonhcc,Non-HCC,All,40,toner,314,0.0024037909467414854
+hcc_vs_nonhcc,Non-HCC,All,41,flek,314,0.0024037909467414854
+hcc_vs_nonhcc,Non-HCC,All,42,terus,304,0.0023272370949344316
+hcc_vs_nonhcc,Non-HCC,All,43,jual,303,0.002319581709753726
+hcc_vs_nonhcc,Non-HCC,All,44,gitu,302,0.002311926324573021
+hcc_vs_nonhcc,Non-HCC,All,45,umur,295,0.0022583386283080834
+hcc_vs_nonhcc,Non-HCC,All,46,alhamdulillah,295,0.0022583386283080834
+hcc_vs_nonhcc,Non-HCC,All,47,dipake,293,0.0022430278579466728
+hcc_vs_nonhcc,Non-HCC,All,48,seruni,291,0.0022277170875852617
+hcc_vs_nonhcc,Non-HCC,All,49,moisturizer,290,0.0022200617024045566
+hcc_vs_nonhcc,Non-HCC,All,50,doktif,286,0.002189440161681735
+all_comments_by_sentiment,All comments,Negative,1,malah,320,0.01005656819610308
+all_comments_by_sentiment,All comments,Negative,2,muka,281,0.008830923947203017
+all_comments_by_sentiment,All comments,Negative,3,produk,206,0.006473915776241358
+all_comments_by_sentiment,All comments,Negative,4,takut,205,0.0064424890006285354
+all_comments_by_sentiment,All comments,Negative,5,cocok,191,0.006002514142049026
+all_comments_by_sentiment,All comments,Negative,6,skincare,186,0.005845380263984915
+all_comments_by_sentiment,All comments,Negative,7,doktif,172,0.005405405405405406
+all_comments_by_sentiment,All comments,Negative,8,jerawat,163,0.0051225644248900064
+all_comments_by_sentiment,All comments,Negative,9,panas,153,0.004808296668761785
+all_comments_by_sentiment,All comments,Negative,10,tau,138,0.0043368950345694535
+all_comments_by_sentiment,All comments,Negative,11,masih,137,0.004305468258956631
+all_comments_by_sentiment,All comments,Negative,12,pernah,132,0.004148334380892521
+all_comments_by_sentiment,All comments,Negative,13,retinol,130,0.004085480829666876
+all_comments_by_sentiment,All comments,Negative,14,awal,127,0.003991200502828409
+all_comments_by_sentiment,All comments,Negative,15,kulit,124,0.0038969201759899434
+all_comments_by_sentiment,All comments,Negative,16,mahal,119,0.0037397862979258326
+all_comments_by_sentiment,All comments,Negative,17,sudah,118,0.0037083595223130106
+all_comments_by_sentiment,All comments,Negative,18,bukan,117,0.0036769327467001886
+all_comments_by_sentiment,All comments,Negative,19,gitu,115,0.003614079195474544
+all_comments_by_sentiment,All comments,Negative,20,sdh,114,0.003582652419861722
+all_comments_by_sentiment,All comments,Negative,21,dokter,113,0.0035512256442489
+all_comments_by_sentiment,All comments,Negative,22,percaya,112,0.0035197988686360778
+all_comments_by_sentiment,All comments,Negative,23,brutal,112,0.0035197988686360778
+all_comments_by_sentiment,All comments,Negative,24,untung,108,0.0033940917661847893
+all_comments_by_sentiment,All comments,Negative,25,owner,108,0.0033940917661847893
+all_comments_by_sentiment,All comments,Negative,26,cream,103,0.003236957888120679
+all_comments_by_sentiment,All comments,Negative,27,orang,102,0.0032055311125078565
+all_comments_by_sentiment,All comments,Negative,28,skrg,99,0.0031112507856693905
+all_comments_by_sentiment,All comments,Negative,29,kenapa,97,0.003048397234443746
+all_comments_by_sentiment,All comments,Negative,30,tidak,95,0.0029855436832181017
+all_comments_by_sentiment,All comments,Negative,31,semua,95,0.0029855436832181017
+all_comments_by_sentiment,All comments,Negative,32,sekarang,93,0.0029226901319924577
+all_comments_by_sentiment,All comments,Negative,33,mungkin,93,0.0029226901319924577
+all_comments_by_sentiment,All comments,Negative,34,kusam,92,0.0028912633563796353
+all_comments_by_sentiment,All comments,Negative,35,secara,91,0.0028598365807668133
+all_comments_by_sentiment,All comments,Negative,36,karna,90,0.0028284098051539913
+all_comments_by_sentiment,All comments,Negative,37,krn,86,0.002702702702702703
+all_comments_by_sentiment,All comments,Negative,38,tpi,86,0.002702702702702703
+all_comments_by_sentiment,All comments,Negative,39,padahal,85,0.0026712759270898804
+all_comments_by_sentiment,All comments,Negative,40,lain,82,0.002576995600251414
+all_comments_by_sentiment,All comments,Negative,41,gini,81,0.002545568824638592
+all_comments_by_sentiment,All comments,Negative,42,live,81,0.002545568824638592
+all_comments_by_sentiment,All comments,Negative,43,bruntusan,80,0.00251414204902577
+all_comments_by_sentiment,All comments,Negative,44,jerawatan,79,0.002482715273412948
+all_comments_by_sentiment,All comments,Negative,45,salah,79,0.002482715273412948
+all_comments_by_sentiment,All comments,Negative,46,bikin,78,0.0024512884978001256
+all_comments_by_sentiment,All comments,Negative,47,org,78,0.0024512884978001256
+all_comments_by_sentiment,All comments,Negative,48,uang,78,0.0024512884978001256
+all_comments_by_sentiment,All comments,Negative,49,jdi,77,0.0024198617221873036
+all_comments_by_sentiment,All comments,Negative,50,habis,74,0.002325581395348837
+all_comments_by_sentiment,All comments,Neutral,1,skincare,1647,0.02463172063112241
+all_comments_by_sentiment,All comments,Neutral,2,retinol,1563,0.023375458012413072
+all_comments_by_sentiment,All comments,Neutral,3,cream,1014,0.0151648844687056
+all_comments_by_sentiment,All comments,Neutral,4,serum,1012,0.015134973453974425
+all_comments_by_sentiment,All comments,Neutral,5,glow,783,0.011710162267254916
+all_comments_by_sentiment,All comments,Neutral,6,aman,747,0.01117176400209377
+all_comments_by_sentiment,All comments,Neutral,7,tolong,679,0.01015478950123383
+all_comments_by_sentiment,All comments,Neutral,8,review,569,0.008509683691019218
+all_comments_by_sentiment,All comments,Neutral,9,kulit,564,0.00843490615419128
+all_comments_by_sentiment,All comments,Neutral,10,berapa,470,0.007029088461826067
+all_comments_by_sentiment,All comments,Neutral,11,masih,465,0.00695431092499813
+all_comments_by_sentiment,All comments,Neutral,12,malam,424,0.006341135123009048
+all_comments_by_sentiment,All comments,Neutral,13,jerawat,396,0.005922380916772602
+all_comments_by_sentiment,All comments,Neutral,14,hari,385,0.0057578703357511404
+all_comments_by_sentiment,All comments,Neutral,15,okypratamaa_kedua,385,0.0057578703357511404
+all_comments_by_sentiment,All comments,Neutral,16,beauty,368,0.005503626710536155
+all_comments_by_sentiment,All comments,Neutral,17,soalnya,364,0.005443804681073805
+all_comments_by_sentiment,All comments,Neutral,18,dokter,335,0.005010094967471772
+all_comments_by_sentiment,All comments,Neutral,19,brp,334,0.004995139460106184
+all_comments_by_sentiment,All comments,Neutral,20,moist,329,0.004920361923278247
+all_comments_by_sentiment,All comments,Neutral,21,produk,328,0.0049054064159126595
+all_comments_by_sentiment,All comments,Neutral,22,skin,325,0.004860539893815898
+all_comments_by_sentiment,All comments,Neutral,23,toner,306,0.004576385253869737
+all_comments_by_sentiment,All comments,Neutral,24,cara,304,0.004546474239138563
+all_comments_by_sentiment,All comments,Neutral,25,krim,302,0.004516563224407388
+all_comments_by_sentiment,All comments,Neutral,26,pagi,296,0.0044268301802138635
+all_comments_by_sentiment,All comments,Neutral,27,moisturizer,284,0.004247364091826815
+all_comments_by_sentiment,All comments,Neutral,28,paket,284,0.004247364091826815
+all_comments_by_sentiment,All comments,Neutral,29,umur,282,0.00421745307709564
+all_comments_by_sentiment,All comments,Neutral,30,siang,280,0.004187542062364466
+all_comments_by_sentiment,All comments,Neutral,31,cocok,276,0.0041277200329021164
+all_comments_by_sentiment,All comments,Neutral,32,seruni,275,0.004112764525536529
+all_comments_by_sentiment,All comments,Neutral,33,acne,274,0.004097809018170941
+all_comments_by_sentiment,All comments,Neutral,34,gantiin,263,0.003933298437149481
+all_comments_by_sentiment,All comments,Neutral,35,muka,259,0.003873476407687131
+all_comments_by_sentiment,All comments,Neutral,36,dipake,256,0.0038286098855903686
+all_comments_by_sentiment,All comments,Neutral,37,vit,252,0.003768787856128019
+all_comments_by_sentiment,All comments,Neutral,38,day,242,0.0036192327824721452
+all_comments_by_sentiment,All comments,Neutral,39,harga,240,0.0035893217677409705
+all_comments_by_sentiment,All comments,Neutral,40,gmn,216,0.0032303895909668737
+all_comments_by_sentiment,All comments,Neutral,41,night,210,0.003140656546773349
+all_comments_by_sentiment,All comments,Neutral,42,donk,209,0.003125701039407762
+all_comments_by_sentiment,All comments,Neutral,43,mlm,208,0.0031107455320421745
+all_comments_by_sentiment,All comments,Neutral,44,ngga,203,0.0030359679952142375
+all_comments_by_sentiment,All comments,Neutral,45,jual,200,0.0029911014731174757
+all_comments_by_sentiment,All comments,Neutral,46,kah,198,0.002961190458386301
+all_comments_by_sentiment,All comments,Neutral,47,mois,195,0.0029163239362895387
+all_comments_by_sentiment,All comments,Neutral,48,pink,186,0.0027817243699992523
+all_comments_by_sentiment,All comments,Neutral,49,flek,172,0.002572347266881029
+all_comments_by_sentiment,All comments,Neutral,50,pemula,171,0.0025573917595154414
+all_comments_by_sentiment,All comments,Positive,1,bagus,566,0.015455190868876631
+all_comments_by_sentiment,All comments,Positive,2,cocok,532,0.014526787177106657
+all_comments_by_sentiment,All comments,Positive,3,skincare,324,0.008847141062749166
+all_comments_by_sentiment,All comments,Positive,4,retinol,315,0.008601387144339468
+all_comments_by_sentiment,All comments,Positive,5,aman,303,0.008273715253126536
+all_comments_by_sentiment,All comments,Positive,6,alhamdulillah,280,0.007645677461635083
+all_comments_by_sentiment,All comments,Positive,7,kulit,272,0.007427229534159795
+all_comments_by_sentiment,All comments,Positive,8,semangat,244,0.0066626617879962866
+all_comments_by_sentiment,All comments,Positive,9,owner,224,0.006116541969308067
+all_comments_by_sentiment,All comments,Positive,10,semoga,218,0.0059527060237016
+all_comments_by_sentiment,All comments,Positive,11,glowing,203,0.005543116159685435
+all_comments_by_sentiment,All comments,Positive,12,cream,195,0.005324668232210147
+all_comments_by_sentiment,All comments,Positive,13,muka,191,0.0052154442684725025
+all_comments_by_sentiment,All comments,Positive,14,emang,191,0.0052154442684725025
+all_comments_by_sentiment,All comments,Positive,15,bikin,159,0.00434165255857135
+all_comments_by_sentiment,All comments,Positive,16,jerawat,153,0.004177816612964885
+all_comments_by_sentiment,All comments,Positive,17,produk,147,0.004013980667358419
+all_comments_by_sentiment,All comments,Positive,18,masih,145,0.003959368685489596
+all_comments_by_sentiment,All comments,Positive,19,review,137,0.0037409207580143084
+all_comments_by_sentiment,All comments,Positive,20,hasilnya,130,0.0035497788214734313
+all_comments_by_sentiment,All comments,Positive,21,soalnya,126,0.003440554857735787
+all_comments_by_sentiment,All comments,Positive,22,tpi,124,0.003385942875866965
+all_comments_by_sentiment,All comments,Positive,23,nitip,121,0.0033040249030637323
+all_comments_by_sentiment,All comments,Positive,24,hanasui,121,0.0033040249030637323
+all_comments_by_sentiment,All comments,Positive,25,pernah,120,0.0032767189121293214
+all_comments_by_sentiment,All comments,Positive,26,serum,115,0.003140188957457266
+all_comments_by_sentiment,All comments,Positive,27,murah,115,0.003140188957457266
+all_comments_by_sentiment,All comments,Positive,28,niacinamide,114,0.003112882966522855
+all_comments_by_sentiment,All comments,Positive,29,selalu,114,0.003112882966522855
+all_comments_by_sentiment,All comments,Positive,30,dokter,113,0.0030855769755884443
+all_comments_by_sentiment,All comments,Positive,31,hari,111,0.003030964993719622
+all_comments_by_sentiment,All comments,Positive,32,terus,107,0.002921741029981978
+all_comments_by_sentiment,All comments,Positive,33,harga,104,0.002839823057178745
+all_comments_by_sentiment,All comments,Positive,34,makasih,101,0.002757905084375512
+all_comments_by_sentiment,All comments,Positive,35,kaka,101,0.002757905084375512
+all_comments_by_sentiment,All comments,Positive,36,nyoba,101,0.002757905084375512
+all_comments_by_sentiment,All comments,Positive,37,abis,99,0.00270329310250669
+all_comments_by_sentiment,All comments,Positive,38,pot,99,0.00270329310250669
+all_comments_by_sentiment,All comments,Positive,39,lama,97,0.002648681120637868
+all_comments_by_sentiment,All comments,Positive,40,paket,96,0.0026213751297034567
+all_comments_by_sentiment,All comments,Positive,41,cantik,94,0.002566763147834635
+all_comments_by_sentiment,All comments,Positive,42,mahal,94,0.002566763147834635
+all_comments_by_sentiment,All comments,Positive,43,flek,93,0.002539457156900224
+all_comments_by_sentiment,All comments,Positive,44,glow,93,0.002539457156900224
+all_comments_by_sentiment,All comments,Positive,45,jujur,92,0.002512151165965813
+all_comments_by_sentiment,All comments,Positive,46,skincaretips,91,0.002484845175031402
+all_comments_by_sentiment,All comments,Positive,47,blm,91,0.002484845175031402
+all_comments_by_sentiment,All comments,Positive,48,semua,90,0.002457539184096991
+all_comments_by_sentiment,All comments,Positive,49,sudah,88,0.0024029272022281687
+all_comments_by_sentiment,All comments,Positive,50,cerah,86,0.0023483152203593468
+hcc_by_sentiment,HCC,Negative,1,muka,12,0.027649769585253458
+hcc_by_sentiment,HCC,Negative,2,kusem,5,0.01152073732718894
+hcc_by_sentiment,HCC,Negative,3,moist,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,4,kusam,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,5,bruntusan,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,6,kenapa,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,7,jerawat,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,8,masih,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,9,beruntusan,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,10,jerawatan,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,11,retinol,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,12,produk,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,13,padahal,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,14,pot,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,15,malah,4,0.009216589861751152
+hcc_by_sentiment,HCC,Negative,16,muncul,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,17,jrwat,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,18,cream,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,19,isinya,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,20,hitam,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,21,hilang,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,22,tpi,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,23,flek,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,24,habis,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,25,wajah,3,0.0069124423963133645
+hcc_by_sentiment,HCC,Negative,26,saran,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,27,cici,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,28,skrng,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,29,tinggal,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,30,minimalis,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,31,berminyak,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,32,cmn,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,33,komedo,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,34,skrg,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,35,item,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,36,terlalu,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,37,sampe,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,38,lama,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,39,hasil,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,40,skin,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,41,bnyk,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,42,orang,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,43,pkek,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,44,jdi,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,45,mala,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,46,dikit,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,47,bngt,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,48,bikin,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,49,kawan,2,0.004608294930875576
+hcc_by_sentiment,HCC,Negative,50,trus,2,0.004608294930875576
+hcc_by_sentiment,HCC,Neutral,1,retinol,87,0.043652784746613146
+hcc_by_sentiment,HCC,Neutral,2,serum,55,0.027596588058203714
+hcc_by_sentiment,HCC,Neutral,3,kulit,32,0.016056196688409432
+hcc_by_sentiment,HCC,Neutral,4,jerawat,28,0.014049172102358254
+hcc_by_sentiment,HCC,Neutral,5,cream,21,0.010536879076768691
+hcc_by_sentiment,HCC,Neutral,6,skincare,21,0.010536879076768691
+hcc_by_sentiment,HCC,Neutral,7,moist,18,0.009031610637230306
+hcc_by_sentiment,HCC,Neutral,8,cara,18,0.009031610637230306
+hcc_by_sentiment,HCC,Neutral,9,toner,17,0.008529854490717512
+hcc_by_sentiment,HCC,Neutral,10,pagi,17,0.008529854490717512
+hcc_by_sentiment,HCC,Neutral,11,vit,16,0.008028098344204716
+hcc_by_sentiment,HCC,Neutral,12,moisturizer,16,0.008028098344204716
+hcc_by_sentiment,HCC,Neutral,13,umur,15,0.007526342197691922
+hcc_by_sentiment,HCC,Neutral,14,muka,15,0.007526342197691922
+hcc_by_sentiment,HCC,Neutral,15,hari,15,0.007526342197691922
+hcc_by_sentiment,HCC,Neutral,16,kering,13,0.006522829904666332
+hcc_by_sentiment,HCC,Neutral,17,malam,13,0.006522829904666332
+hcc_by_sentiment,HCC,Neutral,18,acne,13,0.006522829904666332
+hcc_by_sentiment,HCC,Neutral,19,pink,12,0.006021073758153537
+hcc_by_sentiment,HCC,Neutral,20,terus,12,0.006021073758153537
+hcc_by_sentiment,HCC,Neutral,21,pemula,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,22,aman,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,23,dipake,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,24,hyalu,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,25,cocok,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,26,bekas,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,27,berapa,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,28,siang,11,0.0055193176116407425
+hcc_by_sentiment,HCC,Neutral,29,ngga,9,0.004515805318615153
+hcc_by_sentiment,HCC,Neutral,30,skin,9,0.004515805318615153
+hcc_by_sentiment,HCC,Neutral,31,bruntusan,9,0.004515805318615153
+hcc_by_sentiment,HCC,Neutral,32,sunscreen,9,0.004515805318615153
+hcc_by_sentiment,HCC,Neutral,33,paket,9,0.004515805318615153
+hcc_by_sentiment,HCC,Neutral,34,tanya,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,35,mois,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,36,lain,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,37,berminyak,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,38,masih,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,39,gmn,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,40,brp,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,41,bole,8,0.004014049172102358
+hcc_by_sentiment,HCC,Neutral,42,soalnya,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,43,bagus,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,44,pakenya,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,45,sensitif,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,46,make,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,47,flek,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,48,busui,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,49,wajib,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Neutral,50,mlm,7,0.0035122930255895636
+hcc_by_sentiment,HCC,Positive,1,niacinamide,100,0.04438526409232135
+hcc_by_sentiment,HCC,Positive,2,retinol,79,0.03506435863293387
+hcc_by_sentiment,HCC,Positive,3,cocok,70,0.031069684864624945
+hcc_by_sentiment,HCC,Positive,4,kulit,48,0.02130492676431425
+hcc_by_sentiment,HCC,Positive,5,hasilnya,44,0.019529516200621395
+hcc_by_sentiment,HCC,Positive,6,enak,43,0.01908566355969818
+hcc_by_sentiment,HCC,Positive,7,bagus,42,0.018641810918774968
+hcc_by_sentiment,HCC,Positive,8,emang,37,0.016422547714158898
+hcc_by_sentiment,HCC,Positive,9,dipakai,33,0.014647137150466045
+hcc_by_sentiment,HCC,Positive,10,worth,31,0.013759431868619618
+hcc_by_sentiment,HCC,Positive,11,bikin,28,0.012427873945849977
+hcc_by_sentiment,HCC,Positive,12,pemakaian,28,0.012427873945849977
+hcc_by_sentiment,HCC,Positive,13,seneng,27,0.011984021304926764
+hcc_by_sentiment,HCC,Positive,14,nemu,24,0.010652463382157125
+hcc_by_sentiment,HCC,Positive,15,sekali,24,0.010652463382157125
+hcc_by_sentiment,HCC,Positive,16,harga,24,0.010652463382157125
+hcc_by_sentiment,HCC,Positive,17,kulitku,23,0.010208610741233911
+hcc_by_sentiment,HCC,Positive,18,lumayan,22,0.009764758100310697
+hcc_by_sentiment,HCC,Positive,19,tiap,21,0.009320905459387484
+hcc_by_sentiment,HCC,Positive,20,segitu,21,0.009320905459387484
+hcc_by_sentiment,HCC,Positive,21,puas,21,0.009320905459387484
+hcc_by_sentiment,HCC,Positive,22,hari,20,0.00887705281846427
+hcc_by_sentiment,HCC,Positive,23,penting,19,0.008433200177541057
+hcc_by_sentiment,HCC,Positive,24,satu,19,0.008433200177541057
+hcc_by_sentiment,HCC,Positive,25,semoga,18,0.007989347536617843
+hcc_by_sentiment,HCC,Positive,26,wangi,18,0.007989347536617843
+hcc_by_sentiment,HCC,Positive,27,teksturnya,18,0.007989347536617843
+hcc_by_sentiment,HCC,Positive,28,nyari,18,0.007989347536617843
+hcc_by_sentiment,HCC,Positive,29,salah,18,0.007989347536617843
+hcc_by_sentiment,HCC,Positive,30,tetep,17,0.007545494895694629
+hcc_by_sentiment,HCC,Positive,31,isinya,17,0.007545494895694629
+hcc_by_sentiment,HCC,Positive,32,rutin,17,0.007545494895694629
+hcc_by_sentiment,HCC,Positive,33,kombinasi,16,0.007101642254771416
+hcc_by_sentiment,HCC,Positive,34,packaging,16,0.007101642254771416
+hcc_by_sentiment,HCC,Positive,35,lucu,16,0.007101642254771416
+hcc_by_sentiment,HCC,Positive,36,lembab,16,0.007101642254771416
+hcc_by_sentiment,HCC,Positive,37,review,15,0.006657789613848202
+hcc_by_sentiment,HCC,Positive,38,jujur,15,0.006657789613848202
+hcc_by_sentiment,HCC,Positive,39,produk,15,0.006657789613848202
+hcc_by_sentiment,HCC,Positive,40,dikit,15,0.006657789613848202
+hcc_by_sentiment,HCC,Positive,41,wah,15,0.006657789613848202
+hcc_by_sentiment,HCC,Positive,42,gampang,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,43,nyerep,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,44,bau,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,45,aneh,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,46,sensitif,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,47,nyaman,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,48,lengket,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,49,alhamdulillah,14,0.006213936972924989
+hcc_by_sentiment,HCC,Positive,50,minggu,14,0.006213936972924989
