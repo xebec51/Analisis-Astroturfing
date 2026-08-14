@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="673.344pt" height="381.172344pt" viewBox="0 0 673.344 381.172344" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-14T18:49:04.995270</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 381.172344 
+L 673.344 381.172344 
+L 673.344 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 183.168 239.263796 
+C 195.314472 239.263796 206.965091 234.437952 215.553943 225.849099 
+C 224.142796 217.260247 228.96864 205.609628 228.96864 193.463156 
+C 228.96864 181.316685 224.142796 169.666066 215.553943 161.077213 
+C 206.965091 152.488361 195.314472 147.662516 183.168 147.662516 
+C 171.021528 147.662516 159.370909 152.488361 150.782057 161.077213 
+C 142.193204 169.666066 137.36736 181.316685 137.36736 193.463156 
+C 137.36736 205.609628 142.193204 217.260247 150.782057 225.849099 
+C 159.370909 234.437952 171.021528 239.263796 183.168 239.263796 
+z
+" clip-path="url(#p137bc0d8ee)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 183.168 91.683956 
+C 164.578145 91.683956 146.338787 96.77708 130.43828 106.408104 
+C 114.537774 116.039127 101.575702 129.844879 92.965119 146.320333 
+C 84.354536 162.795787 80.420133 181.319678 81.590817 199.872635 
+C 82.761501 218.425593 88.993128 236.308012 99.606359 251.570451 
+C 110.21959 266.83289 124.814218 278.899825 141.799216 286.455787 
+C 158.784215 294.011748 177.519106 296.771812 195.961515 294.435091 
+C 214.403924 292.09837 231.858417 284.752978 246.4222 273.19967 
+C 260.985984 261.646363 272.109881 246.320796 278.581226 228.893678 
+L 246.140729 216.847301 
+C 241.869642 228.349198 234.527869 238.464072 224.915772 246.089256 
+C 215.303675 253.714439 203.78371 258.562397 191.61172 260.104633 
+C 179.43973 261.646869 167.074702 259.825227 155.864603 254.838292 
+C 144.654504 249.851358 135.02205 241.88718 128.017317 231.813971 
+C 121.012584 221.740761 116.899711 209.938364 116.127059 197.693413 
+C 115.354408 185.448461 117.951114 173.222692 123.634098 162.348893 
+C 129.317083 151.475093 137.872051 142.363297 148.366385 136.006821 
+C 158.860719 129.650346 170.898696 126.288884 183.168 126.288884 
+z
+" style="fill: #0f766e; stroke: #ffffff; stroke-width: 2.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 278.581232 228.893664 
+C 284.296209 213.50342 286.203538 196.956514 284.139935 180.669646 
+C 282.076332 164.38278 276.102412 148.834453 266.729655 135.35588 
+C 257.356899 121.877307 244.860634 110.864451 230.310821 103.260271 
+C 215.761009 95.656091 199.585095 91.683956 183.168014 91.683956 
+L 183.168009 126.288884 
+C 194.003282 126.288884 204.679386 128.910493 214.282262 133.929252 
+C 223.885139 138.948011 232.132673 146.216496 238.318693 155.112354 
+C 244.504712 164.008212 248.447499 174.270108 249.809477 185.01944 
+C 251.171455 195.768772 249.912618 206.68973 246.140733 216.847292 
+z
+" style="fill: #d97706; stroke: #ffffff; stroke-width: 2.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #4b5563; font: 15px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: middle" x="183.168" y="184.853168" transform="rotate(-0 183.168 184.853168)">Total</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #111827; font: 700 25px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: middle" x="183.168" y="207.209008" transform="rotate(-0 183.168 207.209008)">35.334</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 86.561951 250.600104 
+Q 98.93347 247.017767 111.304989 243.43543 
+" style="fill: none; stroke: #0f766e; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="fill: #111827; font: 11.2px 'Times New Roman', 'Times', 'DejaVu Serif', serif" transform="translate(9.614513 258.856314)">Komentar utama</text>
+    <text style="fill: #111827; font: 11.2px 'Times New Roman', 'Times', 'DejaVu Serif', serif" transform="translate(55.636013 270.584464)">69,3%</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 279.770204 132.326769 
+Q 267.400601 137.908816 255.030998 143.490864 
+" style="fill: none; stroke: #d97706; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="fill: #111827; font: 11.2px 'Times New Roman', 'Times', 'DejaVu Serif', serif" transform="translate(281.770718 121.712572)">Reply</text>
+    <text style="fill: #111827; font: 11.2px 'Times New Roman', 'Times', 'DejaVu Serif', serif" transform="translate(281.770718 133.461722)">30,7%</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 389.088 181.561556 
+L 660.60288 181.561556 
+L 660.60288 136.335476 
+L 389.088 136.335476 
+z
+" clip-path="url(#pef88b7d8f2)" style="fill: #f8fafc; stroke: #e5e7eb; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 389.088 181.561556 
+L 395.183232 181.561556 
+L 395.183232 136.335476 
+L 389.088 136.335476 
+z
+" clip-path="url(#pef88b7d8f2)" style="fill: #0f766e; stroke: #0f766e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 389.088 243.449876 
+L 660.60288 243.449876 
+L 660.60288 198.223796 
+L 389.088 198.223796 
+z
+" clip-path="url(#pef88b7d8f2)" style="fill: #f8fafc; stroke: #e5e7eb; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 389.088 243.449876 
+L 395.183232 243.449876 
+L 395.183232 198.223796 
+L 389.088 198.223796 
+z
+" clip-path="url(#pef88b7d8f2)" style="fill: #d97706; stroke: #d97706; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 389.088 295.816916 
+L 660.60288 295.816916 
+L 660.60288 252.971156 
+L 389.088 252.971156 
+z
+" clip-path="url(#pef88b7d8f2)" style="fill: #ffffff; stroke: #e5e7eb; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #111827; font: 700 15.5px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="389.088" y="89.71389" transform="rotate(-0 389.088 89.71389)">Ringkasan Komposisi</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #4b5563; font: 10.4px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="389.088" y="110.232496" transform="rotate(-0 389.088 110.232496)">Jumlah dan persentase berdasarkan tipe komentar.</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #4b5563; font: 11.4px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="404.32608" y="152.165908" transform="rotate(-0 404.32608 152.165908)">Komentar utama</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #111827; font: 700 18px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="404.32608" y="171.314167" transform="rotate(-0 404.32608 171.314167)">24.501</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #0f766e; font: 700 16px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: end" x="646.75008" y="170.865886" transform="rotate(-0 646.75008 170.865886)">69,3%</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #4b5563; font: 11.4px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="404.32608" y="214.043541" transform="rotate(-0 404.32608 214.043541)">Reply</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #111827; font: 700 18px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="404.32608" y="233.202488" transform="rotate(-0 404.32608 233.202488)">10.833</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #d97706; font: 700 16px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: end" x="646.75008" y="232.754206" transform="rotate(-0 646.75008 232.754206)">30,7%</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #4b5563; font: 11.4px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="404.32608" y="272.372068" transform="rotate(-0 404.32608 272.372068)">Total komentar</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #111827; font: 700 18px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="404.32608" y="291.520328" transform="rotate(-0 404.32608 291.520328)">35.334</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #4b5563; font: 700 14.5px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: end" x="646.75008" y="290.735835" transform="rotate(-0 646.75008 290.735835)">100%</text>
+   </g>
+  </g>
+  <g id="text_16">
+   <text style="fill: #111827; font: 700 20.5px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="7.2" y="21.095156" transform="rotate(-0 7.2 21.095156)">Proporsi Komentar Utama dan Reply</text>
+  </g>
+  <g id="text_17">
+   <text style="fill: #4b5563; font: 12.2px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="7.2" y="51.875156" transform="rotate(-0 7.2 51.875156)">Total data yang dianalisis: 35.334 komentar TikTok</text>
+  </g>
+  <g id="text_18">
+   <text style="fill: #6b7280; font: 9.2px 'Times New Roman', 'Times', 'DejaVu Serif', serif; text-anchor: start" x="7.2" y="371.987156" transform="rotate(-0 7.2 371.987156)">Sumber: dataset.csv; kategori komentar dibedakan menjadi komentar utama dan reply.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p137bc0d8ee">
+   <rect x="55.944" y="66.239156" width="254.448" height="254.448"/>
+  </clipPath>
+  <clipPath id="pef88b7d8f2">
+   <rect x="389.088" y="74.447156" width="277.056" height="238.032"/>
+  </clipPath>
+ </defs>
+</svg>
